@@ -1,0 +1,38 @@
+baseURL = "/"
+title = "Fengyu WANG"
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = true
+publishDir = "../_site"
+paginate = 24
+
+disableKinds = ["home", "sitemap", "robotsTXT", "404"]
+
+[languages]
+  [languages.zh-cn]
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    weight = 1
+    contentDir = "content/zh-cn"
+  [languages.zh-hk]
+    languageCode = "zh-HK"
+    languageName = "繁體中文"
+    weight = 2
+    contentDir = "content/zh-hk"
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 3
+    contentDir = "content/en"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+  home = ["HTML"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "index"
