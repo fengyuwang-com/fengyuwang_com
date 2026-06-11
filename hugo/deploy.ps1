@@ -11,12 +11,11 @@ foreach ($lang in $langs) {
     $src = "..\_site\$lang\blog"
     $dst = "..\$lang\blog"
     if (Test-Path $src) {
-        Remove-Item "$dst" -Recurse -Force -ErrorAction SilentlyContinue
-        Copy-Item "$src" "$dst" -Recurse -Force
+        if (Test-Path $dst) { Remove-Item "$dst\*" -Recurse -Force -ErrorAction SilentlyContinue }
+        else { New-Item -ItemType Directory -Path $dst -Force | Out-Null }
+        Copy-Item "$src\*" "$dst\" -Recurse -Force
         Write-Output "  $lang/blog deployed"
     }
 }
-
-# Clean up
 Remove-Item "..\_site" -Recurse -Force -ErrorAction SilentlyContinue
 Write-Output "Done."
