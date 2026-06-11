@@ -14,3 +14,5 @@ Use `translationKey` to pair articles across languages.
 
 ## Privacy
 Prefix title with `*` + `draft: true` for personal info.
+## ⚠️ 安全规则
+NEVER git push without explicit user approval.

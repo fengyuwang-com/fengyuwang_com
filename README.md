@@ -56,3 +56,8 @@ Cloudflare Web Analytics 已集成。需要在 Cloudflare Dashboard → Web Anal
 /source    /destination或https://    301或302
 ```
 编辑 `_redirects` 文件后重新部署即可。
+
+## ⚠️ 安全规则
+
+**没有得到明确指令，绝对不能执行 git push。**
+任何修改后想推到 GitHub，必须先问用户确认。
