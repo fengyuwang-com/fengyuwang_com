@@ -71,11 +71,38 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-section {
+    margin-bottom: 28px;
+}
+.blog-article .summary-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+.blog-article .summary-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-label { color: #6b7280; }
+body[data-theme="dark"] .blog-article .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-divider { border-top-color: rgba(41,151,255,.2); }
+
 .blog-article .article-content {
     margin-top: 28px;
 }
@@ -107,7 +134,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>AI帮助PDCA</h1>
+
     
+    <div class="summary-section">
+        <div class="summary-label">摘要</div>
+        <div class="summary-text">向AI提问获取有效答案这件事，可以被系统化地管理。把AI提问纳入PDCA循环，就是把随机碰运气式的提问变成标准化、可复制、结果可控的闭环动作</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
     <div class="article-content"><p>向AI提问获取有效答案这件事，可以被系统化地管理。把AI提问纳入PDCA循环，就是把随机碰运气式的提问变成标准化、可复制、结果可控的闭环动作。</p>
 <h1 id="核心结论先讲透">核心结论先讲透</h1>
 <p>把「向AI提问获取有效答案」这件事本身，套入PDCA流程，本质是<strong>把“随机碰运气式提问”变成“标准化、可复制、结果可控的闭环动作”</strong>，彻底解决AI答非所问、信息幻觉、输出不稳定、无法落地的核心痛点。</p>

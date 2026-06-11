@@ -67,21 +67,12 @@
     color: #111827;
     line-height: 1.4;
 }
-.blog-card .summary-label {
-    font-size: .82rem;
-    font-weight: 600;
-    color: #6b7280;
-    margin-bottom: 4px;
-}
 .blog-card .summary-text {
     font-size: .92rem;
     color: #6b7280;
     line-height: 1.6;
-    margin: 0 0 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    margin: 0;
+    word-break: break-word;
 }
 .blog-card .summary-divider {
     border: 0;
@@ -106,8 +97,8 @@
 body[data-theme="dark"] .blog-card { background: #1e293b; border-color: rgba(148,163,184,.12); }
 body[data-theme="dark"] .blog-card h3 { color: #e5ecf4; }
 body[data-theme="dark"] .blog-card .summary-text { color: #9fb0c3; }
-body[data-theme="dark"] .blog-card .summary-label { color: #9fb0c3; }
 body[data-theme="dark"] .blog-card .summary-divider { border-top-color: rgba(148,163,184,.15); }
+
 .search-shell { margin-bottom: 28px; }
 .search-input {
     width: 100%;
@@ -125,6 +116,7 @@ body[data-theme="dark"] .blog-card .summary-divider { border-top-color: rgba(148
 body[data-theme="dark"] .search-input { background: #1e293b; border-color: rgba(148,163,184,.2); color: #e5ecf4; }
 body[data-theme="dark"] .search-input:focus { border-color: #2997ff; box-shadow: 0 0 0 3px rgba(41,151,255,.15); }
 .search-count { font-size: .85rem; color: #9ca3af; margin-top: 8px; }
+
 .pagination-shell {
     display: flex;
     align-items: center;
@@ -193,7 +185,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">做理性、客观、干净的咨询服务，和赚快钱之间存在着一道真实的结构性矛盾。诚实本身就是一种销售障碍，因为真话往往不是客户想听的</div>
     
 </a>
@@ -203,7 +194,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">在软件开发领域，有一批优秀的开源工具可以替代商业软件完成建站、文档处理、数据管理和图片托管等工作。它们全部开源、可本地部署，且支持与个人知识</div>
     
 </a>
@@ -213,7 +203,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">在职场中，能力管理可以策略性地分为两个层面：经验型表层和机密型核心。用表层能力建立信任，用核心能力构筑壁垒</div>
     
 </a>
@@ -223,7 +212,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">迈出第一步的逻辑，和大多数人的直觉相反。第一步从来不是准备好了才迈出的，而是先占据位置，再在那个位置上学会站稳</div>
     
 </a>
@@ -233,7 +221,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">技术研究中最常见的失败模式不是技术选型错误，而是研究过程本身缺乏结构。一个标准化的、可闭环的工作流程可以大幅降低失败的概率</div>
     
 </a>
@@ -243,7 +230,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">几内亚比绍是国家治理困境的一个极端样本。自1974年独立以来，该国经历了多次政变和政治动荡，国家能力极度脆弱。这种脆弱性是几种结构性因素共同</div>
     
 </a>
@@ -253,7 +239,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">在商业活动中，加价和坑人之间有一道清晰的界线，但很多人把这条线画错了位置。翻十倍卖不一定是坑人，一分不加一定是在亏自己</div>
     
 </a>
@@ -263,7 +248,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">当前经济的核心矛盾是结构性的供强需弱。不是全行业的绝对过剩，而是一种分化的、挤压式的失衡</div>
     
 </a>
@@ -273,7 +257,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">这个人的工作方式建立在一个核心信念之上：所有复杂问题都可以通过清晰的逻辑框架拆解分析，借助人工智能进行高效的思考与知识整合，得到可通用、可复</div>
     
 </a>
@@ -283,7 +266,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">生男生女退全款——这个近乎荒谬的承诺背后，隐藏着一种极为精妙的商业逻辑。它用极端承诺筛选精准客户，靠概率和信息差来实现盈利</div>
     
 </a>
@@ -293,7 +275,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">赚钱这件事，沿着表层逻辑往下挖，最终会触达一个不能再简化的基点——第一性原理。这个基点不是出卖时间，不是提供劳动，甚至不是交付产品，而是创造</div>
     
 </a>
@@ -303,7 +284,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">程序员在处理代码问题时形成的一套方法论，是一套可以被推广到几乎所有领域的通用问题解决框架。它不依赖于特定的编程语言或技术栈，而是建立在认知科</div>
     
 </a>
@@ -313,7 +293,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">定价不是成本加上一个固定的利润率，而是基于渠道、客户心理和竞争环境的动态决策。不同平台的用户行为模式决定了完全不同的定价策略</div>
     
 </a>
@@ -323,7 +302,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">两类中间人在经济活动中扮演着截然不同的角色。一类是价值创造者，另一类是价值分配者，区分二者的标准决定了我们如何理解市场中的真实价值来源</div>
     
 </a>
@@ -333,7 +311,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">有一类解决问题的方法在实践中被反复验证有效：先研究方法论，再尝试执行，发现问题后调整优化，直到问题解决。这套流程在多个学术领域都有对应的理论</div>
     
 </a>
@@ -343,7 +320,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">Palantir方法论的独特性在于它不依赖复杂的数学函数来拟合数据，而是基于本体论构建知识图谱——把现实世界中的对象定义为本体，再连接它们之</div>
     
 </a>
@@ -353,7 +329,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">Excel用行和列来组织数据，是因为二维表格是人类大脑最容易理解的结构。但现实世界不是二维的——每一个实体都有多个维度，这些维度之间还存在复</div>
     
 </a>
@@ -363,7 +338,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">向AI提问获取有效答案这件事，可以被系统化地管理。把AI提问纳入PDCA循环，就是把随机碰运气式的提问变成标准化、可复制、结果可控的闭环动作</div>
     
 </a>
@@ -373,7 +347,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">简历排版是一个被严重低估的生产力瓶颈。在Word里花费大量时间调整格式，换一台电脑打开就全部错乱——这个问题的根源不是你的操作水平，而是Wo</div>
     
 </a>
@@ -383,7 +356,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">商务人员做出来的表格为什么总是七零八落？答案不是粗心或数据结构没学好，而是商务BD的底层思维和数据工程的标准化思维之间存在结构性脱节</div>
     
 </a>

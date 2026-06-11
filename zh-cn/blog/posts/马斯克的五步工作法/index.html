@@ -71,11 +71,38 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-section {
+    margin-bottom: 28px;
+}
+.blog-article .summary-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+.blog-article .summary-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-label { color: #6b7280; }
+body[data-theme="dark"] .blog-article .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-divider { border-top-color: rgba(41,151,255,.2); }
+
 .blog-article .article-content {
     margin-top: 28px;
 }
@@ -107,7 +134,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>马斯克的五步工作法</h1>
+
     
+    <div class="summary-section">
+        <div class="summary-label">摘要</div>
+        <div class="summary-text">马斯克五步工作法的价值不在于它有多新颖，而在于它把工程思维中的几个关键原则提炼成了可操作的步骤，并明确了正确的执行顺序</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
     <div class="article-content"><p>马斯克五步工作法的价值不在于它有多新颖，而在于它把工程思维中的几个关键原则提炼成了可操作的步骤，并明确了正确的执行顺序。</p>
 <p>我们来详细拆解马斯克的五步工作法，把每个环节的细节和逻辑都讲清楚：</p>
 <p>第一步：质疑需求，让它别那么愚蠢</p>
