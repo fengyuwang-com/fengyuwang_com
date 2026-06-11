@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ end }}
+    <link rel="canonical" href="{{ .Page.RelPermalink | absURL }}">
+    {{ $currentPage := $.Page }}
+    {{ range .Site.Languages }}
+    {{ if ne .Lang $.Site.Language.Lang }}
+    {{ $altURL := replace $currentPage.RelPermalink (printf "/%s/" $.Site.Language.Lang) (printf "/%s/" .Lang) }}
+    <link rel="alternate" hreflang="{{ .LanguageCode }}" href="{{ $altURL }}">
+    {{ end }}
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog">{{ if .Page.IsTranslated }}{{ range .Page.AllTranslations }}<i class="hidden-trans" data-lang="{{ .Language.Lang }}" data-url="{{ .RelPermalink | safeURL }}"></i>{{ end }}{{ end }}</div>
+    <script src="/assets/js/shared-subpage-navbar.js"></script>
+    <section class="content-section">
+        <div class="container">
+            {{ block "main" . }}{{ end }}
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+</body>
+</html>
