@@ -1,0 +1,47 @@
+# Fengyu WANG — Personal Website & Blog
+
+三语个人网站 + Hugo 博客。一个 git 仓库，跨机器、跨系统。
+
+## Quick Start
+```bash
+# 1. Install Hugo
+# Windows: winget install Hugo.Hugo.Extended
+# macOS:   brew install hugo
+# Linux:   snap install hugo
+
+# 2. Build blog
+cd hugo
+hugo --cleanDestinationDir
+
+# 3. Copy blog files to site
+.\deploy.ps1  # or bash deploy.sh
+
+# 4. Start local server
+cd ..
+python -m http.server 8001
+```
+
+## Project Structure
+```
+/
+├── assets/         ← CSS / JS / images / i18n (shared, never delete)
+├── en/             ← English site pages
+├── zh-cn/          ← Simplified Chinese pages
+├── zh-hk/          ← Traditional Chinese pages
+├── hugo/           ← Blog source + build config
+│   ├── hugo.toml
+│   ├── content/{lang}/blog/posts/{slug}/  ← Article Markdown
+│   ├── layouts/blog/                      ← Templates
+│   ├── deploy.ps1 / deploy.sh             ← Build + deploy
+│   └── _site/                             ← Temporary build output
+├── scripts/        ← Utility scripts
+├── 文章/           ← Original article Markdown files
+├── robots.txt
+└── sitemap.xml
+```
+
+## Key Rules
+- **Never manually delete `assets/`** — it contains all shared CSS/JS/images
+- `hugo/content/` has the article Markdown. Edit there, then rebuild
+- `hugo/deploy.ps1` handles build + copy. Run it after editing articles
+- All three languages use `translationKey` to pair articles
