@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fengyuwang.com/sitemap.xml
