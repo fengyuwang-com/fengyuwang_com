@@ -67,10 +67,45 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
 
+<a class="blog-card" href="/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/" data-title="Time Moves Fast and Slow at the Same Time" data-summary="Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling." data-tags="">
+    <h3>Time Moves Fast and Slow at the Same Time</h3>
+    <hr class="summary-divider"><div class="summary-text">Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/" data-title="Stay Honest in a World That Prefers You Did Not" data-summary="Staying honest and clear-headed at work often earns you a strange label, being told you have low EQ, that you are too rigid. This feedback can make you doubt yourself, but the truth it reveals is exactly the opposite." data-tags="">
+    <h3>Stay Honest in a World That Prefers You Did Not</h3>
+    <hr class="summary-divider"><div class="summary-text">Staying honest and clear-headed at work often earns you a strange label, being told you have low EQ, that you are too rigid. This feedback can make you doubt yourself, but the truth it reveals is exactly the opposite.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E6%A6%82%E7%8E%87/" data-title="Probability and Business Promises" data-summary="The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy." data-tags="">
+    <h3>Probability and Business Promises</h3>
+    <hr class="summary-divider"><div class="summary-text">The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/" data-title="Information Gaps and Riding the Wave" data-summary="Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy." data-tags="">
+    <h3>Information Gaps and Riding the Wave</h3>
+    <hr class="summary-divider"><div class="summary-text">Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" data-title="First Principles of Making Money" data-summary="The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale using leverage instead of linear accumulation." data-tags="">
+    <h3>First Principles of Making Money</h3>
+    <hr class="summary-divider"><div class="summary-text">The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale using leverage instead of linear accumulation.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/" data-title="Fair Profit Is Not Greed" data-summary="There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself." data-tags="">
+    <h3>Fair Profit Is Not Greed</h3>
+    <hr class="summary-divider"><div class="summary-text">There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself.</div>
+</a>
+
+<a class="blog-card" href="/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/" data-title="Businesses with Long-Term High Margins" data-summary="Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature. Technology changes the way these needs are met, but it does not change the needs themselves." data-tags="">
+    <h3>Businesses with Long-Term High Margins</h3>
+    <hr class="summary-divider"><div class="summary-text">Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature. Technology changes the way these needs are met, but it does not change the needs themselves.</div>
+</a>
+
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 0 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 1 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>
