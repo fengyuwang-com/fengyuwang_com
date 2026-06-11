@@ -36,17 +36,79 @@
     <section class="content-section">
         <div class="container">
             
-<div class="section-title">
-    <h2>Blog Article</h2>
-    <p>Read the full note</p>
+<style>
+.blog-back-shell {
+    margin-bottom: 48px;
+}
+.blog-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(0,113,227,.08);
+    color: #0071e3;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+.blog-back-btn:hover {
+    background: rgba(0,113,227,.14);
+    transform: translateX(-3px);
+}
+.blog-back-btn::before { content: "←"; }
+body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
+
+.blog-article {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.08);
+}
+body[data-theme="dark"] .blog-article { background: #1e293b; }
+.blog-article h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: #111827;
+    line-height: 1.3;
+}
+body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+.blog-article .article-content {
+    margin-top: 28px;
+}
+.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
+.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
+.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
+.blog-article .article-content ul { padding-left: 20px; }
+body[data-theme="dark"] .blog-article .article-content h2,
+body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,
+body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
+
+.blog-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.blog-tags span {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(0,113,227,.08); color: #0071e3;
+    font-weight: 600; font-size: .82rem;
+}
+@media (max-width: 767px) {
+    .blog-article { padding: 24px; border-radius: 20px; }
+    .blog-back-shell { margin-bottom: 32px; }
+}
+</style>
+
+<div class="blog-back-shell">
+    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
 </div>
+
 <article class="blog-article">
-    <a class="blog-back" href="/zh-cn/blog/">← Back to Blog</a>
     <h1>人工智能的急速发展必然造成经济上的紧迫感</h1>
     
-    
-    <div class="article-content">
-        <p>AI的急速发展必然造成经济上的紧迫感，其直接来源是技术替代速度和社会适应速度之间的错配。</p>
+    <div class="article-content"><p>AI的急速发展必然造成经济上的紧迫感，其直接来源是技术替代速度和社会适应速度之间的错配。</p>
 <p>对那些在技术上从事低端产业链，本质上依赖庞大劳动力规模驱动经济体量的国家而言，人工智能的急速发展必然造成经济上的紧迫感。</p>
 <p>例如东南亚的一些国家，因为他们过去的竞争力并非来自技术，而是来自人多便宜可替代，这是一种以数量弥补效率的路径。而对那些未完全按照市场定价，而是通过观念与制度将工作区分为三六九等，以此维持社会结构稳定的国家来说，人工智能则会进一步造成更为棘手的伦理困境。</p>
 <p>例如拉丁美洲的一些国家，因为对这些国家的普罗大众而言，他们只有经济上的工具价值，而缺乏伦理意义上的人格价值，他们并不是以人的身份被承认，而是以功能的形式被嵌入到整个生产体系之中。换句话说，他们从未被当做目的而对待，而只是作为被调度、被消耗、被替换的手段而存在，这恰恰违背了300年前康德提出的最根本的伦理前提，人应当始终被当做目的，而不是手段。</p>
@@ -56,8 +118,7 @@
 <p>从这一方向来说，人工智能不过是倒逼西方国家扩大福利范围的技术奇点而已。而那些依赖重商主义和控制思想维持稳定的国家，则会同时陷入价值观和经济利益的巨大冲突之中，因为全社会从上到下没有发自内心的形成认同人的生存尊严的思想共识，整个国家的所有制度安排、职业划分乃至文化叙事往往都服务于一种更高层级的控制逻辑，人的尊严价值被全方位否定。</p>
 <p>所以在缺乏思想基础的情况下，人工智能技术的突然降临不仅会放大这些国家的思想断裂，反而会在人工智能应用的初期加剧因社会地位不对等所导致的财富极端分化。</p>
 <p>综合来看，AI造成的紧迫感是一个多重交织的问题——技术、经济、教育、社会结构，每一个维度都需要回应，而每一个维度都不容易回应。</p>
-
-    </div>
+</div>
 </article>
 
         </div>
