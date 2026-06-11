@@ -115,7 +115,7 @@
     blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
   };
   var alt = altMap[section] || altMap.blog;
-  function langUrl(t) { var c = window.location.pathname; if (c === '/' || c === '/index.html') return alt[t]; var p = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}; var x = '/' + lang + '/'; if (c.indexOf(x) === 0) return c.replace(x, '/' + p[t] + '/'); return alt[t]; }
+  function langUrl(t) { var els = document.querySelectorAll('#shared-subpage-navbar .hidden-trans'); var key = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}[t]; for (var i=0;i<els.length;i++) { if (els[i].getAttribute('data-lang') === key) return els[i].getAttribute('data-url'); } var c = window.location.pathname; if (c === '/' || c === '/index.html') return alt[t]; var p = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}; var x = '/' + lang + '/'; if (c.indexOf(x) === 0) return c.replace(x, '/' + p[t] + '/'); return alt[t]; }
 
   var siteLinks = [
     { label: 'GitHub', href: 'https://github.com/fengyuwang-com' },
