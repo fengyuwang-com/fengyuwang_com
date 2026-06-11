@@ -1,0 +1,359 @@
+﻿(function () {
+  var container = document.getElementById('shared-subpage-navbar');
+  if (!container) return;
+
+  var htmlLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
+  var lang = 'en';
+  if (htmlLang.indexOf('zh-cn') === 0) lang = 'zh-cn';
+  else if (htmlLang.indexOf('zh-hk') === 0 || htmlLang.indexOf('zh-tw') === 0) lang = 'zh-hk';
+
+  var section = (container.getAttribute('data-section') || '').toLowerCase();
+  var copy = {
+    en: {
+      home: 'Home',
+      welcome: 'Welcome',
+      about: 'About',
+      services: 'Service Offerings',
+      contact: 'Contact',
+      darkMode: 'Dark Mode',
+      capabilities: 'Capabilities',
+      cases: 'Marketing',
+      portfolio: 'Tech',
+      investment: 'Investment',
+      blog: 'Blog',
+      blogArticles: 'Blog & Articles',
+      language: 'Language',
+      sites: 'Sites',
+      homeHref: '/en/index.html',
+      capabilitiesHref: '/en/capabilities.html',
+      casesHref: '/en/mkt.html',
+      portfolioHref: '/en/portfolio.html',
+      investmentHref: '/en/invest.html',
+      blogHref: '/en/blog/',
+        web3: 'Web3 Research',
+      web3Href: '/en/web3.html',
+      web3Part1: 'Core & Logic',
+      web3Part2: 'Regulation & Compliance',
+      web3Part3: 'Business Value',
+      web3Part4: 'Enterprise Entry',
+      web3Part5: 'Trends & Challenges',
+      web3Part6: 'Deep Dive Topics',
+      web3Part7: 'Summary'
+    },
+    'zh-cn': {
+      home: '\u9996\u9875',
+      welcome: '\u6b22\u8fce',
+      about: '\u5173\u4e8e\u6211',
+      services: '\u670d\u52a1\u9879\u76ee',
+      contact: '\u8054\u7cfb',
+      darkMode: '\u6697\u8272\u6a21\u5f0f',
+      capabilities: '\u80fd\u529b',
+      cases: '\u5e02\u573a\u5b66',
+      portfolio: '\u6280\u672f',
+      investment: '\u6295\u8d44',
+      blog: '\u535a\u5ba2',
+      blogArticles: '\u535a\u5ba2\u4e0e\u6587\u7ae0',
+      language: '\u8bed\u8a00',
+      sites: '\u7ad9\u70b9',
+      homeHref: '/zh-cn/index.html',
+      capabilitiesHref: '/zh-cn/capabilities.html',
+      casesHref: '/zh-cn/mkt.html',
+      portfolioHref: '/zh-cn/portfolio.html',
+      investmentHref: '/zh-cn/invest.html',
+      blogHref: '/zh-cn/blog/',
+        web3: 'Web3专题',
+      web3Href: '/zh-cn/web3.html',
+      web3Part1: '\u6838\u5fc3\u672c\u8d28\u4e0e\u5e95\u5c42\u903b\u8f91',
+      web3Part2: '\u76d1\u7ba1\u4f53\u7cfb\u4e0e\u5408\u89c4',
+      web3Part3: '\u5546\u4e1a\u4ef7\u503c\u4e0e\u6848\u4f8b',
+      web3Part4: '\u4f01\u4e1a\u5165\u5c40\u8def\u5f84',
+      web3Part5: '\u8d8b\u52bf\u4e0e\u6311\u6218',
+      web3Part6: '\u4e94\u5927\u4e13\u9898\u7814\u7a76',
+      web3Part7: '\u8ba4\u77e5\u6c47\u603b'
+    },
+    'zh-hk': {
+      home: '\u9996\u9801',
+      welcome: '\u6b61\u8fce',
+      about: '\u95dc\u65bc\u6211',
+      services: '\u670d\u52d9\u9805\u76ee',
+      contact: '\u806f\u7d61',
+      darkMode: '\u6df1\u8272\u6a21\u5f0f',
+      capabilities: '\u80fd\u529b',
+      cases: '\u5e02\u5834\u5b78',
+      portfolio: '\u6280\u8853',
+      investment: '\u6295\u8cc7',
+      blog: '\u535a\u5ba2',
+      blogArticles: '\u535a\u5ba2\u8207\u6587\u7ae0',
+      language: '\u8a9e\u8a00',
+      sites: '\u7ad9\u9ede',
+      homeHref: '/zh-hk/index.html',
+      capabilitiesHref: '/zh-hk/capabilities.html',
+      casesHref: '/zh-hk/mkt.html',
+      portfolioHref: '/zh-hk/portfolio.html',
+      investmentHref: '/zh-hk/invest.html',
+      blogHref: '/zh-hk/blog/',
+        web3: 'Web3專題',
+      web3Href: '/zh-hk/web3.html',
+      web3Part1: '\u6838\u5fc3\u672c\u8cea\u8207\u5e95\u5c64\u908f\u8f2f',
+      web3Part2: '\u76e3\u7ba1\u9ad4\u7cfb\u8207\u5408\u898f',
+      web3Part3: '\u5546\u696d\u50f9\u503c\u8207\u6848\u4f8b',
+      web3Part4: '\u4f01\u696d\u5165\u5c40\u8def\u5f91',
+      web3Part5: '\u8da8\u52e2\u8207\u6311\u6230',
+      web3Part6: '\u4e94\u5927\u5c08\u984c\u7814\u7a76',
+      web3Part7: '\u8a8d\u77e5\u5f59\u7e3d'
+    }
+  };
+
+  var labels = copy[lang];
+  var altMap = {
+    home: { en: copy.en.homeHref, zhCn: copy['zh-cn'].homeHref, zhHk: copy['zh-hk'].homeHref },
+    capabilities: { en: copy.en.capabilitiesHref, zhCn: copy['zh-cn'].capabilitiesHref, zhHk: copy['zh-hk'].capabilitiesHref },
+    cases: { en: copy.en.casesHref, zhCn: copy['zh-cn'].casesHref, zhHk: copy['zh-hk'].casesHref },
+    portfolio: { en: copy.en.portfolioHref, zhCn: copy['zh-cn'].portfolioHref, zhHk: copy['zh-hk'].portfolioHref },
+    investment: { en: copy.en.investmentHref, zhCn: copy['zh-cn'].investmentHref, zhHk: copy['zh-hk'].investmentHref },
+    web3: { en: copy.en.web3Href, zhCn: copy['zh-cn'].web3Href, zhHk: copy['zh-hk'].web3Href },
+    blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
+  };
+  var alt = altMap[section] || altMap.blog;
+
+  var siteLinks = [
+    { label: 'GitHub', href: 'https://github.com/fengyuwang-com' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/fengyuwang-com/' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@fenglin6' },
+    { label: 'BiliBili', href: 'https://b23.tv/Aqk6EGE' }
+  ];
+  var siteLinksHtml = siteLinks
+    .map(function (link) {
+      return '            <li><a href="' + link.href + '" target="_blank" rel="noopener noreferrer">' + link.label + '</a></li>';
+    })
+    .join('');
+
+  if (!document.getElementById('shared-subpage-navbar-style')) {
+    var style = document.createElement('style');
+    style.id = 'shared-subpage-navbar-style';
+    style.textContent = [
+      '.shared-subpage-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: rgba(255, 255, 255, 0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); box-shadow: 0 1px 0 rgba(0,0,0,0.1); }',
+      '.shared-subpage-nav .nav-shell { max-width: 1200px; margin: 0 auto; padding: 0 20px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }',
+      '.shared-subpage-nav .brand img { height: 32px; display: block; }',
+      '.shared-subpage-nav .desktop-menu, .shared-subpage-nav .desktop-menu ul, .shared-subpage-nav .mobile-menu, .shared-subpage-nav .mobile-menu ul { list-style: none; margin: 0; padding: 0; }',
+      '.shared-subpage-nav .desktop-menu { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }',
+      '.shared-subpage-nav .desktop-menu > li, .shared-subpage-nav .mobile-menu > li { position: relative; }',
+      '.shared-subpage-nav a { text-decoration: none; }',
+      '.shared-subpage-nav .desktop-menu a, .shared-subpage-nav .mobile-link, .shared-subpage-nav .mobile-submenu a { display: block; padding: 8px 12px; color: #1d1d1f; font-size: 12px; font-weight: 400; }',
+      '.shared-subpage-nav .desktop-menu a:hover, .shared-subpage-nav .desktop-menu a.active, .shared-subpage-nav .mobile-link:hover, .shared-subpage-nav .mobile-link.active, .shared-subpage-nav .mobile-submenu a:hover { color: #0071e3; }',
+      '.shared-subpage-nav .desktop-menu .submenu { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: #fff; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.1); overflow: hidden; }',
+      '.shared-subpage-nav .desktop-menu li:hover > .submenu { display: block; }',
+      '.shared-subpage-nav .desktop-menu .submenu a { border-bottom: 1px solid rgba(0,0,0,.06); background: transparent; }',
+      '.shared-subpage-nav .desktop-menu .submenu li:last-child a { border-bottom: 0; }',
+      '.shared-subpage-nav .social { display: inline-flex; align-items: center; gap: 12px; }',
+      '.shared-subpage-nav .theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 6px 12px; border: 0; border-radius: 20px; background: rgba(0,0,0,0.08); color: #1d1d1f; cursor: pointer; font-size: 12px; font-weight: 400; transition: background .2s ease; }',
+      '.shared-subpage-nav .theme-toggle:hover { background: rgba(0,0,0,0.12); }',
+      '.shared-subpage-nav .theme-toggle:active, .shared-subpage-nav .theme-toggle.is-pressed { background: rgba(0,0,0,0.16); }',
+      '.shared-subpage-nav .theme-toggle .fa-sun { display: none; }',
+      '.shared-subpage-nav .theme-toggle-text { line-height: 1; }',
+      '.shared-subpage-nav .menu-toggle { display: none; width: 36px; height: 36px; border: 0; border-radius: 8px; background: rgba(0,0,0,0.08); cursor: pointer; padding: 0; }',
+      '.shared-subpage-nav .menu-toggle span { display: block; width: 16px; height: 1.5px; background: #0a0e1a; margin: 6px auto; transition: transform .2s ease, opacity .2s ease; }',
+      '.shared-subpage-nav .mobile-panel { display: none; border-top: 1px solid rgba(0,0,0,.06); padding: 8px 20px 18px; background: rgba(255,255,255,0.85); backdrop-filter: saturate(180%) blur(20px); }',
+      '.shared-subpage-nav .mobile-panel.open { display: block; }',
+      '.shared-subpage-nav .mobile-link-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }',
+      '.shared-subpage-nav .submenu-toggle { width: 32px; height: 32px; border: 0; border-radius: 8px; background: rgba(0,0,0,0.08); color: #1d1d1f; font-size: 16px; cursor: pointer; flex: 0 0 auto; }',
+      '.shared-subpage-nav .mobile-submenu { display: none; padding-left: 12px; }',
+      '.shared-subpage-nav .mobile-item.open > .mobile-submenu { display: block; }',
+      '.shared-subpage-nav .mobile-item.open > .mobile-link-row .submenu-toggle { background: rgba(0,113,227,.12); color: #0071e3; }',
+      '.shared-subpage-nav .mobile-menu > li + li { border-top: 1px solid rgba(0,0,0,.06); }',
+      '.shared-subpage-nav .mobile-social { padding-top: 12px; }',
+      'body { padding-top: 44px !important; }',
+      'body[data-theme="dark"] { background: #0a0e1a !important; color: #f5f5f7; }',
+      'body[data-theme="dark"] .shared-subpage-nav { background: rgba(10, 14, 26, 0.72); box-shadow: 0 1px 0 rgba(255,255,255,0.1); }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu a, body[data-theme="dark"] .shared-subpage-nav .mobile-link, body[data-theme="dark"] .shared-subpage-nav .mobile-submenu a, body[data-theme="dark"] .shared-subpage-nav .submenu-toggle { color: #f5f5f7; }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu a:hover, body[data-theme="dark"] .shared-subpage-nav .mobile-link:hover { color: #2997ff; }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu .submenu { background: #0a0e1a; }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu .submenu a { background: transparent; }',
+      'body[data-theme="dark"] .shared-subpage-nav .theme-toggle { background: rgba(255,255,255,0.1); color: #f5f5f7; }',
+      'body[data-theme="dark"] .shared-subpage-nav .theme-toggle:hover { background: rgba(255,255,255,0.15); }',
+      'body[data-theme="dark"] .shared-subpage-nav .menu-toggle { background: rgba(255,255,255,0.1); }',
+      'body[data-theme="dark"] .shared-subpage-nav .menu-toggle span { background: #f5f5f7; }',
+      'body[data-theme="dark"] .shared-subpage-nav .mobile-panel { background: rgba(10, 14, 26, 0.85); }',
+      'body[data-theme="dark"] .shared-subpage-nav .submenu-toggle { background: rgba(255,255,255,0.1); }',
+      'body[data-theme="dark"] .mobile-item.open > .mobile-link-row .submenu-toggle { background: rgba(41, 151, 255, .2); color: #2997ff; }',
+      'body[data-theme="dark"] .theme-toggle .fa-moon { display: none; }',
+      'body[data-theme="dark"] .theme-toggle .fa-sun { display: inline-block; }',
+      'body[data-theme="dark"] .single-services-item, body[data-theme="dark"] .project-card, body[data-theme="dark"] .content-card, body[data-theme="dark"] .node-card, body[data-theme="dark"] .tree-shell { background: #1e293b !important; color: #e5ecf4 !important; border-color: rgba(148,163,184,.20) !important; }',
+      'body[data-theme="dark"] .single-services-item h3, body[data-theme="dark"] .project-card h3, body[data-theme="dark"] .content-card h3 { color: #e5ecf4 !important; }',
+      'body[data-theme="dark"] .single-services-item p, body[data-theme="dark"] .project-card p, body[data-theme="dark"] .content-card p { color: #9fb0c3 !important; }',
+      'body[data-theme="dark"] .page-header h1, body[data-theme="dark"] .section-title h2 { color: #e5ecf4 !important; }',
+      'body[data-theme="dark"] .page-header p, body[data-theme="dark"] .section-title p { color: #9fb0c3 !important; }',
+      'body[data-theme="dark"] .bg-grey, body[data-theme="dark"] .services-section { background: #0a0e1a !important; }',
+      '@media (max-width: 991px) { .shared-subpage-nav .nav-shell { min-height: 44px; } .shared-subpage-nav .nav-main { display: none; } .shared-subpage-nav .menu-toggle { display: inline-block; } }'
+    ].join('');
+    document.head.appendChild(style);
+  }
+
+  var active = {
+    home: section === 'home' ? ' active' : '',
+    capabilities: section === 'capabilities' ? ' active' : '',
+    cases: section === 'cases' ? ' active' : '',
+    portfolio: section === 'portfolio' ? ' active' : '',
+    investment: section === 'investment' ? ' active' : '',
+    blog: section === 'blog' ? ' active' : '',
+  };
+
+  container.outerHTML = [
+    '<div class="shared-subpage-nav">',
+    '  <div class="nav-shell">',
+    '    <a class="brand" href="' + labels.homeHref + '">',
+    '      <img src="/assets/img/logo-black.png" alt="logo">',
+    '    </a>',
+    '    <div class="nav-main">',
+    '      <ul class="desktop-menu">',
+    '        <li>',
+    '          <a href="' + labels.homeHref + '" class="' + active.home.trim() + '">' + labels.home + ' <i class="fas fa-chevron-down"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + labels.homeHref + '#welcome">' + labels.welcome + '</a></li>',
+    '            <li><a href="' + labels.homeHref + '#about">' + labels.about + '</a></li>',
+    '            <li><a href="' + labels.homeHref + '#services">' + labels.services + '</a></li>',
+    '            <li><a href="' + labels.homeHref + '#tracks">' + (lang === 'en' ? 'Explore the site by track' : lang === 'zh-cn' ? '\u6309\u4e3b\u7ebf\u6d4f\u89c8\u7f51\u7ad9' : '\u6309\u4e3b\u7dda\u700f\u89bd\u7db2\u7ad9') + '</a></li>',
+    '            <li><a href="' + labels.homeHref + '#blog">' + labels.blogArticles + '</a></li>',
+    '            <li><a href="' + labels.homeHref + '#contact">' + labels.contact + '</a></li>',
+    '          </ul>',
+    '        </li>',
+    '        <li><a href="' + labels.capabilitiesHref + '" class="' + active.capabilities.trim() + '">' + labels.capabilities + '</a></li>',
+    '        <li><a href="' + labels.casesHref + '" class="' + active.cases.trim() + '">' + labels.cases + '</a></li>',
+    '        <li>',
+    '          <a href="' + labels.portfolioHref + '" class="' + active.portfolio.trim() + '">' + labels.portfolio + ' <i class="fas fa-chevron-down"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '            <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
+    '          </ul>',
+    '        </li>',
+    '        <li><a href="' + labels.investmentHref + '" class="' + active.investment.trim() + '">' + labels.investment + '</a></li>',
+    '        <li><a href="' + labels.blogHref + '" class="' + active.blog.trim() + '">' + labels.blog + '</a></li>',
+        '        <li>',
+        '          <a href="#">' + labels.sites + ' <i class="fas fa-chevron-down"></i></a>',
+        '          <ul class="submenu">',
+        siteLinksHtml,
+        '          </ul>',
+        '        </li>',
+    '        <li>',
+    '          <a href="#">' + labels.language + ' <i class="fas fa-chevron-down"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + alt.en + '">English</a></li>',
+    '            <li><a href="' + alt.zhCn + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
+    '            <li><a href="' + alt.zhHk + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
+    '          </ul>',
+    '        </li>',
+    '      </ul>',
+    '    </div>',
+    '    <div class="social nav-main"><button class="theme-toggle" type="button" aria-pressed="false"><i class="fas fa-moon"></i><i class="fas fa-sun"></i><span class="theme-toggle-text">' + labels.darkMode + '</span></button></div>',
+    '    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle menu">',
+    '      <span></span><span></span><span></span>',
+    '    </button>',
+    '  </div>',
+    '  <div class="mobile-panel">',
+    '    <ul class="mobile-menu">',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row">',
+    '          <a class="mobile-link' + active.home + '" href="' + labels.homeHref + '">' + labels.home + '</a>',
+    '          <button class="submenu-toggle" type="button" aria-expanded="false">+</button>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.homeHref + '#welcome">' + labels.welcome + '</a></li>',
+    '          <li><a href="' + labels.homeHref + '#about">' + labels.about + '</a></li>',
+    '          <li><a href="' + labels.homeHref + '#services">' + labels.services + '</a></li>',
+    '          <li><a href="' + labels.homeHref + '#tracks">' + (lang === 'en' ? 'Explore the site by track' : lang === 'zh-cn' ? '\u6309\u4e3b\u7ebf\u6d4f\u89c8\u7f51\u7ad9' : '\u6309\u4e3b\u7dda\u700f\u89bd\u7db2\u7ad9') + '</a></li>',
+    '          <li><a href="' + labels.homeHref + '#blog">' + labels.blogArticles + '</a></li>',
+    '          <li><a href="' + labels.homeHref + '#contact">' + labels.contact + '</a></li>',
+    '        </ul>',
+    '      </li>',
+    '      <li><a class="mobile-link' + active.capabilities + '" href="' + labels.capabilitiesHref + '">' + labels.capabilities + '</a></li>',
+    '      <li><a class="mobile-link' + active.cases + '" href="' + labels.casesHref + '">' + labels.cases + '</a></li>',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row">',
+    '          <a class="mobile-link' + active.portfolio + '" href="' + labels.portfolioHref + '">' + labels.portfolio + '</a>',
+    '          <button class="submenu-toggle" type="button" aria-expanded="false">+</button>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '          <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
+    '        </ul>',
+    '      </li>',
+    '      <li><a class="mobile-link' + active.blog + '" href="' + labels.blogHref + '">' + labels.blog + '</a></li>',
+      '      <li class="mobile-item">',
+      '        <div class="mobile-link-row">',
+      '          <a class="mobile-link" href="#">' + labels.sites + '</a>',
+      '          <button class="submenu-toggle" type="button" aria-expanded="false">+</button>',
+      '        </div>',
+      '        <ul class="mobile-submenu">',
+      siteLinksHtml,
+      '        </ul>',
+      '      </li>',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row">',
+    '          <a class="mobile-link" href="#">' + labels.language + '</a>',
+    '          <button class="submenu-toggle" type="button" aria-expanded="false">+</button>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + alt.en + '">English</a></li>',
+    '          <li><a href="' + alt.zhCn + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
+    '          <li><a href="' + alt.zhHk + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
+    '        </ul>',
+    '      </li>',
+    '    </ul>',
+    '    <div class="mobile-social"><button class="theme-toggle" type="button" aria-pressed="false"><i class="fas fa-moon"></i><i class="fas fa-sun"></i><span class="theme-toggle-text">' + labels.darkMode + '</span></button></div>',
+    '  </div>',
+    '</div>'
+  ].join('');
+
+  function applyTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    try { localStorage.setItem('site-theme', theme); } catch (e) {}
+    Array.prototype.forEach.call(document.querySelectorAll('.theme-toggle'), function (btn) {
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
+  }
+  function currentTheme() {
+    return document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('site-theme'); } catch (e) {}
+  if (!saved) {
+    saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  applyTheme(saved);
+
+  var nav = document.querySelector('.shared-subpage-nav');
+  if (!nav) return;
+  var toggle = nav.querySelector('.menu-toggle');
+  var panel = nav.querySelector('.mobile-panel');
+  if (toggle && panel) {
+    toggle.addEventListener('click', function () {
+      var open = panel.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  Array.prototype.forEach.call(nav.querySelectorAll('.mobile-item .submenu-toggle'), function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.mobile-item');
+      if (!item) return;
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '-' : '+';
+    });
+  });
+  Array.prototype.forEach.call(nav.querySelectorAll('.theme-toggle'), function (btn) {
+    btn.addEventListener('click', function () {
+      applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+      btn.classList.add('is-pressed');
+      window.setTimeout(function () { btn.classList.remove('is-pressed'); }, 160);
+    });
+  });
+  window.__siteTheme = {
+    applyTheme: applyTheme,
+    toggleTheme: function () { applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'); },
+    currentTheme: currentTheme
+  };
+}());
+
+
+
+
