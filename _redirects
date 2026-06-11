@@ -1,0 +1,30 @@
+# Cloudflare Pages _redirects
+# Format: [source] [destination] [status]
+
+# Language shortcuts
+/cn    /zh-cn/    302
+/hk    /zh-hk/    302
+/en    /en/    302
+
+# Social shortcut
+/github    https://github.com/fengyuwang-com    302
+/linkedin    https://linkedin.com/in/fengyuwang-com    302
+/youtube    https://www.youtube.com/@fenglin6    302
+/bilibili    https://b23.tv/Aqk6EGE    302
+/email    mailto:fengyuwang1@outlook.com    302
+
+# Track shortcuts
+/marketing    /zh-cn/mkt.html    302
+/investment    /zh-cn/invest.html    302
+/tech    /zh-cn/portfolio.html    302
+/capabilities    /zh-cn/capabilities.html    302
+/web3    /zh-cn/web3.html    302
+
+# Blog shortcuts
+/blog    /zh-cn/blog/    302
+
+# 301 redirects for old/aliased pages (permanent)
+/about    /zh-cn/about.html    301
+/services    /zh-cn/services.html    301
+/contact    /zh-cn/contact.html    301
+/cases    /zh-cn/cases.html    301
