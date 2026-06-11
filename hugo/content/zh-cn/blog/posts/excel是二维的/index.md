@@ -6,6 +6,8 @@ draft: false
 translationKey: "excel是二维的"
 ---
 
+你这句话说到根上了，而且完全正确。
+
 我用最直白、最本质的话跟你聊：
  
 1）Excel 用行和列，就是因为人类只能看懂二维

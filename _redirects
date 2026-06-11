@@ -23,7 +23,3 @@
 /blog    /zh-cn/blog/    302
 
 # 301 redirects for old/aliased pages (permanent)
-/about    /zh-cn/about.html    301
-/services    /zh-cn/services.html    301
-/contact    /zh-cn/contact.html    301
-/cases    /zh-cn/cases.html    301

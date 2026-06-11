@@ -6,6 +6,8 @@ draft: false
 translationKey: "开源工具"
 ---
 
+下面给你一份纯HTML/JS/前端开源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、数据库、图床，全部开源、可本地/私有化部署、可嵌入Obsidian。
+
 一、Web建站（纯HTML/无后端/可视化）
  
 1. GrapesJS（可视化拖拽建站）

@@ -5,6 +5,9 @@ slug: "几内亚比绍完整国情与幕后太上皇实现路径"
 draft: false
 translationKey: "guinea-bissau-analysis"
 ---
+
+几内亚比绍完整国情与幕后太上皇实现路径
+
 一、几内亚比绍完整国情（2026年最新）
  
 基本概况

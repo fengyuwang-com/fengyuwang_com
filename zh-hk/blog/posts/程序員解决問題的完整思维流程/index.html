@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>程序員解决問題的完整思维流程 | Fengyu WANG</title>
+    <meta name="description" content="程序員解决問題的完整思维流程（从編程實践內化的通用方法論）">
+    <link rel="canonical" href="/zh-hk/blog/posts/%E7%A8%8B%E5%BA%8F%E5%93%A1%E8%A7%A3%E5%86%B3%E5%95%8F%E9%A1%8C%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/">
+    
+    
+    
+    
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E7%A8%8B%E5%BA%8F%E5%93%A1%E8%A7%A3%E5%86%B3%E5%95%8F%E9%A1%8C%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/">
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" hreflang="en" href="/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%93%A1%E8%A7%A3%E5%86%B3%E5%95%8F%E9%A1%8C%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/">
+    
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"></div>
+    <script src="/assets/js/shared-subpage-navbar.js"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<style>
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 20px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
+<article class="blog-article"><h1>程序員解决問題的完整思维流程</h1><div class="article-content"><p>程序員解决問題的完整思维流程（从編程實践內化的通用方法論）</p>
+<p>這不是抽象的哲學，而是程序員每天寫代碼、改Bug、做項目時，刻进肌肉記憶的標準化問題解决步骤，可以直接套用到任何現實問題上。</p>
+<p>一、第一步：先搞懂“到底什么是問題”（90%的人栽在這裡）</p>
+<p>技術源頭：需求分析、接口定义、测试用例設計</p>
+<ul>
+<li>绝對不相信“模糊的描述”，默認所有“我觉得”“大概”“差不多”都是坑</li>
+<li>必须把問題轉化為可量化、可验證的明確指標：</li>
+<li>錯误問法：“網站太慢了”</li>
+<li>正確問法：“首页在4G網絡下加载時間超过3秒，影响了20%的用户轉化率”</li>
+<li>核心動作：
+1. 用自己的話重述問題，直到對方說“對，就是這個意思”
+2. 明確3件事：輸入是什么？輸出是什么？約束条件是什么？
+3. 提前問清楚“什么情况算解决了？什么情况不算？”</li>
+</ul>
+<p>程序員最痛恨的一句話：“你先做出來看看，我再告诉你要什么”。因為解决錯误的問題，比不解决問題更糟糕。</p>
+<p>二、第二步：把大問題拆成“能一口吃掉”的小問題（分治思想）</p>
+<p>技術源頭：模块化編程、函數拆分、微服務架构</p>
+<ul>
+<li>面對任何復杂問題，本能反應不是“我该怎么解决它”，而是“我能把它拆成哪几個独立的小問題”</li>
+<li>拆分標準：相互独立，完全穷尽（MECE原則），每個小問題都能单独解决，互不影响</li>
+<li>拆分到什么程度？直到每個小問題都简单到“不用想就能做”</li>
+<li>例子：</li>
+<li>寫一本書→拆成章節→拆成小節→拆成段落→拆成每一句話</li>
+<li>找工作→拆成简歷優化→投递渠道→笔试準備→面试技巧→谈薪</li>
+</ul>
+<p>三、第三步：先做計劃，再動手执行（避免盲目试錯）</p>
+<p>技術源頭：算法設計、架构設計、伪代碼</p>
+<ul>
+<li>绝對不“上來就干”，尤其是復杂問題。宁愿花1小時做計劃，也不花10小時改烂摊子</li>
+<li>計劃不是寫長篇大論，而是寫清楚**“第一步做什么，第二步做什么”**</li>
+<li>核心動作：
+1. 列出所有可能的解决方案
+2. 評估每個方案的優缺點（時間、成本、風險）
+3. 选择一個最優方案，用流程圖或文字寫清楚步骤</li>
+<li>程序員的口頭禅：“Talk is cheap, show me the plan.”</li>
+</ul>
+<p>四、第四步：用“假設-验證”的科學方法排查問題（调试思维）</p>
+<p>技術源頭：Debug、单元测试、日志分析</p>
+<ul>
+<li>這是程序員最独特的技能，也是區分普通人和高手的關键</li>
+<li>面對“為什么它不工作？”的問題，绝對不“随機改东西直到能跑”，而是严格遵循：
+1. 观察：收集所有現象和數據，不要猜测
+2. 假設：提出一個最可能的原因
+3. 實验：設計一個最小的實验來验證這個假設
+4. 分析：如果實验結果符合假設，就继续下一步；如果不符合，就推翻假設，重新來</li>
+<li>經典工具：小黄鸭调试法——把問題从頭到尾讲給一個不會說話的东西听，讲着讲着你自己就找到答案了</li>
+</ul>
+<p>五、第五步：找共性，復用已有的解决方案（不要重復發明轮子）</p>
+<p>技術源頭：設計模式、開源庫、Stack Overflow</p>
+<ul>
+<li>坚信“你遇到的99%的問題，別人都已經遇到过，并且有了成熟的解决方案”</li>
+<li>遇到問題的第一反應不是“我要自己从頭做”，而是“有沒有人已經解决过這個問題？”</li>
+<li>核心能力：模式識別——能从不同的問題中看到相同的本質，然後把已有的解决方案迁移过來</li>
+<li>例子：</li>
+<li>設計缓存策略→類比超市货架管理（热門商品放最前面）</li>
+<li>处理客户投诉→類比异常处理流程（捕獲异常→記录日志→給出兜底方案）</li>
+</ul>
+<p>六、第六步：先跑通最小可行版本，再迭代優化（敏捷思想）</p>
+<p>技術源頭：MVP、敏捷開發、Git版本控製</p>
+<ul>
+<li>不追求“一步到位的完美解决方案”，默認所有方案都是“临時的、可以改进的”</li>
+<li>先做一個最小可行產品（MVP）——只保留最核心的功能，能跑通整個流程就行</li>
+<li>然後根據實际反馈，一點點修改、優化、添加新功能</li>
+<li>Git思想的體現：</li>
+<li>每次修改只做一件事，寫清楚提交信息</li>
+<li>保留所有歷史版本，随時可以回退到之前的状態</li>
+<li>重要的改動開一個新分支，實验成功了再合并到主線</li>
+</ul>
+<p>七、第七步：提前考虑所有“可能出錯”的情况（边界與异常处理）</p>
+<p>技術源頭：异常捕獲、边界测试、Linux權限係统</p>
+<ul>
+<li>程序員天生是“悲观主义者”，永远假設“最坏的情况會發生”</li>
+<li>在設計解决方案的時候，就會問自己：</li>
+<li>“如果用户輸入了錯误的數據怎么办？”</li>
+<li>“如果網絡断了怎么办？”</li>
+<li>“如果服務器挂了怎么办？”</li>
+<li>核心原則：失败要早，失败要响。問題越早暴露，解决成本越低；出了問題要給出清晰的錯误信息，而不是默默失败</li>
+<li>Linux權限思想的體現：能力越大，责任越大。不滥用自己的權限，給不同的人分配不同的權限，避免一個人犯錯毁掉整個係统</li>
+</ul>
+<p>八、第八步：任何重復的工作都應该自動化（工具思维）</p>
+<p>技術源頭：脚本、CI/CD、自動化测试</p>
+<ul>
+<li>認為手工重復操作是一种“耻辱”，宁愿花10小時寫一個脚本，也不愿花1小時做重復的工作</li>
+<li>核心逻輯：一次投入，永久受益。今天花時間寫脚本，明天、後天、大後天都能省時間</li>
+<li>例子：</li>
+<li>用Excel公式自動計算，而不是手動算</li>
+<li>用快捷键代替鼠標點击</li>
+<li>用自動化工具備份文件、發送郵件</li>
+</ul>
+<p>总結</p>
+<p>程序員解决問題的本質，就是把模糊、復杂、混乱的現實問題，轉化為清晰、简单、可执行的步骤。
+它不是什么神奇的天赋，而是一套可以學习、可以训练的標準化流程。掌握了這套流程，你就能用它解决生活和工作中的几乎所有問題。</p>
+</div></article>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>商業機密保护 | Fengyu WANG</title>
+    <meta name="description" content="這是一個非常經典且關键的商業風控問題，而且你提到的“AI生成代碼”這個前提，其實有非常成熟的解决方案。你不需要自己成為編程专家，只要給AI下达“带强加密與權限控製”的指令，就能把這個程序变成“离了你就废”的专屬工具。">
+    <link rel="canonical" href="/zh-hk/blog/posts/%E5%95%86%E6%A5%AD%E6%A9%9F%E5%AF%86%E4%BF%9D%E6%8A%A4/">
+    
+    
+    
+    
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E5%95%86%E6%A5%AD%E6%A9%9F%E5%AF%86%E4%BF%9D%E6%8A%A4/">
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" hreflang="en" href="/en/blog/posts/%E5%95%86%E6%A5%AD%E6%A9%9F%E5%AF%86%E4%BF%9D%E6%8A%A4/">
+    
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"></div>
+    <script src="/assets/js/shared-subpage-navbar.js"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<style>
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 20px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
+<article class="blog-article"><h1>商業機密保护</h1><div class="article-content"><p>這是一個非常經典且關键的商業風控問題，而且你提到的“AI生成代碼”這個前提，其實有非常成熟的解决方案。你不需要自己成為編程专家，只要給AI下达“带强加密與權限控製”的指令，就能把這個程序变成“离了你就废”的专屬工具。</p>
+<p>核心逻輯是：把“程序功能”和“使用權限”彻底分開。員工拿到的只是“操作界面”，核心的“大脑”和“钥匙”都在你手裡。</p>
+<p>以下是分三步走的方案，包含了你可以直接復製給AI的提示词（Prompt），即使你不懂代碼，也能让AI幫你實現。</p>
+<p>第一步：核心代碼“云端隔离”（最彻底的方案）</p>
+<p>這是最安全的做法。让AI把程序切成两半：</p>
+<p>1. 員工端（本地）： 只有輸入界面和简单的操作逻輯。
+2. 服務端（云端）： 包含核心算法、計算公式、商業逻輯（這部分你放在自己的服務器或電脑上）。</p>
+<p>原理： 員工的電脑必须聯網连接你的服務器才能运行。他把程序拷贝走，因為连不上你的服務器，就是一個空壳。</p>
+<p>👉 你給AI的指令（復製這段）：</p>
+<p>“请将我現有的這個程序进行重构，采用C/S架构（客户端/服務器架构）。</p>
+<p>1. 客户端：包含所有的UI界面和輸入輸出功能，供員工使用。客户端不包含任何核心算法和業務逻輯。
+2. 服務端：将所有的核心計算、關键逻輯、數據处理都放在服務端。使用Python的Flask或FastAPI框架編寫。
+3. 通信：客户端通过API调用服務端，且必须携带API Key才能通信。
+4. 限製：如果服務端宕機或客户端无法连接到指定的服務器IP，客户端必须立即停止工作并提示‘未授權使用’。”</p>
+<p>第二步：硬件绑定 + 動態令牌（防拷贝）</p>
+<p>如果你的員工工作環境沒有網絡，或者不想搞云端，就用這個方案。让程序“認電脑”又“認人”。</p>
+<p>原理： 程序启動時，會先讀取這台電脑的硬件指纹（如硬盘序列號、MAC地址），并向你请求一個“動態密碼”。員工换了電脑，或者沒有你的密碼，程序直接锁死。</p>
+<p>👉 你給AI的指令（復製這段）：</p>
+<p>“请為我的程序添加硬件绑定和動態授權功能：</p>
+<p>1. 硬件指纹：程序启動時，自動獲取電脑的硬盘序列號（Disk Serial Number）和MAC地址，生成唯一的機器碼。
+2. 离線激活：如果機器碼不在白名单中，弹出窗口顯示機器碼，并要求輸入‘激活碼’。
+3. 生成器：请额外為我寫一個‘激活碼生成器’（只有我能用），輸入員工的機器碼，能生成一個有效期為[例如：30天]的激活碼。
+4. 自毁機製：一旦检测到機器碼被篡改，或者激活碼过期，程序自動刪除關键配置文件并退出，无法运行。”</p>
+<p>第三步：代碼混淆與“黑盒”化（防破解）</p>
+<p>AI生成的代碼通常很清晰，容易被看懂。让AI把核心部分变得“乱七八糟”，增加破解難度。</p>
+<p>👉 你給AI的指令（復製這段）：</p>
+<p>“请對程序的核心代碼进行深度混淆处理：</p>
+<p>1. 将所有的变量名、函數名改為无意义的字符（如a1, b2, x9）。
+2. 對核心算法进行逻輯打乱（如将简单的計算拆分成復杂的步骤），但保持运行結果不变。
+3. 将核心代碼打包成二进製扩展庫（如Python的.pyd文件），让員工无法看到源碼。”</p>
+<p> </p>
+<p>💡 給你的额外“商業防火墙”</p>
+<p>技術只能防君子，合同才能防小人。在給員工用之前，配合技術手段，做两件事：</p>
+<p>1. 签署《保密协议（NDA）》與《競業限製协议》： 明確寫清楚“程序所有權归公司所有，員工仅享有使用權，禁止拷贝、反向工程、用于牟利”。
+2. 水印與日志： 让AI在程序裡加一行代碼，每一次操作都自動記录員工的账號和操作時間，并在生成的文件上加上隱形水印。這样一旦泄露，你有明確的證據追责。</p>
+<p>总結建议</p>
+<p>如果你想最快见效，優先选择第二步（硬件绑定）。你只需要把那段指令復製給寫程序的AI，它會幫你把現有代碼改造好，还會給你一個生成激活碼的小工具。這样，你就牢牢掌握了“生杀大權”。</p>
+<hr>
+</div></article>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
+</body>
+</html>
