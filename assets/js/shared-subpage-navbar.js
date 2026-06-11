@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   var container = document.getElementById('shared-subpage-navbar');
   if (!container) return;
 
@@ -115,6 +115,7 @@
     blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
   };
   var alt = altMap[section] || altMap.blog;
+  function langUrl(t) { var c = window.location.pathname; if (c === '/' || c === '/index.html') return alt[t]; var p = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}; var x = '/' + lang + '/'; if (c.indexOf(x) === 0) return c.replace(x, '/' + p[t] + '/'); return alt[t]; }
 
   var siteLinks = [
     { label: 'GitHub', href: 'https://github.com/fengyuwang-com' },
@@ -237,9 +238,9 @@
     '        <li>',
     '          <a href="#">' + labels.language + ' <i class="fas fa-chevron-down"></i></a>',
     '          <ul class="submenu">',
-    '            <li><a href="' + alt.en + '">English</a></li>',
-    '            <li><a href="' + alt.zhCn + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
-    '            <li><a href="' + alt.zhHk + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
+    '            <li><a href="' + langUrl('en') + '">English</a></li>',
+    '            <li><a href="' + langUrl('zhCn') + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
+    '            <li><a href="' + langUrl('zhHk') + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
     '          </ul>',
     '        </li>',
     '      </ul>',
@@ -293,9 +294,9 @@
     '          <button class="submenu-toggle" type="button" aria-expanded="false">+</button>',
     '        </div>',
     '        <ul class="mobile-submenu">',
-    '          <li><a href="' + alt.en + '">English</a></li>',
-    '          <li><a href="' + alt.zhCn + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
-    '          <li><a href="' + alt.zhHk + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
+    '          <li><a href="' + langUrl('en') + '">English</a></li>',
+    '          <li><a href="' + langUrl('zhCn') + '">\u7b80\u4f53\u4e2d\u6587</a></li>',
+    '          <li><a href="' + langUrl('zhHk') + '">\u7e41\u9ad4\u4e2d\u6587</a></li>',
     '        </ul>',
     '      </li>',
     '    </ul>',
