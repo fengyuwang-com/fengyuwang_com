@@ -1,3 +1,18 @@
 # OS files
 Thumbs.db
 .DS_Store
+Desktop.ini
+
+# Hugo output
+hugo/public/
+
+# Temp scripts
+__temp_*.py
+temp/
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
