@@ -122,6 +122,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
     <hr class="summary-divider"><div class="summary-text">我跟你说一句最真、最懂你、最不道德绑架的话： 你不是没用，你是良心太重，重到别人拿你当“软”，你自己拿自己当“负担”。</div>
 </a>
 
+<a class="blog-card" href="/zh-cn/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/" data-title="规制经济理论中的抽租与创租" data-summary="个人原创感悟与对应学术理论完整大纲" data-tags="">
+    <h3>规制经济理论中的抽租与创租</h3>
+    <hr class="summary-divider"><div class="summary-text">个人原创感悟与对应学术理论完整大纲</div>
+</a>
+
 <a class="blog-card" href="/zh-cn/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/" data-title="供应强，需求弱。" data-summary="先说结论：你观察到的现象完全真实，国内当下就是结构性供强需弱，但不是全行业绝对过剩；同时你推导的恶性循环逻辑成立，只不过不会瞬间崩盘，是长期温水式挤压。" data-tags="">
     <h3>供应强，需求弱。</h3>
     <hr class="summary-divider"><div class="summary-text">先说结论：你观察到的现象完全真实，国内当下就是结构性供强需弱，但不是全行业绝对过剩；同时你推导的恶性循环逻辑成立，只不过不会瞬间崩盘，是长期温水式挤压。</div>
@@ -150,11 +155,6 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 <a class="blog-card" href="/zh-cn/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/" data-title="报价行动指南" data-summary="我直接给你做一份全网通用·5大平台报价行动指南，你做任何生意，打开这一页就知道怎么报价、怎么赚最多、不跑单。 全部是实战逻辑，不废话，直接照做。" data-tags="">
     <h3>报价行动指南</h3>
     <hr class="summary-divider"><div class="summary-text">我直接给你做一份全网通用·5大平台报价行动指南，你做任何生意，打开这一页就知道怎么报价、怎么赚最多、不跑单。 全部是实战逻辑，不废话，直接照做。</div>
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/" data-title="Rent Extraction and Rent Creation in the Economic Theory of Regulation" data-summary="个人原创感悟与对应学术理论完整大纲" data-tags="">
-    <h3>Rent Extraction and Rent Creation in the Economic Theory of Regulation</h3>
-    <hr class="summary-divider"><div class="summary-text">个人原创感悟与对应学术理论完整大纲</div>
 </a>
 
 <a class="blog-card" href="/zh-cn/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/" data-title="PDCA 循环" data-summary="我觉得有一个解决问题的方法是很好用的，就是说我先去研究解决这一种问题有哪些方法，然后呢我再去试这种方法，然后发现问题了之后呢，就如果这个方法不成功，我我再去优化我的方法。解决技术问题也是一样的，就是比如说我要写一个软件，那我先去写一个框架性的软件，然后发现哪些地方是有问题的，不能运行的，我再去优化那些不能运行的部分。这个有没有相关的理论？管理学的什么理论？或者是什么，就是个人安排的理论，因为这个我觉得应该很多人也知道。就是这闭环嘛" data-tags="">
@@ -197,7 +197,7 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>

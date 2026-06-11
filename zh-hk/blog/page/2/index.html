@@ -64,7 +64,7 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 </style>
 <div class="page-header"><h1>博客</h1><p>原創文章、結構筆記與研究導向的思考</p></div>
-<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
+<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜尋文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
 
 <a class="blog-card" href="/zh-hk/blog/posts/%E9%8A%80%E8%A1%8C%E6%9F%9C%E5%93%A1%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%A9%9F/" data-title="銀行柜員的存在主义危機" data-summary="早上八點五十分，他换上工服，扣好扣子，對着更衣室的镜子看了一眼。镜子裡的人穿着藏蓝色西装，領口別着工牌，工牌上有他的名字和一串編號。他知道，再过十分钟，這串編號會比他的名字更重要。" data-tags="">
@@ -107,6 +107,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
     <hr class="summary-divider"><div class="summary-text">我直接給你做一份全網通用·5大平台報價行動指南，你做任何生意，打開這一页就知道怎么報價、怎么赚最多、不跑单。 全部是實戰逻輯，不废話，直接照做。</div>
 </a>
 
+<a class="blog-card" href="/zh-hk/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/" data-title="規制經濟理論中的抽租與創租" data-summary="個人原創感悟與對應學術理論完整大纲" data-tags="">
+    <h3>規制經濟理論中的抽租與創租</h3>
+    <hr class="summary-divider"><div class="summary-text">個人原創感悟與對應學術理論完整大纲</div>
+</a>
+
 <a class="blog-card" href="/zh-hk/blog/posts/%E8%81%8C%E5%A0%B4%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E8%88%87%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/" data-title="职場生存、核心壁垒與破局路径" data-summary="职場生存、核心壁垒與破局路径" data-tags="">
     <h3>职場生存、核心壁垒與破局路径</h3>
     <hr class="summary-divider"><div class="summary-text">职場生存、核心壁垒與破局路径</div>
@@ -147,22 +152,17 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
     <hr class="summary-divider"><div class="summary-text">王先生专注于解决方案與通用逻輯體係的研究與應用。</div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/" data-title="香港高端求职金融咨询" data-summary="你這句說到根上了—— 不是你不行，是你現在待的地方，根本沒有高端客户。 你在闲鱼，就等于在夜市摆摊。 你卖的是高端咨询，就等于在夜市卖燕窝、虫草、私人定製。" data-tags="">
-    <h3>香港高端求职金融咨询</h3>
-    <hr class="summary-divider"><div class="summary-text">你這句說到根上了—— 不是你不行，是你現在待的地方，根本沒有高端客户。 你在闲鱼，就等于在夜市摆摊。 你卖的是高端咨询，就等于在夜市卖燕窝、虫草、私人定製。</div>
-</a>
-
 </div>
 
 <div class="pagination-shell" id="paginationShell">
-    <a href="/zh-hk/blog/" class="page-nav">← 上一页</a>
+    <a href="/zh-hk/blog/" class="page-nav">← 上一頁</a>
     <a href="/zh-hk/blog/" class="page-btn">1</a><span class="page-btn active">2</span>
-    <span class="page-btn" style="opacity:.3;cursor:default;">下一页 →</span>
+    <span class="page-btn" style="opacity:.3;cursor:default;">下一頁 →</span>
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="2" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>

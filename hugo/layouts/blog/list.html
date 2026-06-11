@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{ define "main" }}{{ $lang := .Site.Language.Lang }}
 <style>
 .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:20px; margin-bottom:32px; }
 .blog-card { background:#fff; border-radius:20px; padding:24px; box-shadow:0 4px 16px rgba(15,23,42,.06); border:1px solid rgba(15,23,42,.06); display:flex; flex-direction:column; transition:transform .2s ease,box-shadow .2s ease; cursor:pointer; text-decoration:none; color:inherit; }
@@ -23,7 +23,7 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 </style>
 <div class="page-header"><h1>{{ .Title }}</h1>{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}</div>
-<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
+<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="{{ if eq $lang "en" }}Search articles...{{ else if eq $lang "zh-hk" }}搜尋文章...{{ else }}搜索文章...{{ end }}" autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
 {{ range .Paginator.Pages.ByDate.Reverse }}
 <a class="blog-card" href="{{ .RelPermalink }}" data-title="{{ .Title }}" data-summary="{{ .Params.description }}" data-tags="{{ with .Params.categories }}{{ delimit . " " }}{{ end }}">
@@ -34,13 +34,13 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 </div>
 {{ $totalPages := .Paginator.TotalPages }}{{ if gt $totalPages 1 }}
 <div class="pagination-shell" id="paginationShell">
-    {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="page-nav">← 上一页</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">← 上一页</span>{{ end }}
+    {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="page-nav">← {{ if eq $lang "en" }}Previous{{ else if eq $lang "zh-hk" }}上一頁{{ else }}上一页{{ end }}</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">← {{ if eq $lang "en" }}Previous{{ else if eq $lang "zh-hk" }}上一頁{{ else }}上一页{{ end }}</span>{{ end }}
     {{ range .Paginator.Pagers }}{{ if eq .PageNumber $.Paginator.PageNumber }}<span class="page-btn active">{{ .PageNumber }}</span>{{ else }}<a href="{{ .URL }}" class="page-btn">{{ .PageNumber }}</a>{{ end }}{{ end }}
-    {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="page-nav">下一页 →</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">下一页 →</span>{{ end }}
+    {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="page-nav">{{ if eq $lang "en" }}Next →{{ else if eq $lang "zh-hk" }}下一頁 →{{ else }}下一页 →{{ end }}</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">{{ if eq $lang "en" }}Next →{{ else if eq $lang "zh-hk" }}下一頁 →{{ else }}下一页 →{{ end }}</span>{{ end }}
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="{{ $totalPages }}" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 {{ end }}
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<={{ $totalPages }}){window.location.href="{{ (index .Paginator.Pagers 0).URL }}".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<={{ $totalPages }}){window.location.href="{{ (index .Paginator.Pagers 0).URL }}".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 {{ end }}

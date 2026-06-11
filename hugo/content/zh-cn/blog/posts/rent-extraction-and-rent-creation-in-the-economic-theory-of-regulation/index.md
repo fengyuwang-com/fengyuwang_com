@@ -1,5 +1,5 @@
 ---
-title: "Rent Extraction and Rent Creation in the Economic Theory of Regulation"
+title: "规制经济理论中的抽租与创租"
 description: "个人原创感悟与对应学术理论完整大纲"
 slug: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
 draft: false
