@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Excel是二维的 | Fengyu WANG</title>
-    <meta name="description" content="Excel用行和列来组织数据，是因为二维表格是人类大脑最容易理解的结构。">
+    <meta name="description" content="你这句话说到根上了，而且完全正确。">
     <link rel="canonical" href="/zh-cn/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/">
     
     
@@ -71,11 +71,28 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 20px;
+    margin: 0 0 24px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-wrap {
+    margin-bottom: 28px;
+}
+.blog-article .summary-wrap .summary-text {
+    font-size: .95rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-wrap .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-wrap .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-wrap .summary-divider { border-top-color: rgba(41,151,255,.2); }
 
 .blog-article .article-content { margin-top: 8px; }
 .blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
@@ -106,10 +123,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>Excel是二维的</h1>
+
     
-    <div class="article-content"><p>Excel用行和列来组织数据，是因为二维表格是人类大脑最容易理解的结构。但现实世界不是二维的——每一个实体都有多个维度，这些维度之间还存在复杂的关联关系。</p>
-<p>你这句话说到根上了，而且完全正确。</p>
-<p>我用最直白、最本质的话跟你聊：</p>
+    <div class="summary-wrap">
+        <div class="summary-text"><strong>摘要：</strong>你这句话说到根上了，而且完全正确。</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
+    <div class="article-content"><p>我用最直白、最本质的话跟你聊：</p>
 <p>1）Excel 用行和列，就是因为人类只能看懂二维</p>
 <p>行 × 列 = 二维表格。
 这是人类眼睛和大脑最舒服、最简单的结构。</p>
@@ -216,7 +240,6 @@ Palantir 是把世界原样存起来，让电脑去理解。</p>
 <p>你之前所有的困惑、所有觉得“不对”的地方，
 本质上都是：
 Excel 是二维的，而生意是高维的。</p>
-<p>这个差异对实际业务的启示是：当你需要用多个维度来做出决策时，不要试图把所有信息强行塞进一张表，而是用网状的数据结构来保留完整的关联关系。电脑可以帮你存好关系、找出规律、给出结论。</p>
 </div>
 </article>
 
