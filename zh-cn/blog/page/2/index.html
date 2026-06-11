@@ -180,6 +180,15 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
 
 <div class="blog-grid" id="blogGrid">
 
+<a class="blog-card" href="/zh-cn/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/" data-title="主动吸引穷人" data-summary="我跟你说最扎心、最真实、你自己没意识到的 3 个底层原因。 不是安慰，是能立刻改的硬问题。" data-tags="">
+    <h3>主动吸引穷人</h3>
+    
+    
+    <hr class="summary-divider">
+    <div class="summary-text">我跟你说最扎心、最真实、你自己没意识到的 3 个底层原因。 不是安慰，是能立刻改的硬问题。</div>
+    
+</a>
+
 <a class="blog-card" href="/zh-cn/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/" data-title="职场生存、核心壁垒与破局路径" data-summary="职场生存、核心壁垒与破局路径" data-tags="">
     <h3>职场生存、核心壁垒与破局路径</h3>
     
@@ -324,42 +333,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/" data-title="人工智能的急速发展" data-summary="对那些在技术上从事低端产业链，本质上依赖庞大劳动力规模驱动经济体量的国家而言，人工智能的急速发展必然造成经济上的紧迫感。" data-tags="">
-    <h3>人工智能的急速发展</h3>
-    
-    
-    <hr class="summary-divider">
-    <div class="summary-text">对那些在技术上从事低端产业链，本质上依赖庞大劳动力规模驱动经济体量的国家而言，人工智能的急速发展必然造成经济上的紧迫感。</div>
-    
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/" data-title="清醒正直" data-summary="我跟你说一句最硬、最真、最能让你挺直腰杆的话：" data-tags="">
-    <h3>清醒正直</h3>
-    
-    
-    <hr class="summary-divider">
-    <div class="summary-text">我跟你说一句最硬、最真、最能让你挺直腰杆的话：</div>
-    
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/" data-title="马斯克的五步工作法" data-summary="我们来详细拆解马斯克的五步工作法，把每个环节的细节和逻辑都讲清楚：" data-tags="">
-    <h3>马斯克的五步工作法</h3>
-    
-    
-    <hr class="summary-divider">
-    <div class="summary-text">我们来详细拆解马斯克的五步工作法，把每个环节的细节和逻辑都讲清楚：</div>
-    
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/" data-title="零和博弈 &#43; 军备竞赛 &#43; 囚徒困境" data-summary="有！而且是正经经济学、社会学经典理论，完全对应你说的： 大家都拼命努力 → 所有人更苦 → 排名不变 → 卷没有出路。" data-tags="">
-    <h3>零和博弈 &#43; 军备竞赛 &#43; 囚徒困境</h3>
-    
-    
-    <hr class="summary-divider">
-    <div class="summary-text">有！而且是正经经济学、社会学经典理论，完全对应你说的： 大家都拼命努力 → 所有人更苦 → 排名不变 → 卷没有出路。</div>
-    
-</a>
-
 </div>
 
 
@@ -378,17 +351,13 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     <span class="page-btn active">2</span>
     
     
-    
-    <a href="/zh-cn/blog/page/3/" class="page-btn">3</a>
-    
-    
 
     
-    <a href="/zh-cn/blog/page/3/" class="page-nav">下一页 →</a>
+    <span class="page-btn" style="opacity:.3;cursor:default;">下一页 →</span>
     
 
     <span class="go-to-shell">
-        <input class="go-to-input" type="number" id="goToPage" min="1" max="3" placeholder="">
+        <input class="go-to-input" type="number" id="goToPage" min="1" max="2" placeholder="">
         <button class="go-to-btn" id="goToBtn">GO</button>
     </span>
 </div>
@@ -420,7 +389,7 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     if (gb && gi) {
         function gp() {
             var p = parseInt(gi.value, 10);
-            if (p >= 1 && p <=  3 ) {
+            if (p >= 1 && p <=  2 ) {
                 window.location.href = "\/zh-cn\/blog\/".replace("/page/1/", "/page/" + p + "/");
             }
         }
