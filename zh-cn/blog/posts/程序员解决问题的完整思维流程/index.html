@@ -71,28 +71,11 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 24px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
-
-.blog-article .summary-wrap {
-    margin-bottom: 28px;
-}
-.blog-article .summary-wrap .summary-text {
-    font-size: .95rem;
-    color: #6b7280;
-    line-height: 1.7;
-    margin: 0 0 14px;
-}
-.blog-article .summary-wrap .summary-divider {
-    border: 0;
-    border-top: 2px solid rgba(0,113,227,.15);
-    margin: 0;
-}
-body[data-theme="dark"] .blog-article .summary-wrap .summary-text { color: #9fb0c3; }
-body[data-theme="dark"] .blog-article .summary-wrap .summary-divider { border-top-color: rgba(41,151,255,.2); }
 
 .blog-article .article-content { margin-top: 8px; }
 .blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
@@ -103,14 +86,6 @@ body[data-theme="dark"] .blog-article .article-content h2,
 body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,
 body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
-
-.blog-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-.blog-tags span {
-    display: inline-flex; align-items: center; justify-content: center;
-    padding: 6px 12px; border-radius: 999px;
-    background: rgba(0,113,227,.08); color: #0071e3;
-    font-weight: 600; font-size: .82rem;
-}
 @media (max-width: 767px) {
     .blog-article { padding: 24px; border-radius: 20px; }
     .blog-back-shell { margin-bottom: 32px; }
@@ -123,17 +98,8 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>程序员解决问题的完整思维流程</h1>
-
-    
-    <div class="summary-wrap">
-        <div class="summary-text"><strong>摘要：</strong>程序员在处理代码问题时形成了一套可以被推广到几乎所有领域的通用问题解决框架。从定义问题、分解问题到假设验证、模式识别，每一步都建立在认知科学和工程实践的基本原则之上。</div>
-        <hr class="summary-divider">
-    </div>
-    
-
-    
-
-    <div class="article-content"><p>这不是抽象的哲学，而是程序员每天写代码、改Bug、做项目时，刻进肌肉记忆的标准化问题解决步骤，可以直接套用到任何现实问题上。</p>
+    <div class="article-content"><p>编程实践中形成的方法论，可以推广到很多领域。</p>
+<p>这不是抽象的哲学，而是程序员每天写代码、改Bug、做项目时，刻进肌肉记忆的标准化问题解决步骤，可以直接套用到任何现实问题上。</p>
 <p>一、第一步：先搞懂“到底什么是问题”（90%的人栽在这里）</p>
 <p>技术源头：需求分析、接口定义、测试用例设计</p>
 <ul>
