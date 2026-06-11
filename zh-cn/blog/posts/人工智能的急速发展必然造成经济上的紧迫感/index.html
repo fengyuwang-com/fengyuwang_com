@@ -71,11 +71,38 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-section {
+    margin-bottom: 28px;
+}
+.blog-article .summary-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+.blog-article .summary-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-label { color: #6b7280; }
+body[data-theme="dark"] .blog-article .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-divider { border-top-color: rgba(41,151,255,.2); }
+
 .blog-article .article-content {
     margin-top: 28px;
 }
@@ -107,7 +134,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>人工智能的急速发展必然造成经济上的紧迫感</h1>
+
     
+    <div class="summary-section">
+        <div class="summary-label">摘要</div>
+        <div class="summary-text">AI的急速发展必然造成经济上的紧迫感，其直接来源是技术替代速度和社会适应速度之间的错配</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
     <div class="article-content"><p>AI的急速发展必然造成经济上的紧迫感，其直接来源是技术替代速度和社会适应速度之间的错配。</p>
 <p>对那些在技术上从事低端产业链，本质上依赖庞大劳动力规模驱动经济体量的国家而言，人工智能的急速发展必然造成经济上的紧迫感。</p>
 <p>例如东南亚的一些国家，因为他们过去的竞争力并非来自技术，而是来自人多便宜可替代，这是一种以数量弥补效率的路径。而对那些未完全按照市场定价，而是通过观念与制度将工作区分为三六九等，以此维持社会结构稳定的国家来说，人工智能则会进一步造成更为棘手的伦理困境。</p>

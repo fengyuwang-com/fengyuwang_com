@@ -71,11 +71,38 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-section {
+    margin-bottom: 28px;
+}
+.blog-article .summary-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+.blog-article .summary-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-label { color: #6b7280; }
+body[data-theme="dark"] .blog-article .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-divider { border-top-color: rgba(41,151,255,.2); }
+
 .blog-article .article-content {
     margin-top: 28px;
 }
@@ -107,7 +134,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>银行柜员的存在主义危机</h1>
+
     
+    <div class="summary-section">
+        <div class="summary-label">摘要</div>
+        <div class="summary-text">存在主义危机最常见的第一个症状，是对时间感知的病变。当一个人在同一个窗口坐到第六年的时候，时间就不再是线性的河流，而变成了一片没有标记的水面</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
     <div class="article-content"><p>存在主义危机最常见的第一个症状，是对时间感知的病变。当一个人在同一个窗口坐到第六年的时候，时间就不再是线性的河流，而变成了一片没有标记的水面。</p>
 <p>早上八点五十分，他换上工服，扣好扣子，对着更衣室的镜子看了一眼。镜子里的人穿着藏蓝色西装，领口别着工牌，工牌上有他的名字和一串编号。他知道，再过十分钟，这串编号会比他的名字更重要。</p>
 <p>他走进柜台，坐下，打开电脑，输入密码。系统启动，跳出操作界面。九点整，卷帘门升起，第一位客户走进来。一切如常。</p>

@@ -67,21 +67,12 @@
     color: #111827;
     line-height: 1.4;
 }
-.blog-card .summary-label {
-    font-size: .82rem;
-    font-weight: 600;
-    color: #6b7280;
-    margin-bottom: 4px;
-}
 .blog-card .summary-text {
     font-size: .92rem;
     color: #6b7280;
     line-height: 1.6;
-    margin: 0 0 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    margin: 0;
+    word-break: break-word;
 }
 .blog-card .summary-divider {
     border: 0;
@@ -106,8 +97,8 @@
 body[data-theme="dark"] .blog-card { background: #1e293b; border-color: rgba(148,163,184,.12); }
 body[data-theme="dark"] .blog-card h3 { color: #e5ecf4; }
 body[data-theme="dark"] .blog-card .summary-text { color: #9fb0c3; }
-body[data-theme="dark"] .blog-card .summary-label { color: #9fb0c3; }
 body[data-theme="dark"] .blog-card .summary-divider { border-top-color: rgba(148,163,184,.15); }
+
 .search-shell { margin-bottom: 28px; }
 .search-input {
     width: 100%;
@@ -125,6 +116,7 @@ body[data-theme="dark"] .blog-card .summary-divider { border-top-color: rgba(148
 body[data-theme="dark"] .search-input { background: #1e293b; border-color: rgba(148,163,184,.2); color: #e5ecf4; }
 body[data-theme="dark"] .search-input:focus { border-color: #2997ff; box-shadow: 0 0 0 3px rgba(41,151,255,.15); }
 .search-count { font-size: .85rem; color: #9ca3af; margin-top: 8px; }
+
 .pagination-shell {
     display: flex;
     align-items: center;
@@ -193,7 +185,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">从职场生存到独立创业的转变，本质上是一次认知的升级。大多数人在职场中积累的是如何做好一份工作的能力，而不是如何经营一份事业的能力，二者需要的</div>
     
 </a>
@@ -203,7 +194,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">从商业史的角度审视，真正能长期维持高利润的生意，其底层逻辑一直围绕人类天性中几个深层且持久的驱动力展开</div>
     
 </a>
@@ -213,7 +203,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">几乎每个上班的人都有一种分裂的时间感：一天飞快地过去了，但每一分钟都像在熬。这种感觉背后有一个清晰的心理学机制</div>
     
 </a>
@@ -223,7 +212,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">存在主义危机最常见的第一个症状，是对时间感知的病变。当一个人在同一个窗口坐到第六年的时候，时间就不再是线性的河流，而变成了一片没有标记的水面</div>
     
 </a>
@@ -233,7 +221,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">如果用两种声音来比喻社会运转的逻辑，大炮代表了硬性的指令和规则，摇滚代表了表达和创造的冲动。二者之间的平衡，决定了系统的活力与稳定</div>
     
 </a>
@@ -243,7 +230,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">很多人创业失败不是因为执行力不够，而是因为他们只有执行力，没有商业思维。执行力越强，方向错了就亏得越快</div>
     
 </a>
@@ -253,7 +239,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">信息差和借势思维，是商业世界中两个最基础也最有效的获利逻辑。它们可以单独使用，也可以组合运作</div>
     
 </a>
@@ -263,7 +248,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">同样的人、同样的服务、同样的产品，换个地方卖价格可以差几倍。这不是幻觉，而是由几个明确的经济规律决定的</div>
     
 </a>
@@ -273,7 +257,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">小红书平台上，凡是求租房、求资源、求推荐的帖子底下，几乎都统一回复私信。这个现象表面看是信息不透明，背后是一套完整的商业逻辑和平台规则</div>
     
 </a>
@@ -283,7 +266,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">在低价平台上卖高端服务，本质上是一种渠道错配。不是你的服务不好，是你在错误的地方卖错了东西</div>
     
 </a>
@@ -293,7 +275,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">史玉柱的商业逻辑可以用一句话概括：不教育、不辩论、不改变，只识别、只满足、只成交。这套看似简单的方法背后，有深刻的市场洞察作为支撑</div>
     
 </a>
@@ -303,7 +284,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">把一群真实身份的人关进封闭空间，丢给他们一个危机场景，让他们用真实的性格、知识和经验去解决问题——这种形式在综艺和实验戏剧领域已经存在多年</div>
     
 </a>
@@ -313,7 +293,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">用AI生成代码来构建业务工具的同时确保核心逻辑安全可控，这个问题有成熟的解决方案。核心原则是把程序功能和使用权限彻底分开</div>
     
 </a>
@@ -323,7 +302,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">企业服务和内容创作之间并不冲突，甚至是一个互补的组合。这本质上不是非此即彼的选择题，而是一个资源分配问题</div>
     
 </a>
@@ -333,7 +311,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">企业治理中普遍存在的三个核心困境，每一个都指向同一个根源：制度设计与人性之间的错配</div>
     
 </a>
@@ -343,7 +320,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">AI的急速发展必然造成经济上的紧迫感，其直接来源是技术替代速度和社会适应速度之间的错配</div>
     
 </a>
@@ -353,7 +329,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">人工智能的急速发展对不同经济体产生的影响是高度分化的。对于依赖规模化劳动力的经济体而言，这种影响首先表现为经济上的紧迫感</div>
     
 </a>
@@ -363,7 +338,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">在职场和商业环境中，保持清醒正直的立场往往会收到一种奇特的反馈：你被说成情商低、不会变通、太较真。这种反馈容易让人自我怀疑，但它揭示的真相恰</div>
     
 </a>
@@ -373,7 +347,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">马斯克五步工作法的价值不在于它有多新颖，而在于它把工程思维中的几个关键原则提炼成了可操作的步骤，并明确了正确的执行顺序</div>
     
 </a>
@@ -383,7 +356,6 @@ body[data-theme="dark"] .pagination-shell .go-to-btn:hover { background: #60a5fa
     
     
     <hr class="summary-divider">
-    <div class="summary-label">摘要</div>
     <div class="summary-text">人们常说的内卷，在学术话语中有几个精确对应的理论模型。它们从不同角度解释了同一个现象：每个人都在加倍努力，但所有人的处境都没有改善</div>
     
 </a>

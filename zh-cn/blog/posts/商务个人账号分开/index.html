@@ -71,11 +71,38 @@ body[data-theme="dark"] .blog-article { background: #1e293b; }
 .blog-article h1 {
     font-size: 2rem;
     font-weight: 800;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #111827;
     line-height: 1.3;
 }
 body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+
+.blog-article .summary-section {
+    margin-bottom: 28px;
+}
+.blog-article .summary-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+.blog-article .summary-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.blog-article .summary-divider {
+    border: 0;
+    border-top: 2px solid rgba(0,113,227,.15);
+    margin: 0;
+}
+body[data-theme="dark"] .blog-article .summary-label { color: #6b7280; }
+body[data-theme="dark"] .blog-article .summary-text { color: #9fb0c3; }
+body[data-theme="dark"] .blog-article .summary-divider { border-top-color: rgba(41,151,255,.2); }
+
 .blog-article .article-content {
     margin-top: 28px;
 }
@@ -107,7 +134,17 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 
 <article class="blog-article">
     <h1>商务个人账号分开</h1>
+
     
+    <div class="summary-section">
+        <div class="summary-label">摘要</div>
+        <div class="summary-text">企业服务和内容创作之间并不冲突，甚至是一个互补的组合。这本质上不是非此即彼的选择题，而是一个资源分配问题</div>
+        <hr class="summary-divider">
+    </div>
+    
+
+    
+
     <div class="article-content"><p>企业服务和内容创作之间并不冲突，甚至是一个互补的组合。这本质上不是非此即彼的选择题，而是一个资源分配问题。</p>
 <p>我跟你说最现实、最落地、最不内耗的答案——
 你现在的纠结，99%的老板、创业者、做企业服务的人全都经历过。
