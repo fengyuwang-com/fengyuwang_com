@@ -36,17 +36,79 @@
     <section class="content-section">
         <div class="container">
             
-<div class="section-title">
-    <h2>Blog Article</h2>
-    <p>Read the full note</p>
+<style>
+.blog-back-shell {
+    margin-bottom: 48px;
+}
+.blog-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(0,113,227,.08);
+    color: #0071e3;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+.blog-back-btn:hover {
+    background: rgba(0,113,227,.14);
+    transform: translateX(-3px);
+}
+.blog-back-btn::before { content: "←"; }
+body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
+
+.blog-article {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.08);
+}
+body[data-theme="dark"] .blog-article { background: #1e293b; }
+.blog-article h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: #111827;
+    line-height: 1.3;
+}
+body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+.blog-article .article-content {
+    margin-top: 28px;
+}
+.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
+.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
+.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
+.blog-article .article-content ul { padding-left: 20px; }
+body[data-theme="dark"] .blog-article .article-content h2,
+body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,
+body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
+
+.blog-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.blog-tags span {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(0,113,227,.08); color: #0071e3;
+    font-weight: 600; font-size: .82rem;
+}
+@media (max-width: 767px) {
+    .blog-article { padding: 24px; border-radius: 20px; }
+    .blog-back-shell { margin-bottom: 32px; }
+}
+</style>
+
+<div class="blog-back-shell">
+    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
 </div>
+
 <article class="blog-article">
-    <a class="blog-back" href="/zh-cn/blog/">← Back to Blog</a>
     <h1>理性、客观、不坑人</h1>
     
-    
-    <div class="article-content">
-        <p>做理性、客观、干净的咨询服务，和赚快钱之间存在着一道真实的结构性矛盾。诚实本身就是一种销售障碍，因为真话往往不是客户想听的。</p>
+    <div class="article-content"><p>做理性、客观、干净的咨询服务，和赚快钱之间存在着一道真实的结构性矛盾。诚实本身就是一种销售障碍，因为真话往往不是客户想听的。</p>
 <p>做理性、客观、干净的咨询服务，和赚快钱之间，存在着一道真实的结构性矛盾——诚实本身就是一种销售障碍。</p>
 <p>我跟你说最实在、最扎心、最不鸡汤的大实话——
 你现在这段话，每一句都是对的，我完全不反驳你。</p>
@@ -145,8 +207,7 @@
 <p>你想不想听这套干净但赚钱的路线？</p>
 <hr>
 <p>这两条路径不存在谁更高尚的问题。市场会同时奖励两种模式，只是奖励的方式和周期不同。真正重要的是认清自己选择的是哪条路，以及这条路对应的代价。</p>
-
-    </div>
+</div>
 </article>
 
         </div>

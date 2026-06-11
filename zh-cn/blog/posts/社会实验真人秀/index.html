@@ -36,21 +36,82 @@
     <section class="content-section">
         <div class="container">
             
-<div class="section-title">
-    <h2>Blog Article</h2>
-    <p>Read the full note</p>
+<style>
+.blog-back-shell {
+    margin-bottom: 48px;
+}
+.blog-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(0,113,227,.08);
+    color: #0071e3;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+.blog-back-btn:hover {
+    background: rgba(0,113,227,.14);
+    transform: translateX(-3px);
+}
+.blog-back-btn::before { content: "←"; }
+body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
+
+.blog-article {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.08);
+}
+body[data-theme="dark"] .blog-article { background: #1e293b; }
+.blog-article h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: #111827;
+    line-height: 1.3;
+}
+body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+.blog-article .article-content {
+    margin-top: 28px;
+}
+.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
+.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
+.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
+.blog-article .article-content ul { padding-left: 20px; }
+body[data-theme="dark"] .blog-article .article-content h2,
+body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,
+body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
+
+.blog-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.blog-tags span {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(0,113,227,.08); color: #0071e3;
+    font-weight: 600; font-size: .82rem;
+}
+@media (max-width: 767px) {
+    .blog-article { padding: 24px; border-radius: 20px; }
+    .blog-back-shell { margin-bottom: 32px; }
+}
+</style>
+
+<div class="blog-back-shell">
+    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
 </div>
+
 <article class="blog-article">
-    <a class="blog-back" href="/zh-cn/blog/">← Back to Blog</a>
     <h1>社会实验真人秀</h1>
     
-    
-    <div class="article-content">
-        <p>把一群真实身份的人关进封闭空间，丢给他们一个危机场景，让他们用真实的性格、知识和经验去解决问题——这种形式在综艺和实验戏剧领域已经存在多年。</p>
+    <div class="article-content"><p>把一群真实身份的人关进封闭空间，丢给他们一个危机场景，让他们用真实的性格、知识和经验去解决问题——这种形式在综艺和实验戏剧领域已经存在多年。</p>
 <p>你描述的这种玩法不仅有，而且是非常成熟、甚至很高级的综艺/实验戏剧模式，我给你一次性说清楚：它叫什么、有没有人做过、国内外对应节目、核心逻辑、能不能落地。   一、你这个玩法的正式名称 最精准的叫法： 社会实验真人秀 + 沉浸式群像生存游戏 + 纪实式戏剧 也可以简单理解成： 把一群真实身份的人关进封闭空间，丢一个危机，让他们用真实性格、真实知识、真实社会身份去解决问题，全程实拍，不按剧本演。 你说的要素全部命中： - 真实社会身份（教授、科学家、医生、律师、企业家、学生、工人…）- 封闭空间（酒店、大楼、邮轮、研究所）- 突发危机（断网、断电、门锁死、外界失联、资源有限）- 无剧本自由互动、讨论、博弈、合作- 全程拍摄成综艺/纪录片   二、国外早就有，而且非常经典 1）最接近你描述的：《The Colony》殖民地 - 美国 Discovery 真人秀- 把科学家、工程师、医生、工人、学者等不同职业的普通人- 关进一个废弃建筑，模拟世界末日断联、资源匮乏- 没有剧本，完全靠真实能力合作求生- 拍摄他们争吵、协作、决策、解决工程问题 2）封闭讨论+危机模式：《The Experiment》社会实验 - 英国经典真人秀- 把不同阶层、职业的人关进一栋楼- 施加压力、资源争夺、规则变化- 拍真实人性博弈，没有演员 3）密室+社会实验：《Panic Room》恐慌之屋 - 一群陌生人被困- 断电、断网、限时解谜- 用各自专业知识解决问题 4）更极端的：《斯坦福监狱实验》（不是综艺，但逻辑一样） - 用真实的人，给身份，给环境，观察真实行为- 你这个就是温和、综艺化、安全版的斯坦福监狱实验   三、中国有没有对应节目？ 有，但很少做“纯真实身份+无剧本危机”，大多是半剧本。 最接近的国内节目： 1）《决胜21天》 - 10 个不同背景的人（博士、企业家、模特、程序员、学生）- 封闭在一个园区 21 天- 资源有限、规则不断变化- 真实博弈、合作、谈判、冲突- 几乎没有剧本，完全拍真实反应 2）《再见爱人》（情感版） - 真实人物，封闭环境- 制造冲突情境，拍真实互动- 只是主题是情感，不是危机解谜 3）《密室大逃脱》大神版 - 偏向解谜- 用学霸、科研背景的人- 但它是娱乐向，不是社会实验 4）早期实验类：《咱们穿越吧》 - 模拟环境，真实人物- 偏搞笑，不严肃   四、你这个创意的核心亮点（非常强） 你这个模式之所以高级，是因为它同时满足： 1. 真实感爆炸：不是演员演，是真人暴露性格、知识、阶层差异2. 冲突天然产生：教授讲逻辑、商人讲利益、医生讲安全、年轻人讲情绪……一讨论就有戏3. 知识密度高：解决危机时会出现真正的专业内容，不是瞎演4. 人性观察：压力下最容易看到真实的人5. 结构极其好拍：- 起点：封闭 + 危机- 过程：讨论 → 分歧 → 合作/对抗 → 解决- 终点：走出或揭示真相 这是典型的“高概念低成本综艺”。   五、如果把你说的场景具体化 就按你说的：地点：五星级酒店一层 / 艺术中心 / 展览馆时间：12 小时 / 24 小时人物：8–12 人，各行各业真实身份 - 物理学博士- 工程师- 医生/护士- 律师- 教师/教授- 企业家/管理者- 程序员/网络工程师- 消防员/退伍军人- 普通白领- 学生 危机设定（温和安全版）： - 整层楼电子锁死- 手机信号消失- 外网断开- 电力时有时无- 必须在规定时间内“恢复通讯”或“打开出口”- 中间不断丢小问题：缺水、设备故障、信息缺失、逻辑谜题 拍摄：固定机位+跟拍，全程记录成片：社会观察类真人秀 + 纪实综艺   六、一句话总结 你说的这种模式完全成立，而且是国际上非常成熟的“社会实验真人秀”类型。国外大量节目都这么玩，国内也有接近的，只是你这个创意更纯粹、更封闭、更偏“群像解谜+真实职业碰撞”。 如果你想，我可以直接帮你写一份：《封闭24小时》综艺模式一页纸方案（定位、人物配置、危机流程、拍摄规则、看点），你拿去就能直接跟人聊项目。</p>
 <p>这类节目的核心魅力在于：真实的人性在压力下会呈现出不可预测的丰富性。剧本永远写不出的那些细节——人在危机关头的本能反应、群体自我组织的过程——才是最有感染力的内容。</p>
-
-    </div>
+</div>
 </article>
 
         </div>

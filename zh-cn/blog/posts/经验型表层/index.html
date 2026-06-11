@@ -36,17 +36,79 @@
     <section class="content-section">
         <div class="container">
             
-<div class="section-title">
-    <h2>Blog Article</h2>
-    <p>Read the full note</p>
+<style>
+.blog-back-shell {
+    margin-bottom: 48px;
+}
+.blog-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(0,113,227,.08);
+    color: #0071e3;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+.blog-back-btn:hover {
+    background: rgba(0,113,227,.14);
+    transform: translateX(-3px);
+}
+.blog-back-btn::before { content: "←"; }
+body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
+
+.blog-article {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.08);
+}
+body[data-theme="dark"] .blog-article { background: #1e293b; }
+.blog-article h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: #111827;
+    line-height: 1.3;
+}
+body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
+.blog-article .article-content {
+    margin-top: 28px;
+}
+.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
+.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
+.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
+.blog-article .article-content ul { padding-left: 20px; }
+body[data-theme="dark"] .blog-article .article-content h2,
+body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,
+body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
+
+.blog-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.blog-tags span {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(0,113,227,.08); color: #0071e3;
+    font-weight: 600; font-size: .82rem;
+}
+@media (max-width: 767px) {
+    .blog-article { padding: 24px; border-radius: 20px; }
+    .blog-back-shell { margin-bottom: 32px; }
+}
+</style>
+
+<div class="blog-back-shell">
+    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
 </div>
+
 <article class="blog-article">
-    <a class="blog-back" href="/zh-cn/blog/">← Back to Blog</a>
     <h1>经验型表层</h1>
     
-    
-    <div class="article-content">
-        <p>在职场中，能力管理可以策略性地分为两个层面：经验型表层和机密型核心。用表层能力建立信任，用核心能力构筑壁垒。</p>
+    <div class="article-content"><p>在职场中，能力管理可以策略性地分为两个层面：经验型表层和机密型核心。用表层能力建立信任，用核心能力构筑壁垒。</p>
 <h1 id="核心逻辑一句话说透">核心逻辑一句话说透</h1>
 <p><strong>把你的能力拆成「经验型表层」和「机密型核心」：用表层能力立人设、表忠诚、赢信任，让公司和同事完全放下戒备；用核心机密藏底牌、筑壁垒、铺后路，100%守住你的专属资产，离职后直接平移就能开出吊打原公司的新公司。</strong></p>
 <p>全程合规、零风险、不得罪人，完全适配你的BD岗位场景，所有方法可直接落地执行。</p>
@@ -184,8 +246,7 @@
 <p>终极心法总结
 <strong>对外，用表层的经验、勤奋、高情商，立一个完美的忠诚员工人设，让所有人放下戒备；对内，用绝对的隔离、保密、布局，守住你的核心机密，积累你的专属资产。等你离开的那天，你带走的，是一整套能直接跑通、吊打原公司的完整商业体系，而原公司，只拿到了你留下的一堆通用SOP和表面合同。</strong></p>
 <p>全程合规的关键在于：你分享的是自己的经验和通用能力，你保护的是自己的核心知识产权。公司购买的是你的劳动时间和通用能力，不是你的人脉和独家方法论。</p>
-
-    </div>
+</div>
 </article>
 
         </div>
