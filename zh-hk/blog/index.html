@@ -64,8 +64,13 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 </style>
 <div class="page-header"><h1>博客</h1><p>原創文章、結構筆記與研究導向的思考</p></div>
-<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
+<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜尋文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
+
+<a class="blog-card" href="/zh-hk/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/" data-title="香港高端求职金融咨询" data-summary="你這句說到根上了—— 不是你不行，是你現在待的地方，根本沒有高端客户。 你在闲鱼，就等于在夜市摆摊。 你卖的是高端咨询，就等于在夜市卖燕窝、虫草、私人定製。" data-tags="">
+    <h3>香港高端求职金融咨询</h3>
+    <hr class="summary-divider"><div class="summary-text">你這句說到根上了—— 不是你不行，是你現在待的地方，根本沒有高端客户。 你在闲鱼，就等于在夜市摆摊。 你卖的是高端咨询，就等于在夜市卖燕窝、虫草、私人定製。</div>
+</a>
 
 <a class="blog-card" href="/zh-hk/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8B%A2/" data-title="信息差和借勢" data-summary="這個视频體現了利用信息差和“借勢思维”來實現低成本獲利的逻輯，能給你带來這些启示：" data-tags="">
     <h3>信息差和借勢</h3>
@@ -152,11 +157,6 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
     <hr class="summary-divider"><div class="summary-text">對那些在技術上从事低端產業链，本質上依赖庞大劳動力規模驱動經濟體量的国家而言，人工智能的急速發展必然造成經濟上的紧迫感。</div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/" data-title="Rent Extraction and Rent Creation in the Economic Theory of Regulation" data-summary="個人原創感悟與對應學術理論完整大纲" data-tags="">
-    <h3>Rent Extraction and Rent Creation in the Economic Theory of Regulation</h3>
-    <hr class="summary-divider"><div class="summary-text">個人原創感悟與對應學術理論完整大纲</div>
-</a>
-
 <a class="blog-card" href="/zh-hk/blog/posts/pdca-%E5%BE%AA%E7%92%B0/" data-title="PDCA 循環" data-summary="我觉得有一個解决問題的方法是很好用的，就是說我先去研究解决這一种問題有哪些方法，然後呢我再去试這种方法，然後發現問題了之後呢，就如果這個方法不成功，我我再去優化我的方法。解决技術問題也是一样的，就是比如說我要寫一個軟件，那我先去寫一個框架性的軟件，然後發現哪些地方是有問題的，不能运行的，我再去優化那些不能运行的部分。這個有沒有相關的理論？管理學的什么理論？或者是什么，就是個人安排的理論，因為這個我觉得應该很多人也知道。就是這闭環嘛" data-tags="">
     <h3>PDCA 循環</h3>
     <hr class="summary-divider"><div class="summary-text">我觉得有一個解决問題的方法是很好用的，就是說我先去研究解决這一种問題有哪些方法，然後呢我再去试這种方法，然後發現問題了之後呢，就如果這個方法不成功，我我再去優化我的方法。解决技術問題也是一样的，就是比如說我要寫一個軟件，那我先去寫一個框架性的軟件，然後發現哪些地方是有問題的，不能运行的，我再去優化那些不能运行的部分。這個有沒有相關的理論？管理學的什么理論？或者是什么，就是個人安排的理論，因為這個我觉得應该很多人也知道。就是這闭環嘛</div>
@@ -190,14 +190,14 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 </div>
 
 <div class="pagination-shell" id="paginationShell">
-    <span class="page-btn" style="opacity:.3;cursor:default;">← 上一页</span>
+    <span class="page-btn" style="opacity:.3;cursor:default;">← 上一頁</span>
     <span class="page-btn active">1</span><a href="/zh-hk/blog/page/2/" class="page-btn">2</a>
-    <a href="/zh-hk/blog/page/2/" class="page-nav">下一页 →</a>
+    <a href="/zh-hk/blog/page/2/" class="page-nav">下一頁 →</a>
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="2" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>

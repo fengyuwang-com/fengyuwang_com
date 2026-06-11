@@ -64,7 +64,7 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 </style>
 <div class="page-header"><h1>Blog</h1><p>Original long-form writing, structured notes, and research-led thinking.</p></div>
-<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
+<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
 
 <a class="blog-card" href="/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/" data-title="Zero-Sum Games, Arms Races, and Prisoner Dilemmas" data-summary="What people commonly call involution has several precise theoretical models in academic discourse. They explain the same phenomenon from different angles: everyone works harder, yet no one improves their position." data-tags="">
@@ -155,14 +155,14 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 </div>
 
 <div class="pagination-shell" id="paginationShell">
-    <a href="/en/blog/" class="page-nav">← 上一页</a>
+    <a href="/en/blog/" class="page-nav">← Previous</a>
     <a href="/en/blog/" class="page-btn">1</a><span class="page-btn active">2</span>
-    <span class="page-btn" style="opacity:.3;cursor:default;">下一页 →</span>
+    <span class="page-btn" style="opacity:.3;cursor:default;">Next →</span>
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="2" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>

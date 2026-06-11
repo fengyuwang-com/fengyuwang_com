@@ -64,7 +64,7 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 </style>
 <div class="page-header"><h1>Blog</h1><p>Original long-form writing, structured notes, and research-led thinking.</p></div>
-<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
+<div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="blog-grid" id="blogGrid">
 
 <a class="blog-card" href="/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/" data-title="Social Experiment Reality Shows" data-summary="Locking real people in an enclosed space, throwing them a crisis scenario, and letting them solve problems using their genuine personalities, knowledge, and experience. This format has existed in television and experimental theatre for years." data-tags="">
@@ -190,14 +190,14 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 </div>
 
 <div class="pagination-shell" id="paginationShell">
-    <span class="page-btn" style="opacity:.3;cursor:default;">← 上一页</span>
+    <span class="page-btn" style="opacity:.3;cursor:default;">← Previous</span>
     <span class="page-btn active">1</span><a href="/en/blog/page/2/" class="page-btn">2</a>
-    <a href="/en/blog/page/2/" class="page-nav">下一页 →</a>
+    <a href="/en/blog/page/2/" class="page-nav">Next →</a>
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="2" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+" 篇":"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 2 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 
         </div>
