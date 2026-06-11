@@ -16,3 +16,6 @@ Use `translationKey` to pair articles across languages.
 Prefix title with `*` + `draft: true` for personal info.
 ## ⚠️ 安全规则
 NEVER git push without explicit user approval.
+
+## ⚠️ 当前临时措施（2026-06）
+description 同时作为正文第一段。这是为了修复历史文章的结构问题。新文章不要这样做。
