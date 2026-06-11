@@ -6,6 +6,8 @@ draft: false
 translationKey: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
 ---
 
+个人原创感悟与对应学术理论完整大纲
+
 一、初始核心观察（原创自发感悟起点）
  
 1. 两类中介的本质差异发现

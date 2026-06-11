@@ -6,6 +6,8 @@ draft: false
 translationKey: "aihtml简历"
 ---
 
+绝对可以，而且是降维打击式解决。
+
 你在 Word 里遇到的所有痛苦：
  
 - 格式乱
