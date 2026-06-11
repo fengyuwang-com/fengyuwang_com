@@ -41,69 +41,25 @@
         <div class="container">
             
 <style>
-.blog-back-shell {
-    margin-bottom: 48px;
-}
-.blog-back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 22px;
-    border-radius: 999px;
-    background: rgba(0,113,227,.08);
-    color: #0071e3;
-    font-weight: 600;
-    font-size: .9rem;
-    text-decoration: none;
-    transition: background .2s ease, transform .2s ease;
-}
-.blog-back-btn:hover {
-    background: rgba(0,113,227,.14);
-    transform: translateX(-3px);
-}
-.blog-back-btn::before { content: "←"; }
-body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
-body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
-
-.blog-article {
-    background: #fff;
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 8px 30px rgba(15,23,42,.08);
-}
-body[data-theme="dark"] .blog-article { background: #1e293b; }
-.blog-article h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0 0 20px;
-    color: #111827;
-    line-height: 1.3;
-}
-body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
-
-.blog-article .article-content { margin-top: 8px; }
-.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
-.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
-.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
-.blog-article .article-content ul { padding-left: 20px; }
-body[data-theme="dark"] .blog-article .article-content h2,
-body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
-body[data-theme="dark"] .blog-article .article-content p,
-body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
-@media (max-width: 767px) {
-    .blog-article { padding: 24px; border-radius: 20px; }
-    .blog-back-shell { margin-bottom: 32px; }
-}
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 20px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
 </style>
-
-<div class="blog-back-shell">
-    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
-</div>
-
-<article class="blog-article">
-    <h1>个人介绍</h1>
-    <div class="article-content"><p>王先生专注于解决方案与通用逻辑体系的研究与应用。</p>
-<p>他认为，所有复杂问题均可通过清晰的逻辑框架拆解分析，并借助人工智能进行高效思考与知识整合，从而为个人、创业者与企业提供可通用、可复制、可落地的系统性解决方案。</p>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
+<article class="blog-article"><h1>个人介绍</h1><div class="article-content"><p>他认为，所有复杂问题均可通过清晰的逻辑框架拆解分析，并借助人工智能进行高效思考与知识整合，从而为个人、创业者与企业提供可通用、可复制、可落地的系统性解决方案。</p>
 <p>王先生为个人、创业者及企业提供决策规划与问题解决服务，帮助客户在复杂环境中建立清晰判断，降低风险，优化路径，提升效率，实现长期发展目标。</p>
 <p>服务领域覆盖商业发展、市场运营、传媒传播、软件应用、职业发展、生活规划与资源配置。</p>
 <p>他擅长从本质层面区分技术创新与营销概念，识别市场竞争与商业风险，协助客户规避陷阱、减少试错成本。</p>
@@ -111,8 +67,7 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 <p>同时，他通过内容创作，以“为人类更快乐”为原则，为社会提供有价值的信息与积极的生活体验。</p>
 <p>向请通过以下电子邮件地址免费向他咨询： <a href="mailto:w@fengyu.hk">w@fengyu.hk</a> 相关费用仅在解决方案提出后收取。</p>
 <hr>
-</div>
-</article>
+</div></article>
 
         </div>
     </section>
@@ -121,5 +76,8 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
     <script src="/assets/js/jquery.meanmenu.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
 </body>
 </html>

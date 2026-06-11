@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>程序员解决问题的完整思维流程 | Fengyu WANG</title>
-    <meta name="description" content="程序员在处理代码问题时形成了一套可以被推广到几乎所有领域的通用问题解决框架。从定义问题、分解问题到假设验证、模式识别，每一步都建立在认知科学和工程实践的基本原则之上。">
+    <meta name="description" content="程序员解决问题的完整思维流程（从编程实践内化的通用方法论）">
     <link rel="canonical" href="/zh-cn/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/">
     
     
@@ -41,69 +41,25 @@
         <div class="container">
             
 <style>
-.blog-back-shell {
-    margin-bottom: 48px;
-}
-.blog-back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 22px;
-    border-radius: 999px;
-    background: rgba(0,113,227,.08);
-    color: #0071e3;
-    font-weight: 600;
-    font-size: .9rem;
-    text-decoration: none;
-    transition: background .2s ease, transform .2s ease;
-}
-.blog-back-btn:hover {
-    background: rgba(0,113,227,.14);
-    transform: translateX(-3px);
-}
-.blog-back-btn::before { content: "←"; }
-body[data-theme="dark"] .blog-back-btn { background: rgba(41,151,255,.12); color: #60a5fa; }
-body[data-theme="dark"] .blog-back-btn:hover { background: rgba(41,151,255,.2); }
-
-.blog-article {
-    background: #fff;
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 8px 30px rgba(15,23,42,.08);
-}
-body[data-theme="dark"] .blog-article { background: #1e293b; }
-.blog-article h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0 0 20px;
-    color: #111827;
-    line-height: 1.3;
-}
-body[data-theme="dark"] .blog-article h1 { color: #e5ecf4; }
-
-.blog-article .article-content { margin-top: 8px; }
-.blog-article .article-content h2 { font-size: 1.4rem; margin-top: 1.8em; margin-bottom: .7em; color: #111827; }
-.blog-article .article-content h3 { font-size: 1.15rem; margin-top: 1.4em; margin-bottom: .6em; color: #111827; }
-.blog-article .article-content p, .blog-article .article-content li { line-height: 1.8; color: #374151; }
-.blog-article .article-content ul { padding-left: 20px; }
-body[data-theme="dark"] .blog-article .article-content h2,
-body[data-theme="dark"] .blog-article .article-content h3 { color: #e5ecf4; }
-body[data-theme="dark"] .blog-article .article-content p,
-body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
-@media (max-width: 767px) {
-    .blog-article { padding: 24px; border-radius: 20px; }
-    .blog-back-shell { margin-bottom: 32px; }
-}
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 20px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
 </style>
-
-<div class="blog-back-shell">
-    <a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a>
-</div>
-
-<article class="blog-article">
-    <h1>程序员解决问题的完整思维流程</h1>
-    <div class="article-content"><p>程序员在处理代码问题时形成了一套可以被推广到几乎所有领域的通用问题解决框架。从定义问题、分解问题到假设验证、模式识别，每一步都建立在认知科学和工程实践的基本原则之上。</p>
-<p>这不是抽象的哲学，而是程序员每天写代码、改Bug、做项目时，刻进肌肉记忆的标准化问题解决步骤，可以直接套用到任何现实问题上。</p>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
+<article class="blog-article"><h1>程序员解决问题的完整思维流程</h1><div class="article-content"><p>这不是抽象的哲学，而是程序员每天写代码、改Bug、做项目时，刻进肌肉记忆的标准化问题解决步骤，可以直接套用到任何现实问题上。</p>
 <p>一、第一步：先搞懂“到底什么是问题”（90%的人栽在这里）</p>
 <p>技术源头：需求分析、接口定义、测试用例设计</p>
 <ul>
@@ -194,8 +150,7 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
 <p>总结</p>
 <p>程序员解决问题的本质，就是把模糊、复杂、混乱的现实问题，转化为清晰、简单、可执行的步骤。
 它不是什么神奇的天赋，而是一套可以学习、可以训练的标准化流程。掌握了这套流程，你就能用它解决生活和工作中的几乎所有问题。</p>
-</div>
-</article>
+</div></article>
 
         </div>
     </section>
@@ -204,5 +159,8 @@ body[data-theme="dark"] .blog-article .article-content li { color: #9fb0c3; }
     <script src="/assets/js/jquery.meanmenu.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
 </body>
 </html>
