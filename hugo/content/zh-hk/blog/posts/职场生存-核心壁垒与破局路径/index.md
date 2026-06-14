@@ -2,6 +2,7 @@
 title: "职場生存、核心壁垒與破局路径"
 description: "职場生存、核心壁垒與破局路径"
 slug: "职場生存-核心壁垒與破局路径"
+tags: ["职场", "创业", "自我"]
 draft: false
 translationKey: "职場生存-核心壁垒與破局路径"
 ---

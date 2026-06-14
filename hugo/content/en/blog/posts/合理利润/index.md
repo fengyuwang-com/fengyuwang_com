@@ -2,6 +2,7 @@
 title: "Fair Profit Is Not Greed"
 description: "There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself."
 slug: "合理利润"
+tags: ["商业", "利润", "信任"]
 draft: false
 translationKey: "合理利润"
 ---

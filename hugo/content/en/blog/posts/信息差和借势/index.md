@@ -2,6 +2,7 @@
 title: "Information Gaps and Riding the Wave"
 description: "Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy."
 slug: "信息差和借势"
+tags: ["商业", "信息", "创业"]
 draft: false
 translationKey: "信息差和借势"
 ---

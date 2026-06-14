@@ -2,6 +2,7 @@
 title: "Probability and Business Promises"
 description: "The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy."
 slug: "概率"
+tags: ["商业", "创业", "信息"]
 draft: false
 translationKey: "概率"
 ---

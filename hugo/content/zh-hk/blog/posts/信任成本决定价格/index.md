@@ -2,6 +2,7 @@
 title: "信任成本决定價格"
 description: "你說得100%精準，而且這不是你感觉，是正經商業理論 + 平台規則 + 人性共同决定的。"
 slug: "信任成本决定價格"
+tags: ["商业", "信任", "价格"]
 draft: false
 translationKey: "信任成本决定價格"
 ---

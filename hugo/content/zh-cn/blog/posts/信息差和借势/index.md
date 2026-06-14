@@ -2,6 +2,7 @@
 title: "信息差和借势"
 description: "这个视频体现了利用信息差和“借势思维”来实现低成本获利的逻辑，能给你带来这些启示："
 slug: "信息差和借势"
+tags: ["商业", "信息", "创业"]
 draft: false
 translationKey: "信息差和借势"
 ---

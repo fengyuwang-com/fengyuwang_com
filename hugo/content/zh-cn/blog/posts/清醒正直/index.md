@@ -2,6 +2,7 @@
 title: "清醒正直"
 description: "我跟你说一句最硬、最真、最能让你挺直腰杆的话："
 slug: "清醒正直"
+tags: ["自我", "职场", "生活"]
 draft: false
 translationKey: "清醒正直"
 ---

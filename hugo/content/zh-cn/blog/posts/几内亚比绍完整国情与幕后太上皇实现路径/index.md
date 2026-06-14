@@ -2,6 +2,7 @@
 title: "几内亚比绍完整国情与幕后太上皇实现路径"
 description: "几内亚比绍完整国情与幕后太上皇实现路径"
 slug: "几内亚比绍完整国情与幕后太上皇实现路径"
+tags: ["社会", "政治"]
 draft: false
 translationKey: "guinea-bissau-analysis"
 ---

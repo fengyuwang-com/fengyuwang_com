@@ -2,6 +2,7 @@
 title: "马斯克的五步工作法"
 description: "我们来详细拆解马斯克的五步工作法，把每个环节的细节和逻辑都讲清楚："
 slug: "马斯克的五步工作法"
+tags: ["管理", "技术", "创新"]
 draft: false
 translationKey: "马斯克的五步工作法"
 ---

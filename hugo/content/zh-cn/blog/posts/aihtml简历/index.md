@@ -2,6 +2,7 @@
 title: "AIHTML简历"
 description: "绝对可以，而且是降维打击式解决。"
 slug: "aihtml简历"
+tags: ["技术", "工具"]
 draft: false
 translationKey: "aihtml简历"
 ---

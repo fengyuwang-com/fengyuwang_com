@@ -2,6 +2,7 @@
 title: "Businesses with Long-Term High Margins"
 description: "Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature. Technology changes the way these needs are met, but it does not change the needs themselves."
 slug: "长期暴利的生意"
+tags: ["商业", "经济", "社会"]
 draft: false
 translationKey: "长期暴利的生意"
 ---

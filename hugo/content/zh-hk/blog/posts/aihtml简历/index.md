@@ -2,6 +2,7 @@
 title: "AIHTML简歷"
 description: "绝對可以，而且是降维打击式解决。"
 slug: "aihtml简歷"
+tags: ["技术", "工具"]
 draft: false
 translationKey: "aihtml简歷"
 ---

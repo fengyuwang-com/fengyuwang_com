@@ -2,6 +2,7 @@
 title: "The Definitive Technical Research Workflow"
 description: "The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure."
 slug: "技术research终极工作流"
+tags: ["技术", "工具", "管理"]
 draft: false
 translationKey: "技术research终极工作流"
 ---
