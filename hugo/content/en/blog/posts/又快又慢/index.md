@@ -2,6 +2,7 @@
 title: "Time Moves Fast and Slow at the Same Time"
 description: "Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling."
 slug: "又快又慢"
+tags: ["心理", "生活", "自我"]
 draft: false
 translationKey: "又快又慢"
 ---

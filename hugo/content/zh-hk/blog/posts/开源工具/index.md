@@ -2,6 +2,7 @@
 title: "開源工具"
 description: "下面給你一份纯HTML/JS/前端開源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、數據庫、圖床，全部開源、可本地/私有化部署、可嵌入Obsidian。"
 slug: "開源工具"
+tags: ["技术", "工具"]
 draft: false
 translationKey: "開源工具"
 ---

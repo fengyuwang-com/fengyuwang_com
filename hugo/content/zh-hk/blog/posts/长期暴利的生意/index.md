@@ -2,6 +2,7 @@
 title: "長期暴利的生意"
 description: "从古到今，真正能長期暴利的生意，就只有那几样："
 slug: "長期暴利的生意"
+tags: ["商业", "经济", "社会"]
 draft: false
 translationKey: "長期暴利的生意"
 ---

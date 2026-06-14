@@ -2,6 +2,7 @@
 title: "AI幫助PDCA"
 description: "AI幫助PDCA"
 slug: "ai幫助pdca"
+tags: ["技术", "管理", "工具"]
 draft: false
 translationKey: "ai幫助pdca"
 ---

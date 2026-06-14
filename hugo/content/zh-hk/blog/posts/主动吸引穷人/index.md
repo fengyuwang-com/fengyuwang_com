@@ -2,6 +2,7 @@
 title: "主動吸引穷人"
 description: "我跟你說最扎心、最真實、你自己沒意識到的 3 個底层原因。 不是安慰，是能立刻改的硬問題。"
 slug: "主動吸引穷人"
+tags: ["商业", "营销", "自我"]
 draft: false
 translationKey: "主動吸引穷人"
 ---

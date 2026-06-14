@@ -2,6 +2,7 @@
 title: "Using PDCA to Get Better AI Results"
 description: "The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process."
 slug: "ai帮助pdca"
+tags: ["技术", "管理", "工具"]
 draft: false
 translationKey: "ai帮助pdca"
 ---

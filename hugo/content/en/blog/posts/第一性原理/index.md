@@ -2,6 +2,7 @@
 title: "First Principles of Making Money"
 description: "The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale using leverage instead of linear accumulation."
 slug: "第一性原理"
+tags: ["商业", "哲学", "自我"]
 draft: false
 translationKey: "第一性原理"
 ---

@@ -2,6 +2,7 @@
 title: "经验型表层"
 description: "经验型表层"
 slug: "经验型表层"
+tags: ["职场", "自我", "管理"]
 draft: false
 translationKey: "经验型表层"
 ---

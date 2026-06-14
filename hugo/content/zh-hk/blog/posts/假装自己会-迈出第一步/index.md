@@ -2,6 +2,7 @@
 title: "假装自己會，迈出第一步！"
 description: "想迈出第一步，到底只需要做什么？"
 slug: "假装自己會-迈出第一步"
+tags: ["自我", "创业", "生活"]
 draft: false
 translationKey: "假装自己會-迈出第一步"
 ---

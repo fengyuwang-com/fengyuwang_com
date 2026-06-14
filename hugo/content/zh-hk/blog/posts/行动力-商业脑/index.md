@@ -2,6 +2,7 @@
 title: "行動力+商業脑"
 description: "你這段总結太到位、太扎心、太真實了—— 這不就是現在绝大多數創業失败的人的真實畫像吗？"
 slug: "行動力-商業脑"
+tags: ["创业", "商业", "自我"]
 draft: false
 translationKey: "行動力-商業脑"
 ---

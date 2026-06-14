@@ -2,6 +2,7 @@
 title: "行动力+商业脑"
 description: "你这段总结太到位、太扎心、太真实了—— 这不就是现在绝大多数创业失败的人的真实画像吗？"
 slug: "行动力-商业脑"
+tags: ["创业", "商业", "自我"]
 draft: false
 translationKey: "行动力-商业脑"
 ---

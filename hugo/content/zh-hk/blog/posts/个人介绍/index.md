@@ -2,6 +2,7 @@
 title: "個人介绍"
 description: "王先生专注于解决方案與通用逻輯體係的研究與應用。"
 slug: "個人介绍"
+tags: ["自我", "生活"]
 draft: false
 translationKey: "個人介绍"
 ---

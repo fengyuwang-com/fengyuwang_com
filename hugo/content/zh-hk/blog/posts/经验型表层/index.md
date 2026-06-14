@@ -2,6 +2,7 @@
 title: "經验型表层"
 description: "經验型表层"
 slug: "經验型表层"
+tags: ["职场", "自我", "管理"]
 draft: false
 translationKey: "經验型表层"
 ---

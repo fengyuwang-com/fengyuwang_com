@@ -2,6 +2,7 @@
 title: "Excel Is Two-Dimensional"
 description: "Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional."
 slug: "excel是二维的"
+tags: ["技术", "数据", "工具"]
 draft: false
 translationKey: "excel是二维的"
 ---

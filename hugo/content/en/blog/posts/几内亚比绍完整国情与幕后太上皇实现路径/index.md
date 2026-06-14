@@ -2,6 +2,7 @@
 title: "Guinea-Bissau: A Case Study in State Fragility"
 description: "Guinea-Bissau is an extreme example of governance failure. Since independence in 1974, the country has experienced multiple coups and periods of political turmoil, leaving state capacity extremely weak."
 slug: "几内亚比绍完整国情与power behind the throne实现路径"
+tags: ["社会", "政治"]
 draft: false
 translationKey: "guinea-bissau-analysis"
 ---

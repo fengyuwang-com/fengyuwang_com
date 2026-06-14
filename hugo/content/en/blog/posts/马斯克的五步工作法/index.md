@@ -2,6 +2,7 @@
 title: "Elon Musk Five-Step Working Method"
 description: "The value of Elon Musk five-step method is not its novelty but how it distils key engineering principles into actionable steps with a clear priority order."
 slug: "马斯克的五步工作法"
+tags: ["管理", "技术", "创新"]
 draft: false
 translationKey: "马斯克的五步工作法"
 ---

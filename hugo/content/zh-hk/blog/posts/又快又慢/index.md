@@ -2,6 +2,7 @@
 title: "又快又慢"
 description: "太真實了，几乎每個上班的人都有這种分裂感： 一边觉得一天唰一下就沒了，一边又觉得每一分钟都熬得要死。"
 slug: "又快又慢"
+tags: ["心理", "生活", "自我"]
 draft: false
 translationKey: "又快又慢"
 ---

@@ -2,6 +2,7 @@
 title: "**DeepSeek V4，為什么让我對經濟极度悲观？"
 description: "【终极定稿】视频大纲：DeepSeek V4，為什么我對未來經濟极度悲观（普通人残酷現實版）"
 slug: "deepseek-v4-為什么让我對經濟极度悲观"
+tags: ["AI", "经济", "社会"]
 draft: true
 translationKey: "deepseek-v4-為什么让我對經濟极度悲观"
 ---

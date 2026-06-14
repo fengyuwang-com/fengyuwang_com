@@ -2,6 +2,7 @@
 title: "Palantir 本體論思路"
 description: "Palantir 本體論思路 + 用到你二手手機生意上 + 过拟合問題 + 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。"
 slug: "palantir-本體論思路"
+tags: ["技术", "数据", "商业"]
 draft: false
 translationKey: "palantir-本體論思路"
 ---
