@@ -13,7 +13,7 @@ services:
   tunnel:
     image: cloudflare/cloudflared:latest
     container_name: fengyu-tunnel
-    command: tunnel --no-autoupdate run --token
+    command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
     depends_on:
