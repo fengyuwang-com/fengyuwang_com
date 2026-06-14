@@ -61,3 +61,51 @@ Cloudflare Web Analytics 已集成。需要在 Cloudflare Dashboard → Web Anal
 
 **没有得到明确指令，绝对不能执行 git push。**
 任何修改后想推到 GitHub，必须先问用户确认。
+
+## Development Preview with Docker
+
+### Prerequisites
+- Docker Desktop installed
+- A Cloudflare account (free tier)
+
+### Setup
+
+1. Create a Cloudflare Tunnel:
+   - Go to Cloudflare Dashboard → Zero Trust → Networks → Tunnels
+   - Create a new tunnel (e.g. "fengyu-dev")
+   - Set the service to `http://web:8001`
+   - Set the domain to `test.fengyuwang.com`
+   - Copy the tunnel token
+
+2. Create `.env` file from `.env.example`:
+   ```powershell
+   copy .env.example .env
+   ```
+   Edit `.env` and paste your tunnel token.
+
+3. Start the preview server:
+   ```powershell
+   docker compose up -d
+   ```
+
+4. Open https://test.fengyuwang.com in your browser.
+
+### Daily Workflow
+
+You are on the **dev** branch by default. Edit files locally, refresh the browser to see changes.
+
+```powershell
+# Start preview
+docker compose up -d
+
+# Stop preview
+docker compose down
+
+# View logs
+docker compose logs -f
+```
+
+### What gets deployed
+- Only the `main` branch triggers Cloudflare Pages production deployment.
+- The `dev` branch is never deployed to production.
+- The Docker preview is purely local + Cloudflare Tunnel — no Pages deployment involved.
