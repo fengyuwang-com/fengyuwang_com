@@ -109,3 +109,26 @@ docker compose logs -f
 - Only the `main` branch triggers Cloudflare Pages production deployment.
 - The `dev` branch is never deployed to production.
 - The Docker preview is purely local + Cloudflare Tunnel — no Pages deployment involved.
+
+## Secrets Management
+
+### Never commit these files
+- `.env` — Contains Cloudflare Tunnel token and other secrets
+- Any file with API keys, tokens, passwords
+
+### What to do if a secret is accidentally committed
+
+1. **Do NOT panic.** The secret can be rotated or history can be cleaned.
+2. If the secret is already on GitHub:
+   - Add it to `.gitignore` immediately
+   - Use `git filter-repo --path <file> --invert-paths` to remove from history
+   - Force push: `git push origin <branch> --force`
+3. For tokens that cannot be rotated:
+   - Clean the git history using the method above
+   - The token stays valid, but is removed from public view
+
+### How to verify no secrets are tracked
+```powershell
+git ls-files .env
+git ls-files | Select-String -Pattern "token|secret|key|password"
+```
