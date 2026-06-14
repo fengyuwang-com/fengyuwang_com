@@ -18,5 +18,5 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 @media (max-width:767px) { .blog-article { padding:24px; } }
 </style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="{{ .Parent.RelPermalink }}">返回博客</a></div>
-<article class="blog-article"><h1>{{ .Title }}</h1><div class="article-content">{{ .Content }}</div></article>
+<article class="blog-article"><h1>{{ .Title }}</h1>{{ if .Params.tags }}<div class="blog-tags" style="margin-bottom:16px;">{{ range .Params.tags }}<span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;margin-right:6px;">{{ . }}</span>{{ end }}</div>{{ end }}<div class="article-content">{{ .Content }}</div></article>
 {{ end }}
