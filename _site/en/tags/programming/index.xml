@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Programming on Fengyu WANG</title>
+		<link>/en/tags/programming/</link>
+		<description>Recent content in Programming on Fengyu WANG</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/en/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>A Programmer Complete Problem-Solving Framework</title>
+				<link>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
+				<pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</guid>
+				<description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

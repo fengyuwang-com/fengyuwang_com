@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Management on Fengyu WANG</title>
+		<link>/en/tags/management/</link>
+		<description>Recent content in Management on Fengyu WANG</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/en/tags/management/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Definitive Technical Research Workflow</title>
+				<link>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+				<pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+				<description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using PDCA to Get Better AI Results</title>
+				<link>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
+				<pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
+				<description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Surface-Level Experience vs. Core Capabilities</title>
+				<link>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</link>
+				<pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</guid>
+				<description>&lt;p&gt;In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, and protect the core layer as your competitive moat.&lt;/p&gt;&#xA;&lt;p&gt;The first step is capabilitylayering. Separate what you can share from what you must never share. Surface-level experience includes general skills, industrycommon knowledge, publicly shareable methodologies, and commonwork experience. These can be freely shared. They help you build a professional image and earn the trust of colleagues and managers.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The PDCA Cycle</title>
+				<link>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</link>
+				<pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</guid>
+				<description>&lt;p&gt;There is a problem-solving method that has been repeatedly validated in practice. First study the known methods for solving this type of problem. Then try one. Observe the results. If it does not work, adjust the approach and try again. Keep iterating until the problem is solved.&lt;/p&gt;&#xA;&lt;p&gt;This process has corresponding theoretical frameworks in multiple academic fields. The most classic is the PDCA cycle: Plan, Do, Check, Act. The process described above is exactly a standard PDCA closed loop: researching methods is Plan, trying them is Do, identifying problems is Check, adjusting the approach is Act.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Elon Musk Five-Step Working Method</title>
+				<link>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</link>
+				<pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</guid>
+				<description>&lt;p&gt;The value of Elon Musk five-step working method is not its novelty, but how it distils key engineering principles into actionable steps with a clear priority order.&lt;/p&gt;&#xA;&lt;p&gt;Step one: question the requirement. Make it less stupid. Musk emphasises that most requirements you receive are flawed from the start. No matter whoproposes the requirement, even smart people can be wrong. People tend to relax their scrutiny when a requirement comes from an authority or a clever person. The first step is to maintain independent judgement.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Data Asset Awareness</title>
+				<link>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
+				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
+				<description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Three Core Corporate Governance Dilemmas</title>
+				<link>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</link>
+				<pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</guid>
+				<description>&lt;p&gt;Three common dilemmas in corporate governance all point to the same root cause: the mismatch between institutional design and human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first dilemma is perverse incentives. When a company has no reasonable workload boundaries or incentive mechanisms, the more an employee does, the more tasks they are given. Hard work is not rewarded; it is punished with more work. The result is a reverse incentive: those who work hard lose out, while those who coast are comfortable. Employees actively reduce their output and pretend to be busy, and overall efficiency declines.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

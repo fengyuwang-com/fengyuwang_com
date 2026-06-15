@@ -1,8 +1,9 @@
 ---
 title: "Why Low-End Customers Keep Finding You"
+date: 2026-06-12
 description: "If a product or service consistently attracts low-quality customers with limited budgets, the problem is usually not the customers. It is the way the product is presented."
 slug: "主动吸引穷人"
-tags: ["商业", "营销", "自我"]
+tags: ["Business", "Marketing", "Self"]
 draft: false
 translationKey: "主动吸引穷人"
 ---

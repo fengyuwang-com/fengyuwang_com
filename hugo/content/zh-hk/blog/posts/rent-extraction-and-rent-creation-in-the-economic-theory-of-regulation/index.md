@@ -1,5 +1,6 @@
 ---
 title: "規制經濟理論中的抽租與創租"
+date: 2026-02-07
 description: "個人原創感悟與對應學術理論完整大纲"
 slug: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
 tags: ["经济", "商业", "社会"]

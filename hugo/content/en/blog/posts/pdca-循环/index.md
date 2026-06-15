@@ -1,8 +1,9 @@
 ---
 title: "The PDCA Cycle"
+date: 2026-04-22
 description: "There is a problem-solving method that has been repeatedly validated in practice: first study the known methods, then try them, identify problems, adjust the approach, and keep iterating until the problem is solved."
 slug: "pdca-循环"
-tags: ["管理", "自我", "工具"]
+tags: ["Management", "Self", "Tools"]
 draft: false
 translationKey: "pdca-循环"
 ---

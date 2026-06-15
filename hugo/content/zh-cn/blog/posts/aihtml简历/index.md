@@ -1,5 +1,6 @@
 ---
 title: "AIHTML简历"
+date: 2026-03-19
 description: "绝对可以，而且是降维打击式解决。"
 slug: "aihtml简历"
 tags: ["技术", "工具"]

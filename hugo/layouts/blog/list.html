@@ -34,8 +34,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
-</style>
-<div class="page-header"><h1>{{ .Title }}</h1>{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}</div>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
+<div class="page-header"><h1>{{ .Title }}</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="{{ if eq $lang "en" }}Search articles...{{ else if eq $lang "zh-hk" }}搜尋文章...{{ else }}搜索文章...{{ end }}" autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud" id="tagCloud"></div>
 <div class="sort-shell">
@@ -43,15 +43,15 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
     <select id="sortSelect">
         <option value="date">{{ if eq .Site.Language.Lang "en" }}Date{{ else }}时间{{ end }}</option>
         <option value="title">{{ if eq .Site.Language.Lang "en" }}A-Z{{ else }}首字母{{ end }}</option>
-        <option value="tag">{{ if eq .Site.Language.Lang "en" }}Tag{{ else }}标签首字母{{ end }}</option>
     </select>
 </div>
 
 <div class="blog-grid" id="blogGrid">
 {{ range .Paginator.Pages.ByDate.Reverse }}
-<a class="blog-card" href="{{ .RelPermalink }}" data-title="{{ .Title }}" data-summary="{{ .Params.description }}" data-tags="{{ with .Params.categories }}{{ delimit . " " }}{{ end }}">
+<a class="blog-card" href="{{ .RelPermalink }}" data-title="{{ .Title }}" data-summary="{{ .Params.description }}" data-date="{{ .Date.Format "2006-01-02" }}" data-tags="{{ with .Params.tags }}{{ delimit . "," }}{{ end }}">
     <h3>{{ .Title }}</h3>
     {{ if .Params.description }}<hr class="summary-divider"><div class="summary-text">{{ .Params.description }}</div>{{ end }}
+    {{ if .Params.tags }}<div class="blog-tags">{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
 </a>
 {{ end }}
 </div>
@@ -64,6 +64,16 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 </div>
 {{ end }}
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total+$lit:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<={{ $totalPages }}){window.location.href="{{ (index .Paginator.Pagers 0).URL }}".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<={{ $totalPages }}){window.location.href="{{ (index .Paginator.Pagers 0).URL }}".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+</script>
+<script>
+(function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){var tc=document.getElementById("tagCloud");var grid=document.getElementById("blogGrid");if(!tc||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var tagMap={};cards.forEach(function(c){var ts=(c.getAttribute("data-tags")||"").split(",");ts.forEach(function(t){if(t)tagMap[t]=(tagMap[t]||0)+1})});var sorted=Object.keys(tagMap).sort(function(a,b){return a.localeCompare(b)});sorted.forEach(function(t){var sp=document.createElement("span");sp.textContent=t+" ("+tagMap[t]+")";sp.addEventListener("click",function(){var active=tc.querySelector(".active");if(active&&active.textContent===sp.textContent){active.classList.remove("active");cards.forEach(function(c){c.style.display=""})}else{if(active)active.classList.remove("active");sp.classList.add("active");cards.forEach(function(c){var ts=(c.getAttribute("data-tags")||"").split(",");c.style.display=ts.indexOf(t)===-1?"none":""})}});tc.appendChild(sp)})})();
+</script>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();
 </script>
 {{ end }}

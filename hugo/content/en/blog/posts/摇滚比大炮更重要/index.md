@@ -1,8 +1,9 @@
 ---
 title: "Rock n Roll Is More Important Than Cannons"
+date: 2026-01-16
 description: "If we use two sounds to metaphor the logic of social operation, cannons represent hard commands and rules, while rock n roll represents the impulse for expression and creation."
 slug: "摇滚比大炮更重要"
-tags: ["社会", "哲学"]
+tags: ["Society", "Philosophy"]
 draft: false
 translationKey: "摇滚比大炮更重要"
 ---

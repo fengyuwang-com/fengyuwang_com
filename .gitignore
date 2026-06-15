@@ -20,3 +20,6 @@ temp/
 
 # Environment variables (may contain secret tokens)
 .env
+_site/
+hugo/_site_test/
+hugo/_check/

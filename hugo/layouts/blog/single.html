@@ -1,22 +1,41 @@
 {{ define "main" }}
 <style>
-.blog-back-shell { margin-bottom:48px; }
-.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
-.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
-.blog-back-btn::before { content:"←"; }
-body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
-body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+
+
+
+
+
+
 .blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
 body[data-theme="dark"] .blog-article { background:#1e293b; }
-.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 20px; color:#111827; line-height:1.3; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
 body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 .blog-article .article-content { margin-top:8px; }
 .blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
 .blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="{{ .Parent.RelPermalink }}">返回博客</a></div>
-<article class="blog-article"><h1>{{ .Title }}</h1>{{ if .Params.tags }}<div class="blog-tags" style="margin-bottom:16px;">{{ range .Params.tags }}<span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;margin-right:6px;">{{ . }}</span>{{ end }}</div>{{ end }}<div class="article-content">{{ .Content }}</div></article>
+<article class="blog-article">
+    <h1>{{ .Title }}</h1>
+    <div class="article-meta">
+        {{ if .Date }}<span class="article-date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+        {{ if and .Date .Params.tags }}<span class="meta-sep">·</span>{{ end }}
+        {{ if .Params.tags }}{{ range .Params.tags }}<span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">{{ . }}</span>{{ end }}{{ end }}
+    </div>
+    <div class="article-content">{{ .Content }}</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
 {{ end }}

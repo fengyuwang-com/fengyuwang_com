@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Data on Fengyu WANG</title>
+		<link>/en/tags/data/</link>
+		<description>Recent content in Data on Fengyu WANG</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/en/tags/data/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Palantir Ontological Approach</title>
+				<link>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
+				<pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
+				<description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Data Asset Awareness</title>
+				<link>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
+				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
+				<description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Excel Is Two-Dimensional</title>
+				<link>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
+				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
+				<description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
