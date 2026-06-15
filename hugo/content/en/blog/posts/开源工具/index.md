@@ -1,8 +1,9 @@
 ---
 title: "Open Source Tools That Replace Commercial Software"
+date: 2026-05-22
 description: "There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems."
 slug: "开源工具"
-tags: ["技术", "工具"]
+tags: ["Tech", "Tools"]
 draft: false
 translationKey: "开源工具"
 ---

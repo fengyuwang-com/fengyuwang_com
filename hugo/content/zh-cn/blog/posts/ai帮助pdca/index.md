@@ -1,5 +1,6 @@
 ---
 title: "AI帮助PDCA"
+date: 2026-05-12
 description: "AI帮助PDCA"
 slug: "ai帮助pdca"
 tags: ["技术", "管理", "工具"]

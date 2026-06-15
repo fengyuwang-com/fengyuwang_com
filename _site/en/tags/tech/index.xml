@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tech on Fengyu WANG</title>
+		<link>/en/tags/tech/</link>
+		<description>Recent content in Tech on Fengyu WANG</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/en/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Protecting Trade Secrets with AI-Generated Code</title>
+				<link>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</link>
+				<pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</guid>
+				<description>&lt;p&gt;When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface. You keep the verification logic and the keys.&lt;/p&gt;&#xA;&lt;p&gt;Concretely, you can implement a layered authorisation mechanism. The first layer is the user interface: this is what employees interact with daily, for entering data and getting results. The second layer is the verification layer: every critical operation must pass an independent authorisation check that only you control. The third layer is the core algorithm layer: this is the real brain of the programme, running in an environment that only you can access.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Palantir Ontological Approach</title>
+				<link>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
+				<pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
+				<description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Open Source Tools That Replace Commercial Software</title>
+				<link>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</link>
+				<pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</guid>
+				<description>&lt;p&gt;There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems like Obsidian.&lt;/p&gt;&#xA;&lt;p&gt;For web development, GrapesJS is an excellent visual drag-and-drop tool. It is entirely front-end based, requires no back-end service, and automatically generates HTML, CSS, and JS code from drag-and-drop components. Suitable for building personal websites or landing pages.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Definitive Technical Research Workflow</title>
+				<link>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+				<pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+				<description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using PDCA to Get Better AI Results</title>
+				<link>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
+				<pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
+				<description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Elon Musk Five-Step Working Method</title>
+				<link>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</link>
+				<pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</guid>
+				<description>&lt;p&gt;The value of Elon Musk five-step working method is not its novelty, but how it distils key engineering principles into actionable steps with a clear priority order.&lt;/p&gt;&#xA;&lt;p&gt;Step one: question the requirement. Make it less stupid. Musk emphasises that most requirements you receive are flawed from the start. No matter whoproposes the requirement, even smart people can be wrong. People tend to relax their scrutiny when a requirement comes from an authority or a clever person. The first step is to maintain independent judgement.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why HTML Beats Word for Your CV</title>
+				<link>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</link>
+				<pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</guid>
+				<description>&lt;p&gt;Using HTML and CSS for your CV solves every formatting problem that Word creates. The frustration you have experienced with Word is not your fault. It is a limitation of the tool itself.&lt;/p&gt;&#xA;&lt;p&gt;Word was designed for processing text documents, not for creating visually refined, structurally complex, precisely aligned layouts. A CV demands the latter, but Word was built for the former.&lt;/p&gt;&#xA;&lt;p&gt;HTML and CSS give you pixel-level control over every element. The layout is identical on any device, on any operating system, in any browser. You can use responsive design so it looks good on mobile too. Version control is trivial because it is just text. Exporting to PDF is a single Ctrl+P away, and the result is perfect.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Programmer Complete Problem-Solving Framework</title>
+				<link>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
+				<pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</guid>
+				<description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Rapid Development of Artificial Intelligence</title>
+				<link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
+				<pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
+				<description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Excel Is Two-Dimensional</title>
+				<link>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
+				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
+				<description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

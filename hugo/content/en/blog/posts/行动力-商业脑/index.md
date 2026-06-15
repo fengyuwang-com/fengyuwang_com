@@ -1,8 +1,9 @@
 ---
 title: "Execution Without Business Sense"
+date: 2026-05-03
 description: "Many people fail in business not because they lack execution but because they have execution without business sense. The stronger the execution, the faster they lose money when heading in the wrong direction."
 slug: "行动力-商业脑"
-tags: ["创业", "商业", "自我"]
+tags: ["Startup", "Business", "Self"]
 draft: false
 translationKey: "行动力-商业脑"
 ---

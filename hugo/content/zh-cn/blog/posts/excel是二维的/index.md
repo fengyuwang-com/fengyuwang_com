@@ -1,5 +1,6 @@
 ---
 title: "Excel是二维的"
+date: 2026-02-27
 description: "你这句话说到根上了，而且完全正确。"
 slug: "excel是二维的"
 tags: ["技术", "数据", "工具"]

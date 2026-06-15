@@ -1,8 +1,9 @@
 ---
 title: "Workplace Survival to Entrepreneurship"
+date: 2026-05-23
 description: "The transition from workplace survival to independent entrepreneurship is essentially an upgrade in cognition. What most people accumulate at work is the ability to do a job well, not the ability to run a business."
 slug: "职场生存-核心壁垒与破局路径"
-tags: ["职场", "创业", "自我"]
+tags: ["Career", "Startup", "Self"]
 draft: false
 translationKey: "职场生存-核心壁垒与破局路径"
 ---

@@ -1,8 +1,9 @@
 ---
 title: "A Programmer Complete Problem-Solving Framework"
+date: 2026-03-15
 description: "The methodology programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or frameworks, it is about a structured approach to defining, decomposing, and solving problems."
 slug: "程序员解决问题的完整思维pipeline"
-tags: ["技术", "编程", "工具"]
+tags: ["Tech", "Programming", "Tools"]
 draft: false
 translationKey: "程序员解决问题的完整思维pipeline"
 ---

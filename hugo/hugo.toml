@@ -3,7 +3,8 @@ title = "Fengyu WANG"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = true
 publishDir = "../_site"
-paginate = 24
+[pagination]
+pagerSize = 12
 
 disableKinds = ["home", "sitemap", "robotsTXT", "404"]
 

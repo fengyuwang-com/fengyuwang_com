@@ -74,6 +74,7 @@
 		body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.18) 0%, rgba(14,165,233,.14) 100%); border-color: rgba(96,165,250,.18); }
 		@media (max-width: 991px) { .content-section { padding: 45px 0 60px; } .pillar-grid, .case-grid { grid-template-columns: 1fr; } .marketing-hero { padding: 32px 24px; } .marketing-hero h1 { font-size: 2.4rem; } }
 	</style>
+<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style>
 </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="cases"></div>
@@ -143,5 +144,7 @@
     <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
     <!-- End Cloudflare Web Analytics -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:&apos;smooth&apos;})">&#x2191;</button>
+<script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 </body>
 </html>

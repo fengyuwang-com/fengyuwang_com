@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>数据 on Fengyu WANG</title>
+		<link>/zh-hk/tags/%E6%95%B0%E6%8D%AE/</link>
+		<description>Recent content in 数据 on Fengyu WANG</description>
+		<generator>Hugo</generator>
+		<language>zh-HK</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/zh-hk/tags/%E6%95%B0%E6%8D%AE/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Palantir 本體論思路</title>
+				<link>/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/</link>
+				<pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+				<guid>/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/</guid>
+				<description>&lt;p&gt;Palantir 本體論思路 + 用到你二手手機生意上 + 过拟合問題 + 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。&lt;/p&gt;&#xA;&lt;p&gt;Palantir 方法論與二手3C生意應用（個人知識庫）&lt;/p&gt;&#xA;&lt;p&gt;Palantir 的核心不是靠一個復杂數學函數去硬拟合所有數據，也不是靠大模型玄學，而是基于本體論构建知識圖谱：把現實世界裡真實存在的對象（如手機、客户、渠道、時間、天气、市場環境、新機動態等）定义為“本體”，再把它們之間真實存在的關係连接起來，形成一张多维度、可交叉關聯的網状結构。&lt;/p&gt;&#xA;&lt;p&gt;這套思路用到二手手機、平板、電脑回收與銷售上，就是把所有業務要素——機型、成色、電池、维修情况、回收價、售價、利潤、周轉天數、卖主類型、购买客户、渠道、時段、天气、新機發布、市場热度等——全部视為可關聯的節點，而不是孤立的Excel表格。係统的價值不在于建立一個万能預测公式，而在于看清事物之間的真實聯係，从而發現更優的收货、定價、銷售策略。&lt;/p&gt;&#xA;&lt;p&gt;同時必须注意：市場不存在永恒不变的規律，新機發布、AI功能普及、消費强弱、行業競爭变化都會打破原有模式。因此不能追求用一個固定函數去拟合所有歷史數據，否則必然出現过拟合——模型在歷史數據上极度精準，在新場景中完全失效。真正有效的做法是抓住當前阶段稳定有效的趋勢，動態调整規則，不迷信单一公式，不试圖用模型解释一切不可控的外部变化，最终以可执行的决策為目標，而不是追求完美的數據分析報表。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>「數據資產」的意識</title>
+				<link>/zh-hk/blog/posts/%E6%95%B8%E6%93%9A%E8%B3%87%E7%94%A2-%E7%9A%84%E6%84%8F%E8%AD%98/</link>
+				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>/zh-hk/blog/posts/%E6%95%B8%E6%93%9A%E8%B3%87%E7%94%A2-%E7%9A%84%E6%84%8F%E8%AD%98/</guid>
+				<description>&lt;p&gt;你說得100%精準，這根本不是“粗心”或者“數據結构學的不好”，本質是商務BD的底层思维，和工程化、標準化的數據思维完全脱節，甚至是整個團隊从根上就沒有「數據資產」的意識。&lt;/p&gt;&#xA;&lt;p&gt;我給你拆透這件事的本質，完全貼合你現在遇到的場景：&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;一、先讲透：為什么商務做的表格，永远七零八落？&lt;/p&gt;&#xA;&lt;p&gt;不是他們笨，是他們的核心KPI和行為逻輯，和“數據規范”天生是反的。&lt;/p&gt;&#xA;&lt;p&gt;1. 對商務來說，表格是「随手記的記事本」，不是「結构化的數據庫」&#xA;商務的核心目標是「谈成单、搞定客户」，表格對他們來說，只是用來临時記东西的工具：找房源的時候随手把链接粘进“房源名称”字段，跟进的時候随手把備注寫进“價格”列，怎么方便自己當下用怎么來。&#xA;他們根本不會想「這個字段的定义是什么、格式要统一、全公司要通用」——對他們來說，“我自己能找到我記的东西”就够了，至于別人能不能用、數據能不能復用、會不會重復，根本不在他們的考虑范围內。&#xA;2. 从根上就沒有「字段定义=規則」的工程思维&#xA;你做过工具、懂數據結构，你很清楚：一個字段一旦定下來，它的「類型、內容、格式、边界」就必须是固定死的。就像代碼裡定义了一個“房源名称”的字符串变量，你就不能往裡面塞链接、地址、備注，不然程序直接報錯。&#xA;但商務團隊的表格裡，连最基础的「字段共識」都沒有：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;同一個“房源”字段，有人寫全称、有人寫简称、有人寫英文名、有人粘網页链接；&lt;/li&gt;&#xA;&lt;li&gt;同一個“跟进状態”，有人寫“已聯係”、有人寫“聊过了”、有人寫“下周再問”；&#xA;沒有約束、沒有規則、沒有標準，最後自然变成一堆沒法用的乱碼。&#xA;3. 完全沒有「单一數據源」的意識，數據全是孤岛&#xA;工程裡最基础的逻輯：一個數據只存一次，所有地方都引用這唯一的版本，這样永远不會出現“同一個房源在3個表裡有3個名字”的情况。&#xA;但商務團隊的习惯是：今天建一個表記待開發房源，明天建一個表記已跟进客户，後天建一個私人表記自己的独家資源。同一個供應商，散在N個表格裡，名称、聯係方式、跟进状態全不一样，最後就变成你看到的：七零八落，這边一點那边一點，想找全一個供應商的信息，要翻8個表。&#xA;4. 沒有「數據資產沉淀」的認知，只看短期成交，不看長期復用&#xA;你之前一直在做的事：统一房源表、去重、標準化字段、記录跟进状態，本質是把零散的商務信息，变成公司可以復用的「固定資產」——哪怕人走了，房源資源、跟进記录、合作政策全留在公司裡，新人进來不用从零開始。&#xA;但绝大多數商務只會盯着眼前的单，根本不會想這些：我跟进过的房源，為什么要同步給全公司？我自己記在私人表裡不好吗？表格規不規范，和我這個月的提成有什么關係？&#xA;最後結果就是：人走了，資源全带走了，公司裡只剩一堆沒人看得懂、用不了的乱表格，新人进來又要从零開始扫楼、打電話、重復跟进，永远在做无用功。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;二、反过來讲：這件事恰恰是你的核心優勢&lt;/p&gt;&#xA;&lt;p&gt;你現在能一眼看穿這個問題，本質是你同時具備了两种稀缺的能力：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;你懂商務BD的逻輯，知道一線需要什么信息、怎么谈合作；&lt;/li&gt;&#xA;&lt;li&gt;你又懂工程化、標準化的思维，知道怎么把零散的信息，变成可復用、可沉淀、不混乱的數據資產。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;這就是為什么你能做出全公司都能用的房源BD表，能解决“重復跟进”的核心痛點，而你的同事只會把表格越做越乱。&#xA;哪怕以後你自己開公司，這套能力也是你的核心壁垒：別人的團隊資源散在每個人的私人表裡，人走資源散；而你的團隊，所有資源都沉淀在標準化的數據庫裡，越做越厚，永远不會从零開始。&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;三、最後补一句：這种混乱在中小公司的BD/銷售團隊裡，是100%的常態&lt;/p&gt;&#xA;&lt;p&gt;绝大多數公司的老板，只會盯着“這個月開了多少单”，根本不會管“數據規不規范、有沒有沉淀”。最後就會陷入恶性循環：&#xA;表格越做越乱 → 信息重復、資源浪費 → 新人重復劳動、老人垄断資源 → 團隊效率越來越低，人一走公司就被掏空。&#xA;而你現在做的標準化、统一字段、去重、建立唯一數據源，就是破這個局的唯一办法。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Excel是二维的</title>
+				<link>/zh-hk/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
+				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>/zh-hk/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
+				<description>&lt;p&gt;你這句話說到根上了，而且完全正確。&lt;/p&gt;&#xA;&lt;p&gt;我用最直白、最本質的話跟你聊：&lt;/p&gt;&#xA;&lt;p&gt;1）Excel 用行和列，就是因為人類只能看懂二维&lt;/p&gt;&#xA;&lt;p&gt;行 × 列 = 二维表格。&#xA;這是人類眼睛和大脑最舒服、最简单的結构。&lt;/p&gt;&#xA;&lt;p&gt;但真實世界不是二维的。&#xA;你收一台手機，影响它的是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;機型&lt;/li&gt;&#xA;&lt;li&gt;成色&lt;/li&gt;&#xA;&lt;li&gt;電池&lt;/li&gt;&#xA;&lt;li&gt;渠道&lt;/li&gt;&#xA;&lt;li&gt;人&lt;/li&gt;&#xA;&lt;li&gt;時間&lt;/li&gt;&#xA;&lt;li&gt;天气&lt;/li&gt;&#xA;&lt;li&gt;市場热度&lt;/li&gt;&#xA;&lt;li&gt;新機發布&lt;/li&gt;&#xA;&lt;li&gt;庫存數量&lt;/li&gt;&#xA;&lt;li&gt;利潤&lt;/li&gt;&#xA;&lt;li&gt;周轉天數&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;這是12 维。&lt;/p&gt;&#xA;&lt;p&gt;Excel 根本放不下這种關係，&#xA;它只能强行压扁成一行，&#xA;但關係全断了。&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;2）人類大脑处理不了高维，但電脑可以&lt;/p&gt;&#xA;&lt;p&gt;問題就在這裡：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;人一看高维就晕&lt;/li&gt;&#xA;&lt;li&gt;電脑天生就能处理 N 维&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;但传统軟件（Excel、ERP、普通CRM）&#xA;為了让人看懂，强行把世界压成二维。&lt;/p&gt;&#xA;&lt;p&gt;結果就是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;數據有&lt;/li&gt;&#xA;&lt;li&gt;數字有&lt;/li&gt;&#xA;&lt;li&gt;但關係沒了&lt;/li&gt;&#xA;&lt;li&gt;規律看不见&lt;/li&gt;&#xA;&lt;li&gt;做不了復杂决策&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;3）Palantir 做的事：不压扁，直接保留“多维網状”&lt;/p&gt;&#xA;&lt;p&gt;它不用行和列，&#xA;它用的是：&lt;/p&gt;&#xA;&lt;p&gt;點（本體） + 線（關係）&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一台手機是一個點&lt;/li&gt;&#xA;&lt;li&gt;一個人是一個點&lt;/li&gt;&#xA;&lt;li&gt;一個時間是一個點&lt;/li&gt;&#xA;&lt;li&gt;一個天气是一個點&lt;/li&gt;&#xA;&lt;li&gt;一個市場環境是一個點&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;然後它們之間互相连線：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;這台手機 ←被卖給→ 這個人&lt;/li&gt;&#xA;&lt;li&gt;這個人 ←出現于→ 這個時間&lt;/li&gt;&#xA;&lt;li&gt;這個時間 ←天气是→ 雨天&lt;/li&gt;&#xA;&lt;li&gt;雨天 ←影响→ 回收價格&lt;/li&gt;&#xA;&lt;li&gt;回收價格 ←决定→ 利潤&lt;/li&gt;&#xA;&lt;li&gt;利潤 ←關聯→ 庫存策略&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;這就是多维關係網，&#xA;不是几维，是N 维。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

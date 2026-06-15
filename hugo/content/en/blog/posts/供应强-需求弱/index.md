@@ -1,8 +1,9 @@
 ---
 title: "Supply Is Strong, Demand Is Weak"
+date: 2026-02-14
 description: "The core contradiction in the current economy is structural: supply exceeds effective demand. This is not absolute overcapacity across all industries, but a differentiated, squeezing imbalance."
 slug: "供应强-需求弱"
-tags: ["经济", "商业", "社会"]
+tags: ["Economy", "Business", "Society"]
 draft: false
 translationKey: "供应强-需求弱"
 ---
