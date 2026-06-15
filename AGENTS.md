@@ -38,3 +38,6 @@ The tunnel uses a token from Cloudflare Zero Trust → Tunnels. Put it in `.env`
 - NEVER push to `main` without explicit user approval.
 - NEVER commit to `main` directly. Always use `dev`.
 - NEVER `git push` without asking.
+
+## Versioning
+Format: \yy.MM.dd.HH.mm\ (auto-updated). Run \scripts\\update-version.ps1\ before commits.

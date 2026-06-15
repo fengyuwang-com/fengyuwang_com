@@ -132,3 +132,11 @@ docker compose logs -f
 git ls-files .env
 git ls-files | Select-String -Pattern "token|secret|key|password"
 ```
+
+---
+
+## Version
+
+Current: **26.06.15.12.12**
+
+Format: yy.MM.dd.HH.mm (自动更新于每次编辑)
