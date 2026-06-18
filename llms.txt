@@ -1,0 +1,29 @@
+# Fengyu WANG — Strategy, Investment & Software Portfolio
+
+> Multilingual personal site of Fengyu WANG (Steve Wang). Based in Hong Kong. Three disciplines, one integrated perspective: market strategy, value investing, and software engineering.
+
+## Key pages
+
+- Home (English): /en/
+- Home (简体中文): /zh-cn/
+- Home (繁體中文): /zh-hk/
+- Capabilities: /en/capabilities.html
+- Market strategy cases: /en/mkt.html
+- Investment research: /en/invest.html
+- Software portfolio: /en/portfolio.html
+- Blog: /en/blog/
+
+## About
+
+Fengyu WANG bridges market strategy, value investing, and software engineering. His work spans AI-assisted investment research workflows, cross-platform development (web, Android, Windows, automation), and data-driven market analysis. He writes about value investing, equity research, and engineering automation.
+
+## Services
+
+Three practice areas: Market Strategy & Cases (brand strategy, consumer insight, GTM planning), Investment Research & Valuation (value investing, business analysis, AI-assisted workflows), Engineering & Automation (cross-platform development, automation systems, AI-driven tools).
+
+## Contact
+
+- Email: fengyuwang1@outlook.com
+- GitHub: https://github.com/fengyuwang-com
+- LinkedIn: https://linkedin.com/in/fengyuwang-com
+- YouTube: https://www.youtube.com/@fenglin6
