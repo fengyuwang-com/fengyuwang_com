@@ -39,7 +39,7 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-size: 15px;
+	font-size: 16px;
 	font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -51,6 +51,15 @@ img {
 
 button {
 	outline: 0 !important;
+}
+
+:focus-visible {
+	outline: 2px solid #0071e3 !important;
+	outline-offset: 2px;
+}
+
+body[data-theme="dark"] :focus-visible {
+	outline-color: #4f7eff;
 }
 
 dl, ol, ul {
