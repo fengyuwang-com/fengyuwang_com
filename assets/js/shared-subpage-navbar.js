@@ -419,7 +419,7 @@
     });
   }
 
-  // ---- Desktop: portal submenu (robust) ----
+  // ---- Desktop: portal submenu (body-level backdrop-filter) ----
   var portal = document.getElementById('submenu-portal');
   if (!portal) {
     portal = document.createElement('div');
@@ -430,45 +430,34 @@
     portal.appendChild(pw);
   }
   var portalWrap = portal.querySelector('.sp-wrap');
-  var activeLi = null;
-  var hideTimer = null;
-  function cancelHide() { if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; } }
-  function scheduleHide() { cancelHide(); hideTimer = setTimeout(function(){ if (portal) portal.classList.remove('active'); activeLi = null; }, 5000); }
   Array.prototype.forEach.call(nav.querySelectorAll('.desktop-menu > li'), function (li) {
     var sub = li.querySelector('.submenu');
     if (!sub) return;
-    li.addEventListener('mouseenter', function () {
-      cancelHide();
+    var t;
+    function sp() {
       var r = li.getBoundingClientRect();
       portalWrap.innerHTML = sub.innerHTML;
-      portal.style.top = r.bottom + 'px';
+      portal.style.top = (r.bottom + 4) + 'px';
       portal.style.left = (r.left + r.width / 2) + 'px';
       portal.style.transform = 'translateX(-50%)';
-      if (!portal.classList.contains('active')) {
-        portalWrap.style.opacity = '0';
-        portalWrap.style.transform = 'translateY(-6px)';
-        portal.classList.add('active');
-        portalWrap.getBoundingClientRect();
-        portalWrap.style.opacity = '1';
-        portalWrap.style.transform = 'translateY(0)';
-      }
-      activeLi = li;
-    });
-    li.addEventListener('mouseleave', function () { scheduleHide(); });
-  });
-  // Close portal when hovering over non-submenu items
-  Array.prototype.forEach.call(nav.querySelectorAll('.desktop-menu > li'), function (li) {
-    if (!li.querySelector('.submenu')) {
-      li.addEventListener('mouseenter', function () { if (portal.classList.contains('active')) { portal.classList.remove('active'); if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; } } });
+      portalWrap.style.opacity = '0';
+      portalWrap.style.transform = 'translateY(-6px)';
+      portal.classList.add('active');
+      portalWrap.getBoundingClientRect();
+      portalWrap.style.opacity = '1';
+      portalWrap.style.transform = 'translateY(0)';
     }
+    function hp() {
+      portalWrap.style.opacity = '0';
+      portalWrap.style.transform = 'translateY(-6px)';
+      setTimeout(function(){portal.classList.remove('active')},200);
+    }
+    li.addEventListener('mouseenter',function(){clearTimeout(t);sp()});
+    li.addEventListener('mouseleave',function(){t=setTimeout(hp,100)});
+    portal.addEventListener('mouseenter',function(){clearTimeout(t)});
+    portal.addEventListener('mouseleave',function(){t=setTimeout(hp,100)});
   });
-  portal.addEventListener('mouseenter', function () { cancelHide(); });
-  portal.addEventListener('mouseleave', function () { scheduleHide(); });
-  // Also hide when mouse leaves the entire navbar
-  nav.addEventListener('mouseleave', function () { scheduleHide(); });
-  // Close portal on scroll or click outside
-  window.addEventListener('scroll', function () { if (portal && portal.classList) portal.classList.remove('active'); }, { passive: true });
-  document.addEventListener('click', function () { if (portal && portal.classList) portal.classList.remove('active'); });
+
   // ---- Mobile: click on row toggles submenu (query from body-level portal) ----
   function initMobileSubmenus(root) {
     Array.prototype.forEach.call(root.querySelectorAll('.mobile-item'), function (item) {
@@ -525,6 +514,8 @@
     currentTheme: currentTheme
   };
 }());
+
+
 
 
 
