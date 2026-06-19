@@ -146,8 +146,8 @@
       '.shared-subpage-nav .desktop-menu a:hover, .shared-subpage-nav .desktop-menu a.active, .shared-subpage-nav .mobile-link:hover, .shared-subpage-nav .mobile-link.active, .shared-subpage-nav .mobile-submenu a:hover { color: #0071e3; }',
 
       /* ---- Desktop submenu: Apple-style fade + scale + glass ---- */
-      '.shared-subpage-nav .desktop-menu .submenu { position: fixed; min-width: 200px; padding: 6px 0; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-radius: 14px; border: 0.5px solid rgba(255,255,255,0.3); box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(0,0,0,0.04); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25,0.1,0.25,1), visibility 0.2s; }',
-      '.shared-subpage-nav .desktop-menu li:hover > .submenu, .shared-subpage-nav .desktop-menu li:focus-within > .submenu { opacity: 1; visibility: visible; }',
+      '.shared-subpage-nav .desktop-menu .submenu { position: absolute; top: 100%; left: 50%; min-width: 200px; padding: 6px 0; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-radius: 14px; border: 0.5px solid rgba(255,255,255,0.3); box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(0,0,0,0.04); opacity: 0 !important; visibility: hidden !important; pointer-events: none; }',
+      '/* submenu visibility controlled by JS - moved to body */',
       '.shared-subpage-nav .desktop-menu .submenu a { padding: 8px 18px; border-bottom: 1px solid rgba(0,0,0,.05); background: transparent; white-space: nowrap; transition: background 0.15s ease; }',
       '.shared-subpage-nav .desktop-menu .submenu li:last-child a { border-bottom: 0; }',
       '.shared-subpage-nav .desktop-menu .submenu a:hover { background: rgba(0,113,227,0.06); }',
@@ -180,6 +180,13 @@
       '.shared-subpage-nav .mobile-social { padding-top: 12px; }',
 
       /* ---- Body offset ---- */
+      'body > .submenu { z-index: 10000; }',
+      'body > .submenu a { padding: 8px 18px; border-bottom: 1px solid rgba(0,0,0,0.05); background: transparent; white-space: nowrap; transition: background 0.15s ease; display: block; color: #1d1d1f; font-size: 12px; font-weight: 400; text-decoration: none; }',
+      'body > .submenu li:last-child a { border-bottom: 0; }',
+      'body > .submenu a:hover { color: #0071e3; background: rgba(0,113,227,0.06); }',
+      'body[data-theme="dark"] > .submenu a { color: #f5f5f7; background: transparent; border-color: rgba(255,255,255,0.04); }',
+      'body[data-theme="dark"] > .submenu a:hover { color: #2997ff; background: rgba(41,151,255,0.08); }',
+      'body[data-theme="dark"] > .submenu { background: rgba(10, 14, 26, 0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border: 0.5px solid rgba(255,255,255,0.06); box-shadow: 0 18px 48px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(255,255,255,0.04); }',
       'body { padding-top: 44px !important; }',
 
       /* ---- Dark mode ---- */
@@ -369,27 +376,73 @@
   }
 
   
-  // ---- Desktop: position fixed submenus on hover ----
+  // ---- Desktop: physically move submenu to body for proper backdrop-filter ----
   Array.prototype.forEach.call(nav.querySelectorAll('.desktop-menu > li'), function (li) {
     var submenu = li.querySelector('.submenu');
     if (!submenu) return;
-    function positionSubmenu() {
+    var origParent = submenu.parentNode;
+    var placeholder = document.createComment('submenu-home');
+    var floating = null;
+
+    function showFloating() {
       var rect = li.getBoundingClientRect();
-      submenu.style.left = (rect.left + rect.width / 2) + 'px';
-      submenu.style.top = (rect.bottom + 4) + 'px';
+      // Clone content into a floating element appended to body
+      floating = submenu.cloneNode(true);
+      floating.style.position = 'fixed';
+      floating.style.left = (rect.left + rect.width / 2) + 'px';
+      floating.style.top = (rect.bottom + 4) + 'px';
+      floating.style.transform = 'translateX(-50%) translateY(-8px)';
+      floating.style.opacity = '0';
+      floating.style.visibility = 'visible';
+      floating.style.transition = 'none';
+      document.body.appendChild(floating);
+      // Force reflow then animate in
+      floating.getBoundingClientRect();
+      floating.style.transition = 'opacity 0.2s ease, transform 0.3s cubic-bezier(0.25,0.1,0.25,1)';
+      floating.style.opacity = '1';
+      floating.style.transform = 'translateX(-50%) translateY(4px)';
     }
-    li.addEventListener('mouseenter', positionSubmenu);
-    // Re-position on scroll/resize when visible
+
+    function hideFloating() {
+      if (!floating) return;
+      floating.style.opacity = '0';
+      floating.style.transform = 'translateX(-50%) translateY(-8px)';
+      // Remove after transition
+      var f = floating;
+      setTimeout(function () {
+        if (f.parentNode) f.parentNode.removeChild(f);
+        if (floating === f) floating = null;
+      }, 250);
+    }
+
+    li.addEventListener('mouseenter', function () {
+      if (floating) { hideFloating(); }
+      showFloating();
+    });
+
+    li.addEventListener('mouseleave', function () {
+      hideFloating();
+    });
+
+    // Re-position on scroll/resize if floating is visible
     var repositionTimer;
     window.addEventListener('scroll', function () {
-      if (submenu.style.opacity !== '1') return;
+      if (!floating || !floating.parentNode) return;
       clearTimeout(repositionTimer);
-      repositionTimer = setTimeout(positionSubmenu, 50);
+      repositionTimer = setTimeout(function () {
+        var rect = li.getBoundingClientRect();
+        floating.style.left = (rect.left + rect.width / 2) + 'px';
+        floating.style.top = (rect.bottom + 4) + 'px';
+      }, 50);
     }, { passive: true });
     window.addEventListener('resize', function () {
-      if (submenu.style.opacity !== '1') return;
+      if (!floating || !floating.parentNode) return;
       clearTimeout(repositionTimer);
-      repositionTimer = setTimeout(positionSubmenu, 50);
+      repositionTimer = setTimeout(function () {
+        var rect = li.getBoundingClientRect();
+        floating.style.left = (rect.left + rect.width / 2) + 'px';
+        floating.style.top = (rect.bottom + 4) + 'px';
+      }, 50);
     }, { passive: true });
   });
 // ---- Mobile: click on row toggles submenu (no stupid + button) ----
