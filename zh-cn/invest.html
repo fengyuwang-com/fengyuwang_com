@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="zh-CN">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,151 +38,273 @@
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<style>
-		.content-section { padding: 52px 0 80px; }
-		.content-card { background:linear-gradient(135deg, #ffffff 0%, #f8fbff 100%); border:1px solid rgba(148,163,184,.14); border-radius:22px; padding:28px; box-shadow:0 18px 50px rgba(15,23,42,.08); margin-bottom:20px; }
-		.content-card h3 { margin-bottom:12px; font-size:1.3rem; font-weight:700; }
-		.content-card p { margin-bottom:14px; line-height:1.9; color:#374151; }
-		.content-card ul { margin:0; padding-left:18px; line-height:1.8; }
-		.page-header { text-align:center; margin-bottom:48px; }
-		.page-header h1 { font-size:2.5rem; font-weight:800; margin-bottom:12px; color:#111827; }
-		.page-header p { color:#6b7280; font-size:1.1rem; line-height:1.9; max-width:920px; margin:0 auto; }
-		.focus-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:18px 0 22px; }
-		.focus-tag { display:inline-flex; align-items:center; min-height:38px; padding:8px 14px; border-radius:999px; border:1px solid rgba(37,99,235,.14); background:rgba(255,255,255,.82); color:#1f3b8a; font-size:.92rem; font-weight:700; letter-spacing:.01em; box-shadow:0 10px 24px rgba(15,23,42,.05); }
-		.section-title { display:none; }
-		.quote-card { background:linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); border-left:4px solid #2563eb; }
-		.grid-two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
-		.grid-two .content-card:first-child { background:linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); }
-		.grid-two .content-card:last-child { background:linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%); }
-		.kw-item,
-		.kw-blue,
-		.kw-green,
-		.kw-orange,
-		.kw-purple,
-		.kw-red {
-			display:inline;
-			padding:0;
-			border:none;
-			border-radius:0;
-			background:none;
-			color:inherit;
-			font-size:inherit;
-			font-weight:inherit;
-			line-height:inherit;
-			letter-spacing:inherit;
-			vertical-align:baseline;
-			box-shadow:none;
-		}
-		body[data-theme="dark"] .focus-tag { background:rgba(15,23,42,.88); border-color:rgba(96,165,250,.22); color:#bfdbfe; box-shadow:none; }
-		body[data-theme="dark"] .content-card { background:linear-gradient(135deg, #2d3a4d 0%, #1e293b 100%); border-color:rgba(148,163,184,.20); box-shadow:0 18px 50px rgba(2,6,23,.36); }
-		body[data-theme="dark"] .quote-card { background:linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%); border-left-color:#60a5fa; }
-		body[data-theme="dark"] .grid-two .content-card:first-child { background:linear-gradient(135deg, #1e293b 0%, #1f2937 100%); }
-		body[data-theme="dark"] .grid-two .content-card:last-child { background:linear-gradient(135deg, #1e293b 0%, #1e1b4b 100%); }
-		body[data-theme="dark"] .content-card h3 { color:#f8fafc; }
-		body[data-theme="dark"] .content-card p,
-		body[data-theme="dark"] .content-card ul { color:#cbd5e1; }
-		body[data-theme="dark"] .kw-item,
-		body[data-theme="dark"] .kw-blue,
-		body[data-theme="dark"] .kw-green,
-		body[data-theme="dark"] .kw-orange,
-		body[data-theme="dark"] .kw-purple,
-		body[data-theme="dark"] .kw-red {
-			background:none;
-			color:inherit;
-			box-shadow:none;
-		}
+		html { scroll-behavior: smooth; }
+		.page-wrap { background: #ffffff; }
+		.marketing-hero { text-align: center; padding: 52px 0 40px; }
+		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+		.marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+		/* Card grid */
+		.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+		.mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+		.mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+		.mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+		.mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+			.card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+			.invest-card { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: none; cursor: pointer; }
+			.invest-card .card-content { color: #f8fafc; }
+			.invest-card .card-content p { color: rgba(248,250,252,.7); margin-bottom: 14px; }
+			.invest-card .card-content .card-btn { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); pointer-events: none; }
+
+			/* Content blocks */
+		.content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+		.content-block:last-of-type { margin-bottom: 0; }
+		.content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+		.content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+		.content-block.section-bg .block-inner { position: relative; z-index: 1; }
+		.section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+		.block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+		.block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+		.block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+		.block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+		.block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+		.block-inner ul li + li { margin-top: 5px; }
+
+		/* Text cards */
+		.content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+		.content-text-card p { margin-bottom: 0; }
+		.content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+		.content-text-card ul li + li { margin-top: 5px; }
+		.content-text-card:last-child { margin-bottom: 0; }
+		.content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+
+		.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+		.case-card { background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 6px 18px rgba(15,23,42,.04); }
+		.case-card h3 { font-size: 1rem; margin-bottom: 8px; color: #0f172a; font-weight: 800; }
+		.case-card p { margin: 0; color: #64748b; line-height: 1.75; font-size: .88rem; }
+
+		/* Dark mode */
+		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+		body[data-theme="dark"] .content-block { background-color: #111827; }
+		body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+		body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+		body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+		body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+		body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+		body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+		body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .case-card { background: #1e293b; border-color: rgba(148,163,184,.04); }
+		body[data-theme="dark"] .case-card h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .case-card p { color: #9fb0c3; }
+
 		@media (max-width: 991px) {
-			.content-section { padding: 45px 0 60px; }
-			.grid-two { grid-template-columns:1fr; }
+			.card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+			.marketing-hero { padding: 36px 24px; }
+			.marketing-hero h1 { font-size: 2.4rem; }
+			.content-block { padding: 36px 0 28px; }
+			.block-inner h2 { font-size: 1.4rem; }
+			.case-grid { grid-template-columns: 1fr; }
 		}
+		@media (max-width: 599px) {
+			.card-grid { grid-template-columns: 1fr; }
+			.marketing-hero { padding: 28px 16px; }
+			.content-block { padding: 28px 0 20px; }
+			.block-inner h2 { font-size: 1.25rem; }
+		}
+		.link-card { text-align: center; padding: 48px 0 72px; }
+		.link-card p { color: #6b7280; margin-bottom: 12px; }
+		.link-card .default-btn { min-width: 200px; }
+		body[data-theme="dark"] .link-card p { color: #94a3b8; }
 	</style>
-<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style>
+<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
 </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="investment"></div>
-	<script src="../assets/js/shared-subpage-navbar.js?v=26.06.20.04.56"></script>
-	<section class="content-section">
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.07.02.01.24"></script>
+
+	<div class="page-wrap">
 		<div class="container">
-			<div class="page-header">
+			<!-- Hero -->
+			<div class="marketing-hero">
 				<h1>投资</h1>
-				<p>以<span class="kw-item kw-green">价值投资</span>为主线，以<span class="kw-item kw-green">市场研究</span>、<span class="kw-item kw-orange">经济学</span>、<span class="kw-item kw-orange">金融学</span>与<span class="kw-item kw-red">概率思维</span>完善判断</p>
+				<p>以价值投资为主线，以市场研究、经济学、金融学与概率思维完善判断</p>
 			</div>
 
-			<div class="content-card quote-card">
-				<h3>我的投资框架</h3>
-				<p>我并不把投资理解成单纯的“买卖股票”。在我看来，投资是一门综合学问：它既需要<span class="kw-item kw-purple">巴菲特</span>式的商业理解和长期主义，也离不开<span class="kw-item kw-green">市场研究</span>、<span class="kw-item kw-orange">经济学</span>、<span class="kw-item kw-orange">金融学</span>、<span class="kw-item kw-red">数学中的概率思维</span>，以及对历史、文化、制度和人性的长期观察。<span class="kw-item kw-purple">巴菲特</span>是我非常重要的思想参照，但我的实际投资方法并不止于复述<span class="kw-item kw-purple">巴菲特</span>，而是把<span class="kw-item kw-green">价值投资</span>的核心原则放进更完整的研究框架中。</p>
-				<ul>
-					<li><strong>先理解企业，再理解价格</strong>：我首先关心企业如何赚钱、客户为什么买单、竞争优势能否持续，然后才讨论买入价格是否合理。</li>
-					<li><strong><span class="kw-item kw-red">安全边际</span></strong>：再好的公司，如果价格已经透支未来，也可能不是好投资。</li>
-					<li><strong>独立判断</strong>：我尊重<span class="kw-item kw-green">市场信息</span>，但不把市场共识当成真理。</li>
-					<li><strong><span class="kw-item kw-red">长期复利</span></strong>：投资的核心不是高频动作，而是让时间成为朋友。</li>
-				</ul>
+			<!-- Card grid -->
+			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80')" onclick="document.getElementById('business').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>这是生意</h3>
+						<p>每一笔投资，首先是一桩生意。</p>
+						<button class="card-btn">了解框架</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&q=80')" onclick="document.getElementById('moat').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>护城河</h3>
+						<p>没有壁垒，再便宜也不便宜。</p>
+						<button class="card-btn">了解护城河</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80')" onclick="document.getElementById('beyond').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>不只是巴菲特</h3>
+						<p>港股、A股、美股各有不同语境。</p>
+						<button class="card-btn">了解更多</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=600&q=80')" onclick="document.getElementById('probability').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>概率思维</h3>
+						<p>区间思维比点预测更诚实。</p>
+						<button class="card-btn">了解方法</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80')" onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>学术与实践</h3>
+						<p>框架来自书本，验证来自真实决策。</p>
+						<button class="card-btn">查看案例</button>
+					</div>
+				</div>
+				<div class="mkt-card invest-card" onclick="window.location.href='/zh-cn/blog/'">
+						<div class="card-content">
+							<h3>阅读博客 →</h3>
+							<p>市场、投资与技术的深度思考。</p>
+							<span class="card-btn">去看看</span>
+						</div>
+					</div>
 			</div>
+		</div>
 
-			<div class="grid-two">
-				<div class="content-card">
-					<h3>我如何理解<span class="kw-item kw-purple">巴菲特</span></h3>
-					<p><span class="kw-item kw-purple">巴菲特</span>对我最重要的影响，不是某个口号，而是他把投资从“猜价格”重新拉回到“理解企业”和“理解<span class="kw-item kw-orange">资本配置</span>”上。能力圈、<span class="kw-item kw-red">安全边际</span>、<span class="kw-item kw-orange">护城河</span>、<span class="kw-item kw-green">管理层</span>激励、<span class="kw-item kw-orange">现金流</span>质量、长期持有，这些原则塑造了我对企业价值的底层看法。</p>
-					<ul>
-						<li><strong>能力圈</strong>：宁可少做，也不装懂。</li>
-						<li><strong><span class="kw-item kw-orange">护城河</span></strong>：品牌、渠道、用户粘性、成本优势、网络效应、制度与文化，都是竞争优势的来源。</li>
-						<li><strong><span class="kw-item kw-orange">资本配置</span></strong>：一家企业是否优秀，不只看利润表，更要看<span class="kw-item kw-green">管理层</span>如何使用留存收益。</li>
-						<li><strong>投资心性</strong>：耐心、克制、等待，是投资中的主动能力。</li>
-					</ul>
-				</div>
-				<div class="content-card">
-					<h3>我不只是谈<span class="kw-item kw-purple">巴菲特</span></h3>
-					<p>真正进入市场之后，我很清楚<span class="kw-item kw-purple">巴菲特</span>的方法必须结合现实语境来使用。港股、A股和美股在<span class="kw-item kw-orange">估值</span>体系、市场结构、投资者行为、监管环境和流动性特征上都不完全一样，所以我会把<span class="kw-item kw-purple">巴菲特</span>式的企业分析，和<span class="kw-item kw-green">市场研究</span>、政策判断、风险管理、情景分析结合起来。</p>
-					<ul>
-						<li><strong><span class="kw-item kw-green">市场研究</span></strong>：行业结构、竞争格局、用户行为、渠道变化、政策影响。</li>
-						<li><strong><span class="kw-item kw-orange">财务分析</span></strong>：资产负债表韧性、自由现金流、资本开支、回报率、会计质量。</li>
-						<li><strong><span class="kw-item kw-red">概率思维</span></strong>：我更倾向于区间、赔率和期望值思维。</li>
-						<li><strong><span class="kw-item kw-blue">AI辅助研究</span></strong>：AI可以提高研究效率，但不能代替最终判断与责任承担。</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="content-card">
-				<h3>投资为何是一门综合学问</h3>
-				<p>在我看来，投资与历史、文化、<span class="kw-item kw-orange">经济学</span>、<span class="kw-item kw-orange">金融学</span>之间本来就是互相连接的。历史告诉我们周期如何反复，人性如何在繁荣和恐慌中重复犯错；文化决定消费者信任什么、企业如何建立长期品牌；<span class="kw-item kw-orange">经济学</span>帮助理解资源配置、产业结构和竞争秩序；<span class="kw-item kw-orange">金融学</span>提供<span class="kw-item kw-orange">估值</span>、<span class="kw-item kw-orange">现金流</span>、资本成本、资本结构等工具；<span class="kw-item kw-red">数学</span>则让概率、复利、期望值、波动与风险暴露变得可衡量。</p>
-				<p>因此，我的投资工作从来不只是读财报。我会同时关注企业史、行业史、制度环境、管理层风格、用户行为、社会心理，以及“利润表上看起来不错”的生意，是否真的能长期转化为股东回报。</p>
-			</div>
-
-			<div class="grid-two">
-				<div class="content-card">
-					<h3>我的分析路径</h3>
-					<ul>
-						<li><strong>第一步</strong>：看<span class="kw-item kw-green">市场研究</span>中的政策、需求结构与竞争格局。</li>
-						<li><strong>第二步</strong>：看<span class="kw-item kw-green">商业模式</span>、管理层激励与扩张逻辑。</li>
-						<li><strong>第三步</strong>：看财务真实度、杠杆水平、利润含金量和风险点。</li>
-						<li><strong>第四步</strong>：看<span class="kw-item kw-orange">估值</span>、下行保护和隐含预期。</li>
-						<li><strong>第五步</strong>：看仓位、纪律与错误代价。</li>
-					</ul>
-				</div>
-				<div class="content-card">
-					<h3>用巴菲特思想看量化投资</h3>
-					<p>我并不排斥<span class="kw-item kw-blue">量化投资</span>。某种意义上，<span class="kw-item kw-purple">巴菲特</span>本身就非常重视数字。真正的问题不在于投资源不源于量化，而在于数字究竟是在服务于对企业本质的理解，还是脱离了企业本身而自我运转。</p>
-					<ul>
-						<li><strong>巴菲特会认可的部分</strong>：量化工具可以帮助投资者提高纪律性，并在大范围标的中快速比较估值、盈利能力与风险。</li>
-						<li><strong>巴菲特会警惕的部分</strong>：模型很难完整理解管理层品格、企业文化、用户忠诚度和护城河的耐久性。</li>
-						<li><strong>我的看法</strong>：<span class="kw-item kw-blue">量化投资</span>最适合作为筛选器、诊断工具和风险管理工具。</li>
-						<li><strong>我的做法</strong>：我把数据筛选、概率分析和结构化研究，与商业模式判断、产业结构理解和长期竞争优势分析结合起来。</li>
-					</ul>
-					<p>所以我的立场不是“<span class="kw-item kw-blue">量化投资</span>对<span class="kw-item kw-green">价值投资</span>”，而是“好的量化应该服务于好的投资”。</p>
-				</div>
-			</div>
-			<div class="grid-two">
-				<div class="content-card">
-					<h3>学术根基：GE2260 Introduction to Finance</h3>
-					<p><strong>成绩：A</strong>。以小组合伙形式管理 10 万港币模拟投资组合，在 2022 年熊市环境下实现正回报：债券 +0.09%、基金 +2.03%、外汇 +2.13%、股票 +1.33%。覆盖定存、美国国债、香港绿色债券、ETF（NASDAQ 100 / 黄金 / 债券）、个股（AAPL / KO / TCEHY / TSM / AMZN）与双币存款。三年期预期回报率 12.63%，验证了低风险分散配置在恶劣市场中的稳健性。</p>
-				</div>
-				<div class="content-card">
-					<h3>NewWave Capital 创投基金分析</h3>
-					<p>从零搭建 VC 投资框架，完成 6 个月投资组合策略报告。涵盖行业扫描、估值分析、风险管理与投后策略。以合伙人身份（Industrial Relations）参与基金管理架构设计。</p>
+		<!-- Section 1: 这是生意 -->
+		<div id="business" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>这是生意</h2>
+					<p class="block-subtitle">每一笔投资，首先是一桩生意。不想拥有的，别买。</p>
+					<div class="content-text-card">
+						<p>我并不把投资理解成单纯的"买卖股票"。在我看来，投资是一门综合学问：它既需要巴菲特式的商业理解和长期主义，也离不开市场研究、经济学、金融学、数学中的概率思维，以及对历史、文化、制度和人性的长期观察。巴菲特是我非常重要的思想参照，但我的实际投资方法并不止于复述巴菲特，而是把价值投资的核心原则放进更完整的研究框架中。</p>
+						<ul>
+							<li><strong>先理解企业，再理解价格</strong>：我首先关心企业如何赚钱、客户为什么买单、竞争优势能否持续，然后才讨论买入价格是否合理。</li>
+							<li><strong>安全边际</strong>：再好的公司，如果价格已经透支未来，也可能不是好投资。</li>
+							<li><strong>独立判断</strong>：我尊重市场信息，但不把市场共识当成真理。</li>
+							<li><strong>长期复利</strong>：投资的核心不是高频动作，而是让时间成为朋友。</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-<div id="shared-site-footer"></div>
+
+		<!-- Section 2: 护城河 -->
+		<div id="moat" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>护城河</h2>
+					<p class="block-subtitle">没有壁垒，再便宜也不便宜。竞争优势的持续性比当期的利润更重要。</p>
+					<div class="content-text-card">
+						<p>巴菲特对我最重要的影响，不是某个口号，而是他把投资从"猜价格"重新拉回到"理解企业"和"理解资本配置"上。能力圈、安全边际、护城河、管理层激励、现金流质量、长期持有，这些原则塑造了我对企业价值的底层看法。</p>
+						<ul>
+							<li><strong>能力圈</strong>：宁可少做，也不装懂。</li>
+							<li><strong>护城河</strong>：品牌、渠道、用户粘性、成本优势、网络效应、制度与文化，都是竞争优势的来源。</li>
+							<li><strong>资本配置</strong>：一家企业是否优秀，不只看利润表，更要看管理层如何使用留存收益。</li>
+							<li><strong>投资心性</strong>：耐心、克制、等待，是投资中的主动能力。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 3: 不只是巴菲特 -->
+		<div id="beyond" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>不只是巴菲特</h2>
+					<p class="block-subtitle">巴菲特是重要参照，但不是全部。港股、A股、美股各有不同语境。</p>
+					<div class="content-text-card">
+						<p>真正进入市场之后，我很清楚巴菲特的方法必须结合现实语境来使用。港股、A股和美股在估值体系、市场结构、投资者行为、监管环境和流动性特征上都不完全一样，所以我会把巴菲特式的企业分析，和市场研究、政策判断、风险管理、情景分析结合起来。</p>
+						<ul>
+							<li><strong>市场研究</strong>：行业结构、竞争格局、用户行为、渠道变化、政策影响。</li>
+							<li><strong>财务分析</strong>：资产负债表韧性、自由现金流、资本开支、回报率、会计质量。</li>
+							<li><strong>概率思维</strong>：我更倾向于区间、赔率和期望值思维。</li>
+							<li><strong>AI辅助研究</strong>：AI可以提高研究效率，但不能代替最终判断与责任承担。</li>
+						</ul>
+					</div>
+					<div class="content-text-card">
+						<h3>投资为何是一门综合学问</h3>
+						<p>在我看来，投资与历史、文化、经济学、金融学之间本来就是互相连接的。历史告诉我们周期如何反复，人性如何在繁荣和恐慌中重复犯错；文化决定消费者信任什么、企业如何建立长期品牌；经济学帮助理解资源配置、产业结构和竞争秩序；金融学提供估值、现金流、资本成本、资本结构等工具；数学则让概率、复利、期望值、波动与风险暴露变得可衡量。</p>
+						<p>因此，我的投资工作从来不只是读财报。我会同时关注企业史、行业史、制度环境、管理层风格、用户行为、社会心理，以及"利润表上看起来不错"的生意，是否真的能长期转化为股东回报。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 4: 概率，不是预测 -->
+		<div id="probability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>概率，不是预测</h2>
+					<p class="block-subtitle">投资是管理概率的游戏。区间思维比点预测更诚实。</p>
+					<div class="content-text-card">
+						<h3>我的分析路径</h3>
+						<ul>
+							<li><strong>第一步</strong>：看市场研究中的政策、需求结构与竞争格局。</li>
+							<li><strong>第二步</strong>：看商业模式、管理层激励与扩张逻辑。</li>
+							<li><strong>第三步</strong>：看财务真实度、杠杆水平、利润含金量和风险点。</li>
+							<li><strong>第四步</strong>：看估值、下行保护和隐含预期。</li>
+							<li><strong>第五步</strong>：看仓位、纪律与错误代价。</li>
+						</ul>
+					</div>
+					<div class="content-text-card">
+						<h3>用巴菲特思想看量化投资</h3>
+						<p>我并不排斥量化投资。某种意义上，巴菲特本身就非常重视数字。真正的问题不在于投资源不源于量化，而在于数字究竟是在服务于对企业本质的理解，还是脱离了企业本身而自我运转。</p>
+						<ul>
+							<li><strong>巴菲特会认可的部分</strong>：量化工具可以帮助投资者提高纪律性，并在大范围标的中快速比较估值、盈利能力与风险。</li>
+							<li><strong>巴菲特会警惕的部分</strong>：模型很难完整理解管理层品格、企业文化、用户忠诚度和护城河的耐久性。</li>
+							<li><strong>我的看法</strong>：量化投资最适合作为筛选器、诊断工具和风险管理工具。</li>
+							<li><strong>我的做法</strong>：我把数据筛选、概率分析和结构化研究，与商业模式判断、产业结构理解和长期竞争优势分析结合起来。</li>
+						</ul>
+						<p>所以我的立场不是"量化投资对价值投资"，而是"好的量化应该服务于好的投资"。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 5: 学术与实践 -->
+		<div id="practice" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>学术与实践</h2>
+					<p class="block-subtitle">框架来自书本，验证来自真实决策。</p>
+					<div class="case-grid">
+						<div class="case-card">
+							<h3>GE2260 Introduction to Finance</h3>
+							<p><strong>成绩：A</strong>。以小组合伙形式管理 10 万港币模拟投资组合，在 2022 年熊市环境下实现正回报：债券 +0.09%、基金 +2.03%、外汇 +2.13%、股票 +1.33%。覆盖定存、美国国债、香港绿色债券、ETF（NASDAQ 100 / 黄金 / 债券）、个股（AAPL / KO / TCEHY / TSM / AMZN）与双币存款。三年期预期回报率 12.63%，验证了低风险分散配置在恶劣市场中的稳健性。</p>
+						</div>
+						<div class="case-card">
+							<h3>NewWave Capital 创投基金分析</h3>
+							<p>从零搭建 VC 投资框架，完成 6 个月投资组合策略报告。涵盖行业扫描、估值分析、风险管理与投后策略。以合伙人身份（Industrial Relations）参与基金管理架构设计。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<!-- Cross-link -->
+		<div class="link-card">
+			<p>把企业分析与概率思维变成一个系统</p>
+			<a class="default-btn" href="/zh-cn/blog/">阅读博客文章 →</a>
+		</div>
+	</div>
+
+	<div id="shared-site-footer"></div>
 	<script src="../assets/js/shared-site-footer.js"></script>
 	<script src="../assets/js/jquery.min.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
@@ -196,6 +317,3 @@
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 </body>
 </html>
-
-
-
