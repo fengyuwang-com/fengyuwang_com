@@ -46,7 +46,7 @@
 		.marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
 		/* Card grid */
 		.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
-		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 260px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
 		.mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
 		.mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
 		.mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
@@ -57,9 +57,17 @@
 		.invest-card .card-content p { color: rgba(248,250,252,.7); margin-bottom: 14px; }
 		.invest-card .card-content .card-btn { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); pointer-events: none; }
 
-		/* ===== Content blocks (gray bg with white gaps, matching homepage) ===== */
-		.content-block { background: #f5f5f7; padding: 44px 0 40px; margin-bottom: 12px; }
+		/* ===== Content blocks with optional background image ===== */
+		.content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
 		.content-block:last-of-type { margin-bottom: 0; }
+		/* Background image sections */
+		.content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; }
+		/* Frosted glass overlay (matches navbar) */
+		.content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+		/* Content sits above glass */
+		.content-block.section-bg .block-inner { position: relative; z-index: 1; }
+		/* White content card inside frosted sections */
+		.section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
 		.block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 		.block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
 		.block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
@@ -68,7 +76,7 @@
 		.block-inner ul li + li { margin-top: 5px; }
 			.block-inner .pillar-grid { margin-top: 22px; }
 
-			/* Text cards — white container on gray section bg */
+			/* Text cards — fully opaque */
 			.content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
 			.content-text-card p { margin-bottom: 0; }
 			.content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
@@ -76,9 +84,9 @@
 			.content-text-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 18px; }
 			.content-text-grid .content-text-card { margin-bottom: 0; }
 
-			.pillar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 22px; }
+		.pillar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 22px; }
 			.pillar-grid:last-child { margin-bottom: 0; }
-		.pillar-card { background: linear-gradient(135deg, rgba(59,130,246,.04) 0%, rgba(14,165,233,.04) 100%); border: 1px solid rgba(96,165,250,.12); border-radius: 18px; padding: 22px; }
+		.pillar-card { background: linear-gradient(135deg, #f0f5ff 0%, #eaf4fd 100%); border-radius: 18px; padding: 22px; border: 1px solid rgba(96,165,250,.15); box-shadow: 0 2px 8px rgba(15,23,42,.04); }
 		.pillar-card h3 { margin-bottom: 8px; color: #0f172a; font-weight: 800; font-size: 1.02rem; }
 		.pillar-card p { margin: 0; color: #475569; line-height: 1.75; font-size: .9rem; }
 
@@ -93,19 +101,21 @@
 
 		/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
-		body[data-theme="dark"] .content-block { background: #111827; }
+		body[data-theme="dark"] .content-block { background-color: #111827; }
+		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
 		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-		body[data-theme="dark"] .mkt-card { border-color: rgba(148,163,184,.14); }
-		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
-		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
-		body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
-			body[data-theme="dark"] .content-text-card { background: #1e293b; border-color: rgba(148,163,184,.12); color: #9fb0c3; }
-			body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
-			body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.12) 0%, rgba(14,165,233,.10) 100%); border-color: rgba(96,165,250,.14); }
-		body[data-theme="dark"] .pillar-card h3 { color: #e5ecf4; }
-		body[data-theme="dark"] .pillar-card p { color: #9fb0c3; }
-		body[data-theme="dark"] .case-card { background: #1e293b; border-color: rgba(148,163,184,.12); }
+			body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+			body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+			body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+			body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+				body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+				body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+				body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+				body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.2) 0%, rgba(14,165,233,.15) 100%); border-color: rgba(96,165,250,.06); }
+			body[data-theme="dark"] .pillar-card h3 { color: #e5ecf4; }
+			body[data-theme="dark"] .pillar-card p { color: #9fb0c3; }
+			body[data-theme="dark"] .case-card { background: #1e293b; border-color: rgba(148,163,184,.04); }
 		body[data-theme="dark"] .case-card h3 { color: #e5ecf4; }
 		body[data-theme="dark"] .case-card p { color: #9fb0c3; }
 		@media (max-width: 991px) {
@@ -169,8 +179,8 @@
 				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
-						<h3>做过的事</h3>
-						<p>策略写在纸上不值钱，真正验证过才有意义。</p>
+<h3>项目</h3>
+							<p>策略写在纸上不值钱，真正验证过才有意义。</p>
 						<button class="card-btn">了解更多</button>
 					</div>
 				</div>
@@ -186,22 +196,25 @@
 
 		<!-- Content sections -->
 
-			<div id="data" class="content-block">
-				<div class="block-inner">
+		<div id="data" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=1600&q=60&auto=format')">
+			<div class="block-inner">
+				<div class="section-card">
 					<h2>数据先说话</h2>
 					<p class="block-subtitle">没有数据支撑的方向，只是猜测。</p>
 					<div class="content-text-card">
 						<p>科学的一面，是从数据出发、从市场证明出发，通过实验、统计、行为研究和结果分析去理解人们到底需要什么，产品到底是不是符合需求。</p>
 					</div>
 					<div class="pillar-grid">
-					<div class="pillar-card"><h3>数据先行</h3><p>好的市场学实践一定要从证据出发，包括用户行为、市场信号、匹配度、反馈和可验证结果。</p></div>
-					<div class="pillar-card"><h3>结构化分析</h3><p>通过实验、统计和结构化分析去理解消费者需求，而不是靠猜。</p></div>
+						<div class="pillar-card"><h3>数据先行</h3><p>好的市场学实践一定要从证据出发，包括用户行为、市场信号、匹配度、反馈和可验证结果。</p></div>
+						<div class="pillar-card"><h3>结构化分析</h3><p>通过实验、统计和结构化分析去理解消费者需求，而不是靠猜。</p></div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-			<div id="creative" class="content-block">
-				<div class="block-inner">
+		<div id="creative" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1758551051834-61f10a361b73?w=1600&q=60&auto=format')">
+			<div class="block-inner">
+				<div class="section-card">
 					<h2>创意推一把</h2>
 					<p class="block-subtitle">数据告诉你机会在哪，创意让你抓住它。</p>
 					<div class="content-text-grid">
@@ -214,10 +227,12 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
 
-			<div id="listen" class="content-block">
-				<div class="block-inner">
+		<div id="listen" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1779905980727-9ed38a0daeea?w=1600&q=60&auto=format')">
+			<div class="block-inner">
+				<div class="section-card">
 					<h2>听，再说</h2>
 					<p class="block-subtitle">营销不是广播，是对话。先理解，再表达。</p>
 					<div class="content-text-card">
@@ -239,10 +254,12 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
 
-			<div id="global" class="content-block">
-				<div class="block-inner">
+		<div id="global" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1600&q=60&auto=format')">
+			<div class="block-inner">
+				<div class="section-card">
 					<h2>全球与本地</h2>
 					<p class="block-subtitle">语言、地区、文化、市场环境都要一起考虑，全球化不能脱离本地语境。</p>
 					<div class="content-text-card">
@@ -250,22 +267,26 @@
 					</div>
 					<div class="pillar-grid">
 						<div class="pillar-card"><h3>全球化与本地化</h3><p>语言、地区、文化、市场环境都要一起考虑，全球化不能脱离本地语境。</p></div>
+						<div class="pillar-card"><h3>数据研究与消费者洞察</h3><p>数据驱动研究、4P / STP 分析、服务质量评估、SEO 与 AI 辅助沟通——在全球化框架下理解不同市场的消费者。</p></div>
 					</div>
 				</div>
 			</div>
+		</div>
 
 
-		<div id="projects" class="content-block">
-			<div class="block-inner">
-				<h2>做过的事</h2>
-				<p class="block-subtitle">策略写在纸上不值钱，真正验证过才有意义。</p>
+			<div id="projects" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=60&auto=format')">
+				<div class="block-inner">
+					<div class="section-card">
+						<h2>项目</h2>
+						<p class="block-subtitle">策略写在纸上不值钱，真正验证过才有意义。</p>
 				<div class="case-grid">
 					<div class="case-card"><h3>Vanytra 藏式手链品牌策略</h3><p>新品牌 Vanytra 的品牌策略项目，涵盖市场分析、社交媒体定位和目标受众研究。</p></div>
 					<div class="case-card"><h3>HONOR 欧洲市场分析</h3><p>分析 HONOR 在欧洲智能手机市场的表现，重点关注增长、竞争与定位。</p></div>
 					<div class="case-card"><h3>Apple 中国市场策略</h3><p>研究 Apple 在中国市场面临的挑战、竞争格局及策略建议。</p></div>
 					<div class="case-card"><h3>微信支付财富管理定位</h3><p>为微信支付升级为日常财富管理入口提出的战略提案。</p></div>
 					<div class="case-card"><h3>POP MART 综合营销传播</h3><p>为 POP MART 制定的综合营销传播计划，提升香港市场品牌知名度。</p></div>
-					<div class="case-card"><h3>Burberry CRM 策略分析</h3><p>实地走访 Burberry 门店，诊断 CRM 基础设施缺失——客户数据以 Excel 管理、线上线下未打通。提出会员分层策略、个性化沟通方案与高净值客户专属服务，重建品牌到消费者的价值传递链。</p></div>
+						<div class="case-card"><h3>Burberry CRM 策略分析</h3><p>实地走访 Burberry 门店，诊断 CRM 基础设施缺失——客户数据以 Excel 管理、线上线下未打通。提出会员分层策略、个性化沟通方案与高净值客户专属服务，重建品牌到消费者的价值传递链。</p></div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -72,7 +72,32 @@
 		body[data-theme="dark"] .gradient-card { background: linear-gradient(135deg, #0f172a 0%, #111827 100%); }
 		body[data-theme="dark"] .accent-card { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); }
 		body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.18) 0%, rgba(14,165,233,.14) 100%); border-color: rgba(96,165,250,.18); }
-		@media (max-width: 991px) { .content-section { padding: 45px 0 60px; } .pillar-grid, .case-grid { grid-template-columns: 1fr; } .marketing-hero { padding: 32px 24px; } .marketing-hero h1 { font-size: 2.4rem; } }
+		.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 48px; }
+		.mkt-card { position: relative; border-radius: 22px; overflow: hidden; background-size: cover; background-position: center; aspect-ratio: 3 / 4; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; }
+		.mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+		.mkt-card .card-content { position: relative; z-index: 1; padding: 28px 24px 24px; color: #fff; }
+		.mkt-card .card-content h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 4px; }
+		.mkt-card .card-content p { font-size: .88rem; color: rgba(255,255,255,.78); margin-bottom: 14px; line-height: 1.5; }
+		.card-btn { display: inline-flex; align-items: center; gap: 4px; background: none; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; color: #fff; font-size: .82rem; font-weight: 600; padding: 7px 18px; cursor: pointer; font-family: inherit; transition: background .2s; }
+		.card-btn:hover { background: rgba(255,255,255,.12); }
+		.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 9999; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(6px); }
+		.modal-overlay.open { display: flex; }
+		.modal { background: #fff; border-radius: 24px; max-width: 640px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 36px 32px 32px; position: relative; box-shadow: 0 32px 64px rgba(0,0,0,.24); animation: modalIn .3s ease; }
+		@keyframes modalIn { from { opacity: 0; transform: scale(.94) translateY(12px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+		.modal .modal-close { position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; border-radius: 50%; border: none; background: #f1f5f9; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #475569; transition: background .2s; }
+		.modal .modal-close:hover { background: #e2e8f0; }
+		.modal .modal-body h2 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+		.modal .modal-body p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .95rem; }
+		.modal .modal-body ul { padding-left: 18px; color: #475569; line-height: 1.85; font-size: .95rem; }
+		.modal .modal-body ul li + li { margin-top: 6px; }
+		.modal .modal-body .pillar-grid { margin-top: 12px; }
+		body[data-theme="dark"] .modal { background: #111827; }
+		body[data-theme="dark"] .modal .modal-close { background: #1e293b; color: #94a3b8; }
+		body[data-theme="dark"] .modal .modal-close:hover { background: #334155; }
+		body[data-theme="dark"] .modal .modal-body h2 { color: #e5ecf4; }
+		body[data-theme="dark"] .modal .modal-body p, body[data-theme="dark"] .modal .modal-body ul { color: #9fb0c3; }
+		@media (max-width: 991px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .content-section { padding: 45px 0 60px; } .pillar-grid, .case-grid { grid-template-columns: 1fr; } .marketing-hero { padding: 32px 24px; } .marketing-hero h1 { font-size: 2.4rem; } }
+		@media (max-width: 599px) { .card-grid { grid-template-columns: 1fr; } .modal-overlay { padding: 12px; } .modal { padding: 24px 20px 20px; } }
 	</style>
 <style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style>
 </head>
@@ -82,56 +107,127 @@
 	<section class="content-section">
 		<div class="container">
 			<div class="marketing-hero">
-				<span class="hero-kicker">Science x Art</span>
 				<h1>Marketing</h1>
 				<p>My view of marketing is not that it is merely promotion. I see it as the combination of science and art. Its scientific side begins with data, experiments, statistics, behavior analysis, and market validation; its artistic side is the use of image, video, sound, copy, and visual expression to communicate ideas, emotion, and value.</p>
 				<p class="hero-note">It is also fundamentally two-way: consumer needs, intent, and feedback must reach the company, while the company must clearly transmit product value back to the consumer.</p>
 			</div>
 
-			<div class="project-card gradient-card">
-				<h2>Scope</h2>
-				<p>This section reflects how I understand marketing in practice: data-driven research, 4P / STP, service quality, SEO, AI-assisted communication, consumer insight, and multilingual / multi-region market understanding.</p>
-				<a class="default-btn marketing-link" href="/en/portfolio.html">Tech</a>
-			</div>
-
-			<div class="project-card accent-card">
-				<h2>Science and art together</h2>
-				<p>The scientific side of marketing starts from data, market proof, structured observation, and experiment-based learning. We should not guess what people want when behavior, evidence, and testing can tell us more clearly.</p>
-				<p>The artistic side turns meaning into experience. Posters, images, sound, video, copy, and visual language help products become memorable, emotionally resonant, and culturally understandable.</p>
-			</div>
-
-			<div class="project-card">
-				<h2>How I think about marketing</h2>
-				<div class="pillar-grid">
-					<div class="pillar-card"><h3>Data First</h3><p>Good marketing begins with evidence: user behavior, market signals, fit, feedback loops, and measurable outcomes.</p></div>
-					<div class="pillar-card"><h3>Two-Way Connection</h3><p>Marketing is not just company to consumer. It is also consumer to company: needs and intent must flow back into the business, while value must be communicated back to the market.</p></div>
-				<div class="pillar-card"><h3>Framework + Execution</h3><p>I care about 4P, STP, service quality, SEO, and customer experience because theory matters only when it becomes practical execution.</p></div>
-				<div class="pillar-card"><h3>Global + Local</h3><p>Language, region, culture, and market context all matter. Globalization without localization is incomplete.</p></div>
+			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="openModal('e1')">
+					<div class="card-content">
+						<h3>Data First</h3>
+						<p>Good marketing begins with evidence: user behavior, market signals, fit, feedback loops, and measurable outcomes.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80')" onclick="openModal('e2')">
+					<div class="card-content">
+						<h3>Creativity Amplifies</h3>
+						<p>Data tells you where the opportunity is. Creativity lets you seize it.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80')" onclick="openModal('e3')">
+					<div class="card-content">
+						<h3>Listen, Then Speak</h3>
+						<p>Marketing is not a broadcast. It's a conversation. Understand first, then express.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1480408144303-8744f445a7c2?w=600&q=80')" onclick="openModal('e4')">
+					<div class="card-content">
+						<h3>Global + Local</h3>
+						<p>Language, region, culture, and market context all matter. Globalization without localization is incomplete.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80')" onclick="openModal('e5')">
+					<div class="card-content">
+						<h3>Projects</h3>
+						<p>Strategy on paper is worth nothing. Real validation is what counts.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
 				</div>
 			</div>
-
-			<div class="project-card">
-				<h2>Areas I pay attention to</h2>
-				<ul>
-					<li>Scientific methods such as experiment design, statistics, and structured analysis to understand customer need.</li>
-					<li>AI, big data, mobile behavior, and digital traces that increasingly shape modern marketing research.</li>
-					<li>4P and STP as still-useful frameworks for structuring value, audience, and positioning.</li>
-					<li>Service quality and AI-assisted service workflows as part of retention, trust, and relationship building.</li>
-					<li>SEO, prompt-based communication, and multilingual / multi-region communication as current strategic realities.</li>
-				</ul>
-			</div>
-
-			<div class="project-card gradient-card">
-				<h2>Representative projects and case work</h2>
-				<p>The entries below show how I apply this way of thinking in real projects, market analyses, and proposal-oriented assignments.</p>
-				<div class="case-grid">
-					<div class="case-card"><h3>Vanytra Tibetan Bracelet Brand Strategy</h3><p>Brand strategy work for the new Vanytra bracelet brand, covering market analysis, social media positioning, and target audience research.</p></div>
-			<div class="case-card"><h3>HONOR Europe Market Analysis</h3><p>Analysis of HONOR's performance in the European smartphone market, with focus on growth, competition, and strategic positioning.</p></div>
-			<div class="case-card"><h3>Apple China Market Strategy</h3><p>Research on Apple's challenges in the China market, including competitive dynamics, local pressures, and strategic recommendations.</p></div>
-			<div class="case-card"><h3>WeChat Pay Wealth Management Positioning</h3><p>A strategic proposal for positioning WeChat Pay as an upgraded everyday wealth-management entry point rather than only a payment tool.</p></div>
-			<div class="case-card"><h3>POP MART Integrated Marketing Communications</h3><p>An integrated communications plan designed to strengthen brand awareness and market penetration in Hong Kong.</p></div>
-			<div class="case-card"><h3>Burberry CRM Strategy Analysis</h3><p>Field visit to Burberry stores, diagnosed CRM infrastructure gaps - customer data in Excel, online-offline disconnected. Proposed tiered membership, personalized communication, and VIP service strategy.</p></div>
+			<!-- Modal 1: Data First -->
+			<div id="e1" class="modal-overlay" onclick="closeModal('e1')">
+				<div class="modal" onclick="event.stopPropagation()">
+					<button class="modal-close" onclick="closeModal('e1')">✕</button>
+					<div class="modal-body">
+						<h2>Data First</h2>
+						<p>The scientific side of marketing starts from data, market proof, structured observation, and experiment-based learning. We should not guess what people want when behavior, evidence, and testing can tell us more clearly.</p>
+						<div class="pillar-grid">
+							<div class="pillar-card"><h3>Data-Driven</h3><p>Good marketing begins with evidence: user behavior, market signals, fit, feedback loops, and measurable outcomes.</p></div>
+							<div class="pillar-card"><h3>Structured Analysis</h3><p>Use experiments, statistics, and structured analysis to understand consumer need instead of guessing.</p></div>
+						</div>
+					</div>
 				</div>
+			</div>
+			<!-- Modal 2: Creativity Amplifies -->
+			<div id="e2" class="modal-overlay" onclick="closeModal('e2')">
+				<div class="modal" onclick="event.stopPropagation()">
+					<button class="modal-close" onclick="closeModal('e2')">✕</button>
+					<div class="modal-body">
+						<h2>Creativity Amplifies</h2>
+						<p>The artistic side turns meaning into experience. Posters, images, sound, video, copy, and visual language help products become memorable, emotionally resonant, and culturally understandable.</p>
+						<p>Companies must communicate product and value accurately to consumers. AI, big data, platform behavior, and mobile habits are deeply reshaping modern marketing practice.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Modal 3: Listen, Then Speak -->
+			<div id="e3" class="modal-overlay" onclick="closeModal('e3')">
+				<div class="modal" onclick="event.stopPropagation()">
+					<button class="modal-close" onclick="closeModal('e3')">✕</button>
+					<div class="modal-body">
+						<h2>Listen, Then Speak</h2>
+						<p>Marketing is not just company to consumer. It is also consumer to company: needs and intent must flow back into the business, while value must be communicated back to the market.</p>
+						<p>Consumer needs, intent, and feedback must be truly understood by the company, and product value must be accurately communicated back to consumers.</p>
+						<div class="pillar-grid">
+							<div class="pillar-card"><h3>Framework + Execution</h3><p>4P, STP, service quality — these frameworks matter, but what really counts is whether they translate into execution.</p></div>
+							<div class="pillar-card"><h3>Current Priorities</h3><p>AI-powered service flows affect trust and retention. SEO and multilingual communication are now baseline requirements.</p></div>
+						</div>
+						<ul>
+							<li>4P and STP remain useful frameworks for structuring value, audience, and positioning.</li>
+							<li>Service quality and AI-assisted workflows directly impact retention, trust, and relationship building.</li>
+							<li>SEO, prompt-driven communication, and multilingual strategy are present-day realities.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Modal 4: Global + Local -->
+			<div id="e4" class="modal-overlay" onclick="closeModal('e4')">
+				<div class="modal" onclick="event.stopPropagation()">
+					<button class="modal-close" onclick="closeModal('e4')">✕</button>
+					<div class="modal-body">
+						<h2>Global + Local</h2>
+						<p>This covers data-driven research, 4P/STP, service quality, SEO, AI-assisted communication, consumer insight, and multilingual / multi-region market understanding and application.</p>
+						<div class="pillar-grid">
+							<div class="pillar-card"><h3>Globalization & Localization</h3><p>Language, region, culture, and market environment must all be considered together. Globalization cannot be separated from local context.</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal 5: Projects -->
+			<div id="e5" class="modal-overlay" onclick="closeModal('e5')">
+				<div class="modal" onclick="event.stopPropagation()">
+					<button class="modal-close" onclick="closeModal('e5')">✕</button>
+					<div class="modal-body">
+						<h2>Projects</h2>
+						<div class="case-grid">
+							<div class="case-card"><h3>Vanytra Tibetan Bracelet Brand Strategy</h3><p>Brand strategy work for the new Vanytra bracelet brand, covering market analysis, social media positioning, and target audience research.</p></div>
+							<div class="case-card"><h3>HONOR Europe Market Analysis</h3><p>Analysis of HONOR's performance in the European smartphone market, with focus on growth, competition, and strategic positioning.</p></div>
+							<div class="case-card"><h3>Apple China Market Strategy</h3><p>Research on Apple's challenges in the China market, including competitive dynamics, local pressures, and strategic recommendations.</p></div>
+							<div class="case-card"><h3>WeChat Pay Wealth Management Positioning</h3><p>A strategic proposal for positioning WeChat Pay as an upgraded everyday wealth-management entry point rather than only a payment tool.</p></div>
+							<div class="case-card"><h3>POP MART Integrated Marketing Communications</h3><p>An integrated communications plan designed to strengthen brand awareness and market penetration in Hong Kong.</p></div>
+							<div class="case-card"><h3>Burberry CRM Strategy Analysis</h3><p>Field visit to Burberry stores, diagnosed CRM infrastructure gaps - customer data in Excel, online-offline disconnected. Proposed tiered membership, personalized communication, and VIP service strategy.</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Cross-page guide -->
+			<div class="project-card" style="text-align:center;">
+				<p style="margin-bottom:8px; color:#6b7280;">Beyond data and creativity, business judgment matters too</p>
+				<a class="default-btn" href="/en/invest.html" style="min-width:200px;">See the investment framework →</a>
 			</div>
 		</div>
 	</section>
@@ -141,6 +237,7 @@
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/jquery.meanmenu.js"></script>
 	<script src="../assets/js/main.js"></script>
+	<script>function openModal(i){document.getElementById(i).classList.add('open');document.body.style.overflow='hidden'}function closeModal(i){document.getElementById(i).classList.remove('open');document.body.style.overflow=''}</script>
     <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
     <!-- End Cloudflare Web Analytics -->
