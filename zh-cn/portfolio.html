@@ -117,10 +117,21 @@
 			.content-block { padding: 28px 0 20px; }
 			.block-inner h2 { font-size: 1.25rem; }
 		}
+		/* Capability chip groups */
+		.punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+		.cap-group { margin-bottom: 20px; }
+		.cap-group:last-child { margin-bottom: 0; }
+		.cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+		.cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+		.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+
 		.link-card { text-align: center; padding: 48px 0 72px; }
-		.link-card p { color: #6b7280; margin-bottom: 12px; }
-		.link-card .default-btn { min-width: 200px; }
-		body[data-theme="dark"] .link-card p { color: #94a3b8; }
+			.link-card p { color: #6b7280; margin-bottom: 12px; }
+			.link-card .default-btn { min-width: 200px; }
+			body[data-theme="dark"] .link-card p { color: #94a3b8; }
+			body[data-theme="dark"] .punchline { color: #6b9aff; }
+			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
 	</style>
 <style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
 </head>
@@ -169,7 +180,7 @@
 					<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>交付为开始</h3>
-								<p>代码只是中间产物，交付才是终点。</p>
+									<p>代码只是中间产物，交付才是开始。</p>
 							<button class="card-btn">联系我</button>
 						</div>
 					</div>
@@ -291,7 +302,7 @@
 				<div class="block-inner">
 					<div class="section-card">
 						<h2>交付为开始</h2>
-						<p class="block-subtitle">代码只是中间产物。文档、部署、维护、迭代，才是终点。</p>
+							<p class="block-subtitle">代码只是中间产物。文档、部署、维护、迭代，才是交付的开始。</p>
 						<div class="content-text-card">
 							<p>如果你想看具体仓库、代码讲解、架构说明，或者需要偏招聘视角的技术筛选版本，我可以按场景展示最相关的代码：增长工具、内部软件、自动化工具或多平台构建。</p>
 						</div>
@@ -299,6 +310,76 @@
 							<a class="default-btn" href="https://github.com/fengyuwang-com" target="_blank" rel="noopener">打开 GitHub</a>
 							<a class="default-btn" href="https://linkedin.com/in/fengyuwang-com" target="_blank" rel="noopener">查看 LinkedIn</a>
 							<a class="default-btn" href="mailto:fengyuwang1@outlook.com">邮件联系我</a>
+						</div>
+					</div>
+				</div>
+				</div>
+
+			<!-- Capability: 技术实现力 -->
+		<div id="tech-capability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>技术实现力</h2>
+					<p class="punchline">想得到，做得出</p>
+					<div class="cap-group">
+						<div class="cap-group-title">跨平台与移动开发</div>
+						<div class="cap-chips">
+							<span class="stack-chip">Flutter（Android / Windows / Web）</span>
+							<span class="stack-chip">原生 Android（Kotlin）</span>
+							<span class="stack-chip">响应式布局</span>
+							<span class="stack-chip">多语言国际化</span>
+							<span class="stack-chip">打包发布全流程</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">桌面开发与自动化</div>
+						<div class="cap-chips">
+							<span class="stack-chip">Python（Tkinter）</span>
+							<span class="stack-chip">VBA Office 自动化</span>
+							<span class="stack-chip">PowerShell 进阶</span>
+							<span class="stack-chip">AutoHotkey</span>
+							<span class="stack-chip">批处理脚本</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">Web 与站点部署</div>
+						<div class="cap-chips">
+							<span class="stack-chip">HTML / CSS / JavaScript</span>
+							<span class="stack-chip">独立网站建设</span>
+							<span class="stack-chip">GitHub Pages / Cloudflare Pages</span>
+							<span class="stack-chip">域名与 DNS</span>
+							<span class="stack-chip">Chrome 扩展开发</span>
+							<span class="stack-chip">SEO 基础优化</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">AI 工程</div>
+						<div class="cap-chips">
+							<span class="stack-chip">Harness Engineering（多模型协作）</span>
+							<span class="stack-chip">AI Agent 开发</span>
+							<span class="stack-chip">Docker 容器化部署</span>
+							<span class="stack-chip">Prompt Engineering</span>
+							<span class="stack-chip">算力管理与低温部署</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">工具与工程素养</div>
+						<div class="cap-chips">
+							<span class="stack-chip">Git 版本管理</span>
+							<span class="stack-chip">命令行（PowerShell / Bash）</span>
+							<span class="stack-chip">Markdown</span>
+							<span class="stack-chip">多系统精通（Win / Linux / macOS / Android / iOS）</span>
+							<span class="stack-chip">SSH 远程管理</span>
+							<span class="stack-chip">网络诊断与抓包</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">设计与多媒体</div>
+						<div class="cap-chips">
+							<span class="stack-chip">摄影（人像 / 风光 / 纪实）</span>
+							<span class="stack-chip">UI 审美与交互设计</span>
+							<span class="stack-chip">视频剪辑与制作</span>
+							<span class="stack-chip">Canva / PS 基础</span>
 						</div>
 					</div>
 				</div>

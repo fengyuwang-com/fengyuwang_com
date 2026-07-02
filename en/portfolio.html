@@ -1,7 +1,415 @@
-<!doctype html> <html lang="en"> <head> 	<meta charset="utf-8"> 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 	<meta name="theme-color" content="#0f172a"> 	<meta name="format-detection" content="telephone=no"> 	<title>Tech | Fengyu WANG</title> 	<meta name="description" content="Technical portfolio of Fengyu WANG covering GitHub projects, software delivery, automation systems, web builds, cross-platform apps, and engineering workflows."> 	<meta name="keywords" content="Fengyu WANG GitHub projects, technical portfolio, software projects, automation systems, web development, Android, Windows, Python, JavaScript"> 	<meta name="author" content="Fengyu WANG"> 	<meta name="robots" content="index,follow"> 	<link rel="canonical" href="/en/portfolio.html"> 	<link rel="alternate" hreflang="en" href="/en/portfolio.html"> 	<link rel="alternate" hreflang="zh-CN" href="/zh-cn/portfolio.html"> 	<link rel="alternate" hreflang="zh-HK" href="/zh-hk/portfolio.html"> 	<meta property="og:site_name" content="Fengyu WANG"> 	<meta property="og:locale" content="en_US"> 	<meta property="og:type" content="website"> 	<meta property="og:title" content="Tech | Fengyu WANG"> 	<meta property="og:description" content="Technical portfolio covering GitHub projects, software delivery, automation systems, web builds, cross-platform apps, and engineering workflows."> 	<meta property="og:url" content="https://fengyuwang.com/en/portfolio.html"> 	<meta property="og:image" content="/assets/img/logo.png"> 	<meta property="og:image:width" content="1200"> 	<meta property="og:image:height" content="630"> 	<meta name="twitter:card" content="summary_large_image"> 	<meta name="twitter:title" content="Tech | Fengyu WANG"> 	<meta name="twitter:description" content="Technical portfolio covering GitHub projects, software delivery, automation systems, web builds, cross-platform apps, and engineering workflows."> 	<meta name="twitter:image" content="/assets/img/logo.png"> 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet"> 	<link rel="icon" type="image/png" href="../assets/img/logo.png"> 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css"> 	<link rel="stylesheet" href="../assets/css/animate.min.css"> 	<link rel="stylesheet" href="../assets/css/meanmenu.css"> 	<link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 	<link rel="stylesheet" href="../assets/css/magnific-popup.min.css"> 	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css"> 	<link rel="stylesheet" href="../assets/css/style.css"> 	<link rel="stylesheet" href="../assets/css/responsive.css"> 	<style> 		.content-section { padding: 52px 0 84px; } 		.page-header { text-align: center; max-width: 860px; margin: 0 auto 46px; } 		.page-header h1 { font-size: 2.7rem; font-weight: 800; margin-bottom: 14px; color: #111827; } 		.page-header p { color: #6b7280; font-size: 1.08rem; line-height: 1.8; } 		.hero-badge { display: inline-flex; margin-bottom: 16px; padding: 8px 12px; border-radius: 999px; background: rgba(37,99,235,.1); color: #2563eb; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; } 		.project-card { background: #fff; border-radius: 24px; padding: 30px; margin-bottom: 24px; box-shadow: 0 16px 40px rgba(15,23,42,.08); } 		.project-card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: #111827; } 		.project-card p { color: #6b7280; line-height: 1.8; margin-bottom: 14px; } 		.project-card ul { margin: 0; padding-left: 18px; color: #4b5563; line-height: 1.8; } 		.project-card ul li + li { margin-top: 4px; } 		.highlight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-bottom: 24px; } 		.highlight-card { background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border: 1px solid rgba(37,99,235,.08); border-radius: 24px; padding: 26px; } 		.highlight-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #111827; } 		.highlight-card p { margin-bottom: 12px; color: #6b7280; line-height: 1.75; } 		.stack-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; } 		.stack-chip { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #111827; font-size: 13px; font-weight: 600; } 		.cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 18px; justify-content: center; } 		.cta-row .portfolio-cta { min-width: 200px; min-height: 54px; justify-content: center; text-align: center; display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; } 		.note-card { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); color: #f8fafc; } 		.note-card h3, .note-card p, .note-card li { color: inherit; } 		.note-card .stack-chip { background: rgba(255,255,255,.12); color: #f8fafc; } 		body[data-theme="dark"] .highlight-card { background: linear-gradient(135deg, #2d3a4d 0%, #1e293b 100%); border-color: rgba(148,163,184,.20); box-shadow: 0 16px 40px rgba(2,6,23,.34); } 		body[data-theme="dark"] .highlight-card h3 { color: #e5ecf4; } 		body[data-theme="dark"] .highlight-card p, body[data-theme="dark"] .highlight-card li { color: #cbd5e1; } 		body[data-theme="dark"] .project-card { background: #111827; border-color: rgba(148,163,184,.14); box-shadow: 0 16px 40px rgba(2,6,23,.34); } 		body[data-theme="dark"] .project-card h3 { color: #e5ecf4; } 		body[data-theme="dark"] .project-card p, body[data-theme="dark"] .project-card ul { color: #cbd5e1; } 		body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; } 		@media (max-width: 991px) { .content-section { padding: 45px 0 60px; } .highlight-grid { grid-template-columns: 1fr; } } 	</style> <style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style>
-</head> <body> 	<div id="shared-subpage-navbar" data-section="portfolio"></div> 	<script src="../assets/js/shared-subpage-navbar.js?v=26.06.20.04.56"></script> 	<section class="content-section"> 		<div class="container"> 			<div class="page-header"> 								<h1>Tech</h1> 				<p>Technical work across web systems, cross-platform applications, automation tooling, interface implementation, and engineering delivery workflows. The emphasis is on architecture, usability, maintainability, and production-minded execution.</p> 			<div style="text-align:center; margin-top:32px;"> 				<img src="../assets/img/team/With Huang.jpg" alt="With Jensen Huang" style="width:50%; height:auto; border-radius:18px; box-shadow:0 12px 36px rgba(15,23,42,.12);"> 				<p style="margin-top:10px; color:#6b7280; font-size:.9rem; font-style:italic;">With Jensen Huang at HKUST — I am the person behind him.</p><p style="margin-top:6px; color:#9ca3af; font-size:.85rem;">Standing before him, I felt no divide — just two people in different chapters of the same story. He may be the most important man in the world, but my time bank holds more wealth than his.</p> 			</div> 			</div> 			<div class="project-card note-card"> 				<h3>Technical Focus</h3> 				<p>This section highlights the technical side of my work: system structure, implementation quality, automation capability, and cross-platform delivery. It is intended to show how I think about building products, not just listing repositories.</p> 				<div class="stack-list"> 					<span class="stack-chip">Architecture</span> 					<span class="stack-chip">Delivery</span> 					<span class="stack-chip">Adaptability</span> 					<span class="stack-chip">Reuse</span> 				</div> 			</div> 			<div class="highlight-grid"> 				<div class="highlight-card"> 					<h3>Web & Growth Tools</h3> 					<p>Static sites, landing pages, portfolio sites, internal tools, browser-side scripts, and web assets that support positioning, lead capture, and operations.</p> 					<ul> 						<li>HTML / CSS / JavaScript delivery</li> 						<li>GitHub Pages / Cloudflare Pages deployment</li> 						<li>SEO-ready structure and multilingual setup</li> 					</ul> 				</div> 				<div class="highlight-card"> 					<h3>Apps & Automation</h3> 					<p>Cross-platform application thinking across Flutter, Python desktop tooling, Windows automation, and workflow helpers for repetitive business tasks.</p> 					<ul> 						<li>Android / Windows / Web-oriented builds</li> 						<li>AutoApply series (v3->v5, Selenium->Playwright)</li> 						<li>UnifiedSearch multi-platform search aggregator</li> 						<li>feng-auto-fill browser form filler + Chrome extension</li> 						<li>cc-connect-docker remote compute via Docker</li> 						<li>7zEvery / CopyEvery batch file tools</li> 					</ul> 				</div> 				<div class="highlight-card"> 					<h3>Data & Integration Work</h3> 					<p>I often connect APIs, reshape local files, automate repetitive steps, and build practical scripts that remove manual work from real operating processes.</p> 					<ul> 						<li>JSON / CSV / Excel processing</li> 						<li>HTTP API calls and glue-code integration</li> 						<li>Prompt-assisted content and workflow systems</li> 						<li>web-app-template full-stack TypeScript project template</li> 						<li>Personal CRM system (full-featured, pure frontend)</li> 						<li>Automated financial data scraping and analysis</li> 					</ul> 				</div> 				<div class="highlight-card"> 					<h3>Delivery Mindset</h3> 					<p>I do not treat software as isolated code. I think about user need, operating constraints, deployment path, maintainability, and how a tool fits the workflow around it.</p> 					<ul> 						<li>Product + operations perspective</li> 						<li>Debugging and iteration discipline</li> 						<li>Documentation and handoff awareness</li> 					</ul> 				</div> 			</div> 			<div class="project-card"> 				<h3>Representative technical directions</h3> 				<p>This page is intentionally category-based, because some repositories are public, some are private, and some are better shown in context. The main technical lanes I can present or build around include:</p> 				<ul> 					<li>Portfolio or business websites with structured SEO, multilingual routing, and polished release metadata.</li> 					<li>Cross-platform tools spanning Flutter, Android, Windows utilities, and browser-side helpers.</li> 					<li>Automation scripts for file processing, repetitive office workflows, and operational efficiency.</li> 					<li>Data handling workflows that combine APIs, local files, prompt engineering, and reporting outputs.</li> 				</ul> 				<div class="stack-list"> 					<span class="stack-chip">Flutter</span> 					<span class="stack-chip">Python</span> 					<span class="stack-chip">JavaScript</span> 					<span class="stack-chip">PowerShell</span> 					<span class="stack-chip">Automation</span> 					<span class="stack-chip">Prompt Engineering</span> 				</div> 			</div> 			<div class="project-card"> 				<h3>My technical principles</h3> 				<ul> 					<li><strong>Use PDCA</strong>: plan first, build with checkpoints, verify the result, then iterate instead of shipping chaos.</li> 					<li><strong>Open source first</strong>: if a suitable open-source project exists, I study it before reinventing anything.</li> 					<li><strong>AI after research, not before thinking</strong>: if no open-source reference exists, I research structure first and then use AI as an execution accelerator.</li> 					<li><strong>Structure before code</strong>: I care about architecture, decoupling, and not mixing everything into one messy block.</li> 					<li><strong>Reuse aggressively</strong>: anything reusable should be extracted, shared, and kept maintainable across pages or modules.</li> 					<li><strong>Function matters more than code style</strong>: code is not the final goal; correct functionality, adaptability, and usability matter more.</li> 					<li><strong>Modern UI still matters</strong>: I value responsive layouts, portrait and landscape adaptability, rounded corners, clean shadows, and polished contemporary interfaces.</li> 				</ul> 			</div> 			<div class="project-card"> 				<h3>How I usually work on software projects</h3> 				<ul> 					<li><strong>Clarify the real problem</strong>: what must be solved, who uses it, and what counts as done.</li> 					<li><strong>Choose the practical stack</strong>: simplest toolchain that matches deployment and maintenance needs.</li> 					<li><strong>Build in layers</strong>: structure first, workflow second, polish after the system proves useful.</li> 					<li><strong>Ship with context</strong>: docs, naming, navigation, and release details should support real use, not just code completion.</li> 				</ul> 			</div> 			<div class="project-card"> 				<h3>Repository review & collaboration</h3> 				<p>If you want a repository walkthrough, architecture explanation, or a hiring-focused technical selection, I can present the most relevant code samples by context: growth tooling, internal software, automation utilities, or multi-platform builds.</p> 				<div class="cta-row"> 					<a class="default-btn portfolio-cta" href="https://github.com/fengyuwang-com" target="_blank" rel="noopener noreferrer">Open GitHub</a> 					<a class="default-btn portfolio-cta" href="https://linkedin.com/in/fengyuwang-com" target="_blank" rel="noopener noreferrer">View LinkedIn</a> 					<a class="default-btn portfolio-cta" href="mailto:fengyuwang1@outlook.com">Email Me</a> 				</div> 			</div> 		</div> 	</section> 	<div id="shared-site-footer"></div> 	<script src="../assets/js/shared-site-footer.js"></script> 	<script src="../assets/js/jquery.min.js"></script> 	<script src="../assets/js/bootstrap.min.js"></script> 	<script src="../assets/js/jquery.meanmenu.js"></script> 	<script src="../assets/js/main.js"></script>     <!-- Cloudflare Web Analytics -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>Technology | Fengyu WANG</title>
+    <meta name="description" content="Fengyu Wang's technology portfolio, focused on GitHub projects, software delivery, automation systems, web development, cross-platform apps, and engineering workflows.">
+    <meta name="keywords" content="Fengyu Wang technology, GitHub, software delivery, automation, Web, Flutter, Python, architecture, engineering">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/en/portfolio.html">
+    <link rel="alternate" hreflang="en" href="/en/portfolio.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/portfolio.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/portfolio.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Technology | Fengyu WANG">
+    <meta property="og:description" content="Fengyu Wang's technology portfolio, focused on GitHub projects, software delivery, automation systems, web development, cross-platform apps, and engineering workflows.">
+    <meta property="og:url" content="https://fengyuwang.com/en/portfolio.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Technology | Fengyu WANG">
+    <meta name="twitter:description" content="A technology portfolio focused on Web, Android, Windows, automation, and engineering delivery.">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        /* Card grid */
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+        .invest-card { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: none; cursor: pointer; }
+        .invest-card .card-content { color: #f8fafc; }
+        .invest-card .card-content p { color: rgba(248,250,252,.7); margin-bottom: 14px; }
+        .invest-card .card-content .card-btn { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); pointer-events: none; }
+
+        /* Content blocks */
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+
+        /* Text cards */
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+
+        /* Tech chips */
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; background: rgba(37,99,235,.08); color: #1f3b8a; font-size: .8rem; font-weight: 600; border: 1px solid rgba(37,99,235,.12); }
+
+        /* CTA row */
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+
+        /* Dark mode */
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(96,165,250,.12); color: #bfdbfe; border-color: rgba(96,165,250,.18); }
+
+        @media (max-width: 991px) {
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .marketing-hero { padding: 28px 16px; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+        /* Capability chip groups */
+        .punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+        .cap-group { margin-bottom: 20px; }
+        .cap-group:last-child { margin-bottom: 0; }
+        .cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+        .cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .punchline { color: #6b9aff; }
+        body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+    </style>
+	<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
+</head>
+<body>
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.02.01.24"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <!-- Hero -->
+            <div class="marketing-hero">
+                <h1>Technology</h1>
+                <p>Structure before code, delivery is the goal — from Web to desktop to embedded.</p>
+            </div>
+
+            <!-- Card grid -->
+                <div class="card-grid">
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Question First, Build Later</h3>
+                                <p>No ambiguous requirements. Think it through before building.</p>
+                            <button class="card-btn">Learn How</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=600&q=80')" onclick="document.getElementById('structured').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>System as Compound Interest</h3>
+                                <p>PDCA drives progress, layer by layer.</p>
+                            <button class="card-btn">Learn How</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('multi-dim').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>One Dimension is Bias</h3>
+                                <p>The real world is a web, not a spreadsheet.</p>
+                            <button class="card-btn">Explore Perspective</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('tool-fit').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Tools Follow Problems</h3>
+                                <p>Open-source first, AI-accelerated, choose what fits.</p>
+                            <button class="card-btn">See Choices</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Delivery is the Start</h3>
+                                <p>Code is just a byproduct; delivery is the start.</p>
+                            <button class="card-btn">Contact Me</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card invest-card" onclick="window.location.href='/en/invest.html'">
+                        <div class="card-content">
+                            <h3>Investment Framework →</h3>
+                            <p>Tools need a business context to create value.</p>
+                            <span class="card-btn">Explore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Section 1: Define -->
+        <div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                        <h2>Question First, Build Later</h2>
+                        <p class="block-subtitle">No ambiguous requirements. Break it down until it's measurable and verifiable — that's clarity.</p>
+                    <div class="content-text-card">
+                        <h3>How I Usually Approach Software Projects</h3>
+                        <ul>
+                            <li><strong>Define the real problem first</strong>: What are we solving, who will use it, and what does "done" really mean?</li>
+                            <li><strong>Choose the right stack</strong>: Prioritize deployment and maintenance over tech for tech's sake.</li>
+                            <li><strong>Build in layers</strong>: Get the structure and flow right first, then refine visuals and experience.</li>
+                            <li><strong>Deliver with launch in mind</strong>: Documentation, naming, navigation, meta information — all part of shipping.</li>
+                        </ul>
+                    </div>
+                    <div class="content-text-card">
+                        <p>Advancing with PDCA: plan first, then execute in stages, check, and adjust — never jump into writing messy code. Decouple only after the structure is clear. Don't cram everything together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Section 2: Structured Thinking -->
+            <div id="structured" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>System as Compound Interest</h2>
+                        <p class="block-subtitle">PDCA drives progress. Break down, research, plan, execute, review — layer by layer.</p>
+                        <div class="content-text-card">
+                            <h3>Advancing with PDCA</h3>
+                            <ul>
+                                <li><strong>Plan first</strong>: Define the problem, break down tasks, research solutions, then start building.</li>
+                                <li><strong>Then execute</strong>: Move forward in stages, each step verifiable.</li>
+                                <li><strong>Check and adjust</strong>: Review after completing each cycle, then enter the next loop.</li>
+                            </ul>
+                        </div>
+                        <div class="content-text-card">
+                            <h3>Research the Structure First, Then Start Building</h3>
+                            <p>Decouple only after the structure is clear. Don't cram everything together. Reuse everything reusable — extractable modules, styles, components, and workflows are all made reusable when possible.</p>
+                            <ul>
+                                <li><strong>Reuse everything reusable</strong>: Extractable modules, styles, components, and workflows are all made reusable when possible.</li>
+                                <li><strong>Value adaptability and aesthetics</strong>: Landscape and portrait, responsive layout, rounded corners, shadows, modern interface feel — all considered together.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Multi-Dimensional Perspective -->
+            <div id="multi-dim" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>One Dimension is Bias</h2>
+                        <p class="block-subtitle">The real world isn't a 2D table. Data is a web of relationships, not rows and columns.</p>
+                        <div class="content-text-card">
+                            <h3>I Don't Treat Software as Isolated Code</h3>
+                            <p>I consider user needs, deployment paths, maintenance costs, and how tools fit into real workflows — all together. Product plus operations perspective, debugging and iteration discipline, documentation and handoff awareness — these matter more than the code itself.</p>
+                        </div>
+                        <div class="content-text-card">
+                            <h3>Data & Integration Work</h3>
+                            <p>I often connect APIs, spreadsheets, local files, and prompt systems, turning scattered manual steps into running workflows.</p>
+                            <ul>
+                                <li>JSON / CSV / Excel processing</li>
+                                <li>HTTP API & glue code integration</li>
+                                <li>Prompt-assisted content & workflow systems</li>
+                                <li>web-app-template — full-stack TypeScript project template</li>
+                                <li>Acquaintance Relation Table — personal CRM system (full-featured pure frontend)</li>
+                                <li>Financial reports & market data automated scraping and analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Tools Follow Problems -->
+            <div id="tool-fit" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>Tools Follow Problems</h2>
+                        <p class="block-subtitle">Open-source first, AI-accelerated. Choose what fits best, not what's flashiest.</p>
+                        <div class="content-text-card">
+                            <p><strong>Research open-source projects first</strong>: If a suitable open-source solution exists, I study how others have done it before deciding. <strong>When no open-source project exists, research AI solutions</strong>: But AI is an accelerator, not a replacement for structural thinking.</p>
+                            <p><strong>Code isn't the only focus</strong>: Whether the functionality is correct, stable, and usable matters more than simply piling up code.</p>
+                        </div>
+                        <div class="content-text-card">
+                            <ul>
+                                <li>Web & Growth: HTML/CSS/JS delivery, GitHub/Cloudflare Pages, SEO & multilingual.</li>
+                                <li>Apps & Automation: Flutter, Python, AutoApply (Selenium→Playwright), UnifiedSearch, cc-connect-docker.</li>
+                                <li>Data Workflows: API integration, financial report automation, prompt pipeline systems.</li>
+                            </ul>
+                        </div>
+                        <div class="stack-list">
+                            <span class="stack-chip">Flutter</span>
+                            <span class="stack-chip">Python</span>
+                            <span class="stack-chip">JavaScript</span>
+                            <span class="stack-chip">PowerShell</span>
+                            <span class="stack-chip">Automation</span>
+                            <span class="stack-chip">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Delivery is the Start -->
+            <div id="delivery" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>Delivery is the Start</h2>
+                        <p class="block-subtitle">Code is just a byproduct. Documentation, deployment, maintenance, and iteration — that's where delivery begins.</p>
+                        <div class="content-text-card">
+                            <p>If you want to see specific repositories, code walkthroughs, architecture explanations, or a recruiting-focused technical screening version, I can showcase the most relevant code by scenario: growth tools, internal software, automation tools, or multi-platform builds.</p>
+                        </div>
+                        <div class="cta-row">
+                            <a class="default-btn" href="https://github.com/fengyuwang-com" target="_blank" rel="noopener">Open GitHub</a>
+                            <a class="default-btn" href="https://linkedin.com/in/fengyuwang-com" target="_blank" rel="noopener">View LinkedIn</a>
+                            <a class="default-btn" href="mailto:fengyuwang1@outlook.com">Email Me</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <!-- Capability: Technical Implementation -->
+        <div id="tech-capability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Technical Implementation</h2>
+                    <p class="punchline">Think it, build it</p>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Cross-platform & Mobile Development</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Flutter（Android / Windows / Web）</span>
+                            <span class="stack-chip">Native Android（Kotlin）</span>
+                            <span class="stack-chip">Responsive Layout</span>
+                            <span class="stack-chip">Multi-language Internationalization</span>
+                            <span class="stack-chip">Full Build & Release Pipeline</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Desktop Development & Automation</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Python（Tkinter）</span>
+                            <span class="stack-chip">VBA Office Automation</span>
+                            <span class="stack-chip">PowerShell Advanced</span>
+                            <span class="stack-chip">AutoHotkey</span>
+                            <span class="stack-chip">Batch Scripting</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Web & Site Deployment</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">HTML / CSS / JavaScript</span>
+                            <span class="stack-chip">Independent Website Building</span>
+                            <span class="stack-chip">GitHub Pages / Cloudflare Pages</span>
+                            <span class="stack-chip">Domain & DNS</span>
+                            <span class="stack-chip">Chrome Extension Development</span>
+                            <span class="stack-chip">SEO Basic Optimization</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">AI Engineering</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Harness Engineering（Multi-model Collaboration）</span>
+                            <span class="stack-chip">AI Agent Development</span>
+                            <span class="stack-chip">Docker Containerization Deployment</span>
+                            <span class="stack-chip">Prompt Engineering</span>
+                            <span class="stack-chip">Compute Management & Low-temperature Deployment</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Tools & Engineering Literacy</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Git Version Control</span>
+                            <span class="stack-chip">Command Line（PowerShell / Bash）</span>
+                            <span class="stack-chip">Markdown</span>
+                            <span class="stack-chip">Multi-system Proficiency（Win / Linux / macOS / Android / iOS）</span>
+                            <span class="stack-chip">SSH Remote Management</span>
+                            <span class="stack-chip">Network Diagnostics & Packet Capture</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Design & Multimedia</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Photography（Portrait / Landscape / Documentary）</span>
+                            <span class="stack-chip">UI Aesthetics & Interaction Design</span>
+                            <span class="stack-chip">Video Editing & Production</span>
+                            <span class="stack-chip">Canva / PS Basics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-link -->
+        <div class="link-card">
+            <p>Tools need a business context to create value</p>
+            <a class="default-btn" href="/en/invest.html">Explore Investment Framework →</a>
+        </div>
+        </div>
+
+        <!-- 🥚 Easter egg -->
+        <div style="text-align:center; padding:60px 20px 40px;">
+            <img src="../assets/img/team/With Huang.jpg" alt="Photo with Jensen Huang" style="width:240px; max-width:70%; height:auto; border-radius:18px; box-shadow:0 12px 36px rgba(15,23,42,.12);">
+            <p style="margin-top:12px; color:#6b7280; font-size:.82rem; font-style:italic;">With Jensen Huang at HKUST — I'm behind him.</p>
+            <p style="margin-top:4px; color:#9ca3af; font-size:.78rem;">He stood before me, yet I felt we were no different — just two people on different pages of the same story. He may be the most important person in the world, but his time bank has fewer deposits than mine.</p>
+        </div>
+
+        <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
     <!-- End Cloudflare Web Analytics -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:&apos;smooth&apos;})">&#x2191;</button>
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
-</body> </html> 
+</body>
+</html>

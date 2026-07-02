@@ -1,198 +1,411 @@
 <!doctype html>
 <html lang="zh-HK">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="theme-color" content="#0f172a">
-	<meta name="format-detection" content="telephone=no">
-	<title>技術 | 王豐羽 Fengyu WANG</title>
-	<meta name="description" content="王豐羽的技術頁面，聚焦 GitHub 項目、軟件交付、自動化系統、Web 構建、跨平台應用與工程化流程。">
-	<meta name="keywords" content="王豐羽技術, GitHub 項目, 軟件項目, 自動化系統, Web 開發, Android, Windows, Python, JavaScript">
-	<meta name="author" content="王豐羽">
-	<meta name="robots" content="index,follow">
-	<link rel="canonical" href="/zh-hk/portfolio.html">
-	<link rel="alternate" hreflang="en" href="/en/portfolio.html">
-	<link rel="alternate" hreflang="zh-CN" href="/zh-cn/portfolio.html">
-	<link rel="alternate" hreflang="zh-HK" href="/zh-hk/portfolio.html">
-	<meta property="og:site_name" content="Fengyu WANG">
-	<meta property="og:locale" content="zh_HK">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="技術 | 王豐羽 Fengyu WANG">
-	<meta property="og:description" content="一個單獨給軟件、自動化系統與工程交付看的頁面。">
-	<meta property="og:url" content="https://fengyuwang.com/zh-hk/portfolio.html">
-	<meta property="og:image" content="/assets/img/logo.png">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="技術 | 王豐羽 Fengyu WANG">
-	<meta name="twitter:description" content="聚焦 Web、Android、Windows、自動化與工程交付的技術頁面。">
-	<meta name="twitter:image" content="/assets/img/logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" href="../assets/img/logo.png">
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/animate.min.css">
-	<link rel="stylesheet" href="../assets/css/meanmenu.css">
-	<link rel="stylesheet" href="../assets/css/fontawesome.min.css">
-	<link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
-	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="../assets/css/style.css">
-	<link rel="stylesheet" href="../assets/css/responsive.css">
-	<style>
-		.content-section { padding: 52px 0 84px; }
-		.page-header { text-align: center; max-width: 860px; margin: 0 auto 46px; }
-		.page-header h1 { font-size: 2.7rem; font-weight: 800; margin-bottom: 14px; color: #111827; }
-		.page-header p { color: #6b7280; font-size: 1.08rem; line-height: 1.8; }
-		.hero-badge { display: inline-flex; margin-bottom: 16px; padding: 8px 12px; border-radius: 999px; background: rgba(37,99,235,.1); color: #2563eb; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-		.project-card { background: #fff; border-radius: 24px; padding: 30px; margin-bottom: 24px; box-shadow: 0 16px 40px rgba(15,23,42,.08); }
-		.project-card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: #111827; }
-		.project-card p { color: #6b7280; line-height: 1.8; margin-bottom: 14px; }
-		.project-card ul { margin: 0; padding-left: 18px; color: #4b5563; line-height: 1.8; }
-		.project-card ul li + li { margin-top: 4px; }
-		.highlight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-bottom: 24px; }
-		.highlight-card { background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border: 1px solid rgba(37,99,235,.08); border-radius: 24px; padding: 26px; }
-		.highlight-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #111827; }
-		.highlight-card p { margin-bottom: 12px; color: #6b7280; line-height: 1.75; }
-		.stack-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-		.stack-chip { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #111827; font-size: 13px; font-weight: 600; }
-		.cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 18px; justify-content: center; }
-		.cta-row .portfolio-cta { min-width: 200px; min-height: 54px; justify-content: center; text-align: center; display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; }
-		.note-card { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); color: #f8fafc; }
-		.note-card h3, .note-card p, .note-card li { color: inherit; }
-		.note-card .stack-chip { background: rgba(255,255,255,.12); color: #f8fafc; }
-		body[data-theme="dark"] .highlight-card { background: linear-gradient(135deg, #2d3a4d 0%, #1e293b 100%); border-color: rgba(148,163,184,.20); box-shadow: 0 16px 40px rgba(2,6,23,.34); }
-		body[data-theme="dark"] .highlight-card h3 { color: #e5ecf4; }
-		body[data-theme="dark"] .highlight-card p, body[data-theme="dark"] .highlight-card li { color: #cbd5e1; }
-		body[data-theme="dark"] .project-card { background: #111827; border-color: rgba(148,163,184,.14); box-shadow: 0 16px 40px rgba(2,6,23,.34); }
-		body[data-theme="dark"] .project-card h3 { color: #e5ecf4; }
-		body[data-theme="dark"] .project-card p, body[data-theme="dark"] .project-card ul { color: #cbd5e1; }
-		body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; }
-		@media (max-width: 991px) { .content-section { padding: 45px 0 60px; } .highlight-grid { grid-template-columns: 1fr; } }
-	</style>
-<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>技術 | 王豐羽 Fengyu WANG</title>
+    <meta name="description" content="王豐羽的技術頁面，聚焦 GitHub 項目、軟件交付、自動化系統、Web 構建、跨平台應用與工程化流程。">
+    <meta name="keywords" content="王豐羽 技術, GitHub, 軟件交付, 自動化, Web, Flutter, Python, 架構, 工程">
+    <meta name="author" content="王豐羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/portfolio.html">
+    <link rel="alternate" hreflang="en" href="/en/portfolio.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/portfolio.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/portfolio.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="技術 | 王豐羽 Fengyu WANG">
+    <meta property="og:description" content="王豐羽的技術頁面，聚焦 GitHub 項目、軟件交付、自動化系統、Web 構建、跨平台應用與工程化流程。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/portfolio.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="技術 | 王豐羽 Fengyu WANG">
+    <meta name="twitter:description" content="聚焦 Web、Android、Windows、自動化與工程交付的技術頁面。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        /* Card grid */
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+        .invest-card { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: none; cursor: pointer; }
+        .invest-card .card-content { color: #f8fafc; }
+        .invest-card .card-content p { color: rgba(248,250,252,.7); margin-bottom: 14px; }
+        .invest-card .card-content .card-btn { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); pointer-events: none; }
+
+        /* Content blocks */
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+
+        /* Text cards */
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+
+        /* Tech chips */
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; background: rgba(37,99,235,.08); color: #1f3b8a; font-size: .8rem; font-weight: 600; border: 1px solid rgba(37,99,235,.12); }
+
+        /* CTA row */
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+
+        /* Dark mode */
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(96,165,250,.12); color: #bfdbfe; border-color: rgba(96,165,250,.18); }
+
+        @media (max-width: 991px) {
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .marketing-hero { padding: 28px 16px; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+        /* Capability chip groups */
+        .punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+        .cap-group { margin-bottom: 20px; }
+        .cap-group:last-child { margin-bottom: 0; }
+        .cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+        .cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .punchline { color: #6b9aff; }
+        body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+    </style>
+	<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
 </head>
 <body>
-	<div id="shared-subpage-navbar" data-section="portfolio"></div>
-	<script src="../assets/js/shared-subpage-navbar.js?v=26.06.20.04.56"></script>
-	<section class="content-section">
-		<div class="container">
-			<div class="page-header">
-				<h1>技術</h1>
-				<p>這裡集中展示我在 Web 系統、跨平台應用、自動化工具、界面實現與工程交付方面的技術能力，重點放在結構設計、功能質量、可維護性、適應性與正式交付能力。</p>
-			<div style="text-align:center; margin-top:32px;">
-				<img src="../assets/img/team/With Huang.jpg" alt="與黃仁勳合影" style="width:50%; height:auto; border-radius:18px; box-shadow:0 12px 36px rgba(15,23,42,.12);">
-				<p style="margin-top:10px; color:#6b7280; font-size:.9rem; font-style:italic;">與黃仁勳於HKUST合影——我在他的後面。</p><p style="margin-top:6px; color:#9ca3af; font-size:.85rem;">他站在我面前，我卻覺得我們並無不同——不過是同一段故事裏，翻到了不同的頁碼。他也許是這世上最重要的人，但他的時間銀行裏，存款不如我多。</p>
-			</div>
-			</div>
-			<div class="project-card note-card">
-				<h3>技術重點</h3>
-				<p>這一部分重點呈現我在技術上的工作方式：如何做結構設計、如何保證功能與體驗、如何處理複用與解耦，以及如何把項目真正交付到可用狀態。</p>
-				<div class="stack-list">
-					<span class="stack-chip">架構設計</span>
-					<span class="stack-chip">工程交付</span>
-					<span class="stack-chip">適應能力</span>
-					<span class="stack-chip">複用能力</span>
-				</div>
-			</div>
-			<div class="highlight-grid">
-				<div class="highlight-card">
-					<h3>Web 與增長工具</h3>
-					<p>靜態網站、落地頁、作品集站點、內部工具、瀏覽器側腳本，以及服務於定位、獲客和營運的 Web 資產。</p>
-					<ul>
-						<li>HTML / CSS / JavaScript 交付</li>
-						<li>GitHub Pages / Cloudflare Pages 部署</li>
-						<li>SEO 與多語言結構化配置</li>
-					</ul>
-				</div>
-				<div class="highlight-card">
-					<h3>應用與自動化</h3>
-					<p>圍繞 Flutter、Python 桌面工具、Windows 自動化與流程輔助工具，解決真實業務中的重複性工作。</p>
-					<ul>
-						<li>Android / Windows / Web 導向構建</li>
-						<li>AutoApply 自動申請系列（v3→v5，Selenium→Playwright）</li>
-						<li>UnifiedSearch 多平台聚合搜索工具</li>
-						<li>feng-auto-fill 瀏覽器表單填充 + Chrome 擴展</li>
-						<li>cc-connect-docker Docker 遠端算力管理</li>
-						<li>7zEvery / CopyEvery 批量文件工具</li>
-					</ul>
-				</div>
-				<div class="highlight-card">
-					<h3>數據與集成工作</h3>
-					<p>我經常把 API、表格、本地文件、提示詞系統接起來，把原本零散的手工步驟收束成能運行的工作流。</p>
-					<ul>
-						<li>JSON / CSV / Excel 處理</li>
-						<li>HTTP API 與膠水代碼集成</li>
-						<li>提示詞輔助內容與流程系統</li>
-						<li>web-app-template 全棧 TypeScript 專案模板</li>
-						<li>熟人關係表 個人 CRM 系統（全功能純前端）</li>
-						<li>財務報表與行情數據自動化抓取分析</li>
-					</ul>
-				</div>
-				<div class="highlight-card">
-					<h3>交付思路</h3>
-					<p>我不會把軟件當成孤立代碼，而是會一起考慮用戶需求、部署路徑、維護成本，以及工具如何嵌入真實流程。</p>
-					<ul>
-						<li>產品 + 營運視角</li>
-						<li>調試與迭代紀律</li>
-						<li>文檔、命名與交接意識</li>
-					</ul>
-				</div>
-			</div>
-			<div class="project-card">
-				<h3>我能展示的技術方向</h3>
-				<p>這一頁刻意採用「方向型」展示，而不是堆滿倉庫列表，因為有些倉庫公開、有些私有、有些更適合結合上下文講解。核心技術主線包括：</p>
-				<ul>
-					<li>帶有 SEO、國際化、發布細節的網站與業務頁面。</li>
-					<li>覆蓋 Flutter、Android、Windows 工具與瀏覽器輔助腳本的跨平台工具。</li>
-					<li>圍繞文件處理、辦公流程、營運效率的自動化腳本。</li>
-					<li>結合 API、本地文件、提示詞工程與報告輸出的數據工作流。</li>
-				</ul>
-				<div class="stack-list">
-					<span class="stack-chip">Flutter</span>
-					<span class="stack-chip">Python</span>
-					<span class="stack-chip">JavaScript</span>
-					<span class="stack-chip">PowerShell</span>
-					<span class="stack-chip">Automation</span>
-					<span class="stack-chip">Prompt Engineering</span>
-				</div>
-			</div>
-			<div class="project-card">
-				<h3>我的技術原則</h3>
-				<ul>
-					<li><strong>用 PDCA 推進</strong>：先規劃，再按階段執行、檢查、修正，而不是一開始就亂寫。</li>
-					<li><strong>優先研究開源項目</strong>：如果已有合適的開源方案，我會先研究別人的實作，再決定怎樣做。</li>
-					<li><strong>沒有開源項目時再研究 AI 方案</strong>：但 AI 只是加速器，不是取代結構思考的東西。</li>
-					<li><strong>先研究結構，再開始做項目</strong>：結構想清楚之後再解耦，不能把所有東西亂塞在一起。</li>
-					<li><strong>能複用的全部複用</strong>：可抽離的模組、樣式、組件和流程，我都會盡量做成可複用。</li>
-					<li><strong>代碼不是唯一重點</strong>：功能是否正確、是否穩定、是否好用，比單純堆代碼更重要。</li>
-					<li><strong>我非常重視適應性與美觀</strong>：橫屏直屏、響應式佈局、圓角、陰影、現代界面感，這些都會一起考慮。</li>
-				</ul>
-			</div>
-			<div class="project-card">
-				<h3>我通常怎樣做軟件項目</h3>
-				<ul>
-					<li><strong>先定義真實問題</strong>：解決甚麼、誰來用、甚麼叫真正完成。</li>
-					<li><strong>選最合適的棧</strong>：優先考慮部署與維護，而不是為了技術而技術。</li>
-					<li><strong>分層構建</strong>：先把結構和流程做對，再繼續打磨視覺與體驗。</li>
-					<li><strong>帶著發布意識交付</strong>：文檔、命名、導航、元信息，都是正式上線的一部分。</li>
-				</ul>
-			</div>
-			<div class="project-card">
-				<h3>倉庫查看與合作方式</h3>
-				<p>如果你想看具體倉庫、代碼講解、架構說明，或者需要偏招聘視角的技術篩選版本，我可以按場景展示最相關的代碼：增長工具、內部軟件、自動化工具或多平台構建。</p>
-				<div class="cta-row">
-					<a class="default-btn portfolio-cta" href="https://github.com/fengyuwang-com" target="_blank" rel="noopener noreferrer">打開 GitHub</a>
-					<a class="default-btn portfolio-cta" href="https://linkedin.com/in/fengyuwang-com" target="_blank" rel="noopener noreferrer">查看 LinkedIn</a>
-					<a class="default-btn portfolio-cta" href="mailto:fengyuwang1@outlook.com">電郵聯絡我</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div id="shared-site-footer"></div>
-	<script src="../assets/js/shared-site-footer.js"></script>
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/jquery.meanmenu.js"></script>
-	<script src="../assets/js/main.js"></script>
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.02.01.24"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <!-- Hero -->
+            <div class="marketing-hero">
+                <h1>技術</h1>
+                <p>結構設計先於代碼，交付才是目的——從 Web 到桌面到嵌入式。</p>
+            </div>
+
+            <!-- Card grid -->
+                <div class="card-grid">
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>不問對，不開始</h3>
+                                <p>不接受模糊需求，先想清楚再做。</p>
+                            <button class="card-btn">了解方法</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=600&q=80')" onclick="document.getElementById('structured').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>系統即複利</h3>
+                                <p>PDCA 推著走，層層遞進。</p>
+                            <button class="card-btn">了解方法</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('multi-dim').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>一維即偏見</h3>
+                                <p>真實世界是網狀關係，不是表格。</p>
+                            <button class="card-btn">了解視角</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('tool-fit').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>工具從問題</h3>
+                                <p>開源優先，AI 加速，選最合適的。</p>
+                            <button class="card-btn">了解選擇</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>交付為開始</h3>
+                                <p>代碼只是中間產物，交付才是開始。</p>
+                            <button class="card-btn">聯繫我</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card invest-card" onclick="window.location.href='/zh-hk/invest.html'">
+                        <div class="card-content">
+                            <h3>投資框架 →</h3>
+                            <p>工具需要有商業場景才有價值。</p>
+                            <span class="card-btn">去看看</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Section 1: 定義問題 -->
+        <div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                        <h2>不問對，不開始</h2>
+                        <p class="block-subtitle">不接受模糊需求。拆到可量化、可驗證，才叫清楚。</p>
+                    <div class="content-text-card">
+                        <h3>我通常怎樣做軟件項目</h3>
+                        <ul>
+                            <li><strong>先定義真實問題</strong>：解決什麼、誰來用、什麼叫真正完成。</li>
+                            <li><strong>選最合適的棧</strong>：優先考慮部署與維護，而不是為了技術而技術。</li>
+                            <li><strong>分層構建</strong>：先把結構和流程做對，再繼續打磨視覺與體驗。</li>
+                            <li><strong>帶著發布意識交付</strong>：文檔、命名、導航、元信息，都是正式上線的一部分。</li>
+                        </ul>
+                    </div>
+                    <div class="content-text-card">
+                        <p>用 PDCA 推進：先規劃，再按階段執行、檢查、修正，而不是一來就亂寫。結構想清楚以後再解耦，不能把所有東西亂塞在一起。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Section 2: 結構化思考 -->
+            <div id="structured" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>系統即複利</h2>
+                        <p class="block-subtitle">PDCA 推著走。拆解、研究、規劃、執行、檢查，層層遞進。</p>
+                        <div class="content-text-card">
+                            <h3>用 PDCA 推進</h3>
+                            <ul>
+                                <li><strong>先規劃</strong>：定義問題、拆解任務、研究方案，再動手。</li>
+                                <li><strong>再執行</strong>：按階段推進，每一步都可驗證。</li>
+                                <li><strong>檢查修正</strong>：完成一個閉環後覆盤，再進入下一個循環。</li>
+                            </ul>
+                        </div>
+                        <div class="content-text-card">
+                            <h3>先研究結構，再開始做項目</h3>
+                            <p>結構想清楚以後再解耦，不能把所有東西亂塞在一起。能複用的全部複用——可抽離的模組、樣式、組件和流程，我都會盡量做成可複用。</p>
+                            <ul>
+                                <li><strong>能複用的全部複用</strong>：可抽離的模組、樣式、組件和流程，都會盡量做成可複用。</li>
+                                <li><strong>重視適應性與美觀</strong>：橫屏豎屏、響應式佈局、圓角、陰影、現代界面感，這些都會一起考慮。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: 多維視角 -->
+            <div id="multi-dim" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>一維即偏見</h2>
+                        <p class="block-subtitle">真實世界不是二維表格。數據是網狀關係，不是行列。</p>
+                        <div class="content-text-card">
+                            <h3>我不會把軟件當成孤立代碼</h3>
+                            <p>我會一起考慮用戶需求、部署路徑、維護成本，以及工具如何嵌入真實流程。產品加運營視角、調試與迭代紀律、文檔與交接意識——這些比代碼本身更重要。</p>
+                        </div>
+                        <div class="content-text-card">
+                            <h3>數據與集成工作</h3>
+                            <p>我經常把 API、表格、本地文件、提示詞系統接起來，把原本零散的手工步驟收束成能運行的工作流。</p>
+                            <ul>
+                                <li>JSON / CSV / Excel 處理</li>
+                                <li>HTTP API 與膠水代碼集成</li>
+                                <li>提示詞輔助內容與流程系統</li>
+                                <li>web-app-template 全棧 TypeScript 項目模板</li>
+                                <li>熟人關係表 個人 CRM 系統（全功能純前端）</li>
+                                <li>財務報表與行情數據自動化抓取分析</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: 工具從問題 -->
+            <div id="tool-fit" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>工具從問題</h2>
+                        <p class="block-subtitle">開源優先，AI 加速，選最合適的而不是最炫的。</p>
+                        <div class="content-text-card">
+                            <p><strong>優先研究開源項目</strong>：如果已有合適的開源方案，我會先研究別人的實現，再決定怎麼做。<strong>沒有開源項目時再研究 AI 方案</strong>：但 AI 只是加速器，不是取代結構思考的東西。</p>
+                            <p><strong>代碼不是唯一重點</strong>：功能是否正確、是否穩定、是否好用，比單純堆代碼更重要。</p>
+                        </div>
+                        <div class="content-text-card">
+                            <ul>
+                                <li>Web 與增長：HTML/CSS/JS 交付、GitHub/Cloudflare Pages、SEO 與多語言。</li>
+                                <li>應用與自動化：Flutter、Python、AutoApply（Selenium→Playwright）、UnifiedSearch、cc-connect-docker。</li>
+                                <li>數據工作流：API 集成、財報自動化、提示詞流程系統。</li>
+                            </ul>
+                        </div>
+                        <div class="stack-list">
+                            <span class="stack-chip">Flutter</span>
+                            <span class="stack-chip">Python</span>
+                            <span class="stack-chip">JavaScript</span>
+                            <span class="stack-chip">PowerShell</span>
+                            <span class="stack-chip">Automation</span>
+                            <span class="stack-chip">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: 交付為開始 -->
+            <div id="delivery" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80')">
+                <div class="block-inner">
+                    <div class="section-card">
+                        <h2>交付為開始</h2>
+                        <p class="block-subtitle">代碼只是中間產物。文檔、部署、維護、迭代，才是交付的開始。</p>
+                        <div class="content-text-card">
+                            <p>如果你想看具體倉庫、代碼講解、架構說明，或者需要偏招聘視角的技術篩選版本，我可以按場景展示最相關的代碼：增長工具、內部軟件、自動化工具或多平台構建。</p>
+                        </div>
+                        <div class="cta-row">
+                            <a class="default-btn" href="https://github.com/fengyuwang-com" target="_blank" rel="noopener">打開 GitHub</a>
+                            <a class="default-btn" href="https://linkedin.com/in/fengyuwang-com" target="_blank" rel="noopener">查看 LinkedIn</a>
+                            <a class="default-btn" href="mailto:fengyuwang1@outlook.com">郵件聯繫我</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <!-- Capability: 技術實現力 -->
+        <div id="tech-capability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>技術實現力</h2>
+                    <p class="punchline">想得到，做得出</p>
+                    <div class="cap-group">
+                        <div class="cap-group-title">跨平台與移動開發</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Flutter（Android / Windows / Web）</span>
+                            <span class="stack-chip">原生 Android（Kotlin）</span>
+                            <span class="stack-chip">響應式佈局</span>
+                            <span class="stack-chip">多語言國際化</span>
+                            <span class="stack-chip">打包發佈全流程</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">桌面開發與自動化</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Python（Tkinter）</span>
+                            <span class="stack-chip">VBA Office 自動化</span>
+                            <span class="stack-chip">PowerShell 進階</span>
+                            <span class="stack-chip">AutoHotkey</span>
+                            <span class="stack-chip">批處理腳本</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">Web 與站點部署</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">HTML / CSS / JavaScript</span>
+                            <span class="stack-chip">獨立網站建設</span>
+                            <span class="stack-chip">GitHub Pages / Cloudflare Pages</span>
+                            <span class="stack-chip">域名與 DNS</span>
+                            <span class="stack-chip">Chrome 擴展開發</span>
+                            <span class="stack-chip">SEO 基礎優化</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">AI 工程</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Harness Engineering（多模型協作）</span>
+                            <span class="stack-chip">AI Agent 開發</span>
+                            <span class="stack-chip">Docker 容器化部署</span>
+                            <span class="stack-chip">Prompt Engineering</span>
+                            <span class="stack-chip">算力管理與低溫部署</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">工具與工程素養</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">Git 版本管理</span>
+                            <span class="stack-chip">命令列（PowerShell / Bash）</span>
+                            <span class="stack-chip">Markdown</span>
+                            <span class="stack-chip">多系統精通（Win / Linux / macOS / Android / iOS）</span>
+                            <span class="stack-chip">SSH 遠程管理</span>
+                            <span class="stack-chip">網絡診斷與抓包</span>
+                        </div>
+                    </div>
+                    <div class="cap-group">
+                        <div class="cap-group-title">設計與多媒體</div>
+                        <div class="cap-chips">
+                            <span class="stack-chip">攝影（人像 / 風光 / 紀實）</span>
+                            <span class="stack-chip">UI 審美與交互設計</span>
+                            <span class="stack-chip">視頻剪輯與製作</span>
+                            <span class="stack-chip">Canva / PS 基礎</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-link -->
+        <div class="link-card">
+            <p>工具需要有商業場景才有價值</p>
+            <a class="default-btn" href="/zh-hk/invest.html">探索投資框架 →</a>
+        </div>
+        </div>
+
+        <!-- 🥚 彩蛋 -->
+        <div style="text-align:center; padding:60px 20px 40px;">
+            <img src="../assets/img/team/With Huang.jpg" alt="與黃仁勳合影" style="width:240px; max-width:70%; height:auto; border-radius:18px; box-shadow:0 12px 36px rgba(15,23,42,.12);">
+            <p style="margin-top:12px; color:#6b7280; font-size:.82rem; font-style:italic;">與黃仁勳於HKUST合影——我在他的後面。</p>
+            <p style="margin-top:4px; color:#9ca3af; font-size:.78rem;">他站在我面前，我卻覺得我們並無不同——不過是同一段故事裏，翻到了不同的頁碼。他也許是這世上最重要的人，但他的時間銀行裏，存款不如我多。</p>
+        </div>
+
+        <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
     <!-- End Cloudflare Web Analytics -->
@@ -200,5 +413,3 @@
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 </body>
 </html>
-
-
