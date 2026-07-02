@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>AI 工程与自动化 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统">
+    <meta name="keywords" content="AI 工程与自动化, Docker, Cloudflare, DevOps, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-cn/ai.html">
+    <link rel="alternate" hreflang="en" href="/en/ai.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/ai.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/ai.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI 工程与自动化 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/ai.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI 工程与自动化 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>AI 工程与自动化</h1>
+                <p>从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统</p>
+            </div>
+            <div class="card-grid">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80')" onclick="document.getElementById('harness').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>Harness Engineering</h3>
+                    <p>多模型编排与工程化 AI 系统</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1531746790095-e5cb1577d651?w=600&q=80')" onclick="document.getElementById('agent').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>AI Agent 开发</h3>
+                    <p>自主感知、决策与行动的智能系统</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80')" onclick="document.getElementById('prompt').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>Prompt Engineering</h3>
+                    <p>设计输入以获得可靠输出的技艺</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80')" onclick="document.getElementById('automation').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>AI 驱动的自动化</h3>
+                    <p>将 AI 接入真实工作流</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <div id="harness" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>Harness Engineering</h2>
+                <p class="block-subtitle">多模型编排与工程化 AI 系统</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>多模型编排</strong>：根据各模型的能力特长，将子任务路由到最合适的模型。</li>
+                    <li><strong>上下文管理</strong>：在模型切换时分段和总结上下文，维护长时间对话的连贯性。</li>
+                    <li><strong>降级与重试</strong>：在 AI 工作流中内置容错机制，单个模型失败不会导致整个流程中断。</li>
+                    <li><strong>性能监控</strong>：追踪各模型的 Token 消耗、延迟和输出质量，优化成本与速度。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="agent" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1531746790095-e5cb1577d651?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>AI Agent 开发</h2>
+                <p class="block-subtitle">自主感知、决策与行动的智能系统</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>浏览器自动化 Agent</strong>：从 Selenium 迁移到 Playwright，展示 Agent 如何导航复杂网页界面。</li>
+                    <li><strong>自定义 Agent 流水线</strong>：构建结合 LLM 推理与 API 调用、文件 I/O、结构化数据处理的 Agent。</li>
+                    <li><strong>工具调用模式</strong>：设计 Agent 在决策过程中调用外部工具的能力。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prompt" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>Prompt Engineering</h2>
+                <p class="block-subtitle">设计输入以获得可靠输出的技艺</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>结构化提示</strong>：使用系统提示词、角色定义和输出格式约束来规范模型行为。</li>
+                    <li><strong>思维链推理</strong>：将复杂任务分解为逐步推理链，提高准确性和可解释性。</li>
+                    <li><strong>少样本与零样本模式</strong>：选择合适的范例或编写精确指令，在不浪费 Token 的情况下获得最佳结果。</li>
+                    <li><strong>迭代优化</strong>：系统化测试提示词变体、衡量输出质量、收敛到最佳表述。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="automation" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>AI 驱动的自动化</h2>
+                <p class="block-subtitle">将 AI 接入真实工作流</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>工作流集成</strong>：通过 API 和 Webhook 将 AI 流水线连接到邮件、日历、CRM 等日常工具。</li>
+                    <li><strong>数据处理流水线</strong>：使用 AI 从非结构化来源中提取、转换和分析数据。</li>
+                    <li><strong>人在回路模式</strong>：设计自动化知道何时需要人工审批的机制。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="link-card">
+            <p>工程能力需要商业场景才有价值</p>
+            <a class="default-btn" href="/zh-cn/invest.html">探索投资框架 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

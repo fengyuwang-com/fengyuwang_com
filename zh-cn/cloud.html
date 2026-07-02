@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>云服务基础设施 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="云服务是什么、为什么不可替代、以及 AI 与 Web3 如何依赖云基础设施。">
+    <meta name="keywords" content="云服务, AI基础设施, Web3, 云计算, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-cn/cloud.html">
+    <link rel="alternate" hreflang="en" href="/en/cloud.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/cloud.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/cloud.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="云服务基础设施 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="云服务是什么、为什么不可替代、以及 AI 与 Web3 如何依赖云基础设施。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/cloud.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="云服务基础设施 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="云服务是什么、为什么不可替代、以及 AI 与 Web3 如何依赖云基础设施。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+        .punchline { color: #2563eb; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+        .cap-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .stack-chip { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .78rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .punchline { color: #6b9aff; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>云服务基础设施</h1>
+                <p>计算、存储、服务——像水电一样按需取用。这是过去十年最被低估的基础设施变革。</p>
+            </div>
+            <div class="card-grid">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80')" onclick="document.getElementById('what-is-cloud').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>云服务的核心能力</h3>
+                    <p>SaaS、MaaS——服务模式如何改变了技术格局</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80')" onclick="document.getElementById('why-irreplaceable').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>为什么替代不了</h3>
+                    <p>本地部署与企业自建服务器的真实局限</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80')" onclick="document.getElementById('firsthand').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>第一手经验</h3>
+                    <p>AI 本地部署与 Web3 节点——亲身验证的结论</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80')" onclick="document.getElementById('cloud-ai').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>云服务 × AI</h3>
+                    <p>从本地脚本到可调用的 AI 服务</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80')" onclick="document.getElementById('cloud-web3').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>云服务 × Web3</h3>
+                    <p>区块链基础设施为什么注定在云上</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80')" onclick="document.getElementById('business-case').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>对业务的意义</h3>
+                    <p>技术决策背后的商业逻辑</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <div id="what-is-cloud" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>云服务的核心能力</h2>
+                <p class="block-subtitle">计算、存储与服务，从资产变为 utility</p>
+                <div class="content-text-card">
+                    <p>云服务的本质很简单：把计算、存储、网络变成像水电一样按需取用的资源。不需要买硬件、不需要等采购、不需要自己运维。</p>
+                    <p>这个模式催生了三种主要的服务形态：</p>
+                    <p><strong>SaaS（Software as a Service）</strong>——软件即服务。不需要安装，打开浏览器就用。Google Docs、Notion、Figma 都是 SaaS。背后的服务器、数据库、运维全部由提供商管理，用户只需关注业务本身。</p>
+                    <p><strong>MaaS（Model as a Service）</strong>——模型即服务。AI 模型以 API 的形式提供。调用 OpenAI 的 API 就是在用 MaaS。不需要买 GPU、不需要训练模型、不需要部署推理服务，几行代码就拿到世界顶尖的 AI 能力。</p>
+                    <p>这些服务形态有一个共同点：在本地几乎无法复现。</p>
+                    <ul>
+                        <li><strong>按需取用算力</strong>：需要一台服务器，几分钟内创建完成，用完后释放。采购周期从数月压缩到分钟级。</li>
+                        <li><strong>按量付费</strong>：用多少付多少，没有闲置浪费。入门门槛从数十万降到几块钱。</li>
+                        <li><strong>全球覆盖</strong>：服务可部署到全球数十个区域，用户从最近的数据中心获取数据。</li>
+                        <li><strong>托管服务</strong>：数据库、消息队列、大数据分析——开箱即用，无需自行搭建维护。</li>
+                    </ul>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">网络诊断</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="why-irreplaceable" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>为什么替代不了</h2>
+                <p class="block-subtitle">本地部署与企业自建服务器的四个局限</p>
+                <div class="content-text-card">
+                    <p>很多人以为云服务的核心优势是"省钱"。这种理解过于表面。云服务真正的不可替代性在于：有些事情本地和环境部署物理上就做不到。</p>
+                    <ul>
+                        <li><strong>物理覆盖</strong>：在全球二十个区域同时部署服务，意味着在二十个地方建数据中心。这不是预算问题，是物理上不可能。云厂商的全球基础设施让开发者一次部署，全球可用。</li>
+                        <li><strong>规模算力</strong>：AI 模型训练需要数百到数千张 GPU 并行计算。自建同等规模的集群需要数月时间、数百万资金。云上将这一过程压缩到几分钟，用完即释放。</li>
+                        <li><strong>弹性伸缩</strong>：流量在数秒内暴涨百倍并非罕见——产品上线、营销活动、病毒传播。自建服务器无法应对这种瞬时波动。云平台的自动扩缩可在秒级完成资源调整。</li>
+                        <li><strong>合规认证</strong>：SOC 2、GDPR、HIPAA 等合规认证，企业自行获取需要数年时间和大量投入。云厂商已具备数百项认证，用户可直接继承。</li>
+                    </ul>
+                    <p>SaaS 和 MaaS 天然是云原生的。SaaS 需要 24/7 在线、全球可访问；MaaS 背后是大规模 GPU 推理集群。这些模式在本地环境无法落地。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">AI Harness Engineering</span>
+                    <span class="stack-chip">算力管理</span>
+                    <span class="stack-chip">跨平台系统精通</span>
+                    <span class="stack-chip">自动化脚本</span>
+                    <span class="stack-chip">Docker 容器化</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="firsthand" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>第一手经验</h2>
+                <p class="block-subtitle">两段亲身经历，验证了同一个结论</p>
+                <div class="content-text-card">
+                    <p><strong>AI 本地部署</strong></p>
+                    <p>在个人电脑上运行 AI 模型是最直接的体验。小规模推理尚可应付，一旦涉及批量处理或稍大规模模型，本地硬件的瓶颈就暴露无遗——显存不足、算力有限、散热和功耗成为持续制约。微调一个开源模型、批处理数百条数据，本地环境往往需要数小时甚至无法完成。云上的 GPU 实例按需调用，成本可控，性能却高出几个数量级。</p>
+                    <p><strong>Web3 节点</strong></p>
+                    <p>本地运行区块链全节点的体验更具说服力。一个以太坊全节点需要 1TB 以上 SSD、16GB 以上内存、稳定的公网带宽。初次同步耗时数天，运行后持续占用网络和存储资源。个人的网络条件和硬件配置很难满足这种要求。数据显示约三分之一的以太坊节点部署在 AWS 上——这不是偏好，是物理条件的必然选择。</p>
+                    <p>这两段经历指向同一个结论：云服务不是"更便宜的选项"，而是解锁本地无法达到的能力门槛。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">网络诊断</span>
+                    <span class="stack-chip">命令行</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cloud-ai" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>云服务 × AI</h2>
+                <p class="block-subtitle">从本地的 AI 脚本，到可调用的云端服务</p>
+                <div class="content-text-card">
+                    <p>AI 自动化工具的开发是典型的从本地到云端的迁移路径。</p>
+                    <p>AutoApply 系列是基于 Playwright 和 Selenium 开发的 AI Agent，用于自动化信息筛选与投递。当前运行在本地环境，意味着需要持续开机、保持网络稳定、无法并发运行。当一个脚本一天只能处理有限数量的任务时，它的上限就是本地硬件的上限。</p>
+                    <p>AI Harness Engineering 的工作方式是多模型协作——同时调用 Claude、GPT、DeepSeek 等模型，通过提示工程编排任务逻辑。这套流程目前在本地终端中运行，本质上仍是单机工具。</p>
+                    <p><strong>迁移到云上之后，变化是结构性的：</strong></p>
+                    <ul>
+                        <li>AutoApply 可打包为 Docker 镜像，部署到云服务器上 24/7 运行，不受本地设备状态影响</li>
+                        <li>可同时启动多个实例并行处理，任务量提升一个数量级</li>
+                        <li>AI 推理网关统一调度多模型，实现自动路由、容错重试、用量统计</li>
+                        <li>从"自己用的脚本"变成"可调用的 API 服务"——这是向 MaaS 方向迈进的路径</li>
+                    </ul>
+                    <p>SaaS 和 MaaS 的商业模式本质上是云原生的。要做订阅制的 AI 服务，云是唯一的选项。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">AI Harness Engineering</span>
+                    <span class="stack-chip">AI Agent 开发</span>
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">算力管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">自动化脚本</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cloud-web3" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>云服务 × Web3</h2>
+                <p class="block-subtitle">去中心化的愿景，中心化的基础设施</p>
+                <div class="content-text-card">
+                    <p>区块链项目在理念上是去中心化的，在基础设施层面却高度依赖中心化的云服务。这不是矛盾，是物理限制下的最优解。</p>
+                    <p>本地运行全节点的体验可以说明这一点：一台家用电脑同步以太坊账本需要数天，持续运行后对带宽和存储的占用超出多数个人环境的承受范围。行业数据显示，约三分之一的以太坊节点托管在 AWS 上——这不是项目方偷懒，是个人网络和硬件条件根本扛不住。</p>
+                    <p><strong>Web3 项目对云服务的依赖不止于跑节点：</strong></p>
+                    <ul>
+                        <li><strong>NFT 铸造</strong>：开盘瞬间流量从零暴涨至数万并发，本地服务器无法响应这种瞬时压力</li>
+                        <li><strong>DeFi 协议</strong>：需要 24/7 高可用架构和跨区域灾备</li>
+                        <li><strong>链上数据分析</strong>：区块链数据以 TB 级增长，分析处理必须在云端完成</li>
+                        <li><strong>交易所</strong>：全球用户需要低延迟访问，必须依赖多区域部署</li>
+                    </ul>
+                    <p><strong>发展方向：</strong>将 Web3 基础设施部署标准化，用 Docker 和自动化脚本实现区块链节点的一键部署、自动监控与故障恢复。同时搭建从节点同步到数据清洗、入库、可视化的完整数据管道。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">网络诊断</span>
+                    <span class="stack-chip">跨平台系统精通</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="business-case" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>对业务的意义</h2>
+                <p class="block-subtitle">选择云服务是业务决策，不是技术决策</p>
+                <div class="content-text-card">
+                    <p>从商业角度审视云服务，价值比技术层面更清晰：</p>
+                    <ul>
+                        <li><strong>改变成本结构</strong>：固定资产投入转为按需运营支出。资金配置更灵活，现金流压力更小。</li>
+                        <li><strong>压缩交付周期</strong>：基础设施不再成为交付瓶颈。从新服务上线到全球部署，时间单位从月缩短到天。</li>
+                        <li><strong>释放团队产能</strong>：运维基础设施的人力成本往往是隐性却最高的。将这部分工作外包给云厂商，团队可专注于构建核心业务。</li>
+                        <li><strong>打开市场范围</strong>：全球部署能力让小团队也能服务全球用户。市场边界不再受基础设施限制。</li>
+                        <li><strong>SaaS/MaaS 的商业模式</strong>：订阅制服务、按量计费的模型天然依赖云基础设施。如果业务方向是提供可调用的服务，云是唯一的可行路径。</li>
+                    </ul>
+                    <p>技术能力、商业判断、市场理解——三个方向相互支撑。云服务的落地既需要技术理解，也需要商业语言将其转化为决策依据。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">品牌策略</span>
+                    <span class="stack-chip">客户洞察</span>
+                    <span class="stack-chip">数字化转型落地</span>
+                    <span class="stack-chip">商业判断力</span>
+                    <span class="stack-chip">市场策略</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="link-card">
+            <p>从能力到实践，看真实市场案例</p>
+            <a class="default-btn" href="/zh-cn/mkt.html">探索市场学 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <!-- Analytics removed per brand policy -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

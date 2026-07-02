@@ -116,40 +116,17 @@ Home (index.html)
 
 ### Page Internal Structure
 
-All sub-pages (portfolio, mkt, capabilities, ai, cloud, web3, invest) follow this structure:
-
 ```html
-<!-- Hero -->
-<div class="container">
-    <div class="marketing-hero">
-        <h1>Page Title</h1>
-        <p>Page description / thought anchor</p>
-    </div>
-
-    <!-- Card Grid: one card per section below, links via scrollIntoView -->
-    <div class="card-grid">
-        <div class="mkt-card" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">
-            <div class="card-content">
-                <h3>Card Title</h3>
-                <p>Short description</p>
-                <button class="card-btn">了解详情</button>
-            </div>
-        </div>
-        <!-- + more cards, one per section -->
-    </div>
-</div>
+<!-- Hero / Top area -->
+<div class="container"> ... </div>
 
 <!-- Section 1 -->
 <div id="section-1" class="content-block section-bg" style="--section-bg-img:url(...)">
     <div class="block-inner">
         <div class="section-card">
             <h2>Section Title</h2>
-            <p class="block-subtitle">Section subtitle (one line)</p>
-            <div class="content-text-card">
-                <ul>
-                    <li><strong>Point label</strong>：Description</li>
-                </ul>
-            </div>
+            <p class="block-subtitle">Section intro (one line)</p>
+            <!-- Content: cards, grids, text -->
         </div>
     </div>
 </div>
@@ -162,12 +139,6 @@ All sub-pages (portfolio, mkt, capabilities, ai, cloud, web3, invest) follow thi
     <a class="default-btn" href="/en/next-page.html">Next Page →</a>
 </div>
 ```
-
-Key rules:
-- **Card grid is required**: every topic/sub-page needs a card grid at the top (between hero and sections), with one card per section below.
-- Card grid uses 2-column layout on desktop, 1-column on mobile.
-- Each card's onclick scrolls to its corresponding section by id.
-- Cards use Unsplash background images (different from section bg images).
 
 ### Page List with Key Characteristics
 

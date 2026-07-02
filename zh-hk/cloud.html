@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-hk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>雲端服務架構與實战 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="從 Docker 容器化到 Cloudflare 部署——構建可擴展、高可用的雲端基礎設施">
+    <meta name="keywords" content="雲端服務架構與實战, Docker, Cloudflare, DevOps, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/cloud.html">
+    <link rel="alternate" hreflang="en" href="/en/cloud.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/cloud.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/cloud.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="雲端服務架構與實战 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="從 Docker 容器化到 Cloudflare 部署——構建可擴展、高可用的雲端基礎設施">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/cloud.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="雲端服務架構與實战 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="從 Docker 容器化到 Cloudflare 部署——構建可擴展、高可用的雲端基礎設施">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>雲端服務架構與實战</h1>
+                <p>從 Docker 容器化到 Cloudflare 部署——構建可擴展、高可用的雲端基礎設施</p>
+            </div>
+            <div class="card-grid">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80')" onclick="document.getElementById('docker').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>容器化與 Docker</h3>
+                    <p>從開發到生產的一致性交付</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80')" onclick="document.getElementById('cloudflare').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>Cloudflare 部署</h3>
+                    <p>邊緣網絡與全球加速</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80')" onclick="document.getElementById('infra').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>基礎設施設計</h3>
+                    <p>可靠、可擴展的系統架構</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&q=80')" onclick="document.getElementById('devops').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>DevOps 與 CI/CD</h3>
+                    <p>自動化流水線加速交付</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <div id="docker" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>容器化與 Docker</h2>
+                <p class="block-subtitle">從開發到生產的一致性交付</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>镜像构建</strong>：编写 Dockerfile 和 docker-compose.yml，确保开发和生产环境完全一致。</li>
+                    <li><strong>多阶段构建</strong>：优化镜像大小，减少部署时间和存储成本。</li>
+                    <li><strong>数据持久化</strong>：使用卷和绑定挂载管理状态数据，保持容器的无状态特性。</li>
+                    <li><strong>容器网络</strong>：配置内部网络、端口映射，实现服务间安全通信。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cloudflare" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>Cloudflare 部署</h2>
+                <p class="block-subtitle">邊緣網絡與全球加速</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>Pages 部署</strong>：连接 Git 仓库自动部署静态站点，支持预览分支和回滚。</li>
+                    <li><strong>自定义域名与 SSL</strong>：配置 DNS、代理状态和自动证书管理。</li>
+                    <li><strong>边缘缓存与优化</strong>：利用 Cloudflare CDN 加速全球访问，配置缓存规则。</li>
+                    <li><strong>安全与 DDoS 防护</strong>：启用 Web Application Firewall、速率限制和机器人管理。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="infra" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>基礎設施設計</h2>
+                <p class="block-subtitle">可靠、可擴展的系統架構</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>高可用架构</strong>：设计无单点故障的系统，使用负载均衡和健康检查保证服务连续性。</li>
+                    <li><strong>水平扩展</strong>：通过增加实例数量而非单个实例规格来应对增长。</li>
+                    <li><strong>监控与告警</strong>：建立日志聚合、指标收集和告警体系，及时发现和处理异常。</li>
+                    <li><strong>灾难恢复</strong>：制定备份策略和恢复流程，确保数据安全和业务连续性。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="devops" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>DevOps 與 CI/CD</h2>
+                <p class="block-subtitle">自動化流水線加速交付</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>持续集成</strong>：代码提交自动触发构建和测试，早期发现集成问题。</li>
+                    <li><strong>持续部署</strong>：通过自动化流水线将代码从仓库安全推送到生产环境。</li>
+                    <li><strong>基础设施即代码</strong>：使用 Docker Compose 等工具将基础设施配置纳入版本管理。</li>
+                    <li><strong>版本管理规范</strong>：语义化版本号与 Git 分支策略配合，管理发布和回滚。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="link-card">
+            <p>工程能力需要商业场景才有价值</p>
+            <a class="default-btn" href="/zh-hk/invest.html">探索投资框架 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
