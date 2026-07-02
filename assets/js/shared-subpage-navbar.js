@@ -41,7 +41,11 @@
       web3Part4: 'Enterprise Entry',
       web3Part5: 'Trends & Challenges',
       web3Part6: 'Deep Dive Topics',
-      web3Part7: 'Summary'
+      web3Part7: 'Summary',
+      ai: 'AI',
+      aiHref: '/en/ai.html',
+      cloud: 'Cloud',
+      cloudHref: '/en/cloud.html'
     },
     'zh-cn': {
       home: '\u9996\u9875',
@@ -75,7 +79,11 @@
       web3Part4: '\u4f01\u4e1a\u5165\u5c40\u8def\u5f84',
       web3Part5: '\u8d8b\u52bf\u4e0e\u6311\u6218',
       web3Part6: '\u4e94\u5927\u4e13\u9898\u7814\u7a76',
-      web3Part7: '\u8ba4\u77e5\u6c47\u603b'
+      web3Part7: '\u8ba4\u77e5\u6c47\u603b',
+      ai: 'AI \u5de5\u7a0b',
+      aiHref: '/zh-cn/ai.html',
+      cloud: '\u4e91\u670d\u52a1',
+      cloudHref: '/zh-cn/cloud.html'
     },
     'zh-hk': {
       home: '\u9996\u9801',
@@ -109,11 +117,14 @@
       web3Part4: '\u4f01\u696d\u5165\u5c40\u8def\u5f91',
       web3Part5: '\u8da8\u52e2\u8207\u6311\u6230',
       web3Part6: '\u4e94\u5927\u5c08\u984c\u7814\u7a76',
-      web3Part7: '\u8a8d\u77e5\u5f59\u7e3d'
+      web3Part7: '\u8a8d\u77e5\u5f59\u7e3d',
+      ai: 'AI \u5de5\u7a0b',
+      aiHref: '/zh-hk/ai.html',
+      cloud: '\u96f2\u670d\u52d9',
+      cloudHref: '/zh-hk/cloud.html'
     }
   };
-
-  var labels = copy[lang];
+var labels = copy[lang];
   var altMap = {
     home: { en: copy.en.homeHref, zhCn: copy['zh-cn'].homeHref, zhHk: copy['zh-hk'].homeHref },
     capabilities: { en: copy.en.capabilitiesHref, zhCn: copy['zh-cn'].capabilitiesHref, zhHk: copy['zh-hk'].capabilitiesHref },
@@ -122,6 +133,8 @@
     investment: { en: copy.en.investmentHref, zhCn: copy['zh-cn'].investmentHref, zhHk: copy['zh-hk'].investmentHref },
     web3: { en: copy.en.web3Href, zhCn: copy['zh-cn'].web3Href, zhHk: copy['zh-hk'].web3Href },
     pd5: { en: copy.en.pd5Href, zhCn: copy['zh-cn'].pd5Href, zhHk: copy['zh-hk'].pd5Href },
+    ai: { en: copy.en.aiHref, zhCn: copy['zh-cn'].aiHref, zhHk: copy['zh-hk'].aiHref },
+    cloud: { en: copy.en.cloudHref, zhCn: copy['zh-cn'].cloudHref, zhHk: copy['zh-hk'].cloudHref },
     blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
   };
   var alt = altMap[section] || altMap.blog;
@@ -297,6 +310,8 @@
     '          <ul class="submenu">',
     '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
     '            <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
+    '            <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
+    '            <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
     '          </ul>',
     '        </li>',
     '        <li><a href="' + labels.investmentHref + '" class="' + active.investment.trim() + '">' + labels.investment + '</a></li>',
@@ -327,7 +342,7 @@
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
     '          <a class="mobile-link' + active.home + '" href="' + labels.homeHref + '" onclick="event.stopPropagation()">' + labels.home + '</a>',
-    '          <span class="mobile-caret">&#x2039;</span>',
+    '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + labels.homeHref + '#welcome">' + labels.welcome + '</a></li>',
@@ -339,7 +354,7 @@
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
     '          <a class="mobile-link' + active.cases + '" href="' + labels.casesHref + '" onclick="event.stopPropagation()">' + labels.cases + '</a>',
-    '          <span class="mobile-caret">&#x2039;</span>',
+    '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + labels.casesHref + '">' + labels.cases + '</a></li>',
@@ -349,18 +364,20 @@
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
     '          <a class="mobile-link' + active.portfolio + '" href="' + labels.portfolioHref + '" onclick="event.stopPropagation()">' + labels.portfolio + '</a>',
-    '          <span class="mobile-caret">&#x2039;</span>',
+    '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
     '          <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
+    '          <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
+    '          <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
     '        </ul>',
     '      </li>',
     '      <li><a class="mobile-link' + active.blog + '" href="' + labels.blogHref + '">' + labels.blog + '</a></li>',
       '      <li class="mobile-item">',
       '        <div class="mobile-link-row" data-toggle-submenu>',
       '          <span>' + labels.sites + '</span>',
-      '          <span class="mobile-caret">&#x2039;</span>',
+      '          <span class="mobile-caret"></span>',
       '        </div>',
       '        <ul class="mobile-submenu">',
       siteLinksHtml,
@@ -369,7 +386,7 @@
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
     '          <span>' + labels.language + '</span>',
-    '          <span class="mobile-caret">&#x2039;</span>',
+    '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + langUrl('en') + '">English</a></li>',
@@ -388,11 +405,12 @@
   if (oldCaretStyle) oldCaretStyle.remove();
   var cs = document.createElement('style');
     cs.id = 'shared-nav-caret-style';
-    cs.textContent = [
-      '.shared-subpage-nav .mobile-caret { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; font-size: 18px; color: #6e6e73; transition: transform 0.2s ease; flex: 0 0 auto; }',
-      '.shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret { transform: rotate(90deg); color: #0071e3; }',
-      'body[data-theme="dark"] .shared-subpage-nav .mobile-caret { color: #86868b; }',
-      'body[data-theme="dark"] .shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret { color: #2997ff; }'
+        cs.textContent = [
+      '.shared-subpage-nav .mobile-caret, #mobile-panel-portal .mobile-caret { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex: 0 0 auto; position: relative; }',
+      '.shared-subpage-nav .mobile-caret::before, #mobile-panel-portal .mobile-caret::before { content: "+"; font-size: 16px; font-weight: 300; color: #6e6e73; transition: transform 0.25s ease, color 0.2s ease; display: inline-block; line-height: 1; }',
+      '.shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { content: "\u2212"; font-size: 16px; font-weight: 300; color: #0071e3; }',
+      'body[data-theme="dark"] .shared-subpage-nav .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-caret::before { color: #86868b; }',
+      'body[data-theme="dark"] .shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { color: #2997ff; }',
     ].join('');
     document.head.appendChild(cs);
 
@@ -536,6 +554,13 @@
     currentTheme: currentTheme
   };
 }());
+
+
+
+
+
+
+
 
 
 
