@@ -185,7 +185,7 @@ var labels = copy[lang];
       '.shared-subpage-nav .theme-toggle:hover { background: rgba(0,0,0,0.12); }',
       '.shared-subpage-nav .theme-toggle:active, .shared-subpage-nav .theme-toggle.is-pressed { background: rgba(0,0,0,0.16); }',
       '.shared-subpage-nav .theme-toggle .fa-sun { display: none; }',
-      '.shared-subpage-nav .theme-toggle-text { line-height: 1; }',
+      '.shared-subpage-nav .theme-toggle-text { line-height: 1; margin-top: 1px; }',
 
       /* ---- Menu toggle (hamburger) ---- */
       '.shared-subpage-nav .menu-toggle { display: none; width: 36px; height: 36px; border: 0; border-radius: 8px; background: rgba(0,0,0,0.08); cursor: pointer; padding: 0; }',
@@ -407,7 +407,7 @@ var labels = copy[lang];
     cs.id = 'shared-nav-caret-style';
         cs.textContent = [
       '.shared-subpage-nav .mobile-caret, #mobile-panel-portal .mobile-caret { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex: 0 0 auto; position: relative; }',
-      '.shared-subpage-nav .mobile-caret::before, #mobile-panel-portal .mobile-caret::before { content: "+"; font-size: 22px; font-weight: 300; color: #6e6e73; transition: transform 0.25s ease, color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }',
+      '.shared-subpage-nav .mobile-caret::before, #mobile-panel-portal .mobile-caret::before { content: "+"; font-size: 22px; font-weight: 300; color: #6e6e73; transition: transform 0.25s ease, color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; line-height: 1; margin-top: 1px; }',
       '.shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { content: "\u2212"; font-size: 22px; font-weight: 300; color: #0071e3; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }',
       'body[data-theme="dark"] .shared-subpage-nav .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-caret::before { color: #86868b; }',
       'body[data-theme="dark"] .shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { color: #2997ff; }',
