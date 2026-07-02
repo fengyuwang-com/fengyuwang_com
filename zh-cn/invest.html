@@ -117,10 +117,21 @@
 			.content-block { padding: 28px 0 20px; }
 			.block-inner h2 { font-size: 1.25rem; }
 		}
+		/* Capability chip groups */
+		.punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+		.cap-group { margin-bottom: 20px; }
+		.cap-group:last-child { margin-bottom: 0; }
+		.cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+		.cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+		.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+
 		.link-card { text-align: center; padding: 48px 0 72px; }
-		.link-card p { color: #6b7280; margin-bottom: 12px; }
-		.link-card .default-btn { min-width: 200px; }
-		body[data-theme="dark"] .link-card p { color: #94a3b8; }
+			.link-card p { color: #6b7280; margin-bottom: 12px; }
+			.link-card .default-btn { min-width: 200px; }
+			body[data-theme="dark"] .link-card p { color: #94a3b8; }
+			body[data-theme="dark"] .punchline { color: #6b9aff; }
+			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
 	</style>
 <style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
 </head>
@@ -294,7 +305,47 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			</div>
+
+			<!-- Capability: 商业判断力 -->
+		<div id="biz-judgment" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>商业判断力</h2>
+					<p class="punchline">知道什么值得做</p>
+					<div class="cap-group">
+						<div class="cap-group-title">投资与金融分析</div>
+						<div class="cap-chips">
+							<span class="stack-chip">价值投资（巴菲特理念）</span>
+							<span class="stack-chip">基本面分析</span>
+							<span class="stack-chip">技术面分析</span>
+							<span class="stack-chip">企业估值（DCF）</span>
+							<span class="stack-chip">财务模型分析</span>
+							<span class="stack-chip">概率思维</span>
+							<span class="stack-chip">行业趋势前瞻</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">商务与项目管理</div>
+						<div class="cap-chips">
+							<span class="stack-chip">商务拓展</span>
+							<span class="stack-chip">客户需求转化</span>
+							<span class="stack-chip">创业项目全流程</span>
+							<span class="stack-chip">跨部门协作</span>
+							<span class="stack-chip">项目推进与管理</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">语言能力</div>
+						<div class="cap-chips">
+							<span class="stack-chip">普通话（母语）</span>
+							<span class="stack-chip">英语（雅思 7.0）</span>
+							<span class="stack-chip">粤语（流利）</span>
+							<span class="stack-chip">江浙吴语（中级）</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Cross-link -->
@@ -302,7 +353,7 @@
 			<p>把企业分析与概率思维变成一个系统</p>
 			<a class="default-btn" href="/zh-cn/blog/">阅读博客文章 →</a>
 		</div>
-	</div>
+		</div>
 
 	<div id="shared-site-footer"></div>
 	<script src="../assets/js/shared-site-footer.js"></script>

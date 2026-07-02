@@ -95,11 +95,22 @@
 		.case-card h3 { font-size: 1rem; margin-bottom: 8px; color: #0f172a; font-weight: 800; }
 		.case-card p { margin: 0; color: #64748b; line-height: 1.75; font-size: .88rem; }
 
-		.link-card { text-align: center; padding: 48px 0 72px; }
-		.link-card p { color: #6b7280; margin-bottom: 12px; }
-		.link-card .default-btn { min-width: 200px; }
+		/* Capability chip groups */
+		.punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+		.cap-group { margin-bottom: 20px; }
+		.cap-group:last-child { margin-bottom: 0; }
+		.cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+		.cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+			.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+			.qa-group { margin-bottom: 22px; }
+			.qa-group:last-child { margin-bottom: 0; }
+			.qa-group-title { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+	
+			.link-card { text-align: center; padding: 48px 0 72px; }
+			.link-card p { color: #6b7280; margin-bottom: 12px; }
+			.link-card .default-btn { min-width: 200px; }
 
-		/* Dark mode */
+			/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
 		body[data-theme="dark"] .content-block { background-color: #111827; }
 		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
@@ -116,8 +127,12 @@
 			body[data-theme="dark"] .pillar-card h3 { color: #e5ecf4; }
 			body[data-theme="dark"] .pillar-card p { color: #9fb0c3; }
 			body[data-theme="dark"] .case-card { background: #1e293b; border-color: rgba(148,163,184,.04); }
-		body[data-theme="dark"] .case-card h3 { color: #e5ecf4; }
-		body[data-theme="dark"] .case-card p { color: #9fb0c3; }
+			body[data-theme="dark"] .case-card h3 { color: #e5ecf4; }
+			body[data-theme="dark"] .case-card p { color: #9fb0c3; }
+				body[data-theme="dark"] .punchline { color: #6b9aff; }
+				body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+				body[data-theme="dark"] .qa-group-title { color: #e5ecf4; }
+				body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
 		@media (max-width: 991px) {
 			.card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 			.marketing-hero { padding: 36px 24px; }
@@ -291,12 +306,118 @@
 			</div>
 		</div>
 
-		<!-- Cross-link -->
-		<div class="link-card">
-			<p>数字和创意之外，还需要工程交付能力</p>
-			<a class="default-btn" href="/zh-cn/portfolio.html">看看技术作品 →</a>
-		</div>
-	</div>
+		<!-- Capability: 市场理解力 -->
+		<div id="mkt-understanding" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>市场理解力</h2>
+					<p class="punchline">让人想买，而不是让人烦</p>
+					<div class="cap-group">
+						<div class="cap-group-title">品牌与策略</div>
+						<div class="cap-chips">
+							<span class="stack-chip">品牌策略</span>
+							<span class="stack-chip">全球营销</span>
+							<span class="stack-chip">市场战略制定</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">消费者洞察</div>
+						<div class="cap-chips">
+							<span class="stack-chip">消费者洞察</span>
+							<span class="stack-chip">客户旅程地图</span>
+							<span class="stack-chip">用户增长漏斗优化</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">运营与执行</div>
+						<div class="cap-chips">
+							<span class="stack-chip">CRM 客户关系管理</span>
+							<span class="stack-chip">社交媒体运营</span>
+							<span class="stack-chip">活动策划与全流程执行</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">数据与分析</div>
+						<div class="cap-chips">
+							<span class="stack-chip">营销数据分析</span>
+							<span class="stack-chip">市场调研</span>
+							<span class="stack-chip">用户行为分析</span>
+							<span class="stack-chip">A/B Testing</span>
+						</div>
+					</div>
+					<div class="cap-group">
+						<div class="cap-group-title">AI 与增长</div>
+						<div class="cap-chips">
+							<span class="stack-chip">AI 营销</span>
+							<span class="stack-chip">数字化转型落地</span>
+							<span class="stack-chip">营销自动化</span>
+							<span class="stack-chip">增长黑客</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<!-- 5DT-PD 极简解答 -->
+			<div id="5dt-pd-answers" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=1000&q=80')">
+				<div class="block-inner">
+					<div class="section-card">
+						<h2>5DT-PD 极简解答</h2>
+						<p class="punchline">一套框架，四问四答</p>
+
+						<div class="qa-group">
+							<div class="qa-group-title">一、内容过剩怎么办？</div>
+							<div class="qa-chips">
+								<span class="stack-chip">弃单点，建系统</span>
+								<span class="stack-chip">控成本，重风控</span>
+								<span class="stack-chip">重交付，数据驱动</span>
+								<span class="stack-chip">讲艺术，重理念</span>
+							</div>
+						</div>
+
+						<div class="qa-group">
+							<div class="qa-group-title">二、核心资产是什么？</div>
+							<div class="qa-chips">
+								<span class="stack-chip">私有语料库</span>
+								<span class="stack-chip">算力精算模</span>
+								<span class="stack-chip">风控标准线</span>
+								<span class="stack-chip">垂直大模型</span>
+							</div>
+						</div>
+
+						<div class="qa-group">
+							<div class="qa-group-title">三、人机怎么协作？</div>
+							<div class="qa-chips">
+								<span class="stack-chip">人定锚，机干活</span>
+								<span class="stack-chip">受控管线</span>
+								<span class="stack-chip">硬性门禁</span>
+								<span class="stack-chip">调参介入</span>
+							</div>
+						</div>
+
+						<div class="qa-group">
+							<div class="qa-group-title">四、除理念靠什么？</div>
+							<div class="qa-chips">
+								<span class="stack-chip">靠"双向闭环"系统</span>
+								<span class="stack-chip">靠"数据驱动引擎"</span>
+								<span class="stack-chip">靠"智能体中枢"</span>
+								<span class="stack-chip">靠"全域融合阵地"</span>
+							</div>
+						</div>
+
+						<div style="text-align:center; margin-top:28px;">
+							<a class="default-btn" href="/zh-cn/5dt-pd.html">查看完整框架 →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cross-link -->
+			<div class="link-card">
+				<p>数字和创意之外，还需要工程交付能力</p>
+				<a class="default-btn" href="/zh-cn/portfolio.html">看看技术作品 →</a>
+			</div>
+			</div>
 
 	<div id="shared-site-footer"></div>
 	<script src="../assets/js/shared-site-footer.js"></script>
