@@ -429,6 +429,17 @@ All components require `body[data-theme="dark"]` variants.
 Punchlines go in **h2** — they ARE the section title, not the subtitle.
 Keep block-subtitle for normal explanatory text.
 
+This applies to card grids too: the **h3** in each .mkt-card should be punchy (same style as h2),
+and the **p** inside .card-content should be the normal description.
+
+Full element mapping:
+| Element | Role | Example |
+|---------|------|---------|
+| section > h2 | Punchline | 试过了，所以知道 |
+| section > .block-subtitle | Normal description | AI 本地部署与 Web3 节点的亲身验证 |
+| .mkt-card > .card-content > h3 | Punchline (short) | 试过了，所以知道 |
+| .mkt-card > .card-content > p | Normal description | AI 本地部署与 Web3 节点的亲身验证 |
+
 Examples of correct structure:
 ```
 <h2>试过了，所以知道</h2>
