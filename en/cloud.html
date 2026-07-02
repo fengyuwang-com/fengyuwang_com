@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
-    <title>Cloud Architecture & Practice | 王丰羽 Fengyu WANG</title>
-    <meta name="description" content="From Docker containerization to Cloudflare deployment—building scalable infrastructure">
-    <meta name="keywords" content="Cloud Architecture & Practice, Docker, Cloudflare, DevOps, 王丰羽">
-    <meta name="author" content="王丰羽">
+    <title>Cloud Infrastructure | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="What cloud is, why it is irreplaceable, and how AI and Web3 depend on it.">
+    <meta name="keywords" content="Cloud Infrastructure, AI, Web3, Cloud Computing, 王丰羽">
+    <meta name="author" content="Fengyu WANG">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="/en/cloud.html">
     <link rel="alternate" hreflang="en" href="/en/cloud.html">
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/cloud.html">
+    <link rel="alternate" hreflang="zh-CN" href="/en/cloud.html">
     <link rel="alternate" hreflang="zh-HK" href="/zh-hk/cloud.html">
     <meta property="og:site_name" content="Fengyu WANG">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Cloud Architecture & Practice | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="From Docker containerization to Cloudflare deployment—building scalable infrastructure">
-    <meta property="og:url" content="https://fengyuwang.com/en/cloud.html">
+    <meta property="og:title" content="Cloud Infrastructure | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="What cloud is, why it is irreplaceable, and how AI and Web3 depend on it.">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/cloud.html">
     <meta property="og:image" content="/assets/img/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cloud Architecture & Practice | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="From Docker containerization to Cloudflare deployment—building scalable infrastructure">
+    <meta name="twitter:title" content="Cloud Infrastructure | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="What cloud is, why it is irreplaceable, and how AI and Web3 depend on it.">
     <meta name="twitter:image" content="/assets/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -69,6 +69,9 @@
         .link-card { text-align: center; padding: 48px 0 72px; }
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
+        .punchline { color: #2563eb; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+        .cap-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .stack-chip { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .78rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
 
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
@@ -83,6 +86,8 @@
         body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card { background: #0f172a; }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .punchline { color: #6b9aff; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
 
         @media (max-width: 991px) {
             .marketing-hero { padding: 36px 24px; }
@@ -97,6 +102,17 @@
             .content-block { padding: 28px 0 20px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
+            .exp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .exp-card { background: #f8fafc; border-radius: 12px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); }
+        .exp-card h4 { font-size: .95rem; font-weight: 700; color: #0f172a; margin-bottom: 5px; }
+        .exp-card p { font-size: .86rem; color: #475569; line-height: 1.55; margin-bottom: 10px; }
+        .exp-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+        .exp-chips span { font-size: .72rem; font-weight: 600; color: #2563eb; background: rgba(37,99,235,.08); border-radius: 999px; padding: 2px 10px; }
+        body[data-theme="dark"] .exp-card { background: #1e293b; border-color: rgba(148,163,184,.15); }
+        body[data-theme="dark"] .exp-card h4 { color: #e5ecf4; }
+        body[data-theme="dark"] .exp-card p { color: #9fb0c3; }
+        body[data-theme="dark"] .exp-chips span { color: #6b9aff; background: rgba(107,154,255,.10); }
+        @media (max-width: 599px) { .exp-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -107,113 +123,251 @@
     <div class="page-wrap">
         <div class="container">
             <div class="marketing-hero">
-                <h1>Cloud Architecture & Practice</h1>
-                <p>From Docker containerization to Cloudflare deployment—building scalable, high-availability infrastructure</p>
+                <h1>Cloud Infrastructure</h1>
+                <p>Computing power like electricity. The most underestimated infrastructure shift of the past decade.</p>
             </div>
             <div class="card-grid">
-            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80')" onclick="document.getElementById('docker').scrollIntoView({behavior:'smooth'})">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80')" onclick="document.getElementById('what-is-cloud').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>Containerization & Docker</h3>
-                    <p>Consistent delivery from development to production</p>
+                    <h3>Computing Like Electricity</h3>
+                    <p>SaaS, MaaS, and the infrastructure logic behind them</p>
                     <button class="card-btn">了解详情</button>
                 </div>
             </div>
-            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80')" onclick="document.getElementById('cloudflare').scrollIntoView({behavior:'smooth'})">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80')" onclick="document.getElementById('why-irreplaceable').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>Cloudflare Deployment</h3>
-                    <p>Edge network & global acceleration</p>
+                    <h3>Doors That Won't Open Locally</h3>
+                    Four dimensions where on-premises can't compete
                     <button class="card-btn">了解详情</button>
                 </div>
             </div>
-            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80')" onclick="document.getElementById('infra').scrollIntoView({behavior:'smooth'})">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80')" onclick="document.getElementById('firsthand').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>Infrastructure Design</h3>
-                    <p>Reliable, scalable system architecture</p>
+                    <h3>Tried It, So I Know</h3>
+                    <p>Cross-region networking, container orchestration, full-stack dev, data security, AI inference</p>
                     <button class="card-btn">了解详情</button>
                 </div>
             </div>
-            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&q=80')" onclick="document.getElementById('devops').scrollIntoView({behavior:'smooth'})">
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80')" onclick="document.getElementById('cloud-ai').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>DevOps & CI/CD</h3>
-                    <p>Automated pipelines for faster delivery</p>
+                    <h3>Local AI Hits Your GPU Ceiling</h3>
+                    <p>From local scripts to callable cloud AI services</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80')" onclick="document.getElementById('cloud-web3').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>Decentralized Dream, Centralized Servers</h3>
+                    <p>How blockchain projects truly depend on cloud infrastructure</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80')" onclick="document.getElementById('business-case').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>Tech Talks, Books Decide</h3>
+                    <p>The business logic behind choosing cloud services</p>
                     <button class="card-btn">了解详情</button>
                 </div>
             </div>
             </div>
         </div>
 
-    <div id="docker" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80')">
+    <div id="what-is-cloud" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>Containerization & Docker</h2>
-                <p class="block-subtitle">Consistent delivery from development to production</p>
+                <h2>Computing Like Electricity</h2>
+                <p class="block-subtitle">SaaS, MaaS, and the infrastructure logic behind them</p>
                 <div class="content-text-card">
+                    <p>The essence of cloud is simple: turn compute, storage, and network into utilities you consume on demand.No hardware to buy, no procurement delays, no self-managed ops.</p>
+                    <p>This model created three main service forms:</p>
+                    <p><strong>SaaS (Software as a Service)</strong> - no installation, just open the browser. Google Docs, Notion, Figma. Servers, databases, ops are all managed by the provider. Users focus on the business.</p>
+                    <p><strong>MaaS (Model as a Service)</strong> - AI models delivered as APIs. Calling the OpenAI API is using MaaS. No GPU purchase, no training, no inference deployment - world-class AI with a few lines of code.</p>
+                    <p>These services share one thing: they are nearly impossible to replicate locally.</p>
                     <ul>
-                    <li><strong>镜像构建</strong>：编写 Dockerfile 和 docker-compose.yml，确保开发和生产环境完全一致。</li>
-                    <li><strong>多阶段构建</strong>：优化镜像大小，减少部署时间和存储成本。</li>
-                    <li><strong>数据持久化</strong>：使用卷和绑定挂载管理状态数据，保持容器的无状态特性。</li>
-                    <li><strong>容器网络</strong>：配置内部网络、端口映射，实现服务间安全通信。</li>
+                        <li><strong>On-demand compute</strong>: spin up a server in minutes, release when done. Procurement from months to minutes.</li>
+                        <li><strong>Pay-as-you-go</strong>: pay for what you use, no idle waste. Entry barrier from thousands to pennies.</li>
+                        <li><strong>Global reach</strong>: deploy across dozens of regions. Users served from the nearest datacenter.</li>
+                        <li><strong>Managed services</strong>: databases, message queues, big data analytics - ready out of the box.</li>
                     </ul>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">网络诊断</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="cloudflare" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80')">
+    <div id="why-irreplaceable" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>Cloudflare Deployment</h2>
-                <p class="block-subtitle">Edge network & global acceleration</p>
+                <h2>Doors That Won't Open Locally</h2>
+                <p class="block-subtitle">Four dimensions where on-premises can't compete</p>
                 <div class="content-text-card">
+                    <p>Many think cloud is about saving money. That view is too shallow.What makes cloud truly irreplaceable: some things are physically impossible on-premises.</p>
                     <ul>
-                    <li><strong>Pages 部署</strong>：连接 Git 仓库自动部署静态站点，支持预览分支和回滚。</li>
-                    <li><strong>自定义域名与 SSL</strong>：配置 DNS、代理状态和自动证书管理。</li>
-                    <li><strong>边缘缓存与优化</strong>：利用 Cloudflare CDN 加速全球访问，配置缓存规则。</li>
-                    <li><strong>安全与 DDoS 防护</strong>：启用 Web Application Firewall、速率限制和机器人管理。</li>
+                        <li><strong>Physical coverage</strong>: deploying in 20 regions means 20 datacenters. Not a budget issue - physically impossible. One deployment, globally available.</li>
+                        <li><strong>Scale compute</strong>: AI training needs hundreds to thousands of GPUs. Building that on-prem takes months and millions. Cloud compresses it to minutes.</li>
+                        <li><strong>Elastic scaling</strong>: traffic spikes 100x in seconds. On-prem cannot handle that. Cloud auto-scales in seconds.</li>
+                        <li><strong>Compliance</strong>: SOC 2, GDPR, HIPAA - earning these takes years. Cloud providers already have hundreds of certifications customers inherit.</li>
                     </ul>
+                    <p>SaaS and MaaS are cloud-native by nature. SaaS needs 24/7 global availability; MaaS runs on massive GPU inference clusters. Neither works on-premises.</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">AI Harness Engineering</span>
+                    <span class="stack-chip">算力管理</span>
+                    <span class="stack-chip">跨平台系统精通</span>
+                    <span class="stack-chip">自动化脚本</span>
+                    <span class="stack-chip">Docker 容器化</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="infra" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80')">
+    <div id="firsthand" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>Infrastructure Design</h2>
-                <p class="block-subtitle">Reliable, scalable system architecture</p>
+                <h2>Tried It, So I Know</h2>
+                <p class="block-subtitle">Run it yourself once, and cloud becomes undeniable</p>
                 <div class="content-text-card">
-                    <ul>
-                    <li><strong>高可用架构</strong>：设计无单点故障的系统，使用负载均衡和健康检查保证服务连续性。</li>
-                    <li><strong>水平扩展</strong>：通过增加实例数量而非单个实例规格来应对增长。</li>
-                    <li><strong>监控与告警</strong>：建立日志聚合、指标收集和告警体系，及时发现和处理异常。</li>
-                    <li><strong>灾难恢复</strong>：制定备份策略和恢复流程，确保数据安全和业务连续性。</li>
-                    </ul>
+                    <div class="exp-grid">
+                        <div class="exp-card">
+                            <h4>Cross-Region Compute</h4>
+                            <p>Huizhou server x Hong Kong office. WireGuard mesh, smart DNS routing. 60% cost reduction, 7x24 stable.</p>
+                            <div class="exp-chips"><span>Hybrid Cloud</span><span>Cost Opt</span><span>Cross-Border Net</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Container Platform</h4>
+                            <p>Docker Compose orchestration for a dozen services. Version isolation, auto-recovery, one-click migration. No SPOF.</p>
+                            <div class="exp-chips"><span>Container Ops</span><span>Auto Ops</span><span>High Avail</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Full-Stack Ship</h4>
+                            <p>TypeScript + Node.js projects, GitHub CI/CD. From domain to SSL to reverse proxy - full deployment chain done independently.</p>
+                            <div class="exp-chips"><span>Full-Stack Dev</span><span>DevOps</span><span>CI/CD</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Data Security</h4>
+                            <p>Self-built file encryption. Multi-site backup + periodic verification. Port hardening, least-privilege, audit log.</p>
+                            <div class="exp-chips"><span>Data Security</span><span>Compliance</span><span>Risk Mgmt</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Local AI</h4>
+                            <p>Ran models on personal GPUs. VRAM, cooling, compute - every piece a bottleneck. Cloud GPUs on demand, orders of magnitude faster.</p>
+                            <div class="exp-chips"><span>AI Infrastructure</span><span>Compute Eval</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Web3 Nodes</h4>
+                            <p>Ethereum full node sync takes days. 1TB+ SSD, 16GB RAM, stable public IP - local cannot handle it. A third of all nodes on AWS.</p>
+                            <div class="exp-chips"><span>Blockchain Infra</span><span>Node Ops</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">跨平台系统精通</span>
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">网络诊断</span>
+                    <span class="stack-chip">自动化脚本</span>
+                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">Git 版本管理</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="devops" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1000&q=80')">
+    <div id="cloud-ai" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>DevOps & CI/CD</h2>
-                <p class="block-subtitle">Automated pipelines for faster delivery</p>
+                <h2>Local AI Hits Your GPU Ceiling</h2>
+                <p class="block-subtitle">From local scripts to callable cloud AI services</p>
                 <div class="content-text-card">
+                    <p>AI 自动化工具的开发是典型的从本地到云端的迁移路径。</p>
+                    <p>AutoApply 系列是基于 Playwright 和 Selenium 开发的 AI Agent，用于自动化信息筛选与投递。当前运行在本地环境，意味着需要持续开机、保持网络稳定、无法并发运行。当一个脚本一天只能处理有限数量的任务时，它的上限就是本地硬件的上限。</p>
+                    <p>AI Harness Engineering 的工作方式是多模型协作——同时调用 Claude、GPT、DeepSeek 等模型，通过提示工程编排任务逻辑。这套流程目前在本地终端中运行，本质上仍是单机工具。</p>
+                    <p><strong>迁移到云上之后，变化是结构性的：</strong></p>
                     <ul>
-                    <li><strong>持续集成</strong>：代码提交自动触发构建和测试，早期发现集成问题。</li>
-                    <li><strong>持续部署</strong>：通过自动化流水线将代码从仓库安全推送到生产环境。</li>
-                    <li><strong>基础设施即代码</strong>：使用 Docker Compose 等工具将基础设施配置纳入版本管理。</li>
-                    <li><strong>版本管理规范</strong>：语义化版本号与 Git 分支策略配合，管理发布和回滚。</li>
+                        <li>AutoApply 可打包为 Docker 镜像，部署到云服务器上 24/7 运行，不受本地设备状态影响</li>
+                        <li>可同时启动多个实例并行处理，任务量提升一个数量级</li>
+                        <li>AI 推理网关统一调度多模型，实现自动路由、容错重试、用量统计</li>
+                        <li>从"自己用的脚本"变成"可调用的 API 服务"——这是向 MaaS 方向迈进的路径</li>
                     </ul>
+                    <p>SaaS 和 MaaS 的商业模式本质上是云原生的。要做订阅制的 AI 服务，云是唯一的选项。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">AI Harness Engineering</span>
+                    <span class="stack-chip">AI Agent 开发</span>
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">算力管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">自动化脚本</span>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="cloud-web3" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>Decentralized Dream, Centralized Servers</h2>
+                <p class="block-subtitle">How blockchain projects truly depend on cloud infrastructure</p>
+                <div class="content-text-card">
+                    <p>区块链项目在理念上是去中心化的，在基础设施层面却高度依赖中心化的云服务。这不是矛盾，是物理限制下的最优解。</p>
+                    <p>本地运行全节点的体验可以说明这一点：一台家用电脑同步以太坊账本需要数天，持续运行后对带宽和存储的占用超出多数个人环境的承受范围。行业数据显示，约三分之一的以太坊节点托管在 AWS 上——这不是项目方偷懒，是个人网络和硬件条件根本扛不住。</p>
+                    <p><strong>Web3 项目对云服务的依赖不止于跑节点：</strong></p>
+                    <ul>
+                        <li><strong>NFT 铸造</strong>：开盘瞬间流量从零暴涨至数万并发，本地服务器无法响应这种瞬时压力</li>
+                        <li><strong>DeFi 协议</strong>：需要 24/7 高可用架构和跨区域灾备</li>
+                        <li><strong>链上数据分析</strong>：区块链数据以 TB 级增长，分析处理必须在云端完成</li>
+                        <li><strong>交易所</strong>：全球用户需要低延迟访问，必须依赖多区域部署</li>
+                    </ul>
+                    <p><strong>发展方向：</strong>将 Web3 基础设施部署标准化，用 Docker 和自动化脚本实现区块链节点的一键部署、自动监控与故障恢复。同时搭建从节点同步到数据清洗、入库、可视化的完整数据管道。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">Docker 容器化</span>
+                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">命令行</span>
+                    <span class="stack-chip">网络诊断</span>
+                    <span class="stack-chip">跨平台系统精通</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="business-case" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>Tech Talks, Books Decide</h2>
+                <p class="block-subtitle">The business logic behind choosing cloud services</p>
+                <div class="content-text-card">
+                    <p>从商业角度审视云服务，价值比技术层面更清晰：</p>
+                    <ul>
+                        <li><strong>改变成本结构</strong>：固定资产投入转为按需运营支出。资金配置更灵活，现金流压力更小。</li>
+                        <li><strong>压缩交付周期</strong>：基础设施不再成为交付瓶颈。从新服务上线到全球部署，时间单位从月缩短到天。</li>
+                        <li><strong>释放团队产能</strong>：运维基础设施的人力成本往往是隐性却最高的。将这部分工作外包给云厂商，团队可专注于构建核心业务。</li>
+                        <li><strong>打开市场范围</strong>：全球部署能力让小团队也能服务全球用户。市场边界不再受基础设施限制。</li>
+                        <li><strong>SaaS/MaaS 的商业模式</strong>：订阅制服务、按量计费的模型天然依赖云基础设施。如果业务方向是提供可调用的服务，云是唯一的可行路径。</li>
+                    </ul>
+                    <p>技术能力、商业判断、市场理解——三个方向相互支撑。云服务的落地既需要技术理解，也需要商业语言将其转化为决策依据。</p>
+                </div>
+                <div class="cap-chips">
+                    <span class="stack-chip">品牌策略</span>
+                    <span class="stack-chip">客户洞察</span>
+                    <span class="stack-chip">数字化转型落地</span>
+                    <span class="stack-chip">商业判断力</span>
+                    <span class="stack-chip">市场策略</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="link-card">
-            <p>Engineering capability needs business context to create value</p>
-            <a class="default-btn" href="/en/invest.html">Explore Investment Framework →</a>
+            <p>From capability to practice - see real market cases</p>
+            <a class="default-btn" href="/en/mkt.html">Explore Marketing →</a>
         </div>
     </div>
 
@@ -223,8 +377,19 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/jquery.meanmenu.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <!-- Analytics removed per brand policy -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
     <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
