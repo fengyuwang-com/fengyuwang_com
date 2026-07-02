@@ -426,7 +426,15 @@ All components require `body[data-theme="dark"]` variants.
 
 ### Punchline Writing Style
 
-Punchlines are **not** section introductions — they are one-line statements that sound cool, sharp, or undeniable.
+Punchlines go in **h2** — they ARE the section title, not the subtitle.
+Keep block-subtitle for normal explanatory text.
+
+Examples of correct structure:
+```
+<h2>试过了，所以知道</h2>
+<p class="block-subtitle">AI 本地部署与 Web3 节点的亲身验证</p>
+```
+
 Think "Just Do It" or "Think Different." They should make the reader pause and nod.
 
 **Rules:**
@@ -530,4 +538,5 @@ The tunnel uses a token from Cloudflare Zero Trust → Tunnels. Put it in `.env`
 ### 5. "一个打三个" vs "超越三者之和的价值"
 
 The capabilities page used to say "一个打三个" (one beats three). The correct framing is "超越三者之和的价值" (value that exceeds the sum of its three parts) — it's about synergy, not competition.
+
 
