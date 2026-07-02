@@ -424,6 +424,27 @@ All components require `body[data-theme="dark"]` variants.
 - Punchlines: may need adaptation, not direct translation.
 - **zh-hk uses 互相** (not 相互). Example: "當不同的能力互相增強的時候".
 
+### Punchline Writing Style
+
+Punchlines are **not** section introductions — they are one-line statements that sound cool, sharp, or undeniable.
+Think "Just Do It" or "Think Different." They should make the reader pause and nod.
+
+**Rules:**
+- Keep it under 12 words where possible.
+- No explanations, no context — the section body does that.
+- Be specific, not generic. "算力像水电一样" beats "云服务的核心优势".
+- A little attitude is OK. Self-deprecation or brutal honesty works better than marketing fluff.
+
+**Examples (good):**
+- 有些门，本地推不开
+- 试过了，所以知道
+- 去中心化的梦，中心化的服务器
+
+**Examples (bad):**
+- 本章节将介绍云服务的核心能力
+- 本节讨论本地部署的局限性
+
+
 ---
 
 ## Git & Versioning
@@ -509,3 +530,4 @@ The tunnel uses a token from Cloudflare Zero Trust → Tunnels. Put it in `.env`
 ### 5. "一个打三个" vs "超越三者之和的价值"
 
 The capabilities page used to say "一个打三个" (one beats three). The correct framing is "超越三者之和的价值" (value that exceeds the sum of its three parts) — it's about synergy, not competition.
+
