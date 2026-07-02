@@ -23,3 +23,8 @@ temp/
 _site/
 hugo/_site_test/
 hugo/_check/
+
+# Archive and draft folders
+_archive/
+_drafts/
+_infra/
