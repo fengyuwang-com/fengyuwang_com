@@ -102,6 +102,17 @@
             .content-block { padding: 28px 0 20px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
+            .exp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .exp-card { background: #f8fafc; border-radius: 12px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); }
+        .exp-card h4 { font-size: .95rem; font-weight: 700; color: #0f172a; margin-bottom: 5px; }
+        .exp-card p { font-size: .86rem; color: #475569; line-height: 1.55; margin-bottom: 10px; }
+        .exp-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+        .exp-chips span { font-size: .72rem; font-weight: 600; color: #2563eb; background: rgba(37,99,235,.08); border-radius: 999px; padding: 2px 10px; }
+        body[data-theme="dark"] .exp-card { background: #1e293b; border-color: rgba(148,163,184,.15); }
+        body[data-theme="dark"] .exp-card h4 { color: #e5ecf4; }
+        body[data-theme="dark"] .exp-card p { color: #9fb0c3; }
+        body[data-theme="dark"] .exp-chips span { color: #6b9aff; background: rgba(107,154,255,.10); }
+        @media (max-width: 599px) { .exp-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -219,21 +230,40 @@
         <div class="block-inner">
             <div class="section-card">
                 <h2>试过了，所以知道</h2>
-                <p class="block-subtitle">从服务器组网到容器编排、数据安全和 AI 推理——全链路亲手验证</p>
+                <p class="block-subtitle">自己动手跑过一遍，才知云不可替代</p>
                 <div class="content-text-card">
-                    <p><strong>跨地域算力组网</strong></p>
-                    <p>服务器放在惠州，人在香港办公。异地部署最大的三个问题：网络延迟、带宽成本、运维响应。基于 WireGuard 协议用 Tailscale 搭建零信任加密内网，两端服务低延迟互通；配合智能 DNS 分流与反向代理优化跨境路由。最终算力与存储成本较香港本地降低约 60%，同时实现 7×24 稳定运行。这段经历让我对混合云架构、跨境网络优化和成本核算有了骨子里的理解。</p>
-                    <p><strong>容器化自托管平台</strong></p>
-                    <p>基于 Docker + Docker Compose 搭建了完整的容器化服务平台，承载 Web 前端、后端 API、分布式文件存储、内网工具和自动化脚本等十余个服务。完整做了服务版本隔离、持久化存储挂载、多副本备份、健康检查与故障自恢复。整套平台一键部署、一键迁移，没有单点故障。这个过程吃透了容器化的核心逻辑，也让我清楚知道托管容器服务对企业的运维减负价值。</p>
-                    <p><strong>全栈开发与部署</strong></p>
-                    <p>用 TypeScript + Python 从零开发并上线了完整项目：前端静态站点与交互应用，后端 API 与自动化脚本，全套通过 GitHub 做版本管理。从域名购买、DNS 配置、SSL 证书申请、Nginx 反向代理到服务发布——全链路独立完成。理解开发者从本地到云端的每一个痛点和决策点。</p>
-                    <p><strong>数据安全与加密</strong></p>
-                    <p>经历过公有云盘数据丢失和隐私泄露事件后，搭建了个人全链路数据安全体系：自主开发端到端文件加密工具，对称加非对称结合；设计本地加异地多副本备份策略，搭配定期完整性校验。同时对所有服务做端口收敛、最小权限配置、访问日志审计。这些经验让我对企业的数据主权和合规诉求有切身体感。</p>
-                    <p><strong>AI 本地部署</strong></p>
-                    <p>在个人电脑上运行 AI 模型是最直接的体验。小规模推理尚可应付，一旦涉及批量处理或稍大规模模型，本地硬件的瓶颈就暴露无遗——显存不足、算力有限、散热和功耗成为持续制约。云上的 GPU 实例按需调用，成本可控，性能却高出几个数量级。试过才知区别不是一点点。</p>
-                    <p><strong>Web3 节点</strong></p>
-                    <p>本地运行区块链全节点——一个以太坊全节点需要 1TB 以上 SSD、16GB 以上内存、稳定的公网带宽，初次同步耗时数天。个人的网络条件和硬件配置很难满足。约三分之一的以太坊节点部署在 AWS 上，这不是偏好，是物理条件的必然。</p>
-                    <p>这些经历指向同一个结论：云服务的价值不在于"替代本地"，而在于解锁本地根本做不到的事情。</p>
+                    <div class="exp-grid">
+                        <div class="exp-card">
+                            <h4>跨地域算力组网</h4>
+                            <p>惠州机房 &times; 香港办公。WireGuard 加密组网，DNS 智能分流。算力成本降 60%，7&times;24 稳定运行。</p>
+                            <div class="exp-chips"><span>混合云架构</span><span>成本优化</span><span>跨境网络</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>容器化平台</h4>
+                            <p>Docker Compose 编排十余个服务。版本隔离、自动恢复、一键迁移——无单点故障。</p>
+                            <div class="exp-chips"><span>容器编排</span><span>运维自动化</span><span>高可用设计</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>全栈上线</h4>
+                            <p>TypeScript + Node.js 项目，GitHub CI/CD。从域名到 SSL 到反向代理，上线全链路独立完成。</p>
+                            <div class="exp-chips"><span>全栈开发</span><span>DevOps</span><span>CI/CD</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>数据安全</h4>
+                            <p>自研文件加密工具。异地多副本备份 + 定期校验。端口收敛、最小权限、日志审计。</p>
+                            <div class="exp-chips"><span>数据安全</span><span>合规设计</span><span>风险防控</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>AI 本地部署</h4>
+                            <p>个人 GPU 跑过模型。显存、散热、算力——件件是瓶颈。云上 GPU 按需调用，性能差几个数量级。</p>
+                            <div class="exp-chips"><span>AI 基础设施</span><span>算力评估</span></div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Web3 节点</h4>
+                            <p>以太坊全节点同步数天。1TB+ SSD、16GB 内存、稳定公网——本地扛不住。三分之一的节点在 AWS 上。</p>
+                            <div class="exp-chips"><span>区块链基础设施</span><span>节点运维</span></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="cap-chips">
                     <span class="stack-chip">跨平台系统精通</span>
@@ -352,6 +382,8 @@
     <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
 </body>
 </html>
+
+
 
 
 
