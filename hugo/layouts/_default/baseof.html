@@ -6,6 +6,7 @@
     <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ end }}
     <link rel="canonical" href="{{ .Page.RelPermalink | absURL }}">
+    <link rel="alternate" hreflang="{{ .Site.Language.LanguageCode }}" href="{{ .Page.RelPermalink }}">
     {{ $currentPage := $.Page }}
     {{ range .Site.Languages }}
     {{ if ne .Lang $.Site.Language.Lang }}
