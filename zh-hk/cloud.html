@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
-    <title>雲服務基礎设施 | 王丰羽 Fengyu WANG</title>
+    <title>雲服務基礎設施 | 王丰羽 Fengyu WANG</title>
     <meta name="description" content="雲服務為什麼不可替代？從AI計算力、Web3節點到企業基礎設施，解析雲原生的真正價值。附真實部署經驗與技術對比。">
-    <meta name="keywords" content="雲服務, AI基礎设施, Web3, 雲計算, 王丰羽">
+    <meta name="keywords" content="雲服務, AI基礎設施, Web3, 雲計算, 王丰羽">
     <meta name="author" content="王丰羽">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="/zh-hk/cloud.html">
@@ -18,15 +18,15 @@
     <meta property="og:site_name" content="Fengyu WANG">
     <meta property="og:locale" content="zh_HK">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="雲服務基礎设施 | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="雲服務是什么、为什么不可替代、以及 AI 与 Web3 如何依赖雲基礎设施。">
+    <meta property="og:title" content="雲服務基礎設施 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="雲服務是什麼、為什麼不可替代、以及 AI 與 Web3 如何依賴雲基礎設施。">
     <meta property="og:url" content="https://fengyuwang.com/zh-hk/cloud.html">
     <meta property="og:image" content="/assets/img/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="雲服務基礎设施 | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="雲服務是什么、为什么不可替代、以及 AI 与 Web3 如何依赖雲基礎设施。">
+    <meta name="twitter:title" content="雲服務基礎設施 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="雲服務是什麼、為什麼不可替代、以及 AI 與 Web3 如何依賴雲基礎設施。">
     <meta name="twitter:image" content="/assets/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -46,7 +46,7 @@
         .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
 
         .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
-        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
         .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
         .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
         .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
@@ -71,7 +71,7 @@
         .link-card .default-btn { min-width: 200px; }
         .punchline { color: #2563eb; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
         .cap-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-        .stack-chip { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .78rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .stack-chip { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .78rem; font-weight: 600; }
 
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
@@ -79,7 +79,7 @@
         body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
         body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
         body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
         body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
         body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
@@ -114,7 +114,7 @@
         body[data-theme="dark"] .exp-chips span { color: #6b9aff; background: rgba(107,154,255,.10); }
         @media (max-width: 599px) { .exp-grid { grid-template-columns: 1fr; } }
     </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"雲服務基礎设施 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/cloud.html"}</script> </head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"雲服務基礎設施 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/cloud.html"}</script> </head>
 <body>
 
     <div id="shared-subpage-navbar" data-section="portfolio"></div>
@@ -123,50 +123,50 @@
     <div class="page-wrap">
         <div class="container">
             <div class="marketing-hero">
-                <h1>雲服務基礎设施</h1>
-                <p>像用电一样用算力。过去十年最被低估的基礎设施变革。</p>
+                <h1>雲服務基礎設施</h1>
+                <p>像用電一樣用算力。過去十年最被低估的基礎設施變革。</p>
             </div>
             <div class="card-grid">
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80')" onclick="document.getElementById('what-is-cloud').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>像用电一样用算力</h3>
-                    <p>SaaS、MaaS 和背后的基礎设施邏輯</p>
-                    <button class="card-btn">了解详情</button>
+                    <h3>像用電一樣用算力</h3>
+                    <p>SaaS、MaaS 和背後的基礎設施邏輯</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80')" onclick="document.getElementById('why-irreplaceable').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>有些門，本地推不开</h3>
-                    <p>雲服務不可替代的四个维度</p>
-                    <button class="card-btn">了解详情</button>
+                    <h3>有些門，本地推不開</h3>
+                    <p>雲服務不可替代的四個維度</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80')" onclick="document.getElementById('firsthand').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>试过了，所以知道</h3>
-                    <p>跨地域组网、容器编排、全栈开发、數據安全、AI 推理——全链路亲手驗證</p>
-                    <button class="card-btn">了解详情</button>
+                    <h3>試過了，所以知道</h3>
+                    <p>跨地域組網、容器編排、全棧開發、數據安全、AI 推理——全鏈路親手驗證</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80')" onclick="document.getElementById('cloud-ai').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
                     <h3>本地跑 AI，天花板就在你的顯示卡上</h3>
-                    <p>从本地脚本到可調用的雲端 AI 服務</p>
-                    <button class="card-btn">了解详情</button>
+                    <p>從本地腳本到可調用的雲端 AI 服務</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80')" onclick="document.getElementById('cloud-web3').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>去中心化的梦，中心化的伺服器</h3>
-                    <p>區塊鏈項目对雲基礎设施的真实依赖</p>
-                    <button class="card-btn">了解详情</button>
+                    <h3>去中心化的夢，中心化的伺服器</h3>
+                    <p>區塊鏈項目對雲基礎設施的真實依賴</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80')" onclick="document.getElementById('business-case').scrollIntoView({behavior:'smooth'})">
                 <div class="card-content">
-                    <h3>技術说话，账本做决定</h3>
-                    <p>选择雲服務背后的商業邏輯</p>
-                    <button class="card-btn">了解详情</button>
+                    <h3>技術説話，賬本做決定</h3>
+                    <p>選擇雲服務背後的商業邏輯</p>
+                    <button class="card-btn">瞭解詳情</button>
                 </div>
             </div>
             </div>
@@ -175,26 +175,26 @@
     <div id="what-is-cloud" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>像用电一样用算力</h2>
-                <p class="block-subtitle">雲服務的三种形態：SaaS、MaaS 和背后的基礎设施邏輯</p>
+                <h2>像用電一樣用算力</h2>
+                <p class="block-subtitle">雲服務的三種形態：SaaS、MaaS 和背後的基礎設施邏輯</p>
                 <div class="content-text-card">
-                    <p>雲服務的本质很简单：把計算、存儲、網絡变成像水电一样按需取用的資源。不需要买硬件、不需要等採購、不需要自己運維。</p>
-                    <p>这个模式催生了三种主要的服務形態：</p>
-                    <p><strong>SaaS（Software as a Service）</strong>——软件即服務。不需要安装，打开浏览器就用。Google Docs、Notion、Figma 都是 SaaS。背后的伺服器、數據库、運維全部由提供商管理，用戶只需关注業務本身。</p>
-                    <p><strong>MaaS（Model as a Service）</strong>——模型即服務。AI 模型以 API 的形式提供。調用 OpenAI 的 API 就是在用 MaaS。不需要买 GPU、不需要训练模型、不需要部署推理服務，几行代码就拿到世界顶尖的 AI 能力。</p>
-                    <p>这些服務形態有一个共同点：在本地几乎无法複現。</p>
+                    <p>雲服務的本質很簡單：把計算、存儲、網絡變成像水電一樣按需取用的資源。不需要買硬件、不需要等採購、不需要自己運維。</p>
+                    <p>這個模式催生了三種主要的服務形態：</p>
+                    <p><strong>SaaS（Software as a Service）</strong>——軟件即服務。不需要安裝，打開瀏覽器就用。Google Docs、Notion、Figma 都是 SaaS。背後的伺服器、數據庫、運維全部由提供商管理，用户只需關注業務本身。</p>
+                    <p><strong>MaaS（Model as a Service）</strong>——模型即服務。AI 模型以 API 的形式提供。調用 OpenAI 的 API 就是在用 MaaS。不需要買 GPU、不需要訓練模型、不需要部署推理服務，幾行代碼就拿到世界頂尖的 AI 能力。</p>
+                    <p>這些服務形態有一個共同點：在本地幾乎無法複現。</p>
                     <ul>
-                        <li><strong>按需取用算力</strong>：需要一台伺服器，几分钟内创建完成，用完后释放。採購周期从数月压缩到分钟级。</li>
-                        <li><strong>按量付费</strong>：用多少付多少，没有闲置浪费。入門門槛从数十万降到几块钱。</li>
-                        <li><strong>全球覆盖</strong>：服務可部署到全球数十个區域，用戶从最近的數據中心获取數據。</li>
-                        <li><strong>托管服務</strong>：數據库、消息队列、大數據分析——开箱即用，无需自行搭建维护。</li>
+                        <li><strong>按需取用算力</strong>：需要一台伺服器，幾分鐘內創建完成，用完後釋放。採購週期從數月壓縮到分鐘級。</li>
+                        <li><strong>按量付費</strong>：用多少付多少，沒有閒置浪費。入門門檻從數十萬降到幾塊錢。</li>
+                        <li><strong>全球覆蓋</strong>：服務可部署到全球數十個區域，用户從最近的數據中心獲取數據。</li>
+                        <li><strong>託管服務</strong>：數據庫、消息隊列、大數據分析——開箱即用，無需自行搭建維護。</li>
                     </ul>
                 </div>
                 <div class="cap-chips">
                     <span class="stack-chip">Docker 容器化</span>
-                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">SSH 遠程管理</span>
                     <span class="stack-chip">命令行</span>
-                    <span class="stack-chip">網絡诊断</span>
+                    <span class="stack-chip">網絡診斷</span>
                 </div>
             </div>
         </div>
@@ -203,23 +203,23 @@
     <div id="why-irreplaceable" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>有些門，本地推不开</h2>
-                <p class="block-subtitle">雲服務不可替代的四个维度</p>
+                <h2>有些門，本地推不開</h2>
+                <p class="block-subtitle">雲服務不可替代的四個維度</p>
                 <div class="content-text-card">
-                    <p>很多人以为雲服務的核心优势是"省钱"。这种理解过于表面。雲服務真正的不可替代性在于：有些事情本地和環境部署物理上就做不到。</p>
+                    <p>很多人以為雲服務的核心優勢是"省錢"。這種理解過於表面。雲服務真正的不可替代性在於：有些事情本地和環境部署物理上就做不到。</p>
                     <ul>
-                        <li><strong>物理覆盖</strong>：在全球二十个區域同时部署服務，意味着在二十个地方建數據中心。这不是預算问题，是物理上不可能。雲廠商的全球基礎设施让开发者一次部署，全球可用。</li>
-                        <li><strong>規模算力</strong>：AI 模型训练需要数百到数千张 GPU 并行計算。自建同等規模的集群需要数月时间、数百万资金。雲上将这一过程压缩到几分钟，用完即释放。</li>
-                        <li><strong>彈性伸縮</strong>：流量在数秒内暴涨百倍并非罕见——产品上線、营销活动、病毒传播。自建伺服器无法应对这种瞬时波动。雲平台的自动扩缩可在秒级完成資源调整。</li>
-                        <li><strong>合規認證</strong>：SOC 2、GDPR、HIPAA 等合規認證，企业自行获取需要数年时间和大量投入。雲廠商已具备数百项認證，用戶可直接继承。</li>
+                        <li><strong>物理覆蓋</strong>：在全球二十個區域同時部署服務，意味着在二十個地方建數據中心。這不是預算問題，是物理上不可能。雲廠商的全球基礎設施讓開發者一次部署，全球可用。</li>
+                        <li><strong>規模算力</strong>：AI 模型訓練需要數百到數千張 GPU 並行計算。自建同等規模的集羣需要數月時間、數百萬資金。雲上將這一過程壓縮到幾分鐘，用完即釋放。</li>
+                        <li><strong>彈性伸縮</strong>：流量在數秒內暴漲百倍並非罕見——產品上線、營銷活動、病毒傳播。自建伺服器無法應對這種瞬時波動。雲平台的自動擴縮可在秒級完成資源調整。</li>
+                        <li><strong>合規認證</strong>：SOC 2、GDPR、HIPAA 等合規認證，企業自行獲取需要數年時間和大量投入。雲廠商已具備數百項認證，用户可直接繼承。</li>
                     </ul>
-                    <p>SaaS 和 MaaS 天然是雲原生的。SaaS 需要 24/7 在线、全球可访问；MaaS 背后是大規模 GPU 推理集群。这些模式在本地環境无法落地。</p>
+                    <p>SaaS 和 MaaS 天然是雲原生的。SaaS 需要 24/7 在線、全球可訪問；MaaS 背後是大規模 GPU 推理集羣。這些模式在本地環境無法落地。</p>
                 </div>
                 <div class="cap-chips">
                     <span class="stack-chip">AI Harness Engineering</span>
                     <span class="stack-chip">算力管理</span>
-                    <span class="stack-chip">跨平台系统精通</span>
-                    <span class="stack-chip">自動化脚本</span>
+                    <span class="stack-chip">跨平台系統精通</span>
+                    <span class="stack-chip">自動化腳本</span>
                     <span class="stack-chip">Docker 容器化</span>
                 </div>
             </div>
@@ -229,49 +229,49 @@
     <div id="firsthand" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>试过了，所以知道</h2>
-                <p class="block-subtitle">自己动手跑过一遍，才知雲不可替代</p>
+                <h2>試過了，所以知道</h2>
+                <p class="block-subtitle">自己動手跑過一遍，才知雲不可替代</p>
                 <div class="content-text-card">
                     <div class="exp-grid">
                         <div class="exp-card">
-                            <h4>跨地域算力组网</h4>
-                            <p>惠州機房 &times; 香港辦公。WireGuard 加密组网，DNS 智能分流。算力成本降 60%，7&times;24 穩定运行。</p>
+                            <h4>跨地域算力組網</h4>
+                            <p>惠州機房 &times; 香港辦公。WireGuard 加密組網，DNS 智能分流。算力成本降 60%，7&times;24 穩定運行。</p>
                             <div class="exp-chips"><span>混合雲架構</span><span>成本優化</span><span>跨境網絡</span></div>
                         </div>
                         <div class="exp-card">
                             <h4>容器化平台</h4>
-                            <p>Docker Compose 编排十余个服務。版本隔離、自动恢復、一键遷移——无单点故障。</p>
-                            <div class="exp-chips"><span>容器编排</span><span>運維自動化</span><span>高可用设计</span></div>
+                            <p>Docker Compose 編排十餘個服務。版本隔離、自動恢復、一鍵遷移——無單點故障。</p>
+                            <div class="exp-chips"><span>容器編排</span><span>運維自動化</span><span>高可用設計</span></div>
                         </div>
                         <div class="exp-card">
-                            <h4>全栈上線</h4>
-                            <p>TypeScript + Node.js 項目，GitHub CI/CD。从域名到 SSL 到反向代理，上線全链路独立完成。</p>
-                            <div class="exp-chips"><span>全栈开发</span><span>DevOps</span><span>CI/CD</span></div>
+                            <h4>全棧上線</h4>
+                            <p>TypeScript + Node.js 項目，GitHub CI/CD。從域名到 SSL 到反向代理，上線全鏈路獨立完成。</p>
+                            <div class="exp-chips"><span>全棧開發</span><span>DevOps</span><span>CI/CD</span></div>
                         </div>
                         <div class="exp-card">
                             <h4>數據安全</h4>
-                            <p>自研文件加密工具。异地多副本備份 + 定期校验。端口收斂、最小權限、日誌審計。</p>
-                            <div class="exp-chips"><span>數據安全</span><span>合規设计</span><span>風險防控</span></div>
+                            <p>自研文件加密工具。異地多副本備份 + 定期校驗。端口收斂、最小權限、日誌審計。</p>
+                            <div class="exp-chips"><span>數據安全</span><span>合規設計</span><span>風險防控</span></div>
                         </div>
                         <div class="exp-card">
                             <h4>AI 本地部署</h4>
-                            <p>个人 GPU 跑过模型。顯存、散熱、算力——件件是瓶頸。雲上 GPU 按需調用，性能差几个数量级。</p>
-                            <div class="exp-chips"><span>AI 基礎设施</span><span>算力評估</span></div>
+                            <p>個人 GPU 跑過模型。顯存、散熱、算力——件件是瓶頸。雲上 GPU 按需調用，性能差幾個數量級。</p>
+                            <div class="exp-chips"><span>AI 基礎設施</span><span>算力評估</span></div>
                         </div>
                         <div class="exp-card">
                             <h4>Web3 節點</h4>
-                            <p>以太坊全節點同步数天。1TB+ SSD、16GB 記憶體、穩定公网——本地扛不住。三分之一的節點在 AWS 上。</p>
-                            <div class="exp-chips"><span>區塊鏈基礎设施</span><span>節點運維</span></div>
+                            <p>以太坊全節點同步數天。1TB+ SSD、16GB 記憶體、穩定公網——本地扛不住。三分之一的節點在 AWS 上。</p>
+                            <div class="exp-chips"><span>區塊鏈基礎設施</span><span>節點運維</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="cap-chips">
-                    <span class="stack-chip">跨平台系统精通</span>
+                    <span class="stack-chip">跨平台系統精通</span>
                     <span class="stack-chip">Docker 容器化</span>
-                    <span class="stack-chip">SSH 远程管理</span>
-                    <span class="stack-chip">網絡诊断</span>
-                    <span class="stack-chip">自動化脚本</span>
-                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">SSH 遠程管理</span>
+                    <span class="stack-chip">網絡診斷</span>
+                    <span class="stack-chip">自動化腳本</span>
+                    <span class="stack-chip">AI 本地部署實戰</span>
                     <span class="stack-chip">命令行</span>
                     <span class="stack-chip">Git 版本管理</span>
                 </div>
@@ -283,28 +283,28 @@
         <div class="block-inner">
             <div class="section-card">
                 <h2>本地跑 AI，天花板就在你的顯示卡上</h2>
-                <p class="block-subtitle">从本地脚本到可調用的雲端 AI 服務</p>
+                <p class="block-subtitle">從本地腳本到可調用的雲端 AI 服務</p>
                 <div class="content-text-card">
-                    <p>AI 自動化工具的开发是典型的从本地到雲端的遷移路径。</p>
-                    <p>AutoApply 系列是基于 Playwright 和 Selenium 开发的 AI Agent，用于自動化信息筛选与投递。当前运行在本地環境，意味着需要持续开机、保持網絡穩定、无法并发运行。当一个脚本一天只能处理有限数量的任务时，它的上限就是本地硬件的上限。</p>
-                    <p>AI Harness Engineering 的工作方式是多模型协作——同时調用 Claude、GPT、DeepSeek 等模型，通过提示工程编排任务邏輯。这套流程目前在本地终端中运行，本质上仍是单机工具。</p>
-                    <p><strong>遷移到雲上之后，变化是结构性的：</strong></p>
+                    <p>AI 自動化工具的開發是典型的從本地到雲端的遷移路徑。</p>
+                    <p>AutoApply 系列是基於 Playwright 和 Selenium 開發的 AI Agent，用於自動化信息篩選與投遞。當前運行在本地環境，意味着需要持續開機、保持網絡穩定、無法併發運行。當一個腳本一天只能處理有限數量的任務時，它的上限就是本地硬件的上限。</p>
+                    <p>AI Harness Engineering 的工作方式是多模型協作——同時調用 Claude、GPT、DeepSeek 等模型，通過提示工程編排任務邏輯。這套流程目前在本地終端中運行，本質上仍是單機工具。</p>
+                    <p><strong>遷移到雲上之後，變化是結構性的：</strong></p>
                     <ul>
-                        <li>AutoApply 可打包为 Docker 镜像，部署到雲伺服器上 24/7 运行，不受本地设备状态影响</li>
-                        <li>可同时启动多个实例并行处理，任务量提升一个数量级</li>
-                        <li>AI 推理网关统一调度多模型，实现自动路由、容错重试、用量统计</li>
-                        <li>从"自己用的脚本"变成"可調用的 API 服務"——这是向 MaaS 方向迈进的路径</li>
+                        <li>AutoApply 可打包為 Docker 鏡像，部署到雲伺服器上 24/7 運行，不受本地設備狀態影響</li>
+                        <li>可同時啓動多個實例並行處理，任務量提升一個數量級</li>
+                        <li>AI 推理網關統一調度多模型，實現自動路由、容錯重試、用量統計</li>
+                        <li>從"自己用的腳本"變成"可調用的 API 服務"——這是向 MaaS 方向邁進的路徑</li>
                     </ul>
-                    <p>SaaS 和 MaaS 的商業模式本质上是雲原生的。要做订阅制的 AI 服務，雲是唯一的选项。</p>
+                    <p>SaaS 和 MaaS 的商業模式本質上是雲原生的。要做訂閲制的 AI 服務，雲是唯一的選項。</p>
                 </div>
                 <div class="cap-chips">
-                    <span class="stack-chip">AI 本地部署实战</span>
+                    <span class="stack-chip">AI 本地部署實戰</span>
                     <span class="stack-chip">AI Harness Engineering</span>
-                    <span class="stack-chip">AI Agent 开发</span>
+                    <span class="stack-chip">AI Agent 開發</span>
                     <span class="stack-chip">Docker 容器化</span>
                     <span class="stack-chip">算力管理</span>
                     <span class="stack-chip">命令行</span>
-                    <span class="stack-chip">自動化脚本</span>
+                    <span class="stack-chip">自動化腳本</span>
                 </div>
             </div>
         </div>
@@ -313,26 +313,26 @@
     <div id="cloud-web3" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>去中心化的梦，中心化的伺服器</h2>
-                <p class="block-subtitle">區塊鏈項目对雲基礎设施的真实依赖</p>
+                <h2>去中心化的夢，中心化的伺服器</h2>
+                <p class="block-subtitle">區塊鏈項目對雲基礎設施的真實依賴</p>
                 <div class="content-text-card">
-                    <p>區塊鏈項目在理念上是去中心化的，在基礎设施层面却高度依赖中心化的雲服務。这不是矛盾，是物理限制下的最优解。</p>
-                    <p>本地运行全節點的體驗可以说明这一点：一台家用电脑同步以太坊账本需要数天，持续运行后对頻寬和存儲的占用超出多数个人環境的承受范围。行业數據显示，约三分之一的以太坊節點托管在 AWS 上——这不是項目方偷懒，是个人網絡和硬件条件根本扛不住。</p>
-                    <p><strong>Web3 項目对雲服務的依赖不止于跑節點：</strong></p>
+                    <p>區塊鏈項目在理念上是去中心化的，在基礎設施層面卻高度依賴中心化的雲服務。這不是矛盾，是物理限制下的最優解。</p>
+                    <p>本地運行全節點的體驗可以説明這一點：一台家用電腦同步以太坊賬本需要數天，持續運行後對頻寬和存儲的佔用超出多數個人環境的承受範圍。行業數據顯示，約三分之一的以太坊節點託管在 AWS 上——這不是項目方偷懶，是個人網絡和硬件條件根本扛不住。</p>
+                    <p><strong>Web3 項目對雲服務的依賴不止於跑節點：</strong></p>
                     <ul>
-                        <li><strong>NFT 铸造</strong>：开盘瞬间流量从零暴涨至数万并发，本地伺服器无法响应这种瞬时压力</li>
-                        <li><strong>DeFi 協議</strong>：需要 24/7 高可用架構和跨區域灾备</li>
-                        <li><strong>链上數據分析</strong>：區塊鏈數據以 TB 级增长，分析处理必须在雲端完成</li>
-                        <li><strong>交易所</strong>：全球用戶需要低延迟访问，必须依赖多區域部署</li>
+                        <li><strong>NFT 鑄造</strong>：開盤瞬間流量從零暴漲至數萬併發，本地伺服器無法響應這種瞬時壓力</li>
+                        <li><strong>DeFi 協議</strong>：需要 24/7 高可用架構和跨區域災備</li>
+                        <li><strong>鏈上數據分析</strong>：區塊鏈數據以 TB 級增長，分析處理必須在雲端完成</li>
+                        <li><strong>交易所</strong>：全球用户需要低延遲訪問，必須依賴多區域部署</li>
                     </ul>
-                    <p><strong>发展方向：</strong>将 Web3 基礎设施部署标准化，用 Docker 和自動化脚本实现區塊鏈節點的一键部署、自动監控与故障恢復。同时搭建从節點同步到數據清洗、入库、可视化的完整數據管道。</p>
+                    <p><strong>發展方向：</strong>將 Web3 基礎設施部署標準化，用 Docker 和自動化腳本實現區塊鏈節點的一鍵部署、自動監控與故障恢復。同時搭建從節點同步到數據清洗、入庫、可視化的完整數據管道。</p>
                 </div>
                 <div class="cap-chips">
                     <span class="stack-chip">Docker 容器化</span>
-                    <span class="stack-chip">SSH 远程管理</span>
+                    <span class="stack-chip">SSH 遠程管理</span>
                     <span class="stack-chip">命令行</span>
-                    <span class="stack-chip">網絡诊断</span>
-                    <span class="stack-chip">跨平台系统精通</span>
+                    <span class="stack-chip">網絡診斷</span>
+                    <span class="stack-chip">跨平台系統精通</span>
                 </div>
             </div>
         </div>
@@ -341,24 +341,24 @@
     <div id="business-case" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1000&q=80')">
         <div class="block-inner">
             <div class="section-card">
-                <h2>技術说话，账本做决定</h2>
-                <p class="block-subtitle">选择雲服務背后的商業邏輯</p>
+                <h2>技術説話，賬本做決定</h2>
+                <p class="block-subtitle">選擇雲服務背後的商業邏輯</p>
                 <div class="content-text-card">
-                    <p>从商業角度审视雲服務，價值比技術层面更清晰：</p>
+                    <p>從商業角度審視雲服務，價值比技術層面更清晰：</p>
                     <ul>
-                        <li><strong>改变成本结构</strong>：固定資產投入转为按需运营支出。资金配置更灵活，现金流压力更小。</li>
-                        <li><strong>压缩交付周期</strong>：基礎设施不再成为交付瓶頸。从新服務上線到全球部署，时间单位从月缩短到天。</li>
-                        <li><strong>释放团队产能</strong>：運維基礎设施的人力成本往往是隐性却最高的。将这部分工作外包给雲廠商，团队可专注于构建核心業務。</li>
-                        <li><strong>打开市場范围</strong>：全球部署能力让小团队也能服務全球用戶。市場边界不再受基礎设施限制。</li>
-                        <li><strong>SaaS/MaaS 的商業模式</strong>：订阅制服務、按量计费的模型天然依赖雲基礎设施。如果業務方向是提供可調用的服務，雲是唯一的可行路径。</li>
+                        <li><strong>改變成本結構</strong>：固定資產投入轉為按需運營支出。資金配置更靈活，現金流壓力更小。</li>
+                        <li><strong>壓縮交付週期</strong>：基礎設施不再成為交付瓶頸。從新服務上線到全球部署，時間單位從月縮短到天。</li>
+                        <li><strong>釋放團隊產能</strong>：運維基礎設施的人力成本往往是隱性卻最高的。將這部分工作外包給雲廠商，團隊可專注於構建核心業務。</li>
+                        <li><strong>打開市場範圍</strong>：全球部署能力讓小團隊也能服務全球用户。市場邊界不再受基礎設施限制。</li>
+                        <li><strong>SaaS/MaaS 的商業模式</strong>：訂閲制服務、按量計費的模型天然依賴雲基礎設施。如果業務方向是提供可調用的服務，雲是唯一的可行路徑。</li>
                     </ul>
-                    <p>技術能力、商業判断、市場理解——三个方向相互支撑。雲服務的落地既需要技術理解，也需要商業语言将其转化为決定依据。</p>
+                    <p>技術能力、商業判斷、市場理解——三個方向相互支撐。雲服務的落地既需要技術理解，也需要商業語言將其轉化為決定依據。</p>
                 </div>
                 <div class="cap-chips">
                     <span class="stack-chip">品牌策略</span>
                     <span class="stack-chip">客户洞察</span>
-                    <span class="stack-chip">数字化转型落地</span>
-                    <span class="stack-chip">商業判断力</span>
+                    <span class="stack-chip">數字化轉型落地</span>
+                    <span class="stack-chip">商業判斷力</span>
                     <span class="stack-chip">市場策略</span>
                 </div>
             </div>
@@ -366,8 +366,8 @@
     </div>
 
         <div class="link-card">
-            <p>从能力到實踐，看真实市場案例</p>
-            <a class="default-btn" href="/zh-cn/mkt.html">探索市場学 →</a>
+            <p>從能力到實踐，看真實市場案例</p>
+            <a class="default-btn" href="/zh-hk/mkt.html">探索市場學 →</a>
         </div>
     </div>
 

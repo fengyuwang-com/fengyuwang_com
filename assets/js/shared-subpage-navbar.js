@@ -21,6 +21,15 @@
       cases: 'Marketing',
       portfolio: 'Tech',
       investment: 'Investment',
+      art: 'Art',
+      artPainting: 'Painting & Sculpture',
+      artArchitecture: 'Architecture & Garden',
+      artMusic: 'Music',
+      artLiterature: 'Literature',
+      artDesign: 'Design',
+      artSculpture: 'Sculpture',
+      artFilm: 'Film & Narrative',
+      ethos: 'Ethos',
       blog: 'Blog',
       blogArticles: 'Blog & Articles',
       language: 'Language',
@@ -30,10 +39,26 @@
       casesHref: '/en/mkt.html',
       portfolioHref: '/en/portfolio.html',
       investmentHref: '/en/invest.html',
+      artHref: '/en/art.html',
+      artPaintingHref: '/en/art-painting.html',
+      artArchitectureHref: '/en/art-architecture.html',
+      artMusicHref: '/en/art-music.html',
+      artLiteratureHref: '/en/art-literature.html',
+      artDesignHref: '/en/art-design.html',
+      artSculptureHref: '/en/art-sculpture.html',
+      artFilmHref: '/en/art-film.html',
+      ethosHref: '/en/ethos.html',
+      ethosPart1: 'To be continued.',
+      ethosPart2: 'The Journey',
+      ethosPart3: 'Work Philosophy',
+      ethosPart4: 'Tech & Ethics',
+      ethosPart5: 'Three Relationships',
+      ethosPart6: 'East Meets West',
+      ethosPart7: 'Unfit',
       blogHref: '/en/blog/',
       pd5: '5DT-PD Framework',
       pd5Href: '/en/5dt-pd.html',
-      web3: 'Web3 Research',
+      web3: 'Web3',
       web3Href: '/en/web3.html',
       web3Part1: 'Core & Logic',
       web3Part2: 'Regulation & Compliance',
@@ -44,6 +69,8 @@
       web3Part7: 'Summary',
       ai: 'AI',
       aiHref: '/en/ai.html',
+      automation: 'Automation',
+      automationHref: '/en/automation.html',
       cloud: 'Cloud',
       cloudHref: '/en/cloud.html'
     },
@@ -59,6 +86,15 @@
       cases: '\u5e02\u573a\u5b66',
       portfolio: '\u6280\u672f',
       investment: '\u6295\u8d44',
+      art: '\u827a\u672f',
+      artPainting: '\u7ed8\u753b\u4e0e\u96d5\u5851',
+      artArchitecture: '\u5efa\u7b51\u4e0e\u56ed\u6797',
+      artMusic: '\u97f3\u4e50',
+      artLiterature: '\u6587\u5b66',
+      artDesign: '\u8bbe\u8ba1',
+      artSculpture: '\u96d5\u5851',
+      artFilm: '\u7535\u5f71\u4e0e\u53d9\u4e8b',
+      ethos: '\u7406\u5ff5',
       blog: '\u535a\u5ba2',
       blogArticles: '\u535a\u5ba2\u4e0e\u6587\u7ae0',
       language: '\u8bed\u8a00',
@@ -68,10 +104,26 @@
       casesHref: '/zh-cn/mkt.html',
       portfolioHref: '/zh-cn/portfolio.html',
       investmentHref: '/zh-cn/invest.html',
+      artHref: '/zh-cn/art.html',
+      artPaintingHref: '/zh-cn/art-painting.html',
+      artArchitectureHref: '/zh-cn/art-architecture.html',
+      artMusicHref: '/zh-cn/art-music.html',
+      artLiteratureHref: '/zh-cn/art-literature.html',
+      artDesignHref: '/zh-cn/art-design.html',
+      artSculptureHref: '/zh-cn/art-sculpture.html',
+      artFilmHref: '/zh-cn/art-film.html',
+      ethosHref: '/zh-cn/ethos.html',
+      ethosPart1: '未完。',
+      ethosPart2: '来路',
+      ethosPart3: '工作观',
+      ethosPart4: '技术与伦理',
+      ethosPart5: '三对关系',
+      ethosPart6: '中西合璧',
+      ethosPart7: '致不该来的人',
       blogHref: '/zh-cn/blog/',
       pd5: '5DT-PD\u65b9\u6cd5\u6846\u67b6',
       pd5Href: '/zh-cn/5dt-pd.html',
-      web3: 'Web3\u4e13\u9898',
+      web3: 'Web3',
       web3Href: '/zh-cn/web3.html',
       web3Part1: '\u6838\u5fc3\u672c\u8d28\u4e0e\u5e95\u5c42\u903b\u8f91',
       web3Part2: '\u76d1\u7ba1\u4f53\u7cfb\u4e0e\u5408\u89c4',
@@ -82,6 +134,8 @@
       web3Part7: '\u8ba4\u77e5\u6c47\u603b',
       ai: 'AI \u5de5\u7a0b',
       aiHref: '/zh-cn/ai.html',
+      automation: '\u81ea\u52a8\u5316',
+      automationHref: '/zh-cn/automation.html',
       cloud: '\u4e91\u670d\u52a1',
       cloudHref: '/zh-cn/cloud.html'
     },
@@ -97,6 +151,15 @@
       cases: '\u5e02\u5834\u5b78',
       portfolio: '\u6280\u8853',
       investment: '\u6295\u8cc7',
+      art: '\u85dd\u8853',
+      artPainting: '\u7e6a\u756b\u8207\u96d5\u5851',
+      artArchitecture: '\u5efa\u7bc9\u8207\u5712\u6797',
+      artMusic: '\u97f3\u6a02',
+      artLiterature: '\u6587\u5b78',
+      artDesign: '\u8a2d\u8a08',
+      artSculpture: '\u96d5\u5851',
+      artFilm: '\u96fb\u5f71\u8207\u6558\u4e8b',
+      ethos: '\u7406\u5ff5',
       blog: '\u535a\u5ba2',
       blogArticles: '\u535a\u5ba2\u8207\u6587\u7ae0',
       language: '\u8a9e\u8a00',
@@ -106,10 +169,26 @@
       casesHref: '/zh-hk/mkt.html',
       portfolioHref: '/zh-hk/portfolio.html',
       investmentHref: '/zh-hk/invest.html',
+      artHref: '/zh-hk/art.html',
+      artPaintingHref: '/zh-hk/art-painting.html',
+      artArchitectureHref: '/zh-hk/art-architecture.html',
+      artMusicHref: '/zh-hk/art-music.html',
+      artLiteratureHref: '/zh-hk/art-literature.html',
+      artDesignHref: '/zh-hk/art-design.html',
+      artSculptureHref: '/zh-hk/art-sculpture.html',
+      artFilmHref: '/zh-hk/art-film.html',
+      ethosHref: '/zh-hk/ethos.html',
+      ethosPart1: '未完。',
+      ethosPart2: '來路',
+      ethosPart3: '工作觀',
+      ethosPart4: '技術與倫理',
+      ethosPart5: '三對關係',
+      ethosPart6: '中西合璧',
+      ethosPart7: '致不應該來的人',
       blogHref: '/zh-hk/blog/',
       pd5: '5DT-PD\u65b9\u6cd5\u67b6\u69cb',
       pd5Href: '/zh-hk/5dt-pd.html',
-      web3: 'Web3\u5c08\u984c',
+      web3: 'Web3',
       web3Href: '/zh-hk/web3.html',
       web3Part1: '\u6838\u5fc3\u672c\u8cea\u8207\u5e95\u5c64\u908f\u8f2f',
       web3Part2: '\u76e3\u7ba1\u9ad4\u7cfb\u8207\u5408\u898f',
@@ -120,6 +199,8 @@
       web3Part7: '\u8a8d\u77e5\u5f59\u7e3d',
       ai: 'AI \u5de5\u7a0b',
       aiHref: '/zh-hk/ai.html',
+      automation: '\u81ea\u52d5\u5316',
+      automationHref: '/zh-hk/automation.html',
       cloud: '\u96f2\u670d\u52d9',
       cloudHref: '/zh-hk/cloud.html'
     }
@@ -131,9 +212,19 @@ var labels = copy[lang];
     cases: { en: copy.en.casesHref, zhCn: copy['zh-cn'].casesHref, zhHk: copy['zh-hk'].casesHref },
     portfolio: { en: copy.en.portfolioHref, zhCn: copy['zh-cn'].portfolioHref, zhHk: copy['zh-hk'].portfolioHref },
     investment: { en: copy.en.investmentHref, zhCn: copy['zh-cn'].investmentHref, zhHk: copy['zh-hk'].investmentHref },
+    art: { en: copy.en.artHref, zhCn: copy['zh-cn'].artHref, zhHk: copy['zh-hk'].artHref },
+    artPainting: { en: copy.en.artPaintingHref, zhCn: copy['zh-cn'].artPaintingHref, zhHk: copy['zh-hk'].artPaintingHref },
+    artArchitecture: { en: copy.en.artArchitectureHref, zhCn: copy['zh-cn'].artArchitectureHref, zhHk: copy['zh-hk'].artArchitectureHref },
+    artMusic: { en: copy.en.artMusicHref, zhCn: copy['zh-cn'].artMusicHref, zhHk: copy['zh-hk'].artMusicHref },
+    artLiterature: { en: copy.en.artLiteratureHref, zhCn: copy['zh-cn'].artLiteratureHref, zhHk: copy['zh-hk'].artLiteratureHref },
+    artDesign: { en: copy.en.artDesignHref, zhCn: copy['zh-cn'].artDesignHref, zhHk: copy['zh-hk'].artDesignHref },
+    artSculpture: { en: copy.en.artSculptureHref, zhCn: copy['zh-cn'].artSculptureHref, zhHk: copy['zh-hk'].artSculptureHref },
+    artFilm: { en: copy.en.artFilmHref, zhCn: copy['zh-cn'].artFilmHref, zhHk: copy['zh-hk'].artFilmHref },
+    ethos: { en: copy.en.ethosHref, zhCn: copy['zh-cn'].ethosHref, zhHk: copy['zh-hk'].ethosHref },
     web3: { en: copy.en.web3Href, zhCn: copy['zh-cn'].web3Href, zhHk: copy['zh-hk'].web3Href },
     pd5: { en: copy.en.pd5Href, zhCn: copy['zh-cn'].pd5Href, zhHk: copy['zh-hk'].pd5Href },
     ai: { en: copy.en.aiHref, zhCn: copy['zh-cn'].aiHref, zhHk: copy['zh-hk'].aiHref },
+    automation: { en: copy.en.automationHref, zhCn: copy['zh-cn'].automationHref, zhHk: copy['zh-hk'].automationHref },
     cloud: { en: copy.en.cloudHref, zhCn: copy['zh-cn'].cloudHref, zhHk: copy['zh-hk'].cloudHref },
     blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
   };
@@ -203,7 +294,7 @@ var labels = copy[lang];
       '.shared-subpage-nav .mobile-social { padding: 12px 12px 20px; }',
 
       /* ---- Mobile panel portal (body-level backdrop-filter) ---- */
-      '#mobile-panel-portal { position: fixed; top: 44px; left: 0; right: 0; z-index: 9998; background: rgba(255,255,255,0.85); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); box-shadow: 0 18px 48px rgba(0,0,0,0.12); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease; }',
+      '#mobile-panel-portal { position: fixed; top: 44px; left: 0; right: 0; bottom: 0; z-index: 9998; overflow-y: auto; -webkit-overflow-scrolling: touch; background: rgba(255,255,255,0.85); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); box-shadow: 0 18px 48px rgba(0,0,0,0.12); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease; }',
       '#mobile-panel-portal.open { opacity: 1; pointer-events: auto; transform: translateY(0); }',
       '#mobile-panel-portal .shared-subpage-nav .mobile-panel { border-top: 1px solid rgba(0,0,0,.06); padding: 8px 20px 24px; }',
       '#mobile-panel-portal .mobile-link-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; }',
@@ -277,7 +368,10 @@ var labels = copy[lang];
     capabilities: section === 'capabilities' ? ' active' : '',
     cases: section === 'cases' || section === 'pd5' ? ' active' : '',
     portfolio: section === 'portfolio' ? ' active' : '',
+    automation: section === 'automation' ? ' active' : '',
     investment: section === 'investment' ? ' active' : '',
+    art: section === 'art' || section === 'art-painting' || section === 'art-sculpture' || section === 'art-architecture' || section === 'art-music' || section === 'art-literature' || section === 'art-design' || section === 'art-film' ? ' active' : '',
+    ethos: section === 'ethos' ? ' active' : '',
     blog: section === 'blog' ? ' active' : '',
   };
 
@@ -311,10 +405,36 @@ var labels = copy[lang];
     '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
     '            <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '            <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
+    '            <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
     '            <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
     '          </ul>',
     '        </li>',
     '        <li><a href="' + labels.investmentHref + '" class="' + active.investment.trim() + '">' + labels.investment + '</a></li>',
+    '        <li>',
+    '          <a href="' + labels.artHref + '" class="' + active.art.trim() + '">' + labels.art + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + labels.artHref + '">' + labels.art + '</a></li>',
+    '            <li><a href="' + labels.artPaintingHref + '">' + labels.artPainting + '</a></li>',
+    '            <li><a href="' + labels.artSculptureHref + '">' + labels.artSculpture + '</a></li>',
+    '            <li><a href="' + labels.artArchitectureHref + '">' + labels.artArchitecture + '</a></li>',
+    '            <li><a href="' + labels.artMusicHref + '">' + labels.artMusic + '</a></li>',
+    '            <li><a href="' + labels.artLiteratureHref + '">' + labels.artLiterature + '</a></li>',
+    '            <li><a href="' + labels.artDesignHref + '">' + labels.artDesign + '</a></li>',
+    '            <li><a href="' + labels.artFilmHref + '">' + labels.artFilm + '</a></li>',
+    '          </ul>',
+    '        </li>',
+    '        <li>',
+    '          <a href="' + labels.ethosHref + '" class="' + active.ethos.trim() + '">' + labels.ethos + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + labels.ethosHref + '#tbc">' + labels.ethosPart1 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#journey">' + labels.ethosPart2 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#work">' + labels.ethosPart3 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#tech-ethics">' + labels.ethosPart4 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#relations">' + labels.ethosPart5 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#east-west">' + labels.ethosPart6 + '</a></li>',
+    '            <li><a href="' + labels.ethosHref + '#unfit">' + labels.ethosPart7 + '</a></li>',
+    '          </ul>',
+    '        </li>',
     '        <li><a href="' + labels.blogHref + '" class="' + active.blog.trim() + '">' + labels.blog + '</a></li>',
         '        <li>',
         '          <a href="#">' + labels.sites + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
@@ -370,7 +490,40 @@ var labels = copy[lang];
     '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
     '          <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '          <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
+    '          <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
     '          <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
+    '        </ul>',
+    '      </li>',
+    '      <li><a class="mobile-link' + active.investment + '" href="' + labels.investmentHref + '">' + labels.investment + '</a></li>',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row" data-toggle-submenu>',
+    '          <a class="mobile-link' + active.art + '" href="' + labels.artHref + '" onclick="event.stopPropagation()">' + labels.art + '</a>',
+    '          <span class="mobile-caret"></span>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.artHref + '">' + labels.art + '</a></li>',
+    '          <li><a href="' + labels.artPaintingHref + '">' + labels.artPainting + '</a></li>',
+    '          <li><a href="' + labels.artSculptureHref + '">' + labels.artSculpture + '</a></li>',
+    '          <li><a href="' + labels.artArchitectureHref + '">' + labels.artArchitecture + '</a></li>',
+    '          <li><a href="' + labels.artMusicHref + '">' + labels.artMusic + '</a></li>',
+    '          <li><a href="' + labels.artLiteratureHref + '">' + labels.artLiterature + '</a></li>',
+    '          <li><a href="' + labels.artDesignHref + '">' + labels.artDesign + '</a></li>',
+    '          <li><a href="' + labels.artFilmHref + '">' + labels.artFilm + '</a></li>',
+    '        </ul>',
+    '      </li>',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row" data-toggle-submenu>',
+    '          <a class="mobile-link' + active.ethos + '" href="' + labels.ethosHref + '" onclick="event.stopPropagation()">' + labels.ethos + '</a>',
+    '          <span class="mobile-caret"></span>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.ethosHref + '#tbc">' + labels.ethosPart1 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#journey">' + labels.ethosPart2 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#work">' + labels.ethosPart3 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#tech-ethics">' + labels.ethosPart4 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#relations">' + labels.ethosPart5 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#east-west">' + labels.ethosPart6 + '</a></li>',
+    '          <li><a href="' + labels.ethosHref + '#unfit">' + labels.ethosPart7 + '</a></li>',
     '        </ul>',
     '      </li>',
     '      <li><a class="mobile-link' + active.blog + '" href="' + labels.blogHref + '">' + labels.blog + '</a></li>',
@@ -407,8 +560,8 @@ var labels = copy[lang];
     cs.id = 'shared-nav-caret-style';
         cs.textContent = [
       '.shared-subpage-nav .mobile-caret, #mobile-panel-portal .mobile-caret { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex: 0 0 auto; position: relative; }',
-      '.shared-subpage-nav .mobile-caret::before, #mobile-panel-portal .mobile-caret::before { content: "+"; font-size: 22px; font-weight: 300; color: #6e6e73; transition: transform 0.25s ease, color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; line-height: 1; margin-top: 1px; }',
-      '.shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { content: "\u2212"; font-size: 22px; font-weight: 300; color: #0071e3; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }',
+      '.shared-subpage-nav .mobile-caret::before, #mobile-panel-portal .mobile-caret::before { content: ""; display: block; width: 8px; height: 8px; border-right: 2px solid #6e6e73; border-bottom: 2px solid #6e6e73; transform: rotate(45deg); transition: transform 0.25s ease, border-color 0.2s ease; }',
+      '.shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { transform: rotate(225deg); border-color: #0071e3; }',
       'body[data-theme="dark"] .shared-subpage-nav .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-caret::before { color: #86868b; }',
       'body[data-theme="dark"] .shared-subpage-nav .mobile-item.open > .mobile-link-row .mobile-caret::before, body[data-theme="dark"] #mobile-panel-portal .mobile-item.open > .mobile-link-row .mobile-caret::before { color: #2997ff; }',
     ].join('');
@@ -470,32 +623,50 @@ var labels = copy[lang];
     portal.appendChild(pw);
   }
   var portalWrap = portal.querySelector('.sp-wrap');
-  Array.prototype.forEach.call(nav.querySelectorAll('.desktop-menu > li'), function (li) {
+  var closeTimer = null;
+  var fadeTimer = null;
+
+  function showPortal(li) {
     var sub = li.querySelector('.submenu');
     if (!sub) return;
-    var t;
-    function sp() {
-      var r = li.getBoundingClientRect();
-      portalWrap.innerHTML = sub.innerHTML;
-      portal.style.top = (r.bottom + 4) + 'px';
-      portal.style.left = (r.left + r.width / 2) + 'px';
-      portal.style.transform = 'translateX(-50%)';
-      portalWrap.style.opacity = '0';
-      portalWrap.style.transform = 'translateY(-6px)';
-      portal.classList.add('active');
-      portalWrap.getBoundingClientRect();
-      portalWrap.style.opacity = '1';
-      portalWrap.style.transform = 'translateY(0)';
-    }
-    function hp() {
-      portalWrap.style.opacity = '0';
-      portalWrap.style.transform = 'translateY(-6px)';
-      setTimeout(function(){portal.classList.remove('active')},200);
-    }
-    li.addEventListener('mouseenter',function(){clearTimeout(t);sp()});
-    li.addEventListener('mouseleave',function(){t=setTimeout(hp,100)});
-    portal.addEventListener('mouseenter',function(){clearTimeout(t)});
-    portal.addEventListener('mouseleave',function(){t=setTimeout(hp,100)});
+    if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
+    var r = li.getBoundingClientRect();
+    portalWrap.innerHTML = sub.innerHTML;
+    portal.style.top = (r.bottom + 4) + 'px';
+    portal.style.left = (r.left + r.width / 2) + 'px';
+    portal.style.transform = 'translateX(-50%)';
+    portalWrap.style.opacity = '0';
+    portalWrap.style.transform = 'translateY(-6px)';
+    portal.classList.add('active');
+    portalWrap.getBoundingClientRect();
+    portalWrap.style.opacity = '1';
+    portalWrap.style.transform = 'translateY(0)';
+  }
+  function hidePortal() {
+    portalWrap.style.opacity = '0';
+    portalWrap.style.transform = 'translateY(-6px)';
+    fadeTimer = setTimeout(function(){
+      portal.classList.remove('active');
+      fadeTimer = null;
+    },200);
+  }
+
+  Array.prototype.forEach.call(nav.querySelectorAll('.desktop-menu > li'), function (li) {
+    if (!li.querySelector('.submenu')) return;
+    li.addEventListener('mouseenter', function(){
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      showPortal(li);
+    });
+    li.addEventListener('mouseleave', function(){
+      closeTimer = setTimeout(hidePortal, 300);
+    });
+  });
+
+  portal.addEventListener('mouseenter', function(){
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+  });
+  portal.addEventListener('mouseleave', function(){
+    closeTimer = setTimeout(hidePortal, 300);
   });
 
   // ---- Mobile: click on row toggles submenu (query from body-level portal) ----

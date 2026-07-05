@@ -1,525 +1,156 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#0f172a">
-    <meta name="format-detection" content="telephone=no">
-    <title>Web3 Deep Research & Analysis | Fengyu WANG</title>
-    <meta name="description" content="A comprehensive deep-dive into the Web3 industry—core concepts, regulatory frameworks, business value, enterprise adoption strategies, and five in-depth research topics.">
-    <meta name="keywords" content="Web3, blockchain, stablecoin, RWA, AI+Web3, on-chain trading, cryptocurrency, Hong Kong Stablecoin Ordinance, decentralization, DeFi">
-    <meta name="author" content="王丰羽">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="/en/web3.html">
-    <link rel="alternate" hreflang="en" href="/en/web3.html">
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/web3.html">
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/web3.html">
-    <meta property="og:site_name" content="Fengyu WANG">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Web3 Deep Research & Analysis | Fengyu WANG">
-    <meta property="og:description" content="A systematic analysis of Web3's essence, development logic, regulatory systems, business value, and future trends, covering five core research topics.">
-    <meta property="og:url" content="/en/web3.html">
-    <meta property="og:image" content="/assets/img/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../assets/img/logo.png">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/animate.min.css">
-    <link rel="stylesheet" href="../assets/css/meanmenu.css">
-    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    <style>
-        .web3-article { padding: 52px 0 80px; background: linear-gradient(180deg, #f8fbff 0%, #ffffff 28%, #f8fafc 100%); }
-        .article-hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #1a0a0a 0%, #991b1b 58%, #ef4444 100%); border-radius: 32px; padding: 48px; margin-bottom: 32px; color: #fff; box-shadow: 0 24px 64px rgba(15,23,42,.18); text-align: center; }
-        .article-hero::before, .article-hero::after { content: ''; position: absolute; border-radius: 999px; background: rgba(255,255,255,.08); }
-        .article-hero::before { width: 320px; height: 320px; right: -90px; top: -100px; }
-        .article-hero::after { width: 220px; height: 220px; left: -80px; bottom: -100px; }
-        .hero-kicker { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.14); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin: 0 auto 16px; }
-        .article-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 14px; position: relative; z-index: 1; text-align: center; }
-        .article-hero .subtitle { color: rgba(255,255,255,.88); font-size: 1.05rem; line-height: 1.8; max-width: 860px; position: relative; z-index: 1; margin: 0 auto; text-align: center; }
-        .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; position: relative; z-index: 1; }
-        .hero-tags span { display: inline-flex; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: 12px; font-weight: 700; }
-        
-
-
-        .article-block { background: #fff; border: 1px solid rgba(148,163,184,.14); border-radius: 24px; padding: 36px; margin-bottom: 28px; box-shadow: 0 12px 34px rgba(15,23,42,.08); }
-        .article-block h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 18px; color: #0f172a; padding-bottom: 12px; border-bottom: 3px solid #dc2626; }
-        .article-block h3 { font-size: 1.25rem; font-weight: 700; margin: 24px 0 12px; color: #1e293b; }
-        .article-block h4 { font-size: 1.08rem; font-weight: 700; margin: 18px 0 10px; color: #334155; }
-        .article-block p { color: #374151; line-height: 1.95; margin-bottom: 14px; font-size: 1rem; }
-        .article-block ul, .article-block ol { margin: 0 0 14px; padding-left: 22px; color: #374151; line-height: 1.9; }
-        .article-block ul li + li, .article-block ol li + li { margin-top: 6px; }
-        .article-block ul ul, .article-block ol ul { margin: 4px 0 6px; }
-        .article-block strong { color: #0f172a; }
-        .highlight-box { background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%); border-left: 4px solid #dc2626; border-radius: 16px; padding: 20px 24px; margin: 18px 0; }
-        .highlight-box p { margin-bottom: 0; }
-        .highlight-box strong { color: #b91c1c; }
-
-        .section-divider { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(220,38,38,.2), transparent); margin: 32px 0; }
-        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px; border-radius: 50%; background: #dc2626; color: #fff; border: none; box-shadow: 0 8px 24px rgba(220,38,38,.3); cursor: pointer; font-size: 20px; display: none; align-items: center; justify-content: center; z-index: 999; transition: opacity .2s; }
-        .back-to-top.show { display: flex; }
-        .back-to-top:hover { background: #b91c1c; }        body[data-theme="dark"] .web3-article { background: linear-gradient(180deg, #020617 0%, #0f172a 42%, #020617 100%); }
-        body[data-theme="dark"] .article-block { background: #1e293b; border-color: rgba(148,163,184,.20); box-shadow: 0 16px 40px rgba(2,6,23,.34); }
-        body[data-theme="dark"] .article-block h2, body[data-theme="dark"] .article-block h3, body[data-theme="dark"] .article-block h4, body[data-theme="dark"] .article-block strong { color: #e5ecf4; }
-        body[data-theme="dark"] .article-block p, body[data-theme="dark"] .article-block ul, body[data-theme="dark"] .article-block ol { color: #cbd5e1; }
-        
-        body[data-theme="dark"] .highlight-box { background: linear-gradient(135deg, #2d0a0a 0%, #1e293b 100%); }
-        
-        @media (max-width: 991px) {
-            .web3-article { padding: 45px 0 60px; }
-            .article-hero { padding: 32px 24px; }
-            .article-hero h1 { font-size: 2rem; }
-            .article-block { padding: 24px 20px; }
-            .article-block h2 { font-size: 1.35rem; }
-            
-    
-        }body[data-theme="dark"] .toc-sidebar { background: #111827; border-color: rgba(148,163,184,.14); box-shadow: 0 8px 32px rgba(2,6,23,.34); }
-        body[data-theme="dark"] .toc-title { color: #94a3b8; border-bottom-color: rgba(148,163,184,.14); }
-        body[data-theme="dark"] .toc-list a { color: #94a3b8; }
-        body[data-theme="dark"] .toc-list a:hover { color: #ef4444; background: rgba(239,68,68,.08); }
-        body[data-theme="dark"] .toc-active { color: #ef4444 !important; background: rgba(239,68,68,.08) !important; }
-        body[data-theme="dark"] .toc-drawer { background: #111827; }
-        body[data-theme="dark"] .toc-drawer-header { border-bottom-color: rgba(148,163,184,.14); }
-        body[data-theme="dark"] .toc-close { background: #1e293b; color: #e2e8f0; }
-        body[data-theme="dark"] .toc-close:hover { background: #334155; }
-        /* Responsive: hide sidebar on small screens */
-        @media (max-width: 1399px) { .toc-sidebar { display: none; } }
-        @media (min-width: 1400px) { .toc-mob-btn { display: none !important; } }
-    
-    
-        /* === TOC: Grid-based sidebar (desktop), drawer (mobile) === */
-        .toc-sidebar { display: none; } /* hidden on mobile by default */
-        .toc-title { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #64748b; padding: 0 18px 10px; border-bottom: 1px solid #e2e8f0; margin-bottom: 6px; }
-        .toc-list { list-style: none; padding: 0; margin: 0; }
-        .toc-list a { display: block; padding: 5px 18px; font-size: 12.5px; line-height: 1.45; color: #475569; text-decoration: none; transition: all .15s; border-left: 3px solid transparent; }
-        .toc-list a:hover { color: #dc2626; background: #fef2f2; border-left-color: #dc2626; }
-        .toc-h2 { font-weight: 700; padding-top: 7px; }
-        .toc-h2 + .toc-h3 { padding-top: 2px; }
-        .toc-h3 { padding-left: 32px !important; font-size: 11.5px; color: #64748b; }
-        .toc-active { color: #dc2626 !important; background: #fef2f2; border-left-color: #dc2626 !important; }
-        .toc-sidebar::-webkit-scrollbar { width: 4px; }
-        .toc-sidebar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        /* Desktop: CSS grid layout - TOC as right column */
-        @media (min-width: 1400px) {
-            .web3-article .container { max-width: 1480px; display: grid; grid-template-columns: 260px 1fr; gap: 0 44px; }
-            .web3-article .article-hero { grid-column: 1 / -1; }
-            .web3-article .toc-sidebar { grid-column: 1; grid-row: 2; }
-            .web3-article .article-block { grid-column: 2; }
-            .toc-sidebar { display: block !important; position: sticky; top: 100px; max-height: calc(100vh - 140px); overflow-y: auto; background: #fff; border: 1px solid rgba(148,163,184,.16); border-radius: 16px; padding: 18px 0; box-shadow: 0 8px 32px rgba(15,23,42,.1); }
-        }
-        /* Mobile TOC button */
-        .toc-mob-btn { display: none; position: fixed; right: 30px; bottom: 100px; width: 48px; height: 48px; border-radius: 50%; background: #dc2626; color: #fff; border: none; box-shadow: 0 8px 24px rgba(220,38,38,.3); cursor: pointer; z-index: 998; font-size: 20px; align-items: center; justify-content: center; transition: opacity .2s; }
-        .toc-mob-btn:hover { background: #b91c1c; }
-        @media (max-width: 1399px) { .toc-mob-btn { display: flex; } }
-        @media (min-width: 1400px) { .toc-mob-btn, .toc-overlay, .toc-drawer { display: none !important; } }
-        /* Mobile drawer */
-        .toc-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.45); z-index: 999; }
-        .toc-overlay.open { display: block; }
-        .toc-drawer { position: fixed; left: 0; top: 44px; bottom: 0; width: 280px; max-width: 80vw; background: #fff; z-index: 1000; transform: translateX(-100%); transition: transform .3s; overflow-y: auto; box-shadow: 4px 0 24px rgba(15,23,42,.15); }
-        .toc-drawer.open { transform: translateX(0); }
-        .toc-drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid #e2e8f0; }
-        .toc-drawer-header .toc-title { border-bottom: none; padding: 0; margin: 0; }
-        .toc-close { width: 32px; height: 32px; border: none; background: #f1f5f9; border-radius: 8px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; color: #334155; }
-        .toc-close:hover { background: #e2e8f0; }
-        .toc-drawer .toc-list a { padding: 8px 18px; font-size: 13px; }
-        .toc-drawer .toc-h3 { padding-left: 36px !important; font-size: 12px; }
-        /* Dark mode */
-body[data-theme="dark"] .toc-sidebar { background: #1e293b; border-color: rgba(148,163,184,.20); box-shadow: 0 8px 32px rgba(2,6,23,.34); }
-        body[data-theme="dark"] .toc-title { color: #94a3b8; border-bottom-color: rgba(148,163,184,.14); }
-        body[data-theme="dark"] .toc-list a { color: #94a3b8; }
-        body[data-theme="dark"] .toc-list a:hover { color: #ef4444; background: rgba(239,68,68,.08); }
-        body[data-theme="dark"] .toc-active { color: #ef4444 !important; background: rgba(239,68,68,.08) !important; }
-        body[data-theme="dark"] .toc-drawer { background: #1e293b; }
-        body[data-theme="dark"] .toc-drawer-header { border-bottom-color: rgba(148,163,184,.14); }
-        body[data-theme="dark"] .toc-close { background: #1e293b; color: #e2e8f0; }
-        body[data-theme="dark"] .toc-close:hover { background: #334155; }
-        /* Responsive table fix: reset grid for small screens */
-        @media (max-width: 1399.98px) {
-            .web3-article .container { display: block !important; max-width: inherit; }
-        }
-
-    </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Web3 Deep Research & Analysis | Fengyu WANG","url":"https://fengyuwang.com/en/web3.html"}</script> </head>
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#0f172a"><meta name="format-detection" content="telephone=no"><title>Web3 Research | Fengyu WANG</title><meta name="description" content="Systematic Web3 analysis: core essence (marketing narrative vs technology), global regulation (HK Stablecoin Ordinance), business value (Polymarket), enterprise entry strategy, and five deep research topics."><link rel="canonical" href="/en/web3.html"><link rel="alternate" hreflang="en" href="/en/web3.html"><link rel="alternate" hreflang="zh-CN" href="/zh-cn/web3.html"><link rel="alternate" hreflang="zh-HK" href="/zh-hk/web3.html"><meta property="og:title" content="Web3 Research | Fengyu WANG"><meta property="og:url" content="https://fengyuwang.com/en/web3.html"><meta property="og:image" content="/assets/img/logo.png"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="icon" type="image/png" href="../assets/img/logo.png"><link rel="stylesheet" href="../assets/css/bootstrap.min.css"><link rel="stylesheet" href="../assets/css/animate.min.css"><link rel="stylesheet" href="../assets/css/meanmenu.css"><link rel="stylesheet" href="../assets/css/fontawesome.min.css"><link rel="stylesheet" href="../assets/css/magnific-popup.min.css"><link rel="stylesheet" href="../assets/css/owl.carousel.min.css"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/responsive.css"><style>html{scroll-behavior:smooth}.page-wrap{background:#ffffff}.marketing-hero{text-align:center;padding:52px 0 40px}.marketing-hero h1{font-size:3rem;font-weight:800;margin-bottom:10px;color:#0f172a}.marketing-hero p{color:#64748b;font-size:1.1rem;line-height:1.8;max-width:640px;margin:0 auto}.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:0 0 48px}.mkt-card{position:relative;border-radius:18px;overflow:hidden;height:160px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;background-size:cover;background-position:center;box-shadow:0 20px 50px -8px rgba(0,0,0,0.22),0 8px 20px -6px rgba(0,0,0,0.12)}.mkt-card::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.7));pointer-events:none}.mkt-card .card-content{position:relative;z-index:1;padding:22px 20px 20px;color:#fff}.mkt-card .card-content h3{font-size:1.2rem;font-weight:800;margin-bottom:3px}.mkt-card .card-content p{font-size:.82rem;color:rgba(255,255,255,.82);margin-bottom:12px;line-height:1.45}.card-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#fff;font-size:.78rem;font-weight:600;padding:6px 14px;cursor:pointer;font-family:inherit;transition:background .2s;pointer-events:none}.content-block{position:relative;padding:44px 0 40px;margin-bottom:12px;background-color:#f5f5f7}.content-block:last-of-type{margin-bottom:0}.content-block.section-bg{background:var(--section-bg-img) center/cover no-repeat;background-color:#1e293b}.content-block.section-bg::after{content:'';position:absolute;inset:0;background:rgba(245,245,247,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);pointer-events:none}.content-block.section-bg .block-inner{position:relative;z-index:1}.section-card{background:rgba(255,255,255,.90);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:18px;padding:32px;border:1px solid rgba(148,163,184,.10);box-shadow:0 4px 16px rgba(15,23,42,.06)}.block-inner{max-width:720px;margin:0 auto;padding:0 24px}.block-inner h2{font-size:1.6rem;font-weight:800;color:#0f172a;margin-bottom:6px}.block-subtitle{font-size:1.02rem;color:#6b7280;line-height:1.7;margin-bottom:20px}.block-inner p{color:#475569;line-height:1.85;margin-bottom:14px;font-size:.97rem}.block-inner ul{margin:0;padding-left:18px;color:#475569;line-height:1.85;font-size:.93rem}.block-inner ul li+li{margin-top:5px}.content-text-card{background:#fff;border-radius:14px;padding:20px 24px;margin-bottom:18px;border:1px solid rgba(148,163,184,.10);box-shadow:0 2px 8px rgba(15,23,42,.04)}.content-text-card p{margin-bottom:0}.content-text-card ul{margin:0;padding-left:18px;line-height:1.85;font-size:.97rem;color:#475569}.content-text-card ul li+li{margin-top:5px}.content-text-card:last-child{margin-bottom:0}.content-text-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#0f172a}.link-card{text-align:center;padding:48px 0 72px}.link-card p{color:#6b7280;margin-bottom:12px}.link-card .default-btn{min-width:200px}.cap-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.stack-chip{display:inline-flex;padding:5px 12px;border-radius:999px;background:rgba(15,23,42,.06);color:#1e293b;font-size:.78rem;font-weight:600;border:1px solid rgba(148,163,184,.14)}body[data-theme="dark"] .page-wrap{background:#0a0e1a}body[data-theme="dark"] .content-block{background-color:#111827}body[data-theme="dark"] .content-block.section-bg{background-color:#0a0e1a}body[data-theme="dark"] .content-block.section-bg::after{background:rgba(17,24,39,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}body[data-theme="dark"] .marketing-hero h1{color:#e5ecf4}body[data-theme="dark"] .marketing-hero p{color:#9fb0c3}body[data-theme="dark"] .mkt-card{border:0;background-color:#0a0e1a;box-shadow:0 20px 50px -8px rgba(0,0,0,0.35),0 8px 20px -6px rgba(0,0,0,0.2)}body[data-theme="dark"] .block-inner h2{color:#e5ecf4}body[data-theme="dark"] .block-subtitle{color:#94a3b8}body[data-theme="dark"] .block-inner p,body[data-theme="dark"] .block-inner ul{color:#9fb0c3}body[data-theme="dark"] .section-card{background:rgba(30,41,59,.90);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:rgba(148,163,184,.04);box-shadow:0 4px 16px rgba(0,0,0,.2)}body[data-theme="dark"] .content-text-card{background:#0f172a;border-color:rgba(148,163,184,.03)}body[data-theme="dark"] .content-text-card ul{color:#9fb0c3}body[data-theme="dark"] .content-text-card h3{color:#e5ecf4}body[data-theme="dark"] .stack-chip{background:rgba(148,163,184,.12);color:#e5ecf4;border-color:rgba(148,163,184,.10)}body[data-theme="dark"] .link-card p{color:#94a3b8}@media(max-width:991px){.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.marketing-hero{padding:36px 24px}.marketing-hero h1{font-size:2.4rem}.content-block{padding:36px 0 28px}.block-inner h2{font-size:1.4rem}}@media(max-width:599px){.card-grid{grid-template-columns:1fr}.marketing-hero{padding:28px 16px}.content-block{padding:28px 0 20px}.block-inner h2{font-size:1.25rem}}</style><style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}</style></head>
 <body>
-    <div id="shared-subpage-navbar" data-section="web3"></div>
-    <script src="../assets/js/shared-subpage-navbar.js"></script>
+<div id="shared-subpage-navbar" data-section="web3"></div>
+<script src="../assets/js/shared-subpage-navbar.js?v=26.07.05.15.00"></script>
+<div class="page-wrap">
+<div class="container">
+<div class="marketing-hero">
+<h1>Web3 Research</h1>
+<p>A systematic analysis of Web3: core essence, global regulation, business value, enterprise entry strategy, and five deep research topics — grounded in data and rigorous logic.</p>
+</div>
+<div class="card-grid">
 
-    <section class="web3-article">
-        <div class="container">
-            <!-- Hero -->
-            <div class="article-hero">
-                <span class="hero-kicker">Deep Research</span>
-                <h1>Web3 Deep Research & Analysis</h1>
-                <p class="subtitle">A comprehensive deep-dive into the Web3 industry: core concepts, substantive research, and practical strategic thinking. This article corrects common misconceptions, provides authoritative references, and strengthens analytical logic throughout—presenting rigorous arguments supported by solid evidence.</p>
-                <div class="hero-tags">
-                    <span>Web3</span>
-                    <span>Blockchain</span>
-                    <span>Stablecoin</span>
-                    <span>RWA</span>
-                    <span>AI+Web3</span>
-                    <span>On-Chain Trading</span>
-                    <span>Regulation & Compliance</span>
-                </div>
-            </div>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=600&q=80')" onclick="document.getElementById('essence').scrollIntoView({behavior:'smooth'})">
+<div class="card-content"><h3>Core Essence</h3><p>Marketing narrative — TPS data, 3 pain points, real demand vs hype</p><button class="card-btn">Learn More</button></div></div>
 
-            <!-- TOC: Desktop Sidebar -->
-            <aside class="toc-sidebar" id="tocSidebar">
-                <div class="toc-title">Table of Contents</div>
-                <ul class="toc-list" id="tocList"></ul>
-            </aside>
-            <!-- Part 1 -->
-            <div class="article-block">
-                <h2 id="part1">Part I: The Core Essence and Underlying Logic of Web3</h2>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1773433392027-2dff23126d86?w=600&q=80')" onclick="document.getElementById('regulation').scrollIntoView({behavior:'smooth'})">
+<div class="card-content"><h3>Global Regulation</h3><p>HK 2025 Stablecoin Ordinance, global divergence, dual-entity model</p><button class="card-btn">Learn More</button></div></div>
 
-                <h3 id="s1-1">1. Web3: Marketing Narrative First, Technological Innovation Second—Not an Internet Generational Disruption</h3>
-                <p>The industry commonly defines Web3 as the "third-generation internet," creating the perception of a linear upgrade from Web1 → Web2 → Web3. However, from a technical performance and architectural logic standpoint, this label is more of a successful marketing narrative than a purely technological iteration.</p>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?w=600&q=80')" onclick="document.getElementById('business').scrollIntoView({behavior:'smooth'})">
+<div class="card-content"><h3>Business Value</h3><p>Polymarket case study, enterprise "sell shovels" strategy</p><button class="card-btn">Learn More</button></div></div>
 
-                <h4>1.1 Transaction Performance Comparison (Backed by Authoritative Data)</h4>
-                <p>As the foundational layer of Web3, blockchain's <strong>concurrent processing capability is far weaker than Web2's centralized architecture</strong>. Bitcoin's underlying block design limits its TPS (transactions per second) to approximately <strong>7 TPS</strong>; Ethereum, even after upgrades, still operates at only tens of TPS. In contrast, centralized payment systems like Alipay can handle peak TPS of hundreds of thousands, supporting nationwide concurrent requests.</p>
-                <p>From a technical perspective, Web3 is not a complete overhaul of Web2—they represent <strong>different technical paths</strong>: Web2 pursues efficiency, high concurrency, and strong control; Web3 pursues decentralization, transparency, and immutability. Each has its trade-offs, and there is no absolute "generational dominance."</p>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1765046255462-198d49d07dd1?w=600&q=80')" onclick="document.getElementById('research').scrollIntoView({behavior:'smooth'})">
+<div class="card-content"><h3>Deep Research</h3><p>Stablecoins vs Digital RMB, RWA legal bottleneck, AI+Web3</p><button class="card-btn">Learn More</button></div></div>
 
-                <h4>1.2 The Core Roots of Web3's Narrative Popularity</h4>
-                <p>Web3's rapid breakout can be attributed to how it precisely targets three major pain points that global users experience with Web2 centralized platforms—the foundation on which the marketing narrative has taken hold:</p>
-                <ul>
-                    <li><strong>Privacy Pain Point</strong>: Large internet platforms collect user data without boundaries, stripping users of data sovereignty;</li>
-                    <li><strong>Cost Pain Point</strong>: International payment processors like Visa and Mastercard typically charge 2%–3% transaction fees, keeping intermediary costs high;</li>
-                    <li><strong>Control Pain Point</strong>: Platforms monopolize traffic and service rules, leaving users and small businesses passively constrained.</li>
-                </ul>
-                <div class="highlight-box">
-                    <p><strong>Core Judgment:</strong> Web3 uses the value proposition of "decentralization" to address genuine unmet market demand. Marketing amplified the concept, but demand has sustained the industry's development.</p>
-                </div>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1650668300370-3ee2f17d1589?w=600&q=80')" onclick="document.getElementById('summary').scrollIntoView({behavior:'smooth'})">
+<div class="card-content"><h3>Trends &amp; Summary</h3><p>3 long-term tracks, 3 core challenges, 5 key takeaways</p><button class="card-btn">Learn More</button></div></div>
 
-                <h3 id="s1-2">2. The Underlying Reason for Web3's Popularity: Deconstructing Real User and Enterprise Needs</h3>
-                <p>Setting aside conceptual hype, all of Web3's business models and technological innovations revolve around real demand. These can be broken down into two dimensions: C-end user needs and B-end enterprise needs:</p>
-                <ul>
-                    <li><strong>C-end Core Needs</strong>: Privacy autonomy, freedom from platform monopolies, lower transaction fees, and cross-border transaction freedom;</li>
-                    <li><strong>B-end Core Needs</strong>: Improved cross-border settlement efficiency and cost reduction, digitalized asset circulation, tamper-proof supply chain/transaction data storage, and piloting innovative business models.</li>
-                </ul>
-                <p>Demand is the core driver of Web3's existence; technology is merely the tool to fulfill it. This is also the central criterion for judging whether a project has long-term value.</p>
-            </div>
+</div>
+</div>
 
-            <!-- Part 2 -->
-            <div class="article-block">
-                <h2 id="part2">Part II: Global Web3 Regulatory Systems and Compliance Research</h2>
+<div id="essence" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=1000&q=80')">
+<div class="block-inner"><div class="section-card">
+<h2>Marketing Narrative, Not a Generational Disruption</h2>
+<p class="block-subtitle">Web3 is a financial and organizational experiment built on blockchain — not a complete overhaul of the internet.</p>
+<div class="content-text-card">
+<h3>Far Weaker Concurrency Than Web2</h3>
+<p>Bitcoin peaks at ~7 TPS; Ethereum manages only tens of TPS. Centralized systems like Alipay handle hundreds of thousands of peak TPS. These are <strong>different technical paths</strong>: Web2 pursues efficiency and high concurrency; Web3 pursues decentralization and transparency. Each has trade-offs.</p>
+</div>
+<div class="content-text-card">
+<h3>Pain Points That Drive the Narrative</h3>
+<p>Web3 precisely targets three major pain points of Web2 platforms:</p>
+<ul>
+<li><strong>Privacy</strong>: Platforms collect user data without boundaries, stripping data sovereignty;</li>
+<li><strong>Cost</strong>: Visa and Mastercard charge 2–3% transaction fees, keeping intermediary costs high;</li>
+<li><strong>Control</strong>: Platforms monopolize traffic and rules, leaving users and small businesses passively constrained.</li>
+</ul>
+<p>What sustains the industry is genuine demand from both sides: <strong>consumers</strong> seeking privacy, lower fees, and cross-border transactions; <strong>enterprises</strong> needing efficient settlement, tamper-proof data notarization, and new business model pilots. Demand is the core of Web3's viability — technology is merely the tool to meet it.</p>
+</div>
+</div></div></div>
 
-                <h3 id="s2-1">1. The Underlying Regulatory Consensus: Complete Decentralization Cannot Be Implemented in the Real World</h3>
-                <p>From legal, financial, and social governance perspectives, <strong>absolute decentralization is not feasible</strong>. Unregulated anonymous transactions and decentralized transfers would become breeding grounds for telecom fraud, cross-border money laundering, underground banking, and illegal asset transfers.</p>
-                <p>Major international financial centers such as Hong Kong, the United States, and Singapore have a core mandate to maintain financial order and asset security. Therefore, regulating Web3 and cryptocurrencies is an inevitable choice—not an impediment to industry development. The core objective of regulation: <strong>eliminate gray-market industries, facilitate the entry of compliant players, and ensure that technology serves the real economy</strong>.</p>
+<div id="regulation" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1773433392027-2dff23126d86?w=1000&q=80')">
+<div class="block-inner"><div class="section-card">
+<h2>Full Decentralization Cannot Work in Reality</h2>
+<p class="block-subtitle">From both legal and financial perspectives, absolute decentralization is not practically viable.</p>
+<div class="content-text-card">
+<h3>Regulation Is Inevitable</h3>
+<p>Unregulated anonymous transactions become breeding grounds for telecom fraud, cross-border money laundering, and illegal asset transfers. The core goal of regulation is to <strong>eliminate grey industries, enable compliant players to enter, and let technology serve the real economy</strong>.</p>
+</div>
+<div class="content-text-card">
+<h3>HK 2025 Stablecoin Ordinance</h3>
+<ul>
+<li>Issuers must register with HKMA under a licensed regime; user data retained at least 6 years;</li>
+<li>Priority for <strong>USD and HKD</strong>-pegged stablecoins; RMB stablecoins face dual mainland-HK oversight with extremely high approval thresholds;</li>
+<li><strong>Short-term</strong>: weakens the "fully decentralized" label. <strong>Long-term</strong>: establishes a compliance framework enabling legitimate enterprises like JD.com to enter legally.</li>
+</ul>
+</div>
+<div class="content-text-card">
+<h3>Global Divergence and Enterprise Response</h3>
+<ul>
+<li><strong>Strict regulation</strong>: Hong Kong, US, Singapore — emphasizing licensing, KYC, AML;</li>
+<li><strong>Flexible regulation</strong>: Saudi Arabia, Dubai — low entry barriers, simplified KYC;</li>
+<li><strong>Standard model</strong>: Dual-entity offshore structure — HK entity for licensed business + offshore entity (Middle East) for global coverage.</li>
+</ul>
+</div>
+</div></div></div>
 
-                <h3 id="s2-2">2. Benchmark Policy: In-Depth Analysis of Hong Kong's 2025 Stablecoin Ordinance</h3>
-                <p>As Asia's benchmark for crypto asset regulation, Hong Kong's 2025 Stablecoin Ordinance represents a landmark policy shift from the industry's wild west toward standardization. Below is an organized summary of the core rules and impacts based on the official provisions:</p>
-                <h4>2.1 Core Regulatory Requirements</h4>
-                <ul>
-                    <li>Stablecoin issuers must register with the Hong Kong Monetary Authority (HKMA) and be brought under a licensed regulatory framework;</li>
-                    <li>User transaction and identity data must be retained for a minimum of 6 years;</li>
-                    <li>Priority is given to permitting the issuance and circulation of stablecoins <strong>pegged to the US dollar and Hong Kong dollar</strong>; renminbi-pegged stablecoins are subject to dual regulation by mainland China and Hong Kong, with extremely high approval thresholds—not completely banned, but subject to strict market access controls.</li>
-                </ul>
-                <h4>2.2 Dual Impact of the Policy</h4>
-                <ul>
-                    <li><strong>Short-term Impact</strong>: Weakened the industry's "fully decentralized" label; Hong Kong is no longer a regulation-free crypto asset free port;</li>
-                    <li><strong>Long-term Value</strong>: Establishes a clear compliance framework, allowing major legitimate enterprises like JD.com and traditional financial institutions to enter the space legally, completely isolating fraud and gray-market activities, and moving the industry toward formalization.</li>
-                </ul>
+<div id="business" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?w=1000&q=80')">
+<div class="block-inner"><div class="section-card">
+<h2>Old Wine in New Bottles? Value Returns to Real Scenarios</h2>
+<p class="block-subtitle">Web3 is rife with conceptual hype — the key is whether the project solves genuine pain points with new technology.</p>
+<div class="content-text-card">
+<h3>Polymarket: A Benchmark Case</h3>
+<ul>
+<li><strong>Model</strong>: Users predict real-world events (Fed rates, earnings, geopolitics) using stablecoins. Outcomes reflect collective global judgment — a real-time sentiment hub;</li>
+<li><strong>Evidence</strong>: Coca-Cola "beat expectations" probability consistently above 80% on Polymarket, enabling profitable stock positioning based on that signal;</li>
+<li><strong>Advantage</strong>: Information updates faster and market sentiment feedback is more direct than Bloomberg or Reuters.</li>
+</ul>
+</div>
+<div class="content-text-card">
+<h3>The "Sell Shovels" Strategy for Enterprises</h3>
+<ul>
+<li><strong>Infrastructure play</strong>: Traditional enterprises (telecom, SOEs) should provide cloud and node hosting for Web3 projects — minimal compliance risk;</li>
+<li><strong>Optimize existing operations</strong>: Distributed storage (user nodes as supplementary backup) and distributed computing (idle device compute for lightweight tasks);</li>
+<li><strong>Risk isolation</strong>: No crypto/NFT issuance, no C-end trading platforms. Use standard HTTPS + transport encryption — provide the network pipe only;</li>
+<li><strong>Tech basics</strong>: IPv6 is an address protocol (not a security feature), process vs thread, subnet mask, binary tree, scale-up vs scale-out.</li>
+</ul>
+</div>
+</div></div></div>
 
-                <h3 id="s2-3">3. Global Regulatory Divergence and Mainstream Enterprise Compliance Approaches</h3>
-                <p>Regulatory approaches toward Web3 and stablecoins vary significantly across global regions:</p>
-                <ul>
-                    <li><strong>Strict Regulatory Zones</strong>: Hong Kong, the United States, and Singapore emphasize licensing, KYC, fund traceability, and anti-money laundering;</li>
-                    <li><strong>Lax Regulatory Zones</strong>: Middle Eastern regions such as Saudi Arabia and Dubai offer flexible regulation, low entry barriers, and relatively simplified KYC requirements.</li>
-                </ul>
-                <p>In response to these differences, leading industry players commonly adopt a <strong>dual-entity offshore structure</strong> (an industry-standard compliance approach):</p>
-                <ol>
-                    <li>Hong Kong local entity: strictly complies with local regulations, conducts licensed and compliant business, serving legitimate enterprises and compliant users;</li>
-                    <li>Offshore entity (Middle East, etc.): adapts to local relaxed rules, provides full-feature services, meeting the needs of global business expansion.</li>
-                </ol>
-                <p>This model is the mainstream choice for cross-border Web3 enterprises seeking to balance compliance and business development.</p>
-            </div>
+<div id="research" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1765046255462-198d49d07dd1?w=1000&q=80')">
+<div class="block-inner"><div class="section-card">
+<h2>Five Deep Research Topics</h2>
+<p class="block-subtitle">Independent judgments on stablecoins, on-chain trading, RWA, AI+Web3, and marketing narrative.</p>
+<div class="content-text-card">
+<p><strong>Stablecoins vs Digital RMB</strong> — Digital RMB is a fully centralized CBDC outside Web3. Compliant stablecoins focus on cross-border settlement: SWIFT takes 3–7 days, stablecoins settle near-instantly. They serve fundamentally different use cases and are not substitutes.</p>
+<p><strong>On-chain Trading</strong> — True 24/7 settlement is the defining feature. US stocks have pre/after-hours sessions but weekend closure and thin liquidity. Real concerns include liquidity risk, flash crashes, and progressive regulatory crackdowns.</p>
+<p><strong>RWA (Real World Assets)</strong> — Enormous potential for fractional ownership of property, artwork, and bonds. But the bottleneck is not technological: on-chain "ownership shares" cannot map to offline legal title under existing law. Only enabling legislation can unlock scale.</p>
+<p><strong>AI + Web3</strong> — Decentralized AI inference nodes, on-chain AI trading assistants, and data-rights AI aim to break Big Tech's monopoly. However, distributed AI faces coordination difficulty and slow iteration — still far from mass adoption.</p>
+<p><strong>Marketing &amp; Narrative</strong> — "Web3 = next-generation internet" is a highly successful brand narrative. Distinguish <em>pure narrative projects</em> (no real application, short lifespan) from <em>value projects</em> (using narrative to address real demand). The promotional logic mirrors traditional marketing: identify pain points, craft value propositions, build narratives, validate with use cases.</p>
+</div>
+</div></div></div>
 
-            <!-- Part 3 -->
-            <div class="article-block">
-                <h2 id="part3">Part III: Web3 Business Value and Benchmark Cases</h2>
+<div id="summary" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1650668300370-3ee2f17d1589?w=1000&q=80')">
+<div class="block-inner"><div class="section-card">
+<h2>Trends and Global Takeaways</h2>
+<p class="block-subtitle">Three long-term tracks and five core conclusions.</p>
+<div class="content-text-card">
+<h3>Three Long-Term Tracks</h3>
+<ul>
+<li><strong>AI + Web3 convergence</strong>: Decentralized AI breaking Big Tech's monopoly; on-chain AI for smart contracts and risk monitoring;</li>
+<li><strong>Compliant stablecoins</strong>: On-chain finance gradually normalizing as a complement to traditional finance;</li>
+<li><strong>Real World Assets (RWA)</strong>: On-chain mapping of property and bonds for digital fractionalization.</li>
+</ul>
+</div>
+<div class="content-text-card">
+<h3>Three Core Challenges</h3>
+<ol>
+<li>Technical bottlenecks — mainstream blockchain concurrency cannot support mass commercial use;</li>
+<li>Fragmented global regulation raises cross-border compliance costs;</li>
+<li>Bubble risk — many projects lack real demand and viable business loops.</li>
+</ol>
+</div>
+<div class="content-text-card">
+<h3>Five Key Takeaways</h3>
+<ol>
+<li><strong>Essence</strong>: Web3 is a combination of value proposition, marketing narrative, and technical tools — not a generational upgrade;</li>
+<li><strong>Compliance</strong>: Full decentralization cannot work. Normalized regulation is the only path to industry maturity;</li>
+<li><strong>Business</strong>: All long-term valuable projects address real demand. Pure hype will inevitably die out;</li>
+<li><strong>Enterprise entry</strong>: Focus on infrastructure, strictly comply, use new tech to optimize existing operations;</li>
+<li><strong>Trends</strong>: AI+Web3, compliant stablecoins, and RWA are three long-term tracks requiring technology, law, and regulation to develop in tandem.</li>
+</ol>
+</div>
+</div></div></div>
 
-                <h3 id="s3-1">1. Industry Status Quo: Much "New Wine in Old Bottles"—Value Returns to Real-World Scenarios</h3>
-                <p>The Web3 space is rife with conceptual hype. Many models already existed in prototype form during the Web2 era; blockchain merely gives them a new technological shell. To assess project value, the key question is <strong>whether new technology solves real pain points in the original scenario</strong>.</p>
-
-                <h3 id="s3-2">2. Benchmark Case: Polymarket Prediction Market (Real-World Value and Empirical Analysis)</h3>
-                <p>Polymarket is a benchmark project with genuine practical value in the Web3 space. It builds a decentralized prediction market on crypto assets. Its core positioning is not gambling, but rather a <strong>real-time information hub for global market sentiment and expectations</strong>.</p>
-                <h4>2.1 Business Model</h4>
-                <p>Users participate in event prediction (Fed interest rate decisions, corporate earnings reports, international political events, etc.) using stablecoins. The aggregate betting results reflect the collective judgment of global participants in real time, generating highly valuable market insights.</p>
-                <h4>2.2 Real-World Value and Evidence</h4>
-                <p>The platform aggregates information from a vast number of market participants, yielding predictions with strong reference value. In one practical case, the platform showed a persistently high probability (&gt;80%) that Coca-Cola's earnings would "beat expectations." Acting on this signal and investing in the stock ahead of time ultimately generated positive returns.</p>
-                <h4>2.3 Core Advantages</h4>
-                <p>Compared with traditional information platforms like Bloomberg and Reuters, Polymarket's distributed participation model enables <strong>faster information updates and more direct market sentiment feedback</strong>, making it an effective complement to traditional data services.</p>
-            </div>
-
-            <!-- Part 4 -->
-            <div class="article-block">
-                <h2 id="part4">Part IV: Traditional Large Enterprises Entering Web3</h2>
-                <p>Taking a telecom operator like China Mobile or a large state-owned enterprise as an example, based on corporate attributes, compliance requirements, and core advantages, the determined strategy is <strong>"build infrastructure, not end-user applications"</strong>—the well-known "selling shovels" logic in the industry.</p>
-
-                <h3 id="s4-1">1. Core Enterprise Advantages</h3>
-                <ol>
-                    <li><strong>Infrastructure Advantage</strong>: Nationwide and global backbone networks with bandwidth costs far lower than those of ordinary cloud providers;</li>
-                    <li><strong>Cloud Service Capability</strong>: Mobile cloud offers large-scale storage, computing power, and node deployment capabilities;</li>
-                    <li><strong>Compliance Advantage</strong>: State-owned enterprise background with robust risk control and legal systems, capable of mitigating most compliance risks.</li>
-                </ol>
-
-                <h3 id="s4-2">2. Core Implementation Directions (Actionable, Low-Risk)</h3>
-                <h4>2.1 Providing Cloud and Node Hosting Services for Web3 Projects</h4>
-                <p>Following the proven model of AWS (which holds approximately 37% of the global Web3 cloud services market), provide computing power, storage, and server hosting for blockchain nodes and decentralized applications (DApps). This is an extension of traditional cloud services, does not touch cryptocurrency issuance or trading, and carries extremely low compliance risk.</p>
-                <h4>2.2 Leveraging Web3 Technology to Optimize Traditional Operations</h4>
-                <ul>
-                    <li><strong>Distributed Storage Optimization</strong>: Drawing on blockchain's distributed ledger and multi-node backup concepts, combined with user incentive mechanisms, activate the public's idle storage resources to supplement enterprise cloud storage, reducing data disaster recovery and operational costs.<br>
-                    <em>Note: User nodes serve only as auxiliary backups; core data remains stored in enterprise data centers, avoiding data loss from user device downtime or damage.</em></li>
-                    <li><strong>Distributed Computing Power Scheduling</strong>: Mobilize users' idle computing power for lightweight computation, data verification, and other scenarios, using points or rewards as incentives to reduce costs and improve efficiency.</li>
-                </ul>
-
-                <h3 id="s4-3">3. Risk Isolation Principles (Core Bottom Line for State-Owned Enterprises)</h3>
-                <ol>
-                    <li>Do not directly issue cryptocurrencies, stablecoins, NFTs, or other financial products;</li>
-                    <li>Do not operate C-end crypto asset trading platforms;</li>
-                    <li>Adopt <strong>transmission encryption + data isolation</strong> technical solutions: apply standard encryption (HTTPS, transport layer encryption protocols) to network transmission data. The operator provides only the network pipeline without touching upper-layer business content, achieving risk segmentation.</li>
-                </ol>
-
-                <h3 id="s4-4">4. Foundational Technical Concepts</h3>
-                <ul>
-                    <li><strong>IPv6</strong>: A <strong>network address protocol</strong> designed to expand the IP address pool. <strong>It does not inherently provide encryption</strong>; network encryption relies on dedicated protocols such as HTTPS and TLS;</li>
-                    <li><strong>Processes and Threads</strong>: A process is an independent program execution unit with its own memory space. A thread is an execution unit within a process, sharing the process's resources. Multi-threading enables parallel processing;</li>
-                    <li><strong>Subnet Mask</strong>: Used to divide the network and host portions of an IP address, distinguishing devices within the same local area network. It is a foundational concept in LAN networking;</li>
-                    <li><strong>Binary Tree</strong>: A classic data structure that, compared with sequential traversal, can significantly reduce search time and computational overhead, widely used in search and indexing scenarios;</li>
-                    <li><strong>Software Scalability</strong>: Includes Scale Up (vertical scaling—upgrading CPU/memory on a single server) and Scale Out (horizontal scaling—clustering multiple servers together). High-concurrency internet systems primarily rely on horizontal scaling.</li>
-                </ul>
-            </div>
-
-            <!-- Part 5 -->
-            <div class="article-block">
-                <h2 id="part5">Part V: Overall Web3 Development Trends, Opportunities, and Challenges</h2>
-
-                <h3>1. Mainstream Development Trends</h3>
-                <h4>1.1 Deep Integration of AI + Web3</h4>
-                <p>The combination of these two cutting-edge technologies is the industry's core opportunity: leveraging decentralized networks to deploy distributed AI models, breaking the monopoly of big tech companies over AI computing power and models; simultaneously using AI to optimize blockchain smart contracts, on-chain operations, and risk monitoring. The industry already has decentralized AI nodes, on-chain AI trading assistants, and other deployed products, with clear long-term growth potential.</p>
-                <h4>1.2 Normalization of On-Chain Finance</h4>
-                <p>On-chain transactions and decentralized finance (DeFi) are gradually moving toward compliance, becoming a complement to traditional finance.</p>
-                <h4>1.3 Real-World Asset Tokenization (RWA)</h4>
-                <p>Physical assets such as real estate, copyrights, artworks, and bonds are mapped onto the blockchain, enabling digital fractionalization and transfer of assets.</p>
-
-                <h3>2. Core Industry Challenges</h3>
-                <ol>
-                    <li><strong>Technical Bottlenecks</strong>: The concurrency performance and transaction speed of mainstream public chains remain insufficient to support nationwide commercial use;</li>
-                    <li><strong>Compliance Challenges</strong>: Global regulatory rules are inconsistent, making cross-border business compliance costly;</li>
-                    <li><strong>Bubble Problem</strong>: Many projects lack real demand, relying solely on conceptual fundraising without a viable business model.</li>
-                </ol>
-            </div>
-
-            <!-- Part 6 - Five Deep Dive Topics -->
-            <div class="article-block">
-                <h2 id="part6">Part VI: Five In-Depth Research Topics</h2>
-                <p>Independent sections with strengthened evidence and rigorous arguments.</p>
-
-                <hr class="section-divider">
-
-                <h3 id="s6-1">Topic 1: Cryptocurrencies and Stablecoins</h3>
-                <h4>1.1 Definition and Classification of Stablecoins</h4>
-                <p>Stablecoins are crypto assets pegged to fiat currencies such as the US dollar, Hong Kong dollar, or euro, with relatively stable value. They are currently the primary medium for Web3 and cross-border payments.</p>
-                <h4>1.2 Deep Impact of Hong Kong's Stablecoin Ordinance</h4>
-                <p>The ordinance does not ban renminbi-pegged stablecoins outright. Rather, based on mainland China's foreign exchange and monetary regulatory rules, it imposes <strong>dual approval</strong> requirements on renminbi-denominated stablecoins, with entry standards far higher than those for USD or HKD stablecoins. Few legitimate enterprises venture into this space.</p>
-                <h4>1.3 Stablecoins vs. Digital Renminbi (e-CNY)</h4>
-                <ul>
-                    <li><strong>Digital Renminbi (e-CNY)</strong>: A legal digital currency issued by the central bank, <strong>fully centralized</strong> and under state regulation. It does not belong to the Web3 domain. While its underlying technology may draw on blockchain, its core architecture and control model are unrelated to decentralization. Current adoption challenges: compared with WeChat Pay and Alipay, it offers no significant differentiation in payment experience or functional innovation, and its ecosystem and use cases remain underdeveloped.</li>
-                    <li><strong>Compliant Stablecoins</strong>: Issued by enterprises and subject to financial regulation, with core value centered on <strong>cross-border settlement</strong>.</li>
-                </ul>
-                <h4>1.4 The Core Value of Stablecoins in Cross-Border Payments</h4>
-                <p>Traditional cross-border settlement relies on the SWIFT system, passing through multiple banks for layered verification, taking <strong>3–7 business days</strong> with high fees.</p>
-                <p>Under a compliance framework, stablecoins cannot bypass regulation, but they can <strong>streamline intermediate banking links</strong>, enabling cross-border transfers to settle in seconds, drastically reducing time and transaction costs. This is the core reason why cross-border enterprises like JD.com are actively applying for Hong Kong stablecoin licenses.</p>
-                <div class="highlight-box">
-                    <p><strong>Core Conclusion:</strong> The competitive advantage of stablecoins lies in <strong>efficiency and cost</strong>, with full compliance as a prerequisite for development. The digital renminbi is positioned as legal tender for circulation. The two have entirely different application scenarios and logic—they are not substitutes for each other.</p>
-                </div>
-
-                <hr class="section-divider">
-
-                <h3 id="s6-2">Topic 2: On-Chain Trading</h3>
-                <h4>2.1 Core Characteristics of On-Chain Trading</h4>
-                <p>Traditional stock exchanges are limited by trading hours. On-chain trading, by contrast, leverages blockchain to achieve <strong>24/7 uninterrupted trading</strong>—a core differentiating feature.</p>
-                <h4>2.2 Correcting a Misconception: The Truth About US Stock Trading Hours</h4>
-                <p>US stocks have pre-market, after-hours, and overnight sessions, but <strong>markets are completely closed on weekends</strong>. Moreover, pre-market and after-hours sessions suffer from extremely low liquidity and wide spreads, making them far from genuinely seamless around-the-clock trading. On-chain trading is currently the only form of truly continuous 24/7 trading.</p>
-                <h4>2.3 Existing Risks and Issues</h4>
-                <ul>
-                    <li><strong>Liquidity Risk</strong>: Most niche on-chain assets lack sufficient liquidity; large transactions can trigger violent price swings;</li>
-                    <li><strong>Extreme Market Risk</strong>: When automated quantitative stop-loss strategies are triggered simultaneously, they can cause short-term market cascades (e.g., Bitcoin's sharp drop followed by a rapid rebound), resulting in unexpected losses for investors;</li>
-                    <li><strong>Regulatory Risk</strong>: Countries around the world are gradually bringing on-chain securities-like trading under financial regulation; unlicensed operations will face enforcement action.</li>
-                </ul>
-                <h4>2.4 Development Outlook</h4>
-                <p>On-chain trading will not completely replace traditional exchanges, but it will become a complementary form of <strong>cross-border and niche asset</strong> trading. In the long run, it will inevitably move toward licensing and compliance.</p>
-
-                <hr class="section-divider">
-
-                <h3 id="s6-3">Topic 3: RWA (Real-World Asset Tokenization)</h3>
-                <h4>3.1 Basic Concept of RWA</h4>
-                <p>RWA (Real World Asset) refers to the tokenization of physical assets—real estate, land, copyrights, bonds, artworks, etc.—onto the blockchain through token representations, enabling asset fractionalization, circulation, and financing.</p>
-                <h4>3.2 Core Advantages</h4>
-                <p>It breaks down the pain point of "poor liquidity and high barriers" for large-ticket assets. For example, high-value real estate or artworks can be split into multiple tokens, allowing ordinary investors to participate.</p>
-                <h4>3.3 Core Tension: Conflict Between Blockchain Logic and Existing Legal Systems</h4>
-                <p>Using real estate as an example: property laws in most countries stipulate that <strong>tenancy in common and joint ownership</strong> must be registered with the government real estate registration authority, with legal title determined by official records.</p>
-                <p>RWA tokenizes and circulates fractional real estate interests, but the on-chain "fractional ownership" <strong>cannot be directly linked to off-chain legal title</strong>, creating a legal recognition gap. Similarly, tokenizing copyrights and equity faces adaptation challenges with existing commercial and intellectual property laws.</p>
-                <div class="highlight-box">
-                    <p><strong>Development Conclusion:</strong> RWA is a highly promising direction, but <strong>the biggest bottleneck at this stage is not technology, but law and property rights recognition</strong>. Only when countries enact corresponding asset tokenization regulations can RWA achieve true large-scale deployment. For now, it remains in the pilot and exploration phase.</p>
-                </div>
-
-                <hr class="section-divider">
-
-                <h3 id="s6-4">Topic 4: AI + Web3 Integration</h3>
-                <h4>4.1 Integration Logic</h4>
-                <p>Traditional AI is centrally controlled by leading tech companies, with computing power, data, and models highly concentrated. Web3's decentralized networks enable distributed deployment of AI computing power, models, and data, achieving <strong>decentralized AI</strong>.</p>
-                <h4>4.2 Existing Implementation Forms</h4>
-                <ul>
-                    <li>Decentralized AI inference nodes: leverage globally distributed computing power to run AI models, reducing the cost burden on any single enterprise;</li>
-                    <li>On-chain AI assistants: integrated with smart contracts to automate on-chain trading, data analysis, and risk alerts;</li>
-                    <li>Data rights confirmation AI: uses blockchain to establish user data rights, with AI using data only within authorized boundaries, balancing privacy and value.</li>
-                </ul>
-                <h4>4.3 Development Bottlenecks</h4>
-                <p>Distributed AI faces challenges such as difficulty in coordinating computing power, slow model iteration, and lack of unified standards. Current implementations are mostly small- to medium-scale pilot projects, still far from large-scale commercial deployment.</p>
-
-                <hr class="section-divider">
-
-                <h3 id="s6-5">Topic 5: Web3 Marketing and Narrative</h3>
-                <h4>5.1 Core Thesis Reinforced: Web3 as a Top-Tier Marketing Narrative</h4>
-                <p>"Web3 = The Next Generation Internet" is an exceptionally successful brand narrative. It uses the concept of version iteration to create a sense of technological superiority, rapidly capturing global attention.</p>
-                <h4>5.2 Distinguishing Between Marketing and Technology</h4>
-                <ul>
-                    <li><strong>Pure Narrative Projects</strong>: Concepts only, no real-world application, no genuine problem-solving—these are hype with short lifecycles;</li>
-                    <li><strong>Value-Driven Projects</strong>: Leverage the Web3 narrative to address real needs (cross-border payments, data notarization, prediction markets, etc.) and possess long-term viability.</li>
-                </ul>
-                <h4>5.3 Practical Lessons</h4>
-                <p>The promotional logic of Web3 projects can draw on traditional marketing principles: identify user pain points, shape a value proposition, build a communication narrative, and validate through real-world scenarios. Conversely, traditional brands can adopt Web3's "user sovereignty" philosophy to optimize their user operations systems.</p>
-            </div>
-
-            <!-- Part 7 - Summary -->
-            <div class="article-block">
-                <h2 id="part7">Part VII: Summary—Global Perspective Synthesis</h2>
-                <ol>
-                    <li><strong>Essence</strong>: Web3 is a combination of <strong>"value proposition + marketing narrative + technological tools."</strong> It is not a comprehensive generational upgrade of the internet; blockchain and centralized architectures each have their own strengths;</li>
-                    <li><strong>Compliance</strong>: Complete decentralization cannot be implemented in real-world financial and social systems. <strong>Regulatory normalization is the only path to industry maturity</strong>;</li>
-                    <li><strong>Business</strong>: All long-term valuable Web3 projects address genuine needs (cross-border payments, asset circulation, information services, etc.). Pure conceptual hype will eventually be eliminated;</li>
-                    <li><strong>Enterprise Entry</strong>: For traditional large enterprises (telecom operators, state-owned enterprises, physical-economy companies), the optimal path is to <strong>deepen infrastructure, strictly adhere to compliance boundaries, and use new technology to optimize traditional operations</strong>, while avoiding high-risk financial applications;</li>
-                    <li><strong>Trends</strong>: AI+Web3, compliant stablecoins, and RWA are three long-term tracks, but all require simultaneous advancement in technology, law, and regulation.</li>
-                </ol>
-            </div>
-
-        </div>
-        </div>
-        <!-- TOC: Mobile Trigger & Drawer -->
-        <button class="toc-mob-btn" id="tocMobBtn" onclick="toggleTocDrawer()" aria-label="Table of Contents">&#9776;</button>
-        <div class="toc-overlay" id="tocOverlay" onclick="toggleTocDrawer()"></div>
-        <div class="toc-drawer" id="tocDrawer">
-            <div class="toc-drawer-header">
-                <span class="toc-title">Table of Contents</span>
-                <button class="toc-close" onclick="toggleTocDrawer()">&#x2715;</button>
-            </div>
-            <ul class="toc-list" id="tocDrawerList"></ul>
-        </div>
-
-    </section>
-
-
-    <!-- TOC Overlay -->
-
-    <!-- TOC Drawer -->
-    
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
-    <script>
-        var btn = document.getElementById('backToTop');
-        window.addEventListener('scroll', function () {
-            btn.classList.toggle('show', window.scrollY > 600);
-        });
-        function buildToc() {
-            var sidebar = document.getElementById('tocList');
-            var drawer = document.getElementById('tocDrawerList');
-            if (!sidebar) return;
-            var blocks = document.querySelectorAll('.article-block');
-            var items = [];
-            blocks.forEach(function(block) {
-                var h2 = block.querySelector('h2');
-                var h2Text = h2 ? h2.textContent.trim() : '';
-                var h2Id = h2 && h2.id ? h2.id : (block.id || '');
-                if (h2Text) {
-                    if (!h2Id) { h2Id = h2Text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); h2.id = h2Id; }
-                    items.push({level:2,text:h2Text,id:h2Id});
-                    var h3s = block.querySelectorAll('h3');
-                    h3s.forEach(function(h3) {
-                        var h3Text = h3.textContent.trim();
-                        var h3Id = h3.id || h3Text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-                        if (!h3.id) h3.id = h3Id;
-                        items.push({level:3,text:h3Text,id:h3Id});
-                    });
-                }
-            });
-            function render(listEl, inDrawer) {
-                var html = '';
-                items.forEach(function(it) {
-                    var cls = 'toc-h' + it.level;
-                    html += '<li><a class="' + cls + '" href="#' + it.id + '">' + it.text + '</a></li>';
-                });
-                listEl.innerHTML = html;
-                listEl.querySelectorAll('a').forEach(function(a) {
-                    a.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        var target = document.getElementById(this.getAttribute('href').substring(1));
-                        if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
-                        if (inDrawer) toggleTocDrawer();
-                    });
-                });
-            }
-            render(sidebar, false);
-            if (drawer) render(drawer, true);
-        }
-        function initScrollSpy() {
-            var links = document.querySelectorAll('.toc-list a');
-            if (!links.length) return;
-            var headings = [];
-            links.forEach(function(link) {
-                var id = link.getAttribute('href').substring(1);
-                var el = document.getElementById(id);
-                if (el) headings.push({el:el,link:link});
-            });
-            if (!headings.length) return;
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        links.forEach(function(l) { l.classList.remove('toc-active'); });
-                        var active = headings.find(function(h) { return h.el === entry.target; });
-                        if (active) active.link.classList.add('toc-active');
-                    }
-                });
-            }, { rootMargin: '-80px 0px -60% 0px', threshold: 0.1 });
-            headings.forEach(function(h) { observer.observe(h.el); });
-        }
-        function toggleTocDrawer() {
-            var drawer = document.getElementById('tocDrawer');
-            var overlay = document.getElementById('tocOverlay');
-            if (drawer && overlay) {
-                drawer.classList.toggle('open');
-                overlay.classList.toggle('open');
-                document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
-            }
-        }
-        buildToc();
-        initScrollSpy();
-        var tocObs = new MutationObserver(function() { setTimeout(initScrollSpy, 100); });
-        tocObs.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
-    </script>
-
-    <div id="shared-site-footer"></div>
-    <script src="../assets/js/shared-site-footer.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/jquery.meanmenu.js"></script>
-    <script src="../assets/js/main.js"></script>    <!-- Cloudflare Web Analytics -->
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+<div class="link-card">
+<p>For the full article with complete in-depth analysis across all topics.</p>
+<a class="default-btn" href="/en/blog/posts/web3-deep-research/">Read Full Article →</a>
+</div>
+</div>
+<div id="shared-site-footer" class="bg-grey"></div>
+<script src="../assets/js/shared-site-footer.js"></script><script src="../assets/js/jquery.min.js"></script><script src="../assets/js/bootstrap.min.js"></script><script src="../assets/js/jquery.meanmenu.js"></script><script src="../assets/js/owl.carousel.min.js"></script><script src="../assets/js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 </body>
 </html>
-

@@ -28,3 +28,9 @@ hugo/_check/
 _archive/
 _drafts/
 _infra/
+
+# Claude
+.claude/
+
+# Server logs
+server.log
