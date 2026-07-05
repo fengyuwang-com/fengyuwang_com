@@ -46,7 +46,7 @@
         .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
 
         .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
-        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
         .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
         .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
         .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
@@ -76,7 +76,7 @@
         body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
         body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-        body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
         body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
         body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
         body[data-theme="dark"] .block-subtitle { color: #6b9aff; }

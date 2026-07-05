@@ -152,9 +152,8 @@
     });
 
     // Preloader Area
-	$(window).on('load', function() {
-		$('#preloader').fadeOut('700');
-	});
+    // Hide immediately, don't wait for images/fonts
+    $('#preloader').fadeOut('400');
 	
 }(jQuery));
 

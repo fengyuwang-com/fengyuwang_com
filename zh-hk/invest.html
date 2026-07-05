@@ -46,7 +46,7 @@
 
 		/* Card grid */
 		.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
-		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: 1px solid rgba(148,163,184,.14); background-size: cover; background-position: center; }
+		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
 		.mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
 		.mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
 		.mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
@@ -91,7 +91,7 @@
 		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
 		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-		body[data-theme="dark"] .mkt-card { border-color: transparent; background-color: #0a0e1a; }
+		body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
 		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
 		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
 		body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
@@ -123,7 +123,7 @@
 		.cap-group:last-child { margin-bottom: 0; }
 		.cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
 		.cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-		.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+		.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; }
 
 		.link-card { text-align: center; padding: 48px 0 72px; }
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
