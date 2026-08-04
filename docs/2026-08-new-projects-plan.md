@@ -137,10 +137,11 @@
 | `zh-cn/fenginvest.html` | 三条分析路径叙事：价值投资（L0 能力圈）/ 量化投资（10 因子 z-score）/ 主观判断（4 AI Agent）+ 七层架构 + 数据质量 + 快速上手 |
 | `zh-cn/jingxin.html` | 设计理念 → 四种模式（呼吸 4-7-8 / 正念身体扫描 / 引导 / 放松可视化）→ 坚持机制 → 工程实现（Flutter/Provider/生命周期计量）→ 设计语言（深空黑+宁静蓝）→ 路线图 |
 | `zh-cn/fengoffice.html` | 为什么做 → 邮件 CLI（多账号/JSON/回复线程）→ Twenty CRM → Newsletter（Listmonk）→ 自动化链路 → 部署 |
-
+| `zh-cn/fengmedia.html` | 为什么做 → 人设系统 → 内容系统 → 平台系统 → 工具链（快捷指令）→ 运营系统 |
+| `zh-cn/search-king.html` | 五种行为 → 引擎矩阵（12 图 + 6 文）→ 六种后端 → 工作流 → 版权可追溯 → 快速上手 |
 链接关系：
 - `invest.html` → `fenginvest.html`（卡片 + 区块按钮）
-- `tech.html` 卡片/区块 → `jingxin.html`、`fengoffice.html`
+- `tech.html` 卡片/区块 → `jingxin.html`、`fengoffice.html`、`fengmedia.html`、`search-king.html`
 - `mkt.html` case-card → `fengoffice.html`
 
 ### 6.3 Open 前缀规则
@@ -159,8 +160,8 @@
 - [ ] `zh-hk/fenginvest.html`、`zh-hk/jingxin.html`、`zh-hk/fengoffice.html` + opencc-js 转换后人工修正
 - [ ] 三语 `_redirects` / sitemap 已就绪，无需重复改
 
-### 6.6 其他可做官网的项目（规划）
+### 6.6 已建官网项目（后续）
 
-- **Open-FengMedia**（财经内容操作系统）— 适合独立官网
-- **Super-Invincible-Search-King**（AI 搜图）— 适合独立官网
+- **Open-FengMedia**（财经内容操作系统）— ✅ 已建官网 `fengmedia.html`（内容源于私有 FengMedia 仓库的 README 与 docs）
+- **Super-Invincible-Search-King**（AI 搜图）— ✅ 已建官网 `search-king.html`（内容源于其 README）
 - **yuanbao-export-tool** / **python-deterministic-check** — 小工具，先在前述主页提及即可
