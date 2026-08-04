@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FengInvest | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FengInvest 是我迄今为止最具有野心的项目：AI 协作投资分析框架，七层状态机强制流程，数据质量门禁，4 个 AI Agent 并行定性分析，从理念到工程化的完整落地。">
+    <meta name="keywords" content="FengInvest, AI 投资分析, 价值投资, 七层状态机, 量化, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-cn/fenginvest.html">
+    <link rel="alternate" hreflang="en" href="/en/fenginvest.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/fenginvest.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/fenginvest.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="迄今为止最具有野心的项目：AI 协作投资分析框架，七层状态机、数据质量门禁、4 个 AI Agent 并行定性分析。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/fenginvest.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="迄今为止最具有野心的项目：AI 协作投资分析框架，七层状态机、数据质量门禁、4 个 AI Agent 并行定性分析。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; background: rgba(37,99,235,.08); color: #1f3b8a; font-size: .8rem; font-weight: 600; border: 1px solid rgba(37,99,235,.12); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(96,165,250,.12); color: #bfdbfe; border-color: rgba(96,165,250,.18); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FengInvest | Fengyu WANG","url":"https://fengyuwang.com/zh-cn/fenginvest.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="investment"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>FengInvest</h1>
+                <p>这是我迄今为止最具有野心的项目——AI 协作投资分析框架，把投资纪律写进代码。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('why').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>为什么做</h3>
+                        <p>把模糊的「能不能买」拆成可执行、可验证的步骤</p>
+                        <button class="card-btn">了解动机</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80')" onclick="document.getElementById('architecture').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>七层架构</h3>
+                        <p>状态机强制流程，一步都不能跳</p>
+                        <button class="card-btn">看架构</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>关键特性</h3>
+                        <p>数据质量门禁、4 AI Agent 并行定性、跨层一致性校验</p>
+                        <button class="card-btn">看特性</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>快速上手</h3>
+                        <p>几条 CLI 命令，从初始化到出报告</p>
+                        <button class="card-btn">开始使用</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="why" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>为什么做</h2>
+                    <p class="block-subtitle">投资分析不能靠感觉，也不能靠某一次灵光一现。</p>
+                    <div class="content-text-card">
+                        <p>设计目标不是自动化决策，而是结构化分析：把「这个股票能不能买」拆成 8 个可执行的步骤，每步由专用工具加 AI 完成，结果被下一层验证或挑战。让每一次分析都像下棋一样有规则、可复盘。</p>
+                        <ul>
+                            <li><strong>防跳步</strong>：状态机拦截——未完成 L0 无法进入 M，未完成 L3 无法出报告。</li>
+                            <li><strong>可追溯</strong>：每一层输出独立成文件，结论从哪来、怎么来的，一查便知。</li>
+                            <li><strong>可碰撞</strong>：定性分析不是一个人说了算，反方四问加规则树碰撞。</li>
+                            <li><strong>可验证</strong>：数据在摄入时就用独立信源交叉验证，不靠结构检查。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="architecture" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>七层架构</h2>
+                    <p class="block-subtitle">从能力圈确认到结构化报告，每一层只做一件事。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>L0 能力圈确认</strong>：三问——怎么赚钱？10 年后还在吗？什么能杀了它？输出「懂 / 不充分懂 / 不懂」。</li>
+                            <li><strong>M 市场数据</strong>：采集 + 4 灯判定（宏观 / 估值 / 趋势 / 情绪）。</li>
+                            <li><strong>L1 硬纪律</strong>：8 条规则逐一校验。</li>
+                            <li><strong>L2b 量化因子</strong>：10 因子 z-score 量化分析。</li>
+                            <li><strong>L2a 定性分析</strong>：4 个 AI Agent 并行，段永平 / 巴菲特 / 芒格 / 李录四个视角。</li>
+                            <li><strong>L3 碰撞引擎</strong>：反方 4 问 + 行为偏误检查 + 规则树碰撞。</li>
+                            <li><strong>P 组合检查</strong>：仓位管理 + 压力测试。</li>
+                            <li><strong>L4 报告</strong>：结构化研究报告，华尔街分析师格式。</li>
+                        </ul>
+                    </div>
+                    <div class="content-text-card">
+                        <p><strong>状态机拦截跳步</strong>：未完成 L0 无法进入 M，未完成 L3 无法出报告。流程不会因为「感觉差不多了」就跳过任何一步。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="features" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>关键特性</h2>
+                    <p class="block-subtitle">数据正确性必须在摄入时验证，不能只做结构检查。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>数据质量门禁</strong>：从 stockanalysis.com 拉取 PE / Forward PE 与本地对比，差异小于 5% 通过，5–10% 警告，大于 10% 判定失败。</li>
+                            <li><strong>跨层一致性</strong>：PE 值跨 M / L2b 校验，差异超过 5% 自动报警。</li>
+                            <li><strong>降级传播</strong>：数据源降级时，下游权重自动降低。</li>
+                            <li><strong>输出验证</strong>：标记完成时自动检查关键字段是否存在。</li>
+                            <li><strong>Web UI</strong>：分析进度与报告可视化，工具集面向日常研究使用。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Python</span>
+                        <span class="stack-chip">状态机</span>
+                        <span class="stack-chip">数据管道</span>
+                        <span class="stack-chip">量化分析</span>
+                        <span class="stack-chip">多 Agent</span>
+                        <span class="stack-chip">Web UI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>快速上手</h2>
+                    <p class="block-subtitle">状态机工具，几行命令走完整个分析流程。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><code>python tools/fengstate.py init &lt;TICKER&gt;</code> — 初始化分析</li>
+                            <li><code>python tools/fengstate.py check &lt;TICKER&gt; &lt;层&gt;</code> — 检查前置条件</li>
+                            <li><code>python tools/fengstate.py complete &lt;TICKER&gt; &lt;层&gt; &lt;文件&gt;</code> — 标记完成</li>
+                            <li><code>python tools/fengstate.py status &lt;TICKER&gt;</code> — 查看进度</li>
+                            <li><code>python tools/fengstate.py verify &lt;TICKER&gt;</code> — 全量验证</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+                        <a class="default-btn" href="/zh-cn/invest.html">返回投资框架</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>投资框架的工程化落地，从这里开始</p>
+            <a class="default-btn" href="/zh-cn/invest.html">返回投资框架 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
