@@ -65,6 +65,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fengyuwang.com/en/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://fengyuwang.com/en/cloud.html</loc>
     <priority>0.6</priority>
   </url>

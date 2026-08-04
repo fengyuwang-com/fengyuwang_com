@@ -8,9 +8,9 @@
 
 | 项目 | GitHub | 定位 | 语言 | 归属页面 |
 |------|--------|------|------|---------|
-| **Open-FengInvest** | https://github.com/fengyuwang-com/Open-FengInvest | AI 协作投资分析框架：七层状态机、数据管道、量化工具、Web UI | Python | **旗舰项目**：invest.html 卡片置顶 + 独立页面 `open-fenginvest.html` |
-| **Jingxin（静心）** | https://github.com/fengyuwang-com/Jingxin | 极简冥想引导 App：呼吸 / 正念 / 引导 / 放松 | Flutter/Dart | `portfolio.html`（技术页） |
-| **Open-FengOffice** | https://github.com/fengyuwang-com/Open-FengOffice | FengOffice：AI 统一邮件 + CRM（CLI 邮件 + Twenty CRM + Newsletter/Listmonk） | Python | `portfolio.html` 主体 + `mkt.html` 交叉引用 |
+| **FengInvest** | https://github.com/fengyuwang-com/Open-FengInvest | AI 协作投资分析框架：七层状态机、数据管道、量化工具、Web UI | Python | **旗舰项目**：invest.html 卡片置顶 + 独立官网 `fenginvest.html` |
+| **Jingxin（静心）** | https://github.com/fengyuwang-com/Jingxin | 极简冥想引导 App：呼吸 / 正念 / 引导 / 放松 | Flutter/Dart | 独立官网 `jingxin.html`（技术页） |
+| **FengOffice** | https://github.com/fengyuwang-com/Open-FengOffice | FengOffice：AI 统一邮件 + CRM（CLI 邮件 + Twenty CRM + Newsletter/Listmonk） | Python | 独立官网 `fengoffice.html` + `mkt.html` 交叉引用 |
 
 ---
 
@@ -115,3 +115,52 @@
 - **链接指向**：跨语言链接 `href="/zh-cn/...` 必须与页面语言一致
 - **no self-praise**：描述用客观事实，不用"我的能力是..."句式
 - **文案风格**：punchline 用短句、有态度，不超过 12 字；不用"本章节将介绍..."
+
+---
+
+## 6. 最终实施（zh-cn 已完成）
+
+> 本文件第 2/3 节描述了卡片融入方案，已落地。此处记录最终实施，作为 en/zh-hk 翻译与后续维护的依据。
+
+### 6.1 Tech/Portfolio 反转
+
+技术页从 `portfolio.html` 重命名为 **`tech.html`**（三语一致），体现"网站本来就是 Tech"：
+- `en/tech.html` / `zh-cn/tech.html` / `zh-hk/tech.html`（git mv 重命名）
+- `_redirects` 新增三语 `portfolio.html → tech.html` `301`；`/tech` 快捷入口指向 `zh-cn/tech.html`
+- navbar/footer 的 `portfolioHref` 指向 `tech.html`；sitemap、404 routes、fix-seo-descriptions.py 同步
+- `data-section="portfolio"` 保留（navbar 内部用其高亮 Tech 菜单项）
+
+### 6.2 三个软件各自独立官网（zh-cn）
+
+| 官网 | 结构 |
+|------|------|
+| `zh-cn/fenginvest.html` | 三条分析路径叙事：价值投资（L0 能力圈）/ 量化投资（10 因子 z-score）/ 主观判断（4 AI Agent）+ 七层架构 + 数据质量 + 快速上手 |
+| `zh-cn/jingxin.html` | 设计理念 → 四种模式（呼吸 4-7-8 / 正念身体扫描 / 引导 / 放松可视化）→ 坚持机制 → 工程实现（Flutter/Provider/生命周期计量）→ 设计语言（深空黑+宁静蓝）→ 路线图 |
+| `zh-cn/fengoffice.html` | 为什么做 → 邮件 CLI（多账号/JSON/回复线程）→ Twenty CRM → Newsletter（Listmonk）→ 自动化链路 → 部署 |
+
+链接关系：
+- `invest.html` → `fenginvest.html`（卡片 + 区块按钮）
+- `tech.html` 卡片/区块 → `jingxin.html`、`fengoffice.html`
+- `mkt.html` case-card → `fengoffice.html`
+
+### 6.3 Open 前缀规则
+
+**介绍/显示文案去掉 "Open" 前缀**（FengInvest / FengOffice），**GitHub 链接保留** `Open-`（开源分支名）。
+
+### 6.4 README 官网链接
+
+三个公开 repo 的 README 顶部已加官网链接：
+- `Open-FengInvest`、`Jingxin`（更新现有 README）
+- `Open-FengOffice`（新建 README，此前缺失）
+
+### 6.5 待办（en/zh-hk）
+
+- [ ] `en/fenginvest.html`、`en/jingxin.html`、`en/fengoffice.html` + en invest/tech/mkt 同步
+- [ ] `zh-hk/fenginvest.html`、`zh-hk/jingxin.html`、`zh-hk/fengoffice.html` + opencc-js 转换后人工修正
+- [ ] 三语 `_redirects` / sitemap 已就绪，无需重复改
+
+### 6.6 其他可做官网的项目（规划）
+
+- **Open-FengMedia**（财经内容操作系统）— 适合独立官网
+- **Super-Invincible-Search-King**（AI 搜图）— 适合独立官网
+- **yuanbao-export-tool** / **python-deterministic-check** — 小工具，先在前述主页提及即可

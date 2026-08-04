@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>静心 Jingxin | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="静心 Jingxin 是极简冥想引导应用：呼吸、正念、引导、放松四种模式，Flutter 跨平台实现，深色主题，记录每一次安静。">
+    <meta name="keywords" content="静心, Jingxin, 冥想, 呼吸, 正念, Flutter, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-cn/jingxin.html">
+    <link rel="alternate" hreflang="en" href="/en/jingxin.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/jingxin.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/jingxin.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="静心 Jingxin | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="极简冥想引导应用：呼吸、正念、引导、放松四种模式。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/jingxin.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="静心 Jingxin | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="极简冥想引导应用：呼吸、正念、引导、放松四种模式。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; background: rgba(37,99,235,.08); color: #1f3b8a; font-size: .8rem; font-weight: 600; border: 1px solid rgba(37,99,235,.12); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(96,165,250,.12); color: #bfdbfe; border-color: rgba(96,165,250,.18); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"静心 Jingxin | Fengyu WANG","url":"https://fengyuwang.com/zh-cn/jingxin.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>静心 Jingxin</h1>
+                <p>极简冥想引导应用——呼吸、正念、引导、放松四种方式，让一个人安静下来。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80')" onclick="document.getElementById('philosophy').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>设计理念</h3>
+                        <p>界面越克制，专注越完整</p>
+                        <button class="card-btn">看理念</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('modes').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>四种模式</h3>
+                        <p>呼吸 / 正念 / 引导 / 放松</p>
+                        <button class="card-btn">看模式</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('consistency').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>坚持的机制</h3>
+                        <p>历史记录、连续打卡、累计时长</p>
+                        <button class="card-btn">看机制</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('engineering').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>工程实现</h3>
+                        <p>Flutter + Provider，计时准确，状态简洁</p>
+                        <button class="card-btn">看工程</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('design').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>设计语言</h3>
+                        <p>深空黑 + 宁静蓝，专注不打扰</p>
+                        <button class="card-btn">看设计</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80')" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>未来路线图</h3>
+                        <p>环境音、触感反馈、数据图表</p>
+                        <button class="card-btn">看路线图</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="philosophy" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>少，就是多</h2>
+                    <p class="block-subtitle">冥想的第一步，是放下杂念；产品的第一步，是放下干扰。</p>
+                    <div class="content-text-card">
+                        <p>静心是一个冥想引导应用。它不追求功能堆叠，而是回到冥想本身：屏上只有一个呼吸的圆环，耳边只有该出现的引导。</p>
+                        <ul>
+                            <li><strong>克制</strong>：核心只有四种模式，没有无关的社交、广告与提醒。</li>
+                            <li><strong>专注</strong>：冥想进行时，界面退到最小，让呼吸圆环成为唯一焦点。</li>
+                            <li><strong>不打扰</strong>：深色主题、低饱和配色，减少视觉噪音。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modes" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>四种冥想方式</h2>
+                    <p class="block-subtitle">每一种，都对应一个具体的练习目标。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>呼吸冥想</strong>：4-7-8 呼吸法——吸气 4 秒，屏息 7 秒，呼气 8 秒。用节奏把神经系统调慢。</li>
+                            <li><strong>正念冥想</strong>：身体扫描——从脚趾到头部，依次感受身体每一个部位，把注意力带回当下。</li>
+                            <li><strong>引导冥想</strong>：10 步引导，跟着提示一步步完成一次完整练习。</li>
+                            <li><strong>放松冥想</strong>：可视化场景——海浪动画加场景描述，让紧绷的身体逐渐松开。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="consistency" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>让坚持看得见</h2>
+                    <p class="block-subtitle">冥想不是一次性的放松，而是日复一日的习惯。</p>
+                    <div class="content-text-card">
+                        <p>静心不催你练，但它会记下每一次练习，让坚持本身成为反馈。</p>
+                        <ul>
+                            <li><strong>冥想记录</strong>：每一次都有开始时间、持续时长、模式与完成状态。</li>
+                            <li><strong>累计时长</strong>：总练习分钟数，让投入量化为可见的积累。</li>
+                            <li><strong>连续打卡</strong>：streak 记录，用连续性对冲「中断一天就放弃」的心理坑。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="engineering" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>计时，必须准确</h2>
+                    <p class="block-subtitle">冥想应用的工程难点只有一个：时间不能骗人。</p>
+                    <div class="content-text-card">
+                        <p>用 Flutter 构建，状态精简，架构清晰，特别处理了最容易出错的部分——后台计时。</p>
+                        <ul>
+                            <li><strong>生命周期处理</strong>：应用暂停时记录时间，恢复时扣除后台时间，保证冥想计时准确。</li>
+                            <li><strong>Provider 状态管理</strong>：时长、模式、历史记录统一管理，界面与数据分离。</li>
+                            <li><strong>持久化</strong>：通过 shared_preferences 把记录存为 JSON，重启不丢失。</li>
+                            <li><strong>响应式布局</strong>：以 LayoutBuilder 适配不同屏幕，呼吸圆环随屏宽缩放，触控区域不小于 44px。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Flutter</span>
+                        <span class="stack-chip">Provider</span>
+                        <span class="stack-chip">shared_preferences</span>
+                        <span class="stack-chip">生命周期</span>
+                        <span class="stack-chip">响应式</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>深空黑，宁静蓝</h2>
+                    <p class="block-subtitle">配色本身就是助眠的一部分。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>主背景</strong>：#0D1117 深空黑——低亮度，不刺激眼睛。</li>
+                            <li><strong>次背景</strong>：#161B22 深灰——层级清晰而不刺眼。</li>
+                            <li><strong>强调色</strong>：#58A6FF 宁静蓝——呼吸圆环的动线，温和而有引导感。</li>
+                            <li><strong>视觉系统</strong>：颜色、间距、尺寸统一为常量，保证整个 App 的风格一致。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="roadmap" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>还有很长的路</h2>
+                    <p class="block-subtitle">一版的终点，正是下一版的起点。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>环境音</strong>：雨声、海浪、森林——给放松模式更多氛围。</li>
+                            <li><strong>触感反馈</strong>：呼吸切换时的轻微震动，替代视觉打扰。</li>
+                            <li><strong>数据图表</strong>：把冥想统计可视化，进步看得更清楚。</li>
+                            <li><strong>自定义节奏</strong>：允许用户调整呼吸法的具体时长。</li>
+                            <li><strong>多语言</strong>：不止中文，让更多人用得上。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+                        <a class="default-btn" href="/zh-cn/tech.html">返回技术作品</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>想做、也做得出——技术不是目的，是交付的起点</p>
+            <a class="default-btn" href="/zh-cn/tech.html">返回技术作品 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
