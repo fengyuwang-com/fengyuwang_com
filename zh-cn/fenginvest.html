@@ -120,14 +120,28 @@
         <div class="container">
             <div class="marketing-hero">
                 <h1>FengInvest</h1>
-                <p>这是我迄今为止最具有野心的项目——AI 协作投资分析框架，把投资纪律写进代码。</p>
+                <p>三条路径、一个系统——价值、量化、与主观判断，把「这个股票能不能买」变成一套可复盘、可验证、可碰撞的流程。</p>
             </div>
             <div class="card-grid">
-                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('why').scrollIntoView({behavior:'smooth'})">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('value').scrollIntoView({behavior:'smooth'})">
                     <div class="card-content">
-                        <h3>为什么做</h3>
-                        <p>把模糊的「能不能买」拆成可执行、可验证的步骤</p>
-                        <button class="card-btn">了解动机</button>
+                        <h3>价值投资</h3>
+                        <p>买好生意，等好价格——能力圈的判定</p>
+                        <button class="card-btn">看路径</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')" onclick="document.getElementById('quant').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>量化投资</h3>
+                        <p>让数字说话——多因子模型与数据管道</p>
+                        <button class="card-btn">看路径</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('subjective').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>主观判断</h3>
+                        <p>四个投资人的视角，在碰撞中收敛</p>
+                        <button class="card-btn">看路径</button>
                     </div>
                 </div>
                 <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80')" onclick="document.getElementById('architecture').scrollIntoView({behavior:'smooth'})">
@@ -137,11 +151,11 @@
                         <button class="card-btn">看架构</button>
                     </div>
                 </div>
-                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80')" onclick="document.getElementById('quality').scrollIntoView({behavior:'smooth'})">
                     <div class="card-content">
-                        <h3>关键特性</h3>
-                        <p>数据质量门禁、4 AI Agent 并行定性、跨层一致性校验</p>
-                        <button class="card-btn">看特性</button>
+                        <h3>数据质量</h3>
+                        <p>正确性在摄入时验证，不让坏数据进门</p>
+                        <button class="card-btn">看门禁</button>
                     </div>
                 </div>
                 <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">
@@ -154,19 +168,66 @@
             </div>
         </div>
 
-        <div id="why" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
+        <div id="value" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
             <div class="block-inner">
                 <div class="section-card">
-                    <h2>为什么做</h2>
-                    <p class="block-subtitle">投资分析不能靠感觉，也不能靠某一次灵光一现。</p>
+                    <h2>价值投资：买好生意，等好价格</h2>
+                    <p class="block-subtitle">先搞清楚「懂不懂」，再谈「贵不贵」。</p>
                     <div class="content-text-card">
-                        <p>设计目标不是自动化决策，而是结构化分析：把「这个股票能不能买」拆成 8 个可执行的步骤，每步由专用工具加 AI 完成，结果被下一层验证或挑战。让每一次分析都像下棋一样有规则、可复盘。</p>
+                        <p>这一条路径回答最根本的问题：这笔投资，我真的理解吗？它靠什么赚钱？这个生意十年后还在吗？什么力量能杀死它？</p>
                         <ul>
-                            <li><strong>防跳步</strong>：状态机拦截——未完成 L0 无法进入 M，未完成 L3 无法出报告。</li>
-                            <li><strong>可追溯</strong>：每一层输出独立成文件，结论从哪来、怎么来的，一查便知。</li>
-                            <li><strong>可碰撞</strong>：定性分析不是一个人说了算，反方四问加规则树碰撞。</li>
-                            <li><strong>可验证</strong>：数据在摄入时就用独立信源交叉验证，不靠结构检查。</li>
+                            <li><strong>L0 能力圈确认</strong>：三问——怎么赚钱？10 年后还在吗？什么能杀了它？输出「懂 / 不充分懂 / 不懂」。</li>
+                            <li><strong>护城河与长期性</strong>：被 L0 判为"不充分懂"的标的，M 层之后会被拦截，不进入深度分析。</li>
+                            <li><strong>安全边际意识</strong>：从企业价值出发，不追涨、不猜反弹，只在他们有足够缓冲时出手。</li>
+                            <li><strong>硬纪律上限</strong>：L1 的 8 条规则是在价值框架里的刹车——越喜欢，越要看规则是否放过自己。</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quant" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>量化投资：让数字说话</h2>
+                    <p class="block-subtitle">把主观感受翻译成可计算的信号。</p>
+                    <div class="content-text-card">
+                        <p>感觉是存量的，数据是活着的。这一条路径用多因子模型把「贵不贵、好不好」变成一组可比较、可回测的数字，而不是拍脑袋。</p>
+                        <ul>
+                            <li><strong>10 因子 z-score 量化</strong>：估值、质量、成长、动量、情绪等多因子标准化后加权，得到一个相对排序的分数。</li>
+                            <li><strong>数据管道（M 层）</strong>：fengdata.py 采集、去重、重试、代理切换，保证每一格数据都来自可信来源。</li>
+                            <li><strong>3 灯判定</strong>：宏观 / 估值 / 趋势 / 情绪四灯判定市场状态，量化路径在合适的环境里才生效。</li>
+                            <li><strong>可与主观互相校验</strong>：当量化分数与价值判断冲突时，L3 碰撞引擎会主动制造一场辩论，而不是静默忽略。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">多因子 z-score</span>
+                        <span class="stack-chip">数据管道</span>
+                        <span class="stack-chip">回测友好</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="subjective" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>主观判断：四个视角，一场碰撞</h2>
+                    <p class="block-subtitle">定性分析不是一个人说了算。</p>
+                    <div class="content-text-card">
+                        <p>投资里最能骗人的，是自己顺着自己。FengInvest 用 4 个 AI Agent 并行定性，分别站在四位投资者的立场独立作答，再由碰撞引擎把它们的结论拧在一起。</p>
+                        <ul>
+                            <li><strong>段永平视角</strong>：生意的底层逻辑——别人为什么买？护城河在哪？</li>
+                            <li><strong>巴菲特视角</strong>：企业质量与长期回报——是不是一桩赚钱的好生意。</li>
+                            <li><strong>芒格视角</strong>：逆向与多元思维——哪里最容易犯错，怎么避免。</li>
+                            <li><strong>李录视角</strong>：能力圈与长期主义——我真的懂，还是只是想要？</li>
+                            <li><strong>L3 碰撞引擎</strong>：反方四问 + 行为偏误检查 + 规则树碰撞。每个 Agent 的结论都可能被挑战，最终输出收敛后的判断与分歧记录。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">多 Agent 并行</span>
+                        <span class="stack-chip">反方四问</span>
+                        <span class="stack-chip">偏误检查</span>
                     </div>
                 </div>
             </div>
@@ -196,11 +257,11 @@
             </div>
         </div>
 
-        <div id="features" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+        <div id="quality" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80')">
             <div class="block-inner">
                 <div class="section-card">
-                    <h2>关键特性</h2>
-                    <p class="block-subtitle">数据正确性必须在摄入时验证，不能只做结构检查。</p>
+                    <h2>数据质量：不让坏数据进门</h2>
+                    <p class="block-subtitle">正确性在摄入时验证，不能只做结构检查。</p>
                     <div class="content-text-card">
                         <ul>
                             <li><strong>数据质量门禁</strong>：从 stockanalysis.com 拉取 PE / Forward PE 与本地对比，差异小于 5% 通过，5–10% 警告，大于 10% 判定失败。</li>
@@ -211,12 +272,9 @@
                         </ul>
                     </div>
                     <div class="stack-list">
-                        <span class="stack-chip">Python</span>
-                        <span class="stack-chip">状态机</span>
-                        <span class="stack-chip">数据管道</span>
-                        <span class="stack-chip">量化分析</span>
-                        <span class="stack-chip">多 Agent</span>
-                        <span class="stack-chip">Web UI</span>
+                        <span class="stack-chip">交叉验证</span>
+                        <span class="stack-chip">一致性校验</span>
+                        <span class="stack-chip">降级传播</span>
                     </div>
                 </div>
             </div>
