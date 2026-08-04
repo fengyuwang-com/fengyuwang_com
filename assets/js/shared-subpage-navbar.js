@@ -268,7 +268,7 @@ var labels = copy[lang];
     { label: 'GitHub', href: 'https://github.com/fengyuwang-com' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/fengyuwang-com/' },
     { label: 'YouTube', href: 'https://www.youtube.com/@fenglin6' },
-    { label: 'BiliBili', href: 'https://b23.tv/Aqk6EGE' }
+    { label: 'BiliBili', href: 'https://space.bilibili.com/1136929849' }
   ];
   var siteLinksHtml = siteLinks
     .map(function (link) {
