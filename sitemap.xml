@@ -101,6 +101,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://fengyuwang.com/en/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/search-king.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/search-king.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/search-king.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://fengyuwang.com/en/cloud.html</loc>
     <priority>0.6</priority>
   </url>
