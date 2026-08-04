@@ -72,7 +72,18 @@
       automation: 'Automation',
       automationHref: '/en/automation.html',
       cloud: 'Cloud',
-      cloudHref: '/en/cloud.html'
+      cloudHref: '/en/cloud.html',
+      software: 'Software',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/en/fenginvest.html',
+      jingxin: 'Jingxin',
+      jingxinHref: '/en/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/en/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/en/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/en/search-king.html'
     },
     'zh-cn': {
       home: '\u9996\u9875',
@@ -137,7 +148,18 @@
       automation: '\u81ea\u52a8\u5316',
       automationHref: '/zh-cn/automation.html',
       cloud: '\u4e91\u670d\u52a1',
-      cloudHref: '/zh-cn/cloud.html'
+      cloudHref: '/zh-cn/cloud.html',
+      software: '\u8f6f\u4ef6\u9879\u76ee',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/zh-cn/fenginvest.html',
+      jingxin: '\u9759\u5fc3 Jingxin',
+      jingxinHref: '/zh-cn/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/zh-cn/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/zh-cn/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/zh-cn/search-king.html'
     },
     'zh-hk': {
       home: '\u9996\u9801',
@@ -202,7 +224,18 @@
       automation: '\u81ea\u52d5\u5316',
       automationHref: '/zh-hk/automation.html',
       cloud: '\u96f2\u670d\u52d9',
-      cloudHref: '/zh-hk/cloud.html'
+      cloudHref: '/zh-hk/cloud.html',
+      software: '\u8edf\u4ef6\u5c08\u6848',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/zh-hk/fenginvest.html',
+      jingxin: '\u975c\u5fc3 Jingxin',
+      jingxinHref: '/zh-hk/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/zh-hk/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/zh-hk/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/zh-hk/search-king.html'
     }
   };
 var labels = copy[lang];
@@ -269,6 +302,13 @@ var labels = copy[lang];
       /* ---- Desktop submenu caret icon ---- */
       '.shared-subpage-nav .desktop-menu .nav-caret { display: inline-block; margin-left: 4px; font-size: 8px; transition: transform 0.2s ease; }',
       '.shared-subpage-nav .desktop-menu li:hover > a .nav-caret { transform: rotate(180deg); }',
+
+      /* ---- Submenu group label ---- */
+      '.shared-subpage-nav .desktop-menu .submenu li.nav-group, #submenu-portal .sp-wrap li.nav-group { padding: 8px 18px 2px; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #86868b; white-space: nowrap; border-bottom: 0; }',
+      '.shared-subpage-nav .desktop-menu .submenu li.nav-group + li a, #submenu-portal .sp-wrap li.nav-group + li a { border-top: 1px solid rgba(0,0,0,0.05); }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu .submenu li.nav-group, body[data-theme="dark"] #submenu-portal .sp-wrap li.nav-group { color: #86868b; }',
+      '.shared-subpage-nav .mobile-submenu li.nav-group, #mobile-panel-portal .mobile-submenu li.nav-group { padding: 10px 12px 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #86868b; }',
+      'body[data-theme="dark"] .shared-subpage-nav .mobile-submenu li.nav-group, body[data-theme="dark"] #mobile-panel-portal .mobile-submenu li.nav-group { color: #86868b; }',
 
       /* ---- Social / theme ---- */
       '.shared-subpage-nav .social { display: inline-flex; align-items: center; gap: 12px; }',
@@ -403,6 +443,12 @@ var labels = copy[lang];
     '          <a href="' + labels.portfolioHref + '" class="' + active.portfolio.trim() + '">' + labels.portfolio + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
     '          <ul class="submenu">',
     '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '            <li class="nav-group">' + labels.software + '</li>',
+    '            <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '            <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
+    '            <li><a href="' + labels.fengofficeHref + '">' + labels.fengoffice + '</a></li>',
+    '            <li><a href="' + labels.fengmediaHref + '">' + labels.fengmedia + '</a></li>',
+    '            <li><a href="' + labels.searchKingHref + '">' + labels.searchKing + '</a></li>',
     '            <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '            <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
     '            <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
@@ -488,6 +534,12 @@ var labels = copy[lang];
     '        </div>',
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '          <li class="nav-group">' + labels.software + '</li>',
+    '          <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '          <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
+    '          <li><a href="' + labels.fengofficeHref + '">' + labels.fengoffice + '</a></li>',
+    '          <li><a href="' + labels.fengmediaHref + '">' + labels.fengmedia + '</a></li>',
+    '          <li><a href="' + labels.searchKingHref + '">' + labels.searchKing + '</a></li>',
     '          <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '          <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
     '          <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
