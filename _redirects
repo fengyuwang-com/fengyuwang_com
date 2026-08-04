@@ -15,7 +15,12 @@
 # Track shortcuts
 /marketing    /zh-cn/mkt.html    302
 /investment    /zh-cn/invest.html    302
-/tech    /zh-cn/portfolio.html    302
+/tech    /zh-cn/tech.html    302
+
+# Old portfolio → tech (page renamed)
+/en/portfolio.html    /en/tech.html    301
+/zh-cn/portfolio.html    /zh-cn/tech.html    301
+/zh-hk/portfolio.html    /zh-hk/tech.html    301
 /capabilities    /zh-cn/capabilities.html    302
 /web3    /zh-cn/web3.html    302
 /ai    /zh-cn/ai.html    302
