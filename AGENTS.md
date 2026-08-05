@@ -552,12 +552,11 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 
 ### 6. Adding items to the Tech navbar dropdown
 
-**Symptom**: The Tech ▾ dropdown grows beyond the two-column grid layout, or a new software/topic link is added in the wrong place.
+**Symptom**: The Tech ▾ dropdown grows too long, or a new software/topic link is added in the wrong place.
 
-**Fix**: The Tech dropdown is a **two-column grid with two group headers** (see DESIGN.md §7.1 "Two-column submenu"). Rules:
-- The Tech page link itself (`技术`) is the **first item** in the left column — same as `市场学`/`艺术` lead their own submenus. Don't remove it as "duplicate".
-- Software projects go under the `软件项目` header (left column), tech topics under `技术研究` (right column).
-- Keep each column ≤6 items (max 6 rows total). If a column overflows, split into a new group or revisit the design — don't just append items.
+**Fix**: Dropdowns are **auto-fit with scroll-when-needed** (global behavior, see DESIGN.md §7.1 "Submenu auto-fit & scroll"): they expand to full content height when the screen has room and scroll only when it doesn't — never introduce a two-column grid or a fixed-height cap. The Tech dropdown is a single column with two group headers. Rules:
+- The Tech page link itself (`技术`) is the **first item** — same as `市场学`/`艺术` lead their own submenus. Don't remove it as "duplicate".
+- Software projects go under the `软件项目` header, tech topics under `技术研究`.
 - Every item and header label must be added to **all three language `copy` objects** in `shared-subpage-navbar.js` (`software`, `techResearch`, etc.) — never hard-code a string.
 - The mobile drawer mirrors the same list single-column; don't give it its own different structure.
 

@@ -367,7 +367,12 @@ body { padding-top: 44px !important; }
   box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(255,255,255,0.04);
   opacity: 0; transform: translateY(-6px);
   transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1);
+  max-height: calc(100vh - 80px);   /* fallback; showPortal() overrides inline */
+  overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.2) transparent;
 }
+#submenu-portal .sp-wrap::-webkit-scrollbar { width: 6px; }
+#submenu-portal .sp-wrap::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
 #submenu-portal.active .sp-wrap { opacity: 1; transform: translateY(0); }
 #submenu-portal .sp-wrap a {
   display: block; padding: 8px 18px;
@@ -408,7 +413,8 @@ body { padding-top: 44px !important; }
 **Mobile portal (body-level drawer):**
 ```css
 #mobile-panel-portal {
-  position: fixed; top: 44px; left: 0; right: 0; z-index: 9998;
+  position: fixed; top: 44px; left: 0; right: 0; bottom: 0; z-index: 9998;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;   /* the drawer is the scroll container */
   background: rgba(255,255,255,0.85);
   backdrop-filter: saturate(180%) blur(20px);
   box-shadow: 0 18px 48px rgba(0,0,0,0.12);
@@ -433,7 +439,7 @@ body { padding-top: 44px !important; }
 1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
 3. Marketing (▾ submenu: Marketing, 5DT-PD Framework)
-4. Tech (▾ **two-column grid submenu** — see "Two-column submenu" below)
+4. Tech (▾ submenu: Tech, 软件项目: FengInvest/Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
 5. Investment
 6. Art (▾ submenu: Art, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
 7. Ethos (▾ submenu: 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
@@ -441,39 +447,37 @@ body { padding-top: 44px !important; }
 9. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
 10. Language (▾ submenu: English, 简体中文, 繁體中文)
 
-**Two-column submenu (grid variant):** used when a submenu holds more than ~8 items. Currently only the Tech menu uses it. The dropdown splits into two labeled columns — the left column is the primary group (软件项目 / Software / 軟件專案), the right column the secondary group (技术研究 / Tech Research / 技術研究). The page's own link (`技术`) is the first item in the left column, matching the Marketing and Art submenus:
+**Submenu auto-fit & scroll (global):** every dropdown follows the same rule — expand to full content height when the screen has room, scroll only when it doesn't. Never cap a dropdown with a fixed pixel height that clips content; the only cap is the available viewport space.
+
+Desktop portal (`showPortal()`):
+- On open, sets `max-height` to the space below the trigger: `window.innerHeight - rect.bottom - 16` (min 160px). `.sp-wrap` is `overflow-y: auto` with a thin styled scrollbar. Short menus render fully expanded with no scrollbar; long menus (e.g. the Tech menu, 12 items) scroll only when the window is too short.
+- CSS fallback `max-height: calc(100vh - 80px)` applies if the inline value is absent.
+
+Mobile drawer:
+- `.mobile-submenu` opens to its **exact content height** (`scrollHeight` set inline by the toggle handler) — smooth animation, nothing clipped. The drawer `#mobile-panel-portal` is the scroll container (`overflow-y: auto`); it scrolls only when the whole menu doesn't fit the screen.
+
+The Tech dropdown is a single column with two `nav-group` headers, and leads with the page's own link — matching the Marketing and Art submenus:
 
 ```
-技术                Search King
-软件项目            技术研究
-FengInvest          Web3
-Jingxin             AI
-FengOffice          Automation
-FengMedia           Cloud
-```
-
-Structure:
-- The template `<ul class="submenu">` gets an extra class `submenu-grid`; `showPortal()` copies it onto the portal wrap as `sp-wrap-grid`.
-- Each column has a `nav-group` header. Headers live in the three-language `copy` objects as their own keys (`software`, `techResearch`) — never hard-code a header string.
-- DOM order is **column-first**: all left-column items, then all right-column items (`grid-auto-flow: column`).
-
-CSS:
-```css
-#submenu-portal .sp-wrap.sp-wrap-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-flow: column;
-  grid-template-rows: repeat(6, auto);  /* max 6 rows = 12 items */
-  column-gap: 8px;
-}
-#submenu-portal .sp-wrap.sp-wrap-grid a { border-bottom: 0; }
+技术
+软件项目
+FengInvest
+Jingxin
+FengOffice
+FengMedia
+Search King
+技术研究
+Web3
+AI
+Automation
+Cloud
 ```
 
 Rules:
-- Max 6 rows (12 items). If a group outgrows its column, split into a new group or revisit the design — do not casually add a third column or extend rows.
-- The page's own link (`技术`) stays first in the left column — never remove it; the Marketing and Art submenus also lead with their own page link.
-- Item separators are removed in grid mode; the `nav-group + li a` top hairline still separates each header from its first item.
-- The mobile drawer mirrors the same item list and group headers but stays single-column (it scrolls).
+- No two-column grids, no fixed max-height caps — dropdowns auto-fit the viewport and scroll only when needed.
+- The page's own link (`技术`) stays first — never remove it; the Marketing and Art submenus also lead with their own page link.
+- Group headers live in the three-language `copy` objects as their own keys (`software`, `techResearch`) — never hard-code a header string.
+- The mobile drawer mirrors the same item list and group headers, single-column.
 - New items go under the correct group header and must be added to all three language `copy` objects.
 
 **Dark mode navbar:**
@@ -494,8 +498,8 @@ body[data-theme="dark"] .mobile-caret::before { color: #86868b; }
 **JS Behavior:**
 - Theme is stored in `localStorage.setItem('site-theme', theme)` and applied on load
 - Default: respects `prefers-color-scheme` media query
-- Desktop submenus: on `mouseenter`, clone the submenu HTML into `#submenu-portal`, position it, fade in. On `mouseleave`, fade out after 100 ms delay. Portal itself has `mouseenter`/`mouseleave` handlers to prevent closing while the cursor travels.
-- Mobile: click on `.mobile-link-row` toggles `.open` on `.mobile-item`, which reveals `.mobile-submenu` via `max-height` transition (0 → 500px). Only one submenu open at a time.
+- Desktop submenus: on `mouseenter`, clone the submenu HTML into `#submenu-portal`, position it, set `max-height` to the space below the trigger (auto-fit), fade in. On `mouseleave`, fade out after 100 ms delay. Portal itself has `mouseenter`/`mouseleave` handlers to prevent closing while the cursor travels. Scrolls inside the dropdown only when the window is too short.
+- Mobile: click on `.mobile-link-row` toggles `.open` on `.mobile-item`, which reveals `.mobile-submenu` to its exact content height (`scrollHeight`, no fixed cap). Only one submenu open at a time; the drawer scrolls when the whole menu doesn't fit.
 - Hamburger click toggles `#mobile-panel-portal.open`.
 - On viewport resize ≥992px, mobile panel closes.
 
