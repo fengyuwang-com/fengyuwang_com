@@ -45,8 +45,8 @@
         .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
         .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
 
-        .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
-        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
         .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
         .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
         .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
@@ -56,23 +56,23 @@
         .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
         .content-block:last-of-type { margin-bottom: 0; }
         .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
-        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
         .content-block.section-bg .block-inner { position: relative; z-index: 1; }
-        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.22); }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
         .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
         .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
-        .block-subtitle { color: #2563eb; font-weight: 600; font-size: .95rem; margin-bottom: 14px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
         .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
         .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
         .block-inner ul li + li { margin-top: 5px; }
-        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.12); }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
         .content-text-card p { margin-bottom: 0; }
         .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
         .content-text-card ul li + li { margin-top: 5px; }
         .content-text-card:last-child { margin-bottom: 0; }
         .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
         .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-        .stack-chip { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; background: rgba(37,99,235,.08); color: #1f3b8a; font-size: .8rem; font-weight: 600; border: 1px solid rgba(37,99,235,.12); }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
         .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
         .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
         .link-card { text-align: center; padding: 48px 0 72px; }
@@ -85,15 +85,15 @@
         body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
         body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
-        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
         body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
-        body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
         body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
-        body[data-theme="dark"] .stack-chip { background: rgba(96,165,250,.12); color: #bfdbfe; border-color: rgba(96,165,250,.18); }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
 
         @media (max-width: 991px) {
@@ -314,7 +314,7 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/jquery.meanmenu.js"></script>
     <script src="../assets/js/main.js"></script>
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
     <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
 </body>
 </html>
