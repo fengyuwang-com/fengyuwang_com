@@ -831,19 +831,21 @@ body[data-theme="dark"] .link-card p { color: #94a3b8; }
   0%, 100% { opacity: .35; } 6% { opacity: 1; } 8% { opacity: .25; }
   10% { opacity: .85; } 12% { opacity: .4; } 40% { opacity: .55; } 70% { opacity: .4; }
 }
-/* Dark mode: same storm, deeper blue, softer shadow — no large square glow halo */
+/* Dark mode: same storm, but clearly a BLUE glowing body — never near-black
+   (#0b1530-style dark starts read as a "black square" against #0a0e1a) */
 body[data-theme="dark"] .projects-shell {
   background:
-    radial-gradient(ellipse 70% 70% at 50% -8%, rgba(59,130,246,.32) 0%, transparent 62%),
-    radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.20) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 45% at 92% 10%, rgba(37,99,235,.26) 0%, transparent 55%),
-    linear-gradient(115deg, transparent 38%, rgba(255,255,255,.07) 44%, transparent 52%),
-    linear-gradient(115deg, transparent 66%, rgba(255,255,255,.05) 70%, transparent 76%),
-    linear-gradient(135deg, #0b1530 0%, #16295c 55%, #1e3a8a 100%);
-  box-shadow: 0 10px 36px rgba(0,0,0,.45);
+    radial-gradient(ellipse 70% 70% at 50% -8%, rgba(96,165,250,.45) 0%, transparent 62%),
+    radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.26) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 45% at 92% 10%, rgba(59,130,246,.34) 0%, transparent 55%),
+    linear-gradient(115deg, transparent 38%, rgba(255,255,255,.08) 44%, transparent 52%),
+    linear-gradient(115deg, transparent 66%, rgba(255,255,255,.06) 70%, transparent 76%),
+    linear-gradient(135deg, #16295c 0%, #1e3a8a 55%, #2547c8 100%);
+  box-shadow: 0 0 46px rgba(37,99,235,.28); /* uniform blue halo — no offset, no black */
+  animation: none; /* freeze storm-glow so the halo value is not overridden */
 }
 body[data-theme="dark"] .projects-shell::before {
-  background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(147,197,253,.16) 0%, transparent 60%);
+  background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(147,197,253,.22) 0%, transparent 60%);
 }
 .projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
 .projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
