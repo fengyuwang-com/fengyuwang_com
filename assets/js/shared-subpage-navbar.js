@@ -358,6 +358,8 @@ var labels = copy[lang];
       '#submenu-portal.active .sp-wrap { opacity: 1; transform: translateY(0); }',
       '#submenu-portal .sp-wrap a { display: block; padding: 8px 18px; border-bottom: 1px solid rgba(0,0,0,0.05); background: transparent; white-space: nowrap; color: #1d1d1f; font-size: 12px; font-weight: 400; text-decoration: none; }',
       '#submenu-portal .sp-wrap li:last-child a { border-bottom: 0; }',
+      '#submenu-portal .sp-wrap.sp-wrap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: column; grid-template-rows: repeat(6, auto); column-gap: 8px; }',
+      '#submenu-portal .sp-wrap.sp-wrap-grid a { border-bottom: 0; }',
       '#submenu-portal .sp-wrap a:hover { color: #0071e3; background: rgba(0,113,227,0.06); }',
       '#submenu-portal .sp-wrap ul { list-style: none; margin: 0; padding: 0; }',
       '#submenu-portal .sp-wrap li { list-style: none; }',
@@ -441,8 +443,7 @@ var labels = copy[lang];
     '        </li>',
     '        <li>',
     '          <a href="' + labels.portfolioHref + '" class="' + active.portfolio.trim() + '">' + labels.portfolio + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
-    '          <ul class="submenu">',
-    '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '          <ul class="submenu submenu-grid">',
     '            <li class="nav-group">' + labels.software + '</li>',
     '            <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
     '            <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
@@ -533,7 +534,6 @@ var labels = copy[lang];
     '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
-    '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
     '          <li class="nav-group">' + labels.software + '</li>',
     '          <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
     '          <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
@@ -684,6 +684,7 @@ var labels = copy[lang];
     if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
     var r = li.getBoundingClientRect();
     portalWrap.innerHTML = sub.innerHTML;
+    portalWrap.className = 'sp-wrap' + (sub.classList.contains('submenu-grid') ? ' sp-wrap-grid' : '');
     portal.style.top = (r.bottom + 4) + 'px';
     portal.style.left = (r.left + r.width / 2) + 'px';
     portal.style.transform = 'translateX(-50%)';
