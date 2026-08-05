@@ -45,3 +45,21 @@
 - 关键决策:
   - 暗色模式下**任何元素不使用黑色 box-shadow**（在 #0a0e1a 背景上必显黑框）——这是暗色模式设计红线
   - 纯 CSS bug 修复全站三语同步（非内容改动，不占 en/zh-hk 翻译待办）
+
+## 2026-08-05 18:36 — 第 3 轮
+
+- 用户要求:
+  - 「截张图看一下暗色模式到底是怎么回事，就会多出一个壳子」
+  - 「你把我优美的圆角矩形删掉了，只剩下那个硬朗的那个正方形外壳的，我刚好要，相反，我要那个圆角矩形，不要那个正方形外壳」
+- AI 行动:
+  - 截图确认：暗色模式下 .section-card（`rgba(15,25,50,.62)` 半透明深蓝背景 + 18px 圆角）与 .content-text-card（`rgba(10,18,40,.55)`）形成可见的深色圆角矩形「壳」
+  - 误判：将 section-card/content-text-card 改为透明 → 用户反馈「圆角矩形被删了，只剩方形外壳」
+  - 纠正：恢复 section-card/content-text-card 为正常不透明外观（圆角矩形保留）；改为将 projects-shell 本身在暗色模式下透明化（`background: transparent; box-shadow: none; animation: none; ::before { background: none; }`）
+  - 服务器多次重启（端口 8001 多进程冲突），最终清理干净
+- 产出:
+  - zh-cn/tech.html：暗色模式下 projects-shell 透明（无蓝色方形轮廓），section-card/content-text-card 保持正常外观（圆角矩形可见）
+  - 亮色模式不变：蓝色风暴效果 + 半透明卡片
+- 关键决策:
+  - 暗色模式下 projects-shell 应完全透明——用户要的是圆角矩形卡片，不要蓝色方形壳
+  - 「圆角矩形」= section-card 的 `border-radius: 18px` 外观，「方形外壳」= projects-shell 的蓝色渐变背景矩形轮廓——两者不要混淆
+  - 修复方向：去掉 shell 背景而非去掉卡片背景

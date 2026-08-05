@@ -129,38 +129,7 @@
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
 			body[data-theme="dark"] .link-card p { color: #94a3b8; }
-		/* Projects zone (storm shell): 交付项目与理念/能力视觉分层 — 电闪雷鸣炫光蓝 */
-		.projects-shell { margin: 12px 0; padding: 42px 42px 18px; position: relative; overflow: hidden; background:
-			radial-gradient(ellipse 70% 70% at 50% -8%, rgba(147,197,253,.55) 0%, transparent 62%),
-			radial-gradient(ellipse 45% 40% at 10% 14%, rgba(191,219,254,.40) 0%, transparent 55%),
-			radial-gradient(ellipse 40% 45% at 92% 10%, rgba(96,165,250,.38) 0%, transparent 55%),
-			linear-gradient(115deg, transparent 38%, rgba(255,255,255,.12) 44%, transparent 52%),
-			linear-gradient(115deg, transparent 66%, rgba(255,255,255,.08) 70%, transparent 76%),
-			linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
-			box-shadow: 0 14px 44px rgba(37,99,235,.38);
-			animation: storm-glow 4.5s ease-in-out infinite; }
-		.projects-shell::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(255,255,255,.28) 0%, transparent 60%); animation: storm-flash 4.5s ease-in-out infinite; }
-		.projects-shell .projects-head, .projects-shell .project-card { position: relative; z-index: 1; }
-		@keyframes storm-glow { 0%, 100% { box-shadow: 0 14px 44px rgba(37,99,235,.38); } 50% { box-shadow: 0 14px 80px rgba(96,165,250,.70); } }
-		@keyframes storm-flash { 0%, 100% { opacity: .35; } 6% { opacity: 1; } 8% { opacity: .25; } 10% { opacity: .85; } 12% { opacity: .4; } 40% { opacity: .55; } 70% { opacity: .4; } }
-		body[data-theme="dark"] .projects-shell { background:
-			radial-gradient(ellipse 70% 70% at 50% -8%, rgba(96,165,250,.45) 0%, transparent 62%),
-			radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.26) 0%, transparent 55%),
-			radial-gradient(ellipse 40% 45% at 92% 10%, rgba(59,130,246,.34) 0%, transparent 55%),
-			linear-gradient(115deg, transparent 38%, rgba(255,255,255,.08) 44%, transparent 52%),
-			linear-gradient(115deg, transparent 66%, rgba(255,255,255,.06) 70%, transparent 76%),
-			linear-gradient(135deg, #16295c 0%, #1e3a8a 55%, #2547c8 100%);
-			box-shadow: 0 0 46px rgba(37,99,235,.28);
-			animation: none; }
-		body[data-theme="dark"] .projects-shell::before { background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(147,197,253,.22) 0%, transparent 60%); }
-		.projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
-		.projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
-		.projects-shell .projects-head p { color: #94a3b8; font-size: .95rem; margin: 8px 0 0; }
-		.projects-shell .project-card { padding: 20px 0; }
-		.projects-shell .project-card + .project-card { margin-top: 12px; }
-		body[data-theme="dark"] .projects-shell .section-card { background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12); }
-		@media (max-width: 599px) { .projects-shell { padding: 28px 20px 10px; } }
-			body[data-theme="dark"] .punchline { color: #6b9aff; }
+		body[data-theme="dark"] .punchline { color: #6b9aff; }
 			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
 			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
 	</style>
@@ -180,34 +149,34 @@
 
 			<!-- Card grid -->
 				<div class="card-grid">
-<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="window.location.href='/zh-cn/jingxin.html'">
-					<div class="card-content">
-							<h3>静心 Jingxin</h3>
-								<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
-						<button class="card-btn">查看官网</button>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+						<div class="card-content">
+								<h3>静心 Jingxin</h3>
+									<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
+							<button class="card-btn">了解详情</button>
+						</div>
 					</div>
-				</div>
-<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="window.location.href='/zh-cn/fengoffice.html'">
-					<div class="card-content">
-							<h3>FengOffice</h3>
-								<p>邮件、CRM、Newsletter，一条链。</p>
-						<button class="card-btn">查看官网</button>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+						<div class="card-content">
+								<h3>FengOffice</h3>
+									<p>邮件、CRM、Newsletter，一条链。</p>
+							<button class="card-btn">了解详情</button>
+						</div>
 					</div>
-				</div>
-<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="window.location.href='/zh-cn/fengmedia.html'">
-					<div class="card-content">
-							<h3>FengMedia</h3>
-								<p>财经内容操作系统，把想法变成流水线。</p>
-						<button class="card-btn">查看官网</button>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+						<div class="card-content">
+								<h3>FengMedia</h3>
+									<p>财经内容操作系统，把想法变成流水线。</p>
+							<button class="card-btn">了解详情</button>
+						</div>
 					</div>
-				</div>
-<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="window.location.href='/zh-cn/search-king.html'">
-					<div class="card-content">
-							<h3>Search King</h3>
-								<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
-						<button class="card-btn">查看官网</button>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+						<div class="card-content">
+								<h3>Search King</h3>
+									<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
+							<button class="card-btn">了解详情</button>
+						</div>
 					</div>
-				</div>
 					<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>不问对，不开始</h3>
@@ -257,15 +226,8 @@
 				</div>
 		</div>
 
-			<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
-		<div class="projects-shell">
-			<div class="projects-head">
-				<h2>软件项目</h2>
-				<p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
-			</div>
-
 		<!-- Project 1: 静心 Jingxin -->
-		<div id="jingxin" class="project-card">
+		<div id="jingxin" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>一个 App，四种呼吸方式</h2>
@@ -280,16 +242,16 @@
 							<li><strong>四种模式</strong>：呼吸 / 正念 / 引导 / 放松。</li>
 						</ul>
 					</div>
-					<div style="text-align:center; margin-top:18px;">
+					<div class="cta-row">
 						<a class="default-btn" href="/zh-cn/jingxin.html">查看官网 →</a>
-						<a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">GitHub</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Project 2: FengOffice -->
-		<div id="fengoffice" class="project-card">
+		<div id="fengoffice" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>邮件、CRM、Newsletter，一条链</h2>
@@ -304,16 +266,16 @@
 							<li><strong>四级邮件分类</strong>：docs/email-classification.md 定义分类体系。</li>
 						</ul>
 					</div>
-					<div style="text-align:center; margin-top:18px;">
+					<div class="cta-row">
 						<a class="default-btn" href="/zh-cn/fengoffice.html">查看官网 →</a>
-						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">GitHub</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Project 3: FengMedia -->
-		<div id="fengmedia" class="project-card">
+		<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>内容不该靠灵感</h2>
@@ -329,16 +291,16 @@
 							<li><strong>运营复盘</strong>：日周月 SOP、数据复盘、增长里程碑。</li>
 						</ul>
 					</div>
-					<div style="text-align:center; margin-top:18px;">
+					<div class="cta-row">
 						<a class="default-btn" href="/zh-cn/fengmedia.html">查看官网 →</a>
-						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">GitHub</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Project 4: Search King -->
-		<div id="search-king" class="project-card">
+		<div id="search-king" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>十八路引擎，谁行谁上</h2>
@@ -353,15 +315,13 @@
 							<li><strong>版权可追溯</strong>：每个结果带来源与许可证记录。</li>
 						</ul>
 					</div>
-					<div style="text-align:center; margin-top:18px;">
+					<div class="cta-row">
 						<a class="default-btn" href="/zh-cn/search-king.html">查看官网 →</a>
-						<a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">GitHub</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
-
 
 		<!-- Section 1: 定义问题 -->
 		<div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
