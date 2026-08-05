@@ -130,14 +130,23 @@
 			.link-card .default-btn { min-width: 200px; }
 			body[data-theme="dark"] .link-card p { color: #94a3b8; }
 		/* Projects zone (dark shell): 交付项目与理念/能力视觉分层 */
-		.projects-shell { margin: 12px 0; padding: 42px 42px 18px; border-radius: 32px; background: linear-gradient(135deg, #0f172a, #1e293b); }
+		.projects-shell { margin: 12px 0; padding: 42px 42px 18px; background:
+			radial-gradient(ellipse 75% 60% at 15% 0%, rgba(96,165,250,.42), transparent 60%),
+			radial-gradient(ellipse 60% 50% at 90% 25%, rgba(59,130,246,.32), transparent 55%),
+			linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
+			box-shadow: 0 24px 64px rgba(37,99,235,.30), inset 0 1px 0 rgba(255,255,255,.14); }
+		body[data-theme="dark"] .projects-shell { background:
+			radial-gradient(ellipse 75% 60% at 15% 0%, rgba(37,99,235,.26), transparent 60%),
+			radial-gradient(ellipse 60% 50% at 90% 25%, rgba(59,130,246,.16), transparent 55%),
+			linear-gradient(135deg, #0b1530 0%, #16295c 55%, #1e3a8a 100%);
+			box-shadow: 0 24px 64px rgba(0,0,0,.40), inset 0 1px 0 rgba(148,163,184,.12); }
 		.projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
 		.projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
 		.projects-shell .projects-head p { color: #94a3b8; font-size: .95rem; margin: 8px 0 0; }
 		.projects-shell .project-card { padding: 20px 0; }
 		.projects-shell .project-card + .project-card { margin-top: 12px; }
 		body[data-theme="dark"] .projects-shell .section-card { background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12); }
-		@media (max-width: 599px) { .projects-shell { padding: 28px 20px 10px; border-radius: 24px; } }
+		@media (max-width: 599px) { .projects-shell { padding: 28px 20px 10px; } }
 			body[data-theme="dark"] .punchline { color: #6b9aff; }
 			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
 			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
@@ -158,6 +167,34 @@
 
 			<!-- Card grid -->
 				<div class="card-grid">
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="window.location.href='/zh-cn/jingxin.html'">
+					<div class="card-content">
+							<h3>静心 Jingxin</h3>
+								<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
+						<button class="card-btn">查看官网</button>
+					</div>
+				</div>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="window.location.href='/zh-cn/fengoffice.html'">
+					<div class="card-content">
+							<h3>FengOffice</h3>
+								<p>邮件、CRM、Newsletter，一条链。</p>
+						<button class="card-btn">查看官网</button>
+					</div>
+				</div>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="window.location.href='/zh-cn/fengmedia.html'">
+					<div class="card-content">
+							<h3>FengMedia</h3>
+								<p>财经内容操作系统，把想法变成流水线。</p>
+						<button class="card-btn">查看官网</button>
+					</div>
+				</div>
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="window.location.href='/zh-cn/search-king.html'">
+					<div class="card-content">
+							<h3>Search King</h3>
+								<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
+						<button class="card-btn">查看官网</button>
+					</div>
+				</div>
 					<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>不问对，不开始</h3>
@@ -193,34 +230,10 @@
 						<button class="card-btn">联系我</button>
 					</div>
 				</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="window.location.href='/zh-cn/jingxin.html'">
-					<div class="card-content">
-							<h3>静心 Jingxin</h3>
-								<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
-						<button class="card-btn">查看官网</button>
-					</div>
-				</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="window.location.href='/zh-cn/fengoffice.html'">
-					<div class="card-content">
-							<h3>FengOffice</h3>
-								<p>邮件、CRM、Newsletter，一条链。</p>
-						<button class="card-btn">查看官网</button>
-					</div>
-				</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="window.location.href='/zh-cn/fengmedia.html'">
-					<div class="card-content">
-							<h3>FengMedia</h3>
-								<p>财经内容操作系统，把想法变成流水线。</p>
-						<button class="card-btn">查看官网</button>
-					</div>
-				</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="window.location.href='/zh-cn/search-king.html'">
-					<div class="card-content">
-							<h3>Search King</h3>
-								<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
-						<button class="card-btn">查看官网</button>
-					</div>
-				</div>
+				
+				
+				
+				
 				<div class="mkt-card invest-card" onclick="window.location.href='/zh-cn/invest.html'">
 						<div class="card-content">
 							<h3>投资框架 →</h3>
@@ -229,7 +242,113 @@
 						</div>
 					</div>
 				</div>
+		</div>
+
+			<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
+		<div class="projects-shell">
+			<div class="projects-head">
+				<h2>软件项目</h2>
+				<p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
 			</div>
+
+		<!-- Project 1: 静心 Jingxin -->
+		<div id="jingxin" class="project-card">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>一个 App，四种呼吸方式</h2>
+					<p class="block-subtitle">静心 Jingxin——极简风格的冥想引导应用，呼吸、正念、引导、放松四种模式。</p>
+					<div class="content-text-card">
+						<h3>跨平台移动作品的实证</h3>
+						<p>用 Flutter 构建，一套代码跑通 Web / Android / iOS / Windows。极简界面，专注冥想本身，不被功能堆砌打扰。</p>
+						<ul>
+							<li><strong>数据模型</strong>：<code>MeditationSession</code> 记录时长 / 模式 / 完成状态。</li>
+							<li><strong>状态管理</strong>：Provider 管理所选时长与模式，界面响应清晰。</li>
+							<li><strong>呼吸动画</strong>：自绘 <code>BreathingCircle</code> 组件，引导呼吸节奏。</li>
+							<li><strong>四种模式</strong>：呼吸 / 正念 / 引导 / 放松。</li>
+						</ul>
+					</div>
+					<div style="text-align:center; margin-top:18px;">
+						<a class="default-btn" href="/zh-cn/jingxin.html">查看官网 →</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 2: FengOffice -->
+		<div id="fengoffice" class="project-card">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>邮件、CRM、Newsletter，一条链</h2>
+					<p class="block-subtitle">FengOffice——AI 统一邮件与 CRM，把内容运营的基础设施收进一条自动化链路。</p>
+					<div class="content-text-card">
+						<h3>技术交付与市场运营的交汇点</h3>
+						<p>一个 CLI 管邮件，一个 Docker 栈跑 Twenty CRM，邮件发现 → 回复 → CRM 录入，完整链路打通。新闻稿由 Newsletter 系统（Listmonk）自动分发。</p>
+						<ul>
+							<li><strong>fengmail.py</strong>：CLI 邮件客户端，IMAP 收信 + SMTP 回复。</li>
+							<li><strong>Twenty CRM</strong>：docker-compose 一键部署，端口 3002。</li>
+							<li><strong>Newsletter</strong>：Listmonk + Postgres 订阅系统，AI 管理脚本加订阅、退订、发 campaign。</li>
+							<li><strong>四级邮件分类</strong>：docs/email-classification.md 定义分类体系。</li>
+						</ul>
+					</div>
+					<div style="text-align:center; margin-top:18px;">
+						<a class="default-btn" href="/zh-cn/fengoffice.html">查看官网 →</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 3: FengMedia -->
+		<div id="fengmedia" class="project-card">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>内容不该靠灵感</h2>
+					<p class="block-subtitle">FengMedia——财经内容操作系统，把人设、选题、写稿、发布、复盘收进一条流水线。</p>
+					<div class="content-text-card">
+						<h3>技术与表达的汇合点</h3>
+						<p>市场学要用表达落地，表达需要工具兜底——这就是 FengMedia 的起点。</p>
+						<ul>
+							<li><strong>人设系统</strong>：核心定位、人设光谱（平静 ↔ 暴躁）、语言风格、人设边界。</li>
+							<li><strong>内容系统</strong>：四大支柱、话题库、脚本结构模板、生产 SOP。</li>
+							<li><strong>平台分发</strong>：平台矩阵 + 小红书/B站/抖音专属规则 + social-auto-upload 自动发布。</li>
+							<li><strong>快捷指令</strong>：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。</li>
+							<li><strong>运营复盘</strong>：日周月 SOP、数据复盘、增长里程碑。</li>
+						</ul>
+					</div>
+					<div style="text-align:center; margin-top:18px;">
+						<a class="default-btn" href="/zh-cn/fengmedia.html">查看官网 →</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 4: Search King -->
+		<div id="search-king" class="project-card">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>十八路引擎，谁行谁上</h2>
+					<p class="block-subtitle">Super-Invincible-Search-King——Playwright 驱动的全能搜索器，搜图、搜文字、读网页、深度爬取、反爬网站抓取。</p>
+					<div class="content-text-card">
+						<h3>把「被拦」当成常态处理</h3>
+						<p>一台机器，十八路引擎。遇到验证码自动跳过、引擎链自动回退、真人浏览模式兜底。</p>
+						<ul>
+							<li><strong>五种行为</strong>：搜图 / 搜文字 / 读网页 / 深度爬取 / 平台抓取（雪球、B站）。</li>
+							<li><strong>十二路图片引擎</strong> + <strong>六路文字引擎</strong>，覆盖主流与地区性搜索。</li>
+							<li><strong>六种后端</strong>：从无头浏览器到真实浏览器，层层兜底。</li>
+							<li><strong>版权可追溯</strong>：每个结果带来源与许可证记录。</li>
+						</ul>
+					</div>
+					<div style="text-align:center; margin-top:18px;">
+						<a class="default-btn" href="/zh-cn/search-king.html">查看官网 →</a>
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
 
 		<!-- Section 1: 定义问题 -->
 		<div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
@@ -352,110 +471,7 @@
 				</div>
 				</div>
 
-			<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
-			<div class="projects-shell">
-				<div class="projects-head">
-					<h2>软件项目</h2>
-					<p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
-				</div>
 
-			<!-- Project 1: 静心 Jingxin -->
-			<div id="jingxin" class="project-card">
-				<div class="block-inner">
-					<div class="section-card">
-						<h2>一个 App，四种呼吸方式</h2>
-						<p class="block-subtitle">静心 Jingxin——极简风格的冥想引导应用，呼吸、正念、引导、放松四种模式。</p>
-						<div class="content-text-card">
-							<h3>跨平台移动作品的实证</h3>
-							<p>用 Flutter 构建，一套代码跑通 Web / Android / iOS / Windows。极简界面，专注冥想本身，不被功能堆砌打扰。</p>
-							<ul>
-								<li><strong>数据模型</strong>：<code>MeditationSession</code> 记录时长 / 模式 / 完成状态。</li>
-								<li><strong>状态管理</strong>：Provider 管理所选时长与模式，界面响应清晰。</li>
-								<li><strong>呼吸动画</strong>：自绘 <code>BreathingCircle</code> 组件，引导呼吸节奏。</li>
-								<li><strong>四种模式</strong>：呼吸 / 正念 / 引导 / 放松。</li>
-							</ul>
-						</div>
-						<div style="text-align:center; margin-top:18px;">
-							<a class="default-btn" href="/zh-cn/jingxin.html">查看官网 →</a>
-							<a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看 GitHub 仓库</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Project 2: FengOffice -->
-			<div id="fengoffice" class="project-card">
-				<div class="block-inner">
-					<div class="section-card">
-						<h2>邮件、CRM、Newsletter，一条链</h2>
-						<p class="block-subtitle">FengOffice——AI 统一邮件与 CRM，把内容运营的基础设施收进一条自动化链路。</p>
-						<div class="content-text-card">
-							<h3>技术交付与市场运营的交汇点</h3>
-							<p>一个 CLI 管邮件，一个 Docker 栈跑 Twenty CRM，邮件发现 → 回复 → CRM 录入，完整链路打通。新闻稿由 Newsletter 系统（Listmonk）自动分发。</p>
-							<ul>
-								<li><strong>fengmail.py</strong>：CLI 邮件客户端，IMAP 收信 + SMTP 回复。</li>
-								<li><strong>Twenty CRM</strong>：docker-compose 一键部署，端口 3002。</li>
-								<li><strong>Newsletter</strong>：Listmonk + Postgres 订阅系统，AI 管理脚本加订阅、退订、发 campaign。</li>
-								<li><strong>四级邮件分类</strong>：docs/email-classification.md 定义分类体系。</li>
-							</ul>
-						</div>
-						<div style="text-align:center; margin-top:18px;">
-							<a class="default-btn" href="/zh-cn/fengoffice.html">查看官网 →</a>
-							<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看 GitHub 仓库</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Project 3: FengMedia -->
-			<div id="fengmedia" class="project-card">
-				<div class="block-inner">
-					<div class="section-card">
-						<h2>内容不该靠灵感</h2>
-						<p class="block-subtitle">FengMedia——财经内容操作系统，把人设、选题、写稿、发布、复盘收进一条流水线。</p>
-						<div class="content-text-card">
-							<h3>技术与表达的汇合点</h3>
-							<p>市场学要用表达落地，表达需要工具兜底——这就是 FengMedia 的起点。</p>
-							<ul>
-								<li><strong>人设系统</strong>：核心定位、人设光谱（平静 ↔ 暴躁）、语言风格、人设边界。</li>
-								<li><strong>内容系统</strong>：四大支柱、话题库、脚本结构模板、生产 SOP。</li>
-								<li><strong>平台分发</strong>：平台矩阵 + 小红书/B站/抖音专属规则 + social-auto-upload 自动发布。</li>
-								<li><strong>快捷指令</strong>：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。</li>
-								<li><strong>运营复盘</strong>：日周月 SOP、数据复盘、增长里程碑。</li>
-							</ul>
-						</div>
-						<div style="text-align:center; margin-top:18px;">
-							<a class="default-btn" href="/zh-cn/fengmedia.html">查看官网 →</a>
-							<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">查看 GitHub 仓库</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Project 4: Search King -->
-			<div id="search-king" class="project-card">
-				<div class="block-inner">
-					<div class="section-card">
-						<h2>十八路引擎，谁行谁上</h2>
-						<p class="block-subtitle">Super-Invincible-Search-King——Playwright 驱动的全能搜索器，搜图、搜文字、读网页、深度爬取、反爬网站抓取。</p>
-						<div class="content-text-card">
-							<h3>把「被拦」当成常态处理</h3>
-							<p>一台机器，十八路引擎。遇到验证码自动跳过、引擎链自动回退、真人浏览模式兜底。</p>
-							<ul>
-								<li><strong>五种行为</strong>：搜图 / 搜文字 / 读网页 / 深度爬取 / 平台抓取（雪球、B站）。</li>
-								<li><strong>十二路图片引擎</strong> + <strong>六路文字引擎</strong>，覆盖主流与地区性搜索。</li>
-								<li><strong>六种后端</strong>：从无头浏览器到真实浏览器，层层兜底。</li>
-								<li><strong>版权可追溯</strong>：每个结果带来源与许可证记录。</li>
-							</ul>
-						</div>
-						<div style="text-align:center; margin-top:18px;">
-							<a class="default-btn" href="/zh-cn/search-king.html">查看官网 →</a>
-							<a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看 GitHub 仓库</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
 
 			<!-- Capability: 技术实现力 -->
 		<div id="tech-capability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
