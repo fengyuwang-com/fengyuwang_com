@@ -63,3 +63,27 @@
   - 暗色模式下 projects-shell 应完全透明——用户要的是圆角矩形卡片，不要蓝色方形壳
   - 「圆角矩形」= section-card 的 `border-radius: 18px` 外观，「方形外壳」= projects-shell 的蓝色渐变背景矩形轮廓——两者不要混淆
   - 修复方向：去掉 shell 背景而非去掉卡片背景
+
+## 2026-08-06 00:40 — 第 4 轮
+
+- 用户要求:
+  - 「现在是抽搐的一闪一闪，有时候有蓝色有时候没有，改成一直有蓝色但有渐变效果」→ 修复 storm 动画
+  - Tech 页验收通过后「归纳一下 Tech 页面从很久以前的 Commit 之后到底是什么变化，然后做一个把它覆盖到全局的计划，在文档里也要更新」
+  - 「注意我的闪电炫光蓝背景，这个是一次性的效果，不能作为全局的，但要在 Design MD 里说明白这是怎么回事」
+- AI 行动:
+  - 定位基线 commit 494b052（本次会话工作前最后一次提交）
+  - Tech 页变化归纳：(A) 全局可复用——暗色黑框修复(已 32 页)、移动端文字过窄修复、CTA 按钮等宽；(B) tech 独有一次性——软件项目「闪电炫光蓝」storm-bg；(C) 已全局不动作——projects-shell 等
+  - 写批量脚本 scripts/apply-mobile-fix.js（幂等，按 1.25rem 唯一锚点匹配 minified/spaced 三种 CSS 变体）
+  - 执行：Fix A 移动端 padding（block-inner 0 12/20px 等）应用到 en/zh-cn/zh-hk 全部内容子页；Fix B cta 按钮等宽应用到 8 个 cta-row 页
+  - 处理边角：EN art-* 的 @media(minified) 块缺 1.25rem 锚点（截断块）→ 脚本加 fallback 插在 599 块开括号后
+  - 抽验 4 类代表页（web3 minified / capabilities 960 / art.html 多块 / art-architecture 截断），无重复无错位
+  - DESIGN.md 新增 §7.7.1（storm-bg 一次性说明）+ §8 移动端文字恢复 & CTA 等宽；AGENTS.md Common Mistakes #7/#8
+- 产出:
+  - scripts/apply-mobile-fix.js（全局批量修复脚本，幂等可重跑）
+  - 三语 ~57 内容页 Fix A + 8 页 Fix B 全部应用，无遗漏无重复
+  - DESIGN.md/AGENTS.md 文档同步
+- 关键决策:
+  - storm-bg 明确为 tech 页面一次性效果，不扩散；在 DESIGN.md §7.7.1 记录其位置/动画参数/不闪烁红线
+  - 批量脚本锚点统一用每页唯一的 `.block-inner h2{font-size:1.25rem}`（599 块尾部规则），兼容三种 CSS 变体
+  - 首页 3 个 index 结构不同，不需 Fix A/B（排除）
+  - 本次不 push，待用户全局确认后再 push
