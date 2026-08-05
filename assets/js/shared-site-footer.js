@@ -89,7 +89,7 @@
     '            <li><a href="' + home + '#about">' + labels.about + '</a></li>',
     '            <li><a href="' + home + '#contact">' + labels.contact + '</a></li>',
     '            <li><a href="' + home + '#services">' + labels.services + '</a></li>',
-    '            <li><a href="' + home.replace("index.html", "portfolio.html") + '">' + labels.portfolio + '</a></li>',
+    '            <li><a href="' + home.replace("index.html", "tech.html") + '">' + labels.portfolio + '</a></li>',
     '            <li><a href="https://www.bilibili.com/video/BV1oW4y1i7qf" target="_blank" rel="noopener noreferrer" style="font-style:italic;font-weight:700;">' + (lang === 'en' ? '&ldquo;Think different.&rdquo;' : (lang === 'zh-cn' ? '&ldquo;不同凡想&rdquo;' : '\u300c不同凡想\u300d')) + '</a></li>',
     '          </ul>',
     '        </div>',
