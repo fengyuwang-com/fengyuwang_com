@@ -557,6 +557,7 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 **Fix**: Dropdowns are **auto-fit with scroll-when-needed** (global behavior, see DESIGN.md §7.1 "Submenu auto-fit & scroll"): they expand to full content height when the screen has room and scroll only when it doesn't — never introduce a two-column grid or a fixed-height cap. The Tech dropdown is a single column with two group headers. Rules:
 - The Tech page link itself (`技术`) is the **first item** — same as `市场学`/`艺术` lead their own submenus. Don't remove it as "duplicate".
 - Software projects go under the `软件项目` header, tech topics under `技术研究`.
+- **FengInvest lives under the Investment ▾ dropdown** (it's an investment tool, and its pages declare `data-section="investment"`) — not under Tech's 软件项目.
 - Every item and header label must be added to **all three language `copy` objects** in `shared-subpage-navbar.js` (`software`, `techResearch`, etc.) — never hard-code a string.
 - The mobile drawer mirrors the same list single-column; don't give it its own different structure.
 
