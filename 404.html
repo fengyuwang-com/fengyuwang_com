@@ -68,6 +68,11 @@
         if (!clean || clean === '404.html') return '/' + preferred + '/index.html';
         if (clean.startsWith('en/') || clean.startsWith('zh-cn/') || clean.startsWith('zh-hk/')) return '/' + clean;
 
+        // Blog paths: redirect to the blog listing in the preferred language
+        if (clean.indexOf('blog/') !== -1) {
+          return '/' + preferred + '/blog/';
+        }
+
         var candidates = [];
         if (clean.endsWith('.html')) {
           candidates.push(clean);

@@ -3,7 +3,7 @@ services:
     image: python:3.11-alpine
     container_name: fengyu-web
     working_dir: /site
-    command: python -m http.server 8001
+    command: python /site/server.py
     ports:
       - "8001:8001"
     volumes:
