@@ -441,13 +441,15 @@ body { padding-top: 44px !important; }
 9. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
 10. Language (▾ submenu: English, 简体中文, 繁體中文)
 
-**Two-column submenu (grid variant):** used when a submenu holds more than ~8 items. Currently only the Tech menu uses it. The dropdown splits into two labeled columns — the left column is the primary group (软件项目 / Software / 軟件專案), the right column the secondary group (技术研究 / Tech Research / 技術研究):
+**Two-column submenu (grid variant):** used when a submenu holds more than ~8 items. Currently only the Tech menu uses it. The dropdown splits into two labeled columns — the left column is the primary group (软件项目 / Software / 軟件專案), the right column the secondary group (技术研究 / Tech Research / 技術研究). The page's own link (`技术`) is the first item in the left column, matching the Marketing and Art submenus:
 
 ```
-软件项目              技术研究
-FengInvest  Jingxin  Web3  AI
-FengOffice  FengMedia Automation Cloud
-Search King
+技术                Search King
+软件项目            技术研究
+FengInvest          Web3
+Jingxin             AI
+FengOffice          Automation
+FengMedia           Cloud
 ```
 
 Structure:
@@ -469,6 +471,7 @@ CSS:
 
 Rules:
 - Max 6 rows (12 items). If a group outgrows its column, split into a new group or revisit the design — do not casually add a third column or extend rows.
+- The page's own link (`技术`) stays first in the left column — never remove it; the Marketing and Art submenus also lead with their own page link.
 - Item separators are removed in grid mode; the `nav-group + li a` top hairline still separates each header from its first item.
 - The mobile drawer mirrors the same item list and group headers but stays single-column (it scrolls).
 - New items go under the correct group header and must be added to all three language `copy` objects.
