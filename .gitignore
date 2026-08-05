@@ -32,5 +32,11 @@ _infra/
 # Claude
 .claude/
 
+# ZCode runtime artifacts
+.zcode/
+
 # Server logs
 server.log
+
+# Migration log (operational, generated)
+scripts/migrate.log
