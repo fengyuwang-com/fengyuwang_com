@@ -129,6 +129,15 @@
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
 			body[data-theme="dark"] .link-card p { color: #94a3b8; }
+		/* Projects zone (dark shell): 交付项目与理念/能力视觉分层 */
+		.projects-shell { margin: 12px 0; padding: 42px 42px 18px; border-radius: 32px; background: linear-gradient(135deg, #0f172a, #1e293b); }
+		.projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
+		.projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
+		.projects-shell .projects-head p { color: #94a3b8; font-size: .95rem; margin: 8px 0 0; }
+		.projects-shell .project-card { padding: 20px 0; }
+		.projects-shell .project-card + .project-card { margin-top: 12px; }
+		body[data-theme="dark"] .projects-shell .section-card { background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12); }
+		@media (max-width: 599px) { .projects-shell { padding: 28px 20px 10px; border-radius: 24px; } }
 			body[data-theme="dark"] .punchline { color: #6b9aff; }
 			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
 			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
@@ -343,8 +352,15 @@
 				</div>
 				</div>
 
-			<!-- Section 6: 静心 Jingxin -->
-			<div id="jingxin" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+			<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
+			<div class="projects-shell">
+				<div class="projects-head">
+					<h2>软件项目</h2>
+					<p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
+				</div>
+
+			<!-- Project 1: 静心 Jingxin -->
+			<div id="jingxin" class="project-card">
 				<div class="block-inner">
 					<div class="section-card">
 						<h2>一个 App，四种呼吸方式</h2>
@@ -367,8 +383,8 @@
 				</div>
 			</div>
 
-			<!-- Section 7: FengOffice -->
-			<div id="fengoffice" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
+			<!-- Project 2: FengOffice -->
+			<div id="fengoffice" class="project-card">
 				<div class="block-inner">
 					<div class="section-card">
 						<h2>邮件、CRM、Newsletter，一条链</h2>
@@ -391,8 +407,8 @@
 				</div>
 			</div>
 
-			<!-- Section 8: FengMedia -->
-			<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+			<!-- Project 3: FengMedia -->
+			<div id="fengmedia" class="project-card">
 				<div class="block-inner">
 					<div class="section-card">
 						<h2>内容不该靠灵感</h2>
@@ -416,8 +432,8 @@
 				</div>
 			</div>
 
-			<!-- Section 9: Search King -->
-			<div id="search-king" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+			<!-- Project 4: Search King -->
+			<div id="search-king" class="project-card">
 				<div class="block-inner">
 					<div class="section-card">
 						<h2>十八路引擎，谁行谁上</h2>
@@ -438,6 +454,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 
 			<!-- Capability: 技术实现力 -->

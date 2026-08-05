@@ -555,10 +555,24 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 **Symptom**: The Tech ▾ dropdown grows too long, or a new software/topic link is added in the wrong place.
 
 **Fix**: Dropdowns are **auto-fit with scroll-when-needed** (global behavior, see DESIGN.md §7.1 "Submenu auto-fit & scroll"): they expand to full content height when the screen has room and scroll only when it doesn't — never introduce a two-column grid or a fixed-height cap. The Tech dropdown is a single column with two group headers. Rules:
-- The Tech page link itself (`技术`) is the **first item** — same as `市场学`/`艺术` lead their own submenus. Don't remove it as "duplicate".
+- Every submenu leads with its own **overview link** (`XXX概览` / `XXX Overview`): Tech ▾ leads with `技术概览`, same as `市场学概览`/`投资概览`/`艺术概览` lead their submenus, and Ethos ▾ leads with `理念概览` before its anchor links. The overview labels come from the per-language `casesOverview`/`portfolioOverview`/`investmentOverview`/`artOverview`/`ethosOverview` keys in the `copy` objects — never hard-code or revert to a bare page-name item (e.g. 投资 ▾ must show `投资概览`, not a duplicate `投资`).
 - Software projects go under the `软件项目` header, tech topics under `技术研究`.
 - **FengInvest lives under the Investment ▾ dropdown** (it's an investment tool, and its pages declare `data-section="investment"`) — not under Tech's 软件项目.
 - Every item and header label must be added to **all three language `copy` objects** in `shared-subpage-navbar.js` (`software`, `techResearch`, etc.) — never hard-code a string.
 - The mobile drawer mirrors the same list single-column; don't give it its own different structure.
+
+### 7. Text overflowing its card (e.g. `、/brainstorm。`)
+
+**Symptom**: A long unbreakable phrase (CJK + `/` + `、` at line end, e.g. `快捷指令：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。`) spills outside the card's right edge.
+
+**Root cause**: CJK kinsoku rules forbid `、` at line start and `/` before a break, so the whole tail chunk can't break and overflows — the site had no `overflow-wrap` rule.
+
+**Fix**: The global rule in `assets/css/style.css` (`overflow-wrap: break-word; word-break: break-word` on `.content-text-card, .block-inner`) handles it site-wide. Don't add per-page hacks; if a case still overflows, check the element is inside `.content-text-card` or `.block-inner` (per-page inline styles on other wrappers don't inherit the fix).
+
+### 8. Project sections without the dark shell
+
+**Symptom**: A delivered project section on the Tech page uses the same frosted `content-block section-bg` as the ideology sections — the projects don't read as a different kind of content.
+
+**Fix**: Wrap the projects in `.projects-shell` (dark shell; structure/CSS in DESIGN.md §7.7 "Projects Zone (Dark Shell)"). Each project keeps `class="project-card"` instead of `content-block section-bg` (drop `--section-bg-img`), and keeps its inner `.block-inner > .section-card` unchanged. Inside the shell only light cards; dark-mode cards get a hairline border via `body[data-theme="dark"] .projects-shell .section-card`.
 
 

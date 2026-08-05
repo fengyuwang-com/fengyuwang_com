@@ -269,6 +269,7 @@ All `.content-block` elements must be direct children of `.page-wrap`. Closing `
 | Card grid bottom padding | `48px` |
 | `.section-card` padding | `32px` |
 | `.content-text-card` padding | `20px 24px` |
+| Text wrapping (global) | `.content-text-card, .block-inner { overflow-wrap: break-word; word-break: break-word }` in `assets/css/style.css` — CJK kinsoku + `/` rules can form unbreakable line-end chunks; without this they overflow the card |
 | `.link-card` padding | `48px 0 72px` |
 | Nav icon height | `32px` |
 | Nav shell max-width | `1200px`, padding `0 20px` |
@@ -438,11 +439,11 @@ body { padding-top: 44px !important; }
 **Desktop menu items (injected order):**
 1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
-3. Marketing (▾ submenu: Marketing, 5DT-PD Framework)
-4. Tech (▾ submenu: Tech, 软件项目: Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
-5. Investment (▾ submenu: Investment, FengInvest — the investment tool belongs here, not under Tech)
-6. Art (▾ submenu: Art, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
-7. Ethos (▾ submenu: 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
+3. Marketing (▾ submenu: **Marketing Overview**, 5DT-PD Framework)
+4. Tech (▾ submenu: **Tech Overview**, 软件项目: Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
+5. Investment (▾ submenu: **Investment Overview**, FengInvest — the investment tool belongs here, not under Tech)
+6. Art (▾ submenu: **Art Overview**, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
+7. Ethos (▾ submenu: **Ethos Overview**, then 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
 8. Blog
 9. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
 10. Language (▾ submenu: English, 简体中文, 繁體中文)
@@ -456,10 +457,10 @@ Desktop portal (`showPortal()`):
 Mobile drawer:
 - `.mobile-submenu` opens to its **exact content height** (`scrollHeight` set inline by the toggle handler) — smooth animation, nothing clipped. The drawer `#mobile-panel-portal` is the scroll container (`overflow-y: auto`); it scrolls only when the whole menu doesn't fit the screen.
 
-The Tech dropdown is a single column with two `nav-group` headers, and leads with the page's own link — matching the Marketing and Art submenus:
+The Tech dropdown is a single column with two `nav-group` headers, and leads with its own overview link — matching the Marketing, Investment and Art submenus:
 
 ```
-技术
+技术概览
 软件项目
 Jingxin
 FengOffice
@@ -474,7 +475,7 @@ Cloud
 
 Rules:
 - No two-column grids, no fixed max-height caps — dropdowns auto-fit the viewport and scroll only when needed.
-- The page's own link (`技术`) stays first — never remove it; the Marketing and Art submenus also lead with their own page link.
+- Every submenu leads with its own **overview link** (`XXX概览` / `XXX Overview`, one per language in `copy`) — never remove it: Marketing/Tech/Investment/Art lead with their page overview, Ethos leads with Ethos Overview followed by the anchor links. This replaces the old "page's own link" pattern so 投资 ▾ no longer shows a bare 投资 item (which looked duplicated).
 - Group headers live in the three-language `copy` objects as their own keys (`software`, `techResearch`) — never hard-code a header string.
 - The mobile drawer mirrors the same item list and group headers, single-column.
 - New items go under the correct group header and must be added to all three language `copy` objects.
@@ -769,7 +770,61 @@ body[data-theme="dark"] .link-card p { color: #94a3b8; }
 .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
 ```
 
-### 7.7 Homepage Language Selector (`index.html`)
+### 7.7 Projects Zone (Dark Shell)
+
+**Purpose:** delivered projects get a visually distinct zone so visitors instantly see they are not the same kind of content as the ideology/capability sections. A dark shell wraps the project cards; inside, only light cards.
+
+**When to use:** anywhere delivered work must be visually separated from principles/capabilities (e.g. the Tech page's four software projects). Reuse the `track-split-shell` dark gradient token — do not invent a new dark style.
+
+**Structure:**
+```html
+<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
+<div class="projects-shell">
+  <div class="projects-head">
+    <h2>软件项目</h2>
+    <p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
+  </div>
+
+  <!-- Project 1: 静心 Jingxin -->
+  <div id="jingxin" class="project-card">
+    <div class="block-inner">
+      <div class="section-card">
+        <!-- unchanged card content -->
+      </div>
+    </div>
+  </div>
+  <!-- + more project-card divs -->
+</div>
+```
+
+**CSS (page-level style block):**
+```css
+.projects-shell {
+  margin: 12px 0; padding: 42px 42px 18px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+.projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
+.projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
+.projects-shell .projects-head p { color: #94a3b8; font-size: .95rem; margin: 8px 0 0; }
+.projects-shell .project-card { padding: 20px 0; }
+.projects-shell .project-card + .project-card { margin-top: 12px; } /* dark divider between cards */
+body[data-theme="dark"] .projects-shell .section-card {
+  background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12);
+}
+@media (max-width: 599px) {
+  .projects-shell { padding: 28px 20px 10px; border-radius: 24px; }
+}
+```
+
+Rules:
+- Inside the shell only light cards (`section-card` / `content-text-card`) — never nested dark shells or dark cards.
+- `.project-card` replaces `content-block section-bg` for each project (drop the frosted `section-bg` class and its `--section-bg-img` style).
+- The 12px gap between `.project-card`s shows the shell background — the dark equivalent of the white divider rule.
+- The projects-head h2/p are white-on-dark inside the shell (overriding the light-mode h2 color).
+- `.section-card` dark-mode inside the shell gains a hairline border so cards stay visible on the dark gradient.
+
+### 7.8 Homepage Language Selector (`index.html`)
 
 Root `index.html` at site root. Standalone page, not a sub-page.
 
@@ -818,7 +873,7 @@ Auto-redirect JS:
 
 Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fallback.
 
-### 7.8 Homepage Sections (English example)
+### 7.9 Homepage Sections (English example)
 
 **Hero Slider:**
 - Owl Carousel 2-slide fade
@@ -844,7 +899,7 @@ Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fall
 - Card 1: Blog — cover image (`assets/img/blog-card.jpg`), category "Blog", h3 "Insights & Thoughts", description
 - Card 2: LinkedIn — cover image (`assets/img/linkedin-card.jpg`), category "Social", h3 "Articles & Updates", description
 
-### 7.9 Back to Top Button
+### 7.10 Back to Top Button
 
 ```css
 .back-to-top {
@@ -874,7 +929,7 @@ JS (inline at page bottom):
 })();
 ```
 
-### 7.10 Preloader
+### 7.11 Preloader
 
 ```html
 <div id="preloader">
@@ -885,7 +940,7 @@ JS (inline at page bottom):
 ```
 Styled by the template's `style.css`. Shows a CSS spinner on page load, hidden when the page is ready (handled by `main.js`).
 
-### 7.11 Blog Posts
+### 7.12 Blog Posts
 
 There are two blog post templates. Both share the same base structure but differ in whether a table-of-contents sidebar is included.
 
