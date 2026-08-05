@@ -561,6 +561,22 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 - Every item and header label must be added to **all three language `copy` objects** in `shared-subpage-navbar.js` (`software`, `techResearch`, etc.) — never hard-code a string.
 - The mobile drawer mirrors the same list single-column; don't give it its own different structure.
 
+### 7. `storm-bg` is a ONE-TIME Tech-page effect — do not copy it elsewhere
+
+**Symptom**: The 「闪电炫光蓝」 storm-glow on `zh-cn/tech.html`'s four software sections gets copy-pasted into other pages/languages, or a flashing variant is reintroduced.
+
+**Fix**: `.content-block.storm-bg` + `@keyframes storm-flow` are a **bespoke, one-off** effect for the Tech page's software-project showcase only. Rules:
+- Do **not** add `storm-bg` to any other page without an explicit request.
+- The blue is a `::before` overlay — it stays **always present**, gently breathing (6s flow), and must **never flash/strobe**. (A 1.2s `storm-flash` flicker was tried and rejected).
+- The class is additive: it sits on `content-block section-bg storm-bg`, keeps the section's own `--section-bg-img`, and the white divider gaps stay white.
+- See DESIGN.md §7.7.1 for full documentation.
+
+### 8. Mobile nested-card padding & CTA button width
+
+**Symptom**: On mobile, text inside `.block-inner → .section-card → .content-text-card` renders too narrow (~8 CJK chars/line) because the three nested paddings never shrink at `≤599px`; or `.cta-row` buttons size unevenly by their text length.
+
+**Fix**: Apply the standard mobile overrides in each page's `@media (max-width: 599px)` block (see DESIGN.md §8 "Mobile text-width recovery") and the equal-width `.cta-row` rule (see DESIGN.md §8 "CTA buttons equal width"). The batch script `scripts/apply-mobile-fix.js` applies both across en/zh-cn/zh-hk idempotently. When touching a new content sub-page, make sure it already has these two rules; run the script after adding a new page rather than hand-editing each CSS variant.
+
 ### 7. Text overflowing its card (e.g. `、/brainstorm。`)
 
 **Symptom**: A long unbreakable phrase (CJK + `/` + `、` at line end, e.g. `快捷指令：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。`) spills outside the card's right edge.

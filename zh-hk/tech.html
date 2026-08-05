@@ -85,7 +85,7 @@
 
         /* CTA row */
         .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
-        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
         /* Dark mode */
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -115,6 +115,9 @@
             .card-grid { grid-template-columns: 1fr; }
             .marketing-hero { padding: 28px 16px; }
             .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
         /* Capability chip groups */

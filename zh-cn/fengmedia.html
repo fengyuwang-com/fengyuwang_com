@@ -74,7 +74,7 @@
         .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
         .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
         .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
-        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
         .link-card { text-align: center; padding: 48px 0 72px; }
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
@@ -107,6 +107,9 @@
             .marketing-hero { padding: 28px 16px; }
             .card-grid { grid-template-columns: 1fr; }
             .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
     </style>

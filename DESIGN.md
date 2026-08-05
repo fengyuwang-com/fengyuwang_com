@@ -868,6 +868,17 @@ Rules:
 - The projects-head h2/p are white-on-dark inside the shell (overriding the light-mode h2 color).
 - `.section-card` dark-mode inside the shell gains a hairline border so cards stay visible on the dark gradient.
 
+### 7.7.1 Software-Project Storm Glow (`storm-bg`) — ONE-TIME effect (Tech page only)
+
+**This is a bespoke, one-off visual effect.** It lives ONLY on the four software-project sections of `zh-cn/tech.html` (`jingxin`, `fengoffice`, `fengmedia`, `search-king`), which are the storm-glow showcase for the "deliverables first" philosophy.
+
+- **Do NOT spread it to other pages.** A page gets the `storm-bg` class only when someone explicitly asks for this exact treatment. It is not a default site style and must not be copied into new pages or other languages without an explicit request.
+- **What it does:** `.content-block.storm-bg::before` overlays an animated blue gradient on top of each section's normal background image (`--section-bg-img`). The overlay is a pseudo-element, so it does **not** remove or replace the section's background image, and it does **not** touch the white 12px divider gaps between sections.
+- **Animation:** `storm-flow`, a 6s ease-in-out loop that keeps the blue **always present** and only gently breathes (opacity 0.82 ↔ 1.00, slight hue-rotate/saturate). It is a constant flowing gradient — never a strobe/flash. (Earlier iterations used a flashing `storm-flash` 1.2s keyframe; that was rejected because it looked like a flicker. Do not reintroduce flashing.)
+- **CSS location:** inline `<style>` block at the top of `zh-cn/tech.html`. Class `.content-block.storm-bg` + `@keyframes storm-flow`, with `body[data-theme="dark"] .content-block.storm-bg::before` for the dark mode variant.
+- **Markup:** the four sections keep `class="content-block section-bg storm-bg"` and keep their own `style="--section-bg-img:url(...)"` (the storm overlay is `::before`, independent of the image).
+- If this effect is ever removed or disabled, the sections simply fall back to their normal frosted `section-bg` look — the overlay is purely additive.
+
 ### 7.8 Homepage Language Selector (`index.html`)
 
 Root `index.html` at site root. Standalone page, not a sub-page.
@@ -1193,6 +1204,29 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }
 | `≤991px` (tablet) | Nav: hamburger appears, desktop menu hidden. Card-grid: 2 columns. Hero h1: 2.4rem. Content-block padding: 36/28px. Section h2: 1.4rem. Track grid: 1 column. |
 | `≤767px` | Language selector: 1-column grid |
 | `≤599px` (mobile) | Card-grid: 1 column. Hero h1: smaller. Content-block padding: 28/20px. Section h2: 1.25rem. |
+
+**Mobile text-width recovery (all content sub-pages, added 2026-08-06):**
+On mobile (`≤599px`) the nested card chain — `.block-inner(0 24px) → .section-card(32px) → .content-text-card(0 24px)` — used to eat 160px of horizontal space, leaving only ~215px of text width on a 375px phone (~8 CJK chars/line). Fixed by shrinking the three paddings **inside the 599px media block only**:
+
+```css
+@media (max-width: 599px) {
+  .block-inner { padding-left: 12px; padding-right: 12px; }      /* 0 24px -> 0 12px */
+  .section-card { padding: 20px; }                               /* 32px    -> 20px  */
+  .content-text-card { padding-left: 16px; padding-right: 16px; }/* 0 24px  -> 0 16px */
+}
+```
+
+This recovers ~64px → ~279px usable width (~14 chars/line). Cards keep their rounded-corner look. Apply this to every content sub-page (tech/mkt/invest/ai/cloud/web3/automation/ethos/art*/5dt-pd/capabilities/feng*). The homepage `track-split-shell` is a different structure and is **not** affected. The batch script `scripts/apply-mobile-fix.js` applies these inline (per-page CSS in both minified and spaced variants).
+
+**CTA buttons equal width (`≤ any width`, added 2026-08-06):** Buttons inside `.cta-row` used to size by their text (so a row of "查看官网 →" and "GitHub" looked uneven). Set them to stretch to the longest and cap:
+
+```css
+.cta-row .default-btn, .cta-row .default-btn-one {
+  flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center;
+}
+```
+
+Applies only to pages using `.cta-row` (zh-cn feng*/jingxin/search-king/tech + en/tech + zh-hk/tech).
 
 **Reduced motion:**
 ```css
