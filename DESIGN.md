@@ -439,8 +439,8 @@ body { padding-top: 44px !important; }
 1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
 3. Marketing (▾ submenu: Marketing, 5DT-PD Framework)
-4. Tech (▾ submenu: Tech, 软件项目: FengInvest/Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
-5. Investment
+4. Tech (▾ submenu: Tech, 软件项目: Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
+5. Investment (▾ submenu: Investment, FengInvest — the investment tool belongs here, not under Tech)
 6. Art (▾ submenu: Art, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
 7. Ethos (▾ submenu: 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
 8. Blog
@@ -461,7 +461,6 @@ The Tech dropdown is a single column with two `nav-group` headers, and leads wit
 ```
 技术
 软件项目
-FengInvest
 Jingxin
 FengOffice
 FengMedia
