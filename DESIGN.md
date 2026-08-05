@@ -430,14 +430,48 @@ body { padding-top: 44px !important; }
 ```
 
 **Desktop menu items (injected order):**
-1. Home (▾ submenu: Welcome, About, "Explore by track")
+1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
 3. Marketing (▾ submenu: Marketing, 5DT-PD Framework)
-4. Tech (▾ submenu: Tech, Web3, AI, Cloud)
+4. Tech (▾ **two-column grid submenu** — see "Two-column submenu" below)
 5. Investment
-6. Blog
-7. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
-8. Language (▾ submenu: English, 简体中文, 繁體中文)
+6. Art (▾ submenu: Art, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
+7. Ethos (▾ submenu: 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
+8. Blog
+9. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
+10. Language (▾ submenu: English, 简体中文, 繁體中文)
+
+**Two-column submenu (grid variant):** used when a submenu holds more than ~8 items. Currently only the Tech menu uses it. The dropdown splits into two labeled columns — the left column is the primary group (软件项目 / Software / 軟件專案), the right column the secondary group (技术研究 / Tech Research / 技術研究):
+
+```
+软件项目              技术研究
+FengInvest  Jingxin  Web3  AI
+FengOffice  FengMedia Automation Cloud
+Search King
+```
+
+Structure:
+- The template `<ul class="submenu">` gets an extra class `submenu-grid`; `showPortal()` copies it onto the portal wrap as `sp-wrap-grid`.
+- Each column has a `nav-group` header. Headers live in the three-language `copy` objects as their own keys (`software`, `techResearch`) — never hard-code a header string.
+- DOM order is **column-first**: all left-column items, then all right-column items (`grid-auto-flow: column`).
+
+CSS:
+```css
+#submenu-portal .sp-wrap.sp-wrap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, auto);  /* max 6 rows = 12 items */
+  column-gap: 8px;
+}
+#submenu-portal .sp-wrap.sp-wrap-grid a { border-bottom: 0; }
+```
+
+Rules:
+- Max 6 rows (12 items). If a group outgrows its column, split into a new group or revisit the design — do not casually add a third column or extend rows.
+- Item separators are removed in grid mode; the `nav-group + li a` top hairline still separates each header from its first item.
+- The mobile drawer mirrors the same item list and group headers but stays single-column (it scrolls).
+- New items go under the correct group header and must be added to all three language `copy` objects.
 
 **Dark mode navbar:**
 ```css
