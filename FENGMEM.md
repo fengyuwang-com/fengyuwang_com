@@ -30,3 +30,18 @@
   - 暗色模式 `animation: none` + 蓝辉光，避免动画覆盖阴影产生方形光晕
   - zh-cn 先行验证，en/zh-hk 延后（用户验证阶段）
   - 未跟踪文件 `docs/migrate-lecoo-backup-and-sandbox.md`、`server-newpath.log` 不带入任何 commit
+
+## 2026-08-05 18:10 — 第 2 轮
+
+- 用户要求:
+  - 建立 FENGMEM.md 并填充
+  - 暗色模式下「每一个壳子都套一个黑色方形框」——查根因
+- AI 行动:
+  - 排查暗色规则 → 根因：全站 `body[data-theme="dark"] .mkt-card`（`0 20px 50px -8px rgba(0,0,0,.35)`）与 `.section-card`（`0 4px 16px rgba(0,0,0,.2)`）的**黑色 box-shadow**，每张卡在暗底上呈现「黑色方框」
+  - 批量修复 32 个 HTML（zh-cn 14 + en 9 + zh-hk 9）：暗色 mkt-card/section-card → `box-shadow: none`（卡片靠 gap/border 分隔）；浅色阴影不动
+  - DESIGN.md 暗色 token 表补记录（期间误删「Card grid responsive」行已恢复）
+  - FENGMEM.md 追加本轮
+- 产出: 版本 26.08.05.18.x；全站暗色模式黑色方框消除
+- 关键决策:
+  - 暗色模式下**任何元素不使用黑色 box-shadow**（在 #0a0e1a 背景上必显黑框）——这是暗色模式设计红线
+  - 纯 CSS bug 修复全站三语同步（非内容改动，不占 en/zh-hk 翻译待办）

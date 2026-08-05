@@ -1386,6 +1386,7 @@ Root `index.html` (not in any language folder). Contains:
 | `content-text-card` shadow | `0 2px 8px rgba(15,23,42,.04)` | `0 2px 8px rgba(0,0,0,.03)` |
 | `.mkt-card` | `border: 1px solid rgba(148,163,184,.14)` | No border — relies on box-shadow only |
 | Card grid responsive | `repeat(3, 1fr)` → `repeat(2, 1fr)` → `1fr` | `repeat(3, minmax(0, 1fr))` → `repeat(2, minmax(0, 1fr))` → `1fr` (minmax clause) |
+| Dark card shadows (global) | `body[data-theme="dark"] .mkt-card` / `.section-card` → **`box-shadow: none`** (2026-08-05: black shadows rendered as "black square frames" around every card in dark mode; cards separate via grid gap + border instead) |
 | Hero text colors | `#0f172a` / `#64748b` | `#1d1d1f` / `#8e8e93` |
 
 ### How the art page backgrounds work
