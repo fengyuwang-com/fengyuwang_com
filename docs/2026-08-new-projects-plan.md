@@ -163,7 +163,7 @@
 **2026-08-05 zh-cn 已落地、en/zh-hk 待同步的改动（本节第 6.5 条之外）：**
 - [ ] 首页 What's New：新增 FengInvest 卡（B 站卡上方）+ 副标题「项目、博客、视频与动态」
 - [ ] 投资页：`#fenginvest` section 移到第 1 节（卡片网格后、#business 前）；后续 section 注释编号顺延
-- [ ] 技术页：4 个项目节包进 `.projects-shell` 深色专区（DESIGN.md §7.7）；导航下拉「概览」化（5 个 `XXXOverview` labels × 三语，`shared-subpage-navbar.js` 已含三语，页面无需改，仅验证）
+- [ ] 技术页：4 个项目节包进 `.projects-shell` 深色专区（DESIGN.md §7.7）；专区位于卡片网格之后、理念区之前（交付物先行），无圆角直边嵌入白底；卡片网格软件项目 4 卡排最前；导航下拉「概览」化（5 个 `XXXOverview` labels × 三语，`shared-subpage-navbar.js` 已含三语，页面无需改，仅验证）
 - [ ] 导航下拉三语 labels（`casesOverview` 等）已在 JS 三语 copy 对象中同步完成，无需额外处理
 
 ### 6.6 已建官网项目（后续）

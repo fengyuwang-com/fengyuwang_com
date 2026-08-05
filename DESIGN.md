@@ -776,6 +776,8 @@ body[data-theme="dark"] .link-card p { color: #94a3b8; }
 
 **When to use:** anywhere delivered work must be visually separated from principles/capabilities (e.g. the Tech page's four software projects). Reuse the `track-split-shell` dark gradient token — do not invent a new dark style.
 
+**Placement:** the shell sits **directly after the card grid, before the ideology sections** (deliverables first, principles after). On the Tech page the order is: card grid → projects shell → ideology (`不问对，不开始` … `交付为开始`) → capability → Web3/AI/Cloud promos → cross-link. Keep the card grid's own ordering aligned with the shell and the nav dropdown: software project cards first, then ideology cards. The shell must be a **direct child of `page-wrap`** (same level as `.content-block`) — never inside `.container` (its max-width/padding would leave white strips on both sides).
+
 **Structure:**
 ```html
 <!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
@@ -801,8 +803,21 @@ body[data-theme="dark"] .link-card p { color: #94a3b8; }
 ```css
 .projects-shell {
   margin: 12px 0; padding: 42px 42px 18px;
-  border-radius: 32px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  /* NO border-radius — square edges so the dark zone reads as embedded in the
+     white page, not as a floating rounded card on it */
+  /* 炫光蓝: glow-blue gradient, darker in dark mode */
+  background:
+    radial-gradient(ellipse 75% 60% at 15% 0%, rgba(96,165,250,.42), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 25%, rgba(59,130,246,.32), transparent 55%),
+    linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
+  box-shadow: 0 24px 64px rgba(37,99,235,.30), inset 0 1px 0 rgba(255,255,255,.14);
+}
+body[data-theme="dark"] .projects-shell {
+  background:
+    radial-gradient(ellipse 75% 60% at 15% 0%, rgba(37,99,235,.26), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 25%, rgba(59,130,246,.16), transparent 55%),
+    linear-gradient(135deg, #0b1530 0%, #16295c 55%, #1e3a8a 100%);
+  box-shadow: 0 24px 64px rgba(0,0,0,.40), inset 0 1px 0 rgba(148,163,184,.12);
 }
 .projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
 .projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
@@ -813,11 +828,12 @@ body[data-theme="dark"] .projects-shell .section-card {
   background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12);
 }
 @media (max-width: 599px) {
-  .projects-shell { padding: 28px 20px 10px; border-radius: 24px; }
+  .projects-shell { padding: 28px 20px 10px; }
 }
 ```
 
 Rules:
+- **No border-radius on the shell** — square edges embed it in the white `page-wrap` (the homepage `track-split-shell` keeps its 32px radius; that's a homepage card container, a different context).
 - Inside the shell only light cards (`section-card` / `content-text-card`) — never nested dark shells or dark cards.
 - `.project-card` replaces `content-block section-bg` for each project (drop the frosted `section-bg` class and its `--section-bg-img` style).
 - The 12px gap between `.project-card`s shows the shell background — the dark equivalent of the white divider rule.
