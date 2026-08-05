@@ -63,26 +63,32 @@
 		.content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
 		.content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
 		.content-block.section-bg .block-inner { position: relative; z-index: 1; }
-		/* Storm glow blue background for software project sections */
-		.content-block.storm-bg { background:
-			radial-gradient(ellipse 70% 70% at 50% -8%, rgba(147,197,253,.55) 0%, transparent 62%),
-			radial-gradient(ellipse 45% 40% at 10% 14%, rgba(191,219,254,.40) 0%, transparent 55%),
-			radial-gradient(ellipse 40% 45% at 92% 10%, rgba(96,165,250,.38) 0%, transparent 55%),
-			linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%) !important;
-			box-shadow: 0 14px 44px rgba(37,99,235,.38); }
-		body[data-theme="dark"] .content-block.storm-bg { background:
-			radial-gradient(ellipse 70% 70% at 50% -8%, rgba(96,165,250,.45) 0%, transparent 62%),
-			radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.26) 0%, transparent 55%),
-			radial-gradient(ellipse 40% 45% at 92% 10%, rgba(59,130,246,.34) 0%, transparent 55%),
-			linear-gradient(135deg, #16295c 0%, #1e3a8a 55%, #2547c8 100%) !important;
-			box-shadow: 0 0 46px rgba(37,99,235,.28); }
-		/* Software project cards: storm glow blue */
-		.card-grid .mkt-card:nth-child(-n+4) {
-			background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%) !important;
-			box-shadow: 0 8px 32px rgba(37,99,235,.38) !important; }
-		body[data-theme="dark"] .card-grid .mkt-card:nth-child(-n+4) {
-			background: linear-gradient(135deg, #16295c 0%, #1e3a8a 55%, #2547c8 100%) !important;
-			box-shadow: 0 8px 32px rgba(37,99,235,.28) !important; }
+		/* Storm glow overlay on software sections — animated lightning, does NOT replace bg or white dividers */
+		.content-block.storm-bg::before {
+			content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+			background:
+				radial-gradient(ellipse 70% 70% at 50% -8%, rgba(147,197,253,.55) 0%, transparent 62%),
+				radial-gradient(ellipse 45% 40% at 10% 14%, rgba(191,219,254,.40) 0%, transparent 55%),
+				radial-gradient(ellipse 40% 45% at 92% 10%, rgba(96,165,250,.38) 0%, transparent 55%),
+				linear-gradient(135deg, rgba(30,58,138,.85) 0%, rgba(37,99,235,.90) 60%, rgba(29,78,216,.85) 100%);
+			animation: storm-flash 1.2s ease-in-out infinite;
+		}
+		body[data-theme="dark"] .content-block.storm-bg::before {
+			background:
+				radial-gradient(ellipse 70% 70% at 50% -8%, rgba(96,165,250,.45) 0%, transparent 62%),
+				radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.26) 0%, transparent 55%),
+				radial-gradient(ellipse 40% 45% at 92% 10%, rgba(59,130,246,.34) 0%, transparent 55%),
+				linear-gradient(135deg, rgba(22,41,92,.88) 0%, rgba(30,58,138,.92) 55%, rgba(37,71,200,.88) 100%);
+		}
+		@keyframes storm-flash {
+			0%, 100% { opacity: .55; }
+			4% { opacity: 1; }
+			6% { opacity: .45; }
+			8% { opacity: .95; }
+			10% { opacity: .60; }
+			50% { opacity: .70; }
+			80% { opacity: .55; }
+		}
 		.section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
 		.block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 		.block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
@@ -169,28 +175,28 @@
 
 			<!-- Card grid -->
 				<div class="card-grid">
-<div class="mkt-card" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>静心 Jingxin</h3>
 									<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
 							<button class="card-btn">了解详情</button>
 						</div>
 					</div>
-<div class="mkt-card" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>FengOffice</h3>
 									<p>邮件、CRM、Newsletter，一条链。</p>
 							<button class="card-btn">了解详情</button>
 						</div>
 					</div>
-<div class="mkt-card" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>FengMedia</h3>
 									<p>财经内容操作系统，把想法变成流水线。</p>
 							<button class="card-btn">了解详情</button>
 						</div>
 					</div>
-<div class="mkt-card" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
 						<div class="card-content">
 								<h3>Search King</h3>
 									<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
@@ -247,7 +253,7 @@
 		</div>
 
 		<!-- Project 1: 静心 Jingxin -->
-		<div id="jingxin" class="content-block section-bg storm-bg">
+		<div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>一个 App，四种呼吸方式</h2>
@@ -271,7 +277,7 @@
 		</div>
 
 		<!-- Project 2: FengOffice -->
-		<div id="fengoffice" class="content-block section-bg storm-bg">
+		<div id="fengoffice" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>邮件、CRM、Newsletter，一条链</h2>
@@ -295,7 +301,7 @@
 		</div>
 
 		<!-- Project 3: FengMedia -->
-		<div id="fengmedia" class="content-block section-bg storm-bg">
+		<div id="fengmedia" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>内容不该靠灵感</h2>
@@ -320,7 +326,7 @@
 		</div>
 
 		<!-- Project 4: Search King -->
-		<div id="search-king" class="content-block section-bg storm-bg">
+		<div id="search-king" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
 					<h2>十八路引擎，谁行谁上</h2>
