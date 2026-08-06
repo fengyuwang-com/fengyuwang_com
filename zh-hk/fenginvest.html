@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-hk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FengInvest | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FengInvest 是我迄今最具野心的項目：AI 協作投資分析框架，七層狀態機強制流程，數據質量門禁，4 個 AI Agent 並行定性分析，從理念到工程化的完整落地。">
+    <meta name="keywords" content="FengInvest, AI 投資分析, 價值投資, 七層狀態機, 量化, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/fenginvest.html">
+    <link rel="alternate" hreflang="en" href="/en/fenginvest.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/fenginvest.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/fenginvest.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="迄今最具野心的項目：AI 協作投資分析框架，七層狀態機、數據質量門禁、4 個 AI Agent 並行定性分析。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/fenginvest.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="迄今最具野心的項目：AI 協作投資分析框架，七層狀態機、數據質量門禁、4 個 AI Agent 並行定性分析。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FengInvest | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/fenginvest.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="investment"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.05.01.04"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>FengInvest</h1>
+                <p>三條路徑、一個系統——價值、量化與主觀判斷，把「這隻股票能不能買」變成一套可復盤、可驗證、可碰撞的流程。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('value').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>價值投資</h3>
+                        <p>買好生意，等好價格——能力圈的判定</p>
+                        <button class="card-btn">看路徑</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')" onclick="document.getElementById('quant').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>量化投資</h3>
+                        <p>讓數字說話——多因子模型與數據管道</p>
+                        <button class="card-btn">看路徑</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('subjective').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>主觀判斷</h3>
+                        <p>四個投資人的視角，在碰撞中收斂</p>
+                        <button class="card-btn">看路徑</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80')" onclick="document.getElementById('architecture').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>七層架構</h3>
+                        <p>狀態機強制流程，一步都不能跳</p>
+                        <button class="card-btn">看架構</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80')" onclick="document.getElementById('quality').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>數據質量</h3>
+                        <p>正確性在攝入時驗證，不讓壞數據進門</p>
+                        <button class="card-btn">看門禁</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>快速上手</h3>
+                        <p>幾條 CLI 命令，從初始化到出報告</p>
+                        <button class="card-btn">開始使用</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="value" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>價值投資：買好生意，等好價格</h2>
+                    <p class="block-subtitle">先搞清楚「懂不懂」，再談「貴不貴」。</p>
+                    <div class="content-text-card">
+                        <p>這一條路徑回答最根本的問題：這筆投資，我真的理解嗎？它靠甚麼賺錢？這門生意十年後還在嗎？甚麼力量能殺死它？</p>
+                        <ul>
+                            <li><strong>L0 能力圈確認</strong>：三問——怎麼賺錢？10 年後還在嗎？甚麼能殺了它？輸出「懂 / 不充分懂 / 不懂」。</li>
+                            <li><strong>護城河與長期性</strong>：被 L0 判為「不充分懂」的標的，M 層之後會被攔截，不進入深度分析。</li>
+                            <li><strong>安全邊際意識</strong>：從企業價值出發，不追漲、不猜反彈，只在有足夠緩衝時出手。</li>
+                            <li><strong>硬紀律上限</strong>：L1 的 8 條規則是在價值框架裡的剎車——越喜歡，越要看規則是否放過自己。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quant" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>量化投資：讓數字說話</h2>
+                    <p class="block-subtitle">把主觀感受翻譯成可計算的信號。</p>
+                    <div class="content-text-card">
+                        <p>感覺是存量的，數據是活著的。這一條路徑用多因子模型把「貴不貴、好不好」變成一組可比較、可回測的數字，而不是拍腦袋。</p>
+                        <ul>
+                            <li><strong>10 因子 z-score 量化</strong>：估值、質量、成長、動量、情緒等多因子標準化後加權，得到一個相對排序的分數。</li>
+                            <li><strong>數據管道（M 層）</strong>：fengdata.py 採集、去重、重試、代理切換，保證每一格數據都來自可信來源。</li>
+                            <li><strong>3 燈判定</strong>：宏觀 / 估值 / 趨勢 / 情緒四燈判定市場狀態，量化路徑在合適的環境裡才生效。</li>
+                            <li><strong>可與主觀互相校驗</strong>：當量化分數與價值判斷衝突時，L3 碰撞引擎會主動製造一場辯論，而不是靜默忽略。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">多因子 z-score</span>
+                        <span class="stack-chip">數據管道</span>
+                        <span class="stack-chip">回測友好</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="subjective" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>主觀判斷：四個視角，一場碰撞</h2>
+                    <p class="block-subtitle">定性分析不是一個人說了算。</p>
+                    <div class="content-text-card">
+                        <p>投資裡最能騙人的，是自己順著自己。FengInvest 用 4 個 AI Agent 並行定性，分別站在四位投資者的立場獨立作答，再由碰撞引擎把它們的結論擰在一起。</p>
+                        <ul>
+                            <li><strong>段永平視角</strong>：生意的底層邏輯——別人為甚麼買？護城河在哪？</li>
+                            <li><strong>巴菲特視角</strong>：企業質量與長期回報——是不是一樁賺錢的好生意。</li>
+                            <li><strong>芒格視角</strong>：逆向與多元思維——哪裡最容易犯錯，怎麼避免。</li>
+                            <li><strong>李錄視角</strong>：能力圈與長期主義——我真的懂，還是只是想要？</li>
+                            <li><strong>L3 碰撞引擎</strong>：反方四問 + 行為偏誤檢查 + 規則樹碰撞。每個 Agent 的結論都可能被挑戰，最終輸出收斂後的判斷與分歧記錄。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">多 Agent 並行</span>
+                        <span class="stack-chip">反方四問</span>
+                        <span class="stack-chip">偏誤檢查</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="architecture" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>七層架構</h2>
+                    <p class="block-subtitle">從能力圈確認到結構化報告，每一層只做一件事。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>L0 能力圈確認</strong>：三問——怎麼賺錢？10 年後還在嗎？甚麼能殺了它？輸出「懂 / 不充分懂 / 不懂」。</li>
+                            <li><strong>M 市場數據</strong>：採集 + 4 燈判定（宏觀 / 估值 / 趨勢 / 情緒）。</li>
+                            <li><strong>L1 硬紀律</strong>：8 條規則逐一校驗。</li>
+                            <li><strong>L2b 量化因子</strong>：10 因子 z-score 量化分析。</li>
+                            <li><strong>L2a 定性分析</strong>：4 個 AI Agent 並行，段永平 / 巴菲特 / 芒格 / 李錄四個視角。</li>
+                            <li><strong>L3 碰撞引擎</strong>：反方 4 問 + 行為偏誤檢查 + 規則樹碰撞。</li>
+                            <li><strong>P 組合檢查</strong>：倉位管理 + 壓力測試。</li>
+                            <li><strong>L4 報告</strong>：結構化研究報告，華爾街分析師格式。</li>
+                        </ul>
+                    </div>
+                    <div class="content-text-card">
+                        <p><strong>狀態機攔截跳步</strong>：未完成 L0 無法進入 M，未完成 L3 無法出報告。流程不會因為「感覺差不多了」就跳過任何一步。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quality" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>數據質量：不讓壞數據進門</h2>
+                    <p class="block-subtitle">正確性在攝入時驗證，不能只做結構檢查。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>數據質量門禁</strong>：從 stockanalysis.com 拉取 PE / Forward PE 與本地對比，差異小於 5% 通過，5–10% 警告，大於 10% 判定失敗。</li>
+                            <li><strong>跨層一致性</strong>：PE 值跨 M / L2b 校驗，差異超過 5% 自動報警。</li>
+                            <li><strong>降級傳播</strong>：數據源降級時，下游權重自動降低。</li>
+                            <li><strong>輸出驗證</strong>：標記完成時自動檢查關鍵欄位是否存在。</li>
+                            <li><strong>Web UI</strong>：分析進度與報告視覺化，工具集面向日常研究使用。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">交叉驗證</span>
+                        <span class="stack-chip">一致性校驗</span>
+                        <span class="stack-chip">降級傳播</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>快速上手</h2>
+                    <p class="block-subtitle">狀態機工具，幾行命令走完整個分析流程。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><code>python tools/fengstate.py init &lt;TICKER&gt;</code> — 初始化分析</li>
+                            <li><code>python tools/fengstate.py check &lt;TICKER&gt; &lt;層&gt;</code> — 檢查前置條件</li>
+                            <li><code>python tools/fengstate.py complete &lt;TICKER&gt; &lt;層&gt; &lt;文件&gt;</code> — 標記完成</li>
+                            <li><code>python tools/fengstate.py status &lt;TICKER&gt;</code> — 查看進度</li>
+                            <li><code>python tools/fengstate.py verify &lt;TICKER&gt;</code> — 全量驗證</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">查看 GitHub 倉庫</a>
+                        <a class="default-btn" href="/zh-hk/invest.html">返回投資框架</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>投資框架的工程化落地，從這裡開始</p>
+            <a class="default-btn" href="/zh-hk/invest.html">返回投資框架 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
