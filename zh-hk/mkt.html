@@ -109,6 +109,9 @@
 			.link-card { text-align: center; padding: 48px 0 72px; }
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
+			/* CTA row */
+			.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+			.cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
 			/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -168,6 +171,13 @@
 
 			<!-- Card grid -->
 			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>FengMedia</h3>
+						<p>財經內容操作系統，把想法變成流水線。</p>
+						<button class="card-btn">了解更多</button>
+					</div>
+				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=600&q=80')" onclick="document.getElementById('data').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
 						<h3>數據先說話</h3>
@@ -214,6 +224,30 @@
 		</div>
 
 		<!-- Content sections -->
+
+		<!-- FengMedia: 財經內容操作系統（市場學工具，放頂部） -->
+		<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>內容不該靠靈感</h2>
+					<p class="block-subtitle">FengMedia——財經內容操作系統，把人設、選題、寫稿、發布、復盤收進一條流水線。</p>
+					<div class="content-text-card">
+						<h3>市場與表達的落地工具</h3>
+						<p>市場學要用表達落地，表達需要工具兜底——這就是 FengMedia 的起點。</p>
+						<ul>
+							<li><strong>人設系統</strong>：核心定位、人設光譜（平靜 ↔ 暴躁）、語言風格、人設邊界。</li>
+							<li><strong>內容系統</strong>：四大支柱、話題庫、腳本結構模板、生產 SOP。</li>
+							<li><strong>平台分發</strong>：平台矩陣 + 小紅書/B站/抖音專屬規則 + social-auto-upload 自動發布。</li>
+							<li><strong>快捷指令</strong>：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。</li>
+							<li><strong>運營復盤</strong>：日週月 SOP、數據復盤、增長里程碑。</li>
+						</ul>
+					</div>
+					<div class="cta-row">
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="data" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=1600&q=60&auto=format')">
 			<div class="block-inner">

@@ -577,7 +577,7 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 
 **Fix**: Apply the standard mobile overrides in each page's `@media (max-width: 599px)` block (see DESIGN.md §8 "Mobile text-width recovery") and the equal-width `.cta-row` rule (see DESIGN.md §8 "CTA buttons equal width"). The batch script `scripts/apply-mobile-fix.js` applies both across en/zh-cn/zh-hk idempotently. When touching a new content sub-page, make sure it already has these two rules; run the script after adding a new page rather than hand-editing each CSS variant.
 
-### 7. Text overflowing its card (e.g. `、/brainstorm。`)
+### 9. Text overflowing its card (e.g. `、/brainstorm。`)
 
 **Symptom**: A long unbreakable phrase (CJK + `/` + `、` at line end, e.g. `快捷指令：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。`) spills outside the card's right edge.
 
@@ -585,10 +585,17 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 
 **Fix**: The global rule in `assets/css/style.css` (`overflow-wrap: break-word; word-break: break-word` on `.content-text-card, .block-inner`) handles it site-wide. Don't add per-page hacks; if a case still overflows, check the element is inside `.content-text-card` or `.block-inner` (per-page inline styles on other wrappers don't inherit the fix).
 
-### 8. Project sections without the dark shell
+### 10. Project sections without the dark shell
 
 **Symptom**: A delivered project section on the Tech page uses the same frosted `content-block section-bg` as the ideology sections — the projects don't read as a different kind of content.
 
 **Fix**: Wrap the projects in `.projects-shell` (storm glow-blue shell; structure/CSS in DESIGN.md §7.7 "Projects Zone (Dark Shell)"). Each project keeps `class="project-card"` instead of `content-block section-bg` (drop `--section-bg-img`), and keeps its inner `.block-inner > .section-card` unchanged. Inside the shell only light cards; dark-mode cards get a hairline border via `body[data-theme="dark"] .projects-shell .section-card`. Rules: direct child of `page-wrap` (never inside `.container` — white strips appear on both sides); placed directly after the card grid, before the ideology sections; **no border-radius** (square edges embed it in the white page); **storm glow-blue** background — 3 radial glows + 2 diagonal light beams + blue gradient, plus `storm-glow` (pulsing halo) and `storm-flash` (lightning double-flash on `::before`) animations; **dark mode must stay a clearly BLUE glowing body** (`#16295c → #2547c8` gradient, uniform `0 0 46px` blue halo, `animation: none`) — a near-black start (`#0b1530`) or an offset black shadow reads as a "black square" against the `#0a0e1a` page (the 方形外壳 bug); never plain dark gray.
+
+### 11. Dark-mode text left near-black
+
+**Symptom**: In dark mode some text is hard or impossible to read because it keeps its light-mode dark color on the dark background.
+
+**Fix**: This site has **no global `body[data-theme="dark"] h1,h2,h3,p { … }` fallback** — every dark text color is a per-class, per-page inline rule, and anything not covered stays near-black. Every user-facing text element must get an explicit `body[data-theme="dark"]` override (light `#e5ecf4` headings, `#9fb0c3`/`#94a3b8` body). Known gaps already fixed: `5dt-pd` `.section-card h1`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and `zh-cn/index.html` "查看详情" span (now `#00a1d6`). Call out — never leave a `#0f172a`/`#1d1d1f`/`#1e293b`/`#475569`/`#515154` color on a text element without a dark counterpart. See DESIGN.md §9.
+
 
 
