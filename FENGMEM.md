@@ -87,3 +87,26 @@
   - 批量脚本锚点统一用每页唯一的 `.block-inner h2{font-size:1.25rem}`（599 块尾部规则），兼容三种 CSS 变体
   - 首页 3 个 index 结构不同，不需 Fix A/B（排除）
   - 本次不 push，待用户全局确认后再 push
+
+## 2026-08-06 — 第 5 轮
+
+- 用户要求:
+  - 「先push，然后随机检查所有页面是否正常（中/英/繁）——但检查放在下面事情做完之后」
+  - 「现在有出现深色的暗色模式字体的情况，比如是黑色的字体，你检查一下全局有哪些这样的情况，design md 里有没有？没有的话加上」
+  - 「FengMedia 有个严重问题，它应该是市场学里面的，不是技术里面的。把卡片、图片、还有它的描述整体迁移到市场学，放到顶上，卡片放最前面。不需要炫光。先不要操作告诉我计划」→ 后改为「所有网页3种语言，在做之前先push」
+- AI 行动:
+  - push 当前 dev（工作树干净，无待推提交）
+  - 暗色字体调研（Explore agent）：发现「所有页面无全局标签级暗色兜底，凡未被 body[data-theme=dark] 覆盖的亮色深字都会贴在暗底」
+    - 实际可见2处：zh-cn/index.html L72 span `#0f172a`；5dt-pd.html ×3 的 `.section-card h1`
+    - 潜在2处：art.html ×3 `.content-text-card h3 #1d1d1f`；capabilities ×3 `.tree-toggle #7a5c33`
+  - 修复：zh-cn/index span 改 `#00a1d6`（与en/zh-hk一致）；5dt-pd/art/capabilities 各加针对性暗色覆盖（三语同步）
+  - DESIGN.md §9 补全暗色映射表（qa-group/case-card/pillar-card/content-text-card ul/section-card h1/node-tree/tree-toggle）+ 新增「暗色文字覆盖原则」说明；AGENTS.md Common Mistakes #11
+  - FengMedia 迁移：zh-cn/tech 移除卡+storm-bg专区（div 100/100 平衡无残留）；zh-cn/en/zh-hk 三个 mkt 顶部加 FengMedia 卡+磨砂 section（无炫光）；en/zh-hk 用 GitHub 链接（因无对应官网页，避免死链）
+- 产出:
+  - 暗色字体：index/5dt-pd/art/capabilities 修复（三语）+ DESIGN.md/AGENTS.md 文档
+  - FengMedia：zh-cn/tech→zh-cn/en/zh-hk mkt 迁移，三语 mkt div 平衡
+- 关键决策:
+  - FengMedia 作为市场学工具移到 mkt 顶部；tech 去掉其炫光专区，storm-bg 只留 tech 其余3项目
+  - en/zh-hk 因无 fengmedia 官网页，cta「Open GitHub」链接到 github.com/fengyuwang-com（遵循 en 既有惯例，避免 /en/fengmedia.html 死链）
+  - 暗色兜底：明确「任何展示文字的元素必须有 body[data-theme=dark] 覆盖」，写入 DESIGN.md/AGENTS.md
+  - 随机抽查放最后（用户指示）

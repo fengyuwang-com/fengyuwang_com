@@ -109,6 +109,9 @@
 			.link-card { text-align: center; padding: 48px 0 72px; }
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
+			/* CTA row */
+			.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+			.cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
 			/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -168,6 +171,13 @@
 
 			<!-- Card grid -->
 			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>FengMedia</h3>
+						<p>A finance content operating system — turning ideas into a pipeline.</p>
+						<button class="card-btn">Learn More</button>
+					</div>
+				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=600&q=80')" onclick="document.getElementById('data').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
 						<h3>Data First</h3>
@@ -214,6 +224,30 @@
 		</div>
 
 		<!-- Content sections -->
+
+		<!-- FengMedia: finance content operating system (marketing tool, placed at top) -->
+		<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>Content Shouldn't Depend on Inspiration</h2>
+					<p class="block-subtitle">FengMedia — a finance content operating system that turns persona, topics, writing, publishing, and review into a single pipeline.</p>
+					<div class="content-text-card">
+						<h3>The Tool Where Marketing Meets Expression</h3>
+						<p>Marketing lands through expression, and expression needs a tool underneath it — that's the origin of FengMedia.</p>
+						<ul>
+							<li><strong>Persona system</strong>: core positioning, persona spectrum (calm ↔ fiery), language style, persona boundaries.</li>
+							<li><strong>Content system</strong>: four pillars, topic bank, script structure templates, production SOP.</li>
+							<li><strong>Platform distribution</strong>: platform matrix + platform-specific rules + social-auto-upload publishing.</li>
+							<li><strong>Quick commands</strong>: /publish, /rage-mode, /fetch-topics, /review, /brainstorm.</li>
+							<li><strong>Operations review</strong>: daily/weekly/monthly SOP, data review, growth milestones.</li>
+						</ul>
+					</div>
+					<div class="cta-row">
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">Open GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="data" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=1600&q=60&auto=format')">
 			<div class="block-inner">

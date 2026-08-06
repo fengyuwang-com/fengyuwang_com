@@ -1264,7 +1264,20 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | `.content-text-card` bg | `#ffffff` | `#0f172a` |
 | `.content-text-card` border | `rgba(148,163,184,.10)` | `rgba(148,163,184,.03)` |
 | `.content-text-card` color | `#475569` | `#9fb0c3` |
-| `.content-text-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.content-text-card h3` color | `#0f172a` (art uses `#1d1d1f`) | `#e5ecf4` |
+| `.content-text-card ul` color | `#475569` | `#9fb0c3` |
+| `.section-card h1` (5dt-pd) | inherits slate | `#e5ecf4` |
+| `.qa-group-title` color | `#0f172a` | `#e5ecf4` |
+| `.pillar-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.pillar-card p` color | `#475569` | `#9fb0c3` |
+| `.case-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.case-card p` color | `#64748b` | `#9fb0c3` |
+| `.ethos-preamble h1` color | `#0f172a` | `#e5ecf4` |
+| `.node-section` / `.node-group` / `.node-leaf` bg | light gradients | `#1e293b` / `#1a2430` (via `!important`) |
+| `.node-section` text | `#111827` | `#e5ecf4` / `#cbd5e1` |
+| `.tree-toggle` color/bg | `#7a5c33` / `#efe6d6` | `#cbd5e1` / `#1e293b` |
+| `.tree-shell` bg | light | `rgba(15,23,42,.96)` |
+| `.toggle-all-btn` bg | light | `#1e293b` (via `!important`) |
 | `.mkt-card` border | `rgba(148,163,184,.14)` | `transparent` / `#0a0e1a` |
 | `.link-card p` color | `#6b7280` | `#94a3b8` |
 | `.punchline` color | `#2563eb` | `#6b9aff` |
@@ -1293,6 +1306,8 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | Blog card p | `#6e6e73` | `#9fb0c3` |
 | `.track-split-shell` (dark) | `linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.96))` | `linear-gradient(135deg, #020617, #111827)` |
 | `.track-card` (dark) | `rgba(255,255,255,.08)` border `rgba(255,255,255,.12)` | `rgba(15,23,42,.82)` border `rgba(148,163,184,.16)` |
+
+**Principle (dark-text coverage):** There is **no global `body[data-theme="dark"] h1,h2,h3,p { ... }` fallback** in this site — every dark text color is a per-class per-page inline rule. Any text color not explicitly covered stays its light-mode value and will read as near-black on the dark bg. **Every element that shows user-facing text must therefore have an explicit `body[data-theme="dark"]` override.** When adding a new card/section/class, add its dark text rule in the same file's dark block. Neglected spots are the `5dt-pd` `<h1>`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and inline-colored spans (e.g. `zh-cn/index.html` "查看详情" span → fixed to `#00a1d6`).
 
 ---
 
