@@ -130,3 +130,24 @@
   - en/zh-hk 官网页缺失是 sitemap 已声明但文件未建的缺口 → 本次补齐
   - en/zh-hk 页面也用 GitHub 链接为主外链；不建死链
   - 结构完全复刻 zh-cn（含 mobile Fix A 和暗色覆盖），只换语言相关文案
+
+## 2026-08-06 — 第 7 轮
+
+- 用户要求:
+  - 「fengmedia nav bar 没有迁移成功 修正并检查其他 navbar对应」
+  - （背景：上一轮把 FengMedia 从技术迁到市场学，但导航没跟上）
+- AI 行动:
+  - 排查导航：# navbar.js 里 FengMedia 仍在技术(portfolio)下拉的「软件项目」分组；fengmedia 页 data-section=portfolio（访问时高亮「技术」而非「市场学」）
+  - 修正：
+    1. 3 个 fengmedia.html 的 data-section: portfolio → cases（市场学）
+    2. navbar.js 从技术下拉 software 组移除 fengmedia 行（桌面+移动）
+    3. navbar.js 在市场学 cases 下拉加 fengmedia 行（概览之后，桌面+移动）
+    4. 因改共享 navbar JS，把全站 shared-subpage-navbar.js?v=26.08.05.01.04 提升到 26.08.06.18.03（207 页 + hugo baseof），cache-bust 使改动生效
+  - 检查其他 navbar 对应：fengoffice/jingxin/search-king 仍属技术(portfolio)正确（只有 FengMedia 迁走）；fenginvest 仍属投资(investment)
+- 产出:
+  - fengmedia 导航归位市场学，技术软件项目分组仅剩 jingxin/fengoffice/search-king
+  - 全站 navbar JS 版本刷新
+- 关键决策:
+  - FengMedia 作为市场学工具，导航应出现在市场学下拉，且访问时高亮市场学
+  - 其余未迁移产品页(office/jingxin/search-king)留在技术正确，不动
+  - 浏览器 broker 反复断连，导航验证以静态结构+逻辑检查为准；请用户在浏览器确认视觉效果
