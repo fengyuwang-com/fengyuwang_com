@@ -110,3 +110,23 @@
   - en/zh-hk 因无 fengmedia 官网页，cta「Open GitHub」链接到 github.com/fengyuwang-com（遵循 en 既有惯例，避免 /en/fengmedia.html 死链）
   - 暗色兜底：明确「任何展示文字的元素必须有 body[data-theme=dark] 覆盖」，写入 DESIGN.md/AGENTS.md
   - 随机抽查放最后（用户指示）
+
+## 2026-08-06 — 第 6 轮
+
+- 用户要求:
+  - 「要把网站变成 3 种语言。现在有一些网站只有简体中文，查看哪些，把它们翻译到三语」
+- AI 行动:
+  - 盘点三语文件差异：发现 5 个官方产品页只存在于 zh-cn（fenginvest / fengmedia / fengoffice / jingxin / search-king），en/zh-hk 缺失，而 sitemap.xml 和 zh-cn 页的 hreflang 早已声明其三语存在
+  - 读 5 个 zh-cn 页全文，按「结构副本 + 只译语言相关」生成 10 个新文件（en × 5 + zh-hk × 5）：
+    - 逐字复制：inline <style> 块、Unsplash 图 URL、共享 navbar/footer 脚本、author=王丰羽、og:image=logo.png、back-to-top
+    - 翻译：全部正文文案 + head 语言 metas（lang/title/description/canonical/hreflang/og:locale/og:url/twitter/JSON-LD）
+    - 交叉链接 href 改 /en//zh-hk/；FengInvest data-section=investment，其余 portfolio
+    - search-king 额外携带 .content-text-card pre 样式（正文+暗色）
+  - 翻译遵循 AGENTS.md：relaxed sincerity、不用第二人称、h2 punchline、zh-hk 香港繁体（與/從/構建）
+- 产出:
+  - 10 个新文件：en/{fengmedia,fenginvest,fengoffice,jingxin,search-king}.html + zh-hk/ 同名
+  - 验证：全 10 文件 div 平衡（46-48 对）；三语结构一致（6 section + 6 card）；cross-link 无死链；dark-mode + 移动 Fix A 齐全
+- 关键决策:
+  - en/zh-hk 官网页缺失是 sitemap 已声明但文件未建的缺口 → 本次补齐
+  - en/zh-hk 页面也用 GitHub 链接为主外链；不建死链
+  - 结构完全复刻 zh-cn（含 mobile Fix A 和暗色覆盖），只换语言相关文案
