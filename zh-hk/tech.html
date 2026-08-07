@@ -63,6 +63,27 @@
         .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
         .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
         .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        /* Storm glow overlay on software sections — constant blue gradient that slowly flows (never flashes) */
+        .content-block.storm-bg::before {
+            content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 1;
+            background:
+                radial-gradient(ellipse 75% 80% at 50% -12%, rgba(147,197,253,.55) 0%, rgba(37,99,235,.22) 40%, transparent 68%),
+                radial-gradient(ellipse 50% 45% at 12% 20%, rgba(191,219,254,.38) 0%, transparent 58%),
+                radial-gradient(ellipse 42% 48% at 90% 18%, rgba(96,165,250,.34) 0%, transparent 58%),
+                linear-gradient(160deg, rgba(15,44,110,.34) 0%, rgba(30,58,138,.48) 42%, rgba(37,99,235,.52) 72%, rgba(16,52,150,.34) 100%);
+            animation: storm-flow 6s ease-in-out infinite;
+        }
+        body[data-theme="dark"] .content-block.storm-bg::before {
+            background:
+                radial-gradient(ellipse 75% 80% at 50% -12%, rgba(96,165,250,.44) 0%, rgba(37,99,235,.18) 40%, transparent 68%),
+                radial-gradient(ellipse 50% 45% at 12% 20%, rgba(147,197,253,.26) 0%, transparent 58%),
+                radial-gradient(ellipse 42% 48% at 90% 18%, rgba(59,130,246,.30) 0%, transparent 58%),
+                linear-gradient(160deg, rgba(12,26,66,.38) 0%, rgba(22,41,92,.52) 42%, rgba(30,58,138,.56) 72%, rgba(15,33,90,.38) 100%);
+        }
+        @keyframes storm-flow {
+            0%, 100% { opacity: .82; filter: hue-rotate(0deg); }
+            50% { opacity: 1; filter: hue-rotate(8deg) saturate(1.2); }
+        }
         .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
         .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
         .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
@@ -152,6 +173,27 @@
 
             <!-- Card grid -->
                 <div class="card-grid">
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>靜心 Jingxin</h3>
+                                <p>極簡冥想引導 App——呼吸、正念、引導、放鬆。</p>
+                            <button class="card-btn">瀏覽官網</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>FengOffice</h3>
+                                <p>郵件、CRM、Newsletter，一條鏈。</p>
+                            <button class="card-btn">瀏覽官網</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Search King</h3>
+                                <p>無敵機人協作搜尋器，搜圖搜文字一把抓。</p>
+                            <button class="card-btn">瀏覽官網</button>
+                        </div>
+                    </div>
                     <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
                         <div class="card-content">
                                 <h3>不問對，不開始</h3>
@@ -196,6 +238,78 @@
                     </div>
                 </div>
             </div>
+
+        <!-- Project 1: 靜心 Jingxin -->
+        <div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>一個 App，四種呼吸方式</h2>
+                    <p class="block-subtitle">靜心 Jingxin——極簡風格的冥想引導應用，呼吸、正念、引導、放鬆四種模式。</p>
+                    <div class="content-text-card">
+                        <h3>跨平台移動作品的實證</h3>
+                        <p>用 Flutter 構建，一套程式碼跑通 Web / Android / iOS / Windows。極簡介面，專注冥想本身，不被功能堆砌打擾。</p>
+                        <ul>
+                            <li><strong>數據模型</strong>：<code>MeditationSession</code> 記錄時長 / 模式 / 完成狀態。</li>
+                            <li><strong>狀態管理</strong>：Provider 管理所選時長與模式，介面回應清晰。</li>
+                            <li><strong>呼吸動畫</strong>：自繪 <code>BreathingCircle</code> 元件，引導呼吸節奏。</li>
+                            <li><strong>四種模式</strong>：呼吸 / 正念 / 引導 / 放鬆。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/zh-hk/jingxin.html">瀏覽官網 →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: FengOffice -->
+        <div id="fengoffice" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>郵件、CRM、Newsletter，一條鏈</h2>
+                    <p class="block-subtitle">FengOffice——AI 統一郵件與 CRM，把內容營運的基礎設施收進一條自動化鏈路。</p>
+                    <div class="content-text-card">
+                        <h3>技術交付與市場營運的交匯點</h3>
+                        <p>一個 CLI 管郵件，一個 Docker 棧跑 Twenty CRM，郵件發現 → 回覆 → CRM 錄入，完整鏈路打通。新聞稿由 Newsletter 系統（Listmonk）自動分發。</p>
+                        <ul>
+                            <li><strong>fengmail.py</strong>：CLI 郵件客戶端，IMAP 收信 + SMTP 回覆。</li>
+                            <li><strong>Twenty CRM</strong>：docker-compose 一鍵部署，連接埠 3002。</li>
+                            <li><strong>Newsletter</strong>：Listmonk + Postgres 訂閱系統，AI 管理腳本加訂閱、退訂、發 campaign。</li>
+                            <li><strong>四級郵件分類</strong>：docs/email-classification.md 定義分類體系。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/zh-hk/fengoffice.html">瀏覽官網 →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: Search King -->
+        <div id="search-king" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>十八路引擎，誰行誰上</h2>
+                    <p class="block-subtitle">Super-Invincible-Search-King——Playwright 驅動的全能搜尋器，搜圖、搜文字、讀網頁、深度爬取、反爬網站抓取。</p>
+                    <div class="content-text-card">
+                        <h3>把「被攔」當成常態處理</h3>
+                        <p>一台機器，十八路引擎。遇到驗證碼自動跳過、引擎鏈自動回退、真人瀏覽模式兜底。</p>
+                        <ul>
+                            <li><strong>五種行為</strong>：搜圖 / 搜文字 / 讀網頁 / 深度爬取 / 平台抓取（雪球、B站）。</li>
+                            <li><strong>十二路圖片引擎</strong> + <strong>六路文字引擎</strong>，覆蓋主流與地區性搜尋。</li>
+                            <li><strong>六種後端</strong>：從無頭瀏覽器到真實瀏覽器，層層兜底。</li>
+                            <li><strong>版權可追溯</strong>：每個結果帶來源與許可證記錄。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/zh-hk/search-king.html">瀏覽官網 →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Section 1: 定義問題 -->
         <div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
