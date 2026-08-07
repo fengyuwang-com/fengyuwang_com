@@ -109,6 +109,9 @@
 			.link-card { text-align: center; padding: 48px 0 72px; }
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
+			/* CTA row */
+			.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+			.cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
 			/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -116,11 +119,11 @@
 		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
 		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-			body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+			body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
 			body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
 			body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
 			body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
-				body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+				body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
 				body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
 				body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
 				body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.2) 0%, rgba(14,165,233,.15) 100%); border-color: rgba(96,165,250,.06); }
@@ -146,6 +149,9 @@
 			.card-grid { grid-template-columns: 1fr; }
 			.marketing-hero { padding: 28px 16px; }
 			.content-block { padding: 28px 0 20px; }
+			.block-inner { padding-left: 12px; padding-right: 12px; }
+			.section-card { padding: 20px; }
+			.content-text-card { padding-left: 16px; padding-right: 16px; }
 			.block-inner h2 { font-size: 1.25rem; }
 		}
 	</style>
@@ -153,7 +159,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Marketing Strategy & Research | Fengyu WANG","url":"https://fengyuwang.com/en/mkt.html"}</script> </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="cases"></div>
-	<script src="../assets/js/shared-subpage-navbar.js?v=26.06.20.04.56"></script>
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
 
 	<div class="page-wrap">
 		<div class="container">
@@ -165,6 +171,13 @@
 
 			<!-- Card grid -->
 			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>FengMedia</h3>
+						<p>A finance content operating system — turning ideas into a pipeline.</p>
+						<button class="card-btn">Learn More</button>
+					</div>
+				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=600&q=80')" onclick="document.getElementById('data').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
 						<h3>Data First</h3>
@@ -200,7 +213,7 @@
 						<button class="card-btn">Learn More</button>
 					</div>
 				</div>
-				<div class="mkt-card invest-card" onclick="window.location.href='/en/portfolio.html'">
+				<div class="mkt-card invest-card" onclick="window.location.href='/en/tech.html'">
 						<div class="card-content">
 							<h3>Technical Work →</h3>
 							<p>It's not just writing code, it's delivering something usable.</p>
@@ -211,6 +224,30 @@
 		</div>
 
 		<!-- Content sections -->
+
+		<!-- FengMedia: finance content operating system (marketing tool, placed at top) -->
+		<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>Content Shouldn't Depend on Inspiration</h2>
+					<p class="block-subtitle">FengMedia — a finance content operating system that turns persona, topics, writing, publishing, and review into a single pipeline.</p>
+					<div class="content-text-card">
+						<h3>The Tool Where Marketing Meets Expression</h3>
+						<p>Marketing lands through expression, and expression needs a tool underneath it — that's the origin of FengMedia.</p>
+						<ul>
+							<li><strong>Persona system</strong>: core positioning, persona spectrum (calm ↔ fiery), language style, persona boundaries.</li>
+							<li><strong>Content system</strong>: four pillars, topic bank, script structure templates, production SOP.</li>
+							<li><strong>Platform distribution</strong>: platform matrix + platform-specific rules + social-auto-upload publishing.</li>
+							<li><strong>Quick commands</strong>: /publish, /rage-mode, /fetch-topics, /review, /brainstorm.</li>
+							<li><strong>Operations review</strong>: daily/weekly/monthly SOP, data review, growth milestones.</li>
+						</ul>
+					</div>
+					<div class="cta-row">
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">Open GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="data" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=1600&q=60&auto=format')">
 			<div class="block-inner">
@@ -296,6 +333,7 @@
 						<h2>Projects</h2>
 						<p class="block-subtitle">Strategies on paper are worthless; only those truly validated matter.</p>
 				<div class="case-grid">
+					<div class="case-card"><h3>FengOffice Content Operations Infrastructure</h3><p>Folds mail, CRM, and Newsletter into one automated chain, so marketing operations no longer scatter across Excel and manual work.<a class="case-link" href="/en/fengoffice.html">See the engineering →</a></p></div>
 					<div class="case-card"><h3>Vanytra Tibetan Bracelet Brand Strategy</h3><p>A brand strategy project for the new brand Vanytra, covering market analysis, social media positioning, and target audience research.</p></div>
 					<div class="case-card"><h3>HONOR European Market Analysis</h3><p>Analyzing HONOR's performance in the European smartphone market, with a focus on growth, competition, and positioning.</p></div>
 					<div class="case-card"><h3>Apple China Market Strategy</h3><p>Researching the challenges Apple faces in the Chinese market, the competitive landscape, and strategic recommendations.</p></div>
@@ -416,7 +454,7 @@
 			<!-- Cross-link -->
 			<div class="link-card">
 				<p>Beyond data and creativity, engineering delivery capability is also needed</p>
-				<a class="default-btn" href="/en/portfolio.html">See Technical Work →</a>
+				<a class="default-btn" href="/en/tech.html">See Technical Work →</a>
 			</div>
 			</div>
 

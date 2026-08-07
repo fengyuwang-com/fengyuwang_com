@@ -1,0 +1,44 @@
+# Cloudflare Pages _headers
+# Controls cache behavior for both www.fengyuwang.com (Cloudflare Pages)
+# and test.fengyuwang.com (Docker + cloudflared tunnel)
+
+# === HTML: never cache ===
+# Every deployment changes HTML, so always fetch fresh
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# === Blog post pages (no file extension) ===
+/blog*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# === Root index.html ===
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# === JS assets: short cache (5 min) with revalidation ===
+*.js
+  Cache-Control: no-cache, must-revalidate
+  Pragma: no-cache
+
+# === CSS assets: short cache (5 min) with revalidation ===
+*.css
+  Cache-Control: no-cache, must-revalidate
+  Pragma: no-cache
+
+# === Static images/fonts: longer cache since they change rarely ===
+*.svg
+  Cache-Control: max-age=86400, must-revalidate
+*.png
+  Cache-Control: max-age=86400, must-revalidate
+*.jpg
+  Cache-Control: max-age=86400, must-revalidate
+*.webp
+  Cache-Control: max-age=86400, must-revalidate
+*.woff2
+  Cache-Control: max-age=86400, must-revalidate

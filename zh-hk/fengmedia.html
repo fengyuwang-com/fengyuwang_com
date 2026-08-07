@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-hk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FengMedia | 財經內容操作系統 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FengMedia 是財經創作者的內容操作系統：從人設、選題、寫稿到自動發布、數據復盤，把內容生產從想法落地成一條流水線。">
+    <meta name="keywords" content="FengMedia, 內容操作系統, 財經創作者, 內容生產SOP, 內容分發, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/fengmedia.html">
+    <link rel="alternate" hreflang="en" href="/en/fengmedia.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/fengmedia.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/fengmedia.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FengMedia | 財經內容操作系統 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="從人設、選題到自動發布與復盤，把內容生產落地成一條流水線。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/fengmedia.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FengMedia | 財經內容操作系統 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="從人設、選題到自動發布與復盤，把內容生產落地成一條流水線。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FengMedia | 財經內容操作系統 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/fengmedia.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="cases"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>FengMedia</h1>
+                <p>財經內容操作系統——把人設、選題、寫稿、發布、復盤收進一條流水線，讓內容生產變成可複製的系統。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80')" onclick="document.getElementById('philosophy').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>為甚麼做</h3>
+                        <p>內容不該靠靈感，而該靠系統</p>
+                        <button class="card-btn">看理念</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('persona').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>人設系統</h3>
+                        <p>懂金融 · 會寫代碼 · 不想跟你正經說話</p>
+                        <button class="card-btn">看人設</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('content').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>內容系統</h3>
+                        <p>四大支柱，一套內容支柱與話題庫</p>
+                        <button class="card-btn">看內容</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80')" onclick="document.getElementById('platforms').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>平台系統</h3>
+                        <p>一處生產，多處分發</p>
+                        <button class="card-btn">看平台</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80')" onclick="document.getElementById('toolchain').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>工具鏈</h3>
+                        <p>說一句話，跑一條流水線</p>
+                        <button class="card-btn">看工具</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80')" onclick="document.getElementById('ops').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>運營系統</h3>
+                        <p>用數據復盤，不看感覺拍腦袋</p>
+                        <button class="card-btn">看運營</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="philosophy" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>內容不該靠靈感</h2>
+                    <p class="block-subtitle">想法落地成系統，靈感只是系統運行時的副產品。</p>
+                    <div class="content-text-card">
+                        <p>FengMedia 把內容生產沉澱成一套操作系統：人設定邊界，主題定方向，內容定模板，平台定分發，工具鏈負責把每一步跑起來，運營負責用數據調方向。</p>
+                        <ul>
+                            <li><strong>成體系</strong>：從「想發一條」變成「今天該發甚麼」——每一環都有規則，而不是憑感覺。</li>
+                            <li><strong>可複製</strong>：選題、腳本、發布、復盤都有 SOP，少一步驟，內容也不會斷層。</li>
+                            <li><strong>工具兜底</strong>：能自動化的交給腳本，內容創作者把精力留給表達本身。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="persona" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>理性為底，暴躁為刃</h2>
+                    <p class="block-subtitle">不是單向度的財經創作者——市場學 × 投資 × 技術三條線交叉。</p>
+                    <div class="content-text-card">
+                        <p>人設不是一句口號，而是被寫成文件、有邊界、能執行的系統。</p>
+                        <ul>
+                            <li><strong>核心定位</strong>：一個懂金融、會寫代碼、不想跟你正經說話的財經創作者。信條是「理性 · 客觀 · 不坑人」。</li>
+                            <li><strong>人設光譜</strong>：平靜模式（一本正經講分析）與暴躁模式（情緒輸出但底層仍對）之間自由滑動，隨時切到該有的狀態。</li>
+                            <li><strong>語言風格</strong>：吐槽、自黑、反諷——不說人話不舒服，但底層邏輯始終嚴謹。</li>
+                            <li><strong>人設邊界</strong>：甚麼能說、甚麼絕不能說白紙黑字寫清楚，帳號是命根子，AI 只是工具，不替你表達。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>四大支柱，一庫話題</h2>
+                    <p class="block-subtitle">內容方向不靠拍腦袋，靠支柱定義 + 話題沉澱 + 熱點追蹤。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>四大內容支柱</strong>：財經吐槽、程式員日常、戳破大 V、生活——每個方向都有明確的目標受眾與表達套路。</li>
+                            <li><strong>話題庫</strong>：持續更新的選題清單，備用選題隨時可寫，不會再對著空白頁發呆。</li>
+                            <li><strong>熱點追蹤</strong>：接 MediaCrawler 趨勢，把新熱點自動變成選題，跟得上節奏。</li>
+                            <li><strong>分形式寫稿</strong>：短視頻、圖文、B 站長視頻各有腳本結構模板，按模板填內容即可。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">內容支柱</span>
+                        <span class="stack-chip">話題庫</span>
+                        <span class="stack-chip">腳本模板</span>
+                        <span class="stack-chip">熱點追蹤</span>
+                        <span class="stack-chip">生產 SOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="platforms" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>一處生產，多處分發</h2>
+                    <p class="block-subtitle">同一份內容，為每個平台調整打法，再自動化發出去。</p>
+                    <div class="content-text-card">
+                        <p>平台不是越多越好，而是每個平台都有清晰的定位、優先級與專屬規則。</p>
+                        <ul>
+                            <li><strong>平台矩陣</strong>：各平台定位、優先級、策略一覽——知道哪裡是主戰場，哪裡是引流。</li>
+                            <li><strong>平台專屬運營</strong>：小紅書、B 站、抖音各有一套規則，標題、封面、標籤照規矩來。</li>
+                            <li><strong>自動發布</strong>：接入 social-auto-upload，寫好的內容一鍵分發到多個平台。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toolchain" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>說一句話，跑一條流水線</h2>
+                    <p class="block-subtitle">日常重複交給快捷指令，創作者只做最重要的判斷。</p>
+                    <div class="content-text-card">
+                        <p>FengMedia 不只是一個文件庫，它會跟著指令幹活。</p>
+                        <ul>
+                            <li><strong>/publish</strong>：自動傳 B 站，你只需點發布。</li>
+                            <li><strong>/rage-mode</strong>：一鍵激活暴躁狀態，進入爆款語境。</li>
+                            <li><strong>/fetch-topics</strong>：跑爬蟲抓取熱點，把話題餵進選題庫。</li>
+                            <li><strong>/review</strong>：看數據、做復盤，調整方向。</li>
+                            <li><strong>/brainstorm</strong>：聊選題、碰撞點子。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">MediaCrawler</span>
+                        <span class="stack-chip">social-auto-upload</span>
+                        <span class="stack-chip">Claude Code 指令</span>
+                        <span class="stack-chip">FengInvest 接入</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ops" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>用數據，不看感覺</h2>
+                    <p class="block-subtitle">日週月 SOP + 數據復盤，讓增長有里程碑可以檢驗。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>日週月 SOP</strong>：每天、每週、每月到底做甚麼，都有明確清單——開機不亂，收工有數。</li>
+                            <li><strong>數據復盤</strong>：怎麼看數據、怎麼調方向，用真實反饋而不是自我感覺。</li>
+                            <li><strong>增長里程碑</strong>：30 / 60 / 90 / 180 天目標拆解，每一步都有可回的看板。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">查看 GitHub 倉庫</a>
+                        <a class="default-btn" href="/zh-hk/tech.html">返回技術作品</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>想講、會做、也做得出來——技術和表達在一個系統裡互相餵</p>
+            <a class="default-btn" href="/zh-hk/tech.html">返回技術作品 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

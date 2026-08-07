@@ -550,4 +550,52 @@ The tunnel uses a token from Cloudflare Zero Trust → Tunnels. Put it in `.env`
 
 The capabilities page used to say "一个打三个" (one beats three). The correct framing is "超越三者之和的价值" (value that exceeds the sum of its three parts) — it's about synergy, not competition.
 
+### 6. Adding items to the Tech navbar dropdown
+
+**Symptom**: The Tech ▾ dropdown grows too long, or a new software/topic link is added in the wrong place.
+
+**Fix**: Dropdowns are **auto-fit with scroll-when-needed** (global behavior, see DESIGN.md §7.1 "Submenu auto-fit & scroll"): they expand to full content height when the screen has room and scroll only when it doesn't — never introduce a two-column grid or a fixed-height cap. The Tech dropdown is a single column with two group headers. Rules:
+- Every submenu leads with its own **overview link** (`XXX概览` / `XXX Overview`): Tech ▾ leads with `技术概览`, same as `市场学概览`/`投资概览`/`艺术概览` lead their submenus, and Ethos ▾ leads with `理念概览` before its anchor links. The overview labels come from the per-language `casesOverview`/`portfolioOverview`/`investmentOverview`/`artOverview`/`ethosOverview` keys in the `copy` objects — never hard-code or revert to a bare page-name item (e.g. 投资 ▾ must show `投资概览`, not a duplicate `投资`).
+- Software projects go under the `软件项目` header, tech topics under `技术研究`.
+- **FengInvest lives under the Investment ▾ dropdown** (it's an investment tool, and its pages declare `data-section="investment"`) — not under Tech's 软件项目.
+- Every item and header label must be added to **all three language `copy` objects** in `shared-subpage-navbar.js` (`software`, `techResearch`, etc.) — never hard-code a string.
+- The mobile drawer mirrors the same list single-column; don't give it its own different structure.
+
+### 7. `storm-bg` is a ONE-TIME Tech-page effect — do not copy it elsewhere
+
+**Symptom**: The 「闪电炫光蓝」 storm-glow on `zh-cn/tech.html`'s four software sections gets copy-pasted into other pages/languages, or a flashing variant is reintroduced.
+
+**Fix**: `.content-block.storm-bg` + `@keyframes storm-flow` are a **bespoke, one-off** effect for the Tech page's software-project showcase only. Rules:
+- Do **not** add `storm-bg` to any other page without an explicit request.
+- The blue is a `::before` overlay — it stays **always present**, gently breathing (6s flow), and must **never flash/strobe**. (A 1.2s `storm-flash` flicker was tried and rejected).
+- The class is additive: it sits on `content-block section-bg storm-bg`, keeps the section's own `--section-bg-img`, and the white divider gaps stay white.
+- See DESIGN.md §7.7.1 for full documentation.
+
+### 8. Mobile nested-card padding & CTA button width
+
+**Symptom**: On mobile, text inside `.block-inner → .section-card → .content-text-card` renders too narrow (~8 CJK chars/line) because the three nested paddings never shrink at `≤599px`; or `.cta-row` buttons size unevenly by their text length.
+
+**Fix**: Apply the standard mobile overrides in each page's `@media (max-width: 599px)` block (see DESIGN.md §8 "Mobile text-width recovery") and the equal-width `.cta-row` rule (see DESIGN.md §8 "CTA buttons equal width"). The batch script `scripts/apply-mobile-fix.js` applies both across en/zh-cn/zh-hk idempotently. When touching a new content sub-page, make sure it already has these two rules; run the script after adding a new page rather than hand-editing each CSS variant.
+
+### 9. Text overflowing its card (e.g. `、/brainstorm。`)
+
+**Symptom**: A long unbreakable phrase (CJK + `/` + `、` at line end, e.g. `快捷指令：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。`) spills outside the card's right edge.
+
+**Root cause**: CJK kinsoku rules forbid `、` at line start and `/` before a break, so the whole tail chunk can't break and overflows — the site had no `overflow-wrap` rule.
+
+**Fix**: The global rule in `assets/css/style.css` (`overflow-wrap: break-word; word-break: break-word` on `.content-text-card, .block-inner`) handles it site-wide. Don't add per-page hacks; if a case still overflows, check the element is inside `.content-text-card` or `.block-inner` (per-page inline styles on other wrappers don't inherit the fix).
+
+### 10. Project sections without the dark shell
+
+**Symptom**: A delivered project section on the Tech page uses the same frosted `content-block section-bg` as the ideology sections — the projects don't read as a different kind of content.
+
+**Fix**: Wrap the projects in `.projects-shell` (storm glow-blue shell; structure/CSS in DESIGN.md §7.7 "Projects Zone (Dark Shell)"). Each project keeps `class="project-card"` instead of `content-block section-bg` (drop `--section-bg-img`), and keeps its inner `.block-inner > .section-card` unchanged. Inside the shell only light cards; dark-mode cards get a hairline border via `body[data-theme="dark"] .projects-shell .section-card`. Rules: direct child of `page-wrap` (never inside `.container` — white strips appear on both sides); placed directly after the card grid, before the ideology sections; **no border-radius** (square edges embed it in the white page); **storm glow-blue** background — 3 radial glows + 2 diagonal light beams + blue gradient, plus `storm-glow` (pulsing halo) and `storm-flash` (lightning double-flash on `::before`) animations; **dark mode must stay a clearly BLUE glowing body** (`#16295c → #2547c8` gradient, uniform `0 0 46px` blue halo, `animation: none`) — a near-black start (`#0b1530`) or an offset black shadow reads as a "black square" against the `#0a0e1a` page (the 方形外壳 bug); never plain dark gray.
+
+### 11. Dark-mode text left near-black
+
+**Symptom**: In dark mode some text is hard or impossible to read because it keeps its light-mode dark color on the dark background.
+
+**Fix**: This site has **no global `body[data-theme="dark"] h1,h2,h3,p { … }` fallback** — every dark text color is a per-class, per-page inline rule, and anything not covered stays near-black. Every user-facing text element must get an explicit `body[data-theme="dark"]` override (light `#e5ecf4` headings, `#9fb0c3`/`#94a3b8` body). Known gaps already fixed: `5dt-pd` `.section-card h1`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and `zh-cn/index.html` "查看详情" span (now `#00a1d6`). Call out — never leave a `#0f172a`/`#1d1d1f`/`#1e293b`/`#475569`/`#515154` color on a text element without a dark counterpart. See DESIGN.md §9.
+
+
 

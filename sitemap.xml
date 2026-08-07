@@ -53,16 +53,76 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/portfolio.html</loc>
+    <loc>https://fengyuwang.com/en/tech.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/portfolio.html</loc>
+    <loc>https://fengyuwang.com/zh-cn/tech.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/portfolio.html</loc>
+    <loc>https://fengyuwang.com/zh-hk/tech.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fenginvest.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/jingxin.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fengoffice.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/fengmedia.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/search-king.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/search-king.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-hk/search-king.html</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fengyuwang.com/en/cloud.html</loc>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FengInvest | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FengInvest is the most ambitious project so far: an AI-collaborative investment analysis framework — a seven-layer state machine that enforces the process, a data-quality gate, and four parallel AI agents doing qualitative analysis. From philosophy to engineering, fully shipped.">
+    <meta name="keywords" content="FengInvest, AI investment analysis, value investing, seven-layer state machine, quant, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/en/fenginvest.html">
+    <link rel="alternate" hreflang="en" href="/en/fenginvest.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/fenginvest.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/fenginvest.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="The most ambitious project yet: an AI-collaborative investment framework — seven-layer state machine, data-quality gate, and four parallel AI agents.">
+    <meta property="og:url" content="https://fengyuwang.com/en/fenginvest.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FengInvest | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="The most ambitious project yet: an AI-collaborative investment framework — seven-layer state machine, data-quality gate, and four parallel AI agents.">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FengInvest | Fengyu WANG","url":"https://fengyuwang.com/en/fenginvest.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="investment"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>FengInvest</h1>
+                <p>Three paths, one system—value, quant, and subjective judgment, turning "can I buy this stock?" into a process that can be reviewed, validated, and stress-tested.</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('value').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Value Investing</h3>
+                        <p>Buy a great business, wait for a fair price—know your circle of competence</p>
+                        <button class="card-btn">See the path</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')" onclick="document.getElementById('quant').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Quantitative Investing</h3>
+                        <p>Let the numbers speak—multi-factor models and data pipelines</p>
+                        <button class="card-btn">See the path</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('subjective').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Subjective Judgment</h3>
+                        <p>Four investors' viewpoints, converging through debate</p>
+                        <button class="card-btn">See the path</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80')" onclick="document.getElementById('architecture').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Seven-Layer Architecture</h3>
+                        <p>A state machine enforces the process—no step skippable</p>
+                        <button class="card-btn">See the architecture</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80')" onclick="document.getElementById('quality').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Data Quality</h3>
+                        <p>Verify correctness at ingestion, keep bad data out</p>
+                        <button class="card-btn">See the gate</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Quick Start</h3>
+                        <p>A few CLI commands, from initialization to a report</p>
+                        <button class="card-btn">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="value" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Value Investing: Buy a Great Business, Wait for a Fair Price</h2>
+                    <p class="block-subtitle">First settle "do I understand it?", then talk about "is it expensive?".</p>
+                    <div class="content-text-card">
+                        <p>This path answers the most fundamental question: do I truly understand this investment? How does it make money? Will this business still exist in ten years? What could kill it?</p>
+                        <ul>
+                            <li><strong>L0 circle-of-competence confirmation</strong>: three questions—how does it make money? Will it still exist in ten years? What could kill it? Outputs "understand / partially understand / don't understand".</li>
+                            <li><strong>Moat and long-term durability</strong>: companies judged "partially understood" at L0 are blocked after the M layer and never enter deep analysis.</li>
+                            <li><strong>Margin-of-safety mindset</strong>: start from business value—don't chase momentum or guess bounces; only act when there's enough cushion.</li>
+                            <li><strong>Hard-discipline cap</strong>: the 8 L1 rules are the brakes inside the value framework—the more you like something, the more you check whether the rules let you pass.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quant" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Quantitative Investing: Let the Numbers Speak</h2>
+                    <p class="block-subtitle">Translate subjective feel into computable signals.</p>
+                    <div class="content-text-card">
+                        <p>Feelings are static; data is alive. This path uses a multi-factor model to turn "expensive or cheap, good or bad" into a set of comparable, back-testable numbers—not a hunch.</p>
+                        <ul>
+                            <li><strong>10-factor z-score quant</strong>: valuation, quality, growth, momentum and sentiment each normalized and weighted into a relative-rankscore.</li>
+                            <li><strong>Data pipeline (M layer)</strong>: fengdata.py collects, dedupes, retries and rotates proxies, so every cell of data comes from a trusted source.</li>
+                            <li><strong>3-light judgment</strong>: macro / valuation / trend / sentiment four lights gauge the market, and the quant path only runs in a fitting environment.</li>
+                            <li><strong>Cross-checkable against the subjective</strong>: when the quant score conflicts with a value call, the L3 debate engine manufactures a debate instead of silently ignoring it.</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Multi-factor z-score</span>
+                        <span class="stack-chip">Data pipeline</span>
+                        <span class="stack-chip">Back-test friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="subjective" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Subjective Judgment: Four Perspectives, One Debate</h2>
+                    <p class="block-subtitle">Qualitative analysis is never one person's say-so.</p>
+                    <div class="content-text-card">
+                        <p>The biggest liar in investing is agreeing with yourself. FengInvest runs four AI agents in parallel, each answering independently from a different investor's stance, then a debate engine stitches their conclusions together.</p>
+                        <ul>
+                            <li><strong>Duan Yongping's lens</strong>: the underlying logic of the business—why do others buy it? Where's the moat?</li>
+                            <li><strong>Buffett's lens</strong>: business quality and long-term return—is this a good business that earns money?</li>
+                            <li><strong>Munger's lens</strong>: contrarian and multidisciplinary thinking—where's the easiest place to go wrong, and how to avoid it.</li>
+                            <li><strong>Li Lu's lens</strong>: circle of competence and long-termism—do I truly understand, or do I just want it?</li>
+                            <li><strong>L3 debate engine</strong>: four adversarial questions + behavioral-bias check + rule-tree collision. Every agent's conclusion can be challenged; it outputs the converged view together with a record of disagreements.</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Multi-agent parallel</span>
+                        <span class="stack-chip">Four adversarials</span>
+                        <span class="stack-chip">Bias check</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="architecture" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Seven-Layer Architecture</h2>
+                    <p class="block-subtitle">From circle-of-competence confirmation to a structured report, each layer does one thing.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>L0 circle-of-competence confirmation</strong>: three questions—how does it make money? Will it still exist in ten years? What could kill it? Outputs "understand / partially understand / don't understand".</li>
+                            <li><strong>M market data</strong>: collection + four-light judgment (macro / valuation / trend / sentiment).</li>
+                            <li><strong>L1 hard discipline</strong>: eight rules checked one by one.</li>
+                            <li><strong>L2b quant factors</strong>: 10-factor z-score quant analysis.</li>
+                            <li><strong>L2a qualitative analysis</strong>: four AI agents in parallel—Duan / Buffett / Munger / Li Lu perspectives.</li>
+                            <li><strong>L3 debate engine</strong>: four adversarial questions + behavioral-bias check + rule-tree collision.</li>
+                            <li><strong>P portfolio check</strong>: position sizing + stress testing.</li>
+                            <li><strong>L4 report</strong>: a structured research report in a Wall Street analyst format.</li>
+                        </ul>
+                    </div>
+                    <div class="content-text-card">
+                        <p><strong>A state machine blocks short-cuts</strong>: without finishing L0 you can't enter M, and without finishing L3 you can't produce a report. No step gets skipped because it "feels about right".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quality" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Data Quality: Keep Bad Data Out</h2>
+                    <p class="block-subtitle">Correctness is verified at ingestion—structural checks alone aren't enough.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Data-quality gate</strong>: pulls PE / forward PE from stockanalysis.com and compares against the local copy—under 5% difference passes, 5–10% warns, over 10% fails.</li>
+                            <li><strong>Cross-layer consistency</strong>: PE is cross-checked across M / L2b, with an automatic alert if it differs by more than 5%.</li>
+                            <li><strong>Degradation propagation</strong>: when a data source degrades, the downstream weight drops automatically.</li>
+                            <li><strong>Output validation</strong>: on marking complete, automatically checks that key fields exist.</li>
+                            <li><strong>Web UI</strong>: analysis progress and report visualization—a toolset built for day-to-day research.</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Cross-validation</span>
+                        <span class="stack-chip">Consistency check</span>
+                        <span class="stack-chip">Degradation propagation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Quick Start</h2>
+                    <p class="block-subtitle">A state-machine tool—a few commands run the whole analysis flow.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><code>python tools/fengstate.py init &lt;TICKER&gt;</code> — initialize analysis</li>
+                            <li><code>python tools/fengstate.py check &lt;TICKER&gt; &lt;layer&gt;</code> — check prerequisites</li>
+                            <li><code>python tools/fengstate.py complete &lt;TICKER&gt; &lt;layer&gt; &lt;file&gt;</code> — mark complete</li>
+                            <li><code>python tools/fengstate.py status &lt;TICKER&gt;</code> — view progress</li>
+                            <li><code>python tools/fengstate.py verify &lt;TICKER&gt;</code> — full verification</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">View the GitHub repo</a>
+                        <a class="default-btn" href="/en/invest.html">Back to the Investment Framework</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>The engineering realization of the investment framework starts here</p>
+            <a class="default-btn" href="/en/invest.html">Back to the Investment Framework →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
