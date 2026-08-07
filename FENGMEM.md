@@ -151,3 +151,23 @@
   - FengMedia 作为市场学工具，导航应出现在市场学下拉，且访问时高亮市场学
   - 其余未迁移产品页(office/jingxin/search-king)留在技术正确，不动
   - 浏览器 broker 反复断连，导航验证以静态结构+逻辑检查为准；请用户在浏览器确认视觉效果
+
+## 2026-08-07 — 第 8 轮
+
+- 用户要求:
+  - 「你只更新了没有英语的网页。完全没有更新有英语但是变化了的网页，这些网页很多的。中文版的变化了，英文版的还没变过来，因为中文版的已经加了很多介绍了」
+- AI 行动:
+  - 全面审计(Explore agent)三语内容差异，锁定 8 组页面在 zh-cn 有内容但 en/zh-hk 缺失或未扩写
+  - 按类别同步(A类整段缺失、B类文案扩写)，全部翻译加入 en 和 zh-hk：
+    - tech.html: en/zh-hk 补 3 个软件项目专区(静心/FengOffice/Search King)+ 3 张卡 + storm-bg 炫光 CSS(::before + storm-flow)
+    - invest.html: en/zh-hk 补 fenginvest 专区 + 卡(放最前)，并重排 section 注释编号
+    - mkt.html: en/zh-hk 补 FengOffice case-card(链接对应语言 fengoffice.html)
+    - art-painting.html: en/zh-hk 扩写第1段(4段) + 补第2块「精神比真实更重要」
+    - art-architecture/design/literature/music: en/zh-hk 扩写各 section 详细文案(段落数与 zh-cn 严格一致)
+- 产出:
+  - 8 组页面 × 3 语言结构完全一致(div 平衡、section/card 数量、段落数全部 match)
+  - 无死链；en/zh-hk tech 含 storm-bg/暗色/移动 Fix A
+- 关键决策:
+  - 扩写时严格对齐 zh-cn 的段落数(含 link-card 机制：某句在 body 或 link-card 的位置与 zh-cn 一致)
+  - art-* 页中「好的音乐/设计和写作一样」等收尾句，确认属于 link-card 而非 section body，避免重复计数
+  - 翻译遵循 AGENTS.md 语气(不用第二人称、h2 punchline)，zh-hk 繁体
