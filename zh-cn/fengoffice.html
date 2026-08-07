@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FengOffice | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FengOffice 是 AI 统一邮件与 CRM 平台：一个 CLI 管邮件，一个 Docker 栈跑 Twenty CRM，Newsletter 自动分发，把内容运营的基础设施收进一条自动化链路。">
+    <meta name="keywords" content="FengOffice, 邮件自动化, CRM, Twenty, Newsletter, Listmonk, AI, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-cn/fengoffice.html">
+    <link rel="alternate" hreflang="en" href="/en/fengoffice.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/fengoffice.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/fengoffice.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FengOffice | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="AI 统一邮件与 CRM：CLI 邮件 + Twenty CRM + Newsletter，一条自动化链路。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-cn/fengoffice.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FengOffice | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="AI 统一邮件与 CRM：CLI 邮件 + Twenty CRM + Newsletter，一条自动化链路。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FengOffice | Fengyu WANG","url":"https://fengyuwang.com/zh-cn/fengoffice.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>FengOffice</h1>
+                <p>邮件、CRM、Newsletter，一条自动化链路——把内容运营的基础设施收进命令行与 Docker 栈。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80')" onclick="document.getElementById('why').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>为什么做</h3>
+                        <p>市场操作不该散落在 Excel 和人工里</p>
+                        <button class="card-btn">看动机</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&q=80')" onclick="document.getElementById('mail').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>邮件 CLI</h3>
+                        <p>一个命令行，收信、读信、回信</p>
+                        <button class="card-btn">看邮件</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('crm').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Twenty CRM</h3>
+                        <p>一个 Docker 栈，客户关系全部归档</p>
+                        <button class="card-btn">看 CRM</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Newsletter</h3>
+                        <p>Listmonk + Postgres，一键分发内容</p>
+                        <button class="card-btn">看分发</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')" onclick="document.getElementById('pipeline').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>自动化链路</h3>
+                        <p>发现 → 回复 → 录入 → 分发</p>
+                        <button class="card-btn">看链路</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80')" onclick="document.getElementById('deploy').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>部署</h3>
+                        <p>几条命令，从零到跑起来</p>
+                        <button class="card-btn">看部署</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="why" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>市场操作，不该散落在 Excel 里</h2>
+                    <p class="block-subtitle">内容运营真正的基础设施，是邮件、客户与分发。</p>
+                    <div class="content-text-card">
+                        <p>很多内容运营团队把功夫花在内容本身，却让邮件、客户关系与 Newsletter 散落在 Excel 表和人工操作里。FengOffice 把这三件事收进一条自动化链路：一个 CLI 管邮件，一个 Docker 栈跑 CRM，一个 Newsletter 系统做分发。</p>
+                        <ul>
+                            <li><strong>技术交付与市场运营的交汇点</strong>：市场人理解的需求，用工程师的方式解决。</li>
+                            <li><strong>全部本地可控</strong>：数据自持，不把客户数据交给第三方 SaaS。</li>
+                            <li><strong>可脚本化</strong>：每一件重复操作都能写成命令，交给 AI 执行。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mail" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>一个 CLI，管所有邮箱</h2>
+                    <p class="block-subtitle">fengmail.py——IMAP 收信，SMTP 回信，全部输出 JSON。</p>
+                    <div class="content-text-card">
+                        <p>多个邮箱账号统一在一个命令行里管理。查邮件、读正文、发送、回复，输出全部是 JSON，方便被脚本和 AI 直接消费。</p>
+                        <ul>
+                            <li><strong>多账号</strong>：Gmail、Outlook 等七个账号统一管理，OAuth 配置分离。</li>
+                            <li><strong>规范回复</strong>：reply 自动提取 Message-ID 与 References，正确串成邮件线程。</li>
+                            <li><strong>AI 友好</strong>：结构化 JSON 输出，Agent 可以筛选、分类、起草、发送。</li>
+                            <li><strong>分类体系</strong>：四级邮件分类（docs/email-classification.md），把收件箱变成工作流。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">IMAP</span>
+                        <span class="stack-chip">SMTP</span>
+                        <span class="stack-chip">OAuth</span>
+                        <span class="stack-chip">JSON</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="crm" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>客户关系，一个 Docker 栈</h2>
+                    <p class="block-subtitle">Twenty CRM——本地部署，数据自持。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>一键部署</strong>：docker-compose 启动，本地 3002 端口访问。</li>
+                            <li><strong>完整 CRM 功能</strong>：联系人、公司、机会、活动，客户全生命周期归档。</li>
+                            <li><strong>与邮件联动</strong>：邮件发现 → 客户信息 → CRM 录入，链路自动完成。</li>
+                            <li><strong>需求文档化</strong>：docs/requirements.md 记录 CRM 的功能需求与演进方向。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Twenty</span>
+                        <span class="stack-chip">Docker</span>
+                        <span class="stack-chip">本地部署</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="newsletter" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>内容，一次性分发</h2>
+                    <p class="block-subtitle">Listmonk + Postgres——订阅、退订、campaign，全脚本化。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>订阅管理</strong>：add-subscriber / remove-subscriber 脚本，AI 直接调用。</li>
+                            <li><strong>Campaign 发送</strong>：send-newsletter 一键创建并发送邮件。</li>
+                            <li><strong>自动退订处理</strong>：process-unsubscribes 读取退订邮件并同步。</li>
+                            <li><strong>内容枢纽</strong>：docs/newsletter-architecture.md 定义 Newsletter 与内容的枢纽架构。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Listmonk</span>
+                        <span class="stack-chip">Postgres</span>
+                        <span class="stack-chip">AI 脚本</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pipeline" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>一条链，自动运转</h2>
+                    <p class="block-subtitle">邮件发现 → 回复 → CRM 录入 → Newsletter 分发。</p>
+                    <div class="content-text-card">
+                        <p>每一环的输出都是下一环的输入，重复劳动被一次性写进代码。</p>
+                        <ul>
+                            <li><strong>发现</strong>：fengmail.py 从多个邮箱拉取来信，按四级分类过滤出真正需要处理的内容。</li>
+                            <li><strong>回复</strong>：AI 起草，CLI 发送，回复保留正确的线程结构。</li>
+                            <li><strong>录入</strong>：联系人信息进入 Twenty CRM，成为可检索的资产。</li>
+                            <li><strong>分发</strong>：Newsletter 系统把内容触达订阅者，退订自动清理。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="deploy" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>从零到跑起来</h2>
+                    <p class="block-subtitle">几条命令，完整栈就在本地。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><code>python fengmail.py list-accounts</code> — 查看已配置的邮箱账号</li>
+                            <li><code>docker compose up -d</code> — 启动 Twenty CRM（localhost:3002）</li>
+                            <li><code>docker compose up -d</code>（newsletter 目录）— 启动 Listmonk + Postgres</li>
+                            <li><code>python newsletter/scripts/send-newsletter.py</code> — 发送一封 Newsletter</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+                        <a class="default-btn" href="/zh-cn/mkt.html">返回市场学</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>内容运营的自动化，从这里起步——数字之外，还需要工程交付</p>
+            <a class="default-btn" href="/zh-cn/tech.html">返回技术作品 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

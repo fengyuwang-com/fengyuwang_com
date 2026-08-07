@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-hk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>Search King | 無敵機人協作搜尋器 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="Search King 是 Playwright 驅動的全能搜尋器：搜圖、搜文字、讀網頁、深度爬取、反爬網站抓取，自動跳過驗證碼並回退引擎鏈。">
+    <meta name="keywords" content="Search King, 圖片搜尋, 網頁爬取, Playwright, Crawl4AI, CloakBrowser, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/search-king.html">
+    <link rel="alternate" hreflang="en" href="/en/search-king.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/search-king.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/search-king.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Search King | 無敵機人協作搜尋器 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="搜圖、搜文字、讀網頁、深度爬取、反爬網站抓取——一台機器，十八路引擎。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/search-king.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Search King | 無敵機人協作搜尋器 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="搜圖、搜文字、讀網頁、深度爬取、反爬網站抓取——一台機器，十八路引擎。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .content-text-card pre { background: #f1f5f9; border: 1px solid rgba(148,163,184,.15); border-radius: 8px; padding: 10px 12px; font-size: .8rem; overflow-x: auto; color: #0f172a; margin: 0 0 8px; }
+        .content-text-card pre:last-child { margin-bottom: 0; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .content-text-card pre { background: #0a0e1a; border-color: rgba(148,163,184,.08); color: #bfdbfe; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Search King | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/search-king.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>Search King</h1>
+                <p>無敵機人協作搜尋器——搜圖、搜文字、讀網頁、深度爬取、反爬網站抓取，一台機器，十八路引擎。</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=80')" onclick="document.getElementById('modes').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>五種行為</h3>
+                        <p>搜圖 / 搜文字 / 讀網頁 / 深度爬取 / 平台抓取</p>
+                        <button class="card-btn">看用法</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80')" onclick="document.getElementById('engines').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>引擎矩陣</h3>
+                        <p>12 路圖片引擎 + 6 路文字引擎</p>
+                        <button class="card-btn">看引擎</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80')" onclick="document.getElementById('backends').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>六種後端</h3>
+                        <p>從無頭瀏覽器到真實瀏覽器，層層兜底</p>
+                        <button class="card-btn">看後端</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80')" onclick="document.getElementById('workflow').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>工作流</h3>
+                        <p>遇驗證碼自動換路，全掛切真人模式</p>
+                        <button class="card-btn">看流程</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')" onclick="document.getElementById('license').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>版權可追溯</h3>
+                        <p>每個結果都帶來源與許可證記錄</p>
+                        <button class="card-btn">看版權</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80')" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>快速上手</h3>
+                        <p>一行命令，裝上就用</p>
+                        <button class="card-btn">看上手指南</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modes" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>一台機器，五種乾法</h2>
+                    <p class="block-subtitle">行為參數正交組合，一個工具應付所有內容採集場景。</p>
+                    <div class="content-text-card">
+                        <p>行為、後端、修飾器參數自由搭配，互不干擾——這也讓命令行可預測、可自動化。</p>
+                        <ul>
+                            <li><strong>搜圖</strong>（默認）：直接輸入關鍵詞即開搜，支持按引擎、按免費站過濾。</li>
+                            <li><strong>搜文字</strong>：`--search`，走 6 路文字引擎鏈，可關瀏覽器用純 HTTP 快速搜尋。</li>
+                            <li><strong>讀網頁</strong>：`--read`，提取正文，支持多個 URL 並行。</li>
+                            <li><strong>深度爬取</strong>：`--crawl`，基於 Crawl4AI 深度提取，輸出 Markdown。</li>
+                            <li><strong>平台抓取</strong>：`--fetch`，專門抓雪球帖子、B 站視頻與合集。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="engines" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>十八路引擎，誰行誰上</h2>
+                    <p class="block-subtitle">十二路圖片 + 六路文字，覆蓋主流與地區性搜尋引擎。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>圖片（12）</strong>：Unsplash、Pexels、Pixabay、Burst、Bing、百度、Brave、DuckDuckGo、Yandex、搜狗、360、Google。</li>
+                            <li><strong>文字（6）</strong>：Bing、百度、Google、DuckDuckGo、Brave、搜狗。</li>
+                            <li><strong>免費商用優先</strong>：`--free` 只走帶免費商用許可證的攝影站，版權風險可控。</li>
+                            <li><strong>引擎鏈自動回退</strong>：單個引擎掛了或被攔截，自動換下一個，不中斷。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="backends" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>六種後端，層層兜底</h2>
+                    <p class="block-subtitle">從最輕到最重，按被攔截的程度逐漸升級。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>edge</strong>：系統 Edge 瀏覽器（默認）。</li>
+                            <li><strong>chromium</strong>：Playwright 內置 Chromium，跨平台一致。</li>
+                            <li><strong>cloak</strong>：CloakBrowser 反偵測，專門過 Cloudflare 類防護。</li>
+                            <li><strong>lite</strong>：純 HTTP，最快，只用於文字搜尋。</li>
+                            <li><strong>opencli</strong>：真實 Edge + 保持會話，抗 WAF，抓雪球和 B 站。</li>
+                            <li><strong>manual</strong>：你瀏覽、工具提取——反爬到最後，真人兜底。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="workflow" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>遇到攔截，就換一條路</h2>
+                    <p class="block-subtitle">CAPTCHA 自動跳過，引擎自動回退，真人瀏覽兜底。</p>
+                    <div class="content-text-card">
+                        <p>Search King 把「被攔」當成常態來處理：任何模式遇到驗證碼或攔截，自動跳過換下一個引擎；全都掛了，切手動模式由真人完成。</p>
+                        <ul>
+                            <li><strong>驗證碼自動跳過</strong>：不卡死、不提交，直接換路。</li>
+                            <li><strong>深度抓取轉文件</strong>：爬取結果落到 Markdown，方便二次處理。</li>
+                            <li><strong>並發下載</strong>：選中圖片批次下載，全程帶來源與許可證記錄。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="license" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>版權，不是事後補救</h2>
+                    <p class="block-subtitle">靠一張圖解決版權問題的時代過去了——來源要可查，許可要可追溯。</p>
+                    <div class="content-text-card">
+                        <p>圖片下載不是交差，而是交付可用的素材。Search King 始終攜帶來源文件與許可證資訊，讓每一次下載都能說清「這圖從哪來、能不能商用」。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quickstart" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>裝上，就能用</h2>
+                    <p class="block-subtitle">安裝依賴，一行命令開跑。</p>
+                    <div class="content-text-card">
+                        <pre>python scraper.py "猫"</pre>
+                        <pre>python scraper.py "猫" --free --download -o pics</pre>
+                        <pre>python scraper.py --search "AI 2026" --backend lite</pre>
+                        <pre>python scraper.py --read https://example.com --backend cloak</pre>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Playwright</span>
+                        <span class="stack-chip">Crawl4AI</span>
+                        <span class="stack-chip">CloakBrowser</span>
+                        <span class="stack-chip">yt-dlp</span>
+                        <span class="stack-chip">Python 3.8+</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看 GitHub 倉庫</a>
+                        <a class="default-btn" href="/zh-hk/tech.html">返回技術作品</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>想做、也做得出——技術不是目的，是把麻煩變成工具</p>
+            <a class="default-btn" href="/zh-hk/tech.html">返回技術作品 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

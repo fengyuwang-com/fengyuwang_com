@@ -10,16 +10,28 @@
 /github    https://github.com/fengyuwang-com    302
 /linkedin    https://linkedin.com/in/fengyuwang-com    302
 /youtube    https://www.youtube.com/@fenglin6    302
-/bilibili    https://b23.tv/Aqk6EGE    302
+/bilibili    https://space.bilibili.com/1136929849    302
 
 # Track shortcuts
 /marketing    /zh-cn/mkt.html    302
 /investment    /zh-cn/invest.html    302
-/tech    /zh-cn/portfolio.html    302
+/tech    /zh-cn/tech.html    302
+
+# Old portfolio → tech (page renamed)
+/en/portfolio.html    /en/tech.html    301
+/zh-cn/portfolio.html    /zh-cn/tech.html    301
+/zh-hk/portfolio.html    /zh-hk/tech.html    301
 /capabilities    /zh-cn/capabilities.html    302
 /web3    /zh-cn/web3.html    302
 /ai    /zh-cn/ai.html    302
 /cloud    /zh-cn/cloud.html    302
+
+# Software project pages
+/fenginvest    /zh-cn/fenginvest.html    302
+/jingxin    /zh-cn/jingxin.html    302
+/fengoffice    /zh-cn/fengoffice.html    302
+/fengmedia    /zh-cn/fengmedia.html    302
+/searchking    /zh-cn/search-king.html    302
 
 # Blog shortcuts
 /blog    /zh-cn/blog/    302

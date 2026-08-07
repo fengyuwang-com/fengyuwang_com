@@ -269,6 +269,7 @@ All `.content-block` elements must be direct children of `.page-wrap`. Closing `
 | Card grid bottom padding | `48px` |
 | `.section-card` padding | `32px` |
 | `.content-text-card` padding | `20px 24px` |
+| Text wrapping (global) | `.content-text-card, .block-inner { overflow-wrap: break-word; word-break: break-word }` in `assets/css/style.css` — CJK kinsoku + `/` rules can form unbreakable line-end chunks; without this they overflow the card |
 | `.link-card` padding | `48px 0 72px` |
 | Nav icon height | `32px` |
 | Nav shell max-width | `1200px`, padding `0 20px` |
@@ -367,7 +368,12 @@ body { padding-top: 44px !important; }
   box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(255,255,255,0.04);
   opacity: 0; transform: translateY(-6px);
   transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1);
+  max-height: calc(100vh - 80px);   /* fallback; showPortal() overrides inline */
+  overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.2) transparent;
 }
+#submenu-portal .sp-wrap::-webkit-scrollbar { width: 6px; }
+#submenu-portal .sp-wrap::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
 #submenu-portal.active .sp-wrap { opacity: 1; transform: translateY(0); }
 #submenu-portal .sp-wrap a {
   display: block; padding: 8px 18px;
@@ -408,7 +414,8 @@ body { padding-top: 44px !important; }
 **Mobile portal (body-level drawer):**
 ```css
 #mobile-panel-portal {
-  position: fixed; top: 44px; left: 0; right: 0; z-index: 9998;
+  position: fixed; top: 44px; left: 0; right: 0; bottom: 0; z-index: 9998;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;   /* the drawer is the scroll container */
   background: rgba(255,255,255,0.85);
   backdrop-filter: saturate(180%) blur(20px);
   box-shadow: 0 18px 48px rgba(0,0,0,0.12);
@@ -430,14 +437,48 @@ body { padding-top: 44px !important; }
 ```
 
 **Desktop menu items (injected order):**
-1. Home (▾ submenu: Welcome, About, "Explore by track")
+1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
-3. Marketing (▾ submenu: Marketing, 5DT-PD Framework)
-4. Tech (▾ submenu: Tech, Web3, AI, Cloud)
-5. Investment
-6. Blog
-7. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
-8. Language (▾ submenu: English, 简体中文, 繁體中文)
+3. Marketing (▾ submenu: **Marketing Overview**, 5DT-PD Framework)
+4. Tech (▾ submenu: **Tech Overview**, 软件项目: Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
+5. Investment (▾ submenu: **Investment Overview**, FengInvest — the investment tool belongs here, not under Tech)
+6. Art (▾ submenu: **Art Overview**, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
+7. Ethos (▾ submenu: **Ethos Overview**, then 7 anchor links — tbc, journey, work, tech-ethics, relations, east-west, unfit)
+8. Blog
+9. Sites (▾ submenu: GitHub, LinkedIn, YouTube, BiliBili)
+10. Language (▾ submenu: English, 简体中文, 繁體中文)
+
+**Submenu auto-fit & scroll (global):** every dropdown follows the same rule — expand to full content height when the screen has room, scroll only when it doesn't. Never cap a dropdown with a fixed pixel height that clips content; the only cap is the available viewport space.
+
+Desktop portal (`showPortal()`):
+- On open, sets `max-height` to the space below the trigger: `window.innerHeight - rect.bottom - 16` (min 160px). `.sp-wrap` is `overflow-y: auto` with a thin styled scrollbar. Short menus render fully expanded with no scrollbar; long menus (e.g. the Tech menu, 12 items) scroll only when the window is too short.
+- CSS fallback `max-height: calc(100vh - 80px)` applies if the inline value is absent.
+
+Mobile drawer:
+- `.mobile-submenu` opens to its **exact content height** (`scrollHeight` set inline by the toggle handler) — smooth animation, nothing clipped. The drawer `#mobile-panel-portal` is the scroll container (`overflow-y: auto`); it scrolls only when the whole menu doesn't fit the screen.
+
+The Tech dropdown is a single column with two `nav-group` headers, and leads with its own overview link — matching the Marketing, Investment and Art submenus:
+
+```
+技术概览
+软件项目
+Jingxin
+FengOffice
+FengMedia
+Search King
+技术研究
+Web3
+AI
+Automation
+Cloud
+```
+
+Rules:
+- No two-column grids, no fixed max-height caps — dropdowns auto-fit the viewport and scroll only when needed.
+- Every submenu leads with its own **overview link** (`XXX概览` / `XXX Overview`, one per language in `copy`) — never remove it: Marketing/Tech/Investment/Art lead with their page overview, Ethos leads with Ethos Overview followed by the anchor links. This replaces the old "page's own link" pattern so 投资 ▾ no longer shows a bare 投资 item (which looked duplicated).
+- Group headers live in the three-language `copy` objects as their own keys (`software`, `techResearch`) — never hard-code a header string.
+- The mobile drawer mirrors the same item list and group headers, single-column.
+- New items go under the correct group header and must be added to all three language `copy` objects.
 
 **Dark mode navbar:**
 ```css
@@ -457,8 +498,8 @@ body[data-theme="dark"] .mobile-caret::before { color: #86868b; }
 **JS Behavior:**
 - Theme is stored in `localStorage.setItem('site-theme', theme)` and applied on load
 - Default: respects `prefers-color-scheme` media query
-- Desktop submenus: on `mouseenter`, clone the submenu HTML into `#submenu-portal`, position it, fade in. On `mouseleave`, fade out after 100 ms delay. Portal itself has `mouseenter`/`mouseleave` handlers to prevent closing while the cursor travels.
-- Mobile: click on `.mobile-link-row` toggles `.open` on `.mobile-item`, which reveals `.mobile-submenu` via `max-height` transition (0 → 500px). Only one submenu open at a time.
+- Desktop submenus: on `mouseenter`, clone the submenu HTML into `#submenu-portal`, position it, set `max-height` to the space below the trigger (auto-fit), fade in. On `mouseleave`, fade out after 100 ms delay. Portal itself has `mouseenter`/`mouseleave` handlers to prevent closing while the cursor travels. Scrolls inside the dropdown only when the window is too short.
+- Mobile: click on `.mobile-link-row` toggles `.open` on `.mobile-item`, which reveals `.mobile-submenu` to its exact content height (`scrollHeight`, no fixed cap). Only one submenu open at a time; the drawer scrolls when the whole menu doesn't fit.
 - Hamburger click toggles `#mobile-panel-portal.open`.
 - On viewport resize ≥992px, mobile panel closes.
 
@@ -729,7 +770,116 @@ body[data-theme="dark"] .link-card p { color: #94a3b8; }
 .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
 ```
 
-### 7.7 Homepage Language Selector (`index.html`)
+### 7.7 Projects Zone (Dark Shell)
+
+**Purpose:** delivered projects get a visually distinct zone so visitors instantly see they are not the same kind of content as the ideology/capability sections. A dark shell wraps the project cards; inside, only light cards.
+
+**When to use:** anywhere delivered work must be visually separated from principles/capabilities (e.g. the Tech page's four software projects). Reuse the `track-split-shell` dark gradient token — do not invent a new dark style.
+
+**Placement:** the shell sits **directly after the card grid, before the ideology sections** (deliverables first, principles after). On the Tech page the order is: card grid → projects shell → ideology (`不问对，不开始` … `交付为开始`) → capability → Web3/AI/Cloud promos → cross-link. Keep the card grid's own ordering aligned with the shell and the nav dropdown: software project cards first, then ideology cards. The shell must be a **direct child of `page-wrap`** (same level as `.content-block`) — never inside `.container` (its max-width/padding would leave white strips on both sides).
+
+**Structure:**
+```html
+<!-- Projects zone: 软件项目（深色专区，与理念区视觉分层） -->
+<div class="projects-shell">
+  <div class="projects-head">
+    <h2>软件项目</h2>
+    <p>交付为开始——每个项目都走完从需求到维护的完整闭环。</p>
+  </div>
+
+  <!-- Project 1: 静心 Jingxin -->
+  <div id="jingxin" class="project-card">
+    <div class="block-inner">
+      <div class="section-card">
+        <!-- unchanged card content -->
+      </div>
+    </div>
+  </div>
+  <!-- + more project-card divs -->
+</div>
+```
+
+**CSS (page-level style block):**
+```css
+/* Projects zone (storm shell): 电闪雷鸣炫光蓝 */
+.projects-shell {
+  margin: 12px 0; padding: 42px 42px 18px;
+  position: relative; overflow: hidden;
+  /* NO border-radius — square edges embed it in the white page */
+  /* storm glow-blue: 3 radial glows + 2 diagonal light beams + blue gradient */
+  background:
+    radial-gradient(ellipse 70% 70% at 50% -8%, rgba(147,197,253,.55) 0%, transparent 62%),
+    radial-gradient(ellipse 45% 40% at 10% 14%, rgba(191,219,254,.40) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 45% at 92% 10%, rgba(96,165,250,.38) 0%, transparent 55%),
+    linear-gradient(115deg, transparent 38%, rgba(255,255,255,.12) 44%, transparent 52%),
+    linear-gradient(115deg, transparent 66%, rgba(255,255,255,.08) 70%, transparent 76%),
+    linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
+  box-shadow: 0 14px 44px rgba(37,99,235,.38);
+  animation: storm-glow 4.5s ease-in-out infinite;
+}
+.projects-shell::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(255,255,255,.28) 0%, transparent 60%);
+  animation: storm-flash 4.5s ease-in-out infinite; /* lightning double-flash */
+}
+.projects-shell .projects-head, .projects-shell .project-card { position: relative; z-index: 1; }
+@keyframes storm-glow {
+  0%, 100% { box-shadow: 0 14px 44px rgba(37,99,235,.38); }
+  50% { box-shadow: 0 14px 80px rgba(96,165,250,.70); }
+}
+@keyframes storm-flash {
+  0%, 100% { opacity: .35; } 6% { opacity: 1; } 8% { opacity: .25; }
+  10% { opacity: .85; } 12% { opacity: .4; } 40% { opacity: .55; } 70% { opacity: .4; }
+}
+/* Dark mode: same storm, but clearly a BLUE glowing body — never near-black
+   (#0b1530-style dark starts read as a "black square" against #0a0e1a) */
+body[data-theme="dark"] .projects-shell {
+  background:
+    radial-gradient(ellipse 70% 70% at 50% -8%, rgba(96,165,250,.45) 0%, transparent 62%),
+    radial-gradient(ellipse 45% 40% at 10% 14%, rgba(147,197,253,.26) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 45% at 92% 10%, rgba(59,130,246,.34) 0%, transparent 55%),
+    linear-gradient(115deg, transparent 38%, rgba(255,255,255,.08) 44%, transparent 52%),
+    linear-gradient(115deg, transparent 66%, rgba(255,255,255,.06) 70%, transparent 76%),
+    linear-gradient(135deg, #16295c 0%, #1e3a8a 55%, #2547c8 100%);
+  box-shadow: 0 0 46px rgba(37,99,235,.28); /* uniform blue halo — no offset, no black */
+  animation: none; /* freeze storm-glow so the halo value is not overridden */
+}
+body[data-theme="dark"] .projects-shell::before {
+  background: radial-gradient(ellipse 50% 40% at 22% 6%, rgba(147,197,253,.22) 0%, transparent 60%);
+}
+.projects-shell .projects-head { text-align: center; margin-bottom: 28px; }
+.projects-shell .projects-head h2 { color: #fff; font-size: 1.55rem; font-weight: 800; margin: 0; }
+.projects-shell .projects-head p { color: #94a3b8; font-size: .95rem; margin: 8px 0 0; }
+.projects-shell .project-card { padding: 20px 0; }
+.projects-shell .project-card + .project-card { margin-top: 12px; } /* dark divider between cards */
+body[data-theme="dark"] .projects-shell .section-card {
+  background: rgba(30,41,59,.92); border: 1px solid rgba(148,163,184,.12);
+}
+@media (max-width: 599px) {
+  .projects-shell { padding: 28px 20px 10px; }
+}
+```
+
+Rules:
+- **No border-radius on the shell** — square edges embed it in the white `page-wrap` (the homepage `track-split-shell` keeps its 32px radius; that's a homepage card container, a different context).
+- Inside the shell only light cards (`section-card` / `content-text-card`) — never nested dark shells or dark cards.
+- `.project-card` replaces `content-block section-bg` for each project (drop the frosted `section-bg` class and its `--section-bg-img` style).
+- The 12px gap between `.project-card`s shows the shell background — the dark equivalent of the white divider rule.
+- The projects-head h2/p are white-on-dark inside the shell (overriding the light-mode h2 color).
+- `.section-card` dark-mode inside the shell gains a hairline border so cards stay visible on the dark gradient.
+
+### 7.7.1 Software-Project Storm Glow (`storm-bg`) — ONE-TIME effect (Tech page only)
+
+**This is a bespoke, one-off visual effect.** It lives ONLY on the four software-project sections of `zh-cn/tech.html` (`jingxin`, `fengoffice`, `fengmedia`, `search-king`), which are the storm-glow showcase for the "deliverables first" philosophy.
+
+- **Do NOT spread it to other pages.** A page gets the `storm-bg` class only when someone explicitly asks for this exact treatment. It is not a default site style and must not be copied into new pages or other languages without an explicit request.
+- **What it does:** `.content-block.storm-bg::before` overlays an animated blue gradient on top of each section's normal background image (`--section-bg-img`). The overlay is a pseudo-element, so it does **not** remove or replace the section's background image, and it does **not** touch the white 12px divider gaps between sections.
+- **Animation:** `storm-flow`, a 6s ease-in-out loop that keeps the blue **always present** and only gently breathes (opacity 0.82 ↔ 1.00, slight hue-rotate/saturate). It is a constant flowing gradient — never a strobe/flash. (Earlier iterations used a flashing `storm-flash` 1.2s keyframe; that was rejected because it looked like a flicker. Do not reintroduce flashing.)
+- **CSS location:** inline `<style>` block at the top of `zh-cn/tech.html`. Class `.content-block.storm-bg` + `@keyframes storm-flow`, with `body[data-theme="dark"] .content-block.storm-bg::before` for the dark mode variant.
+- **Markup:** the four sections keep `class="content-block section-bg storm-bg"` and keep their own `style="--section-bg-img:url(...)"` (the storm overlay is `::before`, independent of the image).
+- If this effect is ever removed or disabled, the sections simply fall back to their normal frosted `section-bg` look — the overlay is purely additive.
+
+### 7.8 Homepage Language Selector (`index.html`)
 
 Root `index.html` at site root. Standalone page, not a sub-page.
 
@@ -778,7 +928,7 @@ Auto-redirect JS:
 
 Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fallback.
 
-### 7.8 Homepage Sections (English example)
+### 7.9 Homepage Sections (English example)
 
 **Hero Slider:**
 - Owl Carousel 2-slide fade
@@ -804,7 +954,7 @@ Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fall
 - Card 1: Blog — cover image (`assets/img/blog-card.jpg`), category "Blog", h3 "Insights & Thoughts", description
 - Card 2: LinkedIn — cover image (`assets/img/linkedin-card.jpg`), category "Social", h3 "Articles & Updates", description
 
-### 7.9 Back to Top Button
+### 7.10 Back to Top Button
 
 ```css
 .back-to-top {
@@ -834,7 +984,7 @@ JS (inline at page bottom):
 })();
 ```
 
-### 7.10 Preloader
+### 7.11 Preloader
 
 ```html
 <div id="preloader">
@@ -845,7 +995,7 @@ JS (inline at page bottom):
 ```
 Styled by the template's `style.css`. Shows a CSS spinner on page load, hidden when the page is ready (handled by `main.js`).
 
-### 7.11 Blog Posts
+### 7.12 Blog Posts
 
 There are two blog post templates. Both share the same base structure but differ in whether a table-of-contents sidebar is included.
 
@@ -1055,6 +1205,29 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }
 | `≤767px` | Language selector: 1-column grid |
 | `≤599px` (mobile) | Card-grid: 1 column. Hero h1: smaller. Content-block padding: 28/20px. Section h2: 1.25rem. |
 
+**Mobile text-width recovery (all content sub-pages, added 2026-08-06):**
+On mobile (`≤599px`) the nested card chain — `.block-inner(0 24px) → .section-card(32px) → .content-text-card(0 24px)` — used to eat 160px of horizontal space, leaving only ~215px of text width on a 375px phone (~8 CJK chars/line). Fixed by shrinking the three paddings **inside the 599px media block only**:
+
+```css
+@media (max-width: 599px) {
+  .block-inner { padding-left: 12px; padding-right: 12px; }      /* 0 24px -> 0 12px */
+  .section-card { padding: 20px; }                               /* 32px    -> 20px  */
+  .content-text-card { padding-left: 16px; padding-right: 16px; }/* 0 24px  -> 0 16px */
+}
+```
+
+This recovers ~64px → ~279px usable width (~14 chars/line). Cards keep their rounded-corner look. Apply this to every content sub-page (tech/mkt/invest/ai/cloud/web3/automation/ethos/art*/5dt-pd/capabilities/feng*). The homepage `track-split-shell` is a different structure and is **not** affected. The batch script `scripts/apply-mobile-fix.js` applies these inline (per-page CSS in both minified and spaced variants).
+
+**CTA buttons equal width (`≤ any width`, added 2026-08-06):** Buttons inside `.cta-row` used to size by their text (so a row of "查看官网 →" and "GitHub" looked uneven). Set them to stretch to the longest and cap:
+
+```css
+.cta-row .default-btn, .cta-row .default-btn-one {
+  flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center;
+}
+```
+
+Applies only to pages using `.cta-row` (zh-cn feng*/jingxin/search-king/tech + en/tech + zh-hk/tech).
+
 **Reduced motion:**
 ```css
 @media (prefers-reduced-motion:reduce) {
@@ -1091,7 +1264,20 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | `.content-text-card` bg | `#ffffff` | `#0f172a` |
 | `.content-text-card` border | `rgba(148,163,184,.10)` | `rgba(148,163,184,.03)` |
 | `.content-text-card` color | `#475569` | `#9fb0c3` |
-| `.content-text-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.content-text-card h3` color | `#0f172a` (art uses `#1d1d1f`) | `#e5ecf4` |
+| `.content-text-card ul` color | `#475569` | `#9fb0c3` |
+| `.section-card h1` (5dt-pd) | inherits slate | `#e5ecf4` |
+| `.qa-group-title` color | `#0f172a` | `#e5ecf4` |
+| `.pillar-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.pillar-card p` color | `#475569` | `#9fb0c3` |
+| `.case-card h3` color | `#0f172a` | `#e5ecf4` |
+| `.case-card p` color | `#64748b` | `#9fb0c3` |
+| `.ethos-preamble h1` color | `#0f172a` | `#e5ecf4` |
+| `.node-section` / `.node-group` / `.node-leaf` bg | light gradients | `#1e293b` / `#1a2430` (via `!important`) |
+| `.node-section` text | `#111827` | `#e5ecf4` / `#cbd5e1` |
+| `.tree-toggle` color/bg | `#7a5c33` / `#efe6d6` | `#cbd5e1` / `#1e293b` |
+| `.tree-shell` bg | light | `rgba(15,23,42,.96)` |
+| `.toggle-all-btn` bg | light | `#1e293b` (via `!important`) |
 | `.mkt-card` border | `rgba(148,163,184,.14)` | `transparent` / `#0a0e1a` |
 | `.link-card p` color | `#6b7280` | `#94a3b8` |
 | `.punchline` color | `#2563eb` | `#6b9aff` |
@@ -1120,6 +1306,8 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | Blog card p | `#6e6e73` | `#9fb0c3` |
 | `.track-split-shell` (dark) | `linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.96))` | `linear-gradient(135deg, #020617, #111827)` |
 | `.track-card` (dark) | `rgba(255,255,255,.08)` border `rgba(255,255,255,.12)` | `rgba(15,23,42,.82)` border `rgba(148,163,184,.16)` |
+
+**Principle (dark-text coverage):** There is **no global `body[data-theme="dark"] h1,h2,h3,p { ... }` fallback** in this site — every dark text color is a per-class per-page inline rule. Any text color not explicitly covered stays its light-mode value and will read as near-black on the dark bg. **Every element that shows user-facing text must therefore have an explicit `body[data-theme="dark"]` override.** When adding a new card/section/class, add its dark text rule in the same file's dark block. Neglected spots are the `5dt-pd` `<h1>`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and inline-colored spans (e.g. `zh-cn/index.html` "查看详情" span → fixed to `#00a1d6`).
 
 ---
 
@@ -1247,6 +1435,7 @@ Root `index.html` (not in any language folder). Contains:
 | `content-text-card` shadow | `0 2px 8px rgba(15,23,42,.04)` | `0 2px 8px rgba(0,0,0,.03)` |
 | `.mkt-card` | `border: 1px solid rgba(148,163,184,.14)` | No border — relies on box-shadow only |
 | Card grid responsive | `repeat(3, 1fr)` → `repeat(2, 1fr)` → `1fr` | `repeat(3, minmax(0, 1fr))` → `repeat(2, minmax(0, 1fr))` → `1fr` (minmax clause) |
+| Dark card shadows (global) | `body[data-theme="dark"] .mkt-card` / `.section-card` → **`box-shadow: none`** (2026-08-05: black shadows rendered as "black square frames" around every card in dark mode; cards separate via grid gap + border instead) |
 | Hero text colors | `#0f172a` / `#64748b` | `#1d1d1f` / `#8e8e93` |
 
 ### How the art page backgrounds work

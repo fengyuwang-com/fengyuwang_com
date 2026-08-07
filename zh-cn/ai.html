@@ -76,7 +76,7 @@
         body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
         body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
         body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); border-color: rgba(148,163,184,.20); }
         body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
         body[data-theme="dark"] .block-subtitle { color: #6b9aff; }
@@ -95,6 +95,9 @@
             .marketing-hero { padding: 28px 16px; }
             .card-grid { grid-template-columns: 1fr; }
             .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
     </style>
@@ -102,7 +105,7 @@
 <body>
 
     <div id="shared-subpage-navbar" data-section="portfolio"></div>
-    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
 
     <div class="page-wrap">
         <div class="container">
@@ -222,7 +225,7 @@
     <script src="../assets/js/jquery.meanmenu.js"></script>
     <script src="../assets/js/main.js"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑;</button>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
     <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
 </body>
 </html>

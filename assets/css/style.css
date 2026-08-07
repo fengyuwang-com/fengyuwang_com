@@ -1302,6 +1302,15 @@ p:last-child {
     }
 }
 
+/* Long unbreakable text must wrap inside cards instead of overflowing.
+   Root cause: CJK kinsoku + "/" line-break rules can form unbreakable chunks
+   at end of line; without this, they spill out of .content-text-card / .block-inner. */
+.content-text-card,
+.block-inner {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 .about-content .about-features-list {
 	list-style: none;
 	padding-left: 0;

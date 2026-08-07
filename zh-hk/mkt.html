@@ -109,6 +109,9 @@
 			.link-card { text-align: center; padding: 48px 0 72px; }
 			.link-card p { color: #6b7280; margin-bottom: 12px; }
 			.link-card .default-btn { min-width: 200px; }
+			/* CTA row */
+			.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+			.cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
 			/* Dark mode */
 		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -116,11 +119,11 @@
 		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
 		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-			body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+			body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
 			body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
 			body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
 			body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
-				body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+				body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
 				body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
 				body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
 				body[data-theme="dark"] .pillar-card { background: linear-gradient(135deg, rgba(37,99,235,.2) 0%, rgba(14,165,233,.15) 100%); border-color: rgba(96,165,250,.06); }
@@ -146,6 +149,9 @@
 			.card-grid { grid-template-columns: 1fr; }
 			.marketing-hero { padding: 28px 16px; }
 			.content-block { padding: 28px 0 20px; }
+			.block-inner { padding-left: 12px; padding-right: 12px; }
+			.section-card { padding: 20px; }
+			.content-text-card { padding-left: 16px; padding-right: 16px; }
 			.block-inner h2 { font-size: 1.25rem; }
 		}
 	</style>
@@ -153,7 +159,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"市場學 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/mkt.html"}</script> </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="cases"></div>
-	<script src="../assets/js/shared-subpage-navbar.js?v=26.06.20.04.56"></script>
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
 
 	<div class="page-wrap">
 		<div class="container">
@@ -165,6 +171,13 @@
 
 			<!-- Card grid -->
 			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80')" onclick="document.getElementById('fengmedia').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>FengMedia</h3>
+						<p>財經內容操作系統，把想法變成流水線。</p>
+						<button class="card-btn">了解更多</button>
+					</div>
+				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=600&q=80')" onclick="document.getElementById('data').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
 						<h3>數據先說話</h3>
@@ -200,7 +213,7 @@
 						<button class="card-btn">了解更多</button>
 					</div>
 				</div>
-				<div class="mkt-card invest-card" onclick="window.location.href='/zh-hk/portfolio.html'">
+				<div class="mkt-card invest-card" onclick="window.location.href='/zh-hk/tech.html'">
 						<div class="card-content">
 							<h3>技術作品 →</h3>
 							<p>不只是寫程式，是交付能用的東西。</p>
@@ -211,6 +224,30 @@
 		</div>
 
 		<!-- Content sections -->
+
+		<!-- FengMedia: 財經內容操作系統（市場學工具，放頂部） -->
+		<div id="fengmedia" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>內容不該靠靈感</h2>
+					<p class="block-subtitle">FengMedia——財經內容操作系統，把人設、選題、寫稿、發布、復盤收進一條流水線。</p>
+					<div class="content-text-card">
+						<h3>市場與表達的落地工具</h3>
+						<p>市場學要用表達落地，表達需要工具兜底——這就是 FengMedia 的起點。</p>
+						<ul>
+							<li><strong>人設系統</strong>：核心定位、人設光譜（平靜 ↔ 暴躁）、語言風格、人設邊界。</li>
+							<li><strong>內容系統</strong>：四大支柱、話題庫、腳本結構模板、生產 SOP。</li>
+							<li><strong>平台分發</strong>：平台矩陣 + 小紅書/B站/抖音專屬規則 + social-auto-upload 自動發布。</li>
+							<li><strong>快捷指令</strong>：/publish、/rage-mode、/fetch-topics、/review、/brainstorm。</li>
+							<li><strong>運營復盤</strong>：日週月 SOP、數據復盤、增長里程碑。</li>
+						</ul>
+					</div>
+					<div class="cta-row">
+						<a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengMedia" target="_blank" rel="noopener">GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="data" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=1600&q=60&auto=format')">
 			<div class="block-inner">
@@ -296,6 +333,7 @@
 						<h2>項目</h2>
 						<p class="block-subtitle">策略寫在紙上不值錢，真正驗證過才有意義。</p>
 				<div class="case-grid">
+					<div class="case-card"><h3>FengOffice 內容營運基礎設施</h3><p>把郵件、CRM、Newsletter 收進一條自動化鏈路，市場操作不再散落在 Excel 和人工裡。<a class="case-link" href="/zh-hk/fengoffice.html">看工程落地 →</a></p></div>
 					<div class="case-card"><h3>Vanytra 藏式手鏈品牌策略</h3><p>新品牌 Vanytra 的品牌策略項目，涵蓋市場分析、社交媒體定位和目標受眾研究。</p></div>
 					<div class="case-card"><h3>HONOR 歐洲市場分析</h3><p>分析 HONOR 在歐洲智能手機市場的表現，重點關注增長、競爭與定位。</p></div>
 					<div class="case-card"><h3>Apple 中國市場策略</h3><p>研究 Apple 在中國市場面臨的挑戰、競爭格局及策略建議。</p></div>
@@ -416,7 +454,7 @@
 			<!-- Cross-link -->
 			<div class="link-card">
 				<p>數字和創意之外，還需要工程交付能力</p>
-				<a class="default-btn" href="/zh-hk/portfolio.html">看看技術作品 →</a>
+				<a class="default-btn" href="/zh-hk/tech.html">看看技術作品 →</a>
 			</div>
 			</div>
 

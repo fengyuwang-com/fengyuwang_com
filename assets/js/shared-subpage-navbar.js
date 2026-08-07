@@ -19,9 +19,13 @@
       lightMode: 'Light Mode',
       capabilities: 'Capabilities',
       cases: 'Marketing',
+      casesOverview: 'Marketing Overview',
       portfolio: 'Tech',
+      portfolioOverview: 'Tech Overview',
       investment: 'Investment',
+      investmentOverview: 'Investment Overview',
       art: 'Art',
+      artOverview: 'Art Overview',
       artPainting: 'Painting & Sculpture',
       artArchitecture: 'Architecture & Garden',
       artMusic: 'Music',
@@ -30,6 +34,7 @@
       artSculpture: 'Sculpture',
       artFilm: 'Film & Narrative',
       ethos: 'Ethos',
+      ethosOverview: 'Ethos Overview',
       blog: 'Blog',
       blogArticles: 'Blog & Articles',
       language: 'Language',
@@ -37,7 +42,7 @@
       homeHref: '/en/index.html',
       capabilitiesHref: '/en/capabilities.html',
       casesHref: '/en/mkt.html',
-      portfolioHref: '/en/portfolio.html',
+      portfolioHref: '/en/tech.html',
       investmentHref: '/en/invest.html',
       artHref: '/en/art.html',
       artPaintingHref: '/en/art-painting.html',
@@ -72,7 +77,19 @@
       automation: 'Automation',
       automationHref: '/en/automation.html',
       cloud: 'Cloud',
-      cloudHref: '/en/cloud.html'
+      cloudHref: '/en/cloud.html',
+      software: 'Software',
+      techResearch: 'Tech Research',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/en/fenginvest.html',
+      jingxin: 'Jingxin',
+      jingxinHref: '/en/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/en/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/en/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/en/search-king.html'
     },
     'zh-cn': {
       home: '\u9996\u9875',
@@ -84,9 +101,13 @@
       lightMode: '\u4eae\u8272\u6a21\u5f0f',
       capabilities: '\u80fd\u529b',
       cases: '\u5e02\u573a\u5b66',
+      casesOverview: '\u5e02\u573a\u5b66\u6982\u89c8',
       portfolio: '\u6280\u672f',
+      portfolioOverview: '\u6280\u672f\u6982\u89c8',
       investment: '\u6295\u8d44',
+      investmentOverview: '\u6295\u8d44\u6982\u89c8',
       art: '\u827a\u672f',
+      artOverview: '\u827a\u672f\u6982\u89c8',
       artPainting: '\u7ed8\u753b\u4e0e\u96d5\u5851',
       artArchitecture: '\u5efa\u7b51\u4e0e\u56ed\u6797',
       artMusic: '\u97f3\u4e50',
@@ -95,6 +116,7 @@
       artSculpture: '\u96d5\u5851',
       artFilm: '\u7535\u5f71\u4e0e\u53d9\u4e8b',
       ethos: '\u7406\u5ff5',
+      ethosOverview: '\u7406\u5ff5\u6982\u89c8',
       blog: '\u535a\u5ba2',
       blogArticles: '\u535a\u5ba2\u4e0e\u6587\u7ae0',
       language: '\u8bed\u8a00',
@@ -102,7 +124,7 @@
       homeHref: '/zh-cn/index.html',
       capabilitiesHref: '/zh-cn/capabilities.html',
       casesHref: '/zh-cn/mkt.html',
-      portfolioHref: '/zh-cn/portfolio.html',
+      portfolioHref: '/zh-cn/tech.html',
       investmentHref: '/zh-cn/invest.html',
       artHref: '/zh-cn/art.html',
       artPaintingHref: '/zh-cn/art-painting.html',
@@ -137,7 +159,19 @@
       automation: '\u81ea\u52a8\u5316',
       automationHref: '/zh-cn/automation.html',
       cloud: '\u4e91\u670d\u52a1',
-      cloudHref: '/zh-cn/cloud.html'
+      cloudHref: '/zh-cn/cloud.html',
+      software: '\u8f6f\u4ef6\u9879\u76ee',
+      techResearch: '\u6280\u672f\u7814\u7a76',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/zh-cn/fenginvest.html',
+      jingxin: '\u9759\u5fc3 Jingxin',
+      jingxinHref: '/zh-cn/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/zh-cn/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/zh-cn/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/zh-cn/search-king.html'
     },
     'zh-hk': {
       home: '\u9996\u9801',
@@ -149,9 +183,13 @@
       lightMode: '\u4eae\u8272\u6a21\u5f0f',
       capabilities: '\u80fd\u529b',
       cases: '\u5e02\u5834\u5b78',
+      casesOverview: '\u5e02\u5834\u5b78\u6982\u89c8',
       portfolio: '\u6280\u8853',
+      portfolioOverview: '\u6280\u8853\u6982\u89c8',
       investment: '\u6295\u8cc7',
+      investmentOverview: '\u6295\u8cc7\u6982\u89c8',
       art: '\u85dd\u8853',
+      artOverview: '\u85dd\u8853\u6982\u89c8',
       artPainting: '\u7e6a\u756b\u8207\u96d5\u5851',
       artArchitecture: '\u5efa\u7bc9\u8207\u5712\u6797',
       artMusic: '\u97f3\u6a02',
@@ -160,6 +198,7 @@
       artSculpture: '\u96d5\u5851',
       artFilm: '\u96fb\u5f71\u8207\u6558\u4e8b',
       ethos: '\u7406\u5ff5',
+      ethosOverview: '\u7406\u5ff5\u6982\u89c8',
       blog: '\u535a\u5ba2',
       blogArticles: '\u535a\u5ba2\u8207\u6587\u7ae0',
       language: '\u8a9e\u8a00',
@@ -167,7 +206,7 @@
       homeHref: '/zh-hk/index.html',
       capabilitiesHref: '/zh-hk/capabilities.html',
       casesHref: '/zh-hk/mkt.html',
-      portfolioHref: '/zh-hk/portfolio.html',
+      portfolioHref: '/zh-hk/tech.html',
       investmentHref: '/zh-hk/invest.html',
       artHref: '/zh-hk/art.html',
       artPaintingHref: '/zh-hk/art-painting.html',
@@ -202,7 +241,19 @@
       automation: '\u81ea\u52d5\u5316',
       automationHref: '/zh-hk/automation.html',
       cloud: '\u96f2\u670d\u52d9',
-      cloudHref: '/zh-hk/cloud.html'
+      cloudHref: '/zh-hk/cloud.html',
+      software: '\u8edf\u4ef6\u5c08\u6848',
+      techResearch: '\u6280\u8853\u7814\u7a76',
+      fenginvest: 'FengInvest',
+      fenginvestHref: '/zh-hk/fenginvest.html',
+      jingxin: '\u975c\u5fc3 Jingxin',
+      jingxinHref: '/zh-hk/jingxin.html',
+      fengoffice: 'FengOffice',
+      fengofficeHref: '/zh-hk/fengoffice.html',
+      fengmedia: 'FengMedia',
+      fengmediaHref: '/zh-hk/fengmedia.html',
+      searchKing: 'Search King',
+      searchKingHref: '/zh-hk/search-king.html'
     }
   };
 var labels = copy[lang];
@@ -229,13 +280,13 @@ var labels = copy[lang];
     blog: { en: copy.en.blogHref, zhCn: copy['zh-cn'].blogHref, zhHk: copy['zh-hk'].blogHref },
   };
   var alt = altMap[section] || altMap.blog;
-  function langUrl(t) { var els = document.querySelectorAll('#shared-subpage-navbar .hidden-trans'); var key = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}[t]; for (var i=0;i<els.length;i++) { if (els[i].getAttribute('data-lang') === key) return els[i].getAttribute('data-url'); } var c = window.location.pathname; if (c === '/' || c === '/index.html') return alt[t]; var p = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}; var x = '/' + lang + '/'; if (c.indexOf(x) === 0) return c.replace(x, '/' + p[t] + '/'); return alt[t]; }
+  function langUrl(t) { var els = document.querySelectorAll('#shared-subpage-navbar .hidden-trans'); var key = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}[t]; for (var i=0;i<els.length;i++) { if (els[i].getAttribute('data-lang') === key) return els[i].getAttribute('data-url'); } var c = window.location.pathname; if (c === '/' || c === '/index.html') return alt[t]; var p = {en:'en',zhCn:'zh-cn',zhHk:'zh-hk'}; var x = '/' + lang + '/'; if (c.indexOf(x) === 0) { var replaced = c.replace(x, '/' + p[t] + '/'); if (c.indexOf('/blog/posts/') !== -1) { return alt[t]; } return replaced; } return alt[t]; }
 
   var siteLinks = [
     { label: 'GitHub', href: 'https://github.com/fengyuwang-com' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/fengyuwang-com/' },
     { label: 'YouTube', href: 'https://www.youtube.com/@fenglin6' },
-    { label: 'BiliBili', href: 'https://b23.tv/Aqk6EGE' }
+    { label: 'BiliBili', href: 'https://space.bilibili.com/1136929849' }
   ];
   var siteLinksHtml = siteLinks
     .map(function (link) {
@@ -270,6 +321,13 @@ var labels = copy[lang];
       '.shared-subpage-nav .desktop-menu .nav-caret { display: inline-block; margin-left: 4px; font-size: 8px; transition: transform 0.2s ease; }',
       '.shared-subpage-nav .desktop-menu li:hover > a .nav-caret { transform: rotate(180deg); }',
 
+      /* ---- Submenu group label ---- */
+      '.shared-subpage-nav .desktop-menu .submenu li.nav-group, #submenu-portal .sp-wrap li.nav-group { padding: 8px 18px 2px; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #86868b; white-space: nowrap; border-bottom: 0; }',
+      '.shared-subpage-nav .desktop-menu .submenu li.nav-group + li a, #submenu-portal .sp-wrap li.nav-group + li a { border-top: 1px solid rgba(0,0,0,0.05); }',
+      'body[data-theme="dark"] .shared-subpage-nav .desktop-menu .submenu li.nav-group, body[data-theme="dark"] #submenu-portal .sp-wrap li.nav-group { color: #86868b; }',
+      '.shared-subpage-nav .mobile-submenu li.nav-group, #mobile-panel-portal .mobile-submenu li.nav-group { padding: 10px 12px 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #86868b; }',
+      'body[data-theme="dark"] .shared-subpage-nav .mobile-submenu li.nav-group, body[data-theme="dark"] #mobile-panel-portal .mobile-submenu li.nav-group { color: #86868b; }',
+
       /* ---- Social / theme ---- */
       '.shared-subpage-nav .social { display: inline-flex; align-items: center; gap: 12px; }',
       '.shared-subpage-nav .theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 6px 12px; border: 0; border-radius: 20px; background: rgba(0,0,0,0.08); color: #1d1d1f; cursor: pointer; font-size: 12px; font-weight: 400; transition: background .2s ease; }',
@@ -289,7 +347,6 @@ var labels = copy[lang];
       '.shared-subpage-nav .mobile-link-row > span { display: block; padding: 8px 12px; color: #1d1d1f; font-size: 12px; font-weight: 400; }',
       '.shared-subpage-nav .mobile-item { }',
       '.shared-subpage-nav .mobile-submenu { max-height: 0; overflow: hidden; padding-left: 12px; transition: max-height 0.35s ease; }',
-      '.shared-subpage-nav .mobile-item.open > .mobile-submenu { max-height: 500px; }',
       '.shared-subpage-nav .mobile-menu > li + li { border-top: 1px solid rgba(0,0,0,.06); }',
       '.shared-subpage-nav .mobile-social { padding: 12px 12px 20px; }',
 
@@ -302,7 +359,6 @@ var labels = copy[lang];
       '#mobile-panel-portal .mobile-item { }',
       '#mobile-panel-portal .mobile-submenu { max-height: 0; overflow: hidden; padding-left: 12px; transition: max-height 0.35s ease; }',
       '#mobile-panel-portal .mobile-submenu a { font-size: 15px; font-weight: 400; }',
-      '#mobile-panel-portal .mobile-item.open > .mobile-submenu { max-height: 500px; }',
       '#mobile-panel-portal .mobile-menu > li + li { border-top: 1px solid rgba(0,0,0,.06); }',
       '#mobile-panel-portal .mobile-menu a { display: block; padding: 12px 12px; color: #1d1d1f; font-size: 18px; font-weight: 500; text-decoration: none; }',
       '#mobile-panel-portal .mobile-menu a:hover { color: #0071e3; }',
@@ -314,7 +370,9 @@ var labels = copy[lang];
       /* ---- Body offset ---- */
       '#submenu-portal { position: fixed; z-index: 10000; pointer-events: none; }',
       '#submenu-portal.active { pointer-events: auto; }',
-      '#submenu-portal .sp-wrap { margin-top: 8px; min-width: 200px; padding: 6px 0; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-radius: 14px; border: 0.5px solid rgba(255,255,255,0.3); box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(255,255,255,0.04); opacity: 0; transform: translateY(-6px); transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1); }',
+      '#submenu-portal .sp-wrap { margin-top: 8px; min-width: 200px; padding: 6px 0; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-radius: 14px; border: 0.5px solid rgba(255,255,255,0.3); box-shadow: 0 18px 48px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(255,255,255,0.04); opacity: 0; transform: translateY(-6px); transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1); max-height: calc(100vh - 80px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.2) transparent; }',
+      '#submenu-portal .sp-wrap::-webkit-scrollbar { width: 6px; }',
+      '#submenu-portal .sp-wrap::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }',
       '#submenu-portal.active .sp-wrap { opacity: 1; transform: translateY(0); }',
       '#submenu-portal .sp-wrap a { display: block; padding: 8px 18px; border-bottom: 1px solid rgba(0,0,0,0.05); background: transparent; white-space: nowrap; color: #1d1d1f; font-size: 12px; font-weight: 400; text-decoration: none; }',
       '#submenu-portal .sp-wrap li:last-child a { border-bottom: 0; }',
@@ -324,6 +382,7 @@ var labels = copy[lang];
       'body[data-theme="dark"] #submenu-portal .sp-wrap { background: rgba(10, 14, 26, 0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border: 0.5px solid rgba(255,255,255,0.06); box-shadow: 0 18px 48px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(255,255,255,0.04); }',
       'body[data-theme="dark"] #submenu-portal .sp-wrap a { color: #f5f5f7; background: transparent; border-color: rgba(255,255,255,0.04); }',
       'body[data-theme="dark"] #submenu-portal .sp-wrap a:hover { color: #2997ff; background: rgba(41,151,255,0.08); }',
+      'body[data-theme="dark"] #submenu-portal .sp-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); }',
       'body { padding-top: 44px !important; }',
 
       /* ---- Dark mode ---- */
@@ -395,25 +454,37 @@ var labels = copy[lang];
     '        <li>',
     '          <a href="' + labels.casesHref + '" class="' + active.cases.trim() + '">' + labels.cases + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
     '          <ul class="submenu">',
-    '            <li><a href="' + labels.casesHref + '">' + labels.cases + '</a></li>',
-    '            <li><a href="' + labels.pd5Href + '">' + labels.pd5 + '</a></li>',
-    '          </ul>',
+	    '            <li><a href="' + labels.casesHref + '">' + labels.casesOverview + '</a></li>',
+	    '            <li><a href="' + labels.pd5Href + '">' + labels.pd5 + '</a></li>',
+	    '            <li><a href="' + labels.fengmediaHref + '">' + labels.fengmedia + '</a></li>',
+	    '          </ul>',
     '        </li>',
     '        <li>',
     '          <a href="' + labels.portfolioHref + '" class="' + active.portfolio.trim() + '">' + labels.portfolio + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
     '          <ul class="submenu">',
-    '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '            <li><a href="' + labels.portfolioHref + '">' + labels.portfolioOverview + '</a></li>',
+    '            <li class="nav-group">' + labels.software + '</li>',
+	    '            <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
+	    '            <li><a href="' + labels.fengofficeHref + '">' + labels.fengoffice + '</a></li>',
+	    '            <li><a href="' + labels.searchKingHref + '">' + labels.searchKing + '</a></li>',
+	    '            <li class="nav-group">' + labels.techResearch + '</li>',
     '            <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '            <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
     '            <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
     '            <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
     '          </ul>',
     '        </li>',
-    '        <li><a href="' + labels.investmentHref + '" class="' + active.investment.trim() + '">' + labels.investment + '</a></li>',
+    '        <li>',
+    '          <a href="' + labels.investmentHref + '" class="' + active.investment.trim() + '">' + labels.investment + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
+    '          <ul class="submenu">',
+    '            <li><a href="' + labels.investmentHref + '">' + labels.investmentOverview + '</a></li>',
+    '            <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '          </ul>',
+    '        </li>',
     '        <li>',
     '          <a href="' + labels.artHref + '" class="' + active.art.trim() + '">' + labels.art + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
     '          <ul class="submenu">',
-    '            <li><a href="' + labels.artHref + '">' + labels.art + '</a></li>',
+    '            <li><a href="' + labels.artHref + '">' + labels.artOverview + '</a></li>',
     '            <li><a href="' + labels.artPaintingHref + '">' + labels.artPainting + '</a></li>',
     '            <li><a href="' + labels.artSculptureHref + '">' + labels.artSculpture + '</a></li>',
     '            <li><a href="' + labels.artArchitectureHref + '">' + labels.artArchitecture + '</a></li>',
@@ -426,6 +497,7 @@ var labels = copy[lang];
     '        <li>',
     '          <a href="' + labels.ethosHref + '" class="' + active.ethos.trim() + '">' + labels.ethos + ' <i class="fas fa-chevron-down nav-caret"></i></a>',
     '          <ul class="submenu">',
+    '            <li><a href="' + labels.ethosHref + '">' + labels.ethosOverview + '</a></li>',
     '            <li><a href="' + labels.ethosHref + '#tbc">' + labels.ethosPart1 + '</a></li>',
     '            <li><a href="' + labels.ethosHref + '#journey">' + labels.ethosPart2 + '</a></li>',
     '            <li><a href="' + labels.ethosHref + '#work">' + labels.ethosPart3 + '</a></li>',
@@ -477,9 +549,10 @@ var labels = copy[lang];
     '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
-    '          <li><a href="' + labels.casesHref + '">' + labels.cases + '</a></li>',
-    '          <li><a href="' + labels.pd5Href + '">' + labels.pd5 + '</a></li>',
-    '        </ul>',
+	    '          <li><a href="' + labels.casesHref + '">' + labels.casesOverview + '</a></li>',
+	    '          <li><a href="' + labels.pd5Href + '">' + labels.pd5 + '</a></li>',
+	    '          <li><a href="' + labels.fengmediaHref + '">' + labels.fengmedia + '</a></li>',
+	    '        </ul>',
     '      </li>',
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
@@ -487,21 +560,35 @@ var labels = copy[lang];
     '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
-    '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolio + '</a></li>',
+    '          <li><a href="' + labels.portfolioHref + '">' + labels.portfolioOverview + '</a></li>',
+    '          <li class="nav-group">' + labels.software + '</li>',
+	    '          <li><a href="' + labels.jingxinHref + '">' + labels.jingxin + '</a></li>',
+	    '          <li><a href="' + labels.fengofficeHref + '">' + labels.fengoffice + '</a></li>',
+	    '          <li><a href="' + labels.searchKingHref + '">' + labels.searchKing + '</a></li>',
+    '          <li class="nav-group">' + labels.techResearch + '</li>',
     '          <li><a href="' + labels.web3Href + '">' + labels.web3 + '</a></li>',
     '          <li><a href="' + labels.aiHref + '">' + labels.ai + '</a></li>',
     '          <li><a href="' + labels.automationHref + '">' + labels.automation + '</a></li>',
     '          <li><a href="' + labels.cloudHref + '">' + labels.cloud + '</a></li>',
     '        </ul>',
     '      </li>',
-    '      <li><a class="mobile-link' + active.investment + '" href="' + labels.investmentHref + '">' + labels.investment + '</a></li>',
+    '      <li class="mobile-item">',
+    '        <div class="mobile-link-row" data-toggle-submenu>',
+    '          <a class="mobile-link' + active.investment + '" href="' + labels.investmentHref + '" onclick="event.stopPropagation()">' + labels.investment + '</a>',
+    '          <span class="mobile-caret"></span>',
+    '        </div>',
+    '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.investmentHref + '">' + labels.investmentOverview + '</a></li>',
+    '          <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '        </ul>',
+    '      </li>',
     '      <li class="mobile-item">',
     '        <div class="mobile-link-row" data-toggle-submenu>',
     '          <a class="mobile-link' + active.art + '" href="' + labels.artHref + '" onclick="event.stopPropagation()">' + labels.art + '</a>',
     '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
-    '          <li><a href="' + labels.artHref + '">' + labels.art + '</a></li>',
+    '          <li><a href="' + labels.artHref + '">' + labels.artOverview + '</a></li>',
     '          <li><a href="' + labels.artPaintingHref + '">' + labels.artPainting + '</a></li>',
     '          <li><a href="' + labels.artSculptureHref + '">' + labels.artSculpture + '</a></li>',
     '          <li><a href="' + labels.artArchitectureHref + '">' + labels.artArchitecture + '</a></li>',
@@ -517,6 +604,7 @@ var labels = copy[lang];
     '          <span class="mobile-caret"></span>',
     '        </div>',
     '        <ul class="mobile-submenu">',
+    '          <li><a href="' + labels.ethosHref + '">' + labels.ethosOverview + '</a></li>',
     '          <li><a href="' + labels.ethosHref + '#tbc">' + labels.ethosPart1 + '</a></li>',
     '          <li><a href="' + labels.ethosHref + '#journey">' + labels.ethosPart2 + '</a></li>',
     '          <li><a href="' + labels.ethosHref + '#work">' + labels.ethosPart3 + '</a></li>',
@@ -632,9 +720,13 @@ var labels = copy[lang];
     if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
     var r = li.getBoundingClientRect();
     portalWrap.innerHTML = sub.innerHTML;
+    portalWrap.className = 'sp-wrap';
     portal.style.top = (r.bottom + 4) + 'px';
     portal.style.left = (r.left + r.width / 2) + 'px';
     portal.style.transform = 'translateX(-50%)';
+    // Auto-fit: expand to full content when the viewport has room below the
+    // trigger; scroll (overflow-y: auto) only when it doesn't.
+    portalWrap.style.maxHeight = Math.max(160, window.innerHeight - r.bottom - 16) + 'px';
     portalWrap.style.opacity = '0';
     portalWrap.style.transform = 'translateY(-6px)';
     portal.classList.add('active');
@@ -678,10 +770,20 @@ var labels = copy[lang];
       row.addEventListener('click', function (e) {
         if (link && e.target && (e.target === link || link.contains(e.target))) return;
         var open = item.classList.toggle('open');
+        var sub = item.querySelector('.mobile-submenu');
         if (open) {
+          // Expand to exact content height (no fixed cap) — the drawer
+          // (#mobile-panel-portal) scrolls only when the whole menu doesn't fit.
+          if (sub) sub.style.maxHeight = sub.scrollHeight + 'px';
           Array.prototype.forEach.call(root.querySelectorAll('.mobile-item.open'), function (other) {
-            if (other !== item) other.classList.remove('open');
+            if (other !== item) {
+              other.classList.remove('open');
+              var os = other.querySelector('.mobile-submenu');
+              if (os) os.style.maxHeight = '';
+            }
           });
+        } else {
+          if (sub) sub.style.maxHeight = '';
         }
         Array.prototype.forEach.call(item.querySelectorAll('[data-expanded]'), function (el) {
           el.setAttribute('data-expanded', open ? 'true' : 'false');

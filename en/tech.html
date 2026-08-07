@@ -10,16 +10,16 @@
     <meta name="keywords" content="Fengyu Wang technology, GitHub, software delivery, automation, Web, Flutter, Python, architecture, engineering">
     <meta name="author" content="王丰羽">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="/en/portfolio.html">
-    <link rel="alternate" hreflang="en" href="/en/portfolio.html">
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/portfolio.html">
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/portfolio.html">
+    <link rel="canonical" href="/en/tech.html">
+    <link rel="alternate" hreflang="en" href="/en/tech.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/tech.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/tech.html">
     <meta property="og:site_name" content="Fengyu WANG">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Technology | Fengyu WANG">
     <meta property="og:description" content="Fengyu Wang's technology portfolio, focused on GitHub projects, software delivery, automation systems, web development, cross-platform apps, and engineering workflows.">
-    <meta property="og:url" content="https://fengyuwang.com/en/portfolio.html">
+    <meta property="og:url" content="https://fengyuwang.com/en/tech.html">
     <meta property="og:image" content="/assets/img/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -63,6 +63,27 @@
         .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
         .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
         .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        /* Storm glow overlay on software sections — constant blue gradient that slowly flows (never flashes) */
+        .content-block.storm-bg::before {
+            content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 1;
+            background:
+                radial-gradient(ellipse 75% 80% at 50% -12%, rgba(147,197,253,.55) 0%, rgba(37,99,235,.22) 40%, transparent 68%),
+                radial-gradient(ellipse 50% 45% at 12% 20%, rgba(191,219,254,.38) 0%, transparent 58%),
+                radial-gradient(ellipse 42% 48% at 90% 18%, rgba(96,165,250,.34) 0%, transparent 58%),
+                linear-gradient(160deg, rgba(15,44,110,.34) 0%, rgba(30,58,138,.48) 42%, rgba(37,99,235,.52) 72%, rgba(16,52,150,.34) 100%);
+            animation: storm-flow 6s ease-in-out infinite;
+        }
+        body[data-theme="dark"] .content-block.storm-bg::before {
+            background:
+                radial-gradient(ellipse 75% 80% at 50% -12%, rgba(96,165,250,.44) 0%, rgba(37,99,235,.18) 40%, transparent 68%),
+                radial-gradient(ellipse 50% 45% at 12% 20%, rgba(147,197,253,.26) 0%, transparent 58%),
+                radial-gradient(ellipse 42% 48% at 90% 18%, rgba(59,130,246,.30) 0%, transparent 58%),
+                linear-gradient(160deg, rgba(12,26,66,.38) 0%, rgba(22,41,92,.52) 42%, rgba(30,58,138,.56) 72%, rgba(15,33,90,.38) 100%);
+        }
+        @keyframes storm-flow {
+            0%, 100% { opacity: .82; filter: hue-rotate(0deg); }
+            50% { opacity: 1; filter: hue-rotate(8deg) saturate(1.2); }
+        }
         .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
         .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
         .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
@@ -85,7 +106,7 @@
 
         /* CTA row */
         .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
-        .cta-row .default-btn, .cta-row .default-btn-one { min-width: 160px; text-align: center; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
 
         /* Dark mode */
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
@@ -94,11 +115,11 @@
         body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
         body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
         body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
         body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
         body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
-        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
         body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
@@ -115,6 +136,9 @@
             .card-grid { grid-template-columns: 1fr; }
             .marketing-hero { padding: 28px 16px; }
             .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
             .block-inner h2 { font-size: 1.25rem; }
         }
         /* Capability chip groups */
@@ -134,10 +158,10 @@
         body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
     </style>
 	<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Software & Tech Portfolio | Fengyu WANG","url":"https://fengyuwang.com/en/portfolio.html"}</script> </head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Software & Tech Portfolio | Fengyu WANG","url":"https://fengyuwang.com/en/tech.html"}</script> </head>
 <body>
     <div id="shared-subpage-navbar" data-section="portfolio"></div>
-    <script src="../assets/js/shared-subpage-navbar.js?v=26.07.03.14.30"></script>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
 
     <div class="page-wrap">
         <div class="container">
@@ -149,6 +173,27 @@
 
             <!-- Card grid -->
                 <div class="card-grid">
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Jingxin</h3>
+                                <p>A minimal meditation guide app — breathing, mindfulness, guidance, and relaxation.</p>
+                            <button class="card-btn">Visit Site</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>FengOffice</h3>
+                                <p>Mail, CRM, and Newsletter in one connected pipeline.</p>
+                            <button class="card-btn">Visit Site</button>
+                        </div>
+                    </div>
+                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+                        <div class="card-content">
+                                <h3>Search King</h3>
+                                <p>An unbeatable human-machine search tool — images and text in one grab.</p>
+                            <button class="card-btn">Visit Site</button>
+                        </div>
+                    </div>
                     <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
                         <div class="card-content">
                                 <h3>Question First, Build Later</h3>
@@ -193,6 +238,78 @@
                     </div>
                 </div>
             </div>
+
+        <!-- Project 1: Jingxin -->
+        <div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>One App, Four Ways to Breathe</h2>
+                    <p class="block-subtitle">Jingxin — a minimal meditation guide app, breathing, mindfulness, guidance, and relaxation in four modes.</p>
+                    <div class="content-text-card">
+                        <h3>Proof of a Cross-Platform Mobile Build</h3>
+                        <p>Built with Flutter — one codebase that runs on Web / Android / iOS / Windows. A minimal interface that stays focused on meditation itself, undisturbed by feature clutter.</p>
+                        <ul>
+                            <li><strong>Data model</strong>: a <code>MeditationSession</code> records duration / mode / completion state.</li>
+                            <li><strong>State management</strong>: Provider manages the chosen duration and mode, with crisp UI responses.</li>
+                            <li><strong>Breathing animation</strong>: a custom <code>BreathingCircle</code> component guides the breathing rhythm.</li>
+                            <li><strong>Four modes</strong>: breathing / mindfulness / guidance / relaxation.</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/en/jingxin.html">Visit Site →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: FengOffice -->
+        <div id="fengoffice" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Mail, CRM, and Newsletter in One Chain</h2>
+                    <p class="block-subtitle">FengOffice — AI-unified mail and CRM, folding the infrastructure of content operations into one automated pipeline.</p>
+                    <div class="content-text-card">
+                        <h3>Where Engineering Delivery Meets Marketing Operations</h3>
+                        <p>One CLI manages mail, one Docker stack runs Twenty CRM — mail discovery → reply → CRM record, the whole chain wired up. Newsletters are distributed automatically by the Listmonk system.</p>
+                        <ul>
+                            <li><strong>fengmail.py</strong>: a CLI mail client, IMAP receive + SMTP reply.</li>
+                            <li><strong>Twenty CRM</strong>: one-command docker-compose deploy, port 3002.</li>
+                            <li><strong>Newsletter</strong>: a Listmonk + Postgres subscription system, with AI scripts to add, unsubscribe, and send campaigns.</li>
+                            <li><strong>Four-tier mail classification</strong>: docs/email-classification.md defines the classification system.</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/en/fengoffice.html">Visit Site →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: Search King -->
+        <div id="search-king" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Eighteen Engines, the Best One Wins</h2>
+                    <p class="block-subtitle">Super-Invincible-Search-King — a Playwright-powered all-in-one search tool: images, text, web reading, deep crawling, and anti-bot site scraping.</p>
+                    <div class="content-text-card">
+                        <h3>Treating "Being Blocked" as the Norm</h3>
+                        <p>One machine, eighteen engines. CAPTCHAs are skipped automatically, the engine chain falls back by itself, and a real-human browse mode is the final backstop.</p>
+                        <ul>
+                            <li><strong>Five behaviors</strong>: image / text / read web / deep crawl / platform fetch (Xueqiu, Bilibili).</li>
+                            <li><strong>Twelve image engines</strong> + <strong>six text engines</strong>, covering mainstream and regional search.</li>
+                            <li><strong>Six backends</strong>: from headless browser to real browser, layered fallbacks.</li>
+                            <li><strong>Traceable copyright</strong>: each result carries its source and license record.</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/en/search-king.html">Visit Site →</a>
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Section 1: Define -->
         <div id="define" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">

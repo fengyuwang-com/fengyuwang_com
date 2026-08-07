@@ -91,11 +91,11 @@
 		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
 		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
-		body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.35), 0 8px 20px -6px rgba(0,0,0,0.2); }
+		body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
 		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
 		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
 		body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
-		body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+		body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
 		body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
 		body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
 		body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
@@ -115,6 +115,9 @@
 			.card-grid { grid-template-columns: 1fr; }
 			.marketing-hero { padding: 28px 16px; }
 			.content-block { padding: 28px 0 20px; }
+			.block-inner { padding-left: 12px; padding-right: 12px; }
+			.section-card { padding: 20px; }
+			.content-text-card { padding-left: 16px; padding-right: 16px; }
 			.block-inner h2 { font-size: 1.25rem; }
 		}
 		/* Capability chip groups */
@@ -137,7 +140,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"投資框架 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/invest.html"}</script> </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="investment"></div>
-	<script src="../assets/js/shared-subpage-navbar.js?v=26.07.02.01.24"></script>
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
 
 	<div class="page-wrap">
 		<div class="container">
@@ -149,6 +152,13 @@
 
 			<!-- Card grid -->
 			<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80')" onclick="document.getElementById('fenginvest').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>FengInvest</h3>
+						<p>迄今最具野心的項目：AI 協作投資分析框架。</p>
+						<button class="card-btn">了解旗艦項目</button>
+					</div>
+				</div>
 				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80')" onclick="document.getElementById('business').scrollIntoView({behavior:'smooth'})">
 					<div class="card-content">
 						<h3>這是生意</h3>
@@ -194,7 +204,31 @@
 			</div>
 		</div>
 
-		<!-- Section 1: 這是生意 -->
+		<!-- Section 1: FengInvest -->
+		<div id="fenginvest" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>把紀律寫進程式碼</h2>
+					<p class="block-subtitle">FengInvest——迄今最具野心的項目：AI 協作投資分析框架，七層狀態機強制流程。</p>
+					<div class="content-text-card">
+						<h3>從理念到工程化的完整落地</h3>
+						<p>把「這隻股票能不能買」拆成 8 個可執行步驟，每步由專用工具加 AI 完成，結果被下一層驗證或挑戰。狀態機攔截跳步：未完成 L0 無法進入 M，未完成 L3 無法出報告。</p>
+						<ul>
+							<li><strong>七層流程</strong>：L0 能力圈確認 → M 市場數據 → L1 硬紀律 → L2b 量化因子與 L2a 定性分析（並行）→ L3 碰撞引擎 → P 組合檢查 → L4 結構化報告。</li>
+							<li><strong>4 個 AI Agent 並行定性</strong>：段永平 / 巴菲特 / 芒格 / 李錄四個視角獨立分析，結果交給碰撞引擎反方挑戰。</li>
+							<li><strong>數據質量門禁</strong>：M 層寫入後自動交叉驗證 PE / Forward PE，差異超過 5% 報警，超過 10% 判定失敗。</li>
+							<li><strong>跨層一致性</strong>：PE 值跨層校驗，狀態機只接受帶驗證的推進。</li>
+							<li><strong>Web UI</strong>：分析進度與報告視覺化。</li>
+						</ul>
+					</div>
+					<div style="text-align:center; margin-top:18px;">
+						<a class="default-btn" href="/zh-hk/fenginvest.html">查看項目詳情 →</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 2: 這是生意 -->
 		<div id="business" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
@@ -213,7 +247,7 @@
 			</div>
 		</div>
 
-		<!-- Section 2: 護城河 -->
+		<!-- Section 3: 護城河 -->
 		<div id="moat" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
@@ -232,7 +266,7 @@
 			</div>
 		</div>
 
-		<!-- Section 3: 不只是巴菲特 -->
+		<!-- Section 4: 不只是巴菲特 -->
 		<div id="beyond" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
@@ -256,7 +290,7 @@
 			</div>
 		</div>
 
-		<!-- Section 4: 概率，不是預測 -->
+		<!-- Section 5: 概率，不是預測 -->
 		<div id="probability" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">
@@ -287,7 +321,7 @@
 			</div>
 		</div>
 
-		<!-- Section 5: 學術與實踐 -->
+		<!-- Section 6: 學術與實踐 -->
 		<div id="practice" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">

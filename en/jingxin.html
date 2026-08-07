@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>静心 Jingxin | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="Jingxin is a minimal guided-meditation app: breathing, mindfulness, guidance, and relaxation — a Flutter cross-platform app with a dark theme that records every quiet moment.">
+    <meta name="keywords" content="静心, Jingxin, meditation, breathing, mindfulness, Flutter, 王丰羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/en/jingxin.html">
+    <link rel="alternate" hreflang="en" href="/en/jingxin.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/jingxin.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/jingxin.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="静心 Jingxin | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="A minimal guided-meditation app: breathing, mindfulness, guidance, and relaxation.">
+    <meta property="og:url" content="https://fengyuwang.com/en/jingxin.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="静心 Jingxin | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="A minimal guided-meditation app: breathing, mindfulness, guidance, and relaxation.">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+        .marketing-hero { text-align: center; padding: 52px 0 40px; }
+        .marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+        .marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+        .mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; border: 1px solid rgba(148,163,184,.14); }
+        .mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+        .mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+        .mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+        .mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+        .card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+        body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .marketing-hero { padding: 36px 24px; }
+            .marketing-hero h1 { font-size: 2.4rem; }
+            .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .marketing-hero { padding: 28px 16px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Jingxin | Fengyu WANG","url":"https://fengyuwang.com/en/jingxin.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="container">
+            <div class="marketing-hero">
+                <h1>静心 Jingxin</h1>
+                <p>A minimal guided-meditation app—breathing, mindfulness, guidance, and relaxation in four modes, letting a person settle down.</p>
+            </div>
+            <div class="card-grid">
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80')" onclick="document.getElementById('philosophy').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Design Philosophy</h3>
+                        <p>The more restrained the interface, the more complete the focus</p>
+                        <button class="card-btn">See the philosophy</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('modes').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Four Modes</h3>
+                        <p>Breathing / Mindful / Guided / Relaxation</p>
+                        <button class="card-btn">See the modes</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('consistency').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>The Mechanism of Persistence</h3>
+                        <p>History, streaks, cumulative time</p>
+                        <button class="card-btn">See the mechanism</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('engineering').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Engineering</h3>
+                        <p>Flutter + Provider—accurate timing, clean state</p>
+                        <button class="card-btn">See the engineering</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('design').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Design Language</h3>
+                        <p>Deep-space black + quiet blue, focused without interruption</p>
+                        <button class="card-btn">See the design</button>
+                    </div>
+                </div>
+                <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80')" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'})">
+                    <div class="card-content">
+                        <h3>Roadmap</h3>
+                        <p>Ambient sound, haptics, data charts</p>
+                        <button class="card-btn">See the roadmap</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="philosophy" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Less Is More</h2>
+                    <p class="block-subtitle">The first step of meditation is letting go of chatter; the first step of a product is letting go of distraction.</p>
+                    <div class="content-text-card">
+                        <p>Jingxin is a guided-meditation app. It doesn't stack features; it returns to meditation itself: one breathing ring on the screen, only the guidance that should appear in your ears.</p>
+                        <ul>
+                            <li><strong>Restraint</strong>: only four core modes—no irrelevant social, ads, or reminders.</li>
+                            <li><strong>Focus</strong>: while meditating, the interface recedes to a minimum, leaving the breathing ring as the only point of focus.</li>
+                            <li><strong>No distraction</strong>: dark theme and low-saturation colors reduce visual noise.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modes" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Four Ways to Meditate</h2>
+                    <p class="block-subtitle">Each one maps to a specific practice goal.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Breathing meditation</strong>: the 4-7-8 technique—inhale 4 seconds, hold 7, exhale 8. The rhythm slows the nervous system.</li>
+                            <li><strong>Mindfulness meditation</strong>: a body scan—from toes to head, sensing each part in turn, bringing attention back to the present.</li>
+                            <li><strong>Guided meditation</strong>: a 10-step guide, following the prompts through a complete practice.</li>
+                            <li><strong>Relaxation meditation</strong>: a visualization—ocean-wave animation plus scene description, letting a tense body relax.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="consistency" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Make Persistence Visible</h2>
+                    <p class="block-subtitle">Meditation isn't a one-off relaxation; it's a habit, day after day.</p>
+                    <div class="content-text-card">
+                        <p>Jingxin won't push you to practice, but it records every session, turning persistence itself into feedback.</p>
+                        <ul>
+                            <li><strong>Meditation log</strong>: every session records start time, duration, mode, and completion state.</li>
+                            <li><strong>Cumulative time</strong>: total minutes practiced, making effort a visible, quantified accumulation.</li>
+                            <li><strong>Streaks</strong>: a streak record, using continuity to counter the "miss one day and give up" mental trap.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="engineering" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Timing Has to Be Accurate</h2>
+                    <p class="block-subtitle">The only engineering challenge in a meditation app: time must never lie.</p>
+                    <div class="content-text-card">
+                        <p>Built with Flutter, lean state, clean architecture, with extra care for the part that goes wrong most often—background timing.</p>
+                        <ul>
+                            <li><strong>Lifecycle handling</strong>: records the time when the app pauses and subtracts background time on resume, keeping meditation timing accurate.</li>
+                            <li><strong>Provider state management</strong>: duration, mode, and history managed together, with UI separated from data.</li>
+                            <li><strong>Persistence</strong>: records stored as JSON via shared_preferences, surviving restarts.</li>
+                            <li><strong>Responsive layout</strong>: uses LayoutBuilder to fit different screens; the breathing ring scales with width, and touch targets stay at least 44px.</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Flutter</span>
+                        <span class="stack-chip">Provider</span>
+                        <span class="stack-chip">shared_preferences</span>
+                        <span class="stack-chip">Lifecycle</span>
+                        <span class="stack-chip">Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Deep-Space Black, Quiet Blue</h2>
+                    <p class="block-subtitle">The palette itself is part of falling asleep.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Primary background</strong>: #0D1117 deep-space black—low brightness, gentle on the eyes.</li>
+                            <li><strong>Secondary background</strong>: #161B22 deep gray—clear hierarchy without glare.</li>
+                            <li><strong>Accent</strong>: #58A6FF quiet blue—the motion of the breathing ring, calm and guiding.</li>
+                            <li><strong>Visual system</strong>: colors, spacing, and sizes unified as constants to keep the whole app consistent.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="roadmap" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>A Long Road Ahead</h2>
+                    <p class="block-subtitle">The end of v1 is the start of the next version.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Ambient sound</strong>: rain, waves, forest—more atmosphere for the relaxation mode.</li>
+                            <li><strong>Haptic feedback</strong>: a subtle vibration on breathing transitions, instead of visual interruption.</li>
+                            <li><strong>Data charts</strong>: visualize meditation stats, making progress clearer.</li>
+                            <li><strong>Custom rhythm</strong>: let users adjust the exact breathing durations.</li>
+                            <li><strong>Multilingual</strong>: beyond Chinese, so more people can use it.</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">View the GitHub repo</a>
+                        <a class="default-btn" href="/en/tech.html">Back to Tech Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>Wants to build it, and can—technology isn't the end, it's where delivery starts</p>
+            <a class="default-btn" href="/en/tech.html">Back to Tech Work →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
