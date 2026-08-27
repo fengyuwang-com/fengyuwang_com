@@ -57,6 +57,12 @@ Read it thoroughly before making any changes. **It preserves context across sess
 - `hugo/deploy.ps1` = build + copy
 - `en/`, `zh-cn/`, `zh-hk/` = site pages (one HTML file per page per language)
 
+### Page Filename Convention
+
+**All page filenames must use English words/abbreviations, never Chinese pinyin.**
+Examples: `invest.html` (not `touzi.html`), `ethos.html` (not `linian.html`), `dog-ate-my-money.html` (not `gou-na-qian.html`), `tribute-to-laozi.html` (not `zhijing-laozi.html`).
+Brand/project names use their established English names: `fenginvest.html`, `jingxin.html`, `search-king.html`.
+
 ---
 
 ## Style & Voice
