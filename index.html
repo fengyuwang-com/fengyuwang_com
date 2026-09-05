@@ -7,7 +7,6 @@
     <title>Fengyu WANG | Language Selector</title>
     <meta name="description" content="Choose the language version of Fengyu WANG's website: English, Simplified Chinese, or Traditional Chinese.">
     <meta name="robots" content="noindex,follow">
-    <meta http-equiv="refresh" content="0; url=zh-cn/index.html">
     
 	<link rel="icon" type="image/png" href="assets/img/logo.png">
     <style>
@@ -97,6 +96,26 @@
             .links a { min-height: 0; }
         }
     </style>
+    <script>
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem('site-lang'); } catch (e) {}
+            if (stored === 'en' || stored === 'zh-cn' || stored === 'zh-hk') {
+                window.location.replace(stored + '/index.html');
+                return;
+            }
+            var lang = '';
+            try { lang = (navigator.language || '').toLowerCase(); } catch (e) {}
+            if (!lang) return;
+            var target = 'en/index.html';
+            if (lang.indexOf('zh-hk') === 0 || lang.indexOf('zh-tw') === 0 || lang.indexOf('zh-hant') === 0) {
+                target = 'zh-hk/index.html';
+            } else if (lang.indexOf('zh') === 0) {
+                target = 'zh-cn/index.html';
+            }
+            window.location.replace(target);
+        })();
+    </script>
 </head>
 <body>
     <div class="card">
@@ -111,15 +130,22 @@
         <div class="meta">Redirecting based on browser language preference.</div>
     </div>
     <script>
+        // Head script already handles auto-redirect (localStorage or navigator.language).
+        // This script only records manual language card clicks for next-visit direct routing.
         (function () {
-            var lang = (navigator.language || '').toLowerCase();
-            var target = 'en/index.html';
-            if (lang.indexOf('zh-hk') === 0 || lang.indexOf('zh-tw') === 0 || lang.indexOf('zh-hant') === 0) {
-                target = 'zh-hk/index.html';
-            } else if (lang.indexOf('zh') === 0) {
-                target = 'zh-cn/index.html';
+            var cards = document.querySelectorAll('.links a[href^="en/"], .links a[href^="zh-cn/"], .links a[href^="zh-hk/"]');
+            for (var i = 0; i < cards.length; i++) {
+                (function (link) {
+                    link.addEventListener('click', function () {
+                        var href = link.getAttribute('href') || '';
+                        var key = href.indexOf('zh-cn/') === 0 ? 'zh-cn'
+                            : (href.indexOf('zh-hk/') === 0 ? 'zh-hk'
+                            : (href.indexOf('en/') === 0 ? 'en' : null));
+                        if (!key) return;
+                        try { localStorage.setItem('site-lang', key); } catch (e) {}
+                    });
+                })(cards[i]);
             }
-            window.location.replace(target);
         })();
     </script>
 	<!-- Cloudflare Web Analytics -->
