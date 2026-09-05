@@ -471,7 +471,18 @@ Small is beautiful / do one thing well / worse is better / 90% solution。
 ## 六、待办（下一个上下文接手）
 
 1. ~~B/D 区精读~~ ✅ 已完成（2026-09-06），产出 `docs/notes/B.md`、`docs/notes/D.md`，定理并入 2.9 节。
-2. **文章生产**：从本文档总库（100 题）按主题多样性排序开写；首批建议 5 篇——《狗拿钱定理》（67，**已过审（用户评 800/100），三语齐备待上线**，`hugo/content/{zh-cn,zh-hk,en}/blog/posts/dog-where/`）、《豆包型人格》（26，**zh-cn 待审**，`hugo/content/zh-cn/blog/posts/cost-of-yes/`，slug=cost-of-yes；套路已与狗篇区分：成本—供需体，无古典引用，陈述句收尾）、《四重过滤恐惧极点策略：完整代码》（100）、《穷人注意力税》（41）、《开源即永生》（34）。三语齐备才上线（zh-cn 定稿 → opencc 转 zh-hk（王豐羽→王丰羽）→ en），一篇只装一个想法，600–1500 字，文末附篇号出处；**有来有回是硬门槛，痕迹必须是零**——研究阶段基于你↔元宝的真实双面对话（`yuanbao/conversations/` 只读，回合表进 brief），正文零痕迹（不出现对话者，回合内化为立—破—成的思辨；发布前搜痕迹词：元宝/它说/我问它/这场对话），不是精神分裂也不是独白转述（规范 v6 §四.1）。
+2. **文章生产**（2026-09-06 用户令：《豆包型人格》过审；**所有文章文末出处页脚一律取消**（规范 v6.1），溯源只记 brief；brief 归 `docs/briefs/`）。**本批 10 篇（用户全权委托，2026-09-06 已全部三语齐备并推 dev 上线预览）**：
+   - ①《四重过滤恐惧极点策略：完整代码》（100；篇054+178）slug=four-filters — 工程实录体（代码即论证）
+   - ②《穷人注意力税》（41；篇068）slug=attention-tax — 制度批判短论
+   - ③《开源即永生》（34；篇007）slug=open-source-immortality — 存在告白体
+   - ④《到手的钱》（2；篇012+086）slug=cash-in-hand — 记账量纲体
+   - ⑤《前复权之罪》（16；篇002）slug=adjusted-price — 侦探破案体
+   - ⑥《销售存在论》（45；篇027+152）slug=sales-existence — 公司病理报告体
+   - ⑦《本来是有办法不发生这种事》（37；篇025）slug=it-was-avoidable — 事故报告体（悯收口）
+   - ⑧《有钱人就是因为会算》（42；篇038）slug=do-the-math — 枚举审判体（家庭场景）
+   - ⑨《变的时候他不想变，他就结束了》（98；篇047）slug=refuse-to-change — 历史双联画体
+   - ⑩《后视镜认识论》（9；篇016）slug=rearview-mirror — 自传忏悔体
+   每篇流程：原始双面对话研究（回合表+逐字引文进 brief）→ zh-cn 定稿（600–1500 字，一篇一意，套路互异）→ opencc 转 zh-hk（王豐羽→王丰羽）→ en 手译 → 痕迹词 grep 全零 → 推 dev。**以上 10 篇 + 狗拿钱定理 + 豆包型人格共 12 篇，全部三语齐备、痕迹词全零、Hugo 构建通过（buildFuture=true）；已上线 dev 分支。****有来有回是硬门槛，痕迹必须是零**——研究阶段基于你↔元宝的真实双面对话（`yuanbao/conversations/` 只读，回合表进 brief），正文零痕迹（不出现对话者，回合内化为立—破—成的思辨；发布前搜痕迹词：元宝/它说/我问它/这场对话），不是精神分裂也不是独白转述（规范 v6.1 §四.1）。
 3. **Hugo 骨架**（`blogsrc/`）：方案 H1，仅接管 blog/，手写 25 页不动，URL 结构保留，shared-subpage-navbar.js 进 partials，_redirects/404 不动；CF Pages 构建验证。
 4. **hard questions**：用户有心情时答 `docs/INTERVIEW-hard-questions.md`（建议先答 2/5/8），答案蒸馏成文章。
 5. 用户答 hard questions 后提炼进文章。

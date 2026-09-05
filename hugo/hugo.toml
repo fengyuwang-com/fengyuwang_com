@@ -2,6 +2,7 @@ baseURL = "/"
 title = "Fengyu WANG"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = true
+buildFuture = true
 publishDir = "../_site"
 [pagination]
 pagerSize = 12

@@ -65,7 +65,3 @@ Laozi saw through this chain long ago: the Way of Heaven takes from those who ha
 So the next time you hear someone say "the money is gone," don't sigh along.
 
 Just ask: where's the dog?
-
----
-
-Sources: Piece 004 〈K90 Max vs. K100 Pro Max〉, Piece 024 〈Hong Kong Stock Trading Fee Breakdown〉
