@@ -34,6 +34,8 @@ Read it thoroughly before making any changes. **It preserves context across sess
 三语个人网站 (zh-cn / en / zh-hk) + Hugo 博客。
 核心差异：**一个人用一套统一的底层逻辑，贯穿市场、投资、工程三个领域。**
 
+> **架构铁律（必读）**：本站永久保持纯静态（0 运行时，仅 Cloudflare Pages）；一切 AI 功能走 BYOK（访客自带 API Key，浏览器端 JS 直连提供商）；不做自建后端、不做独立子域部署。详见 `docs/DECISION-0001-zero-runtime-byok.md`，不得悄悄偏离。
+
 ### 底层链条
 
 ```
