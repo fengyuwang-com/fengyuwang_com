@@ -1,5 +1,5 @@
 ---
-title: "Writing 'Be Greedy When Others Are Fearful' as Code"
+title: "Be Greedy When Others Are Fearful, Written as Code"
 date: 2026-09-06
 description: "Fear isn't a day; it's a structure."
 slug: "four-filters"
@@ -20,11 +20,11 @@ The verdict was ugly. On the Chinese market, the 1-month, 6-month, and 12-month 
 
 ## The Appeal
 
-I refused the verdict and added a premise: the point of Buffett's line is asset quality — "be greedy when others are fearful, but only if you're buying the best stocks." Test the best stock, then. In A-shares, which is best? ICBC. Re-run.
+I refused the verdict and added a premise: the line only holds when asset quality comes first — be greedy when others are fearful, but greedy for the best stocks. Test the best stock, then. In A-shares, which is best? ICBC. Re-run.
 
 The verdict got uglier. Buying ICBC during panic periods lost an average of 5.6% over a one-year hold; buying on a random day and holding a year earned 16.1%; the one-month win rate was 36.6% — six losses out of every ten. The conclusion is one sentence: a panic period is not a golden pit for good stocks; a panic period is precisely where the good stock starts to lag.
 
-Both verdicts pointed the same way: the problem wasn't me, it was the word "panic" — the original sentence never defined it.
+Both verdicts pointed the same way: the problem wasn't me, it was the word panic — the original sentence never defined it.
 
 ## Defining Fear
 
@@ -48,7 +48,7 @@ EXIT_WINDOW    = 120    # 120 trading days with no exit = timeout
 TC             = 0.0003 * 2   # both sides, 6 bps — never understated
 ```
 
-Four filters: three months of decline removes "just started falling"; the single-day plunge removes the slow bleed; PE at 15 or below removes expensive; the bottom-quintile-of-five-years removes "fell a lot but still expensive." The pool is 15 A-share blue chips, ICBC and Kweichow Moutai among them. The data costs nothing: daily bars stitched in segments from Tencent's API, PE scraped from Eastmoney. Exits are hard-coded too — take 8% and leave, lose 3% and leave, 120 quiet days and it's a timeout.
+Four filters: three months of decline removes what has only just started falling; the single-day plunge removes the slow bleed; PE at 15 or below removes expensive; the bottom-quintile-of-five-years removes what fell a lot but is still expensive. The pool is 15 A-share blue chips, ICBC and Kweichow Moutai among them. The data costs nothing: daily bars stitched in segments from Tencent's API, PE scraped from Eastmoney. Exits are hard-coded too — take 8% and leave, lose 3% and leave, 120 quiet days and it's a timeout.
 
 ## Right of Verdict
 

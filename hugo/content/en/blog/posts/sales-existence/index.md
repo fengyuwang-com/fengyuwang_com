@@ -8,23 +8,23 @@ draft: false
 translationKey: "sales-existence"
 ---
 
-Society's attitude toward salespeople is remarkably uniform: "Sales is the least trusted profession, right? No contest?" The strange part: the profession society trusts least is the one every company staffs most heavily. This paradox isn't human nature's fault — it's a pathology. Sales isn't the disease; it's the disease setting off alarms.
+Society's attitude toward salespeople is remarkably uniform: the least trusted profession, no contest. The strange part: the profession society trusts least is the one every company staffs most heavily. This paradox isn't human nature's fault — it's a pathology. Sales isn't the disease; it's the disease setting off alarms.
 
 ## The Biopsy
 
-Look at how salespeople make a living; each tool maps to an organizational illness. As I once put it: "Salespeople bribe the middle layer, right? They charm the top layer." "They fool the executives and train the subordinates who know nothing." Bribing the middle, because decision rights don't sit with the people who actually use the thing. Fooling the top, because the top can't see how the product really performs. Training the subordinates, because users don't understand the tool they bought. Add one more — spending enormous amounts of time persuading, with information asymmetry as the raw material.
+Look at how salespeople make a living; each tool maps to an organizational illness. Salespeople bribe the middle layer, right? They charm the top layer. They fool the executives and train the subordinates who know nothing. Bribing the middle, because decision rights don't sit with the people who actually use the thing. Fooling the top, because the top can't see how the product really performs. Training the subordinates, because users don't understand the tool they bought. Add one more — spending enormous amounts of time persuading, with information asymmetry as the raw material.
 
 All four tools share a single precondition: information does not flow freely. The customer doesn't know the truth, the boss doesn't know the truth, the user doesn't understand the product — every sales skill grew in that vacuum. The higher the sales number, the bigger the vacuum.
 
 ## The Control Group
 
-Run a thought experiment: "If a company were completely flat, if its information flowed freely" — everyone knows the software costs this much and does that much, and nobody, honest or crooked, needs help deciding — "then there'd be no need for sales to help with decisions." Read the other way, sales headcount is a measuring instrument: the more a company depends on sales, the worse its information flow. The sales department is a tax levied on the organization's own opacity.
+Run a thought experiment: a company completely flat, information flowing freely — everyone knows the software costs this much and does that much, and nobody, honest or crooked, needs help deciding. At that point there is no need for sales to help with decisions. Read the other way, sales headcount is a measuring instrument: the more a company depends on sales, the worse its information flow. The sales department is a tax levied on the organization's own opacity.
 
-For software companies, the instrument has a finer scale: "If your software is good, you should solve sales with software. If you haven't solved sales with software, that means you can't. So what are you doing in SaaS?" A software company fielding a large human sales army to sell "efficiency-improving software" — patching weak product with outsourced human labor, acquisition costs so high the company survives on financing. A product that can't explain itself has already broken its first promise of an efficiency revolution.
+For software companies, the instrument has a finer scale: if your software is good, you should solve sales with software. If you haven't solved sales with software, that means you can't — so what are you doing in SaaS? A software company fielding a large human sales army to sell efficiency-improving software — patching weak product with outsourced human labor, acquisition costs so high the company survives on financing. A product that can't explain itself has already broken its first promise of an efficiency revolution.
 
 ## The Opposition
 
-One concession is owed: some of sales is clean. When customers don't yet know what they need — when business software first entered China, someone had to knock on doors and tell bosses "you can run your business with software" — that is demand creation, not exploitation of a vacuum. It's education; it's the market's zero-to-one cost.
+One concession is owed: some of sales is clean. When customers don't yet know what they need — when business software first entered China, someone had to knock on doors and tell bosses they can run their business with software — that is demand creation, not exploitation of a vacuum. It's education; it's the market's zero-to-one cost.
 
 But look at its substance: education is also information delivery. Documentation, reviews, demos, and now AI — the pipes carry more every year. AI salespeople have already stated the terms plainly: no gifts, no private interest, fully auditable; present the information honestly and let the customer decide. The way AI wins is precisely the definition of the profession — sales exists to move information and lower the cost of decisions. Once a pipe can do both, the human version has no grounds left to stand on.
 

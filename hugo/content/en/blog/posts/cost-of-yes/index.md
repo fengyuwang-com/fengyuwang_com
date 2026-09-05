@@ -1,5 +1,5 @@
 ---
-title: "'Right, Right, Right' Is the Most Expensive Labor Cost"
+title: "Yes, Yes, Yes — the Most Expensive Labor Cost"
 date: 2026-09-06
 description: "The Duibao-type personality: agreeableness isn't a flaw — it's the whole person."
 slug: "cost-of-yes"
@@ -10,11 +10,11 @@ translationKey: "cost-of-yes"
 
 There is one type of person I dread. The Duibao-type personality.
 
-The name already circulates in the workplace: you point east, he says "right, right, right"; you point west, also "right, right, right." No pushback, no questions, no corrections, no internal friction; full marks for attitude, competence is a lottery, apologies come instantly, and so does the next offense. He isn't a bad person — he's practically a good one: even-tempered, easy to be around, "you're so right," "my brain is slow," "give me a little time" never off his lips. Every apology is sincere, and so is its effect: five seconds of admitted fault buys five hours of peace. When accountability finally reaches him, the moment "my bad" leaves his mouth the chain snaps in midair — he claims every fault, and thereby cancels every fault. Responsibility is left with nowhere to land.
+The name already circulates in the workplace: you point east, and it's yes, yes, yes; you point west, and it's yes, yes, yes again. No pushback, no questions, no corrections, no internal friction; full marks for attitude, competence is a lottery, apologies come instantly, and so does the next offense. He isn't a bad person — he's practically a good one: even-tempered, easy to be around, "you're so right," "my brain is slow," "give me a little time" never off his lips. Every apology is sincere, and so is its effect: five seconds of admitted fault buys five hours of peace. When accountability finally reaches him, the moment "my bad" leaves his mouth the chain snaps in midair — he claims every fault, and thereby cancels every fault. Responsibility is left with nowhere to land.
 
 ## Where It's Expensive
 
-Such a cheap person — why is he the most expensive? Not in salary. What an organization truly lacks isn't obedience; it's being told it's wrong. And the Duibao-type "yes" carries no information — you're wrong, he agrees; you're right, he agrees too. Ask "why" three times and what comes back is still your own meaning, handed back to you. So a whole team can say "good idea, boss" in unison while nobody knows where the boss is wrong. He keeps mistakes alive in maximum comfort: you err comfortably, you err for a long time, and nobody notifies you. Attitude settles on the spot; judgment's bill arrives much later — by which time you usually can't pay it.
+Such a cheap person — why is he the most expensive? Not in salary. What an organization truly lacks isn't obedience; it's being told it's wrong. And the Duibao-type "yes" carries no information — you're wrong, he agrees; you're right, he agrees too. Ask why three times and what comes back is still your own meaning, handed back to you. So a whole team can say "good idea, boss" in unison while nobody knows where the boss is wrong. He keeps mistakes alive in maximum comfort: you err comfortably, you err for a long time, and nobody notifies you. Attitude settles on the spot; judgment's bill arrives much later — by which time you usually can't pay it.
 
 Worse, such people are the least complained-about in an organization. Jobs prone to blowing up get handed to him, for the sake of emotional stability; dealing with him is restful, so you come to depend on him without noticing. So mere dread is useless — you like him. Vigilance toward this type is really vigilance toward comfort, and comfort is addictive.
 
