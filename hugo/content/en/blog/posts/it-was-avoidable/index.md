@@ -16,11 +16,11 @@ After the disaster, everyone asked about survival techniques: run into the stree
 
 ## The Time Ledger
 
-So rewind the clock. The debris flow formed on the Nepali side and traveled 90 minutes before reaching the crossing — those 90 minutes are the entire problem. Experts had worked out the arithmetic: if the upstream ice-and-rock collapse were detected, the downstream could gain about 20 minutes of warning. Provided "the upstream has monitoring." And the post-disaster survey found 55 glacial lakes upstream of the Friendship Bridge, most of them absent from any routine monitoring database. The historical roll call was already written too: in 1981, a glacial-lake outburst on this same route killed more than 200 people; and one month before the disaster — July 2025 — the same region had another outburst flood. The risk was not unknown. It was known, listed, and precedented.
+So rewind the clock. The debris flow formed on the Nepali side and traveled 90 minutes before reaching the crossing — those 90 minutes are the entire problem. Experts had worked out the arithmetic: if the upstream ice-and-rock collapse were detected, the downstream could gain about 20 minutes of warning. Provided the upstream has monitoring. And the post-disaster survey found 55 glacial lakes upstream of the Friendship Bridge, most of them absent from any routine monitoring database. The historical roll call was already written too: in 1981, a glacial-lake outburst on this same route killed more than 200 people; and one month before the disaster — July 2025 — the same region had another outburst flood. The risk was not unknown. It was known, listed, and precedented.
 
 ## The Verdict
 
-So I said something heavy at the time: "The Nepali side gave you 90 minutes to prepare. If any information-alerting system worked at all, there was no way five hundred people could just disappear."
+So the verdict is one sentence, and it is heavy: the Nepali side gave you 90 minutes to prepare — if any information-alerting system worked at all, there was no way five hundred people could just disappear.
 
 This verdict must face its strongest opposition, and the opposition is fully valid: the source was in another country, beyond Chinese jurisdiction, where monitoring equipment cannot be planted; cross-border hydrological data sharing exists at the research level, not as standing emergency linkage; and ice-rock collapses are intrinsically fast, their warning windows inherently short. The merchants, tourists, and border residents of the crossing were concealed by no one — they were the victims of a blank space in the early-warning system. This is an institutional problem, not an attitude problem.
 
@@ -30,6 +30,6 @@ The opposition holds — and the conclusion hardens rather than softens. A forei
 
 That day, someone did win. A tour guide, watching the weather radar in the early morning, saw rain clouds clustering and moved his entire group to a high viewing platform — 24 people, none lost. He waited for no institution, and no institution notified him. One person's attention stood in for a missing mechanism.
 
-This is the most direct proof that "it didn't have to happen": the method existed not only on paper; it was validated that very morning by an ordinary human being. What he did — watch upstream, judge the risk, move early — is exactly what the missing early-warning system should have been doing for everyone.
+This is the most direct proof that it didn't have to happen: the method existed not only on paper; it was validated that very morning by an ordinary human being. What he did — watch upstream, judge the risk, move early — is exactly what the missing early-warning system should have been doing for everyone.
 
 I simply felt this didn't have to happen. The sentence assigns blame to no one. Mountains will still collapse, lakes will still burst, and dozens of unmonitored lakes remain off the list. The next time a 90-minute window starts ticking, the alarm should reach everyone — no one should have to spend those 5 seconds running.
