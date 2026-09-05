@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f172a">
-  <title>Redirecting | Fengyu WANG</title>
+  <title>Page not found | Fengyu WANG</title>
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <style>
@@ -41,17 +41,24 @@
       text-align: center;
     }
   </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Redirecting</h1>
-    <p>This URL is being resolved to the best language match for this site.</p>
-    <div class="links">
-      <a href="/en/index.html">English</a>
-      <a href="/zh-cn/index.html">&#31616;&#20307;&#20013;&#25991;</a>
-      <a href="/zh-hk/index.html">&#32321;&#39636;&#20013;&#25991;</a>
-    </div>
-  </div>
+  <style>/* Standalone page: loads no shared CSS, keep back-to-top styles inline */.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}
+    body[data-theme="dark"] {
+      background: #0a0e1a;
+      color: #f5f5f7;
+    }
+    body[data-theme="dark"] .card {
+      background: rgba(20,25,40,.94);
+      border-color: rgba(245,245,247,.1);
+      box-shadow: 0 24px 64px rgba(0,0,0,.5);
+    }
+    body[data-theme="dark"] p { color: #86868b; }
+    body[data-theme="dark"] .links a { background: #2997ff; color: #fff; }
+    body[data-theme="dark"] .back-to-top {
+      background: #4f7eff;
+      box-shadow: 0 8px 24px rgba(79,126,255,.3);
+    }
+    body[data-theme="dark"] .back-to-top:hover { background: #3d6aef; }
+  </style>
   <script>
     (function () {
       var routes = {"en":["about.html","capabilities.html","cases.html","contact.html","index.html","invest.html","mkt.html","tech.html","services.html"],"zh-cn":["about.html","capabilities.html","cases.html","contact.html","index.html","invest.html","mkt.html","tech.html","services.html"],"zh-hk":["about.html","capabilities.html","cases.html","contact.html","index.html","invest.html","mkt.html","tech.html","services.html"]};
@@ -92,5 +99,19 @@
       window.location.replace(resolveTarget(window.location.pathname));
     })();
   </script>
+</head>
+<body>
+  <div class="card">
+    <h1>Page not found</h1>
+    <p>The page you are looking for does not exist. Choose your language to continue:</p>
+    <div class="links">
+      <a href="/en/index.html">English</a>
+      <a href="/zh-cn/index.html">&#31616;&#20307;&#20013;&#25991;</a>
+      <a href="/zh-hk/index.html">&#32321;&#39636;&#20013;&#25991;</a>
+    </div>
+  </div>
+
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){btn.classList.toggle('show',window.scrollY>300)},{passive:true});})();</script>
 </body>
 </html>
