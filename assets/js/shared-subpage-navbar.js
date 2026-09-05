@@ -89,7 +89,11 @@
       fengmedia: 'FengMedia',
       fengmediaHref: '/en/fengmedia.html',
       searchKing: 'Search King',
-      searchKingHref: '/en/search-king.html'
+      searchKingHref: '/en/search-king.html',
+      dogAteMyMoney: 'The Dog Ate My Money Theorem',
+      dogAteMyMoneyHref: '/en/dog-ate-my-money.html',
+      tributeToLaozi: 'Tribute to Laozi',
+      tributeToLaoziHref: '/en/tribute-to-laozi.html'
     },
     'zh-cn': {
       home: '\u9996\u9875',
@@ -171,7 +175,11 @@
       fengmedia: 'FengMedia',
       fengmediaHref: '/zh-cn/fengmedia.html',
       searchKing: 'Search King',
-      searchKingHref: '/zh-cn/search-king.html'
+      searchKingHref: '/zh-cn/search-king.html',
+      dogAteMyMoney: '\u72d7\u62ff\u94b1\u5b9a\u7406',
+      dogAteMyMoneyHref: '/zh-cn/dog-ate-my-money.html',
+      tributeToLaozi: '\u81f4\u656c\u8001\u5b50',
+      tributeToLaoziHref: '/zh-cn/tribute-to-laozi.html'
     },
     'zh-hk': {
       home: '\u9996\u9801',
@@ -253,7 +261,11 @@
       fengmedia: 'FengMedia',
       fengmediaHref: '/zh-hk/fengmedia.html',
       searchKing: 'Search King',
-      searchKingHref: '/zh-hk/search-king.html'
+      searchKingHref: '/zh-hk/search-king.html',
+      dogAteMyMoney: '\u72d7\u62ff\u9322\u5b9a\u7406',
+      dogAteMyMoneyHref: '/zh-hk/dog-ate-my-money.html',
+      tributeToLaozi: '\u81f4\u656c\u8001\u5b50',
+      tributeToLaoziHref: '/zh-hk/tribute-to-laozi.html'
     }
   };
 var labels = copy[lang];
@@ -479,6 +491,7 @@ var labels = copy[lang];
     '          <ul class="submenu">',
     '            <li><a href="' + labels.investmentHref + '">' + labels.investmentOverview + '</a></li>',
     '            <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '            <li><a href="' + labels.dogAteMyMoneyHref + '">' + labels.dogAteMyMoney + '</a></li>',
     '          </ul>',
     '        </li>',
     '        <li>',
@@ -505,6 +518,7 @@ var labels = copy[lang];
     '            <li><a href="' + labels.ethosHref + '#relations">' + labels.ethosPart5 + '</a></li>',
     '            <li><a href="' + labels.ethosHref + '#east-west">' + labels.ethosPart6 + '</a></li>',
     '            <li><a href="' + labels.ethosHref + '#unfit">' + labels.ethosPart7 + '</a></li>',
+    '            <li><a href="' + labels.tributeToLaoziHref + '">' + labels.tributeToLaozi + '</a></li>',
     '          </ul>',
     '        </li>',
     '        <li><a href="' + labels.blogHref + '" class="' + active.blog.trim() + '">' + labels.blog + '</a></li>',
@@ -580,6 +594,7 @@ var labels = copy[lang];
     '        <ul class="mobile-submenu">',
     '          <li><a href="' + labels.investmentHref + '">' + labels.investmentOverview + '</a></li>',
     '          <li><a href="' + labels.fenginvestHref + '">' + labels.fenginvest + '</a></li>',
+    '          <li><a href="' + labels.dogAteMyMoneyHref + '">' + labels.dogAteMyMoney + '</a></li>',
     '        </ul>',
     '      </li>',
     '      <li class="mobile-item">',
@@ -612,6 +627,7 @@ var labels = copy[lang];
     '          <li><a href="' + labels.ethosHref + '#relations">' + labels.ethosPart5 + '</a></li>',
     '          <li><a href="' + labels.ethosHref + '#east-west">' + labels.ethosPart6 + '</a></li>',
     '          <li><a href="' + labels.ethosHref + '#unfit">' + labels.ethosPart7 + '</a></li>',
+    '          <li><a href="' + labels.tributeToLaoziHref + '">' + labels.tributeToLaozi + '</a></li>',
     '        </ul>',
     '      </li>',
     '      <li><a class="mobile-link' + active.blog + '" href="' + labels.blogHref + '">' + labels.blog + '</a></li>',

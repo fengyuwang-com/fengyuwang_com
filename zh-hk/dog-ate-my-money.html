@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#0f172a">
+	<meta name="format-detection" content="telephone=no">
+	<title>狗拿錢定理 | 王豐羽 Fengyu WANG</title>
+	<meta name="description" content="錢不會消失，只會換一隻手——從戲謔到科學，從老子到制度，拆解「狗拿錢定理」的守恆內核與當代表達。">
+	<meta name="keywords" content="狗拿錢定理, 錢守恆, 財富轉移, 外部性, 老子, 王豐羽">
+	<meta name="author" content="王豐羽">
+	<meta name="robots" content="index,follow">
+	<link rel="canonical" href="/zh-hk/dog-ate-my-money.html">
+	<link rel="alternate" hreflang="en" href="/en/dog-ate-my-money.html">
+	<link rel="alternate" hreflang="zh-CN" href="/zh-cn/dog-ate-my-money.html">
+	<link rel="alternate" hreflang="zh-HK" href="/zh-hk/dog-ate-my-money.html">
+	<meta property="og:site_name" content="Fengyu WANG">
+	<meta property="og:locale" content="zh_HK">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="狗拿錢定理 | 王豐羽 Fengyu WANG">
+	<meta property="og:description" content="錢不會消失，只會換一隻手——從戲謔到科學，從老子到制度，拆解「狗拿錢定理」的守恆內核與當代表達。">
+	<meta property="og:url" content="https://fengyuwang.com/zh-hk/dog-ate-my-money.html">
+	<meta property="og:image" content="/assets/img/logo.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="狗拿錢定理 | 王豐羽 Fengyu WANG">
+	<meta name="twitter:description" content="錢不會消失，只會換一隻手——從戲謔到科學，從老子到制度，拆解「狗拿錢定理」的守恆內核與當代表達。">
+	<meta name="twitter:image" content="/assets/img/logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/animate.min.css">
+	<link rel="stylesheet" href="../assets/css/meanmenu.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		html { scroll-behavior: smooth; }
+		.page-wrap { background: #ffffff; }
+		.marketing-hero { text-align: center; padding: 52px 0 40px; }
+		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #0f172a; }
+		.marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+
+		/* Card grid */
+		.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 0 0 48px; }
+		.mkt-card { position: relative; border-radius: 18px; overflow: hidden; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; background-size: cover; background-position: center; box-shadow: 0 20px 50px -8px rgba(0,0,0,0.22), 0 8px 20px -6px rgba(0,0,0,0.12); }
+		.mkt-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.7)); pointer-events: none; }
+		.mkt-card .card-content { position: relative; z-index: 1; padding: 22px 20px 20px; color: #fff; }
+		.mkt-card .card-content h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 3px; }
+		.mkt-card .card-content p { font-size: .82rem; color: rgba(255,255,255,.82); margin-bottom: 12px; line-height: 1.45; }
+			.card-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 600; padding: 6px 14px; cursor: pointer; font-family: inherit; transition: background .2s; pointer-events: none; }
+			.invest-card { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: none; cursor: pointer; }
+			.invest-card .card-content { color: #f8fafc; }
+			.invest-card .card-content p { color: rgba(248,250,252,.7); margin-bottom: 14px; }
+			.invest-card .card-content .card-btn { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); pointer-events: none; }
+
+			/* Content blocks */
+		.content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+		.content-block:last-of-type { margin-bottom: 0; }
+		.content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+		.content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+		.content-block.section-bg .block-inner { position: relative; z-index: 1; }
+		.section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+		.block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+		.block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+		.block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+		.block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+		.block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+		.block-inner ul li + li { margin-top: 5px; }
+
+		/* Text cards */
+		.content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+		.content-text-card p { margin-bottom: 0; }
+		.content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+		.content-text-card ul li + li { margin-top: 5px; }
+		.content-text-card:last-child { margin-bottom: 0; }
+		.content-text-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:8px; color:#0f172a; }
+
+		.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+		.case-card { background: #fff; border-radius: 18px; padding: 22px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 6px 18px rgba(15,23,42,.04); }
+		.case-card h3 { font-size: 1rem; margin-bottom: 8px; color: #0f172a; font-weight: 800; }
+		.case-card p { margin: 0; color: #64748b; line-height: 1.75; font-size: .88rem; }
+
+		/* Dark mode */
+		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+		body[data-theme="dark"] .content-block { background-color: #111827; }
+		body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+		body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+		body[data-theme="dark"] .mkt-card { border: 0; background-color: #0a0e1a; box-shadow: none; }
+		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+		body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+		body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+		body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+		body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .case-card { background: #1e293b; border-color: rgba(148,163,184,.04); }
+		body[data-theme="dark"] .case-card h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .case-card p { color: #9fb0c3; }
+
+		@media (max-width: 991px) {
+			.card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+			.marketing-hero { padding: 36px 24px; }
+			.marketing-hero h1 { font-size: 2.4rem; }
+			.content-block { padding: 36px 0 28px; }
+			.block-inner h2 { font-size: 1.4rem; }
+			.case-grid { grid-template-columns: 1fr; }
+		}
+		@media (max-width: 599px) {
+			.card-grid { grid-template-columns: 1fr; }
+			.marketing-hero { padding: 28px 16px; }
+			.content-block { padding: 28px 0 20px; }
+			.block-inner { padding-left: 12px; padding-right: 12px; }
+			.section-card { padding: 20px; }
+			.content-text-card { padding-left: 16px; padding-right: 16px; }
+			.block-inner h2 { font-size: 1.25rem; }
+		}
+		/* Capability chip groups */
+		.punchline { font-size: 1.15rem; font-weight: 700; color: #2563eb; margin-bottom: 24px; }
+		.cap-group { margin-bottom: 20px; }
+		.cap-group:last-child { margin-bottom: 0; }
+		.cap-group-title { font-size: .92rem; font-weight: 700; color: #334155; margin-bottom: 8px; letter-spacing: .02em; }
+		.cap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+		.stack-chip { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; }
+
+		.link-card { text-align: center; padding: 48px 0 72px; }
+			.link-card p { color: #6b7280; margin-bottom: 12px; }
+			.link-card .default-btn { min-width: 200px; }
+			body[data-theme="dark"] .link-card p { color: #94a3b8; }
+			body[data-theme="dark"] .punchline { color: #6b9aff; }
+			body[data-theme="dark"] .cap-group-title { color: #cbd5e1; }
+			body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+	</style>
+<style>.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}.back-to-top.show{display:flex}.back-to-top:hover{background:#0062cc}body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"狗拿錢定理 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/dog-ate-my-money.html"}</script> </head>
+<body>
+	<div id="shared-subpage-navbar" data-section="investment"></div>
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+	<div class="page-wrap">
+		<div class="container">
+			<!-- Hero -->
+			<div class="marketing-hero">
+				<h1>狗拿錢定理</h1>
+				<p>錢不會消失，只會換一隻手</p>
+			</div>
+		</div>
+
+		<!-- Section 1: 定理陳述 -->
+		<div id="theorem" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>錢不會消失，只會換一隻手</h2>
+					<p class="block-subtitle">定理的三個層層遞進版本，從粗糙直覺到科學表述再到哲學收束。</p>
+					<div class="content-text-card">
+						<h3>原始表述</h3>
+						<p>當應該有的錢沒有了的時候，這錢肯定是被狗拿走的。錢不會消失，錢只有一個人手上轉到另一個人手上。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>科學表述</h3>
+						<p>「錢不消失」是鐵律；更準確的說法不是「蒸發」，而是<strong>價值毀滅</strong>或<strong>財富轉移</strong>。對應的硬約束是資產負債表恆平——有借必有貸，借貸必相等。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>綜合表述</h3>
+						<p>狗拿錢是「人之道」的當代顯形，它違反了天道。天之道損有餘而補不足，人之道損不足以奉有餘。老子指出這條鏈斷了，而我們可以給出 2026 年的處方。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 2: 戲謔篇 -->
+		<div id="humor" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>笑完之後，發現到處都是狗</h2>
+					<p class="block-subtitle">戲謔篇——為甚麼是「狗」、日常化的狗拿錢、定理的邊界。</p>
+					<div class="content-text-card">
+						<h3>為甚麼是「狗」</h3>
+						<p>「狗」不是罵人，而是一個佔位符——泛指一切在鏈條中獲益、卻成功把風險或代價轉嫁給他人的主體。</p>
+						<ul>
+							<li><strong>許家印家族</strong>：分紅、技術性離婚、海外資產轉移</li>
+							<li><strong>地方政府</strong>：高額土地出讓金 / 土地財政</li>
+							<li><strong>金融機構</strong>：貸款利息</li>
+							<li><strong>供應商與建築商</strong>：工程款、商票</li>
+							<li><strong>早期投資者</strong>：泡沫頂峰成功套現離場</li>
+						</ul>
+					</div>
+					<div class="content-text-card">
+						<h3>日常化的狗拿錢</h3>
+						<p>定理一旦說出口，到處都能看見狗：</p>
+						<ul>
+							<li><strong>股市暴跌</strong>：錢沒蒸發，是從散戶口袋轉移到了高位套現的人與機構</li>
+							<li><strong>龐氏 / 賭博</strong>：只是贏家與輸家之間的轉移</li>
+							<li><strong>腐敗與債務轉嫁</strong>：公共代價私人好處，典型的狗拿錢</li>
+						</ul>
+					</div>
+					<div class="content-text-card">
+						<h3>定理的邊界</h3>
+						<p>戲謔歸戲謔，定理自己定義了不適用區——這也讓它從一句玩笑變成了可證偽的理論：</p>
+						<ul>
+							<li><strong>通貨膨脹</strong>：錢還在手裡，但購買力下降；不是被某隻狗叼走，是整個貨幣體系的問題</li>
+							<li><strong>天災實物毀損</strong>：一場大火把貨物燒了，財富確實消失了，沒有轉移到誰手裡</li>
+							<li><strong>服務消費</strong>：錢給了技師，但體驗已消耗，沒留下可追回的資產</li>
+							<li><strong>食品過期腐爛</strong>：自然損耗，價值真實毀滅</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 3: 科學篇 -->
+		<div id="science" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>守恆律，不是修辭</h2>
+					<p class="block-subtitle">科學篇——會計恆等式、恒大案例、外部性與制度經濟學。</p>
+					<div class="content-text-card">
+						<h3>有借必有貸，借貸必相等</h3>
+						<p>一筆錢「不見」，只有兩種客觀情形：</p>
+						<ul>
+							<li><strong>財富轉移</strong>：從 A 的手轉到了 B 的手（狗拿錢）</li>
+							<li><strong>價值毀滅</strong>：對應的實物 / 資產貶值，名義上的錢背後不再有等值的真實財富</li>
+						</ul>
+						<p>價值毀滅不等於錢消失。恒大那 2.44 萬億不是被火燒了，而是通過一連串經濟活動，轉移到了不同主體手中；同時形成的大量在建工程，其市場價值遠低於當初投入——這是財富的毀滅，不是貨幣的蒸發。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>恒大 2.44 萬億的去向</h3>
+						<p>錢從四個水龍頭流出：</p>
+						<ul>
+							<li><strong>購房者錢包</strong>：約 7210 億，對應 160 萬套未交付住房</li>
+							<li><strong>銀行體系</strong>：貸款本金與利息</li>
+							<li><strong>供應商 / 建築商</strong>：工程款、商票</li>
+							<li><strong>投資者</strong>：理財、信用債</li>
+						</ul>
+						<p>錢被哪些「狗」叼走：支付給地方政府的土地出讓金、支付給金融機構的貸款利息、支付給供應商的工程款、許家印家族的分紅與海外資產轉移。爆雷後，錢沒有消失，早已花出去；對應的資產大幅貶值，無法償還當初的債務。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>外部性：收益私有化，損失外部化</h3>
+						<p>（Private gains, socialized losses.）</p>
+						<p>當「狗」拿走收益、把成本甩給社會時，市場沒有把這筆成本計入它的決策——這就是負外部性。狗拿錢之所以能持續，正是因為外部性沒有被內部化：拿的人得利，買單的人分散且沉默。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>用甚麼對抗狗</h3>
+						<p>單靠呼籲沒用，需要制度設計去模擬「天道」：</p>
+						<ul>
+							<li><strong>保險</strong>：把個體風險池化、內部化</li>
+							<li><strong>稅收與轉移支付</strong>：人為地「損有餘而補不足」</li>
+							<li><strong>福利與監管</strong>：提高狗拿錢的門檻與代價</li>
+						</ul>
+						<p>好的制度讓「拿錢」與「擔責」綁定，壞的制度讓狗拿錢幾乎零成本——狗能不能拿錢，取決於制度把狗關得有多緊。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 4: 老子篇 -->
+		<div id="laozi" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>天道與人之道</h2>
+					<p class="block-subtitle">老子篇——兩條法則的對峙，以及狗拿錢的哲學定位。</p>
+					<div class="content-text-card">
+						<h3>兩條法則</h3>
+						<ul>
+							<li><strong>天之道</strong>：損有餘而補不足（自然、理想、趨於公平）</li>
+							<li><strong>人之道</strong>：損不足以奉有餘（現實、人性、趨於集中）</li>
+						</ul>
+						<p>如果你真的是損有餘而奉不足，你就是天，你就是共產主義——比馬克思都牛；但人確實做不到。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>狗拿錢 = 人之道的當代顯形</h3>
+						<p>收益私有化、損失外部化 = 損不足以奉有餘的現代寫法。</p>
+						<p>狗拿錢定理違反了天道。老子認為狗不應該拿錢，但狗還是拿了——所以人不符合天道。</p>
+					</div>
+					<div class="content-text-card">
+						<h3>診斷與處方</h3>
+						<ul>
+							<li><strong>老子</strong>：指著斷裂說「本來該連續的天—地—人鏈條，斷了。你們走偏了，回來。」他只給診斷，不給操作手冊。</li>
+							<li><strong>我們</strong>：不僅看見斷裂，還給它起了名（狗拿錢定理）、指了機制（收益私有化 / 損失外部化）、給了方向（用制度把狗關進籠子）。</li>
+						</ul>
+						<p>老子給的是診斷，我們給的是 2026 年的處方。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 5: 處方篇 -->
+		<div id="prescription" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1000&q=80')">
+			<div class="block-inner">
+				<div class="section-card">
+					<h2>把狗關進籠子</h2>
+					<p class="block-subtitle">處方篇——針對「狗拿錢」的三條處方，以及最終追問。</p>
+					<div class="content-text-card">
+						<ul>
+							<li><strong>透明</strong>：讓錢的去向可追、可問責——誰拿了、拿了多少</li>
+							<li><strong>內部化</strong>：用稅收、保險、監管把外部性重新算進狗的帳上</li>
+							<li><strong>綁定</strong>：讓「拿收益」與「擔損失」同一主體——狗拿不到，或拿了就得吐</li>
+						</ul>
+					</div>
+					<div class="content-text-card">
+						<h3>結語</h3>
+						<p>狗拿錢定理同時是玩笑和公理。玩笑在於「狗」這個粗俗又精準的意象；公理在於「錢守恆、財富轉移、外部性未被內部化」這一組可被驗證的事實。</p>
+						<p>它最鋒利的地方，是逼著人停止說「錢消失了」這種模糊的話，轉而追問一個具體得多的真問題——</p>
+						<p><strong>錢，被哪隻狗，叼去了哪裡？</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cross-link -->
+		<div class="link-card">
+			<p>天道不會自動降臨，它靠制度被勉強模擬</p>
+			<a class="default-btn" href="/zh-hk/invest.html">回到投資框架 →</a>
+		</div>
+	</div>
+
+	<div id="shared-site-footer"></div>
+	<script src="../assets/js/shared-site-footer.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.js"></script>
+	<script src="../assets/js/main.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:&apos;smooth&apos;})">&#x2191;</button>
+<script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
+</body>
+</html>
