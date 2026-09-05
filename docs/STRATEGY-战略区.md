@@ -471,7 +471,7 @@ Small is beautiful / do one thing well / worse is better / 90% solution。
 ## 六、待办（下一个上下文接手）
 
 1. ~~B/D 区精读~~ ✅ 已完成（2026-09-06），产出 `docs/notes/B.md`、`docs/notes/D.md`，定理并入 2.9 节。
-2. **文章生产**：从本文档总库（100 题）按主题多样性排序开写；首批建议 5 篇——《狗拿钱定理》（67）、《豆包型人格》（26）、《四重过滤恐惧极点策略：完整代码》（100）、《穷人注意力税》（41）、《开源即永生》（34）。三语齐备才上线（zh-cn 定稿 → opencc 转 zh-hk（王豐羽→王丰羽）→ en），一篇只装一个想法，600–1500 字，文末附篇号出处。
+2. **文章生产**：从本文档总库（100 题）按主题多样性排序开写；首批建议 5 篇——《狗拿钱定理》（67，**已完成 zh-cn 待审**，`hugo/content/zh-cn/blog/posts/dog-where/`）、《豆包型人格》（26）、《四重过滤恐惧极点策略：完整代码》（100）、《穷人注意力税》（41）、《开源即永生》（34）。三语齐备才上线（zh-cn 定稿 → opencc 转 zh-hk（王豐羽→王丰羽）→ en），一篇只装一个想法，600–1500 字，文末附篇号出处；**有来有回是硬门槛**——每篇必须基于你↔元宝的真实对话（原始导出双方俱全，`yuanbao/conversations/` 只读），对手戏写成逻辑思辨（归因清晰、回合推进），不是精神分裂（规范 v5 §四.1）。
 3. **Hugo 骨架**（`blogsrc/`）：方案 H1，仅接管 blog/，手写 25 页不动，URL 结构保留，shared-subpage-navbar.js 进 partials，_redirects/404 不动；CF Pages 构建验证。
 4. **hard questions**：用户有心情时答 `docs/INTERVIEW-hard-questions.md`（建议先答 2/5/8），答案蒸馏成文章。
 5. 用户答 hard questions 后提炼进文章。
