@@ -3,7 +3,7 @@ title: "段永平買泡泡瑪特，算失誤嗎"
 date: 2026-09-05
 description: "結構有洞，紀律可以補；紀律有洞，神仙難救。"
 slug: "labubu-structural-flaw"
-tags: ["金融", "商業"]
+tags: ["金融", "商業", "投資"]
 draft: false
 translationKey: "labubu-structural-flaw"
 ---

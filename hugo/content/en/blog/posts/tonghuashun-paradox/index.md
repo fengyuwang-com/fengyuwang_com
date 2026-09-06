@@ -3,7 +3,7 @@ title: "The Tonghuashun Paradox"
 date: 2026-09-05
 description: "A tool built to make you money, used almost entirely by people losing it."
 slug: "tonghuashun-paradox"
-tags: ["Finance", "Tech"]
+tags: ["Finance", "Tech", "Investing"]
 draft: false
 translationKey: "tonghuashun-paradox"
 ---

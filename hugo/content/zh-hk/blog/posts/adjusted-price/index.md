@@ -3,7 +3,7 @@ title: "前復權之罪"
 date: 2026-09-06
 description: "改寫歷史不需要壞人，一個默認參數就夠了。"
 slug: "adjusted-price"
-tags: ["金融", "技術"]
+tags: ["金融", "技術", "投資"]
 draft: false
 translationKey: "adjusted-price"
 ---

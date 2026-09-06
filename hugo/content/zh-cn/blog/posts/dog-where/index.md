@@ -3,7 +3,7 @@ title: "不必问钱去了哪里，要问狗在哪里"
 date: 2026-09-06
 description: "狗拿钱定理：从一句玩笑，到一条万能公式。"
 slug: "dog-where"
-tags: ["金融", "经济"]
+tags: ["金融", "经济", "投资"]
 draft: false
 translationKey: "dog-where"
 ---

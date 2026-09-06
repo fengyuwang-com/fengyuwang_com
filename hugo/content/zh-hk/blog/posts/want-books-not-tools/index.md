@@ -3,7 +3,7 @@ title: "我是想看書，不是想看你的工具"
 date: 2026-09-05
 description: "工具賣的是可能，內容賣的是結果。"
 slug: "want-books-not-tools"
-tags: ["技術", "商業"]
+tags: ["技術", "商業", "市場學"]
 draft: false
 translationKey: "want-books-not-tools"
 ---

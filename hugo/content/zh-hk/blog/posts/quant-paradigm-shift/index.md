@@ -3,7 +3,7 @@ title: "量化交易的換軸"
 date: 2026-09-05
 description: "從預測市場，到設計市場。"
 slug: "quant-paradigm-shift"
-tags: ["金融"]
+tags: ["金融", "投資"]
 draft: false
 translationKey: "quant-paradigm-shift"
 ---

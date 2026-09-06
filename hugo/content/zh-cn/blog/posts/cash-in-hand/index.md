@@ -3,7 +3,7 @@ title: "到手的钱"
 date: 2026-09-06
 description: "利润表是作文，存折不是。"
 slug: "cash-in-hand"
-tags: ["金融"]
+tags: ["金融", "投资"]
 draft: false
 translationKey: "cash-in-hand"
 ---

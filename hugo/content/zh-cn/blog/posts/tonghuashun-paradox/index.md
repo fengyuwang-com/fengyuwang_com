@@ -3,7 +3,7 @@ title: "同花顺悖论"
 date: 2026-09-05
 description: "为赚钱的人做的工具，用户全是亏钱的人。"
 slug: "tonghuashun-paradox"
-tags: ["金融", "技术"]
+tags: ["金融", "技术", "投资"]
 draft: false
 translationKey: "tonghuashun-paradox"
 ---
