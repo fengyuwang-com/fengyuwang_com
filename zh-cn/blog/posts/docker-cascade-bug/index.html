@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>我给 Docker 报了一个级联 bug | Fengyu WANG</title>
+    <meta name="description" content="一个 0 字节的文件让引擎起不来，修掉一个，露出下一个。">
+    <link rel="canonical" href="/zh-cn/blog/posts/docker-cascade-bug/">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/docker-cascade-bug/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/docker-cascade-bug/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/docker-cascade-bug/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/docker-cascade-bug/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/docker-cascade-bug/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/docker-cascade-bug/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/docker-cascade-bug/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<style>
+
+
+
+
+
+
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>我给 Docker 报了一个级联 bug</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-05</span>
+        <span class="meta-sep">·</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Docker</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">调试</span>
+    </div>
+    <div class="article-content"><p>报 bug 这件事，多数人做到&quot;重启就好了&quot;就停了。我停不下来，我想知道是哪一层烂了。</p>
+<p>现象很简单：Docker Desktop 从 4.71 起在 Windows Insider Build 26200 上启动就崩，无限循环，到 4.82 还没修。</p>
+<p>我扒下去，找到那颗钉子。新加的推理管理器要在 NTFS 上建一个 AF_UNIX socket 文件，Windows 对这种 socket 的实现是借 NTFS 的 reparse point 挂上去的。一旦 Docker 非正常退出——崩溃、强杀、断电——这个 0 字节的文件就留在盘上，带着一个没人认领的标记。下次启动，程序想删它，Windows 报 error 1920，拒绝。程序一看：删不掉，我不活了。崩溃循环。</p>
+<p>这不算完，真正的戏在后面。我把这个文件清掉，程序起来又崩在第二个 socket 上：engine.sock。再清，第三个：userAnalyticsOtlpHttp.sock。Cleaning one corrupted socket exposes the next——修掉一个，露出下一个。这不是一个 bug，这是同一根筋烂了三处。</p>
+<p>为什么三处都过不去？因为代码里写的是同一条规矩：启动前先清场，清不掉就退出。对必选组件，这条规矩没错。可推理管理器是个可选功能，AI 不用，引擎照样该跑。一个可选服务的遗物，拖死了整台引擎。</p>
+<p>我试出来的路子：把父目录改名。文件动不了，目录的名字动得了——改名之后程序找不到旧路径，自己建新的，活了。设置里把 AI 关掉？某些版本里那个开关是摆设，后台照建。最干净的是降级 4.69.0，那个年代关掉 Beta 功能就真的不装推理管理器。</p>
+<p>issue 提到 docker/desktop-feedback（#527），我附了三条建议：socket 删不掉不该 fatal；可选服务故障不该拖垮引擎；与其只给一个 Reset to factory defaults，不如告诉用户是哪个文件删不掉。三条都不贵，都是把&quot;我不活了&quot;改成&quot;我绕过去&quot;。</p>
+<p>后来我回头审自己的诊断，发现我第一版也有毛病。issue 里我写 MFT 条目损坏，复核下来更像 reparse point 孤儿化：文件的记录还在，指向的内核上下文没了。报 bug 也要自我回测，不然自己就是下一个想当然的人。</p>
+<p>一个 0 字节的文件，放倒一台引擎，还连着三处。可靠是底线：不能出错的地方不能出错；会出错的地方，要留活门。</p>
+</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
+</body>
+</html>
+

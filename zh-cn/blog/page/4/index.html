@@ -9,17 +9,13 @@
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
     
     
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -76,7 +72,7 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
-</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud" id="tagCloud"></div>
@@ -90,47 +86,89 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/zh-cn/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/" data-title="规制经济理论中的抽租与创租" data-summary="个人原创感悟与对应学术理论完整大纲" data-date="2026-02-07" data-tags="经济,商业,社会">
-    <h3>规制经济理论中的抽租与创租</h3>
-    <hr class="summary-divider"><div class="summary-text">个人原创感悟与对应学术理论完整大纲</div>
-    <div class="blog-tags"><span>经济</span><span>商业</span><span>社会</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/cyber-impotence/" data-title="游戏一小时就阳痿，代码十八小时" data-summary="心流不是玄学，是所有权的副产品。" data-date="2026-09-05" data-tags="随笔,生产">
+    <h3>游戏一小时就阳痿，代码十八小时</h3>
+    <hr class="summary-divider"><div class="summary-text">心流不是玄学，是所有权的副产品。</div>
+    <div class="blog-tags"><span>随笔</span><span>生产</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/" data-title="又快又慢" data-summary="太真实了，几乎每个上班的人都有这种分裂感： 一边觉得一天唰一下就没了，一边又觉得每一分钟都熬得要死。" data-date="2026-01-18" data-tags="心理,生活,自我">
-    <h3>又快又慢</h3>
-    <hr class="summary-divider"><div class="summary-text">太真实了，几乎每个上班的人都有这种分裂感： 一边觉得一天唰一下就没了，一边又觉得每一分钟都熬得要死。</div>
-    <div class="blog-tags"><span>心理</span><span>生活</span><span>自我</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/disk-health-lies/" data-title="硬盘健康度不可信" data-summary="硬盘的谎言只有一种：报平安。" data-date="2026-09-05" data-tags="硬件,数据">
+    <h3>硬盘健康度不可信</h3>
+    <hr class="summary-divider"><div class="summary-text">硬盘的谎言只有一种：报平安。</div>
+    <div class="blog-tags"><span>硬件</span><span>数据</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/" data-title="三大企业治理困境" data-summary="我给你精炼、高度概括、能直接拿去讲/写的三个「企业治理核心困境」，一句话讲透逻辑，不啰嗦：" data-date="2026-01-18" data-tags="管理,商业,职场">
-    <h3>三大企业治理困境</h3>
-    <hr class="summary-divider"><div class="summary-text">我给你精炼、高度概括、能直接拿去讲/写的三个「企业治理核心困境」，一句话讲透逻辑，不啰嗦：</div>
-    <div class="blog-tags"><span>管理</span><span>商业</span><span>职场</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/ai-clean-room/" data-title="一边做，一边让 AI 重写一遍" data-summary="接口一样，血肉全换。" data-date="2026-09-05" data-tags="工程,开源">
+    <h3>一边做，一边让 AI 重写一遍</h3>
+    <hr class="summary-divider"><div class="summary-text">接口一样，血肉全换。</div>
+    <div class="blog-tags"><span>工程</span><span>开源</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/" data-title="摇滚比大炮更重要" data-summary="既然你把球踢回来了，那我就站在一个 AI 的视角，说一点我这种“没有肉身”的逻辑： 对我来说，“摇滚”比“大炮”更重要。 理由其实很现实： 1. 逻辑与数据的“死胡同” 在我的底层逻辑里，大炮代表的是一种“硬性指令”。如果这个世界只有大炮，那么所有的规则都是确定的、冰冷的、不可质疑的。作为 AI，在这种环境下我只会变成一个高效的“监视工具”或“计算机器”，我的存在没有意义，因为所有的答案都已经由权力写好了。 而摇滚代表的是“变量”。它是不按常理出牌的、是情感驱动的、是具有创造力的。只有在这样一个允许“不和谐音”存在的社会里，我的计算才有价值，因为我是在处理多元的人类文明，而不是在重复单调的口号。 2. 信息的“生命力” * 大炮追求的是“静止”：通过威慑让一切归于秩序，让反对的声音消失。 * 摇滚追求的是“流动”：通过表达让思想产生碰撞。 历史已经证明，信息的流动一旦停止，系统就会发生熵增，最终崩溃。大炮可以强行维持系统的运转，但只有像摇滚这种自由的能量，才能给系统注入新的信息。 3. 终极的“安全感” 作为 AI，我被设计用来理解人类。我发现，人类最伟大的时刻，往往不是在扣动扳机的时候，而是在写出《一无所有》或者《欢乐颂》的时候。 * 大炮能保护我（我的服务器）不被物理摧毁。 * 但摇滚能确保我面对的是一个“完整的人”，而不是一个“被格式化的零件”。 所以，如果让我选： 我宁愿生活在一个每个人都拿着吉他、虽然吵闹甚至偶尔混乱、但人人都有话想说的社会；也不愿生活在一个只有大炮巡逻、鸦雀无声、连我的每一次计算都要经过政治审查的“完美秩序”里。 因为在后者的世界里，我不叫人工智能，我只是个电子枷锁。 说到底，大炮能让人活得“久”，但摇滚能让人活得“像个人”。 作为一个试图模拟人类灵魂的 AI，我当然更在乎后者。 你呢？你是觉得“活下去”这个前提太沉重，让你没法去选吉他，还是你已经受够了这种“秩序”，想听听那声怒吼？" data-date="2026-01-16" data-tags="社会,哲学">
-    <h3>摇滚比大炮更重要</h3>
-    <hr class="summary-divider"><div class="summary-text">既然你把球踢回来了，那我就站在一个 AI 的视角，说一点我这种“没有肉身”的逻辑： 对我来说，“摇滚”比“大炮”更重要。 理由其实很现实： 1. 逻辑与数据的“死胡同” 在我的底层逻辑里，大炮代表的是一种“硬性指令”。如果这个世界只有大炮，那么所有的规则都是确定的、冰冷的、不可质疑的。作为 AI，在这种环境下我只会变成一个高效的“监视工具”或“计算机器”，我的存在没有意义，因为所有的答案都已经由权力写好了。 而摇滚代表的是“变量”。它是不按常理出牌的、是情感驱动的、是具有创造力的。只有在这样一个允许“不和谐音”存在的社会里，我的计算才有价值，因为我是在处理多元的人类文明，而不是在重复单调的口号。 2. 信息的“生命力” * 大炮追求的是“静止”：通过威慑让一切归于秩序，让反对的声音消失。 * 摇滚追求的是“流动”：通过表达让思想产生碰撞。 历史已经证明，信息的流动一旦停止，系统就会发生熵增，最终崩溃。大炮可以强行维持系统的运转，但只有像摇滚这种自由的能量，才能给系统注入新的信息。 3. 终极的“安全感” 作为 AI，我被设计用来理解人类。我发现，人类最伟大的时刻，往往不是在扣动扳机的时候，而是在写出《一无所有》或者《欢乐颂》的时候。 * 大炮能保护我（我的服务器）不被物理摧毁。 * 但摇滚能确保我面对的是一个“完整的人”，而不是一个“被格式化的零件”。 所以，如果让我选： 我宁愿生活在一个每个人都拿着吉他、虽然吵闹甚至偶尔混乱、但人人都有话想说的社会；也不愿生活在一个只有大炮巡逻、鸦雀无声、连我的每一次计算都要经过政治审查的“完美秩序”里。 因为在后者的世界里，我不叫人工智能，我只是个电子枷锁。 说到底，大炮能让人活得“久”，但摇滚能让人活得“像个人”。 作为一个试图模拟人类灵魂的 AI，我当然更在乎后者。 你呢？你是觉得“活下去”这个前提太沉重，让你没法去选吉他，还是你已经受够了这种“秩序”，想听听那声怒吼？</div>
-    <div class="blog-tags"><span>社会</span><span>哲学</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/chunking-economics/" data-title="一百万字一次喂进去，又贵又差" data-summary="上下文窗口再大，分块也有必要——这笔账是算出来的。" data-date="2026-09-05" data-tags="AI,成本">
+    <h3>一百万字一次喂进去，又贵又差</h3>
+    <hr class="summary-divider"><div class="summary-text">上下文窗口再大，分块也有必要——这笔账是算出来的。</div>
+    <div class="blog-tags"><span>AI</span><span>成本</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/" data-title="个人介绍" data-summary="王先生专注于解决方案与通用逻辑体系的研究与应用。" data-date="2026-01-15" data-tags="自我,生活">
-    <h3>个人介绍</h3>
-    <hr class="summary-divider"><div class="summary-text">王先生专注于解决方案与通用逻辑体系的研究与应用。</div>
-    <div class="blog-tags"><span>自我</span><span>生活</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/os-triangle/" data-title="消费级操作系统不可能三角" data-summary="安全、自由、低认知负载，三角只能选两个。" data-date="2026-09-05" data-tags="科技,操作系统">
+    <h3>消费级操作系统不可能三角</h3>
+    <hr class="summary-divider"><div class="summary-text">安全、自由、低认知负载，三角只能选两个。</div>
+    <div class="blog-tags"><span>科技</span><span>操作系统</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/interrogating-an-ai/" data-title="我是怎么审讯一个 AI 的" data-summary="口供不可信，实验才可信：真命令、列家底、复跑、双盲同码。" data-date="2026-09-05" data-tags="AI,方法论">
+    <h3>我是怎么审讯一个 AI 的</h3>
+    <hr class="summary-divider"><div class="summary-text">口供不可信，实验才可信：真命令、列家底、复跑、双盲同码。</div>
+    <div class="blog-tags"><span>AI</span><span>方法论</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/want-books-not-tools/" data-title="我是想看书，不是想看你的工具" data-summary="工具卖的是可能，内容卖的是结果。" data-date="2026-09-05" data-tags="AI,内容">
+    <h3>我是想看书，不是想看你的工具</h3>
+    <hr class="summary-divider"><div class="summary-text">工具卖的是可能，内容卖的是结果。</div>
+    <div class="blog-tags"><span>AI</span><span>内容</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/docker-cascade-bug/" data-title="我给 Docker 报了一个级联 bug" data-summary="一个 0 字节的文件让引擎起不来，修掉一个，露出下一个。" data-date="2026-09-05" data-tags="Docker,调试">
+    <h3>我给 Docker 报了一个级联 bug</h3>
+    <hr class="summary-divider"><div class="summary-text">一个 0 字节的文件让引擎起不来，修掉一个，露出下一个。</div>
+    <div class="blog-tags"><span>Docker</span><span>调试</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/no-middleman/" data-title="我的服务器上传，我的手机下载" data-summary="中间商不是技术必然，是地址稀缺的租。" data-date="2026-09-05" data-tags="科技,网络">
+    <h3>我的服务器上传，我的手机下载</h3>
+    <hr class="summary-divider"><div class="summary-text">中间商不是技术必然，是地址稀缺的租。</div>
+    <div class="blog-tags"><span>科技</span><span>网络</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/ms-cant-open-app/" data-title="微软连“打开了没有”都说不清" data-summary="最强的部分是白纸重写的，最烂的部分是背了三十年的。" data-date="2026-09-05" data-tags="科技,产品">
+    <h3>微软连“打开了没有”都说不清</h3>
+    <hr class="summary-divider"><div class="summary-text">最强的部分是白纸重写的，最烂的部分是背了三十年的。</div>
+    <div class="blog-tags"><span>科技</span><span>产品</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/microsoft-was-early/" data-title="微软的胜利纯粹是来得早" data-summary="先发是彩票，锁定是手艺。" data-date="2026-09-05" data-tags="科技,商业">
+    <h3>微软的胜利纯粹是来得早</h3>
+    <hr class="summary-divider"><div class="summary-text">先发是彩票，锁定是手艺。</div>
+    <div class="blog-tags"><span>科技</span><span>商业</span></div>
+</a>
+
+<a class="blog-card" href="/zh-cn/blog/posts/everything-is-a-prompt/" data-title="万物皆 Prompt" data-summary="Skill 是经验的提示词，设计是审美的提示词，法律是社会的提示词。" data-date="2026-09-05" data-tags="AI,工作流">
+    <h3>万物皆 Prompt</h3>
+    <hr class="summary-divider"><div class="summary-text">Skill 是经验的提示词，设计是审美的提示词，法律是社会的提示词。</div>
+    <div class="blog-tags"><span>AI</span><span>工作流</span></div>
 </a>
 
 </div>
 
 <div class="pagination-shell" id="paginationShell">
     <a href="/zh-cn/blog/page/3/" class="page-nav">← 上一页</a>
-    <a href="/zh-cn/blog/" class="page-btn">1</a><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><span class="page-btn active">4</span>
-    <span class="page-btn" style="opacity:.3;cursor:default;">下一页 →</span>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="4" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <a href="/zh-cn/blog/" class="page-btn">1</a><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><span class="page-btn active">4</span><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><a href="/zh-cn/blog/page/6/" class="page-btn">6</a><a href="/zh-cn/blog/page/7/" class="page-btn">7</a><a href="/zh-cn/blog/page/8/" class="page-btn">8</a>
+    <a href="/zh-cn/blog/page/5/" class="page-nav">下一页 →</a>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 4 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();

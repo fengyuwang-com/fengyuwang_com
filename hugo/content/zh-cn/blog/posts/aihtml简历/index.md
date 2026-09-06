@@ -1,6 +1,7 @@
 ---
 title: "AIHTML简历"
-date: 2026-03-19
+date: 2026-03-19
+
 description: "绝对可以，而且是降维打击式解决。"
 slug: "aihtml简历"
 tags: ["技术", "工具"]
@@ -79,7 +80,7 @@ HTML 都是秒实现，而且永远对齐。
 不用懂代码，直接改文字就能用。
 排版永远不乱，颜值吊打 Word。
  
-html
+```html
   
 
 <!DOCTYPE html>
@@ -210,6 +211,7 @@ h2 {
 </div>
 </body>
 </html>
+```
  
  
  

@@ -4,22 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Palantir 本體論思路 | Fengyu WANG</title>
-    <meta name="description" content="Palantir 本體論思路 &#43; 用到你二手手機生意上 &#43; 过拟合問題 &#43; 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。">
+    <meta name="description" content="Palantir 本體論思路 &#43; 用到你二手手機生意上 &#43; 過擬合問題 &#43; 為什麼不能用死公式 全部串起來，説得又準又明白，直接能放進 Obsidian。">
     <link rel="canonical" href="/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/">
     <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/">
-    
-    
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,7 +32,7 @@
 <style>.hidden-trans{display:none!important}</style>
 </head>
 <body class="blog-static-page">
-    <div id="shared-subpage-navbar" data-section="blog"></div>
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/"></i></div>
     <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
     <section class="content-section">
         <div class="container">
@@ -61,20 +57,24 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>Palantir 本體論思路</h1>
     <div class="article-meta">
         <span class="article-date">2026-05-25</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">数据</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技術</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">數據</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商業</span>
     </div>
-    <div class="article-content"><p>Palantir 本體論思路 + 用到你二手手機生意上 + 过拟合問題 + 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。</p>
+    <div class="article-content"><p>Palantir 本體論思路 + 用到你二手手機生意上 + 過擬合問題 + 為什麼不能用死公式 全部串起來，説得又準又明白，直接能放進 Obsidian。</p>
 <p>Palantir 方法論與二手3C生意應用（個人知識庫）</p>
-<p>Palantir 的核心不是靠一個復杂數學函數去硬拟合所有數據，也不是靠大模型玄學，而是基于本體論构建知識圖谱：把現實世界裡真實存在的對象（如手機、客户、渠道、時間、天气、市場環境、新機動態等）定义為“本體”，再把它們之間真實存在的關係连接起來，形成一张多维度、可交叉關聯的網状結构。</p>
-<p>這套思路用到二手手機、平板、電脑回收與銷售上，就是把所有業務要素——機型、成色、電池、维修情况、回收價、售價、利潤、周轉天數、卖主類型、购买客户、渠道、時段、天气、新機發布、市場热度等——全部视為可關聯的節點，而不是孤立的Excel表格。係统的價值不在于建立一個万能預测公式，而在于看清事物之間的真實聯係，从而發現更優的收货、定價、銷售策略。</p>
-<p>同時必须注意：市場不存在永恒不变的規律，新機發布、AI功能普及、消費强弱、行業競爭变化都會打破原有模式。因此不能追求用一個固定函數去拟合所有歷史數據，否則必然出現过拟合——模型在歷史數據上极度精準，在新場景中完全失效。真正有效的做法是抓住當前阶段稳定有效的趋勢，動態调整規則，不迷信单一公式，不试圖用模型解释一切不可控的外部变化，最终以可执行的决策為目標，而不是追求完美的數據分析報表。</p>
+<p>Palantir 的核心不是靠一個復雜數學函數去硬擬合所有數據，也不是靠大模型玄學，而是基於本體論構建知識圖譜：把現實世界裡真實存在的對象（如手機、客户、渠道、時間、天氣、市場環境、新機動態等）定義為“本體”，再把它們之間真實存在的關係連接起來，形成一張多維度、可交叉關聯的網狀結構。</p>
+<p>這套思路用到二手手機、平板、電腦回收與銷售上，就是把所有業務要素——機型、成色、電池、維修情況、回收價、售價、利潤、周轉天數、賣主類型、購買客户、渠道、時段、天氣、新機發布、市場熱度等——全部視為可關聯的節點，而不是孤立的Excel表格。係統的價值不在於建立一個萬能預測公式，而在於看清事物之間的真實聯係，從而發現更優的收貨、定價、銷售策略。</p>
+<p>同時必須注意：市場不存在永恆不變的規律，新機發布、AI功能普及、消費強弱、行業競爭變化都會打破原有模式。因此不能追求用一個固定函數去擬合所有歷史數據，否則必然出現過擬合——模型在歷史數據上極度精準，在新場景中完全失效。真正有效的做法是抓住當前階段穩定有效的趨勢，動態調整規則，不迷信單一公式，不試圖用模型解釋一切不可控的外部變化，最終以可執行的決策為目標，而不是追求完美的數據分析報表。</p>
 </div>
 </article>
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>

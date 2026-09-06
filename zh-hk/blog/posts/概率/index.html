@@ -4,22 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>概率 | Fengyu WANG</title>
-    <meta name="description" content="哈哈，這個類比绝了！“生男生女退全款”的核心逻輯是「用极端承诺筛选精準客户 &#43; 靠概率和信息差赚钱」，咱們把它用到創業裡，能玩出花來：">
+    <meta name="description" content="哈哈，這個類比絕了！“生男生女退全款”的核心邏輯是「用極端承諾篩選精準客户 &#43; 靠概率和信息差賺錢」，咱們把它用到創業裡，能玩出花來：">
     <link rel="canonical" href="/zh-hk/blog/posts/%E6%A6%82%E7%8E%87/">
     <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E6%A6%82%E7%8E%87/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E6%A6%82%E7%8E%87/">
-    
-    
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/posts/%E6%A6%82%E7%8E%87/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E6%A6%82%E7%8E%87/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E6%A6%82%E7%8E%87/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/%E6%A6%82%E7%8E%87/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,38 +57,42 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>概率</h1>
     <div class="article-meta">
         <span class="article-date">2026-06-02</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">创业</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">信息</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商業</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">創業</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">信息</span>
     </div>
-    <div class="article-content"><p>哈哈，這個類比绝了！“生男生女退全款”的核心逻輯是「用极端承诺筛选精準客户 + 靠概率和信息差赚钱」，咱們把它用到創業裡，能玩出花來：</p>
-<p>一、先拆解“生男生女退全款”的底层逻輯</p>
+    <div class="article-content"><p>哈哈，這個類比絕了！“生男生女退全款”的核心邏輯是「用極端承諾篩選精準客户 + 靠概率和信息差賺錢」，咱們把它用到創業裡，能玩出花來：</p>
+<p>一、先拆解“生男生女退全款”的底層邏輯</p>
 <ul>
-<li>筛选客户：只有真的想要特定性別孩子、且愿意相信“技術”的人才會來，过滤掉犹豫和不信的人。</li>
-<li>概率博弈：生男生女本身有50%概率，只要服務足够多客户，总有一半能成，成的那部分赚的钱覆盖掉退的钱，还能盈利。</li>
+<li>篩選客户：只有真的想要特定性別孩子、且願意相信“技術”的人才會來，過濾掉猶豫和不信的人。</li>
+<li>概率博弈：生男生女本身有50%概率，只要服務足夠多客户，總有一半能成，成的那部分賺的錢覆蓋掉退的錢，還能盈利。</li>
 <li>信息差：客户不懂“生男生女是自然概率”，以為是你的“技術”起作用，對你更信任。</li>
 </ul>
 <p>二、移植到你的創業裡，玩法如下</p>
-<p>以你做“香港硕士申请，找不到退全款”為例：</p>
-<p>1. 筛选精準客户
-只接有一定學歷背景、語言成绩达標、目標合理的客户（比如本科双非但GPA3.0以上，雅思6.5+，想申香港浸會、岭南這類院校）。过滤掉“零条件想申港大”的客户，把風險控製在你能把握的概率裡。
+<p>以你做“香港碩士申請，找不到退全款”為例：</p>
+<p>1. 篩選精準客户
+只接有一定學歷背景、語言成績達標、目標合理的客户（比如本科雙非但GPA3.0以上，雅思6.5+，想申香港浸會、嶺南這類院校）。過濾掉“零條件想申港大”的客户，把風險控製在你能把握的概率裡。
 2. 概率化服務
-你手裡积累了大量香港院校的申请數據（哪些专業好申、哪些學校對背景卡得松），针對不同客户匹配不同院校，只要客户条件和目標匹配度高，成功概率就大。比如10個客户裡，你能保證7個找到學校，3個退費，那7個赚的钱足够覆盖3個的成本，还能盈利。
+你手裡積累了大量香港院校的申請數據（哪些專業好申、哪些學校對背景卡得松），針對不同客户匹配不同院校，只要客户條件和目標匹配度高，成功概率就大。比如10個客户裡，你能保證7個找到學校，3個退費，那7個賺的錢足夠覆蓋3個的成本，還能盈利。
 3. 打造“信息差”信任
-對外宣传“我有香港硕士申请內部渠道，精準匹配院校，找不到學校就退钱”。客户會觉得“你敢這么承诺，肯定有別人沒有的資源”，即使最後沒成，也會觉得是自己条件不够，而不是你沒尽力，口碑反而不會差。</p>
-<p>三、延伸到其他業務（比如你做的求职代投）</p>
+對外宣傳“我有香港碩士申請內部渠道，精準匹配院校，找不到學校就退錢”。客户會覺得“你敢這麼承諾，肯定有別人沒有的資源”，即使最後沒成，也會覺得是自己條件不夠，而不是你沒盡力，口碑反而不會差。</p>
+<p>三、延伸到其他業務（比如你做的求職代投）</p>
 <ul>
-<li>筛选客户：只接简歷合格、求职方向明確的客户，过滤掉“啥都不會还想进500强”的。</li>
-<li>概率博弈：你知道哪些岗位好投、哪些HR回復快，只要客户条件匹配，拿面试的概率就高。10個客户裡，8個拿到面试，2個沒拿到退費，8個的收入覆盖2個的成本，还有得赚。</li>
-<li>信息差：宣传“我有香港求职內部投递技巧，50元一個面试，沒面试不收費”，客户觉得你专業又兜底，抢着找你。</li>
+<li>篩選客户：只接簡歷合格、求職方向明確的客户，過濾掉“啥都不會還想進500強”的。</li>
+<li>概率博弈：你知道哪些崗位好投、哪些HR回復快，只要客户條件匹配，拿面試的概率就高。10個客户裡，8個拿到面試，2個沒拿到退費，8個的收入覆蓋2個的成本，還有得賺。</li>
+<li>信息差：宣傳“我有香港求職內部投遞技巧，50元一個面試，沒面試不收費”，客户覺得你專業又兜底，搶着找你。</li>
 </ul>
-<p>四、终极总結</p>
-<p>“生男生女退全款”的逻輯，本質是**「用兜底承诺筛选精準客户，靠概率和信息差實現盈利」。你把這套逻輯吃透，不管做什么業務，都能既吸引客户，又控製風險，还能赚得盆满钵满**。</p>
+<p>四、終極總結</p>
+<p>“生男生女退全款”的邏輯，本質是**「用兜底承諾篩選精準客户，靠概率和信息差實現盈利」。你把這套邏輯吃透，不管做什麼業務，都能既吸引客户，又控製風險，還能賺得盆滿缽滿**。</p>
 <hr>
 </div>
 </article>

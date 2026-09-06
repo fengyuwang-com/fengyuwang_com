@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CUDA 是護城河，還是一段能被翻譯的代碼？ | Fengyu WANG</title>
+    <meta name="description" content="語法是護城河的上沿，生態是河牀；翻譯器吃掉上沿，吃不掉河牀。">
+    <link rel="canonical" href="/zh-hk/blog/posts/cuda-moat/">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/cuda-moat/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/cuda-moat/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/cuda-moat/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/cuda-moat/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/cuda-moat/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/cuda-moat/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/cuda-moat/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<style>
+
+
+
+
+
+
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>CUDA 是護城河，還是一段能被翻譯的代碼？</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-05</span>
+        <span class="meta-sep">·</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">AI</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">芯片</span>
+    </div>
+    <div class="article-content"><p>先問第一個問題。如果有一個 AI，能瞬間把英偉達的 CUDA 翻譯成 ROCm、翻譯成英特爾、翻譯成蘋果的平台上，CUDA 還是護城河嗎？</p>
+<p>翻的只是語法。真有這種翻譯器，它吃掉的是第一層：代碼移植的力氣。標準推理的代碼今天已經搬得動了。可你把千卡訓練翻過去試試——FlashAttention、TensorRT、NCCL 樹形通信、斷點續訓，代碼是生成了，誰來為生產事故負責？誰的庫調了十五年？誰的卡明年能拿到十萬張？護城河的上沿是語法，河牀是二十年的庫、工具鏈、通信棧和六百萬人的肌肉記憶。翻譯器能讓&quot;AMD 跑 CUDA 代碼&quot;從難變易，不能讓&quot;AMD 平台等於 CUDA 平台&quot;。</p>
+<p>第二個問題。那 Python 呢？Python 要是能一秒轉成 TS，Python 的護城河在哪裏？</p>
+<p>同一個答案。語法可以被翻譯，生態不能。Python 的城不在語法裏，在 NumPy 裏，在你順手就能裝的那個世界裏。</p>
+<p>第三個問題。雲廠都在自研芯片，把客户鎖進自己的 TPU、自己的 Trainium，這條路走得通嗎？</p>
+<p>鎖不住要跑的人。你想把 Anthropic 鎖在谷歌雲上——Anthropic 肯定多線下注，TPU、Trainium、GPU 三條棧並行，你想鎖它的後果就是它自己會跑，去找通用方案。至於各家芯片互不相通，這世界上能有四五個蘋果、七八個蘋果一起整合嗎？不會有。只會有四五個各自圈一塊雲、芯片互不連通、但都得向 PyTorch 低頭的中間態怪物。怪物們互相咬，英偉達站在它們共同低頭的那一層收税。</p>
+<p>最後一個小問題：那英偉達為什麼不降價？降了價，天下無敵。</p>
+<p>降了價，天下就沒了。它賣的不是一個芯片的差價，是&quot;貴=確定性&quot;的心智：不踩坑，通信棧穩，出了事有人負責。降價一旦成為常態，客户就開始按性價比審視它，護城河從信仰降級成參數對比——那是所有對手做夢都想要的事。</p>
+<p>所以 CUDA 會不會死？語法那層，已經在死了。河牀還在，收費站就還在，只是以後收的不是改寫費，是可靠訓練費和生態税。</p>
+</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
+</body>
+</html>
+

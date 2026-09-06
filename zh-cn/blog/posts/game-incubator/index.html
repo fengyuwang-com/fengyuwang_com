@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>没有游戏，就没有微信和 CUDA | Fengyu WANG</title>
+    <meta name="description" content="游戏是孵化器；孵化器里的东西，往往不是孵化者亲手接生的。">
+    <link rel="canonical" href="/zh-cn/blog/posts/game-incubator/">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/game-incubator/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/game-incubator/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/game-incubator/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/game-incubator/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/game-incubator/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/game-incubator/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/game-incubator/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<style>
+
+
+
+
+
+
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>没有游戏，就没有微信和 CUDA</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-05</span>
+        <span class="meta-sep">·</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">科技</span>
+    </div>
+    <div class="article-content"><p>腾讯如果没游戏,当年可能做不出微信;英伟达如果没有游戏,也不会有 CUDA。游戏好像是一个孵化器,你要等着它产生牛逼的技术。</p>
+<p>英伟达这条线最清楚。游戏卡每年数百万颗地卖,CUDA 2006 年就装进了 GeForce——用游戏市场摊薄研发成本,用玩家培养装机基数,然后等一个真正用得着它的负载出现。老黄当年押的是科学计算,不是深度学习;他并没有预见到那一天。</p>
+<p>而 AlexNet 恰恰是学界替他证出来的:两块游戏卡,在卧室里,把&quot;显卡能干深度学习&quot;这件事直接炸了出来。显卡本来是打游戏的,为什么这个发现在学术会议上诞生,而不是老黄自己的实验室?是偶然,还是必然?</p>
+<p>历史经常这样:孵化器里的东西,不是孵化者亲手接生的。腾讯的游戏养出了社交平台,玩家的钱养出了 AI 时代的地基。你以为你在为娱乐付费,其实你在给下一个时代交税。</p>
+<p>有人说,这是幸存者偏差——游戏公司大多什么也没孵出来。对,所以孵化器的准确读法是:游戏不保证孵化;但技术史上那几次大招,账都是游戏付的。</p>
+<p>别小看任何一个&quot;不务正业&quot;的现金流。今天在打游戏的人,明天可能在替你训练模型。</p>
+</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    
+</body>
+</html>
+

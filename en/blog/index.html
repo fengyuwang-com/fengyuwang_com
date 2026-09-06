@@ -6,27 +6,16 @@
     <title>Blog | Fengyu WANG</title>
     
     <link rel="canonical" href="/en/blog/">
-<meta property="og:site_name" content="Fengyu WANG">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog | Fengyu WANG">
-<meta property="og:description" content="Articles on market strategy, value investing, and software engineering.">
-<meta property="og:url" content="https://fengyuwang.com/en/blog/">
-<meta property="og:image" content="/assets/img/logo.png">
     <link rel="alternate" hreflang="en" href="/en/blog/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
-    
-    
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -75,10 +64,6 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .sort-shell select:focus { border-color:#0071e3; }
 body[data-theme="dark"] .sort-shell select { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
-/* Dark mode additions */
-body[data-theme="dark"] .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
-body[data-theme="dark"] .tag-cloud span { background:rgba(41,151,255,.14); color:#6b9aff; }
-body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24); }
 .tag-cloud { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
 .tag-cloud span { display:inline-flex; padding:4px 12px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.8rem; font-weight:600; cursor:pointer; }
 .tag-cloud span:hover { background:rgba(0,113,227,.12); }
@@ -87,7 +72,7 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
-</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>Blog</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud" id="tagCloud"></div>
@@ -101,95 +86,89 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/en/blog/posts/web3-deep-research/" data-title="Web3 Deep Research &amp; Analysis" data-summary="A comprehensive deep-dive into the Web3 industry—core concepts, global regulatory frameworks, business value analysis, enterprise adoption strategies, and five in-depth research topics." data-date="2026-07-05" data-tags="Web3,Blockchain,Cryptocurrency,RWA,DeFi">
-    <h3>Web3 Deep Research &amp; Analysis</h3>
-    <hr class="summary-divider"><div class="summary-text">A comprehensive deep-dive into the Web3 industry—core concepts, global regulatory frameworks, business value analysis, enterprise adoption strategies, and five in-depth research topics.</div>
-    <div class="blog-tags"><span>Web3</span><span>Blockchain</span><span>Cryptocurrency</span><span>RWA</span><span>DeFi</span></div>
+<a class="blog-card" href="/en/blog/posts/cost-of-yes/" data-title="Yes, Yes, Yes — the Most Expensive Labor Cost" data-summary="The Duibao-type personality: agreeableness isn&#39;t a flaw — it&#39;s the whole person." data-date="2026-09-06" data-tags="Management,AI,Hiring">
+    <h3>Yes, Yes, Yes — the Most Expensive Labor Cost</h3>
+    <hr class="summary-divider"><div class="summary-text">The Duibao-type personality: agreeableness isn&#39;t a flaw — it&#39;s the whole person.</div>
+    <div class="blog-tags"><span>Management</span><span>AI</span><span>Hiring</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/" data-title="Why Low-End Customers Keep Finding You" data-summary="If a product or service consistently attracts low-quality customers with limited budgets, the problem is usually not the customers. It is the way the product is presented." data-date="2026-06-12" data-tags="Business,Marketing,Self">
-    <h3>Why Low-End Customers Keep Finding You</h3>
-    <hr class="summary-divider"><div class="summary-text">If a product or service consistently attracts low-quality customers with limited budgets, the problem is usually not the customers. It is the way the product is presented.</div>
-    <div class="blog-tags"><span>Business</span><span>Marketing</span><span>Self</span></div>
+<a class="blog-card" href="/en/blog/posts/it-was-avoidable/" data-title="This Didn&#39;t Have to Happen" data-summary="A 90-minute window; a 5-second run." data-date="2026-09-06" data-tags="Society,Institutions">
+    <h3>This Didn&#39;t Have to Happen</h3>
+    <hr class="summary-divider"><div class="summary-text">A 90-minute window; a 5-second run.</div>
+    <div class="blog-tags"><span>Society</span><span>Institutions</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/" data-title="Protecting Trade Secrets with AI-Generated Code" data-summary="When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface, you keep the verification logic and keys." data-date="2026-06-08" data-tags="Business,Tech,Tools">
-    <h3>Protecting Trade Secrets with AI-Generated Code</h3>
-    <hr class="summary-divider"><div class="summary-text">When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface, you keep the verification logic and keys.</div>
-    <div class="blog-tags"><span>Business</span><span>Tech</span><span>Tools</span></div>
+<a class="blog-card" href="/en/blog/posts/do-the-math/" data-title="The Rich Are Rich Because They Do the Math" data-summary="Not cleverness. Starting." data-date="2026-09-06" data-tags="Rationality,Consumption">
+    <h3>The Rich Are Rich Because They Do the Math</h3>
+    <hr class="summary-divider"><div class="summary-text">Not cleverness. Starting.</div>
+    <div class="blog-tags"><span>Rationality</span><span>Consumption</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E6%A6%82%E7%8E%87/" data-title="Probability and Business Promises" data-summary="The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy." data-date="2026-06-02" data-tags="Business,Startup,Information">
-    <h3>Probability and Business Promises</h3>
-    <hr class="summary-divider"><div class="summary-text">The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy.</div>
-    <div class="blog-tags"><span>Business</span><span>Startup</span><span>Information</span></div>
+<a class="blog-card" href="/en/blog/posts/attention-tax/" data-title="The Poor Pay an Attention Tax" data-summary="A tax with no collector, paid by everyone." data-date="2026-09-06" data-tags="Society,Economics">
+    <h3>The Poor Pay an Attention Tax</h3>
+    <hr class="summary-divider"><div class="summary-text">A tax with no collector, paid by everyone.</div>
+    <div class="blog-tags"><span>Society</span><span>Economics</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/" data-title="The Palantir Ontological Approach" data-summary="The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. Instead, it builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships." data-date="2026-05-25" data-tags="Tech,Data,Business">
-    <h3>The Palantir Ontological Approach</h3>
-    <hr class="summary-divider"><div class="summary-text">The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. Instead, it builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships.</div>
-    <div class="blog-tags"><span>Tech</span><span>Data</span><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/cash-in-hand/" data-title="The Money That Actually Lands" data-summary="The income statement is an essay. A passbook is not." data-date="2026-09-06" data-tags="Investing,Accounting">
+    <h3>The Money That Actually Lands</h3>
+    <hr class="summary-divider"><div class="summary-text">The income statement is an essay. A passbook is not.</div>
+    <div class="blog-tags"><span>Investing</span><span>Accounting</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/" data-title="Pricing Strategy Guide for Every Platform" data-summary="Pricing is not cost-plus. It is a dynamic decision based on channels, customer psychology, and competitive landscape. Different platforms have completely different user behaviours that require different pricing strategies." data-date="2026-05-25" data-tags="Business,Startup,Platform">
-    <h3>Pricing Strategy Guide for Every Platform</h3>
-    <hr class="summary-divider"><div class="summary-text">Pricing is not cost-plus. It is a dynamic decision based on channels, customer psychology, and competitive landscape. Different platforms have completely different user behaviours that require different pricing strategies.</div>
-    <div class="blog-tags"><span>Business</span><span>Startup</span><span>Platform</span></div>
+<a class="blog-card" href="/en/blog/posts/sales-existence/" data-title="The Existence of Sales" data-summary="Sales isn&#39;t the disease — it&#39;s the disease setting off alarms." data-date="2026-09-06" data-tags="Business,Organizations">
+    <h3>The Existence of Sales</h3>
+    <hr class="summary-divider"><div class="summary-text">Sales isn&#39;t the disease — it&#39;s the disease setting off alarms.</div>
+    <div class="blog-tags"><span>Business</span><span>Organizations</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/" data-title="Workplace Survival to Entrepreneurship" data-summary="The transition from workplace survival to independent entrepreneurship is essentially an upgrade in cognition. What most people accumulate at work is the ability to do a job well, not the ability to run a business." data-date="2026-05-23" data-tags="Career,Startup,Self">
-    <h3>Workplace Survival to Entrepreneurship</h3>
-    <hr class="summary-divider"><div class="summary-text">The transition from workplace survival to independent entrepreneurship is essentially an upgrade in cognition. What most people accumulate at work is the ability to do a job well, not the ability to run a business.</div>
-    <div class="blog-tags"><span>Career</span><span>Startup</span><span>Self</span></div>
+<a class="blog-card" href="/en/blog/posts/adjusted-price/" data-title="The Crime of Forward-Adjusted Prices" data-summary="It takes no villain to rewrite history — just a default parameter." data-date="2026-09-06" data-tags="Investing,Data">
+    <h3>The Crime of Forward-Adjusted Prices</h3>
+    <hr class="summary-divider"><div class="summary-text">It takes no villain to rewrite history — just a default parameter.</div>
+    <div class="blog-tags"><span>Investing</span><span>Data</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/" data-title="Open Source Tools That Replace Commercial Software" data-summary="There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems." data-date="2026-05-22" data-tags="Tech,Tools">
-    <h3>Open Source Tools That Replace Commercial Software</h3>
-    <hr class="summary-divider"><div class="summary-text">There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems.</div>
-    <div class="blog-tags"><span>Tech</span><span>Tools</span></div>
+<a class="blog-card" href="/en/blog/posts/refuse-to-change/" data-title="Refuse to Change, and It&#39;s Over" data-summary="Two men named Wang An, nine centuries apart, one diagnosis." data-date="2026-09-06" data-tags="History,Business">
+    <h3>Refuse to Change, and It&#39;s Over</h3>
+    <hr class="summary-divider"><div class="summary-text">Two men named Wang An, nine centuries apart, one diagnosis.</div>
+    <div class="blog-tags"><span>History</span><span>Business</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/" data-title="The Definitive Technical Research Workflow" data-summary="The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure." data-date="2026-05-19" data-tags="Tech,Tools,Management">
-    <h3>The Definitive Technical Research Workflow</h3>
-    <hr class="summary-divider"><div class="summary-text">The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure.</div>
-    <div class="blog-tags"><span>Tech</span><span>Tools</span><span>Management</span></div>
+<a class="blog-card" href="/en/blog/posts/rearview-mirror/" data-title="Rearview-Mirror Epistemology" data-summary="Before the cards are turned, every judgment is a rearview mirror." data-date="2026-09-06" data-tags="Investing,Epistemology">
+    <h3>Rearview-Mirror Epistemology</h3>
+    <hr class="summary-divider"><div class="summary-text">Before the cards are turned, every judgment is a rearview mirror.</div>
+    <div class="blog-tags"><span>Investing</span><span>Epistemology</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/" data-title="Businesses with Long-Term High Margins" data-summary="Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature. Technology changes the way these needs are met, but it does not change the needs themselves." data-date="2026-05-19" data-tags="Business,Economy,Society">
-    <h3>Businesses with Long-Term High Margins</h3>
-    <hr class="summary-divider"><div class="summary-text">Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature. Technology changes the way these needs are met, but it does not change the needs themselves.</div>
-    <div class="blog-tags"><span>Business</span><span>Economy</span><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/open-source-immortality/" data-title="Open Source Is Immortality" data-summary="Ten nines of reliability, and the flakiest component is still me." data-date="2026-09-06" data-tags="Engineering,Open Source,Life">
+    <h3>Open Source Is Immortality</h3>
+    <hr class="summary-divider"><div class="summary-text">Ten nines of reliability, and the flakiest component is still me.</div>
+    <div class="blog-tags"><span>Engineering</span><span>Open Source</span><span>Life</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/" data-title="Using PDCA to Get Better AI Results" data-summary="The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process." data-date="2026-05-12" data-tags="Tech,Management,Tools">
-    <h3>Using PDCA to Get Better AI Results</h3>
-    <hr class="summary-divider"><div class="summary-text">The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.</div>
-    <div class="blog-tags"><span>Tech</span><span>Management</span><span>Tools</span></div>
+<a class="blog-card" href="/en/blog/posts/dog-where/" data-title="Don&#39;t Ask Where the Money Went, Ask Where the Dog Is" data-summary="The Dog Ate My Money Theorem: from a punchline to a universal formula." data-date="2026-09-06" data-tags="Investing,Economics">
+    <h3>Don&#39;t Ask Where the Money Went, Ask Where the Dog Is</h3>
+    <hr class="summary-divider"><div class="summary-text">The Dog Ate My Money Theorem: from a punchline to a universal formula.</div>
+    <div class="blog-tags"><span>Investing</span><span>Economics</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" data-title="First Principles of Making Money" data-summary="The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale using leverage instead of linear accumulation." data-date="2026-05-09" data-tags="Business,Philosophy,Self">
-    <h3>First Principles of Making Money</h3>
-    <hr class="summary-divider"><div class="summary-text">The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale using leverage instead of linear accumulation.</div>
-    <div class="blog-tags"><span>Business</span><span>Philosophy</span><span>Self</span></div>
-</a>
-
-<a class="blog-card" href="/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/" data-title="Surface-Level Experience vs. Core Capabilities" data-summary="In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, protect the core layer as your competitive moat." data-date="2026-05-06" data-tags="Career,Self,Management">
-    <h3>Surface-Level Experience vs. Core Capabilities</h3>
-    <hr class="summary-divider"><div class="summary-text">In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, protect the core layer as your competitive moat.</div>
-    <div class="blog-tags"><span>Career</span><span>Self</span><span>Management</span></div>
+<a class="blog-card" href="/en/blog/posts/four-filters/" data-title="Be Greedy When Others Are Fearful, Written as Code" data-summary="Fear isn&#39;t a day; it&#39;s a structure." data-date="2026-09-06" data-tags="Investing,Quant">
+    <h3>Be Greedy When Others Are Fearful, Written as Code</h3>
+    <hr class="summary-divider"><div class="summary-text">Fear isn&#39;t a day; it&#39;s a structure.</div>
+    <div class="blog-tags"><span>Investing</span><span>Quant</span></div>
 </a>
 
 </div>
 
 <div class="pagination-shell" id="paginationShell">
     <span class="page-btn" style="opacity:.3;cursor:default;">← Previous</span>
-    <span class="page-btn active">1</span><a href="/en/blog/page/2/" class="page-btn">2</a><a href="/en/blog/page/3/" class="page-btn">3</a><a href="/en/blog/page/4/" class="page-btn">4</a>
+    <span class="page-btn active">1</span><a href="/en/blog/page/2/" class="page-btn">2</a><a href="/en/blog/page/3/" class="page-btn">3</a><a href="/en/blog/page/4/" class="page-btn">4</a><a href="/en/blog/page/5/" class="page-btn">5</a><a href="/en/blog/page/6/" class="page-btn">6</a><a href="/en/blog/page/7/" class="page-btn">7</a><a href="/en/blog/page/8/" class="page-btn">8</a>
     <a href="/en/blog/page/2/" class="page-nav">Next →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="4" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 4 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
