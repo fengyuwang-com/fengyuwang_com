@@ -41,6 +41,7 @@
 			background-size: cover; background-position: center;
 		}
 		.tile-hero .tile-copy, .tile-hero .tile-ctas { position: relative; z-index: 1; }
+		.tile-hero h2 { font-size: 2.6rem; }
 		.tile-copy { max-width: 760px; margin: 0 auto; text-wrap: balance; }
 		.tile-copy h2 {
 			font-size: 3.25rem; font-weight: 600; line-height: 1.1;
@@ -90,6 +91,9 @@
 			border-radius: 14px 14px 0 0;
 			box-shadow: 0 24px 70px rgba(15,23,42,.22);
 		}
+		.tile-shot-full { max-width: 860px; text-align: center; }
+		.tile-shot-full img { margin: 0 auto; max-width: 100%; }
+		.tile-shot-duo .tile-shot { width: 100%; }
 		.tile-shot-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; }
 		body[data-theme="dark"] .tile-shot img { box-shadow: 0 24px 70px rgba(0,0,0,.6); }
 		@media (max-width: 734px) {
@@ -97,9 +101,21 @@
 			.tile-shot-duo { grid-template-columns: 1fr; gap: 16px; }
 			.tile-shot-duo .tile-shot + .tile-shot { display: none; }
 		}
+		/* blog image cards */
+		.tile-blog-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; }
+		.blog-card { text-decoration: none; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 34px rgba(15,23,42,.10); transition: transform .2s, box-shadow .2s; }
+		.blog-card:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(15,23,42,.16); }
+		.blog-card-cover { height: 200px; background-size: cover; background-position: center; }
+		.blog-card-body { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
+		.blog-card-body span { font-size: 1.05rem; font-weight: 600; color: #1d1d1f; }
+		.blog-card-body em { font-style: normal; color: #0066cc; font-weight: 600; }
+		body[data-theme="dark"] .blog-card { background: #0f172a; }
+		body[data-theme="dark"] .blog-card-body span { color: #e5ecf4; }
+		body[data-theme="dark"] .blog-card-body em { color: #7cc0ff; }
+		@media (max-width: 734px) { .tile-blog-duo { grid-template-columns: 1fr; max-width: 420px; } }
 		/* about tile */
-		.tile-about-photo { margin: 26px auto 0; max-width: 300px; }
-		.tile-about-photo img { width: 100%; height: auto; border-radius: 18px; display: block; }
+		.tile-about-photo { margin: 26px auto 0; max-width: 360px; }
+		.tile-about-photo img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: center 20%; border-radius: 18px; display: block; }
 		.tile-about-photo figcaption { margin-top: 10px; color: #6e6e73; font-size: .85rem; }
 		/* dark mode */
 		body[data-theme="dark"] .tiles-home { background: #0a0e1a; }
@@ -125,8 +141,8 @@
 	<section class="tile tile-hero tile-dark">
 		<div class="tile-bg" style="background-image:url('../assets/img/slider/slider-1.jpg');"></div>
 		<div class="tile-copy">
-			<h2>理性 · 客观 · 不坑人</h2>
-			<p class="tile-subhead">市场策略、价值投资与软件工程——三个领域，一套底层逻辑。</p>
+			<h2>市场策略 · 价值投资 · 软件工程</h2>
+			<p class="tile-subhead">识别真需求 → 创造价值 → 系统复制——三个领域，一个底层链条。</p>
 		</div>
 		<div class="tile-ctas">
 			<a class="default-btn" href="#tracks">探索三条主线</a>
@@ -144,7 +160,7 @@
 			<a class="default-btn" href="/zh-cn/fenginvest.html">了解更多</a>
 			<a class="tile-link" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener noreferrer">看开源代码<span class="lt-arrow">›</span></a>
 		</div>
-		<div class="tile-shot">
+		<div class="tile-shot tile-shot-full">
 			<img src="../assets/img/shots/fenginvest-report-narrative-desktop.png" alt="FengInvest 七层分析报告界面" loading="lazy">
 		</div>
 	</section>
@@ -190,7 +206,7 @@
 			</div>
 			<div class="tile-shot">
 				<div class="tile-shot-duo">
-					<div class="tile-shot" style="margin:0;"><img src="../assets/img/shots/fengmedia-desktop.png" alt="FengMedia 内容生产线" loading="lazy"></div>
+					<div class="tile-shot" style="margin:0;"><img src="../assets/img/shots/fengmedia-projects-desktop.png" alt="FengMedia 内容生产线" loading="lazy"></div>
 					<div class="tile-shot" style="margin:0;"><img src="../assets/img/shots/flygo-desktop.png" alt="FlyGo 服务器管理面板" loading="lazy"></div>
 				</div>
 			</div>
@@ -203,10 +219,15 @@
 			<h2>洞察与思考</h2>
 			<p class="tile-subhead">来自真实项目与决策的框架，而非抽象理论。</p>
 		</div>
-		<div class="tile-post-list">
-			<a href="/zh-cn/blog/posts/sales-existence/">销售存在论 <span class="post-arrow">›</span></a>
-			<a href="/zh-cn/blog/posts/rearview-mirror/">后视镜认识论 <span class="post-arrow">›</span></a>
-			<a href="/zh-cn/blog/posts/four-filters/">把别人恐慌我贪婪写成代码 <span class="post-arrow">›</span></a>
+		<div class="tile-shot tile-blog-duo">
+			<a class="blog-card" href="/zh-cn/blog/posts/sales-existence/">
+				<div class="blog-card-cover" style="background-image:url('../assets/img/blog-card.jpg');"></div>
+				<div class="blog-card-body"><span>销售存在论</span><em>›</em></div>
+			</a>
+			<a class="blog-card" href="/zh-cn/blog/posts/rearview-mirror/">
+				<div class="blog-card-cover" style="background-image:url('../assets/img/linkedin-card.jpg');"></div>
+				<div class="blog-card-body"><span>后视镜认识论</span><em>›</em></div>
+			</a>
 		</div>
 		<div class="tile-ctas">
 			<a class="tile-link" href="/zh-cn/blog/">浏览全部文章<span class="lt-arrow">›</span></a>
