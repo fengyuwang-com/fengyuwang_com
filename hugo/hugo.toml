@@ -31,7 +31,7 @@ disableKinds = ["home", "sitemap", "robotsTXT", "404"]
   tag = "tags"
 
 [outputs]
-  section = ["HTML", "RSS"]
+  section = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
   home = ["HTML"]
 

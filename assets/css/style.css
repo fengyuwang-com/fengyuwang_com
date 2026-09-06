@@ -3567,3 +3567,12 @@ blockquote::after, .blockquote::after {
 .back-to-top:hover{background:#0062cc}
 body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}
 body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}
+
+/* ---- 暗色模式对比度修复 (2026-09-07 全站审计) ---- */
+blockquote, .blockquote { border-radius: 16px; }
+body[data-theme="dark"] blockquote, body[data-theme="dark"] .blockquote { background-color: #1e293b; }
+body[data-theme="dark"] blockquote::before, body[data-theme="dark"] .blockquote::before { color: rgba(148,163,184,.12); }
+body[data-theme="dark"] p { color: #9fb0c3; }
+body[data-theme="dark"] .default-btn-one { color: #e5ecf4; border-color: rgba(148,163,184,.45); }
+body[data-theme="dark"] .default-btn-one:hover { color: #0a0e1a; background-color: #e5ecf4; border-color: #e5ecf4; }
+body[data-theme="dark"] code { color: #f9a8c9; }
