@@ -9,17 +9,13 @@
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
     
     
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,7 +57,11 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>第一性原理</h1>
@@ -70,7 +70,30 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
         <span class="meta-sep">·</span>
         <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">哲学</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">自我</span>
     </div>
-    <div class="article-content"><p>赚钱的第一性原理是创造价值，不是出卖时间。 创造价值的第一性原理是解决问题，不是提供劳动。 解决问题的第一性原理是识别真需求，不是自我感动。 识别真需求的第一性原理是实践反馈，不是闭门造车。 实践反馈的第一性原理是快速迭代，不是仔细打磨。 快速迭代的第一性原理是验证模型，不是为了交付。 验证模型的第一性原理是为了系统复制，而不是个人苦干。 系统复制的第一性原理是杠杆思维，不是线性积累。</p>
+    <div class="article-content"><p>第一性原理这个词被讲烂了，多数人拿它当口号喊。我把它当成拆解工具来用：对一件事不断问「它的底层是什么」，一层一层往下拆，拆到不能再拆为止。下面这条链，就是我拆「赚钱」拆出来的八层。</p>
+<h2 id="这条链本身">这条链本身</h2>
+<p>赚钱的第一性原理是创造价值，不是出卖时间。
+创造价值的第一性原理是解决问题，不是提供劳动。
+解决问题的第一性原理是识别真需求，不是自我感动。
+识别真需求的第一性原理是实践反馈，不是闭门造车。
+实践反馈的第一性原理是快速迭代，不是仔细打磨。
+快速迭代的第一性原理是验证模型，不是为了交付。
+验证模型的第一性原理是系统复制，不是个人苦干。
+系统复制的第一性原理是杠杆思维，不是线性积累。</p>
+<h2 id="每一层的意思">每一层的意思</h2>
+<p><strong>赚钱 ← 创造价值。</strong> 钱是价值的回声。你按月拿工资，本质是把时间批发给雇主，时间卖完就没了；创造价值的人，东西留在市场上，睡着了也在产生回声。</p>
+<p><strong>创造价值 ← 解决问题。</strong> 没人付钱给「价值」这个抽象名词，人们付钱给「我的麻烦没了」这个具体瞬间。你不能交付价值，你只能解决一个一个问题。</p>
+<p><strong>解决问题 ← 识别真需求。</strong> 这是最容易断的一层。大部分人勤勤恳恳地解决一个不存在的问题——自己感动自己。判断真需求只有一条标准：对方有没有为这个问题花过时间、花过钱、或者忍过疼。</p>
+<p><strong>识别真需求 ← 实践反馈。</strong> 真需求不是想出来的，是撞出来的。坐在屋里分析市场，分析出来的全是自己的偏见。去接触十个真实的人，比读十份报告有用。</p>
+<p><strong>实践反馈 ← 快速迭代。</strong> 反馈要来得快才有用。半年打磨一个完美方案再上市场，等于半年才拿一次反馈，错一次就是半年。一周试一版，错七次也才一个月。</p>
+<p><strong>快速迭代 ← 验证模型。</strong> 迭代不是为了把东西做出来，是为了验证「这个模型能不能成立」。每一版都是在问市场：方向对不对？对了就加注，错了就止损。</p>
+<p><strong>验证模型 ← 系统复制。</strong> 一个模型验证通过了，别急着亲自干到死。一个人干是加法，一套系统干是乘法。把验证过的动作写成流程，让不懂的人照做也能出七分的结果，这才叫模型成立。</p>
+<p><strong>系统复制 ← 杠杆思维。</strong> 最后一层是思维方式：你的每一分投入，有没有放大器？代码、内容、流程、资本、别人的时间，都是杠杆。线性积累就是你干一天有一天的钱，杠杆思维是你干一天，铺出未来一百天的管道。</p>
+<h2 id="怎么用">怎么用</h2>
+<p>拿你手头正在做的事，从最后一行倒着往上验：它有杠杆吗？没有，它是加法。能复制吗？不能，它绑死在你身上。模型验证过吗？没验证过，你在赌。迭代够快吗？不快，反馈太贵。有真实反馈吗？没有，你在闭门造车。需求是真的吗？不是，你在自我感动。解决的是问题吗？不是，你只提供了劳动。那你赚的钱，本质上就是卖时间。</p>
+<h2 id="链会断在哪">链会断在哪</h2>
+<p>我的观察：大部分人断在第三层（自我感动式需求）和第六层（为了交付而交付）。前者是没出门，后者是没敢停。整条链八层，断任何一层，上面的全是空中楼阁——所以检查的时候要倒着查，从钱往回找断点，而不是从愿景往前猜。</p>
+<p>一句话总结：第一性原理不是让你从零发明什么，而是让你诚实地承认——你现在赚的钱，到底来自哪一层。</p>
 </div>
 </article>
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>

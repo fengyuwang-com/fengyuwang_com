@@ -9,17 +9,13 @@
     <link rel="alternate" hreflang="en" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
-    
-    
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,7 +57,11 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/en/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>First Principles of Making Money</h1>
@@ -70,15 +70,30 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
         <span class="meta-sep">·</span>
         <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Business</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Philosophy</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Self</span>
     </div>
-    <div class="article-content"><p>The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale.</p>
+    <div class="article-content"><p>People throw the phrase &ldquo;first principles&rdquo; around as a slogan. I treat it as a tool for dissection: keep asking &ldquo;what is this built on,&rdquo; layer by layer, until you hit bedrock. The chain below is what I got when I dissected &ldquo;making money&rdquo; that way. Eight layers.</p>
+<h2 id="the-chain-itself">The chain itself</h2>
 <p>The first principle of making money is creating value, not selling time.
-The first principle of creating value is solving problems, not providing cheap labour.
+The first principle of creating value is solving problems, not providing labour.
 The first principle of solving problems is identifying real needs, not self-indulgence.
 The first principle of identifying real needs is practical feedback, not working in isolation.
 The first principle of practical feedback is fast iteration, not polishing to perfection.
-The first principle of fast iteration is validating the model, not making deliveries.
-The first principle of validating the model is building for scale, not grinding alone.
-The first principle of scaling is leverage thinking, not linear accumulation.</p>
+The first principle of fast iteration is validating the model, not shipping for its own sake.
+The first principle of validating the model is systemising it, not grinding alone.
+The first principle of systemising is leverage, not linear accumulation.</p>
+<h2 id="what-each-layer-means">What each layer means</h2>
+<p><strong>Money ← value.</strong> Money is the echo of value. A salary is time sold at wholesale: when the time runs out, so does the income. Created value stays in the market and keeps echoing while you sleep.</p>
+<p><strong>Value ← problems.</strong> Nobody pays for the abstract noun &ldquo;value&rdquo;. People pay for the concrete moment when their problem disappears. You cannot deliver value; you can only solve problems, one at a time.</p>
+<p><strong>Problems ← real needs.</strong> This is where the chain breaks most often. Most people diligently solve a problem that does not exist — they move themselves to tears. There is exactly one test for a real need: has the other party spent time, money, or pain on it already?</p>
+<p><strong>Real needs ← feedback.</strong> Real needs are not thought up; they are collided with. Analysing the market from your desk produces your own biases. Talk to ten real people; it beats reading ten reports.</p>
+<p><strong>Feedback ← fast iteration.</strong> Feedback is only useful when it arrives fast. Polish a perfect plan for six months and you get one round of feedback every half-year — one mistake costs half a year. Ship a version a week and even seven mistakes cost you a month.</p>
+<p><strong>Iteration ← model validation.</strong> Iterating is not about getting the thing built; it is about testing whether the model holds. Every version asks the market one question: is the direction right? If yes, double down. If no, cut losses.</p>
+<p><strong>Validation ← systems.</strong> Once a model is validated, do not rush to do everything yourself. One person working is addition; a system working is multiplication. Write the validated moves into a process so that someone who does not understand the whole thing can still produce a seven-out-of-ten result. Only then does the model actually hold.</p>
+<p><strong>Systems ← leverage.</strong> The final layer is a way of thinking: does every unit of your effort have an amplifier? Code, content, processes, capital, other people&rsquo;s time — these are levers. Linear accumulation is earning one day&rsquo;s pay for one day&rsquo;s work. Leverage is working one day and laying pipe for the next hundred.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<p>Take whatever you are working on right now and audit it bottom-up, from the last line backwards. Does it have leverage? If not, it is addition. Can it be systemised? If not, it is chained to your body. Was the model validated? If not, you are gambling. Is iteration fast? If not, feedback is too expensive. Is there real feedback? If not, you are working in isolation. Is the need real? If not, you are moving yourself. Does it solve a problem? If not, you are only selling labour. And then the money you make is, in essence, just your time, sold.</p>
+<h2 id="where-the-chain-breaks">Where the chain breaks</h2>
+<p>From what I have seen, most people break at layer three (imagined needs) and layer six (shipping for its own sake). The first is never leaving the room; the second is never daring to stop. Break any one of the eight layers and everything above it floats in the air — so audit backwards, from the money down to find the break, instead of guessing forwards from the vision.</p>
+<p>One sentence to sum up: first principles are not about inventing something from zero. They are about honestly admitting which layer your money actually comes from.</p>
 </div>
 </article>
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>

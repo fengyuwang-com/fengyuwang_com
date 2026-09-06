@@ -5,7 +5,7 @@ description: "The methodology programmers develop through debugging and writing 
 slug: "程序员解决问题的完整思维pipeline"
 tags: ["Tech", "Programming", "Tools"]
 draft: false
-translationKey: "程序员解决问题的完整思维pipeline"
+translationKey: "程序员解决问题的完整思维流程"
 ---
 
 The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.

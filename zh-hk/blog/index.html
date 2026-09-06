@@ -6,27 +6,16 @@
     <title>博客 | Fengyu WANG</title>
     
     <link rel="canonical" href="/zh-hk/blog/">
-<meta property="og:site_name" content="Fengyu WANG">
-<meta property="og:locale" content="zh_HK">
-<meta property="og:type" content="website">
-<meta property="og:title" content="博客 | Fengyu WANG">
-<meta property="og:description" content="市場策略、價值投資與軟件工程的原創文章。">
-<meta property="og:url" content="https://fengyuwang.com/zh-hk/blog/">
-<meta property="og:image" content="/assets/img/logo.png">
     <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
-    
-    
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -75,10 +64,6 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .sort-shell select:focus { border-color:#0071e3; }
 body[data-theme="dark"] .sort-shell select { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
-/* Dark mode additions */
-body[data-theme="dark"] .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
-body[data-theme="dark"] .tag-cloud span { background:rgba(41,151,255,.14); color:#6b9aff; }
-body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24); }
 .tag-cloud { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
 .tag-cloud span { display:inline-flex; padding:4px 12px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.8rem; font-weight:600; cursor:pointer; }
 .tag-cloud span:hover { background:rgba(0,113,227,.12); }
@@ -87,7 +72,7 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
-</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜尋文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud" id="tagCloud"></div>
@@ -101,95 +86,89 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/zh-hk/blog/posts/web3-deep-research/" data-title="Web3 深度研究與分析" data-summary="對 Web3 行業的系統性深度分析：核心概念、全球監管框架、商業價值分析、企業入局策略，以及五大專題研究。" data-date="2026-07-05" data-tags="Web3,區塊鏈,加密貨幣,DeFi,監管">
-    <h3>Web3 深度研究與分析</h3>
-    <hr class="summary-divider"><div class="summary-text">對 Web3 行業的系統性深度分析：核心概念、全球監管框架、商業價值分析、企業入局策略，以及五大專題研究。</div>
-    <div class="blog-tags"><span>Web3</span><span>區塊鏈</span><span>加密貨幣</span><span>DeFi</span><span>監管</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/refuse-to-change/" data-title="變的時候他不想變，他就結束了" data-summary="兩個王安，一種死法。" data-date="2026-09-06" data-tags="歷史,商業">
+    <h3>變的時候他不想變，他就結束了</h3>
+    <hr class="summary-divider"><div class="summary-text">兩個王安，一種死法。</div>
+    <div class="blog-tags"><span>歷史</span><span>商業</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E4%B8%BB%E5%8B%95%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/" data-title="主動吸引穷人" data-summary="我跟你說最扎心、最真實、你自己沒意識到的 3 個底层原因。 不是安慰，是能立刻改的硬問題。" data-date="2026-06-12" data-tags="商业,营销,自我">
-    <h3>主動吸引穷人</h3>
-    <hr class="summary-divider"><div class="summary-text">我跟你說最扎心、最真實、你自己沒意識到的 3 個底层原因。 不是安慰，是能立刻改的硬問題。</div>
-    <div class="blog-tags"><span>商业</span><span>营销</span><span>自我</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/sales-existence/" data-title="銷售存在論" data-summary="銷售不是病，是病在報警。" data-date="2026-09-06" data-tags="商業,組織">
+    <h3>銷售存在論</h3>
+    <hr class="summary-divider"><div class="summary-text">銷售不是病，是病在報警。</div>
+    <div class="blog-tags"><span>商業</span><span>組織</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E5%95%86%E6%A5%AD%E6%A9%9F%E5%AF%86%E4%BF%9D%E6%8A%A4/" data-title="商業機密保护" data-summary="這是一個非常經典且關键的商業風控問題，而且你提到的“AI生成代碼”這個前提，其實有非常成熟的解决方案。你不需要自己成為編程专家，只要給AI下达“带强加密與權限控製”的指令，就能把這個程序变成“离了你就废”的专屬工具。" data-date="2026-06-08" data-tags="商业,技术,工具">
-    <h3>商業機密保护</h3>
-    <hr class="summary-divider"><div class="summary-text">這是一個非常經典且關键的商業風控問題，而且你提到的“AI生成代碼”這個前提，其實有非常成熟的解决方案。你不需要自己成為編程专家，只要給AI下达“带强加密與權限控製”的指令，就能把這個程序变成“离了你就废”的专屬工具。</div>
-    <div class="blog-tags"><span>商业</span><span>技术</span><span>工具</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/attention-tax/" data-title="窮人注意力税" data-summary="一筆沒人來收、人人都在交的税。" data-date="2026-09-06" data-tags="社會,經濟學">
+    <h3>窮人注意力税</h3>
+    <hr class="summary-divider"><div class="summary-text">一筆沒人來收、人人都在交的税。</div>
+    <div class="blog-tags"><span>社會</span><span>經濟學</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E6%A6%82%E7%8E%87/" data-title="概率" data-summary="哈哈，這個類比绝了！“生男生女退全款”的核心逻輯是「用极端承诺筛选精準客户 &#43; 靠概率和信息差赚钱」，咱們把它用到創業裡，能玩出花來：" data-date="2026-06-02" data-tags="商业,创业,信息">
-    <h3>概率</h3>
-    <hr class="summary-divider"><div class="summary-text">哈哈，這個類比绝了！“生男生女退全款”的核心逻輯是「用极端承诺筛选精準客户 &#43; 靠概率和信息差赚钱」，咱們把它用到創業裡，能玩出花來：</div>
-    <div class="blog-tags"><span>商业</span><span>创业</span><span>信息</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/cost-of-yes/" data-title="對對對，是最貴的人力成本" data-summary="豆包型人格：順從不是缺點，是全部。" data-date="2026-09-06" data-tags="管理,AI,用人">
+    <h3>對對對，是最貴的人力成本</h3>
+    <hr class="summary-divider"><div class="summary-text">豆包型人格：順從不是缺點，是全部。</div>
+    <div class="blog-tags"><span>管理</span><span>AI</span><span>用人</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E5%A0%B1%E5%83%B9%E8%A1%8C%E5%8B%95%E6%8C%87%E5%8D%97/" data-title="報價行動指南" data-summary="我直接給你做一份全網通用·5大平台報價行動指南，你做任何生意，打開這一页就知道怎么報價、怎么赚最多、不跑单。 全部是實戰逻輯，不废話，直接照做。" data-date="2026-05-25" data-tags="商业,创业,平台">
-    <h3>報價行動指南</h3>
-    <hr class="summary-divider"><div class="summary-text">我直接給你做一份全網通用·5大平台報價行動指南，你做任何生意，打開這一页就知道怎么報價、怎么赚最多、不跑单。 全部是實戰逻輯，不废話，直接照做。</div>
-    <div class="blog-tags"><span>商业</span><span>创业</span><span>平台</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/open-source-immortality/" data-title="開源即永生" data-summary="可靠性做到 10 個 9，最脆的零件還是自己。" data-date="2026-09-06" data-tags="工程,開源,人生">
+    <h3>開源即永生</h3>
+    <hr class="summary-divider"><div class="summary-text">可靠性做到 10 個 9，最脆的零件還是自己。</div>
+    <div class="blog-tags"><span>工程</span><span>開源</span><span>人生</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/" data-title="Palantir 本體論思路" data-summary="Palantir 本體論思路 &#43; 用到你二手手機生意上 &#43; 过拟合問題 &#43; 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。" data-date="2026-05-25" data-tags="技术,数据,商业">
-    <h3>Palantir 本體論思路</h3>
-    <hr class="summary-divider"><div class="summary-text">Palantir 本體論思路 &#43; 用到你二手手機生意上 &#43; 过拟合問題 &#43; 為什么不能用死公式 全部串起來，說得又準又明白，直接能放进 Obsidian。</div>
-    <div class="blog-tags"><span>技术</span><span>数据</span><span>商业</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/rearview-mirror/" data-title="後視鏡認識論" data-summary="牌沒翻開之前，一切判斷都是後視鏡。" data-date="2026-09-06" data-tags="投資,認識論">
+    <h3>後視鏡認識論</h3>
+    <hr class="summary-divider"><div class="summary-text">牌沒翻開之前，一切判斷都是後視鏡。</div>
+    <div class="blog-tags"><span>投資</span><span>認識論</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E8%81%8C%E5%A0%B4%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E8%88%87%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/" data-title="职場生存、核心壁垒與破局路径" data-summary="职場生存、核心壁垒與破局路径" data-date="2026-05-23" data-tags="职场,创业,自我">
-    <h3>职場生存、核心壁垒與破局路径</h3>
-    <hr class="summary-divider"><div class="summary-text">职場生存、核心壁垒與破局路径</div>
-    <div class="blog-tags"><span>职场</span><span>创业</span><span>自我</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/adjusted-price/" data-title="前復權之罪" data-summary="改寫歷史不需要壞人，一個默認參數就夠了。" data-date="2026-09-06" data-tags="投資,數據">
+    <h3>前復權之罪</h3>
+    <hr class="summary-divider"><div class="summary-text">改寫歷史不需要壞人，一個默認參數就夠了。</div>
+    <div class="blog-tags"><span>投資</span><span>數據</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E9%96%8B%E6%BA%90%E5%B7%A5%E5%85%B7/" data-title="開源工具" data-summary="下面給你一份纯HTML/JS/前端開源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、數據庫、圖床，全部開源、可本地/私有化部署、可嵌入Obsidian。" data-date="2026-05-22" data-tags="技术,工具">
-    <h3>開源工具</h3>
-    <hr class="summary-divider"><div class="summary-text">下面給你一份纯HTML/JS/前端開源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、數據庫、圖床，全部開源、可本地/私有化部署、可嵌入Obsidian。</div>
-    <div class="blog-tags"><span>技术</span><span>工具</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/cash-in-hand/" data-title="到手的錢" data-summary="利潤表是作文，存摺不是。" data-date="2026-09-06" data-tags="投資,會計">
+    <h3>到手的錢</h3>
+    <hr class="summary-divider"><div class="summary-text">利潤表是作文，存摺不是。</div>
+    <div class="blog-tags"><span>投資</span><span>會計</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E9%95%B7%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/" data-title="長期暴利的生意" data-summary="从古到今，真正能長期暴利的生意，就只有那几样：" data-date="2026-05-19" data-tags="商业,经济,社会">
-    <h3>長期暴利的生意</h3>
-    <hr class="summary-divider"><div class="summary-text">从古到今，真正能長期暴利的生意，就只有那几样：</div>
-    <div class="blog-tags"><span>商业</span><span>经济</span><span>社会</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/four-filters/" data-title="把別人恐慌我貪婪寫成代碼" data-summary="恐懼不是一個日子，是一個結構。" data-date="2026-09-06" data-tags="投資,量化">
+    <h3>把別人恐慌我貪婪寫成代碼</h3>
+    <hr class="summary-divider"><div class="summary-text">恐懼不是一個日子，是一個結構。</div>
+    <div class="blog-tags"><span>投資</span><span>量化</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/" data-title="技術研究终极工作流" data-summary="好！我直接給你做一套完整、闭環、可循環、自带防坑、自带纠錯的 《AI 時代 · 技術研究终极工作流（闭環循環版）》" data-date="2026-05-19" data-tags="技术,工具,管理">
-    <h3>技術研究终极工作流</h3>
-    <hr class="summary-divider"><div class="summary-text">好！我直接給你做一套完整、闭環、可循環、自带防坑、自带纠錯的 《AI 時代 · 技術研究终极工作流（闭環循環版）》</div>
-    <div class="blog-tags"><span>技术</span><span>工具</span><span>管理</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/do-the-math/" data-title="有錢人就是因為會算" data-summary="香港電話卡，上台還是儲值卡？我把上台的辯護理由一條一條過堂，審到最後審到了自己頭上：會算賬的人攔不住大多數人不算賬——市場結構替不想算的人把賬算好了。" data-date="2026-09-06" data-tags="理性,消費">
+    <h3>有錢人就是因為會算</h3>
+    <hr class="summary-divider"><div class="summary-text">香港電話卡，上台還是儲值卡？我把上台的辯護理由一條一條過堂，審到最後審到了自己頭上：會算賬的人攔不住大多數人不算賬——市場結構替不想算的人把賬算好了。</div>
+    <div class="blog-tags"><span>理性</span><span>消費</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/ai%E5%B9%AB%E5%8A%A9pdca/" data-title="AI幫助PDCA" data-summary="AI幫助PDCA" data-date="2026-05-12" data-tags="技术,管理,工具">
-    <h3>AI幫助PDCA</h3>
-    <hr class="summary-divider"><div class="summary-text">AI幫助PDCA</div>
-    <div class="blog-tags"><span>技术</span><span>管理</span><span>工具</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/it-was-avoidable/" data-title="本來是有辦法不發生這種事" data-summary="90 分鐘的窗口，5 秒的奔跑。" data-date="2026-09-06" data-tags="社會,制度">
+    <h3>本來是有辦法不發生這種事</h3>
+    <hr class="summary-divider"><div class="summary-text">90 分鐘的窗口，5 秒的奔跑。</div>
+    <div class="blog-tags"><span>社會</span><span>制度</span></div>
 </a>
 
-<a class="blog-card" href="/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" data-title="第一性原理" data-summary="赚钱的第一性原理是創造價值，不是出卖時間。 創造價值的第一性原理是解决問題，不是提供劳動。 解决問題的第一性原理是識別真需求，不是自我感動。 識別真需求的第一性原理是實践反馈，不是闭門造车。 實践反馈的第一性原理是快速迭代，不是仔细打磨。 快速迭代的第一性原理是验證模型，不是為了交付。 验證模型的第一性原理是為了係统復製，而不是個人苦干。 係统復製的第一性原理是杠杆思维，不是線性积累。" data-date="2026-05-09" data-tags="商业,哲学,自我">
-    <h3>第一性原理</h3>
-    <hr class="summary-divider"><div class="summary-text">赚钱的第一性原理是創造價值，不是出卖時間。 創造價值的第一性原理是解决問題，不是提供劳動。 解决問題的第一性原理是識別真需求，不是自我感動。 識別真需求的第一性原理是實践反馈，不是闭門造车。 實践反馈的第一性原理是快速迭代，不是仔细打磨。 快速迭代的第一性原理是验證模型，不是為了交付。 验證模型的第一性原理是為了係统復製，而不是個人苦干。 係统復製的第一性原理是杠杆思维，不是線性积累。</div>
-    <div class="blog-tags"><span>商业</span><span>哲学</span><span>自我</span></div>
-</a>
-
-<a class="blog-card" href="/zh-hk/blog/posts/%E7%B6%93%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/" data-title="經验型表层" data-summary="經验型表层" data-date="2026-05-06" data-tags="职场,自我,管理">
-    <h3>經验型表层</h3>
-    <hr class="summary-divider"><div class="summary-text">經验型表层</div>
-    <div class="blog-tags"><span>职场</span><span>自我</span><span>管理</span></div>
+<a class="blog-card" href="/zh-hk/blog/posts/dog-where/" data-title="不必問錢去了哪裏，要問狗在哪裏" data-summary="狗拿錢定理：從一句玩笑，到一條萬能公式。" data-date="2026-09-06" data-tags="投資,經濟學">
+    <h3>不必問錢去了哪裏，要問狗在哪裏</h3>
+    <hr class="summary-divider"><div class="summary-text">狗拿錢定理：從一句玩笑，到一條萬能公式。</div>
+    <div class="blog-tags"><span>投資</span><span>經濟學</span></div>
 </a>
 
 </div>
 
 <div class="pagination-shell" id="paginationShell">
     <span class="page-btn" style="opacity:.3;cursor:default;">← 上一頁</span>
-    <span class="page-btn active">1</span><a href="/zh-hk/blog/page/2/" class="page-btn">2</a><a href="/zh-hk/blog/page/3/" class="page-btn">3</a><a href="/zh-hk/blog/page/4/" class="page-btn">4</a>
+    <span class="page-btn active">1</span><a href="/zh-hk/blog/page/2/" class="page-btn">2</a><a href="/zh-hk/blog/page/3/" class="page-btn">3</a><a href="/zh-hk/blog/page/4/" class="page-btn">4</a><a href="/zh-hk/blog/page/5/" class="page-btn">5</a><a href="/zh-hk/blog/page/6/" class="page-btn">6</a><a href="/zh-hk/blog/page/7/" class="page-btn">7</a><a href="/zh-hk/blog/page/8/" class="page-btn">8</a>
     <a href="/zh-hk/blog/page/2/" class="page-nav">下一頁 →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="4" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 4 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/zh-hk\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();

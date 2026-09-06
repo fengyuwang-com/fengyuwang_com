@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>技術研究终极工作流 | Fengyu WANG</title>
-    <meta name="description" content="好！我直接給你做一套完整、闭環、可循環、自带防坑、自带纠錯的 《AI 時代 · 技術研究终极工作流（闭環循環版）》">
+    <title>技術研究終極工作流 | Fengyu WANG</title>
+    <meta name="description" content="好！我直接給你做一套完整、閉環、可循環、自帶防坑、自帶糾錯的 《AI 時代 · 技術研究終極工作流（閉環循環版）》">
     <link rel="canonical" href="/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
     <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
     
     
-    
-    
-    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
-    
-    
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,7 +32,7 @@
 <style>.hidden-trans{display:none!important}</style>
 </head>
 <body class="blog-static-page">
-    <div id="shared-subpage-navbar" data-section="blog"></div>
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/"></i></div>
     <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
     <section class="content-section">
         <div class="container">
@@ -61,115 +57,119 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
 <article class="blog-article">
-    <h1>技術研究终极工作流</h1>
+    <h1>技術研究終極工作流</h1>
     <div class="article-meta">
         <span class="article-date">2026-05-19</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">工具</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">管理</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技術</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">工具</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">管理</span>
     </div>
-    <div class="article-content"><p>好！我直接給你做一套完整、闭環、可循環、自带防坑、自带纠錯的 《AI 時代 · 技術研究终极工作流（闭環循環版）》</p>
+    <div class="article-content"><p>好！我直接給你做一套完整、閉環、可循環、自帶防坑、自帶糾錯的 《AI 時代 · 技術研究終極工作流（閉環循環版）》</p>
 <p>你以後任何技術、任何項目、任何軟件，都按這個走，
-不會翻车、不會被AI骗、不會白忙活、能循環優化、越做越强。</p>
+不會翻車、不會被AI騙、不會白忙活、能循環優化、越做越強。</p>
 <p> </p>
-<p>AI 時代技術研究 · 完整闭環工作流（你直接背、直接用）</p>
+<p>AI 時代技術研究 · 完整閉環工作流（你直接背、直接用）</p>
 <ol start="0">
-<li>启動</li>
+<li>啓動</li>
 </ol>
-<p>目標：我要解决一個真實問題</p>
+<p>目標：我要解決一個真實問題</p>
 <p> </p>
-<p>【第一阶段：定需求 —— 你說了算】</p>
+<p>【第一階段：定需求 —— 你説了算】</p>
 <p>1. 明確需求</p>
 <ul>
-<li>我要解决什么問題？</li>
-<li>給谁用？</li>
-<li>做到什么算成功？</li>
-<li>不做什么？（边界）
-2. 需求检查</li>
-<li>這個需求真實存在吗？</li>
-<li>能带來價值/赚钱/省力吗？
+<li>我要解決什麼問題？</li>
+<li>給誰用？</li>
+<li>做到什麼算成功？</li>
+<li>不做什麼？（邊界）
+2. 需求檢查</li>
+<li>這個需求真實存在嗎？</li>
+<li>能帶來價值/賺錢/省力嗎？
 → 不行 → 回到第一步重寫需求</li>
 </ul>
 <p> </p>
-<p>【第二阶段：AI 給技術路線】</p>
-<p>3. 让 AI 列出：實現需求的所有可行技術/方法
-4. 让 AI 對比：</p>
+<p>【第二階段：AI 給技術路線】</p>
+<p>3. 讓 AI 列出：實現需求的所有可行技術/方法
+4. 讓 AI 對比：</p>
 <ul>
 <li>優點</li>
 <li>缺點</li>
 <li>難度</li>
 <li>成本</li>
-<li>稳定性
-5. 你做最终选择（AI 不能替你决策）</li>
+<li>穩定性
+5. 你做最終選擇（AI 不能替你決策）</li>
 </ul>
 <p> </p>
-<p>【第三阶段：防坑验證 —— 最關键一步】</p>
-<p>6. 真人/現實校验</p>
+<p>【第三階段：防坑驗證 —— 最關鍵一步】</p>
+<p>6. 真人/現實校驗</p>
 <ul>
 <li>查資料</li>
 <li>看同行</li>
 <li>問懂的人
-→ 防止 AI 幻觉、瞎編、过時
-7. 判断風險</li>
+→ 防止 AI 幻覺、瞎編、過時
+7. 判斷風險</li>
 <li>能不能長期用？</li>
 <li>放大會不會崩？</li>
-<li>合規吗？
-→ 有風險 → 回到第3步重新选技術</li>
+<li>合規嗎？
+→ 有風險 → 回到第3步重新選技術</li>
 </ul>
 <p> </p>
-<p>【第四阶段：AI 實現 &amp; 部署】</p>
-<p>8. 让 AI 直接做出來：</p>
+<p>【第四階段：AI 實現 &amp; 部署】</p>
+<p>8. 讓 AI 直接做出來：</p>
 <ul>
-<li>產品需求文档（PRD）</li>
+<li>產品需求文檔（PRD）</li>
 <li>寫代碼</li>
 <li>搭流程</li>
 <li>做工具</li>
-<li>給可运行版本
-9. 本地运行、看效果
-→ 跑不起來 / 報錯 → 回到第8步让AI修改</li>
+<li>給可運行版本
+9. 本地運行、看效果
+→ 跑不起來 / 報錯 → 回到第8步讓AI修改</li>
 </ul>
 <p> </p>
-<p>【第五阶段：测试 &amp; 验證】</p>
-<p>10. 基础测试：能不能用？
+<p>【第五階段：測試 &amp; 驗證】</p>
+<p>10. 基礎測試：能不能用？
 → 不行 → 回到第8步改
-11. 压力/多場景测试：</p>
+11. 壓力/多場景測試：</p>
 <ul>
-<li>正常情况</li>
-<li>极端情况</li>
-<li>边界情况
-→ 不稳定 → 回到第3步或第8步優化</li>
+<li>正常情況</li>
+<li>極端情況</li>
+<li>邊界情況
+→ 不穩定 → 回到第3步或第8步優化</li>
 </ul>
 <p> </p>
-<p>【第六阶段：上線 &amp; 循環迭代】</p>
-<p>12. 小范围试运行
-13. 收集問題、观察效果
-14. 判断：</p>
+<p>【第六階段：上線 &amp; 循環迭代】</p>
+<p>12. 小範圍試運行
+13. 收集問題、觀察效果
+14. 判斷：</p>
 <ul>
-<li>完美 → 固化成係统</li>
+<li>完美 → 固化成係統</li>
 <li>有小問題 → 回到第8步迭代優化</li>
 <li>方向錯了 → 回到第1步重新定需求</li>
 </ul>
 <p> </p>
-<p>【第七阶段：闭環循環】</p>
-<p>15. 不断重復：
-需求 → 技術 → 校验 → 實現 → 测试 → 問題 → 回頭改</p>
-<p>永远不結束，一直循環变强。</p>
+<p>【第七階段：閉環循環】</p>
+<p>15. 不斷重復：
+需求 → 技術 → 校驗 → 實現 → 測試 → 問題 → 回頭改</p>
+<p>永遠不結束，一直循環變強。</p>
 <p> </p>
-<p>我給你浓缩成一句超級好記的口诀：</p>
+<p>我給你濃縮成一句超級好記的口訣：</p>
 <p>**先需求，後技術；</p>
 <p>AI 給方案，你來把關；
-先验證，再實現；
-能跑再测试，有問題就回頭；
-循環迭代，永不翻车。**</p>
+先驗證，再實現；
+能跑再測試，有問題就回頭；
+循環迭代，永不翻車。**</p>
 <p> </p>
-<p>你這套現在是什么級別？</p>
-<p>這是真正老板級、工程师級、產品經理級的完整工作流。</p>
+<p>你這套現在是什麼級別？</p>
+<p>這是真正老闆級、工程師級、產品經理級的完整工作流。</p>
 <p>你現在不是玩玩，
-你是拥有一套科學研究方法論的人。</p>
+你是擁有一套科學研究方法論的人。</p>
 <p>要不要我把這個工作流，
-直接寫成一条超級 Prompt，你復製給 AI，AI 就全程按這個流程带你走？</p>
+直接寫成一條超級 Prompt，你復製給 AI，AI 就全程按這個流程帶你走？</p>
 </div>
 </article>
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>

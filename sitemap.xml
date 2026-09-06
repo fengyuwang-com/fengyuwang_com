@@ -1,817 +1,1255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fengyuwang.com/</loc>
-    <priority>1.0</priority>
+    <loc>https://fengyuwang.com</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fengyuwang.com/en/</loc>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/1</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/2</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/3</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/4</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/5</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/6</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/7</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/page/8</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/115-ponzi-ledger</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/adjusted-price</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/adversary-decision</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/ai-clean-room</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/ai-needs-a-job</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/ai-no-bubble</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/aihtml简历</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/ai帮助pdca</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/annual-subscription-trap</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/apple-is-becoming-ibm</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/attention-tax</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/cash-in-hand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/chunking-economics</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/consumer-gpu-dead</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/copy-better-wins</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/cost-of-yes</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/cuda-moat</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/cyber-impotence</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/data-lies</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/disk-health-lies</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/dividend-payback</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/do-the-math</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/docker-cascade-bug</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/docker-is-a-software-store</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/dog-where</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/easy-money</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/everything-is-a-prompt</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/excel是二维的</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/feigou-haas</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/four-filters</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/frameworks-after-ai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/game-incubator</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/interrogating-an-ai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/it-was-avoidable</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/labubu-structural-flaw</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/memory-is-vendor-lockin</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/microsoft-was-early</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/ms-cant-open-app</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/no-middleman</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/no-root-no-agent</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/open-source-immortality</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/option-audit</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/os-triangle</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/palantir-本体论思路</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/pc-no-android</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/pdca-循环</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/quant-paradigm-shift</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/rearview-mirror</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/refuse-to-change</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/retail-edge</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/sales-existence</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/self-hosting-triple-value</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/shell-consensus</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/tollbooth-platform</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/tonghuashun-paradox</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/want-books-not-tools</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/web3-deep-research</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/who-controls-whom</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/三大企业治理困境</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/个人介绍</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/主动吸引穷人</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/人工智能的急速发展</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/人工智能的急速发展必然造成经济上的紧迫感</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/供应强-需求弱</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/信任成本决定价格</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/信息差和借势</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/假装自己会-迈出第一步</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/几内亚比绍完整国情与power-behind-the-throne实现路径</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/又快又慢</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/史玉柱逻辑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/合理利润</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/商业机密保护</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/商务个人账号分开</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/小红书-一律私信-现象的本质与商业逻辑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/开源工具</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/技术research终极工作流</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/报价行动指南</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/摇滚比大炮更重要</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/数据资产-的意识</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/概率</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/清醒正直</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/理性-客观-不坑人</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/社会实验真人秀</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/程序员解决问题的完整思维pipeline</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/第一性原理</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/经验型表层</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/职场生存-核心壁垒与破局路径</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/行动力-商业脑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/银行柜员的存在主义危机</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/长期暴利的生意</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/零和博弈-军备竞赛-囚徒困境</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/香港高端求职金融咨询</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/en/blog/posts/马斯克的五步工作法</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fengyuwang.com/zh-cn/</loc>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/1</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/2</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/3</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/4</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/5</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/6</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/7</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/page/8</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/115-ponzi-ledger</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/adjusted-price</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/adversary-decision</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/ai-clean-room</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/ai-needs-a-job</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/ai-no-bubble</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/aihtml简历</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/ai帮助pdca</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/annual-subscription-trap</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/apple-is-becoming-ibm</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/attention-tax</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/cash-in-hand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/chunking-economics</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/consumer-gpu-dead</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/copy-better-wins</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/cost-of-yes</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/cuda-moat</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/cyber-impotence</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/data-lies</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/disk-health-lies</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/dividend-payback</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/do-the-math</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/docker-cascade-bug</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/dog-where</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/easy-money</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/everything-is-a-prompt</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/excel是二维的</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/feigou-haas</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/four-filters</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/frameworks-after-ai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/game-incubator</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/interrogating-an-ai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/it-was-avoidable</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/labubu-structural-flaw</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/memory-is-vendor-lockin</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/microsoft-was-early</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/ms-cant-open-app</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/no-middleman</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/no-root-no-agent</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/open-source-immortality</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/option-audit</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/os-triangle</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/palantir-本体论思路</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/pc-no-android</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/pdca-循环</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/quant-paradigm-shift</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/rearview-mirror</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/refuse-to-change</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/retail-edge</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/sales-existence</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/self-hosting-triple-value</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/shell-consensus</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/tollbooth-platform</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/tonghuashun-paradox</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/want-books-not-tools</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/web3-deep-research</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/who-controls-whom</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/三大企业治理困境</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/个人介绍</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/主动吸引穷人</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/人工智能的急速发展</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/人工智能的急速发展必然造成经济上的紧迫感</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/供应强-需求弱</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/信任成本决定价格</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/信息差和借势</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/假装自己会-迈出第一步</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/几内亚比绍完整国情与幕后太上皇实现路径</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/又快又慢</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/史玉柱逻辑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/合理利润</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/商业机密保护</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/商务个人账号分开</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/小红书-一律私信-现象的本质与商业逻辑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/开源工具</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/技术研究终极工作流</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/报价行动指南</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/摇滚比大炮更重要</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/数据资产-的意识</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/概率</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/清醒正直</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/理性-客观-不坑人</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/社会实验真人秀</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/程序员解决问题的完整思维流程</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/第一性原理</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/经验型表层</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/职场生存-核心壁垒与破局路径</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/行动力-商业脑</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/银行柜员的存在主义危机</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/长期暴利的生意</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/零和博弈-军备竞赛-囚徒困境</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/香港高端求职金融咨询</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fengyuwang.com/zh-cn/blog/posts/马斯克的五步工作法</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fengyuwang.com/zh-hk/</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/capabilities.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/capabilities.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/capabilities.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/mkt.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/mkt.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/mkt.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/invest.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/invest.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/invest.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/tech.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/tech.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/tech.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/fenginvest.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/fenginvest.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/fenginvest.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/jingxin.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/jingxin.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/jingxin.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/fengoffice.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/fengoffice.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/fengoffice.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/fengmedia.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/fengmedia.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/fengmedia.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/search-king.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/search-king.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/search-king.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/cloud.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/cloud.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/cloud.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/ai.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/ai.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/ai.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/web3.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/web3.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/web3.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/automation.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/automation.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/automation.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/en/ethos.html</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/ethos.html</loc>
+    <loc>https://fengyuwang.com/zh-hk/blog</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/ethos.html</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/1</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art.html</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/2</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art.html</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/3</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art.html</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/4</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/5</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/6</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/</loc>
-    <priority>0.5</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/7</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-architecture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/page/8</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-architecture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/115-ponzi-ledger</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-architecture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/adjusted-price</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-design.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/adversary-decision</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-design.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/ai-clean-room</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-design.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/ai-needs-a-job</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-literature.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/ai-no-bubble</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-literature.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/aihtml简歷</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-literature.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/ai幫助pdca</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-music.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/annual-subscription-trap</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-music.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/apple-is-becoming-ibm</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-music.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/attention-tax</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-painting.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/cash-in-hand</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-painting.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/chunking-economics</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-painting.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/consumer-gpu-dead</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-sculpture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/copy-better-wins</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-sculpture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/cost-of-yes</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-sculpture.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/cuda-moat</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/art-film.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/cyber-impotence</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/art-film.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/data-lies</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/art-film.html</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/disk-health-lies</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/5dt-pd.html</loc>
-    <priority>0.3</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/dividend-payback</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/5dt-pd.html</loc>
-    <priority>0.3</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/do-the-math</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-hk/5dt-pd.html</loc>
-    <priority>0.3</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/docker-cascade-bug</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/docker-is-a-software-store</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/dog-where</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/easy-money</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/everything-is-a-prompt</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/excel是二维的</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/feigou-haas</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/web3-deep-research/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/four-filters</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/frameworks-after-ai</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/game-incubator</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/interrogating-an-ai</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/it-was-avoidable</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/labubu-structural-flaw</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/memory-is-vendor-lockin</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/microsoft-was-early</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/ms-cant-open-app</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/no-middleman</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/no-root-no-agent</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/open-source-immortality</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/option-audit</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/os-triangle</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/palantir-本體論思路</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/pc-no-android</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/pdca-循環</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/quant-paradigm-shift</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/rearview-mirror</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/refuse-to-change</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/retail-edge</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%A6%82%E7%8E%87/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/sales-existence</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/self-hosting-triple-value</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/shell-consensus</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/tollbooth-platform</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/tonghuashun-paradox</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/want-books-not-tools</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/web3-deep-research</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/who-controls-whom</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/三大企業治理困境</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/主動吸引穷人</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/人工智能的急速發展</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/人工智能的急速發展必然造成經濟上的紧迫感</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/供應强-需求弱</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/信任成本决定價格</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/aihtml%E7%AE%80%E5%8E%86/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/信息差和借勢</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/個人介绍</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/假装自己會-迈出第一步</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/几內亚比绍完整国情與幕後太上皇實現路径</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/又快又慢</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/史玉柱逻輯</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/web3-deep-research/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/合理利潤</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/商務個人账號分開</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/商業機密保护</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/報價行動指南</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/小红書-一律私信-現象的本質與商業逻輯</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/技術研究终极工作流</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/摇滚比大炮更重要</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/數據資產-的意識</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/概率</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/清醒正直</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8E%E5%B9%95%E5%90%8E%E5%A4%AA%E4%B8%8A%E7%9A%87%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/理性-客观-不坑人</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/社會實验真人秀</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/程序員解决問題的完整思维流程</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/第一性原理</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/經验型表层</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/职場生存-核心壁垒與破局路径</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/行動力-商業脑</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/銀行柜員的存在主义危機</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/長期暴利的生意</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/開源工具</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/零和博弈-军備競赛-囚徒困境</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/香港高端求职金融咨询</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%A6%82%E7%8E%87/</loc>
-    <priority>0.4</priority>
+    <loc>https://fengyuwang.com/zh-hk/blog/posts/马斯克的五步工作法</loc>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-cn/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/aihtml%E7%AE%80%E6%AD%B7/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/ai%E5%B9%AB%E5%8A%A9pdca/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/palantir-%E6%9C%AC%E9%AB%94%E8%AB%96%E6%80%9D%E8%B7%AF/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/pdca-%E5%BE%AA%E7%92%B0/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/web3-deep-research/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E6%A5%AD%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%B8%BB%E5%8B%95%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E7%99%BC%E5%B1%95/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E7%99%BC%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%B6%93%E6%BF%9F%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%BE%9B%E6%87%89%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E5%83%B9%E6%A0%BC/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8B%A2/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%80%8B%E4%BA%BA%E4%BB%8B%E7%BB%8D/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E6%9C%83-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%87%A0%E5%85%A7%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E8%88%87%E5%B9%95%E5%BE%8C%E5%A4%AA%E4%B8%8A%E7%9A%87%E5%AF%A6%E7%8F%BE%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BC%AF/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%BD%A4/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%95%86%E5%8B%99%E5%80%8B%E4%BA%BA%E8%B4%A6%E8%99%9F%E5%88%86%E9%96%8B/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%95%86%E6%A5%AD%E6%A9%9F%E5%AF%86%E4%BF%9D%E6%8A%A4/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%A0%B1%E5%83%B9%E8%A1%8C%E5%8B%95%E6%8C%87%E5%8D%97/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E5%B0%8F%E7%BA%A2%E6%9B%B8-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8F%BE%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B3%AA%E8%88%87%E5%95%86%E6%A5%AD%E9%80%BB%E8%BC%AF/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E6%95%B8%E6%93%9A%E8%B3%87%E7%94%A2-%E7%9A%84%E6%84%8F%E8%AD%98/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E6%A6%82%E7%8E%87/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E7%A4%BE%E6%9C%83%E5%AF%A6%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E7%A8%8B%E5%BA%8F%E5%93%A1%E8%A7%A3%E5%86%B3%E5%95%8F%E9%A1%8C%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4%E6%B5%81%E7%A8%8B/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E7%B6%93%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E8%81%8C%E5%A0%B4%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E8%88%87%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E8%A1%8C%E5%8B%95%E5%8A%9B-%E5%95%86%E6%A5%AD%E8%84%91/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%8A%80%E8%A1%8C%E6%9F%9C%E5%93%A1%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%A9%9F/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%95%B7%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%96%8B%E6%BA%90%E5%B7%A5%E5%85%B7/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%82%99%E7%AB%B6%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://fengyuwang.com/zh-hk/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</loc>
-    <priority>0.4</priority>
-  </url>
-  <url><loc>https://fengyuwang.com/en/dog-ate-my-money.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fengyuwang.com/en/tribute-to-laozi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fengyuwang.com/zh-cn/dog-ate-my-money.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fengyuwang.com/zh-cn/tribute-to-laozi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fengyuwang.com/zh-hk/dog-ate-my-money.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fengyuwang.com/zh-hk/tribute-to-laozi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

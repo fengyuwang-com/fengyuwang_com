@@ -6,27 +6,16 @@
     <title>博客 | Fengyu WANG</title>
     
     <link rel="canonical" href="/zh-cn/blog/">
-<meta property="og:site_name" content="Fengyu WANG">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:type" content="website">
-<meta property="og:title" content="博客 | Fengyu WANG">
-<meta property="og:description" content="市场策略、价值投资与软件工程的原创文章。">
-<meta property="og:url" content="https://fengyuwang.com/zh-cn/blog/">
-<meta property="og:image" content="/assets/img/logo.png">
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
     
     
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -75,10 +64,6 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .sort-shell select:focus { border-color:#0071e3; }
 body[data-theme="dark"] .sort-shell select { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
-/* Dark mode additions */
-body[data-theme="dark"] .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
-body[data-theme="dark"] .tag-cloud span { background:rgba(41,151,255,.14); color:#6b9aff; }
-body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24); }
 .tag-cloud { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
 .tag-cloud span { display:inline-flex; padding:4px 12px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.8rem; font-weight:600; cursor:pointer; }
 .tag-cloud span:hover { background:rgba(0,113,227,.12); }
@@ -87,7 +72,7 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
-</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud" id="tagCloud"></div>
@@ -101,95 +86,89 @@ body[data-theme="dark"] .tag-cloud span:hover { background:rgba(41,151,255,.24);
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/zh-cn/blog/posts/web3-deep-research/" data-title="Web3 深度研究与分析" data-summary="对 Web3 行业的系统性深度分析：核心概念、全球监管框架、商业价值分析、企业入局策略，以及五大专题研究。" data-date="2026-07-05" data-tags="Web3,区块链,加密货币,DeFi,监管">
-    <h3>Web3 深度研究与分析</h3>
-    <hr class="summary-divider"><div class="summary-text">对 Web3 行业的系统性深度分析：核心概念、全球监管框架、商业价值分析、企业入局策略，以及五大专题研究。</div>
-    <div class="blog-tags"><span>Web3</span><span>区块链</span><span>加密货币</span><span>DeFi</span><span>监管</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/do-the-math/" data-title="有钱人就是因为会算" data-summary="香港电话卡，上台还是储值卡？我把上台的辩护理由一条一条过堂，审到最后审到了自己头上：会算账的人拦不住大多数人不算账——市场结构替不想算的人把账算好了。" data-date="2026-09-06" data-tags="理性,消费">
+    <h3>有钱人就是因为会算</h3>
+    <hr class="summary-divider"><div class="summary-text">香港电话卡，上台还是储值卡？我把上台的辩护理由一条一条过堂，审到最后审到了自己头上：会算账的人拦不住大多数人不算账——市场结构替不想算的人把账算好了。</div>
+    <div class="blog-tags"><span>理性</span><span>消费</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/" data-title="主动吸引穷人" data-summary="我跟你说最扎心、最真实、你自己没意识到的 3 个底层原因。 不是安慰，是能立刻改的硬问题。" data-date="2026-06-12" data-tags="商业,营销,自我">
-    <h3>主动吸引穷人</h3>
-    <hr class="summary-divider"><div class="summary-text">我跟你说最扎心、最真实、你自己没意识到的 3 个底层原因。 不是安慰，是能立刻改的硬问题。</div>
-    <div class="blog-tags"><span>商业</span><span>营销</span><span>自我</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/sales-existence/" data-title="销售存在论" data-summary="销售不是病，是病在报警。" data-date="2026-09-06" data-tags="商业,组织">
+    <h3>销售存在论</h3>
+    <hr class="summary-divider"><div class="summary-text">销售不是病，是病在报警。</div>
+    <div class="blog-tags"><span>商业</span><span>组织</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/" data-title="商业机密保护" data-summary="这是一个非常经典且关键的商业风控问题，而且你提到的“AI生成代码”这个前提，其实有非常成熟的解决方案。你不需要自己成为编程专家，只要给AI下达“带强加密与权限控制”的指令，就能把这个程序变成“离了你就废”的专属工具。" data-date="2026-06-08" data-tags="商业,技术,工具">
-    <h3>商业机密保护</h3>
-    <hr class="summary-divider"><div class="summary-text">这是一个非常经典且关键的商业风控问题，而且你提到的“AI生成代码”这个前提，其实有非常成熟的解决方案。你不需要自己成为编程专家，只要给AI下达“带强加密与权限控制”的指令，就能把这个程序变成“离了你就废”的专属工具。</div>
-    <div class="blog-tags"><span>商业</span><span>技术</span><span>工具</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/attention-tax/" data-title="穷人注意力税" data-summary="一笔没人来收、人人都在交的税。" data-date="2026-09-06" data-tags="社会,经济学">
+    <h3>穷人注意力税</h3>
+    <hr class="summary-divider"><div class="summary-text">一笔没人来收、人人都在交的税。</div>
+    <div class="blog-tags"><span>社会</span><span>经济学</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E6%A6%82%E7%8E%87/" data-title="概率" data-summary="哈哈，这个类比绝了！“生男生女退全款”的核心逻辑是「用极端承诺筛选精准客户 &#43; 靠概率和信息差赚钱」，咱们把它用到创业里，能玩出花来：" data-date="2026-06-02" data-tags="商业,创业,信息">
-    <h3>概率</h3>
-    <hr class="summary-divider"><div class="summary-text">哈哈，这个类比绝了！“生男生女退全款”的核心逻辑是「用极端承诺筛选精准客户 &#43; 靠概率和信息差赚钱」，咱们把它用到创业里，能玩出花来：</div>
-    <div class="blog-tags"><span>商业</span><span>创业</span><span>信息</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/adjusted-price/" data-title="前复权之罪" data-summary="改写历史不需要坏人，一个默认参数就够了。" data-date="2026-09-06" data-tags="投资,数据">
+    <h3>前复权之罪</h3>
+    <hr class="summary-divider"><div class="summary-text">改写历史不需要坏人，一个默认参数就够了。</div>
+    <div class="blog-tags"><span>投资</span><span>数据</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/" data-title="报价行动指南" data-summary="我直接给你做一份全网通用·5大平台报价行动指南，你做任何生意，打开这一页就知道怎么报价、怎么赚最多、不跑单。 全部是实战逻辑，不废话，直接照做。" data-date="2026-05-25" data-tags="商业,创业,平台">
-    <h3>报价行动指南</h3>
-    <hr class="summary-divider"><div class="summary-text">我直接给你做一份全网通用·5大平台报价行动指南，你做任何生意，打开这一页就知道怎么报价、怎么赚最多、不跑单。 全部是实战逻辑，不废话，直接照做。</div>
-    <div class="blog-tags"><span>商业</span><span>创业</span><span>平台</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/open-source-immortality/" data-title="开源即永生" data-summary="可靠性做到 10 个 9，最脆的零件还是自己。" data-date="2026-09-06" data-tags="工程,开源,人生">
+    <h3>开源即永生</h3>
+    <hr class="summary-divider"><div class="summary-text">可靠性做到 10 个 9，最脆的零件还是自己。</div>
+    <div class="blog-tags"><span>工程</span><span>开源</span><span>人生</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/" data-title="Palantir 本体论思路" data-summary="Palantir 本体论思路 &#43; 用到你二手手机生意上 &#43; 过拟合问题 &#43; 为什么不能用死公式 全部串起来，说得又准又明白，直接能放进 Obsidian。" data-date="2026-05-25" data-tags="技术,数据,商业">
-    <h3>Palantir 本体论思路</h3>
-    <hr class="summary-divider"><div class="summary-text">Palantir 本体论思路 &#43; 用到你二手手机生意上 &#43; 过拟合问题 &#43; 为什么不能用死公式 全部串起来，说得又准又明白，直接能放进 Obsidian。</div>
-    <div class="blog-tags"><span>技术</span><span>数据</span><span>商业</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/rearview-mirror/" data-title="后视镜认识论" data-summary="牌没翻开之前，一切判断都是后视镜。" data-date="2026-09-06" data-tags="投资,认识论">
+    <h3>后视镜认识论</h3>
+    <hr class="summary-divider"><div class="summary-text">牌没翻开之前，一切判断都是后视镜。</div>
+    <div class="blog-tags"><span>投资</span><span>认识论</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/" data-title="职场生存、核心壁垒与破局路径" data-summary="职场生存、核心壁垒与破局路径" data-date="2026-05-23" data-tags="职场,创业,自我">
-    <h3>职场生存、核心壁垒与破局路径</h3>
-    <hr class="summary-divider"><div class="summary-text">职场生存、核心壁垒与破局路径</div>
-    <div class="blog-tags"><span>职场</span><span>创业</span><span>自我</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/cost-of-yes/" data-title="对对对，是最贵的人力成本" data-summary="豆包型人格：顺从不是缺点，是全部。" data-date="2026-09-06" data-tags="管理,AI,用人">
+    <h3>对对对，是最贵的人力成本</h3>
+    <hr class="summary-divider"><div class="summary-text">豆包型人格：顺从不是缺点，是全部。</div>
+    <div class="blog-tags"><span>管理</span><span>AI</span><span>用人</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/" data-title="开源工具" data-summary="下面给你一份纯HTML/JS/前端开源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、数据库、图床，全部开源、可本地/私有化部署、可嵌入Obsidian。" data-date="2026-05-22" data-tags="技术,工具">
-    <h3>开源工具</h3>
-    <hr class="summary-divider"><div class="summary-text">下面给你一份纯HTML/JS/前端开源工具清单，完全覆盖你要的：Web建站、Word/Excel/PPT替代、数据库、图床，全部开源、可本地/私有化部署、可嵌入Obsidian。</div>
-    <div class="blog-tags"><span>技术</span><span>工具</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/cash-in-hand/" data-title="到手的钱" data-summary="利润表是作文，存折不是。" data-date="2026-09-06" data-tags="投资,会计">
+    <h3>到手的钱</h3>
+    <hr class="summary-divider"><div class="summary-text">利润表是作文，存折不是。</div>
+    <div class="blog-tags"><span>投资</span><span>会计</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/" data-title="长期暴利的生意" data-summary="从古到今，真正能长期暴利的生意，就只有那几样：" data-date="2026-05-19" data-tags="商业,经济,社会">
-    <h3>长期暴利的生意</h3>
-    <hr class="summary-divider"><div class="summary-text">从古到今，真正能长期暴利的生意，就只有那几样：</div>
-    <div class="blog-tags"><span>商业</span><span>经济</span><span>社会</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/dog-where/" data-title="不必问钱去了哪里，要问狗在哪里" data-summary="狗拿钱定理：从一句玩笑，到一条万能公式。" data-date="2026-09-06" data-tags="投资,经济学">
+    <h3>不必问钱去了哪里，要问狗在哪里</h3>
+    <hr class="summary-divider"><div class="summary-text">狗拿钱定理：从一句玩笑，到一条万能公式。</div>
+    <div class="blog-tags"><span>投资</span><span>经济学</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/" data-title="AI帮助PDCA" data-summary="AI帮助PDCA" data-date="2026-05-12" data-tags="技术,管理,工具">
-    <h3>AI帮助PDCA</h3>
-    <hr class="summary-divider"><div class="summary-text">AI帮助PDCA</div>
-    <div class="blog-tags"><span>技术</span><span>管理</span><span>工具</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/refuse-to-change/" data-title="变的时候他不想变，他就结束了" data-summary="两个王安，一种死法。" data-date="2026-09-06" data-tags="历史,商业">
+    <h3>变的时候他不想变，他就结束了</h3>
+    <hr class="summary-divider"><div class="summary-text">两个王安，一种死法。</div>
+    <div class="blog-tags"><span>历史</span><span>商业</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" data-title="第一性原理" data-summary="赚钱的第一性原理是创造价值，不是出卖时间。 创造价值的第一性原理是解决问题，不是提供劳动。 解决问题的第一性原理是识别真需求，不是自我感动。 识别真需求的第一性原理是实践反馈，不是闭门造车。 实践反馈的第一性原理是快速迭代，不是仔细打磨。 快速迭代的第一性原理是验证模型，不是为了交付。 验证模型的第一性原理是为了系统复制，而不是个人苦干。 系统复制的第一性原理是杠杆思维，不是线性积累。" data-date="2026-05-09" data-tags="商业,哲学,自我">
-    <h3>第一性原理</h3>
-    <hr class="summary-divider"><div class="summary-text">赚钱的第一性原理是创造价值，不是出卖时间。 创造价值的第一性原理是解决问题，不是提供劳动。 解决问题的第一性原理是识别真需求，不是自我感动。 识别真需求的第一性原理是实践反馈，不是闭门造车。 实践反馈的第一性原理是快速迭代，不是仔细打磨。 快速迭代的第一性原理是验证模型，不是为了交付。 验证模型的第一性原理是为了系统复制，而不是个人苦干。 系统复制的第一性原理是杠杆思维，不是线性积累。</div>
-    <div class="blog-tags"><span>商业</span><span>哲学</span><span>自我</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/it-was-avoidable/" data-title="本来是有办法不发生这种事" data-summary="90 分钟的窗口，5 秒的奔跑。" data-date="2026-09-06" data-tags="社会,制度">
+    <h3>本来是有办法不发生这种事</h3>
+    <hr class="summary-divider"><div class="summary-text">90 分钟的窗口，5 秒的奔跑。</div>
+    <div class="blog-tags"><span>社会</span><span>制度</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/" data-title="经验型表层" data-summary="经验型表层" data-date="2026-05-06" data-tags="职场,自我,管理">
-    <h3>经验型表层</h3>
-    <hr class="summary-divider"><div class="summary-text">经验型表层</div>
-    <div class="blog-tags"><span>职场</span><span>自我</span><span>管理</span></div>
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/" data-title="行动力&#43;商业脑" data-summary="你这段总结太到位、太扎心、太真实了—— 这不就是现在绝大多数创业失败的人的真实画像吗？" data-date="2026-05-03" data-tags="创业,商业,自我">
-    <h3>行动力&#43;商业脑</h3>
-    <hr class="summary-divider"><div class="summary-text">你这段总结太到位、太扎心、太真实了—— 这不就是现在绝大多数创业失败的人的真实画像吗？</div>
-    <div class="blog-tags"><span>创业</span><span>商业</span><span>自我</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/four-filters/" data-title="把别人恐慌我贪婪写成代码" data-summary="恐惧不是一个日子，是一个结构。" data-date="2026-09-06" data-tags="投资,量化">
+    <h3>把别人恐慌我贪婪写成代码</h3>
+    <hr class="summary-divider"><div class="summary-text">恐惧不是一个日子，是一个结构。</div>
+    <div class="blog-tags"><span>投资</span><span>量化</span></div>
 </a>
 
 </div>
 
 <div class="pagination-shell" id="paginationShell">
     <span class="page-btn" style="opacity:.3;cursor:default;">← 上一页</span>
-    <span class="page-btn active">1</span><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><a href="/zh-cn/blog/page/4/" class="page-btn">4</a>
+    <span class="page-btn active">1</span><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><a href="/zh-cn/blog/page/4/" class="page-btn">4</a><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><a href="/zh-cn/blog/page/6/" class="page-btn">6</a><a href="/zh-cn/blog/page/7/" class="page-btn">7</a><a href="/zh-cn/blog/page/8/" class="page-btn">8</a>
     <a href="/zh-cn/blog/page/2/" class="page-nav">下一页 →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="4" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
-(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 4 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+(function(){var si=document.getElementById("blogSearch");var grid=document.getElementById("blogGrid");var ce=document.getElementById("searchCount");if(!si||!grid)return;var cards=Array.from(grid.querySelectorAll(".blog-card"));var total=cards.length;si.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var v=0;cards.forEach(function(c){var t=(c.getAttribute("data-title")||"").toLowerCase();var s=(c.getAttribute("data-summary")||"").toLowerCase();var tg=(c.getAttribute("data-tags")||"").toLowerCase();var m=!q||t.indexOf(q)!==-1||s.indexOf(q)!==-1||tg.indexOf(q)!==-1;c.style.display=m?"":"none";if(m)v++;});if(ce)ce.textContent=q?v+"/"+total:"";});var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();

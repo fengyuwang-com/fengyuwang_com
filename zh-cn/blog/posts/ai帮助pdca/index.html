@@ -4,22 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>AI帮助PDCA | Fengyu WANG</title>
-    <meta name="description" content="AI帮助PDCA">
+    <meta name="description" content="把向 AI 提问这件事本身套进 PDCA：人定规则、AI 做执行、人做校验、循环优化。用流程把随机碰运气式提问，变成标准化、可复制、结果可控的闭环动作，解决答非所问、幻觉、输出不稳定的痛点。">
     <link rel="canonical" href="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
     
     
-    
-    
-    
-    
-    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
-    
-    
-    
-    
-    <link rel="alternate" hreflang="en" href="/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
-    
+      
+        <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/ai%E5%B9%AB%E5%8A%A9pdca/">
+      
+        <link rel="alternate" hreflang="en" href="/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/">
+      
     
     <link rel="alternate" hreflang="x-default" href="/en/blog/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,7 +32,7 @@
 <style>.hidden-trans{display:none!important}</style>
 </head>
 <body class="blog-static-page">
-    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/"></i></div>
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/ai%E5%B9%AB%E5%8A%A9pdca/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/"></i></div>
     <script src="/assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
     <section class="content-section">
         <div class="container">
@@ -61,7 +57,11 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
 @media (max-width:767px) { .blog-article { padding:24px; } }
-.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>AI帮助PDCA</h1>
@@ -181,52 +181,52 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 </ul>
 <p>可直接套用的「Check阶段核查清单」</p>
 <table>
-	<thead>
-			<tr>
-					<th>核查维度</th>
-					<th>核查项</th>
-					<th>是/否</th>
-					<th>问题记录</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>目标匹配</td>
-					<td>完全符合原定的交付目标与合格标准</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td>目标匹配</td>
-					<td>严格遵守了设定的边界条件与禁用项</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td>信息准确</td>
-					<td>所有法规、数据、案例均有来源，无编造</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td>信息准确</td>
-					<td>无过时信息，全部匹配2026年最新规则</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td>落地可用</td>
-					<td>无通用套话、正确的废话，所有内容可直接落地</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td>格式合规</td>
-					<td>完全符合要求的格式、篇幅、排版规则</td>
-					<td></td>
-					<td></td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>核查维度</th>
+          <th>核查项</th>
+          <th>是/否</th>
+          <th>问题记录</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>目标匹配</td>
+          <td>完全符合原定的交付目标与合格标准</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>目标匹配</td>
+          <td>严格遵守了设定的边界条件与禁用项</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>信息准确</td>
+          <td>所有法规、数据、案例均有来源，无编造</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>信息准确</td>
+          <td>无过时信息，全部匹配2026年最新规则</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>落地可用</td>
+          <td>无通用套话、正确的废话，所有内容可直接落地</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>格式合规</td>
+          <td>完全符合要求的格式、篇幅、排版规则</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
 </table>
 <hr>
 <p>🔹 A（Act）：优化闭环+沉淀复用阶段——越用AI越顺的核心
@@ -365,40 +365,40 @@ AI核心处理的内容</li>
 <p>二、给你一个可直接套用的「PDCA+AI」实战模板
 以你最核心的「26Fall香港租房BD拓展」为例，直接对应每个环节的AI调用方法：</p>
 <table>
-	<thead>
-			<tr>
-					<th>PDCA环节</th>
-					<th>你的核心动作</th>
-					<th>给AI的精准提示词模板</th>
-					<th>AI核心交付内容</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>Plan计划</td>
-					<td>定核心目标：26Fall香港市场拓展15家独家房源供应商</td>
-					<td>「我要完成2026Fall香港留学生租房市场15家独家房源供应商拓展的目标，请用PDCA的Plan阶段，帮我拆解目标，制定3个月可落地的执行计划，包含分月时间节点、核心动作、不同类型供应商的合作方案、合规风险预案、渠道优先级排序」</td>
-					<td>完整的拓展执行计划、分阶段目标、合作方案模板、风险预案</td>
-			</tr>
-			<tr>
-					<td>Do执行</td>
-					<td>线下谈供应商、线上沟通签约、房源核验</td>
-					<td>「我正在和香港本土中小学生公寓运营商谈独家合作，对方核心顾虑是内地客源量，帮我生成3套针对性谈判话术，同时核对这套合作方案是否符合香港租房相关法规，标注风险点」</td>
-					<td>谈判话术、合规核对结果、跟进台账模板</td>
-			</tr>
-			<tr>
-					<td>Check复盘</td>
-					<td>提供月度目标、实际完成数据、过程执行情况</td>
-					<td>「我本月原定目标是拓展5家独家供应商，实际只完成2家，已完成的2家均为九龙片区酒店改造公寓，未完成的3家为新界片区本土运营商，请用PDCA的Check阶段，帮我做全流程复盘，对比目标差距，定位核心问题，做精准归因分析」</td>
-					<td>完整复盘报告、差距拆解、核心问题定位、归因分析</td>
-			</tr>
-			<tr>
-					<td>Act优化</td>
-					<td>确定优化方向，拍板新的执行方案</td>
-					<td>「以上复盘的核心问题是新界片区运营商拓展话术、佣金方案不符合本地需求，请用PDCA的Act阶段，帮我生成新界片区运营商的专属优化方案，把已成功的合作经验整理成可复制的SOP，同时生成下个月的拓展执行计划」</td>
-					<td>优化方案、标准化SOP、下一轮执行计划</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>PDCA环节</th>
+          <th>你的核心动作</th>
+          <th>给AI的精准提示词模板</th>
+          <th>AI核心交付内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Plan计划</td>
+          <td>定核心目标：26Fall香港市场拓展15家独家房源供应商</td>
+          <td>「我要完成2026Fall香港留学生租房市场15家独家房源供应商拓展的目标，请用PDCA的Plan阶段，帮我拆解目标，制定3个月可落地的执行计划，包含分月时间节点、核心动作、不同类型供应商的合作方案、合规风险预案、渠道优先级排序」</td>
+          <td>完整的拓展执行计划、分阶段目标、合作方案模板、风险预案</td>
+      </tr>
+      <tr>
+          <td>Do执行</td>
+          <td>线下谈供应商、线上沟通签约、房源核验</td>
+          <td>「我正在和香港本土中小学生公寓运营商谈独家合作，对方核心顾虑是内地客源量，帮我生成3套针对性谈判话术，同时核对这套合作方案是否符合香港租房相关法规，标注风险点」</td>
+          <td>谈判话术、合规核对结果、跟进台账模板</td>
+      </tr>
+      <tr>
+          <td>Check复盘</td>
+          <td>提供月度目标、实际完成数据、过程执行情况</td>
+          <td>「我本月原定目标是拓展5家独家供应商，实际只完成2家，已完成的2家均为九龙片区酒店改造公寓，未完成的3家为新界片区本土运营商，请用PDCA的Check阶段，帮我做全流程复盘，对比目标差距，定位核心问题，做精准归因分析」</td>
+          <td>完整复盘报告、差距拆解、核心问题定位、归因分析</td>
+      </tr>
+      <tr>
+          <td>Act优化</td>
+          <td>确定优化方向，拍板新的执行方案</td>
+          <td>「以上复盘的核心问题是新界片区运营商拓展话术、佣金方案不符合本地需求，请用PDCA的Act阶段，帮我生成新界片区运营商的专属优化方案，把已成功的合作经验整理成可复制的SOP，同时生成下个月的拓展执行计划」</td>
+          <td>优化方案、标准化SOP、下一轮执行计划</td>
+      </tr>
+  </tbody>
 </table>
 <hr>
 <p>三、关键提醒：用PDCA调用AI的避坑要点</p>
