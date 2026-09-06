@@ -3,7 +3,7 @@ title: "銷售存在論"
 date: 2026-09-06
 description: "銷售不是病，是病在報警。"
 slug: "sales-existence"
-tags: ["商業", "組織"]
+tags: ["商業"]
 draft: false
 translationKey: "sales-existence"
 ---

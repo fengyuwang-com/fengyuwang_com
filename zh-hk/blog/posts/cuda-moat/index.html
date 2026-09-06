@@ -68,7 +68,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
     <div class="article-meta">
         <span class="article-date">2026-09-05</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">AI</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">芯片</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技術</span>
     </div>
     <div class="article-content"><p>先問第一個問題。如果有一個 AI，能瞬間把英偉達的 CUDA 翻譯成 ROCm、翻譯成英特爾、翻譯成蘋果的平台上，CUDA 還是護城河嗎？</p>
 <p>翻的只是語法。真有這種翻譯器，它吃掉的是第一層：代碼移植的力氣。標準推理的代碼今天已經搬得動了。可你把千卡訓練翻過去試試——FlashAttention、TensorRT、NCCL 樹形通信、斷點續訓，代碼是生成了，誰來為生產事故負責？誰的庫調了十五年？誰的卡明年能拿到十萬張？護城河的上沿是語法，河牀是二十年的庫、工具鏈、通信棧和六百萬人的肌肉記憶。翻譯器能讓&quot;AMD 跑 CUDA 代碼&quot;從難變易，不能讓&quot;AMD 平台等於 CUDA 平台&quot;。</p>

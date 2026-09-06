@@ -3,7 +3,7 @@ title: "Build It, and Have AI Rewrite It as You Go"
 date: 2026-09-05
 description: "Same interface, new flesh."
 slug: "ai-clean-room"
-tags: ["Engineering", "Open Source"]
+tags: ["Tech"]
 draft: false
 translationKey: "ai-clean-room"
 ---

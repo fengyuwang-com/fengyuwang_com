@@ -3,7 +3,7 @@ title: "職場生存、核心壁壘與破局路徑"
 date: 2026-05-23
 description: "職場生存、核心壁壘與破局路徑"
 slug: "职場生存-核心壁垒與破局路径"
-tags: ["職場", "創業", "自我"]
+tags: ["商業"]
 draft: false
 translationKey: "职场生存-核心壁垒与破局路径"
 ---

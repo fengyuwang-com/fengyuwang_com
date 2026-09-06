@@ -4,7 +4,7 @@ date: 2026-03-02
 
 description: "想迈出第一步，到底只需要做什么？"
 slug: "假装自己会-迈出第一步"
-tags: ["自我", "创业", "生活"]
+tags: ["商业", "社会"]
 draft: false
 translationKey: "假装自己会-迈出第一步"
 ---

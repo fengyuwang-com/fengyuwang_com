@@ -3,7 +3,7 @@ title: "模型的记忆是供应商锁定"
 date: 2026-09-05
 description: "换模型今天容易，因为模型没记忆；明天就不容易了。"
 slug: "memory-is-vendor-lockin"
-tags: ["AI", "数据主权"]
+tags: ["技术"]
 draft: false
 translationKey: "memory-is-vendor-lockin"
 ---

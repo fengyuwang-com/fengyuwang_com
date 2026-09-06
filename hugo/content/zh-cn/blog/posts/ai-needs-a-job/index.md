@@ -3,7 +3,7 @@ title: "跟 AI 认知一样的人，一个都找不到"
 date: 2026-09-05
 description: "它什么都不缺，缺一份工作。"
 slug: "ai-needs-a-job"
-tags: ["AI", "职场"]
+tags: ["技术", "商业"]
 draft: false
 translationKey: "ai-needs-a-job"
 ---

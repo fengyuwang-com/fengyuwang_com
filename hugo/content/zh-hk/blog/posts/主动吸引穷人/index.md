@@ -3,7 +3,7 @@ title: "主動吸引窮人"
 date: 2026-06-12
 description: "我跟你説最扎心、最真實、你自己沒意識到的 3 個底層原因。 不是安慰，是能立刻改的硬問題。"
 slug: "主動吸引穷人"
-tags: ["商業", "營銷", "自我"]
+tags: ["商業"]
 draft: false
 translationKey: "主动吸引穷人"
 ---

@@ -3,7 +3,7 @@ title: "Surface-Level Experience vs. Core Capabilities"
 date: 2026-05-06
 description: "In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, protect the core layer as your competitive moat."
 slug: "经验型表层"
-tags: ["Career", "Self", "Management"]
+tags: ["Business"]
 draft: false
 translationKey: "经验型表层"
 ---

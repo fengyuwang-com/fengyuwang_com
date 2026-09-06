@@ -3,7 +3,7 @@ title: "飞狗计划：本质上我是卖保险的"
 date: 2026-09-05
 description: "把八千块的订阅，砍成一千五的买断。"
 slug: "feigou-haas"
-tags: ["商业", "数据主权"]
+tags: ["商业", "技术"]
 draft: false
 translationKey: "feigou-haas"
 ---

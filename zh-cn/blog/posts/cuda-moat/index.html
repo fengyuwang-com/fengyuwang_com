@@ -68,7 +68,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
     <div class="article-meta">
         <span class="article-date">2026-09-05</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">AI</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">芯片</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span>
     </div>
     <div class="article-content"><p>先问第一个问题。如果有一个 AI，能瞬间把英伟达的 CUDA 翻译成 ROCm、翻译成英特尔、翻译成苹果的平台上，CUDA 还是护城河吗？</p>
 <p>翻的只是语法。真有这种翻译器，它吃掉的是第一层：代码移植的力气。标准推理的代码今天已经搬得动了。可你把千卡训练翻过去试试——FlashAttention、TensorRT、NCCL 树形通信、断点续训，代码是生成了，谁来为生产事故负责？谁的库调了十五年？谁的卡明年能拿到十万张？护城河的上沿是语法，河床是二十年的库、工具链、通信栈和六百万人的肌肉记忆。翻译器能让&quot;AMD 跑 CUDA 代码&quot;从难变易，不能让&quot;AMD 平台等于 CUDA 平台&quot;。</p>

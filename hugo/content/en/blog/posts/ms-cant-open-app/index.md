@@ -3,7 +3,7 @@ title: "Microsoft Can't Even Say Whether the App Opened"
 date: 2026-09-05
 description: "The strongest parts were rewritten on blank paper; the worst parts carry thirty years."
 slug: "ms-cant-open-app"
-tags: ["Tech", "Product"]
+tags: ["Tech", "Business"]
 draft: false
 translationKey: "ms-cant-open-app"
 ---

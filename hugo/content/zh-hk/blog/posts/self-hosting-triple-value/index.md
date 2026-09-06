@@ -3,7 +3,7 @@ title: "自部署的三重價值"
 date: 2026-09-05
 description: "價格、隱私、環保——一重比一重實際。"
 slug: "self-hosting-triple-value"
-tags: ["數據主權", "自部署"]
+tags: ["技術"]
 draft: false
 translationKey: "self-hosting-triple-value"
 ---

@@ -3,7 +3,7 @@ title: "*Why DeepSeek V4 Makes Me Extremely Pessimistic About the Economy"
 date: 2026-06-04
 description: "Final video outline: DeepSeek V4 — why I am extremely pessimistic about the future economy (the brutal reality version for ordinary people)"
 slug: "deepseek-v4-为什么让我对经济极度悲观"
-tags: ["AI", "Economy", "Society"]
+tags: ["Tech", "Economy", "Society"]
 draft: true
 translationKey: "deepseek-v4-为什么让我对经济极度悲观"
 ---

@@ -3,7 +3,7 @@ title: "AIHTML簡歷"
 date: 2026-03-19
 description: "絕對可以，而且是降維打擊式解決。"
 slug: "aihtml简歷"
-tags: ["技術", "工具"]
+tags: ["技術"]
 draft: false
 translationKey: "aihtml简历"
 ---

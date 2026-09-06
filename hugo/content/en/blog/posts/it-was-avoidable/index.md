@@ -3,7 +3,7 @@ title: "This Didn't Have to Happen"
 date: 2026-09-06
 description: "A 90-minute window; a 5-second run."
 slug: "it-was-avoidable"
-tags: ["Society", "Institutions"]
+tags: ["Society"]
 draft: false
 translationKey: "it-was-avoidable"
 ---

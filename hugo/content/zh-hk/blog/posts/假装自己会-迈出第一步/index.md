@@ -3,7 +3,7 @@ title: "假裝自己會，邁出第一步！"
 date: 2026-03-02
 description: "想邁出第一步，到底只需要做什麼？"
 slug: "假装自己會-迈出第一步"
-tags: ["自我", "創業", "生活"]
+tags: ["商業", "社會"]
 draft: false
 translationKey: "假装自己会-迈出第一步"
 ---

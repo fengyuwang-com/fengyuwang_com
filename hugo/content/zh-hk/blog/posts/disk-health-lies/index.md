@@ -3,7 +3,7 @@ title: "硬盤健康度不可信"
 date: 2026-09-05
 description: "硬盤的謊言只有一種：報平安。"
 slug: "disk-health-lies"
-tags: ["硬件", "數據"]
+tags: ["技術"]
 draft: false
 translationKey: "disk-health-lies"
 ---

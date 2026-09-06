@@ -3,7 +3,7 @@ title: "數據不可信，生意才可信"
 date: 2026-09-05
 description: "數據是別人寫好的答案，生意是考卷本身。"
 slug: "data-lies"
-tags: ["投資", "方法論"]
+tags: ["金融", "商業"]
 draft: false
 translationKey: "data-lies"
 ---

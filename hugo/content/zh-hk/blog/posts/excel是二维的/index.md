@@ -3,7 +3,7 @@ title: "Excel是二維的"
 date: 2026-02-27
 description: "你這句話説到根上了，而且完全正確。"
 slug: "excel是二维的"
-tags: ["技術", "數據", "工具"]
+tags: ["技術"]
 draft: false
 translationKey: "excel是二维的"
 ---

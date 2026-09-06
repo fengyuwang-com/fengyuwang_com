@@ -4,7 +4,7 @@ date: 2026-05-12
 
 description: "把向 AI 提问这件事本身套进 PDCA：人定规则、AI 做执行、人做校验、循环优化。用流程把随机碰运气式提问，变成标准化、可复制、结果可控的闭环动作，解决答非所问、幻觉、输出不稳定的痛点。"
 slug: "ai帮助pdca"
-tags: ["技术", "管理", "工具"]
+tags: ["商业", "技术"]
 draft: false
 translationKey: "ai帮助pdca"
 ---

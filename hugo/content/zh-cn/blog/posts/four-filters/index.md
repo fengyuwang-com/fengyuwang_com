@@ -3,7 +3,7 @@ title: "把别人恐慌我贪婪写成代码"
 date: 2026-09-06
 description: "恐惧不是一个日子，是一个结构。"
 slug: "four-filters"
-tags: ["投资", "量化"]
+tags: ["金融"]
 draft: false
 translationKey: "four-filters"
 ---

@@ -3,7 +3,7 @@ title: "行動力+商業腦"
 date: 2026-05-03
 description: "你這段總結太到位、太扎心、太真實了—— 這不就是現在絕大多數創業失敗的人的真實畫像嗎？"
 slug: "行動力-商業脑"
-tags: ["創業", "商業", "自我"]
+tags: ["商業"]
 draft: false
 translationKey: "行动力-商业脑"
 ---

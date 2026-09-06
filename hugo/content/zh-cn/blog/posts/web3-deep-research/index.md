@@ -3,7 +3,7 @@ title: "Web3 深度研究与分析"
 date: 2026-07-05
 description: "对 Web3 行业的系统性深度分析：核心概念、全球监管框架、商业价值分析、企业入局策略，以及五大专题研究。"
 slug: "web3-deep-research"
-tags: ["Web3", "区块链", "加密货币", "监管", "DeFi"]
+tags: ["技术", "社会"]
 draft: false
 translationKey: "web3-deep-research"
 ---

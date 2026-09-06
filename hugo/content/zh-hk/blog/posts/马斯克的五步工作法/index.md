@@ -3,7 +3,7 @@ title: "馬斯克的五步工作法"
 date: 2026-04-16
 description: "我們來詳細拆解馬斯克的五步工作法，把每個環節的細節和邏輯都講清楚："
 slug: "马斯克的五步工作法"
-tags: ["管理", "技術", "創新"]
+tags: ["商業"]
 draft: false
 translationKey: "马斯克的五步工作法"
 ---

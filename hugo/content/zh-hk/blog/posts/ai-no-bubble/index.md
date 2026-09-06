@@ -3,7 +3,7 @@ title: "AI 沒有泡沫，AI 股票有"
 date: 2026-09-05
 description: "能證偽的是利潤，不是生產力。"
 slug: "ai-no-bubble"
-tags: ["投資", "AI"]
+tags: ["金融", "技術"]
 draft: false
 translationKey: "ai-no-bubble"
 ---

@@ -3,7 +3,7 @@ title: "本來是有辦法不發生這種事"
 date: 2026-09-06
 description: "90 分鐘的窗口，5 秒的奔跑。"
 slug: "it-was-avoidable"
-tags: ["社會", "制度"]
+tags: ["社會"]
 draft: false
 translationKey: "it-was-avoidable"
 ---

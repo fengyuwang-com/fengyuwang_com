@@ -3,7 +3,7 @@ title: "The Rich Are Rich Because They Do the Math"
 date: 2026-09-06
 description: "Not cleverness. Starting."
 slug: "do-the-math"
-tags: ["Rationality", "Consumption"]
+tags: ["Society", "Economy"]
 draft: false
 translationKey: "do-the-math"
 ---

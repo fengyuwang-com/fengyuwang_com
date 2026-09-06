@@ -3,7 +3,7 @@ title: "No Root, No Agent"
 date: 2026-09-05
 description: "Permission is the AI's hand. An agent with tied hands is a consultant, no matter how smart."
 slug: "no-root-no-agent"
-tags: ["AI", "Product"]
+tags: ["Tech", "Business"]
 draft: false
 translationKey: "no-root-no-agent"
 ---

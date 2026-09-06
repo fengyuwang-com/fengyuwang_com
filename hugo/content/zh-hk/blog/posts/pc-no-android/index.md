@@ -3,7 +3,7 @@ title: "電腦為什麼沒有自己的安卓"
 date: 2026-09-05
 description: "缺的不是技術，是定標準的權力。"
 slug: "pc-no-android"
-tags: ["科技", "操作系統"]
+tags: ["技術"]
 draft: false
 translationKey: "pc-no-android"
 ---

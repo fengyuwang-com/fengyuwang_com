@@ -3,7 +3,7 @@ title: "The Feigou Plan: Essentially, I'm Selling Insurance"
 date: 2026-09-05
 description: "Turn an 8,000-yuan subscription into a 1,500-yuan buyout."
 slug: "feigou-haas"
-tags: ["Business", "Data Sovereignty"]
+tags: ["Business", "Tech"]
 draft: false
 translationKey: "feigou-haas"
 ---

@@ -3,7 +3,7 @@ title: "自主可控，到底谁可控"
 date: 2026-09-05
 description: "自主可控是使用的人可控，不是开发公司可控。"
 slug: "who-controls-whom"
-tags: ["科技", "开源"]
+tags: ["技术"]
 draft: false
 translationKey: "who-controls-whom"
 ---

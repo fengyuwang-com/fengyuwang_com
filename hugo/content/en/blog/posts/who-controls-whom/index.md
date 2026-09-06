@@ -3,7 +3,7 @@ title: "Self-Reliant and Controllable — Controllable by Whom?"
 date: 2026-09-05
 description: "Self-reliance means the user is in control, not the vendor."
 slug: "who-controls-whom"
-tags: ["Tech", "Open Source"]
+tags: ["Tech"]
 draft: false
 translationKey: "who-controls-whom"
 ---

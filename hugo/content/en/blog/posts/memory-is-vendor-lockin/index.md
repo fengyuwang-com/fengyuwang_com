@@ -3,7 +3,7 @@ title: "A Model's Memory Is Vendor Lock-In"
 date: 2026-09-05
 description: "Switching models is easy today because models have no memory. It won't stay easy."
 slug: "memory-is-vendor-lockin"
-tags: ["AI", "Data Sovereignty"]
+tags: ["Tech"]
 draft: false
 translationKey: "memory-is-vendor-lockin"
 ---

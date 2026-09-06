@@ -3,7 +3,7 @@ title: "蘋果正在變成 IBM"
 date: 2026-09-05
 description: "訴訟能爭取時間，爭取不來範式定義權。"
 slug: "apple-is-becoming-ibm"
-tags: ["商業", "科技"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "apple-is-becoming-ibm"
 ---

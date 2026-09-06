@@ -3,7 +3,7 @@ title: "微软连“打开了没有”都说不清"
 date: 2026-09-05
 description: "最强的部分是白纸重写的，最烂的部分是背了三十年的。"
 slug: "ms-cant-open-app"
-tags: ["科技", "产品"]
+tags: ["技术", "商业"]
 draft: false
 translationKey: "ms-cant-open-app"
 ---

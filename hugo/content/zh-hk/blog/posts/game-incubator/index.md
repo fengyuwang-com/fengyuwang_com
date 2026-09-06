@@ -3,7 +3,7 @@ title: "沒有遊戲，就沒有微信和 CUDA"
 date: 2026-09-05
 description: "遊戲是孵化器；孵化器裏的東西，往往不是孵化者親手接生的。"
 slug: "game-incubator"
-tags: ["商業", "科技"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "game-incubator"
 ---

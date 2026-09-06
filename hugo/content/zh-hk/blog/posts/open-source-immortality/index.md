@@ -3,7 +3,7 @@ title: "開源即永生"
 date: 2026-09-06
 description: "可靠性做到 10 個 9，最脆的零件還是自己。"
 slug: "open-source-immortality"
-tags: ["工程", "開源", "人生"]
+tags: ["技術", "社會"]
 draft: false
 translationKey: "open-source-immortality"
 ---

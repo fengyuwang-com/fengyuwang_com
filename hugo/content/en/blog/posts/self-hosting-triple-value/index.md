@@ -3,7 +3,7 @@ title: "The Three Values of Self-Hosting"
 date: 2026-09-05
 description: "Price, privacy, environment — each more practical than the last."
 slug: "self-hosting-triple-value"
-tags: ["Data Sovereignty", "Self-Hosting"]
+tags: ["Tech"]
 draft: false
 translationKey: "self-hosting-triple-value"
 ---

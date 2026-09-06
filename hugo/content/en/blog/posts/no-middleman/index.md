@@ -3,7 +3,7 @@ title: "My Server Uploads, My Phone Downloads"
 date: 2026-09-05
 description: "The middleman isn't a technical necessity. It's the rent on scarce addresses."
 slug: "no-middleman"
-tags: ["Tech", "Networking"]
+tags: ["Tech"]
 draft: false
 translationKey: "no-middleman"
 ---

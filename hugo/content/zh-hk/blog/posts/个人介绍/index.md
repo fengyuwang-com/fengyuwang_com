@@ -3,7 +3,7 @@ title: "個人介紹"
 date: 2026-01-15
 description: "王先生專注於解決方案與通用邏輯體係的研究與應用。"
 slug: "個人介绍"
-tags: ["自我", "生活"]
+tags: ["社會"]
 draft: false
 translationKey: "个人介绍"
 ---
