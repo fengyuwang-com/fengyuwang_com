@@ -10,6 +10,10 @@
   6. sitemap: URL 数 vs 实际页面数
   7. 站点配置: _headers 是否覆盖 /{lang}/blog* / llms.txt 链接是否存在 /
      CF beacon 占位符 / 死链检查 (根目录 HTML 相对引用)
+  15. 导航栏完整性: {lang}/*.html 每页均可从共享导航栏 (桌面/移动) 到达 /
+     navbar copy 三语键对齐 / 模板无硬编码界面文案
+  16. 按钮等高: 同一容器内 .default-btn 与 .default-btn-one 渲染高度一致
+     (flex stretch × margin-top 会造成蓝白按钮同排差 5px, 搭第 13 节同一趟渲染采样)
 用法: python3 tools/check_site.py [--no-dark]          全站发版大检查 (默认含对比度审计)
       python3 tools/check_site.py --article <md>...   单篇发布前校验
 在仓库根目录执行
@@ -573,9 +577,42 @@ DARK_EVAL_JS = r"""
 """
 
 
+# 同容器蓝白按钮等高采样 (与 DARK_EVAL_JS 同一趟页面 evaluate, 零额外渲染成本)
+BTN_EVAL_JS = r"""
+() => {
+  const parents = new Map();
+  document.querySelectorAll('.default-btn, .default-btn-one').forEach(el => {
+    if (!el.getClientRects().length) return;
+    const p = el.parentElement;
+    if (!parents.has(p)) {
+      const c = p.className;
+      parents.set(p, { cls: (c && typeof c === 'string') ? c : '(root)', btns: [] });
+    }
+    parents.get(p).btns.push({
+      one: el.classList.contains('default-btn-one'),
+      h: el.offsetHeight,
+      t: el.textContent.trim().slice(0, 12)
+    });
+  });
+  let total = 0;
+  const problems = [];
+  for (const g of parents.values()) {
+    if (!g.btns.some(x => !x.one) || !g.btns.some(x => x.one)) continue;
+    total++;
+    const hs = [...new Set(g.btns.map(x => x.h))];
+    if (hs.length > 1) {
+      problems.push({ parent: g.cls, detail: g.btns.map(x => x.h + 'px/' + x.t).join(' | ') });
+    }
+  }
+  return { total, problems };
+}
+"""
+
+
 def run_dark_audit(max_pages=0):
-    """返回 (输出文本, 是否通过)。自起 http.server + 无头 Chromium 逐页双向审计。"""
+    """返回 (对比度输出, 对比度通过?, 按钮等高输出, 按钮等高通过?)。自起 http.server + 无头 Chromium 逐页双向审计。"""
     lines = []
+    btn_lines = []
 
     class QuietHandler(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a):
@@ -596,6 +633,8 @@ def run_dark_audit(max_pages=0):
     from playwright.sync_api import sync_playwright
 
     total_bad = 0
+    btn_bad = 0
+    btn_total = 0
     with sync_playwright() as p:
         browser = p.chromium.launch()
         ctx = browser.new_context(viewport={"width": 1280, "height": 900})
@@ -644,33 +683,278 @@ def run_dark_audit(max_pages=0):
                     lines.append(f"   {x['ratio']:>5.2f}  fg={x['fg']} bg={x['bg']}{tag}  <{x['desc']}>  \"{x['text']}\"")
                 if len(probs) > 12:
                     lines.append(f"   ... 还有 {len(probs) - 12} 个")
+            try:
+                btn = page.evaluate(BTN_EVAL_JS)
+            except Exception:
+                btn = {"total": 0, "problems": []}
+            btn_total += btn["total"]
+            if btn["problems"]:
+                btn_bad += len(btn["problems"])
+                btn_lines.append(f"\n== {path} ({len(btn['problems'])} 组)")
+                for x in btn["problems"][:8]:
+                    btn_lines.append(f"   <{x['parent'][:70]}>  {x['detail']}")
+                if len(btn["problems"]) > 8:
+                    btn_lines.append(f"   ... 还有 {len(btn['problems']) - 8} 组")
         browser.close()
     httpd.shutdown()
     audited = len(pages) - len([k for k in DESIGN_ALLOWLIST])
     summary = f"暗色模式审计: {audited} 页, {total_bad} 个低对比度问题"
     lines.append(summary)
     ok_flag = total_bad == 0
-    return "\n".join(lines), ok_flag
+    btn_summary = f"按钮等高检查: {btn_total} 组蓝白混排, {btn_bad} 组高度不一致"
+    btn_lines.append(btn_summary)
+    return "\n".join(lines), ok_flag, btn_lines, btn_bad == 0
 
 
 dark_out = None
+btn_out = None
 if ARGS.no_dark:
     notes.append("[dark] 按参数跳过暗色对比度审计 (--no-dark)")
 elif importlib.util.find_spec("playwright") is None:
     notes.append("[dark] 未安装 playwright, 跳过暗色对比度审计 (pip install playwright && playwright install chromium)")
 else:
     print("暗色模式审计运行中 (全站真实渲染, 需几分钟)…")
-    dark_out, dark_ok = run_dark_audit(ARGS.max_dark_pages)
+    dark_out, dark_ok, btn_out, btn_ok = run_dark_audit(ARGS.max_dark_pages)
     if dark_ok:
         ok("dark", dark_out.splitlines()[-1].strip())
     else:
         err("dark", f"发现低对比度问题, 明细见下方 [dark] 输出")
+
+# ---------- 15. 导航栏完整性 (navbar 可达性 + 三语对齐) ----------
+# 背景: 新增页面后忘加进共享导航栏, 页面就成了"导航孤岛"; navbar JS 三语 copy 漏键、
+# 或模板里硬编码界面文案, 则部分语言用户看不到正确入口。
+# 编号说明: 现有检查节编号至 13 (另有 11.5 / 12.5 两个小节), 本节为新增加的下一节,
+# 按任务约定编为第 15 节。
+# 原理 (纯静态解析 assets/js/shared-subpage-navbar.js, 不执行 JS, 刻意宽松):
+#   A. 可达性: {lang}/*.html (仅此一层, 博客文章不在内) 每页的站点内 href 必须出现在
+#      模板数组 (container.outerHTML = [...], 桌面菜单与移动 drawer 同在其中) 引用的
+#      labels.<x>Href 按当前语言 copy 解析出的 URL 集合中 (桌面/移动任一即可)。
+#   B. 对齐: 模板用到的每个 copy key 三语齐备; 三个 copy 对象键集一致; *Href 三语路径
+#      结构一致 (仅语言前缀不同) 且目标文件存在 (navbar 为运行时 JS 注入, 第 8 节死链
+#      检查剥离了 <script>, 扫不到它); 模板/siteLinks 内不许硬编码界面文案 (豁免见下)。
+#   动态部分 (langUrl 语言切换 / altMap 回退 / hidden-trans data-url) 只服务跨语言切换,
+#   不参与同语言可达性; HTML 片段字面量里的可见文本不解析, 仅单查 aria-label 属性。
+NAVBAR_JS = "assets/js/shared-subpage-navbar.js"
+
+# 页面豁免 (basename 精确匹配): 明显不该出现在导航栏的功能页。
+# ⚠️ 参照 DESIGN_ALLOWLIST 的规矩: 除 404 这类功能页外, 不许私自豁免任何真实内容页
+# —— 查出来缺就如实报问题, 不要往这里加豁免。
+NAVBAR_EXEMPT_PAGES = {
+    "404.html",  # 错误页, 不应从导航栏进入
+}
+
+# 硬编码界面文案豁免 (JS 反转义后精确匹配): 设计上三语一致、不应翻译的字符串。
+NAVBAR_TEXT_EXEMPT = {
+    "English",   # 语言切换器: 各语言自称, 惯例不翻译
+    "简体中文",   # 同上
+    "繁體中文",   # 同上
+    "GitHub",    # 外链品牌名 (siteLinks, 注入桌面+移动两个菜单)
+    "LinkedIn",  # 同上
+    "YouTube",   # 同上
+    "BiliBili",  # 同上
+}
+
+
+def _nav_balanced(text, open_pos, open_ch, close_ch):
+    """括号配平: 从 open_pos (指向 open_ch) 起返回配对 close_ch 的下标, 跳过字符串字面量。"""
+    depth, quote, i = 0, None, open_pos
+    while i < len(text):
+        c = text[i]
+        if quote:
+            if c == "\\":
+                i += 2
+                continue
+            if c == quote:
+                quote = None
+        elif c in "'\"":
+            quote = c
+        elif c == open_ch:
+            depth += 1
+        elif c == close_ch:
+            depth -= 1
+            if depth == 0:
+                return i
+        i += 1
+    return -1
+
+
+def _nav_unescape(s):
+    r"""JS 字符串反转义 (\uXXXX / \xXX / 常见转义), 供 CJK 检测与豁免白名单匹配。"""
+    s = re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s)
+    s = re.sub(r"\\x([0-9a-fA-F]{2})", lambda m: chr(int(m.group(1), 16)), s)
+    for a, b in (("\\'", "'"), ('\\"', '"'), ("\\n", "\n"), ("\\t", "\t"), ("\\\\", "\\")):
+        s = s.replace(a, b)
+    return s
+
+
+if not os.path.exists(NAVBAR_JS):
+    err("navbar", f"{NAVBAR_JS} 缺失")
+else:
+    _njs = open(NAVBAR_JS, encoding="utf-8").read()
+
+    # -- 提取三个语言 copy 对象 --
+    nav_copy = {}
+    _m = re.search(r"var\s+copy\s*=\s*\{", _njs)
+    if not _m:
+        err("navbar", f"{NAVBAR_JS}: 找不到 var copy = {{}} 对象")
+    else:
+        _src = _njs[_m.end() - 1: _nav_balanced(_njs, _m.end() - 1, "{", "}") + 1]
+        for l in LANGS:
+            pat = r"(?<![A-Za-z0-9_])en\s*:\s*\{" if l == "en" else re.escape("'" + l + "'") + r"\s*:\s*\{"
+            km = re.search(pat, _src)
+            if not km:
+                err("navbar", f"{NAVBAR_JS}: copy 对象缺 {l} 语言块")
+                nav_copy[l] = {}
+                continue
+            body = _src[km.end() - 1: _nav_balanced(_src, km.end() - 1, "{", "}") + 1]
+            nav_copy[l] = {k: _nav_unescape(v) for k, v in
+                           re.findall(r"([A-Za-z0-9_]+)\s*:\s*'((?:[^'\\]|\\.)*)'", body)}
+
+    # -- 提取模板数组 (桌面菜单 + 移动 drawer 同一数组) 与 siteLinks 外链 --
+    nav_tpl = ""
+    _m = re.search(r"container\.outerHTML\s*=\s*\[", _njs)
+    if not _m:
+        err("navbar", f"{NAVBAR_JS}: 找不到 container.outerHTML 模板数组")
+    else:
+        nav_tpl = _njs[_m.end() - 1: _nav_balanced(_njs, _m.end() - 1, "[", "]") + 1]
+    _site_labels = []
+    _m = re.search(r"var\s+siteLinks\s*=\s*\[", _njs)
+    if _m:
+        _site_labels = [_nav_unescape(x) for x in re.findall(
+            r"label\s*:\s*'((?:[^'\\]|\\.)*)'",
+            _njs[_m.end() - 1: _nav_balanced(_njs, _m.end() - 1, "[", "]") + 1])]
+
+    nav_refs = sorted(set(re.findall(r"labels\.([A-Za-z0-9_]+)", nav_tpl)))
+    nav_href_refs = [r for r in nav_refs if r.endswith("Href")]
+
+    # -- B1: 三语 copy 键集一致 --
+    _ks = {l: set(nav_copy.get(l, {})) for l in LANGS}
+    _ks_en = _ks["en"]
+    for l in ("zh-cn", "zh-hk"):
+        _miss = _ks_en - _ks[l]
+        _extra = _ks[l] - _ks_en
+        if _miss:
+            err("navbar", f"copy['{l}'] 缺 key (en 有): {sorted(_miss)}")
+        if _extra:
+            err("navbar", f"copy['{l}'] 多出 key (en 无): {sorted(_extra)}")
+
+    # -- B2: 模板引用的每个 copy key 三语齐备 --
+    for r in nav_refs:
+        for l in LANGS:
+            if r not in nav_copy.get(l, {}):
+                err("navbar", f"模板引用 labels.{r} 但 copy['{l}'] 无此 key")
+
+    # -- B3: *Href 三语路径结构一致 (仅语言前缀可不同) --
+    for r in nav_href_refs:
+        if any(r not in nav_copy.get(l, {}) for l in LANGS):
+            continue  # 缺 key 已在 B1/B2 报过, 此处跳过
+        _tails = {}
+        for l in LANGS:
+            v = nav_copy.get(l, {}).get(r, "").split("#")[0].split("?")[0]
+            _tails[l] = v[len("/" + l + "/"):] if v.startswith("/" + l + "/") else v
+        if len(set(_tails.values())) > 1:
+            err("navbar", f"{r} 三语路径结构不一致: " +
+                ", ".join(f"{l}={nav_copy.get(l, {}).get(r, '<缺 key>')}" for l in LANGS))
+
+    # -- B4: 模板/siteLinks 内不许硬编码界面文案 --
+    # 内联三语三元 (lang === 'en' ? 'X' : lang === 'zh-cn' ? 'Y' : 'Z') 整体视为一处硬编码;
+    # 其余裸字面量剔除结构片段 (含 < 或 " 的 HTML 片段、#锚点、langUrl/条件参数) 后, 含文字即报。
+    _TERN_RE = re.compile(r"lang\s*===\s*'en'\s*\?\s*'((?:[^'\\]|\\.)*)'\s*:\s*lang\s*===\s*'zh-cn'\s*\?\s*"
+                          r"'((?:[^'\\]|\\.)*)'\s*:\s*'((?:[^'\\]|\\.)*)'")
+    _hard = []
+    _seen = set()
+    for _t in _TERN_RE.findall(nav_tpl):
+        _trip = tuple(_nav_unescape(x) for x in _t)
+        if _trip not in _seen:
+            _seen.add(_trip)
+            _hard.append("内联三语三元: en=「%s」 zh-cn=「%s」 zh-hk=「%s」" % _trip)
+    _tpl_clean = _TERN_RE.sub("", nav_tpl)
+    _tpl_clean = re.sub(r"lang\s*===\s*'[^']*'", "", _tpl_clean)
+    _tpl_clean = re.sub(r"langUrl\('[^']*'\)", "", _tpl_clean)
+    for _lit in re.findall(r"'((?:[^'\\]|\\.)*)'", _tpl_clean):
+        t = _nav_unescape(_lit)
+        if not t or t.startswith("#") or "<" in t or '"' in t:
+            continue
+        if not re.search(r"[A-Za-z\u4e00-\u9fff]", t) or t in NAVBAR_TEXT_EXEMPT:
+            continue
+        _hard.append(f"模板字面量: 「{t}」")
+    for t in re.findall(r'aria-label="([^"]*)"', nav_tpl):
+        if "'" in t or "+" in t:
+            continue  # JS 拼接表达式 (labels.xxx copy key), 三语对齐已由 copy 键检查覆盖
+        if t and t not in NAVBAR_TEXT_EXEMPT:
+            _hard.append(f"aria-label: 「{t}」")
+    for t in _site_labels:
+        if t and t not in NAVBAR_TEXT_EXEMPT:
+            _hard.append(f"siteLinks: 「{t}」")
+    for t in _hard:
+        err("navbar", f"硬编码界面文案 ({t}) —— 应提取为三语 copy key")
+
+    # -- A: 页面可达性 (每语言) + *Href 目标文件存在性 --
+    for l in LANGS:
+        _c = nav_copy.get(l, {})
+        _hrefs = set()
+        for r in nav_href_refs:
+            v = _c.get(r, "").split("#")[0].split("?")[0]
+            if v.startswith("/"):
+                _hrefs.add(v.rstrip("/") or "/")
+        # navbar 为运行时 JS 注入, 第 8 节死链检查扫不到, 这里反向验证目标文件存在
+        _dead = []
+        for v in sorted(_hrefs):
+            tgt = v.lstrip("/")
+            if tgt.endswith("/"):
+                tgt += "index.html"
+            elif not os.path.splitext(tgt)[1]:
+                tgt += "/index.html"
+            if not os.path.exists(tgt):
+                _dead.append(v)
+        if _dead:
+            err("navbar", f"{l}: 导航 *Href 指向不存在的文件: {_dead}")
+        _pages = sorted(os.path.basename(p) for p in glob.glob(f"{l}/*.html"))
+        _missing = []
+        _n_exempt = 0
+        for name in _pages:
+            if name in NAVBAR_EXEMPT_PAGES:
+                _n_exempt += 1
+                continue
+            _cands = {f"/{l}/{name}"}
+            if name == "index.html":
+                _cands |= {f"/{l}", f"/{l}/", "/"}
+            if not (_cands & _hrefs):
+                _missing.append(name)
+        if _missing:
+            for name in _missing:
+                err("navbar", f"{l}/{name} 不在任何导航入口 (桌面菜单/移动 drawer 均未链接其 href)")
+        else:
+            ok("navbar", f"{l}: {len(_pages) - _n_exempt} 页全部可从导航栏到达 (豁免 {_n_exempt})")
+
+    if not issues or all(not i.startswith("[navbar]") for i in issues):
+        ok("navbar", f"navbar 完整性通过: 三语 copy 各 {len(_ks_en)} 键一致, 模板引用 {len(nav_refs)} 键齐备, "
+                     f"{len(nav_href_refs)} 个 *Href 三语路径一致且目标存在, 硬编码文案 0 (文案豁免 {len(NAVBAR_TEXT_EXEMPT)} 项)")
+
+# ---------- 16. 按钮等高 (同容器 .default-btn vs .default-btn-one) ----------
+# 背景: flex 行里 .default-btn-one 的 margin-top:5px 会让 .default-btn 被 stretch
+# 多撑 5px (54 vs 49), 蓝白按钮同排高度不一致。采样搭第 13 节同一趟渲染, 不跑第二遍。
+if ARGS.no_dark:
+    notes.append("[btn-height] 按参数跳过 (--no-dark)")
+elif importlib.util.find_spec("playwright") is None:
+    notes.append("[btn-height] 未安装 playwright, 跳过按钮等高检查")
+elif btn_out is None:
+    notes.append("[btn-height] 未运行 (审计未执行)")
+elif btn_ok:
+    ok("btn-height", btn_out[-1].strip())
+else:
+    err("btn-height", "同容器蓝白按钮高度不一致, 明细见下方 [btn-height] 输出")
 
 # ---------- 汇总 ----------
 if dark_out:
     print("=" * 60)
     print("[dark] 对比度审计明细:")
     for line in dark_out.splitlines():
+        if line.strip():
+            print("  " + line)
+if btn_out and not btn_ok:
+    print("[btn-height] 明细:")
+    for line in btn_out:
         if line.strip():
             print("  " + line)
 print("=" * 60)
