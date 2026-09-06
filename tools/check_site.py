@@ -202,6 +202,8 @@ def check_ref(page, ref):
 refs = broken = 0
 for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/*.html", recursive=True)]:
     html = open(page, encoding="utf-8", errors="ignore").read()
+    # hreflang alternate 是 Hugo 自动生成的跨语言提示, 三语 slug 不对齐是设计使然, 不算死链
+    html = re.sub(r'<link rel="alternate" hreflang="[^"]*"[^>]*>', "", html)
     for m in re.findall(r'(?:href|src)="([^"]+)"', html):
         if "{" in m or "{{" in m or "\\" in m:
             continue
