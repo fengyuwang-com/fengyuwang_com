@@ -2,13 +2,19 @@
 
 ## 待办队列（需站长决策）
 
-- [ ] GitHub 悬空提交清理：Open-FengMedia 旧提交（含 FENGMEM.md）强推后仍可按 SHA 直达（997b3ae / 7a3a680），彻底清除需站长向 GitHub Support 提工单
+- [ ] GitHub 悬空提交清理：Open-FengMedia 旧提交（含 FENGMEM.md，997b3ae / 7a3a680）与 Open-FengOffice 旧历史（含 HR 姓名邮箱，旧头 8243ac3 / 初始 0674b73）强推后仍可按 SHA 直达，彻底清除需站长向 GitHub Support 提工单（可同单）
 - [ ] FengMedia 私仓分叉：GitHub master=5ca356e（总纲/AI丰林章程/丰林人格.md）与本地 db0f2f5（prompt工坊/5部新视频）互相有独有提交；且本地 push remote 指向 Gitee。需站长决定收敛方式（Open 镜像当前=本地 db0f2f5 口径）
 - [ ] 私仓跟踪 FENGMEM.md（会话记录）有再泄漏风险：FlyGo / FengOffice / FengOrchestrator 均在 git 跟踪里，未来全量同步可能重演 Open-FengMedia 泄漏；建议各私仓 git rm --cached + gitignore（私仓操作待站长批准）
 - [ ] Open-FengMedia 镜像 main（默认分支，落地 README）与 master（同步分支）双分支并存，是否合并/切默认由站长定
 - [ ] Open-FlyGo Release 暂只有源码（flygo.exe 内嵌 365 处编译机路径已连历史剔除）；干净重编译（cargo --remap-path-prefix）后可附回二进制
-- [ ] Open-FengOffice docs/email-classification.md 含第三方真实姓名/邮箱（招聘方 HR）与站长求职痕迹，非红线、初版就有，如需保守可后续脱敏
 - [ ] CF Web Analytics 仍是占位符 token（check_site [config] 节长期 PASS 提醒项）
+
+（第 11 轮站长拍板：除上述外其余待办等日后举措）
+
+## 已完成（2026-09-07 第 11 轮：站长拍板——email-classification.md 第三方 HR 姓名邮箱脱敏）
+
+- [x] Open-FengOffice docs/email-classification.md 脱敏（站长拍板「取消掉」）：3 个 HR 个人邮箱（vincci@… / recruitment.globalhr@… / thomas@dayuse…）+ 8 个人名 →【已脱敏】，git filter-repo --replace-text 全历史重写，强推 master 8243ac3→feef33a，GitHub 现文件验证 0 命中；文档本体（四级分类体系）保留，README/CLAUDE.md 引用不断链；公司系统邮箱（Webull/OKX/Ollama 等公开企业地址）非个人隐私，保留。**⚠️ 未来从私仓同步此文件必须重做同样脱敏**
+- [x] 网站状态核实：dev=8f47440 已推（flygo×3 链 Open-FlyGo），全站门禁全绿 EXIT=0，master 未动
 
 ## 已完成（2026-09-07 第 10 轮：Open 镜像体系——站长拍板"建 Open-FlyGo + 其余 Open 全量同步"）
 

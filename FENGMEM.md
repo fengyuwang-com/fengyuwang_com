@@ -197,3 +197,9 @@
 - AI 行动: 后台子代理并行（并发限 2，两单被弹后排队补派）——新建 Open-FlyGo（184→165 文件，剔真实激活码/tailnet 主机名/FengInvest 持仓截图[财产红线]/会话记录/exe，Release v2026.09.07-0130）；同步 Open-FengMedia（+1937 文件）并发现 8-23 初始提交曾把 FENGMEM.md 推上公开仓约两周 → filter-repo 清史强推；同步 Open-FengInvest（剔 Discussion/design/真实持仓数，BYOK 零泄露，226 处路径消毒）；核实 Open-FengOffice 已同步、Open-FengOrchestrator 落后 2 提交已补（剔 DeepSeek 余额数字）；五镜像当前树+git 历史双扫；flygo.html×3 改链 Open-FlyGo；全站门禁全绿
 - 产出: Open-FlyGo 新仓+首个 Release；Open-FengMedia master=536322c；Open-FengInvest=02d77e4；Open-FengOrchestrator=e36519e；本仓 flygo 链接修复 + todo/FENGMEM 记账（本轮 commit）
 - 关键决策: FengMedia 镜像源取本地最新（GitHub 私仓已与本地分叉且 push remote 指 Gitee，不擅自推私仓，上报待收敛）；git 历史清洗（force push）按隐私红线授权由主 Agent 亲自执行；GitHub 悬空 SHA 残留需站长提工单，入 todo；私仓跟踪 FENGMEM.md 的再泄漏风险上报待批
+
+## 2026-09-07 06:16 — 第 11 轮
+- 用户要求: 确认网站是否搞定；拍板「第三方 HR 真实姓名邮箱得取消掉」；其余待办等日后举措
+- AI 行动: 核实 dev=8f47440 已推、flygo×3 链 Open-FlyGo、门禁绿；Open-FengOffice docs/email-classification.md 脱敏——3 个 HR 个人邮箱 + 8 个人名 →【已脱敏】，git filter-repo --replace-text 全历史重写（仅该文件含这些 PII，已验证），强推 master 8243ac3→feef33a，GitHub 现文件 0 命中；全站门禁全绿 EXIT=0
+- 产出: Open-FengOffice 干净历史 feef33a；todo.md 悬空提交项并入 Open-FengOffice 旧 SHA；第 11 轮入账 commit 推 dev
+- 关键决策: 保留分类文档本体（README/CLAUDE.md 引用不断链），只脱敏第三方个人 PII；公司系统邮箱（Webull/OKX 等公开企业地址）保留；未来私仓同步该文件必须重做同样脱敏；旧提交悬空归入 GitHub Support 工单待办（与 Open-FengMedia 可同单）
