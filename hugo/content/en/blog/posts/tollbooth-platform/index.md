@@ -3,7 +3,7 @@ title: "Invest in Platforms: The Tollbooth Theory"
 date: 2026-09-05
 description: "It doesn't matter how smooth the road is. What matters is whether you collect the toll."
 slug: "tollbooth-platform"
-tags: ["Finance", "Business"]
+tags: ["Finance", "Business", "Investing"]
 draft: false
 translationKey: "tollbooth-platform"
 ---

@@ -3,7 +3,7 @@ title: "I Only Buy Common Stock"
 date: 2026-09-05
 description: "Before any derivative, ask: is my expected return positive?"
 slug: "option-audit"
-tags: ["Finance"]
+tags: ["Finance", "Investing"]
 draft: false
 translationKey: "option-audit"
 ---

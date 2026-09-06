@@ -3,7 +3,7 @@ title: "Payback Math: I Watch the Dividend"
 date: 2026-09-05
 description: "Price is someone else's quote; the dividend is the company's report."
 slug: "dividend-payback"
-tags: ["Finance"]
+tags: ["Finance", "Investing"]
 draft: false
 translationKey: "dividend-payback"
 ---

@@ -3,7 +3,7 @@ title: "The Shi Yuzhu Business Logic"
 date: 2026-03-21
 description: "Shi Yuzhu business logic can be condensed into one sentence: do not educate, do not debate, do not change. Only identify, only satisfy, only close the deal."
 slug: "史玉柱逻辑"
-tags: ["Business"]
+tags: ["Business", "Marketing"]
 draft: false
 translationKey: "史玉柱逻辑"
 ---
