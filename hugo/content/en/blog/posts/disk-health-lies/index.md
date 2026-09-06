@@ -3,7 +3,7 @@ title: "Disk Health Ratings Can't Be Trusted"
 date: 2026-09-05
 description: "A drive lies in only one way: reporting that it's fine."
 slug: "disk-health-lies"
-tags: ["Hardware", "Data"]
+tags: ["Tech"]
 draft: false
 translationKey: "disk-health-lies"
 ---

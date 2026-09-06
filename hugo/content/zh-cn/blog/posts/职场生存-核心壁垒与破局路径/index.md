@@ -4,7 +4,7 @@ date: 2026-05-23
 
 description: "职场生存、核心壁垒与破局路径"
 slug: "职场生存-核心壁垒与破局路径"
-tags: ["职场", "创业", "自我"]
+tags: ["商业"]
 draft: false
 translationKey: "职场生存-核心壁垒与破局路径"
 ---

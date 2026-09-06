@@ -3,7 +3,7 @@ title: "I Filed Docker a Cascading Bug"
 date: 2026-09-05
 description: "A zero-byte file brought down the engine. Fix one, the next one appears."
 slug: "docker-cascade-bug"
-tags: ["Docker", "Debugging"]
+tags: ["Tech"]
 draft: false
 translationKey: "docker-cascade-bug"
 ---

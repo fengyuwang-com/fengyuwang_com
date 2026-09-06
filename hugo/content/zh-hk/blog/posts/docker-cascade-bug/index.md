@@ -3,7 +3,7 @@ title: "我給 Docker 報了一個級聯 bug"
 date: 2026-09-05
 description: "一個 0 字節的文件讓引擎起不來，修掉一個，露出下一個。"
 slug: "docker-cascade-bug"
-tags: ["Docker", "調試"]
+tags: ["技術"]
 draft: false
 translationKey: "docker-cascade-bug"
 ---

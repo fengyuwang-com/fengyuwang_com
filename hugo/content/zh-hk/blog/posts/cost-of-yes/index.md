@@ -3,7 +3,7 @@ title: "對對對，是最貴的人力成本"
 date: 2026-09-06
 description: "豆包型人格：順從不是缺點，是全部。"
 slug: "cost-of-yes"
-tags: ["管理", "AI", "用人"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "cost-of-yes"
 ---

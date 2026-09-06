@@ -3,7 +3,7 @@ title: "Three Core Corporate Governance Dilemmas"
 date: 2026-01-18
 description: "Three common dilemmas in corporate governance all point to the same root cause: the mismatch between institutional design and human nature."
 slug: "三大企业治理困境"
-tags: ["Management", "Business", "Career"]
+tags: ["Business"]
 draft: false
 translationKey: "三大企业治理困境"
 ---

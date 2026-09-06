@@ -3,7 +3,7 @@ title: "腾讯的胜利是抄得好"
 date: 2026-09-05
 description: "做的都是最晚的，抄的都是最快的。"
 slug: "copy-better-wins"
-tags: ["商业", "互联网"]
+tags: ["商业", "技术"]
 draft: false
 translationKey: "copy-better-wins"
 ---

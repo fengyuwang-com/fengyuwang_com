@@ -3,7 +3,7 @@ title: "游戏一小时就阳痿，代码十八小时"
 date: 2026-09-05
 description: "心流不是玄学，是所有权的副产品。"
 slug: "cyber-impotence"
-tags: ["随笔", "生产"]
+tags: ["社会", "经济"]
 draft: false
 translationKey: "cyber-impotence"
 ---

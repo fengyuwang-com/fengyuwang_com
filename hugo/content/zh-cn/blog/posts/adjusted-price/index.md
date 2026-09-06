@@ -3,7 +3,7 @@ title: "前复权之罪"
 date: 2026-09-06
 description: "改写历史不需要坏人，一个默认参数就够了。"
 slug: "adjusted-price"
-tags: ["投资", "数据"]
+tags: ["金融", "技术"]
 draft: false
 translationKey: "adjusted-price"
 ---

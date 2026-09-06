@@ -68,7 +68,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
     <div class="article-meta">
         <span class="article-date">2026-09-05</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">AI</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">成本</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">经济</span>
     </div>
     <div class="article-content"><p>上下文窗口都做到百万字了,分块处理还有必要吗?我的答案:有。这不是感觉,是算出来的。</p>
 <p>先算钱。一百万字一次喂进去,和一万段、每段一百字分开喂,哪个便宜?直觉说一次便宜——分开喂要多附一万份提示词,不就贵了?这里有个物理事实兜底:只要前缀一致,提示词就命中 KV 缓存,命中的部分基本不要钱。我当时的估计:百分之几都不到。后来真拿现价重算:0.83%,确实不到 1%。中间还出过岔子——AI 拿几年前的旧价格算账,我回它:现在都五四时代了,你这报的还是老皇帝的价。重算完,结论不变:分开喂,不比一次喂贵多少。</p>

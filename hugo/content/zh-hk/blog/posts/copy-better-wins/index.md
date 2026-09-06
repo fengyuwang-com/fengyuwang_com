@@ -3,7 +3,7 @@ title: "騰訊的勝利是抄得好"
 date: 2026-09-05
 description: "做的都是最晚的，抄的都是最快的。"
 slug: "copy-better-wins"
-tags: ["商業", "互聯網"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "copy-better-wins"
 ---

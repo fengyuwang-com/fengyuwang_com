@@ -3,7 +3,7 @@ title: "AI 全都會寫了，框架還剩什麼"
 date: 2026-09-05
 description: "AI 吃掉的是血肉，吃不掉骨架。"
 slug: "frameworks-after-ai"
-tags: ["AI", "編程"]
+tags: ["技術"]
 draft: false
 translationKey: "frameworks-after-ai"
 ---

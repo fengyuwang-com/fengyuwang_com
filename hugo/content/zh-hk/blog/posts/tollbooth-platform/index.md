@@ -3,7 +3,7 @@ title: "投資就是投平台：收費站理論"
 date: 2026-09-05
 description: "路修得平不平沒事，路上有沒有收費站才是壁壘。"
 slug: "tollbooth-platform"
-tags: ["投資", "商業"]
+tags: ["金融", "商業"]
 draft: false
 translationKey: "tollbooth-platform"
 ---

@@ -3,7 +3,7 @@ title: "沒有 root，就沒有 Agent"
 date: 2026-09-05
 description: "權限就是 AI 的手；手被綁住的 Agent，再聰明也只是顧問。"
 slug: "no-root-no-agent"
-tags: ["AI", "產品"]
+tags: ["技術", "商業"]
 draft: false
 translationKey: "no-root-no-agent"
 ---

@@ -3,7 +3,7 @@ title: "Impotent After One Hour of Gaming. Eighteen Hours of Code, No Problem."
 date: 2026-09-05
 description: "Flow isn't mysticism. It's a byproduct of ownership."
 slug: "cyber-impotence"
-tags: ["Essay", "Making"]
+tags: ["Society", "Economy"]
 draft: false
 translationKey: "cyber-impotence"
 ---

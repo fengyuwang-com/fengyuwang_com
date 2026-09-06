@@ -3,7 +3,7 @@ title: "The Poor Pay an Attention Tax"
 date: 2026-09-06
 description: "A tax with no collector, paid by everyone."
 slug: "attention-tax"
-tags: ["Society", "Economics"]
+tags: ["Society", "Economy"]
 draft: false
 translationKey: "attention-tax"
 ---

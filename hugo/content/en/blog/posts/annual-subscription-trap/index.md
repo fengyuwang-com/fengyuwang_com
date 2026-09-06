@@ -3,7 +3,7 @@ title: "An Annual Subscription Is a Lock-In"
 date: 2026-09-05
 description: "Monthly billing buys you an exit. Annual billing buys the vendor your cash flow."
 slug: "annual-subscription-trap"
-tags: ["AI", "Consumer"]
+tags: ["Tech", "Economy"]
 draft: false
 translationKey: "annual-subscription-trap"
 ---

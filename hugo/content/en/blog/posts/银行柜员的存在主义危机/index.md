@@ -3,7 +3,7 @@ title: "A Bank Teller Existential Crisis"
 date: 2026-03-16
 description: "The first symptom of an existential crisis is a disturbance in the perception of time. When someone has sat at the same window for six years, time is no longer a linear river. It becomes an unmarked expanse of water."
 slug: "银行柜员的存在主义危机"
-tags: ["Psychology", "Career", "Society", "Life"]
+tags: ["Society", "Business"]
 draft: false
 translationKey: "银行柜员的存在主义危机"
 ---

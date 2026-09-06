@@ -3,7 +3,7 @@ title: "散户的结构性优势"
 date: 2026-09-05
 description: "数据是它的百万分之一，盈利可不是它的百万分之一。"
 slug: "retail-edge"
-tags: ["投资"]
+tags: ["金融"]
 draft: false
 translationKey: "retail-edge"
 ---

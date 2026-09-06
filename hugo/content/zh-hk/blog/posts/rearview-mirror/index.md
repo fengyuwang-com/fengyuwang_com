@@ -3,7 +3,7 @@ title: "後視鏡認識論"
 date: 2026-09-06
 description: "牌沒翻開之前，一切判斷都是後視鏡。"
 slug: "rearview-mirror"
-tags: ["投資", "認識論"]
+tags: ["金融", "社會"]
 draft: false
 translationKey: "rearview-mirror"
 ---

@@ -3,7 +3,7 @@ title: "年費會員是一種鎖定"
 date: 2026-09-05
 description: "月付買的是退路，年付是替廠商背現金流。"
 slug: "annual-subscription-trap"
-tags: ["AI", "消費"]
+tags: ["技術", "經濟"]
 draft: false
 translationKey: "annual-subscription-trap"
 ---

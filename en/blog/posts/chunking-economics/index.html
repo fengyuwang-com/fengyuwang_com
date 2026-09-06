@@ -68,7 +68,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
     <div class="article-meta">
         <span class="article-date">2026-09-05</span>
         <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">AI</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Cost</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Tech</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Economy</span>
     </div>
     <div class="article-content"><p>Context windows now hold a million characters. Is chunking still necessary? My answer: yes. Not as a feeling — as arithmetic.</p>
 <p>First, the money. A million characters in one shot, versus ten thousand segments of a hundred characters each — which is cheaper? Intuition says one shot: doesn&rsquo;t segmenting mean paying for ten thousand extra prompt headers? Here&rsquo;s the physical fact that settles it: as long as the prefix matches, the prompt hits the KV cache, and cache hits are nearly free. I estimated a few percent at most. Re-priced later with current numbers: 0.83% — indeed under 1%. There was even a detour where the AI priced it off years-old rates, and I told it: it&rsquo;s the May Fourth era now, and you&rsquo;re quoting emperor-era prices. The re-run changed nothing: feeding in segments costs barely more than one shot.</p>

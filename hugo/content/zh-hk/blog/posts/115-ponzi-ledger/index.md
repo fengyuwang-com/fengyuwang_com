@@ -3,7 +3,7 @@ title: "八年 50TB，800 塊：算不通的賬"
 date: 2026-09-05
 description: "現金流還行，攤銷下去，賬沒法算。"
 slug: "115-ponzi-ledger"
-tags: ["數據主權", "商業"]
+tags: ["技術", "商業"]
 draft: false
 translationKey: "115-ponzi-ledger"
 ---

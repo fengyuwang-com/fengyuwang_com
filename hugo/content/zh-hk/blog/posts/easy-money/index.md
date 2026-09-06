@@ -3,7 +3,7 @@ title: "賺容易的錢，不賺難的錢"
 date: 2026-09-05
 description: "難的錢拼資本和代際，容易的錢拼眼光和耐心；個人輸不起時間。"
 slug: "easy-money"
-tags: ["商業", "投資"]
+tags: ["商業", "金融"]
 draft: false
 translationKey: "easy-money"
 ---

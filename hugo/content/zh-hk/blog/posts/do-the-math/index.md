@@ -3,7 +3,7 @@ title: "有錢人就是因為會算"
 date: 2026-09-06
 description: "香港電話卡，上台還是儲值卡？我把上台的辯護理由一條一條過堂，審到最後審到了自己頭上：會算賬的人攔不住大多數人不算賬——市場結構替不想算的人把賬算好了。"
 slug: "do-the-math"
-tags: ["理性", "消費"]
+tags: ["社會", "經濟"]
 draft: false
 translationKey: "do-the-math"
 ---

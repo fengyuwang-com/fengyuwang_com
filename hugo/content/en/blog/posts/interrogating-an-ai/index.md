@@ -3,7 +3,7 @@ title: "How I Interrogate an AI"
 date: 2026-09-05
 description: "Testimony isn't trustworthy; experiments are. Four moves: real commands, inventory, re-runs, same-code-two-machines."
 slug: "interrogating-an-ai"
-tags: ["AI", "Method"]
+tags: ["Tech", "Business"]
 draft: false
 translationKey: "interrogating-an-ai"
 ---

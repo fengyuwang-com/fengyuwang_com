@@ -3,7 +3,7 @@ title: "投资就是投平台：收费站理论"
 date: 2026-09-05
 description: "路修得平不平没事，路上有没有收费站才是壁垒。"
 slug: "tollbooth-platform"
-tags: ["投资", "商业"]
+tags: ["金融", "商业"]
 draft: false
 translationKey: "tollbooth-platform"
 ---

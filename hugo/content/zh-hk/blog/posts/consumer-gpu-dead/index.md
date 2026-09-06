@@ -3,7 +3,7 @@ title: "民用顯卡之死"
 date: 2026-09-05
 description: "算力變成了水電，沒有人家自己發電。"
 slug: "consumer-gpu-dead"
-tags: ["AI", "硬件"]
+tags: ["技術"]
 draft: false
 translationKey: "consumer-gpu-dead"
 ---

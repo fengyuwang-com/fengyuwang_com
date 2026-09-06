@@ -3,7 +3,7 @@ title: "The Death of the Consumer GPU"
 date: 2026-09-05
 description: "Compute became a utility. Nobody generates their own electricity."
 slug: "consumer-gpu-dead"
-tags: ["AI", "Hardware"]
+tags: ["Tech"]
 draft: false
 translationKey: "consumer-gpu-dead"
 ---

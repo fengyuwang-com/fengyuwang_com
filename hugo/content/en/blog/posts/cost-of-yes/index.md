@@ -3,7 +3,7 @@ title: "Yes, Yes, Yes — the Most Expensive Labor Cost"
 date: 2026-09-06
 description: "The Duibao-type personality: agreeableness isn't a flaw — it's the whole person."
 slug: "cost-of-yes"
-tags: ["Management", "AI", "Hiring"]
+tags: ["Business", "Tech"]
 draft: false
 translationKey: "cost-of-yes"
 ---

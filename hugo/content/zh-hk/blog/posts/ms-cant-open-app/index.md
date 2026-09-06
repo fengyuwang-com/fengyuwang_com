@@ -3,7 +3,7 @@ title: "微軟連“打開了沒有”都説不清"
 date: 2026-09-05
 description: "最強的部分是白紙重寫的，最爛的部分是背了三十年的。"
 slug: "ms-cant-open-app"
-tags: ["科技", "產品"]
+tags: ["技術", "商業"]
 draft: false
 translationKey: "ms-cant-open-app"
 ---

@@ -3,7 +3,7 @@ title: "一边做，一边让 AI 重写一遍"
 date: 2026-09-05
 description: "接口一样，血肉全换。"
 slug: "ai-clean-room"
-tags: ["工程", "开源"]
+tags: ["技术"]
 draft: false
 translationKey: "ai-clean-room"
 ---

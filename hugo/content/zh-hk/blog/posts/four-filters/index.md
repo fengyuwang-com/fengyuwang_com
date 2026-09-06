@@ -3,7 +3,7 @@ title: "把別人恐慌我貪婪寫成代碼"
 date: 2026-09-06
 description: "恐懼不是一個日子，是一個結構。"
 slug: "four-filters"
-tags: ["投資", "量化"]
+tags: ["金融"]
 draft: false
 translationKey: "four-filters"
 ---

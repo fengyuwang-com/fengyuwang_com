@@ -3,7 +3,7 @@ title: "Open Source Is Immortality"
 date: 2026-09-06
 description: "Ten nines of reliability, and the flakiest component is still me."
 slug: "open-source-immortality"
-tags: ["Engineering", "Open Source", "Life"]
+tags: ["Tech", "Society"]
 draft: false
 translationKey: "open-source-immortality"
 ---

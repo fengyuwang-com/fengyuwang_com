@@ -3,7 +3,7 @@ title: "清醒正直"
 date: 2026-04-13
 description: "我跟你説一句最硬、最真、最能讓你挺直腰桿的話："
 slug: "清醒正直"
-tags: ["自我", "職場", "生活"]
+tags: ["商業", "社會"]
 draft: false
 translationKey: "清醒正直"
 ---

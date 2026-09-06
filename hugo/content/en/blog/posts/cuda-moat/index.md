@@ -3,7 +3,7 @@ title: "CUDA: Moat, or Code That Can Be Translated?"
 date: 2026-09-05
 description: "Syntax is the top edge of the moat; the ecosystem is the riverbed. A translator eats the edge, not the bed."
 slug: "cuda-moat"
-tags: ["AI", "Chips"]
+tags: ["Tech"]
 draft: false
 translationKey: "cuda-moat"
 ---

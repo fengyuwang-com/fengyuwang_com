@@ -3,7 +3,7 @@ title: "CUDA 是護城河，還是一段能被翻譯的代碼？"
 date: 2026-09-05
 description: "語法是護城河的上沿，生態是河牀；翻譯器吃掉上沿，吃不掉河牀。"
 slug: "cuda-moat"
-tags: ["AI", "芯片"]
+tags: ["技術"]
 draft: false
 translationKey: "cuda-moat"
 ---

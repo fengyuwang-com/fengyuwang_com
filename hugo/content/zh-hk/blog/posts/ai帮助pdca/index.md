@@ -3,7 +3,7 @@ title: "AI幫助PDCA"
 date: 2026-05-12
 description: "把向 AI 提問這件事本身套進 PDCA：人定規則、AI 做執行、人做校驗、循環優化。用流程把隨機碰運氣式提問，變成標準化、可複製、結果可控的閉環動作，解決答非所問、幻覺、輸出不穩定的痛點。"
 slug: "ai幫助pdca"
-tags: ["技術", "管理", "工具"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "ai帮助pdca"
 ---

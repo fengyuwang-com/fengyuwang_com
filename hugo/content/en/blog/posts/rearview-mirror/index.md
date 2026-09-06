@@ -3,7 +3,7 @@ title: "Rearview-Mirror Epistemology"
 date: 2026-09-06
 description: "Before the cards are turned, every judgment is a rearview mirror."
 slug: "rearview-mirror"
-tags: ["Investing", "Epistemology"]
+tags: ["Finance", "Society"]
 draft: false
 translationKey: "rearview-mirror"
 ---

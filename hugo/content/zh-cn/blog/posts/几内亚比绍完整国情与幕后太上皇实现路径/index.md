@@ -4,7 +4,7 @@ date: 2026-03-23
 
 description: "几内亚比绍完整国情与幕后太上皇实现路径"
 slug: "几内亚比绍完整国情与幕后太上皇实现路径"
-tags: ["社会", "政治"]
+tags: ["社会"]
 draft: false
 translationKey: "几内亚比绍完整国情与幕后太上皇实现路径"
 ---

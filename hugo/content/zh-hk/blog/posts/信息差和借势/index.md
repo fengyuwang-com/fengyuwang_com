@@ -3,7 +3,7 @@ title: "信息差和借勢"
 date: 2026-03-18
 description: "這個視頻體現了利用信息差和“借勢思維”來實現低成本獲利的邏輯，能給你帶來這些啓示："
 slug: "信息差和借勢"
-tags: ["商業", "信息", "創業"]
+tags: ["商業", "社會"]
 draft: false
 translationKey: "信息差和借势"
 ---

@@ -3,7 +3,7 @@ title: "微软的胜利纯粹是来得早"
 date: 2026-09-05
 description: "先发是彩票，锁定是手艺。"
 slug: "microsoft-was-early"
-tags: ["科技", "商业"]
+tags: ["技术", "商业"]
 draft: false
 translationKey: "microsoft-was-early"
 ---

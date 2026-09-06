@@ -3,7 +3,7 @@ title: "年费会员是一种锁定"
 date: 2026-09-05
 description: "月付买的是退路，年付是替厂商背现金流。"
 slug: "annual-subscription-trap"
-tags: ["AI", "消费"]
+tags: ["技术", "经济"]
 draft: false
 translationKey: "annual-subscription-trap"
 ---

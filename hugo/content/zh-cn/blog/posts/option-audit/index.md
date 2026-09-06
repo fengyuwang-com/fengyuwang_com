@@ -3,7 +3,7 @@ title: "只买正股"
 date: 2026-09-05
 description: "买之前先问一句：我的期望收益是正数吗？"
 slug: "option-audit"
-tags: ["投资", "衍生品"]
+tags: ["金融"]
 draft: false
 translationKey: "option-audit"
 ---

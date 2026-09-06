@@ -3,7 +3,7 @@ title: "穷人注意力税"
 date: 2026-09-06
 description: "一笔没人来收、人人都在交的税。"
 slug: "attention-tax"
-tags: ["社会", "经济学"]
+tags: ["社会", "经济"]
 draft: false
 translationKey: "attention-tax"
 ---

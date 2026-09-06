@@ -3,7 +3,7 @@ title: "Refuse to Change, and It's Over"
 date: 2026-09-06
 description: "Two men named Wang An, nine centuries apart, one diagnosis."
 slug: "refuse-to-change"
-tags: ["History", "Business"]
+tags: ["Society", "Business"]
 draft: false
 translationKey: "refuse-to-change"
 ---

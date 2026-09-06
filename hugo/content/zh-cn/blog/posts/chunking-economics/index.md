@@ -3,7 +3,7 @@ title: "一百万字一次喂进去，又贵又差"
 date: 2026-09-05
 description: "上下文窗口再大，分块也有必要——这笔账是算出来的。"
 slug: "chunking-economics"
-tags: ["AI", "成本"]
+tags: ["技术", "经济"]
 draft: false
 translationKey: "chunking-economics"
 ---

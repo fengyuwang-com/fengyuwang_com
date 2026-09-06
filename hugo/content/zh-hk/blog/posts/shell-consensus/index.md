@@ -3,7 +3,7 @@ title: "貝殼也是貨幣，後來怎麼就不是了"
 date: 2026-09-05
 description: "共識會崩；要害是崩了之後還剩什麼。"
 slug: "shell-consensus"
-tags: ["經濟", "貨幣"]
+tags: ["經濟", "金融"]
 draft: false
 translationKey: "shell-consensus"
 ---

@@ -3,7 +3,7 @@ title: "The Adversary Mechanism for Decisions"
 date: 2026-09-05
 description: "A decision only counts when your opposing side has been persuaded too."
 slug: "adversary-decision"
-tags: ["Method", "Decisions"]
+tags: ["Business"]
 draft: false
 translationKey: "adversary-decision"
 ---
