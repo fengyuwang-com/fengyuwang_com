@@ -1,0 +1,13 @@
+{{- $pages := where .Site.RegularPages "Type" "blog" -}}
+{{- $items := slice -}}
+{{- range $pages.ByDate.Reverse -}}
+{{- $items = $items | append (dict
+    "url" .RelPermalink
+    "title" .Title
+    "description" (.Params.description | default "")
+    "tags" (.Params.tags | default slice)
+    "date" (.Date.Format "2006-01-02")
+    "content" (.Content | plainify)
+) -}}
+{{- end -}}
+{{- $items | jsonify -}}

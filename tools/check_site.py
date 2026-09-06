@@ -10,11 +10,14 @@
   6. sitemap: URL 数 vs 实际页面数
   7. 站点配置: _headers 是否覆盖 /{lang}/blog* / llms.txt 链接是否存在 /
      CF beacon 占位符 / 死链检查 (根目录 HTML 相对引用)
-用法: python3 tools/check_site.py   (在仓库根目录执行)
+用法: python3 tools/check_site.py [--no-dark]   (在仓库根目录执行)
 """
 import glob
+import importlib.util
+import json
 import os
 import re
+import subprocess
 import sys
 import urllib.parse
 
@@ -204,6 +207,8 @@ for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/
     html = open(page, encoding="utf-8", errors="ignore").read()
     # hreflang alternate 是 Hugo 自动生成的跨语言提示, 三语 slug 不对齐是设计使然, 不算死链
     html = re.sub(r'<link rel="alternate" hreflang="[^"]*"[^>]*>', "", html)
+    # <script> 里的字符串拼接 (如 '+p.url+') 不是真实链接, 扫描前整体剥离
+    html = re.sub(r"<script\b[^>]*>.*?</script>", "", html, flags=re.S)
     for m in re.findall(r'(?:href|src)="([^"]+)"', html):
         if "{" in m or "{{" in m or "\\" in m:
             continue
@@ -267,7 +272,60 @@ for l in ("zh-cn", "zh-hk", "en"):
 if not issues or all(not i.startswith("[parity]") for i in issues):
     ok("parity", "三语根目录一级页面清单对等")
 
+# ---------- 12. 全站搜索 (JSON 索引 + 列表页搜索元素) ----------
+for l in LANGS:
+    idx_file = f"{l}/blog/index.json"
+    if not os.path.exists(idx_file):
+        err("search", f"{idx_file} 缺失 (需 hugo JSON 输出 + deploy)")
+        continue
+    try:
+        items = json.load(open(idx_file, encoding="utf-8"))
+    except Exception as e:
+        err("search", f"{idx_file} 解析失败: {e}")
+        continue
+    n = len(items)
+    if n < 90:
+        err("search", f"{idx_file} 仅 {n} 条 (<90, 索引不完整)")
+    bad_fields = [i for i, it in enumerate(items) if not it.get("url") or not it.get("title") or "content" not in it]
+    empty_body = [it.get("url", i) for i, it in enumerate(items) if len((it.get("content") or "").strip()) < 100]
+    if bad_fields:
+        err("search", f"{idx_file} {len(bad_fields)} 条缺 url/title/content 字段: {bad_fields[:5]}")
+    if empty_body:
+        err("search", f"{idx_file} {len(empty_body)} 条正文为空 (<100 字符): {empty_body[:5]}")
+    if not bad_fields and not empty_body and n >= 90:
+        ok("search", f"{idx_file}: {n} 条, 字段齐全, 正文非空")
+    lp = f"{l}/blog/index.html"
+    if os.path.exists(lp):
+        lh = open(lp, encoding="utf-8").read()
+        for needle, label in [('id="blogSearch"', "搜索框"), ('id="searchResults"', "搜索结果容器"),
+                              ("index.json", "索引引用"), ('id="blogGrid"', "文章网格")]:
+            if needle not in lh:
+                err("search", f"{lp} 缺{label} ({needle})")
+
+# ---------- 13. 暗色模式对比度 (真实渲染, 见 tools/check_dark.py) ----------
+dark_out = None
+if "--no-dark" not in sys.argv:
+    if importlib.util.find_spec("playwright") is None:
+        notes.append("[dark] 未安装 playwright, 跳过暗色对比度审计 (pip install playwright && playwright install chromium)")
+    else:
+        print("暗色模式审计运行中 (全站真实渲染, 需几分钟)…")
+        r = subprocess.run([sys.executable, "tools/check_dark.py"], capture_output=True, text=True)
+        dark_out = r.stdout + r.stderr
+        m = re.search(r"暗色模式审计: (\d+) 页, (\d+) 个低对比度问题", dark_out)
+        if r.returncode != 0 or not m:
+            err("dark", f"暗色审计脚本异常 (exit={r.returncode}), 输出见下")
+        elif int(m.group(2)) > 0:
+            err("dark", f"{m.group(2)} 个暗色低对比度问题 (明细见上方 [dark] 输出)")
+        else:
+            ok("dark", f"暗色模式对比度: {m.group(1)} 页全部通过")
+
 # ---------- 汇总 ----------
+if dark_out:
+    print("=" * 60)
+    print("[dark] 暗色审计明细:")
+    for line in dark_out.splitlines():
+        if line.strip() and not line.startswith("暗色模式审计运行中"):
+            print("  " + line)
 print("=" * 60)
 for n in notes:
     print("  PASS", n)
