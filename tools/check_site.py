@@ -300,6 +300,43 @@ for l in ("zh-cn", "zh-hk", "en"):
 if not issues or all(not i.startswith("[parity]") for i in issues):
     ok("parity", "三语根目录一级页面清单对等")
 
+# ---------- 11.5 页面结构与头图 (div 配平 + 首页结构不变量) ----------
+# 背景 1: 首页改版时多写一个 </div> 提前关闭容器, 头图错位、白色分隔消失 —— div 必须配平。
+# 背景 2: 首页结构契约: 单张头图(刚好一屏) → 软件项目三卡 → 关于 → 三主线 → 博客卡。
+DIV_OPEN = re.compile(r"<div\b")
+DIV_CLOSE = re.compile(r"</div\b")
+for l in ("zh-cn", "zh-hk", "en"):
+    for page in sorted(glob.glob(f"{l}/*.html")):
+        h = open(page, encoding="utf-8").read()
+        n_open, n_close = len(DIV_OPEN.findall(h)), len(DIV_CLOSE.findall(h))
+        if n_open != n_close:
+            err("struct", f"{page} <div>/</div> 不配平: {n_open} 开 vs {n_close} 闭")
+for l in ("zh-cn", "zh-hk", "en"):
+    hf = f"{l}/index.html"
+    if not os.path.exists(hf):
+        continue
+    hfull = open(hf, encoding="utf-8").read()
+    h = hfull[hfull.index("<body"):]  # 结构类检查只看 body, head 里的 CSS/JS 引用不计
+    n_slides = h.count("slider-single-item")
+    if n_slides != 1:
+        err("struct", f"{hf} 头图应为单张 slider-single-item, 实际 {n_slides} 张")
+    if "100svh" not in hfull:
+        err("struct", f"{hf} 头图缺 100svh 一屏兜底")
+    if "whats-new-section" in h:
+        err("struct", f"{hf} 仍存在已移除的「最新」区块 (whats-new-section)")
+    i_soft, i_about = h.find("software-cards-section"), h.find('id="about"')
+    if i_soft == -1:
+        err("struct", f"{hf} 缺软件项目区 (software-cards-section)")
+    elif i_about == -1:
+        err("struct", f"{hf} 缺关于区 (id=about)")
+    elif not (h.find("End Home Slider") < i_soft < i_about):
+        err("struct", f"{hf} 软件项目区必须紧跟头图之后、关于区之前")
+    for proj in ("FengInvest", "FengMedia", "FlyGo"):
+        if proj not in h:
+            err("struct", f"{hf} 软件项目区缺 {proj} 卡片")
+if not issues or all(not i.startswith("[struct]") for i in issues):
+    ok("struct", "div 配平 + 三语首页结构不变量全部通过")
+
 # ---------- 12. 全站搜索 (JSON 索引 + 列表页搜索元素) ----------
 for l in LANGS:
     idx_file = f"{l}/blog/index.json"
