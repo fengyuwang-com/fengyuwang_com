@@ -239,6 +239,14 @@ p:last-child {
 	border: 2px solid #333;
 }
 
+/* 蓝白按钮同排必须等高：flex 行里 .default-btn-one 的 margin-top:5px
+   会让 .default-btn 被 stretch 多撑 5px（54 vs 49），间距交给 gap */
+.cta-row .default-btn,
+.cta-row .default-btn-one {
+	margin-top: 0;
+	margin-right: 0;
+}
+
 .btn-style-four {
 	position: relative;
     display: inline-block;

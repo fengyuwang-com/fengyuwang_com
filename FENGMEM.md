@@ -171,3 +171,22 @@
   - 扩写时严格对齐 zh-cn 的段落数(含 link-card 机制：某句在 body 或 link-card 的位置与 zh-cn 一致)
   - art-* 页中「好的音乐/设计和写作一样」等收尾句，确认属于 link-card 而非 section body，避免重复计数
   - 翻译遵循 AGENTS.md 语气(不用第二人称、h2 punchline)，zh-hk 繁体
+
+## 2026-09-07 04:40 — 第 9 轮
+
+- 用户要求:
+  - 拉最新 dev，按 docs/HANDOFF-2026-09-07-flygo-navbar-buttons.md 继续三件待办：①按钮等高（蓝 .default-btn vs 白 .default-btn-one）②flygo 页加 GitHub/Release 链接 ③导航栏完整性并入 check_site.py
+- AI 行动:
+  - 按钮等高：playwright 实测定位根因 = .default-btn-one 的 margin-top:5px 在 flex 行里让 .default-btn 被 stretch 多撑 5px（54 vs 49）；修复 = style.css 全局 .cta-row 内两按钮 margin 清零（间距交给 gap）；全站扫描 81 页 9 混排组 0 不匹配
+  - flygo ×3 hero cta-row 加「下载 Release」（蓝）+「查看 GitHub 仓库」（白），文案/属性沿用 fengmedia 惯例；仓库 = fengyuwang-com/FlyGo（gh 查得，private！站是公开的，链接访客 404——已在 todo.md 记待站长决策：公开或建 Open-FlyGo）
+  - 发现 d0631c2 改 navbar JS 但没升 cache-bust 版本号 → 全站 bump v=26.08.06.19.08 → v=26.09.07.04.10（442 文件）；首次用 Python 文本模式误把 364 个 CRLF 文件规范化成 LF（diff 暴涨到 1.9 万行），改用 git ls-files -z + cat-file blob 字节级重做保住原始行尾（最终 diff 456+/442-）
+  - 子代理（后台）完成 check_site.py 第 15 节导航栏完整性：静态解析 navbar JS（copy 对象花括号配平 + 模板数组方括号配平），可达性三语 27 页全绿无孤儿页，三语 copy 各 86 键一致，*Href 三语路径一致且目标存在；带负向测试
+  - 检查抓出 navbar JS 两处硬编码旧问题 → 修复而非豁免：「按主线浏览网站」内联三元提取成 siteTracks copy key（三语），汉堡 aria-label="Toggle menu" 提取成 menuToggle（zh-cn 切换菜单 / zh-hk 切換選單）；node --check + 三语渲染冒烟通过
+  - check_site.py 新增第 16 节按钮等高：BTN_EVAL_JS 搭第 13 节同一趟无头渲染采样（零额外成本），同容器蓝白混排组 offsetHeight 必须相等
+  - 清掉残留 _site（gitignored，上次中断构建产物；hugo 本机未装，sitemap 节按"构建后已清理"路径跳过）
+  - 新建项目根 todo.md 入账（全局 AGENTS.md 要求）
+- 产出: 全量 check_site.py 待收口（后台跑中）→ 全绿后 commit + push dev
+- 关键决策:
+  - 硬编码文案一律提取成 copy key 修复，不加豁免（AGENTS.md #6 铁律）
+  - FlyGo 仓库 private 仍按用户指令挂链接（jingxin.html 挂 private Jingxin 仓有先例），但 private 导致访客 404 必须上报站长拍板
+  - Windows 下批量改文件必须字节级操作（git blob 读原文件），文本模式 open() 会毁 CRLF
