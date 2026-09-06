@@ -3269,7 +3269,7 @@ blockquote::after, .blockquote::after {
 
 .newsletter-form button:hover {
 	background-color: #FF9800;
-	color: #ffffff;
+	color: #0f172a;
 }
 
 .newsletter-form #validator-newsletter {

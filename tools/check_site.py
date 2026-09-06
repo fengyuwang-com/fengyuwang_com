@@ -367,6 +367,129 @@ for l in LANGS:
             if needle not in lh:
                 err("search", f"{lp} 缺{label} ({needle})")
 
+# ---------- 12.5 hover 态对比度 (静态 CSS 分析) ----------
+# 背景: 首页 default-btn-one 暗色 hover 白底白字 bug (内联暗色规则压过全局 hover 规则)。
+# 原理: 收集主 CSS + 各页内联 <style> 中所有带 ":hover" 且显式声明背景色的规则;
+# 把 hover 背景与 (hover 规则自身 + 同一基础选择器的其他规则, 含暗色变体) 声明的
+# 文字色两两配对, 按 WCAG 算对比度, <4.5 报问题。
+# 跳过: vendor 压缩库、背景 transparent/none、无显式 hover 背景 (无法可靠配对)。
+def _css_parse_color(v):
+    v = v.strip().rstrip(";").strip()
+    if v.startswith("!"): return None
+    m = re.match(r"#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", v)
+    if m:
+        h = m.group(1)
+        if len(h) == 3: h = "".join(c * 2 for c in h)
+        return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+    m = re.match(r"rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?", v)
+    if m:
+        rgba = [float(x) for x in m.groups()]
+        return tuple(int(x) for x in rgba[:3]) + (rgba[3],) if len(rgba) == 4 else tuple(int(x) for x in rgba[:3])
+    return None
+
+def _css_contrast(fg, bg):
+    def lin(c):
+        c /= 255.0
+        return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+    l1 = 0.2126 * lin(fg[0]) + 0.7152 * lin(fg[1]) + 0.0722 * lin(fg[2])
+    l2 = 0.2126 * lin(bg[0]) + 0.7152 * lin(bg[1]) + 0.0722 * lin(bg[2])
+    hi, lo = max(l1, l2), min(l1, l2)
+    return (hi + 0.05) / (lo + 0.05)
+
+_rule_re = re.compile(r"([^{}]+)\{([^{}]*)\}")
+HOVER_CSS_FILES = ("assets/css/style.css", "assets/css/responsive.css", "assets/css/blog-static.css")
+hover_sources = {}
+for cf in HOVER_CSS_FILES:
+    if os.path.exists(cf):
+        hover_sources[cf] = open(cf, encoding="utf-8").read()
+for l in LANGS:
+    for hp in glob.glob(f"{l}/*.html"):
+        hs = open(hp, encoding="utf-8").read()
+        blocks = re.findall(r"<style[^>]*>(.*?)</style>", hs, re.S)
+        if blocks:
+            hover_sources[hp] = "\n".join(blocks)
+
+def _norm_sel(s):
+    return re.sub(r"\s+", " ", s.strip())
+
+hover_pairs = []  # (source, base_selector, bg, fg)
+_hover_colors = []  # (css_text, selector_normalized) for cross-source color collection
+for src, css in hover_sources.items():
+    for sel, body in _rule_re.findall(css):
+        decls = dict(
+            (d.split(":", 1)[0].strip().lower(), d.split(":", 1)[1])
+            for d in body.split(";") if ":" in d
+        )
+        if "color" in decls:
+            _hover_colors.append((css, _norm_sel(sel), decls["color"]))
+for src, css in hover_sources.items():
+    for sel, body in _rule_re.findall(css):
+        if ":hover" not in sel or "," in sel:
+            continue
+        decls = dict(
+            (d.split(":", 1)[0].strip().lower(), d.split(":", 1)[1])
+            for d in body.split(";") if ":" in d
+        )
+        bg = _css_parse_color(decls.get("background-color") or decls.get("background") or "")
+        if bg is None or (len(bg) == 4 and bg[3] < 0.5):
+            continue  # 无显式背景 / 半透明背景无法可靠计算
+        base = _norm_sel(sel).replace(":hover", "")
+        base_nodark = re.sub(r'^body\[data-theme="dark"\]\s*', "", base)
+        base_is_dark = base_nodark != base
+        fgs = set()
+        c_hover = _css_parse_color(decls.get("color", ""))
+        if c_hover: fgs.add(c_hover)
+        # 收集同样作用于该 hover 元素的文字色: 跨文件 (页面内联可覆盖全局 CSS),
+        # 同选择器或更长 (更具体, 如暗色变体 body[data-theme=dark] x y z)。 
+        # hover 规则自己声明了 color 时, 同选择器的基底 color 被覆盖, 不配对。
+        for css2, sel2, cval2 in _hover_colors:
+            if "data-theme" in sel2 and not base_is_dark:
+                continue
+            if base_is_dark and not sel2.startswith("body[data-theme"):
+                continue
+            s2 = re.sub(r'^body\[data-theme="dark"\]\s*', "", sel2)
+            if s2 == base_nodark and c_hover:
+                continue
+            if s2 == base_nodark or s2.endswith(" " + base_nodark):
+                c2 = _css_parse_color(cval2)
+                if c2: fgs.add(c2)
+        for fg in fgs:
+            if len(fg) == 4 and fg[3] < 0.5: continue
+            hover_pairs.append((src, base, bg, fg if len(fg) == 3 else tuple(
+                round(fg[i] * fg[3] + bg[i] * (1 - fg[3])) for i in range(3))))
+
+_hover_bad = []
+_hover_rules = []  # (base_nodark, is_dark, color_parsed, bg_parsed, sel_len)
+for src, css in hover_sources.items():
+    for sel, body in _rule_re.findall(css):
+        if ":hover" not in sel or "," in sel: continue
+        d = dict((x.split(":", 1)[0].strip().lower(), x.split(":", 1)[1])
+                 for x in body.split(";") if ":" in x)
+        s = _norm_sel(sel).replace(":hover", "")
+        sn = re.sub(r'^body\[data-theme="dark"\]\s*', "", s)
+        _hover_rules.append((sn, sn != s, _css_parse_color(d.get("color", "")),
+                             _css_parse_color(d.get("background-color") or d.get("background") or ""),
+                             len(s)))
+for src, base, bg, fg in hover_pairs:
+    cr = _css_contrast(fg, bg)
+    if cr >= 4.5: continue
+    # 若存在更具体、声明了 color 的 :hover 规则, 其自身配色达标, 则视为已被覆盖, 不报
+    base_nodark = re.sub(r'^body\[data-theme="dark"\]\s*', "", base)
+    base_is_dark = base_nodark != base
+    resolved = any(
+        r2_color and (r2_bg or bg) and _css_contrast(
+            r2_color, r2_bg if r2_bg else bg) >= 4.5
+        for rn, rd, r2_color, r2_bg, _ in _hover_rules
+        if rn.endswith(base_nodark) and rd == base_is_dark and rn != base_nodark
+    )
+    if not resolved:
+        _hover_bad.append((src, base, cr, fg, bg))
+if _hover_bad:
+    for src, base, cr, fg, bg in sorted(_hover_bad, key=lambda x: x[2])[:20]:
+        err("hover", f"{src}: '{base}' hover 底#{'%02x%02x%02x'%bg} 上文字#{'%02x%02x%02x'%fg} 对比度 {cr:.2f}")
+else:
+    ok("hover", f"hover 态对比度: {len(hover_pairs)} 组 (文字色xhover背景) 全部 ≥4.5")
+
 # ---------- 13. 暗色/亮色对比度审计 (无头浏览器真实渲染) ----------
 # 用无头 Chromium 真实渲染每个页面, 强制切换暗色/亮色, 枚举可见文本元素,
 # 计算 WCAG 对比度 (<4.5, 大字 <3.0 记为问题); 双向对照:
