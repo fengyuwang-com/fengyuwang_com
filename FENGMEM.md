@@ -190,3 +190,10 @@
   - 硬编码文案一律提取成 copy key 修复，不加豁免（AGENTS.md #6 铁律）
   - FlyGo 仓库 private 仍按用户指令挂链接（jingxin.html 挂 private Jingxin 仓有先例），但 private 导致访客 404 必须上报站长拍板
   - Windows 下批量改文件必须字节级操作（git blob 读原文件），文本模式 open() 会毁 CRLF
+  - 收口: 全量门禁全绿 (EXIT=0, 469 页暗色 0 问题, btn-height 33 组 0 不匹配), commit 3c45dc6 已 push dev (GitHub+Gitee), master 未动
+
+## 2026-09-07 06:02 — 第 10 轮
+- 用户要求: 建一个 Open（Open-FlyGo），其余几个 Open 项目原仓有更新的一并同步；红线=财产/密码/绝对个人私密绝不泄露，个人观点可透露，其他都能透露；子代理有名额就派
+- AI 行动: 后台子代理并行（并发限 2，两单被弹后排队补派）——新建 Open-FlyGo（184→165 文件，剔真实激活码/tailnet 主机名/FengInvest 持仓截图[财产红线]/会话记录/exe，Release v2026.09.07-0130）；同步 Open-FengMedia（+1937 文件）并发现 8-23 初始提交曾把 FENGMEM.md 推上公开仓约两周 → filter-repo 清史强推；同步 Open-FengInvest（剔 Discussion/design/真实持仓数，BYOK 零泄露，226 处路径消毒）；核实 Open-FengOffice 已同步、Open-FengOrchestrator 落后 2 提交已补（剔 DeepSeek 余额数字）；五镜像当前树+git 历史双扫；flygo.html×3 改链 Open-FlyGo；全站门禁全绿
+- 产出: Open-FlyGo 新仓+首个 Release；Open-FengMedia master=536322c；Open-FengInvest=02d77e4；Open-FengOrchestrator=e36519e；本仓 flygo 链接修复 + todo/FENGMEM 记账（本轮 commit）
+- 关键决策: FengMedia 镜像源取本地最新（GitHub 私仓已与本地分叉且 push remote 指 Gitee，不擅自推私仓，上报待收敛）；git 历史清洗（force push）按隐私红线授权由主 Agent 亲自执行；GitHub 悬空 SHA 残留需站长提工单，入 todo；私仓跟踪 FENGMEM.md 的再泄漏风险上报待批
