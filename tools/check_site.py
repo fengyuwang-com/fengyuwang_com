@@ -211,6 +211,60 @@ for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/
             err("link", f"{page} -> {m}")
 ok("link", f"死链检查: {refs} 个引用, {broken} 断链")
 
+# ---------- 9. en 页面中文泄漏 ----------
+# en 博文: 正文 (含代码围栏内) 汉字 > 50 视为漏翻 (slug/translationKey 除外)
+# 例外白名单: 品牌名与专有名词
+HAN_WHITELIST = ["王丰羽", "王豐羽", "静心", "jingxin", "损不足以奉有余", "不足", "有余"]
+for p in posts["en"]:
+    han = len(re.findall(r"[\u4e00-\u9fff]", p["body"]))
+    if han > 50:
+        err("en-han", f"{p['path']}: en 正文汉字 {han} (>50, 疑似漏翻)")
+
+# en 静态页可见文本: 过滤标签/脚本后出现汉字 (品牌名白名单除外)
+zh_ui_strs = ["返回博客", "上一页", "下一页", "搜索文章", "排序", "查看详情", "去看看",
+              "查看", "排序方式", "首页"]
+for page in glob.glob("en/**/*.html", recursive=True):
+    html = open(page, encoding="utf-8", errors="ignore").read()
+    visible = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html, flags=re.S)
+    visible = re.sub(r"<[^>]+>", "", visible)
+    for w in HAN_WHITELIST:
+        visible = visible.replace(w, "")
+    seqs = re.findall(r"[\u4e00-\u9fff]{2,}", visible)
+    seqs = [s for s in seqs if s not in HAN_WHITELIST]
+    if seqs:
+        err("en-han", f"{page}: en 页面出现中文: {sorted(set(seqs))[:8]}")
+for page in glob.glob("en/blog/posts/*/index.html"):
+    html = open(page, encoding="utf-8", errors="ignore").read()
+    for s in zh_ui_strs:
+        if s in html:
+            err("en-ui", f"{page}: en 页面含中文 UI 文案「{s}」")
+
+# ---------- 10. 三语首页卡片对等 ----------
+home_cards = {}
+for l in LANGS:
+    hf = f"{l}/index.html"
+    if os.path.exists(hf):
+        home_cards[l] = open(hf, encoding="utf-8").read().count("FengInvest")
+    else:
+        err("home", f"{hf} 缺失")
+if len(set(home_cards.values())) == 1 and home_cards:
+    ok("home", f"三语首页 FengInvest 卡片对等: {home_cards}")
+elif home_cards:
+    err("home", f"三语首页 FengInvest 卡片数量不一: {home_cards}")
+
+# ---------- 11. 三语页面清单对等 (根目录一级页面) ----------
+for l in ("zh-cn", "zh-hk", "en"):
+    pages_l = {os.path.basename(p) for p in glob.glob(f"{l}/*.html")}
+    if l == "zh-cn":
+        base = pages_l
+    elif pages_l != base:
+        miss = base - pages_l
+        extra = pages_l - base
+        if miss or extra:
+            err("parity", f"{l}: 与 zh-cn 页面清单不一 缺{sorted(miss)[:5]} 多{sorted(extra)[:5]}")
+if not issues or all(not i.startswith("[parity]") for i in issues):
+    ok("parity", "三语根目录一级页面清单对等")
+
 # ---------- 汇总 ----------
 print("=" * 60)
 for n in notes:
