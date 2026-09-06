@@ -82,6 +82,21 @@
 		.tile-post-list a:last-child { border-bottom: 0; }
 		.tile-post-list a:hover { color: #0071e3; }
 		.tile-post-list .post-arrow { color: #0071e3; font-weight: 400; }
+		/* in-tile product screenshots */
+		.tile-has-shot { padding-bottom: 0; }
+		.tile-shot { margin: 36px auto 0; max-width: 980px; width: calc(100% - 48px); }
+		.tile-shot img {
+			display: block; width: 100%; height: auto;
+			border-radius: 14px 14px 0 0;
+			box-shadow: 0 24px 70px rgba(15,23,42,.22);
+		}
+		.tile-shot-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; }
+		body[data-theme="dark"] .tile-shot img { box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+		@media (max-width: 734px) {
+			.tile-shot { width: calc(100% - 32px); }
+			.tile-shot-duo { grid-template-columns: 1fr; gap: 16px; }
+			.tile-shot-duo .tile-shot + .tile-shot { display: none; }
+		}
 		/* about tile */
 		.tile-about-photo { margin: 26px auto 0; max-width: 300px; }
 		.tile-about-photo img { width: 100%; height: auto; border-radius: 18px; display: block; }
@@ -119,14 +134,18 @@
 		</div>
 	</section>
 
-	<!-- 2 · FengInvest (light, flagship) -->
-	<section class="tile tile-light">
+	<!-- 2 · FengInvest (light, flagship, image-driven) -->
+	<section class="tile tile-light tile-has-shot">
 		<div class="tile-copy">
 			<h2>FengInvest</h2>
 			<p class="tile-subhead">七层状态机强迫执行纪律：62 个工具 · 52 条回测 · 1300 万行数据。</p>
 		</div>
 		<div class="tile-ctas">
 			<a class="default-btn" href="/zh-cn/fenginvest.html">了解更多</a>
+			<a class="tile-link" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener noreferrer">看开源代码<span class="lt-arrow">›</span></a>
+		</div>
+		<div class="tile-shot">
+			<img src="../assets/img/shots/fenginvest-report-narrative-desktop.png" alt="FengInvest 七层分析报告界面" loading="lazy">
 		</div>
 	</section>
 
@@ -161,13 +180,19 @@
 				<a class="default-btn" href="/zh-cn/invest.html">探索投资研究</a>
 			</div>
 		</section>
-		<section class="tile tile-light tile-span2">
+		<section class="tile tile-light tile-span2 tile-has-shot">
 			<div class="tile-copy">
 				<h2>工程与自动化</h2>
 				<p class="tile-subhead">跨平台开发、自动化系统与 AI 驱动工具——从 Web 到桌面到嵌入式。</p>
 			</div>
 			<div class="tile-ctas">
 				<a class="default-btn" href="/zh-cn/tech.html">查看技术作品</a>
+			</div>
+			<div class="tile-shot">
+				<div class="tile-shot-duo">
+					<div class="tile-shot" style="margin:0;"><img src="../assets/img/shots/fengmedia-desktop.png" alt="FengMedia 内容生产线" loading="lazy"></div>
+					<div class="tile-shot" style="margin:0;"><img src="../assets/img/shots/flygo-desktop.png" alt="FlyGo 服务器管理面板" loading="lazy"></div>
+				</div>
 			</div>
 		</section>
 	</div>
