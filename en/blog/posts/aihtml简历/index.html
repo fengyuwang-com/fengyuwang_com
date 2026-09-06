@@ -62,7 +62,7 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
 body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.08); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
-<div class="blog-back-shell"><a class="blog-back-btn" href="/en/blog/">返回博客</a></div>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/en/blog/">Back to Blog</a></div>
 <article class="blog-article">
     <h1>Why HTML Beats Word for Your CV</h1>
     <div class="article-meta">
@@ -79,16 +79,16 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh-CN&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;个人简历&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;Personal Resume&lt;/<span style="color:#f92672">title</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* A4 尺寸、永远不乱 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* A4 size, layout never breaks */</span>
 </span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">page</span> { <span style="color:#f92672">size</span><span style="color:#f92672">:</span> <span style="color:#f92672">A4</span><span style="color:#f92672">;</span> <span style="color:#f92672">margin</span><span style="color:#f92672">:</span> <span style="color:#f92672">0</span><span style="color:#f92672">;</span> }
 </span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">background</span>:  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 简历主体 = 一张 A4 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* The resume body = one A4 sheet */</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">resume</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">210</span><span style="color:#66d9ef">mm</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">min-height</span>: <span style="color:#ae81ff">297</span><span style="color:#66d9ef">mm</span>;
@@ -96,12 +96,12 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">mm</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">mm</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#34;SimSun&#34;</span>, <span style="color:#e6db74">&#34;宋体&#34;</span>, <span style="color:#e6db74">&#34;Microsoft YaHei&#34;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-family</span>: Georgia, <span style="color:#e6db74">&#34;Times New Roman&#34;</span>, Helvetica, Arial, <span style="color:#66d9ef">sans-serif</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1.6</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: 
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 标题 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Title */</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">h1</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
@@ -109,7 +109,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">letter-spacing</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 小标题 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Section headings */</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">h2</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-left</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> 
@@ -117,14 +117,14 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 基础信息行 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Basic info lines */</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">info</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">space-between</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 项目 experience */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Experience items */</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">item</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
@@ -135,7 +135,7 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding-left</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 技能标签 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Skill tags */</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">tags</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">flex-wrap</span>: <span style="color:#66d9ef">wrap</span>;
@@ -154,53 +154,53 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;resume&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;个人简历&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;Personal Resume&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;姓名：张三&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;性别：男&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;年龄：26&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;Name: John Doe&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;Gender: Male&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;Age: 26&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;电话：138xxxxxxx&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;邮箱：xxx@xxx.com&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;Phone: 138xxxxxxx&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;Email: xxx@xxx.com&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;教育经历&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;Education&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;XX大学 · 计算机科学与技术 · 本科&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;XX University · B.S. in Computer Science&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: - 2023.06&lt;/div&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;/div&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;h2&gt;工作经历&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;h2&gt;Work Experience&lt;/h2&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;div class=&#34;</span><span style="color:#a6e22e">item</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;XX公司 · 后端开发工程师&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: - 至今&lt;/div&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;XX Company · Backend Developer&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: - Present&lt;/div&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;div class=&#34;</span><span style="color:#a6e22e">desc</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      负责系统接口开发、数据库设计、服务稳定性优化，参与核心业务模块重构，提升接口响应速度30%。
+</span></span><span style="display:flex;"><span>      Built system APIs, designed databases, and improved service stability; refactored core business modules and cut API response time by 30%.
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;项目经历&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;Projects&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;个人知识库系统&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;Personal Knowledge Base System&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      基于 Web 技术构建，支持 Markdown、HTML 嵌入、本地数据管理，实现笔记、文档、表格一体化。
+</span></span><span style="display:flex;"><span>      A web-based system with Markdown and HTML embedding and local data management, unifying notes, documents, and tables.
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;技能清单&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;Skills&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tags&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;HTML&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;CSS&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;JavaScript&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;办公自动化&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;数据处理&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;Office Automation&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;Data Processing&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;自我评价&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;Self Evaluation&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    学习能力强，注重效率与工具优化，擅长用 Web 技术替代传统办公，追求简洁、稳定、高质量的输出。
+</span></span><span style="display:flex;"><span>    Fast learner focused on efficiency and tooling; skilled at replacing legacy office workflows with web technology, pursuing clean, stable, high-quality output.
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;

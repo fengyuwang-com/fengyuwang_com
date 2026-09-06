@@ -24,16 +24,16 @@ Here is a complete, ready-to-use HTML CV template. Copy it into a file called  
   
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>个人简历</title>
+<title>Personal Resume</title>
 <style>
-/* A4 尺寸、永远不乱 */
+/* A4 size, layout never breaks */
 @page { size: A4; margin: 0; }
 body { margin: 0; padding: 0; background:  }
 
-/* 简历主体 = 一张 A4 */
+/* The resume body = one A4 sheet */
 .resume {
   width: 210mm;
   min-height: 297mm;
@@ -41,12 +41,12 @@ body { margin: 0; padding: 0; background:  }
   margin: 20px auto;
   padding: 25mm 20mm;
   box-sizing: border-box;
-  font-family: "SimSun", "宋体", "Microsoft YaHei", sans-serif;
+  font-family: Georgia, "Times New Roman", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: 
 }
 
-/* 标题 */
+/* Title */
 h1 {
   text-align: center;
   font-size: 20px;
@@ -54,7 +54,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-/* 小标题 */
+/* Section headings */
 h2 {
   font-size: 15px;
   border-left: 4px solid 
@@ -62,14 +62,14 @@ h2 {
   margin: 16px 0 10px;
 }
 
-/* 基础信息行 */
+/* Basic info lines */
 .info {
   display: flex;
   justify-content: space-between;
   margin: 4px 0;
 }
 
-/* 项目 experience */
+/* Experience items */
 .item {
   margin: 10px 0;
 }
@@ -80,7 +80,7 @@ h2 {
   padding-left: 1em;
 }
 
-/* 技能标签 */
+/* Skill tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -99,53 +99,53 @@ h2 {
 <body>
 <div class="resume">
 
-  <h1>个人简历</h1>
+  <h1>Personal Resume</h1>
 
   <div class="info">
-    <span>姓名：张三</span>
-    <span>性别：男</span>
-    <span>年龄：26</span>
+    <span>Name: John Doe</span>
+    <span>Gender: Male</span>
+    <span>Age: 26</span>
   </div>
   <div class="info">
-    <span>电话：138xxxxxxx</span>
-    <span>邮箱：xxx@xxx.com</span>
+    <span>Phone: 138xxxxxxx</span>
+    <span>Email: xxx@xxx.com</span>
   </div>
 
-  <h2>教育经历</h2>
+  <h2>Education</h2>
   <div class="item">
-    <div class="title">XX大学 · 计算机科学与技术 · 本科</div>
+    <div class="title">XX University · B.S. in Computer Science</div>
     <div style="color: - 2023.06</div>
   </div>
 
-  <h2>工作经历</h2>
+  <h2>Work Experience</h2>
   <div class="item">
-    <div class="title">XX公司 · 后端开发工程师</div>
-    <div style="color: - 至今</div>
+    <div class="title">XX Company · Backend Developer</div>
+    <div style="color: - Present</div>
     <div class="desc">
-      负责系统接口开发、数据库设计、服务稳定性优化，参与核心业务模块重构，提升接口响应速度30%。
+      Built system APIs, designed databases, and improved service stability; refactored core business modules and cut API response time by 30%.
     </div>
   </div>
 
-  <h2>项目经历</h2>
+  <h2>Projects</h2>
   <div class="item">
-    <div class="title">个人知识库系统</div>
+    <div class="title">Personal Knowledge Base System</div>
     <div class="desc">
-      基于 Web 技术构建，支持 Markdown、HTML 嵌入、本地数据管理，实现笔记、文档、表格一体化。
+      A web-based system with Markdown and HTML embedding and local data management, unifying notes, documents, and tables.
     </div>
   </div>
 
-  <h2>技能清单</h2>
+  <h2>Skills</h2>
   <div class="tags">
     <div class="tag">HTML</div>
     <div class="tag">CSS</div>
     <div class="tag">JavaScript</div>
-    <div class="tag">办公自动化</div>
-    <div class="tag">数据处理</div>
+    <div class="tag">Office Automation</div>
+    <div class="tag">Data Processing</div>
   </div>
 
-  <h2>自我评价</h2>
+  <h2>Self Evaluation</h2>
   <div class="desc">
-    学习能力强，注重效率与工具优化，擅长用 Web 技术替代传统办公，追求简洁、稳定、高质量的输出。
+    Fast learner focused on efficiency and tooling; skilled at replacing legacy office workflows with web technology, pursuing clean, stable, high-quality output.
   </div>
 
 </div>
