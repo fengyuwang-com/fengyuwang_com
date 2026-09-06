@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FlyGo | Turn a Windows PC into a Full NAS Server | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FlyGo turns a Windows PC into a full NAS server: files, movies, photos, sync, remote access and containers, all in one dashboard.">
+    <meta name="keywords" content="FlyGo, NAS, Windows, self-hosted, Syncthing, Tailscale, Docker, home server, Fengyu WANG">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/en/flygo.html">
+    <link rel="alternate" hreflang="en" href="/en/flygo.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/flygo.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/flygo.html">
+    <link rel="alternate" hreflang="x-default" href="/en/flygo.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FlyGo | Turn a Windows PC into a Full NAS Server | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="Turn a Windows PC into a full NAS server — complete NAS functionality.">
+    <meta property="og:url" content="https://fengyuwang.com/en/flygo.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlyGo | Turn a Windows PC into a Full NAS Server | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="Turn a Windows PC into a full NAS server — complete NAS functionality.">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+
+        /* Hero: 大标题 + 一张软件大图 (类似产品页头图) */
+        .flygo-hero { text-align: center; padding: 52px 0 0; }
+        .flygo-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
+        .flygo-hero .hero-sub { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+        .flygo-hero .cta-row { margin-top: 22px; }
+        .flygo-hero-shot { margin: 40px auto 0; max-width: 980px; width: calc(100% - 48px); padding-bottom: 56px; }
+        .flygo-hero-shot img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 24px 70px rgba(15,23,42,.35); }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .flygo-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .flygo-hero .hero-sub { color: #9fb0c3; }
+        body[data-theme="dark"] .flygo-hero-shot img { box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .flygo-hero { padding: 36px 24px 0; }
+            .flygo-hero h1 { font-size: 2.4rem; }
+            .flygo-hero-shot { margin-top: 28px; }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .flygo-hero { padding: 28px 16px 0; }
+            .flygo-hero h1 { font-size: 1.9rem; }
+            .flygo-hero-shot { margin-top: 20px; padding-bottom: 40px; width: calc(100% - 32px); }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FlyGo | Turn a Windows PC into a Full NAS Server | Fengyu WANG","url":"https://fengyuwang.com/en/flygo.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="flygo-hero">
+            <h1>FlyGo</h1>
+            <p class="hero-sub">Turn a Windows PC into a full NAS server — files, movies, photos, sync, remote access and containers, all in one dashboard.</p>
+            <div class="cta-row">
+                <a class="default-btn" href="#why">Why It Exists</a>
+                <a class="default-btn-one" href="/en/tech.html">Back to Technical Work</a>
+            </div>
+        </div>
+        <div class="flygo-hero-shot">
+            <img src="../assets/img/shots/flygo-desktop.png" alt="FlyGo overview panel: housekeeper components and service status">
+        </div>
+
+        <div id="why" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Don't Throw That Old PC Away</h2>
+                    <p class="block-subtitle">No new hardware, no Linux adventure — one Windows PC becomes a complete NAS.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Zero extra hardware</strong> — no boutique NAS, no new build; an idle Windows PC steps up.</li>
+                            <li><strong>Complete NAS features</strong> — file management, movie library, photo backup, multi-device sync, remote access, nothing missing.</li>
+                            <li><strong>Keeps the Windows ecosystem</strong> — no Linux migration; existing software, drivers and peripherals keep working.</li>
+                            <li><strong>The browser is the console</strong> — everything is managed from one web panel, no commands to memorize, no remote desktop.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboard" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Open the Browser — That's the Server Room</h2>
+                    <p class="block-subtitle">Quick actions, housekeeper components, service status — a mirror of the whole NAS.</p>
+                    <div class="content-text-card">
+                        <p>The overview page condenses daily operations into one row of buttons: copy entry, night mode, reboot, safe eject of external drives — one click each.</p>
+                    </div>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Housekeeper components</strong> — start and stop webcli, Syncthing, Homepage and other core components, with live status.</li>
+                            <li><strong>Service status wall</strong> — 26 services: which are up, which are down, whether port mapping is right — one glance.</li>
+                            <li><strong>External drive protection</strong> — safe eject, and the sync scheduler only runs while the external drive is online, so no data is lost.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Self-Hosted Essentials, Out of the Box</h2>
+                    <p class="block-subtitle">A NAS is more than file sharing — movies, photos, passwords and automation, the whole suite in one go.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Movies & photos</strong> — Jellyfin for watching, Immich for photo backup, MeTube for video downloads.</li>
+                            <li><strong>Files & cloud drives</strong> — alist aggregates cloud drives, local file management, WebDAV access anywhere.</li>
+                            <li><strong>Productivity & security</strong> — Vaultwarden for passwords, AdGuard for ad blocking, Uptime Kuma for monitoring.</li>
+                            <li><strong>Automation & development</strong> — n8n workflows, code-server (VS Code in the browser), qinglong cron jobs.</li>
+                            <li><strong>Unified container management</strong> — Portainer manages containers; start, stop and rebuild all in the panel.</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Jellyfin</span>
+                        <span class="stack-chip">Immich</span>
+                        <span class="stack-chip">Vaultwarden</span>
+                        <span class="stack-chip">AdGuard</span>
+                        <span class="stack-chip">alist</span>
+                        <span class="stack-chip">n8n</span>
+                        <span class="stack-chip">code-server</span>
+                        <span class="stack-chip">Portainer</span>
+                        <span class="stack-chip">Stirling PDF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sync" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>Data at Home, Reachable Anywhere</h2>
+                    <p class="block-subtitle">Sync, mesh networking, mobile access — away from home, your data is still at hand.</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>Multi-device sync</strong> — Syncthing syncs files directly between devices, no third-party cloud in between.</li>
+                            <li><strong>Mesh networking</strong> — Tailscale connects home and remote devices into one network, direct connection everywhere.</li>
+                            <li><strong>Mobile access</strong> — photos and files from the phone flow into the NAS automatically; backup you never think about.</li>
+                            <li><strong>Access control</strong> — who sees what, and from where — written down and enforced.</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/en/fengoffice.html">Meet FengOffice</a>
+                        <a class="default-btn" href="/en/index.html">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>An old machine can still serve — engineering is about getting full value from what you already have</p>
+            <a class="default-btn" href="/en/tech.html">Back to Technical Work →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-HK">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <title>FlyGo | 把 Windows 電腦變成完整的 NAS 伺服器 | 王丰羽 Fengyu WANG</title>
+    <meta name="description" content="FlyGo 把一部 Windows 電腦變成完整的 NAS 伺服器：檔案、影視、相簿、同步、遠端、容器服務一覽無遺，獲得完整的 NAS 功能。">
+    <meta name="keywords" content="FlyGo, NAS, Windows, 自架伺服器, Syncthing, Tailscale, Docker, 家庭伺服器, 王豐羽">
+    <meta name="author" content="王丰羽">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="/zh-hk/flygo.html">
+    <link rel="alternate" hreflang="en" href="/en/flygo.html">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/flygo.html">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/flygo.html">
+    <link rel="alternate" hreflang="x-default" href="/en/flygo.html">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FlyGo | 把 Windows 電腦變成完整的 NAS 伺服器 | 王丰羽 Fengyu WANG">
+    <meta property="og:description" content="把 Windows 電腦變成完整的 NAS 伺服器，獲得完整的 NAS 功能。">
+    <meta property="og:url" content="https://fengyuwang.com/zh-hk/flygo.html">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlyGo | 把 Windows 電腦變成完整的 NAS 伺服器 | 王丰羽 Fengyu WANG">
+    <meta name="twitter:description" content="把 Windows 電腦變成完整的 NAS 伺服器，獲得完整的 NAS 功能。">
+    <meta name="twitter:image" content="/assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-wrap { background: #ffffff; }
+
+        /* Hero: 大标题 + 一张软件大图 (类似产品页头图) */
+        .flygo-hero { text-align: center; padding: 52px 0 0; }
+        .flygo-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
+        .flygo-hero .hero-sub { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+        .flygo-hero .cta-row { margin-top: 22px; }
+        .flygo-hero-shot { margin: 40px auto 0; max-width: 980px; width: calc(100% - 48px); padding-bottom: 56px; }
+        .flygo-hero-shot img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 24px 70px rgba(15,23,42,.35); }
+
+        .content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+        .content-block:last-of-type { margin-bottom: 0; }
+        .content-block.section-bg { background: var(--section-bg-img) center/cover no-repeat; background-color: #1e293b; }
+        .content-block.section-bg::after { content: ''; position: absolute; inset: 0; background: rgba(245,245,247,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); pointer-events: none; }
+        .content-block.section-bg .block-inner { position: relative; z-index: 1; }
+        .section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+        .block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+        .block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+        .block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+        .block-inner ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.85; font-size: .93rem; }
+        .block-inner ul li + li { margin-top: 5px; }
+        .content-text-card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 18px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); color: #475569; line-height: 1.85; font-size: .97rem; }
+        .content-text-card p { margin-bottom: 0; }
+        .content-text-card ul { margin: 0; padding-left: 18px; line-height: 1.85; font-size: .97rem; color: #475569; }
+        .content-text-card ul li + li { margin-top: 5px; }
+        .content-text-card:last-child { margin-bottom: 0; }
+        .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .stack-chip { display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .82rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+        .cta-row .default-btn, .cta-row .default-btn-one { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+        .link-card { text-align: center; padding: 48px 0 72px; }
+        .link-card p { color: #6b7280; margin-bottom: 12px; }
+        .link-card .default-btn { min-width: 200px; }
+
+        body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+        body[data-theme="dark"] .flygo-hero h1 { color: #e5ecf4; }
+        body[data-theme="dark"] .flygo-hero .hero-sub { color: #9fb0c3; }
+        body[data-theme="dark"] .flygo-hero-shot img { box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .content-block { background-color: #111827; }
+        body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
+        body[data-theme="dark"] .content-block.section-bg::after { background: rgba(17,24,39,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+        body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+        body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+        body[data-theme="dark"] .block-inner p, body[data-theme="dark"] .block-inner ul { color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card { background: #0f172a; border-color: rgba(148,163,184,.03); color: #9fb0c3; }
+        body[data-theme="dark"] .content-text-card ul { color: #9fb0c3; }
+        body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+        body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+        @media (max-width: 991px) {
+            .flygo-hero { padding: 36px 24px 0; }
+            .flygo-hero h1 { font-size: 2.4rem; }
+            .flygo-hero-shot { margin-top: 28px; }
+            .content-block { padding: 36px 0 28px; }
+            .block-inner h2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 599px) {
+            .flygo-hero { padding: 28px 16px 0; }
+            .flygo-hero h1 { font-size: 1.9rem; }
+            .flygo-hero-shot { margin-top: 20px; padding-bottom: 40px; width: calc(100% - 32px); }
+            .content-block { padding: 28px 0 20px; }
+            .block-inner { padding-left: 12px; padding-right: 12px; }
+            .section-card { padding: 20px; }
+            .content-text-card { padding-left: 16px; padding-right: 16px; }
+            .block-inner h2 { font-size: 1.25rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FlyGo | 把 Windows 電腦變成完整的 NAS 伺服器 | Fengyu WANG","url":"https://fengyuwang.com/zh-hk/flygo.html"}</script> </head>
+<body>
+
+    <div id="shared-subpage-navbar" data-section="portfolio"></div>
+    <script src="../assets/js/shared-subpage-navbar.js?v=26.08.06.19.08"></script>
+
+    <div class="page-wrap">
+        <div class="flygo-hero">
+            <h1>FlyGo</h1>
+            <p class="hero-sub">把 Windows 電腦變成完整的 NAS 伺服器——檔案、影視、相簿、同步、遠端、容器，一覽無遺。</p>
+            <div class="cta-row">
+                <a class="default-btn" href="#why">看看為何而做</a>
+                <a class="default-btn-one" href="/zh-hk/tech.html">返回技術作品</a>
+            </div>
+        </div>
+        <div class="flygo-hero-shot">
+            <img src="../assets/img/shots/flygo-desktop.png" alt="FlyGo 總覽面板：管家組件與服務狀態">
+        </div>
+
+        <div id="why" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>舊電腦，別急著丟</h2>
+                    <p class="block-subtitle">不用換硬件、不用折騰 Linux，一部 Windows 電腦就是完整的 NAS。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>零額外硬件</strong>：不買成品 NAS，不組新機器，手頭閒置的 Windows 電腦直接上崗。</li>
+                            <li><strong>完整 NAS 功能</strong>：檔案管理、影視庫、相簿備份、多裝置同步、遠端存取，一樣不少。</li>
+                            <li><strong>保留 Windows 生態</strong>：不用遷移到 Linux，原本的軟件、驅動、外週邊照常用。</li>
+                            <li><strong>瀏覽器就是控制台</strong>：所有管理都收進一個網表面板，不用記指令、不用遠端桌面。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboard" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>打開瀏覽器，就是機房</h2>
+                    <p class="block-subtitle">快捷操作、管家組件、服務狀態——整個 NAS 的一面鏡子。</p>
+                    <div class="content-text-card">
+                        <p>總覽頁把日常操作收成一排按鈕：複製入口、夜間模式、重新啟動、外置碟安全退出，按一下就生效。</p>
+                    </div>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>管家組件</strong>：webcli、Syncthing、Homepage 等核心組件一鍵啟停，狀態即時可見。</li>
+                            <li><strong>服務狀態牆</strong>：26 個服務誰在線、誰停了、連接埠映射對不對，一眼掃完。</li>
+                            <li><strong>外置碟保護</strong>：安全退出外置碟，同步定時器只在外置碟在線時工作，不丟數據。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>常用的自架服務，開箱即有</h2>
+                    <p class="block-subtitle">不是裝一個檔案共享就算 NAS——影視、相簿、密碼、自動化，全家桶一次配齊。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>影視與相簿</strong>：Jellyfin 睇片，Immich 存相，MeTube 抓影片下載。</li>
+                            <li><strong>檔案與雲端</strong>：alist 聚合雲端硬碟，本機檔案管理，WebDAV 隨處存取。</li>
+                            <li><strong>效率與安全</strong>：Vaultwarden 管密碼，AdGuard 擋廣告，Uptime Kuma 監察警報。</li>
+                            <li><strong>自動化與開發</strong>：n8n 流程自動化，code-server 網上 VS Code，qinglong 定時任務。</li>
+                            <li><strong>容器統一管理</strong>：Portainer 管容器，啟停、重建都在面板內完成。</li>
+                        </ul>
+                    </div>
+                    <div class="stack-list">
+                        <span class="stack-chip">Jellyfin</span>
+                        <span class="stack-chip">Immich</span>
+                        <span class="stack-chip">Vaultwarden</span>
+                        <span class="stack-chip">AdGuard</span>
+                        <span class="stack-chip">alist</span>
+                        <span class="stack-chip">n8n</span>
+                        <span class="stack-chip">code-server</span>
+                        <span class="stack-chip">Portainer</span>
+                        <span class="stack-chip">Stirling PDF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sync" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=1000&q=80')">
+            <div class="block-inner">
+                <div class="section-card">
+                    <h2>數據在自己家裡，隨時夠得著</h2>
+                    <p class="block-subtitle">同步、組網、手機接入——出門在外，家裡的數據照樣在手邊。</p>
+                    <div class="content-text-card">
+                        <ul>
+                            <li><strong>多裝置同步</strong>：Syncthing 在裝置之間直接同步檔案，不經過第三方雲。</li>
+                            <li><strong>異地組網</strong>：Tailscale 把家和外地的裝置連成一張網，在哪都能直連。</li>
+                            <li><strong>手機接入</strong>：手機上的相片、檔案自動進 NAS，相簿備份無感完成。</li>
+                            <li><strong>存取控制</strong>：誰可以看甚麼、從哪裡進，白紙黑字管起來。</li>
+                        </ul>
+                    </div>
+                    <div class="cta-row">
+                        <a class="default-btn" href="/zh-hk/fengoffice.html">看看 FengOffice</a>
+                        <a class="default-btn" href="/zh-hk/index.html">回到首頁</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-card">
+            <p>舊電腦還可以再服役，技術就是讓手上的東西發揮全部價值</p>
+            <a class="default-btn" href="/zh-hk/tech.html">返回技術作品 →</a>
+        </div>
+    </div>
+
+    <div id="shared-site-footer"></div>
+    <script src="../assets/js/shared-site-footer.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    <script>(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();</script>
+</body>
+</html>
