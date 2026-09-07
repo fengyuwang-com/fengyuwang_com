@@ -1,0 +1,402 @@
+
+== 404.html (4 个问题)
+    2.78  fg=#5f5f5f bg=#111827  <p>  "Three disciplines inform every project I"
+    1.40  fg=#333333 bg=#111827  <a.default-btn-one>  "View method framework →"
+    3.67  fg=#6b7280 bg=#111827  <p>  "Fengyu WANG (Right)"
+    3.11  fg=#0071e3 bg=#1e293b  <span>  "Blog"
+
+== index.html (4 个问题)
+    2.78  fg=#5f5f5f bg=#111827  <p>  "Three disciplines inform every project I"
+    1.40  fg=#333333 bg=#111827  <a.default-btn-one>  "View method framework →"
+    3.67  fg=#6b7280 bg=#111827  <p>  "Fengyu WANG (Right)"
+    3.11  fg=#0071e3 bg=#1e293b  <span>  "Blog"
+
+== zh-cn/5dt-pd.html (2 个问题)
+    3.68  fg=#ffffff bg=#3b82f6  <div>  "框架全景图"
+    3.55  fg=#94a3b8 bg=#164e63  <div>  "L1 ↔ L2 · 实时优化当批质量"
+
+== zh-cn/blog/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "2"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "下一页 →"
+  [skip] evaluate 失败 zh-cn/blog/page/1/index.html: Error
+
+== zh-cn/blog/page/2/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/3/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/4/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/5/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/6/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/7/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-cn/blog/page/8/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一页"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "下一页 →"
+
+== zh-cn/blog/posts/dog-where/index.html (1 个问题)
+    2.12  fg=#9fb0c3 bg=#fafafa  <p>  "这一刀划下去，段子就成了定理。"
+
+== zh-cn/blog/posts/个人介绍/index.html (1 个问题)
+    1.85  fg=#505060 bg=#1e293b  <a>  "w@fengyu.hk"
+
+== zh-cn/capabilities.html (2 个问题)
+    2.80  fg=#5f5f5f bg=#0f172a  <strong>  "市场 → 技术："
+    2.80  fg=#5f5f5f bg=#0f172a  <p>  "市场调研发现用户真正需要什么，技术把它做出来。没有市场洞察的技术，容易造出没人用"
+
+== zh-cn/ethos.html (1 个问题)
+    1.06  fg=#1d1d1f bg=#0f172a  <h3>  "人与自己：表达自己比服务别人重要"
+
+== zh-cn/fenginvest.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python tools/fengstate.py init <TICKER>"
+
+== zh-cn/fengoffice.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python fengmail.py list-accounts"
+
+== zh-cn/index.html (4 个问题)
+    2.78  fg=#5f5f5f bg=#111827  <p>  "三个领域贯穿我的每个项目。无论是产品发布、投资研究还是软件构建，我都带着市场、资"
+    1.40  fg=#333333 bg=#111827  <a.default-btn-one>  "查看方法框架 →"
+    3.67  fg=#6b7280 bg=#111827  <p>  "王丰羽（右）"
+    3.11  fg=#0071e3 bg=#1e293b  <span>  "博客"
+
+== zh-cn/tags/商业/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/商业/page/1/index.html: Error
+
+== zh-cn/tags/商业/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/商业/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/商业/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/商业/page/5/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+  [skip] evaluate 失败 zh-cn/tags/市场学/page/1/index.html: Error
+
+== zh-cn/tags/技术/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/技术/page/1/index.html: Error
+
+== zh-cn/tags/技术/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/技术/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/技术/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/投资/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/投资/page/1/index.html: Error
+
+== zh-cn/tags/投资/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/社会/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/社会/page/1/index.html: Error
+
+== zh-cn/tags/社会/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/社会/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/经济/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/经济/page/1/index.html: Error
+
+== zh-cn/tags/经济/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tags/金融/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-cn/tags/金融/page/1/index.html: Error
+
+== zh-cn/tags/金融/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-cn/tech.html (2 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "MeditationSession"
+    3.98  fg=#6b7280 bg=#0a0e1a  <p>  "与黄仁勋于HKUST合影——我在他的后面。"
+
+== zh-hk/5dt-pd.html (2 个问题)
+    3.68  fg=#ffffff bg=#3b82f6  <div>  "框架全景圖"
+    3.55  fg=#94a3b8 bg=#164e63  <div>  "L1 ↔ L2 · 實時優化當批質量"
+
+== zh-hk/blog/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "2"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "下一頁 →"
+  [skip] evaluate 失败 zh-hk/blog/page/1/index.html: Error
+
+== zh-hk/blog/page/2/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/3/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/4/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/5/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/6/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/7/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== zh-hk/blog/page/8/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← 上一頁"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "下一頁 →"
+
+== zh-hk/blog/posts/dog-where/index.html (1 个问题)
+    2.12  fg=#9fb0c3 bg=#fafafa  <p>  "這一刀劃下去，段子就成了定理。"
+
+== zh-hk/blog/posts/個人介绍/index.html (1 个问题)
+    1.85  fg=#505060 bg=#1e293b  <a>  "w@fengyu.hk"
+
+== zh-hk/capabilities.html (2 个问题)
+    2.80  fg=#5f5f5f bg=#0f172a  <strong>  "市場 → 技術："
+    2.80  fg=#5f5f5f bg=#0f172a  <p>  "市場調研發現用戶真正需要什麼，技術把它做出來。沒有市場洞察的技術，容易造出沒人用"
+
+== zh-hk/ethos.html (1 个问题)
+    1.06  fg=#1d1d1f bg=#0f172a  <h3>  "人與自己：表達自己比服務別人重要"
+
+== zh-hk/fenginvest.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python tools/fengstate.py init <TICKER>"
+
+== zh-hk/fengoffice.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python fengmail.py list-accounts"
+
+== zh-hk/index.html (4 个问题)
+    2.78  fg=#5f5f5f bg=#111827  <p>  "三個領域貫穿我的每個項目。無論是產品發布、投資研究還是軟件構建，我都帶著市場、資"
+    1.40  fg=#333333 bg=#111827  <a.default-btn-one>  "查看方法框架 →"
+    3.67  fg=#6b7280 bg=#111827  <p>  "王豐羽（右）"
+    3.11  fg=#0071e3 bg=#1e293b  <span>  "網誌"
+
+== zh-hk/tags/商業/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/商業/page/1/index.html: Error
+
+== zh-hk/tags/商業/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/商業/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/商業/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/商業/page/5/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+  [skip] evaluate 失败 zh-hk/tags/市場學/page/1/index.html: Error
+
+== zh-hk/tags/技術/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/技術/page/1/index.html: Error
+
+== zh-hk/tags/技術/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/技術/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/技術/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/投資/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/投資/page/1/index.html: Error
+
+== zh-hk/tags/投資/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/社會/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/社會/page/1/index.html: Error
+
+== zh-hk/tags/社會/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/社會/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/經濟/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/經濟/page/1/index.html: Error
+
+== zh-hk/tags/經濟/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tags/金融/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 zh-hk/tags/金融/page/1/index.html: Error
+
+== zh-hk/tags/金融/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== zh-hk/tech.html (2 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "MeditationSession"
+    3.98  fg=#6b7280 bg=#0a0e1a  <p>  "與黃仁勳於HKUST合影——我在他的後面。"
+
+== en/5dt-pd.html (2 个问题)
+    3.68  fg=#ffffff bg=#3b82f6  <div>  "Framework Panorama"
+    3.55  fg=#94a3b8 bg=#164e63  <div>  "L1 ↔ L2 · Real-time batch optimization"
+
+== en/blog/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "2"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "Next →"
+  [skip] evaluate 失败 en/blog/page/1/index.html: Error
+
+== en/blog/page/2/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/3/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/4/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/5/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/6/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/7/index.html (2 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+
+== en/blog/page/8/index.html (3 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-nav>  "← Previous"
+    1.87  fg=#374151 bg=#0a0e1a  <a.page-btn>  "1"
+    1.87  fg=#374151 bg=#0a0e1a  <span.page-btn>  "Next →"
+
+== en/blog/posts/dog-where/index.html (1 个问题)
+    2.12  fg=#9fb0c3 bg=#fafafa  <p>  "One cut like this turns a punchline into"
+
+== en/blog/posts/个人介绍/index.html (1 个问题)
+    1.85  fg=#505060 bg=#1e293b  <a>  "w@fengyu.hk"
+
+== en/capabilities.html (2 个问题)
+    2.80  fg=#5f5f5f bg=#0f172a  <strong>  "Market → Tech:"
+    2.80  fg=#5f5f5f bg=#0f172a  <p>  "Market research discovers what users tru"
+
+== en/ethos.html (1 个问题)
+    1.06  fg=#1d1d1f bg=#0f172a  <h3>  "Self — Expressing yourself matters more "
+
+== en/fenginvest.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python tools/fengstate.py init <TICKER>"
+
+== en/fengoffice.html (1 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "python fengmail.py list-accounts"
+
+== en/index.html (4 个问题)
+    2.78  fg=#5f5f5f bg=#111827  <p>  "Three disciplines inform every project I"
+    1.40  fg=#333333 bg=#111827  <a.default-btn-one>  "View method framework →"
+    3.67  fg=#6b7280 bg=#111827  <p>  "Fengyu WANG (Right)"
+    3.11  fg=#0071e3 bg=#1e293b  <span>  "Blog"
+
+== en/tags/business/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/business/page/1/index.html: Error
+
+== en/tags/business/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/business/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/business/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/business/page/5/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/economy/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/economy/page/1/index.html: Error
+
+== en/tags/economy/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/finance/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/finance/page/1/index.html: Error
+
+== en/tags/finance/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/investing/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/investing/page/1/index.html: Error
+
+== en/tags/investing/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+  [skip] evaluate 失败 en/tags/marketing/page/1/index.html: Error
+
+== en/tags/society/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/society/page/1/index.html: Error
+
+== en/tags/society/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/society/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/tech/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "2"
+  [skip] evaluate 失败 en/tags/tech/page/1/index.html: Error
+
+== en/tags/tech/page/2/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/tech/page/3/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tags/tech/page/4/index.html (1 个问题)
+    1.87  fg=#374151 bg=#0a0e1a  <a>  "1"
+
+== en/tech.html (2 个问题)
+    3.97  fg=#d63384 bg=#0f172a  <code>  "MeditationSession"
+    3.98  fg=#6b7280 bg=#0a0e1a  <p>  "With Jensen Huang at HKUST — I'm behind "
+
+暗色模式审计: 467 页, 161 个低对比度问题
+exit=1

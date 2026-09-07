@@ -3,7 +3,7 @@ title: "Fake It Till You Make It: Taking the First Step"
 date: 2026-03-02
 description: "The logic of taking the first step runs counter to most people instinct. The first step is never about being ready, it is about claiming your position first and learning to stand once you are there."
 slug: "假装自己会-迈出第一步"
-tags: ["Self", "Startup", "Life"]
+tags: ["Business", "Society"]
 draft: false
 translationKey: "假装自己会-迈出第一步"
 ---

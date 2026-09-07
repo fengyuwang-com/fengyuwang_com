@@ -3,7 +3,7 @@ title: "Separating Business and Personal Accounts"
 date: 2026-02-27
 description: "Running a business and creating content are not in conflict. In fact, they complement each other. The two directions serve different markets and different customer bases, so there is no confusion."
 slug: "商务个人账号分开"
-tags: ["Startup", "Self", "Life"]
+tags: ["Business", "Society"]
 draft: false
 translationKey: "商务个人账号分开"
 ---

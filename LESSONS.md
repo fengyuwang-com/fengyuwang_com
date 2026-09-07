@@ -138,6 +138,28 @@ require('C:/Users/a8881/AppData/Local/Temp/node_modules/opencc-js/dist/umd/full.
 
 ---
 
+## 本次会话（2026-09-05）新增教训
+
+### 生产版 master 领先 dev 导致在过期代码上工作
+
+**事故表现**：本地 dev 分支拉取过 `origin/dev` 就开始改动，完工推送后才发现 `origin/master` 领先 dev 6 个提交（含 8 月底新增的三语页面「狗拿钱定理」「致敬老子」、导航栏更新、GPL 许可证）。生产版有而 dev 没有的功能差点被后续工作掩盖；master 新页面还带着本已清理掉的回顶键内联样式，等于同一个 bug 在生产上复活。
+
+**为什么会发生**：
+1. 只 `git pull origin dev`，没有 fetch 全部分支并对比 master——**最新内容只进到了 master，没有同步回 dev**，dev 的「最新」是假象。
+2. 用户明确说过「把最新版本拉下来」，执行者只机械地拉了当前分支，没有去验证「本地 dev 是否真的包含生产版的全部内容」这一真实意图。
+3. 动手前没有跑任何「本地 vs 远程各分支」的差异检查，差异直到与 master 比对审计时才暴露。
+
+**正确做法**：
+1. 任何改动开工前必须 `git fetch origin` 并检查 `git log --oneline dev..origin/master`（以及反向），确认 dev 与生产版的相对位置，领先/落后都要向用户报告后再动。
+2. 若 master 领先：先合并进 dev（`git merge origin/master`）再开工，保证改动叠加在真正的最新代码上。
+3. 全站统一体检脚本 `_scripts/site_audit.py` 已建立（222 页：语言齐备、暗色模式、共享组件、hreflang/og:url、跳转逻辑、sitemap），每次改动后、push 前必须运行；新增特例页面要登记进脚本顶部的 ALLOWLIST 并注明原因。
+
+**其他教训**：
+- 批量用 Python 重写 HTML 时默认会吞掉 CRLF 换行符，造成整文件假 diff；必须二进制读写或显式保留 `\r\n`（本次 21 个文件被还原）。
+- 主分支纪律：**任何情况下不得在未经用户明确允许时 push 到 main/master**；dev 是唯一默认推送目标。
+
+---
+
 ## 审查清单（上线前逐条确认）
 
 - [ ] 所有 zh-hk 页面无粤语口语

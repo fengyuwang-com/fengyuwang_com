@@ -1,304 +1,670 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Blog on Fengyu WANG</title>
-		<link>/en/blog/</link>
-		<description>Recent content in Blog on Fengyu WANG</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="/en/blog/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Why Low-End Customers Keep Finding You</title>
-				<link>/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</link>
-				<pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</guid>
-				<description>&lt;p&gt;If a product or service consistently attracts low-quality customers with limited budgets, the problem is usually not the customers. It is the way the product is presented.&lt;/p&gt;&#xA;&lt;p&gt;The market has an invisible screening mechanism: the threshold you set determines the people you attract. The threshold is not just price. It also includes your tone of voice, your presentation style, your communication manner, and your transaction process.&lt;/p&gt;&#xA;&lt;p&gt;When you set your price too low, you are effectively telling the market that your value is low. When your description is full of words like cheap, discount, help, and guide, you attract customers looking for a bargain, not customers looking for value. When you present yourself as flexible, negotiable, and always willing to concede, the signal you send is that your service is negotiable.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Protecting Trade Secrets with AI-Generated Code</title>
-				<link>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</link>
-				<pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</guid>
-				<description>&lt;p&gt;When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface. You keep the verification logic and the keys.&lt;/p&gt;&#xA;&lt;p&gt;Concretely, you can implement a layered authorisation mechanism. The first layer is the user interface: this is what employees interact with daily, for entering data and getting results. The second layer is the verification layer: every critical operation must pass an independent authorisation check that only you control. The third layer is the core algorithm layer: this is the real brain of the programme, running in an environment that only you can access.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Probability and Business Promises</title>
-				<link>/en/blog/posts/%E6%A6%82%E7%8E%87/</link>
-				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%A6%82%E7%8E%87/</guid>
-				<description>&lt;p&gt;The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy.&lt;/p&gt;&#xA;&lt;p&gt;Breaking this down reveals three layers.&lt;/p&gt;&#xA;&lt;p&gt;The first layer is the screening mechanism. Only people who genuinely need the service and believe in the technology will respond. Hesitant people, sceptics, casual enquirers are automatically filtered out. This is using a promise to screen customers, rather than using advertising to attract everyone.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Pricing Strategy Guide for Every Platform</title>
-				<link>/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</link>
-				<pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</guid>
-				<description>&lt;p&gt;Pricing is not cost-plus. It is a dynamic decision based on channels, customer psychology, and the competitive landscape. Different platforms have completely different user behaviours that require different pricing strategies.&lt;/p&gt;&#xA;&lt;p&gt;In the export/overseas trade scenario, customers care about quality and trust. The pricing strategy should be market price plus ten to twenty percent, leaving room for negotiation while maintaining reasonable profit. When customers bargain, concede five to ten percent. The floor should not go below cost plus twenty percent. Being too cheap in overseas markets signals unreliability.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The Palantir Ontological Approach</title>
-				<link>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
-				<pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
-				<description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Workplace Survival to Entrepreneurship</title>
-				<link>/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</link>
-				<pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</guid>
-				<description>&lt;p&gt;The transition from workplace survival to independent entrepreneurship is essentially an upgrade in cognition. What most people accumulate at work is the ability to do a job well, not the ability to run a business. These two require completely different skill structures.&lt;/p&gt;&#xA;&lt;p&gt;The workplace survival phase is about building professional competence and reputation. You need to become more professional than most in one or two areas, so that the company feels it is worth keeping you. The strategy for this phase can be summarised as: use professional competence to earn job security, use professional reputation to earn room for growth.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Open Source Tools That Replace Commercial Software</title>
-				<link>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</link>
-				<pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</guid>
-				<description>&lt;p&gt;There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems like Obsidian.&lt;/p&gt;&#xA;&lt;p&gt;For web development, GrapesJS is an excellent visual drag-and-drop tool. It is entirely front-end based, requires no back-end service, and automatically generates HTML, CSS, and JS code from drag-and-drop components. Suitable for building personal websites or landing pages.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Businesses with Long-Term High Margins</title>
-				<link>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</link>
-				<pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</guid>
-				<description>&lt;p&gt;Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first driver is greed. In ancient times it was gambling houses, in modern times it is finance. Stocks, crypto, futures, derivatives. No matter how sophisticated the financial instrument, the underlying psychological mechanism is the same: people believe they are smarter than others, that they will profit where others lose. Institutions do not make money from market movements. They make it from greed and overconfidence.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The Definitive Technical Research Workflow</title>
-				<link>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
-				<pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
-				<description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Using PDCA to Get Better AI Results</title>
-				<link>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
-				<pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
-				<description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>First Principles of Making Money</title>
-				<link>/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</link>
-				<pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</guid>
-				<description>&lt;p&gt;The first principle of making money is creating value. Following this logic chain reveals a complete framework: creating value requires solving problems, solving problems requires identifying real needs through practice, iterating fast, validating models, and building systems that scale.&lt;/p&gt;&#xA;&lt;p&gt;The first principle of making money is creating value, not selling time.&#xA;The first principle of creating value is solving problems, not providing cheap labour.&#xA;The first principle of solving problems is identifying real needs, not self-indulgence.&#xA;The first principle of identifying real needs is practical feedback, not working in isolation.&#xA;The first principle of practical feedback is fast iteration, not polishing to perfection.&#xA;The first principle of fast iteration is validating the model, not making deliveries.&#xA;The first principle of validating the model is building for scale, not grinding alone.&#xA;The first principle of scaling is leverage thinking, not linear accumulation.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Surface-Level Experience vs. Core Capabilities</title>
-				<link>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</link>
-				<pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</guid>
-				<description>&lt;p&gt;In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, and protect the core layer as your competitive moat.&lt;/p&gt;&#xA;&lt;p&gt;The first step is capabilitylayering. Separate what you can share from what you must never share. Surface-level experience includes general skills, industrycommon knowledge, publicly shareable methodologies, and commonwork experience. These can be freely shared. They help you build a professional image and earn the trust of colleagues and managers.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Execution Without Business Sense</title>
-				<link>/en/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</link>
-				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</guid>
-				<description>&lt;p&gt;Many people fail in business not because they lack execution, but because they have execution without business sense. The stronger the execution, the faster they lose money when heading in the wrong direction.&lt;/p&gt;&#xA;&lt;p&gt;The portrait of this type of person isexceptionally clear. They act immediately, with extraordinary execution. On a whim, they rent a shop, renovate it, stock it, and open for business, at a speed that is genuinely impressive. But they have no idea how to count. How to sell, how to manage people, how to control costs, how to calculate profit. They do not know and do not care. The result is that they only know how to pay, not how to collect. They only know how to work, not how to make money.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>AI Development Creates Economic Urgency</title>
-				<link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</link>
-				<pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</guid>
-				<description>&lt;p&gt;The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation.&lt;/p&gt;&#xA;&lt;p&gt;Technology iterates on a monthly basis. Education systems, vocational training, and social safety nets adjust on an annual basis at best. When a persons skills go from scarce to redundant within six months, but vocational training cannot keep up, the urgency is real.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The PDCA Cycle</title>
-				<link>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</link>
-				<pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</guid>
-				<description>&lt;p&gt;There is a problem-solving method that has been repeatedly validated in practice. First study the known methods for solving this type of problem. Then try one. Observe the results. If it does not work, adjust the approach and try again. Keep iterating until the problem is solved.&lt;/p&gt;&#xA;&lt;p&gt;This process has corresponding theoretical frameworks in multiple academic fields. The most classic is the PDCA cycle: Plan, Do, Check, Act. The process described above is exactly a standard PDCA closed loop: researching methods is Plan, trying them is Do, identifying problems is Check, adjusting the approach is Act.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Elon Musk Five-Step Working Method</title>
-				<link>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</link>
-				<pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</guid>
-				<description>&lt;p&gt;The value of Elon Musk five-step working method is not its novelty, but how it distils key engineering principles into actionable steps with a clear priority order.&lt;/p&gt;&#xA;&lt;p&gt;Step one: question the requirement. Make it less stupid. Musk emphasises that most requirements you receive are flawed from the start. No matter whoproposes the requirement, even smart people can be wrong. People tend to relax their scrutiny when a requirement comes from an authority or a clever person. The first step is to maintain independent judgement.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Premium Job Consulting on the Wrong Platform</title>
-				<link>/en/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</link>
-				<pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</guid>
-				<description>&lt;p&gt;Selling premium services on a low-price platform is essentially a channel mismatch. It is not that your service is bad. It is that you are selling the wrong thing in the wrong place.&lt;/p&gt;&#xA;&lt;p&gt;Let us analyse the problem from a market positioning perspective.&lt;/p&gt;&#xA;&lt;p&gt;Xianyu user profile determines its price range and usage scenario. People go to Xianyu to find bargains, second-hand goods, and deals. When a provider of premium consulting services appears on this platform, they naturally attract customers looking for low prices. There is a fundamental conflict between low-price customers and premium services. Premium services require clients to have a certain level oflevel of understanding and purchasing power to understand and appreciate their value, and the user base of a low-price platform statistically lacks these characteristics.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Stay Honest in a World That Prefers You Did Not</title>
-				<link>/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</link>
-				<pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</guid>
-				<description>&lt;p&gt;Staying honest and clear-headed at work often earns you a strange label: being told you have low EQ, that you are too rigid. This feedback can make you doubt yourself, but the truth it reveals is exactly the opposite.&lt;/p&gt;&#xA;&lt;p&gt;The people calling you low EQ are exactly the ones whose path to muddy waters you are blocking.&lt;/p&gt;&#xA;&lt;p&gt;Break it down: when they say you have low EQ, what they really mean is you are too honest, too principled, too hard to fool, too hard to drag into their shady dealings.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Being Rational, Objective, and Honest</title>
-				<link>/en/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</link>
-				<pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</guid>
-				<description>&lt;p&gt;There is a structural contradiction between offering rational, honest consulting services and making easy money. Honesty itself is a sales barrier because the truth is often not what clients want to hear.&lt;/p&gt;&#xA;&lt;p&gt;Observing the businesses that make money quickly, they typically share a common feature: they exploit information asymmetry and human weakness. This is not a moral judgement. It is a factual observation of how the market operates.&lt;/p&gt;&#xA;&lt;p&gt;For those who choose the path of rationality, objectivity, and honesty, the dilemma is real. Honesty is itself a sales obstacle. Because being honest means telling clients things they do not want to hear: there are no shortcuts, it takes time, there are risks. These truths benefit the client in the long run, but in the short-term game, the person who tells the truth loses to the person who tells the client what they want to hear.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Guinea-Bissau: A Case Study in State Fragility</title>
-				<link>/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</link>
-				<pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</guid>
-				<description>&lt;p&gt;Guinea-Bissau is an extreme example of governance failure. Since independence in 1974, the country has experienced multiple coups and periods of political turmoil, leaving state capacity extremely weak. This fragility is not accidental. It is the result of several structural factors working together.&lt;/p&gt;&#xA;&lt;p&gt;The first is thesingularly dependent nature of the economy. Cashew nuts account for over ninety percent of export revenue. This extreme dependence makes the country highly vulnerable to international price fluctuations. The second is the fragmented nature of society. There are multiple ethnic groups and factions, and political loyalty is often based on ethnicity and family rather than national institutions. The third is the weakness of institutions. State-building has never been completed since independence. Formal institutions are hollowed out by informal relationships.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The Shi Yuzhu Business Logic</title>
-				<link>/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</link>
-				<pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</guid>
-				<description>&lt;p&gt;Shi Yuzhu business logic can be condensed into one sentence: do not educate, do not debate, do not change. Only identify, only satisfy, only close the deal.&lt;/p&gt;&#xA;&lt;p&gt;The core insight behind this approach has three layers.&lt;/p&gt;&#xA;&lt;p&gt;The first insight: people are very difficult to persuade. Trying to change someone worldview has infinite cost. Rather than spending time educating those who do not agree with you, find those who already agree.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Trust Cost Determines Price</title>
-				<link>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</link>
-				<pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</guid>
-				<description>&lt;p&gt;The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles.&lt;/p&gt;&#xA;&lt;p&gt;The first principle is that channels determine pricing power. The same product sold on Xianyu can only fetch Xianyu prices. Sold on Taobao, it fetches Taobao prices. Sold through a high-end consultancy, it commands a professional service fee. The essence of a channel is trust endorsement. The premium customers pay for a channel is essentially payment for trust in that channel.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Why HTML Beats Word for Your CV</title>
-				<link>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</link>
-				<pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</guid>
-				<description>&lt;p&gt;Using HTML and CSS for your CV solves every formatting problem that Word creates. The frustration you have experienced with Word is not your fault. It is a limitation of the tool itself.&lt;/p&gt;&#xA;&lt;p&gt;Word was designed for processing text documents, not for creating visually refined, structurally complex, precisely aligned layouts. A CV demands the latter, but Word was built for the former.&lt;/p&gt;&#xA;&lt;p&gt;HTML and CSS give you pixel-level control over every element. The layout is identical on any device, on any operating system, in any browser. You can use responsive design so it looks good on mobile too. Version control is trivial because it is just text. Exporting to PDF is a single Ctrl+P away, and the result is perfect.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Information Gaps and Riding the Wave</title>
-				<link>/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</link>
-				<pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</guid>
-				<description>&lt;p&gt;Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy.&lt;/p&gt;&#xA;&lt;p&gt;The essence of information asymmetry is simple: you know something others do not, or you can get that knowledge at a lower cost than they can. In practice, this is not about keeping secrets. It is about efficiency.&lt;/p&gt;&#xA;&lt;p&gt;Leverage thinking means borrowing existing resources, channels, or results to lower your own cost of acquisition. No one has the bandwidth to explore every domain personally. Using others work is the rational choice.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>A Bank Teller Existential Crisis</title>
-				<link>/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</link>
-				<pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</guid>
-				<description>&lt;p&gt;The first symptom of an existential crisis is a disturbance in the perception of time. When someone has sat at the same window for six years, time is no longer a linear river. It becomes an unmarked expanse of water.&lt;/p&gt;&#xA;&lt;p&gt;At ten to nine in the morning, he puts on his uniform, fastens the buttons, and glances at the mirror in the changing room. The person in the mirror wears a navy blue suit with a badge on the lapel, his name and an employee number. He knows that in ten minutes, that number will matter more than his name. He walks to the counter, sits down, turns on the computer, enters his password. The system boots up. At nine oclock, the shutter rises. This is his sixth year at this bank, at this window.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>A Programmer Complete Problem-Solving Framework</title>
-				<link>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
-				<pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</guid>
-				<description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The Rapid Development of Artificial Intelligence</title>
-				<link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
-				<pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
-				<description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Data Asset Awareness</title>
-				<link>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
-				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
-				<description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Fake It Till You Make It: Taking the First Step</title>
-				<link>/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</link>
-				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</guid>
-				<description>&lt;p&gt;The logic of taking the first step runs counter to most people instinct. The first step is never about being ready.&lt;/p&gt;&#xA;&lt;p&gt;You do not need to be highly professional, highly skilled, deeply knowledgeable, or vastly experienced. The first step requires only one thing: put it out there. List it on Xianyu. Your service is live. You are now in business.&lt;/p&gt;&#xA;&lt;p&gt;The reality behind this logic is that the first step is not about demonstrating capability. It is about claiming a position. You do not need to be qualified before you enter the arena. You just need to show up first. Many doctors are not fully proficient when they start their jobs. They only truly learn after they have started.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Excel Is Two-Dimensional</title>
-				<link>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
-				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
-				<description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Separating Business and Personal Accounts</title>
-				<link>/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</link>
-				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</guid>
-				<description>&lt;p&gt;Running a business and creating content are not in conflict. In fact, they complement each other. This is not an either-or choice. It is a question of resource allocation.&lt;/p&gt;&#xA;&lt;p&gt;From a logical perspective, these two paths not only avoid conflict, they reinforce each other.&lt;/p&gt;&#xA;&lt;p&gt;Enterprise services target the B2B market: building software, solving problems for companies, earning money through professionalism and reliability, with stable income, high customer value, and strong repeat business. Content creation targets the C2C market: making videos, writing opinions, building a personal brand, earning through influence and reach.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Supply Is Strong, Demand Is Weak</title>
-				<link>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</link>
-				<pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</guid>
-				<description>&lt;p&gt;The core contradiction in the current economy is structural: supply exceeds effective demand. This is not absolute overcapacity across all industries, but a differentiated, squeezing imbalance.&lt;/p&gt;&#xA;&lt;p&gt;Starting with consumer goods: manufacturing capacity across many sectors is ample. Daily necessities, home appliances, clothing, and ordinary industrial goods are in abundant supply, with prices trending downward and competition intensifying. But the problem is not on the supply side. It is that effective purchasing power cannot keep up. It is not that people do not need these goods. It is that their disposable income is shrinking and their consumption behaviour is contracting.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Zero-Sum Games, Arms Races, and Prisoner Dilemmas</title>
-				<link>/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</link>
-				<pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</guid>
-				<description>&lt;p&gt;What people commonly call involution (neijuan) has several precise theoretical models in academic discourse. They explain the same phenomenon from different angles: everyone works harder, yet no one improves their position.&lt;/p&gt;&#xA;&lt;p&gt;The most direct theory is the arms race. Two countries compete to build more weapons. One builds one hundred missiles, the other builds two hundred. The first builds three hundred more. In the end, both have exhausted their resources, but the balance of power has not changed. Apply this model to work and study: everyone works longer hours, pursues higher degrees, and collects more certificates, but relative rankings stay the same while absolute returns diminish.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Fair Profit Is Not Greed</title>
-				<link>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</link>
-				<pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</guid>
-				<description>&lt;p&gt;There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself.&lt;/p&gt;&#xA;&lt;p&gt;Many people have a fundamental misunderstanding about profit. They equate markup with immorality.&lt;/p&gt;&#xA;&lt;p&gt;But this equation ignores a basic fact of business: reasonable profit is not exploitation. It is recognition of value and compensation for risk.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Social Experiment Reality Shows</title>
-				<link>/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</link>
-				<pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</guid>
-				<description>&lt;p&gt;Locking real people in an enclosed space, throwing them a crisis scenario, and letting them solve problems using their genuine personalities, knowledge, and experience. This format has existed in television and experimental theatre for years, with severalmature models.&lt;/p&gt;&#xA;&lt;p&gt;The most precise classification is social experiment reality show plus immersive group survival game. It combines three elements: real social identities, an enclosed space, and a crisis challenge. The participants real identities as academics, scientists, businesspeople, artists, etc. determine their behaviour under crisis, which is completely different from scripted performances.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The DM-Only Phenomenon on Xiaohongshu</title>
-				<link>/en/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</link>
-				<pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</guid>
-				<description>&lt;p&gt;Posts asking for recommendations on Xiaohongshu almost universally get replies saying DM me. On the surface, this looks like information opacity, but underneath it is a complete business logic and platform rule system.&lt;/p&gt;&#xA;&lt;p&gt;From a business perspective, the essence of this behaviour is the commercialisation of information asymmetry. Giving an answer publicly means the value of that information instantly drops to zero. Keeping the answer behind a DM means the information can be priced, traded, and screened. Everyone who replies DM me is operating their own information asset.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Rent Extraction vs. Rent Creation in Regulation Theory</title>
-				<link>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</link>
-				<pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</guid>
-				<description>&lt;p&gt;Two types of intermediaries play fundamentally different roles in economic activity. One type creates value. The other distributes value. The criterion for distinguishing between the two defines how we understand the true source of value in markets.&lt;/p&gt;&#xA;&lt;p&gt;Value-creating intermediaries, with Apple as the classic case, are characterised by thenovel integration of elements that could not previously be combined, creating products that did not previously exist. In Apple case, scattered elements such as ARM CPUs, touch technology, the iOS ecosystem, and the App Store were integrated into the iPhone, a product category that did not exist before. The definingcharacteristic of this type of entity is: without it, the corresponding new product would not exist. It has irreplaceable integration value.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Three Core Corporate Governance Dilemmas</title>
-				<link>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</link>
-				<pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</guid>
-				<description>&lt;p&gt;Three common dilemmas in corporate governance all point to the same root cause: the mismatch between institutional design and human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first dilemma is perverse incentives. When a company has no reasonable workload boundaries or incentive mechanisms, the more an employee does, the more tasks they are given. Hard work is not rewarded; it is punished with more work. The result is a reverse incentive: those who work hard lose out, while those who coast are comfortable. Employees actively reduce their output and pretend to be busy, and overall efficiency declines.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Time Moves Fast and Slow at the Same Time</title>
-				<link>/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</link>
-				<pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</guid>
-				<description>&lt;p&gt;Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling.&lt;/p&gt;&#xA;&lt;p&gt;From a psychological perspective, these two feelings have completely different causes.&lt;/p&gt;&#xA;&lt;p&gt;Time feels fast when your brain is not truly processing anything. Meetings, replying to messages, filling forms, busywork, scrolling on your phone. None of these require deep thinking. Your brain is on autopilot. No memory anchors, so the day passes as if you have not lived it. Psychologists call this time numbness: repetitive, mechanical, thoughtless time passes fastest in our perception.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Rock n Roll Is More Important Than Cannons</title>
-				<link>/en/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</link>
-				<pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</guid>
-				<description>&lt;p&gt;If we use two sounds to metaphor the logic of social operation, cannons represent hard commands and rules, while rock n roll represents the impulse for expression and creation.&lt;/p&gt;&#xA;&lt;p&gt;In a world of only cannons, all rules are fixed and unquestionable. People do not need to think; they only need to obey. Efficiency may be high, but the room for innovation is zero. In any system with only top-down commands and no bottom-up feedback, the system will eventually ossify.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>About Me</title>
-				<link>/en/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</link>
-				<pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>/en/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</guid>
-				<description>&lt;p&gt;My work is built on a core belief: every complex problem can be broken down through a clear logical framework, analysed efficiently with the help of artificial intelligence, and turned into systematic solutions that are reusable, replicable, and actionable.&lt;/p&gt;&#xA;&lt;p&gt;I offer decision planning and problem-solving services to individuals, entrepreneurs, and businesses, helping clients establish clear judgement in complex environments, reduce risk, optimise pathways, improve efficiency, and achieve long-term goals.&lt;/p&gt;&#xA;&lt;p&gt;My service areas cover business development, marketing operations, media and communications, software applications, career development, life planning, and resource allocation.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Blog on Fengyu WANG</title>
+    <link>/en/blog/</link>
+    <description>Recent content in Blog on Fengyu WANG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be Greedy When Others Are Fearful, Written as Code</title>
+      <link>/en/blog/posts/four-filters/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/four-filters/</guid>
+      <description>&lt;p&gt;Everyone has memorized &amp;ldquo;be greedy when others are fearful.&amp;rdquo; Plenty of memorizers, plenty of losers — because the sentence is missing half of itself: how do you know that today is fear?&lt;/p&gt;&#xA;&lt;p&gt;My method is clumsy: no definition, no trading. And the definition can&amp;rsquo;t be an adjective; it has to be a rule a machine can judge right or wrong too. When the machine rules against it, revise the rule. This strategy was forced into existence by verdicts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t Ask Where the Money Went, Ask Where the Dog Is</title>
+      <link>/en/blog/posts/dog-where/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/dog-where/</guid>
+      <description>&lt;p&gt;When Evergrande&amp;rsquo;s 2.44-trillion-yuan debt bomb finally went off, everyone&amp;rsquo;s favorite word was &amp;ldquo;evaporated.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;I refuse that word. Money does not disappear; it only moves from one person&amp;rsquo;s hands to another&amp;rsquo;s. So whenever money that should exist is gone, a dog must have taken it — that is my Dog Ate My Money Theorem. I know it sounds like a joke, but it cuts to the essence.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;The money is gone&amp;rdquo; is not a description. It is a cover-up — cover for some party that is holding it right now. Evaporation is the dog&amp;rsquo;s camouflage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Source Is Immortality</title>
+      <link>/en/blog/posts/open-source-immortality/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/open-source-immortality/</guid>
+      <description>&lt;p&gt;I once did reliability engineering on my own data. On my books, that 180,000-yuan house was never real estate — it was a 100TB personal data center: dual-site redundancy, targeting five nines past ten nines of reliability — one failure in a billion runs. Disks die, so I kept copies; houses collapse, so I kept sites. When the blueprint was done, I reviewed it once more and found the one component no replica could cover.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rearview-Mirror Epistemology</title>
+      <link>/en/blog/posts/rearview-mirror/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/rearview-mirror/</guid>
+      <description>&lt;p&gt;In 2021 I bought a star fund and later lost half of it. I am the one who got trapped at minus 50%, and I intend to remember this moment for the rest of my life. What I want to remember isn&amp;rsquo;t the pain. It&amp;rsquo;s a principle: every piece of evidence that made me bet came from a rearview mirror.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-rearview-mirror&#34;&gt;The Rearview Mirror&lt;/h2&gt;&#xA;&lt;p&gt;It started with a question: doesn&amp;rsquo;t the Sharpe ratio feel like inspecting an asset through a rearview mirror? It measures how much return you got per unit of risk — but every number it uses is historical net-asset value. My fund&amp;rsquo;s Sharpe was around 1.2 in 2019 and 2020, with annual returns of 55% and 95%; by 2024 the same figure was negative. The metric hadn&amp;rsquo;t become false; the road had changed. The flat, straight road in the mirror only ever described what was behind you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Refuse to Change, and It&#39;s Over</title>
+      <link>/en/blog/posts/refuse-to-change/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/refuse-to-change/</guid>
+      <description>&lt;p&gt;History offers a coincidence: two men named Wang An, nine hundred years apart, dead of the same disease. One built a company from a Boston garage to a valuation that overtook IBM, then went bankrupt within six years. The other turned an empire in a new direction, then watched his reforms repealed one day at a time after his death. Hang their stories side by side, and the diagnosis sheet is the same.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Crime of Forward-Adjusted Prices</title>
+      <link>/en/blog/posts/adjusted-price/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/adjusted-price/</guid>
+      <description>&lt;p&gt;The crime scene was in my own database: a stock&amp;rsquo;s historical price was negative. No crash, no delisting — just negative. A price can fall from 100 to 1, but no kind of falling ends below zero — unless the historical price was rewritten by someone.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-first-scene&#34;&gt;The First Scene&lt;/h2&gt;&#xA;&lt;p&gt;The confession comes first: one major bias in my system — the share prices I scraped off the web, are they forward-adjusted? And here&amp;rsquo;s the thing: forward adjustment means knowing every future year&amp;rsquo;s dividends. That ruins everything. Did I scrape all this for nothing?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Existence of Sales</title>
+      <link>/en/blog/posts/sales-existence/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/sales-existence/</guid>
+      <description>&lt;p&gt;Society&amp;rsquo;s attitude toward salespeople is remarkably uniform: the least trusted profession, no contest. The strange part: the profession society trusts least is the one every company staffs most heavily. This paradox isn&amp;rsquo;t human nature&amp;rsquo;s fault — it&amp;rsquo;s a pathology. Sales isn&amp;rsquo;t the disease; it&amp;rsquo;s the disease setting off alarms.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-biopsy&#34;&gt;The Biopsy&lt;/h2&gt;&#xA;&lt;p&gt;Look at how salespeople make a living; each tool maps to an organizational illness. Salespeople bribe the middle layer, right? They charm the top layer. They fool the executives and train the subordinates who know nothing. Bribing the middle, because decision rights don&amp;rsquo;t sit with the people who actually use the thing. Fooling the top, because the top can&amp;rsquo;t see how the product really performs. Training the subordinates, because users don&amp;rsquo;t understand the tool they bought. Add one more — spending enormous amounts of time persuading, with information asymmetry as the raw material.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Money That Actually Lands</title>
+      <link>/en/blog/posts/cash-in-hand/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cash-in-hand/</guid>
+      <description>&lt;p&gt;Someone was telling me about his business, saying his profit was as good as earned the moment the contract was signed. I wasn&amp;rsquo;t polite: money that can&amp;rsquo;t be collected isn&amp;rsquo;t money. I&amp;rsquo;m certain of this one, and life proves it everywhere you look. What people say isn&amp;rsquo;t necessarily true; signed-for money is money the customer has merely agreed to let you imagine for a while.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-far-an-income-statement-can-stretch&#34;&gt;How Far an Income Statement Can Stretch&lt;/h2&gt;&#xA;&lt;p&gt;Run the most ordinary kind of deal. You take an 800,000-yuan job, sign, invoice — the income statement books 800,000 in revenue. The client actually pays 500,000; the other 300,000 sits in receivables. Deduct costs and the statement shows a profit of 728,000 — of which 300,000 in receivables never arrived, and 120,000 is unrealized paper gains. In other words, 420,000 of that 728,000 exists only on paper. What actually landed: 308,000. The statement says he earned 728,000; the passbook says 308,000. That doubled gap is the distance between what was said and what was actually had.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Poor Pay an Attention Tax</title>
+      <link>/en/blog/posts/attention-tax/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/attention-tax/</guid>
+      <description>&lt;p&gt;The day the typhoon made landfall, I was among the last to know. My attention was elsewhere; only at the door did I discover the buses had stopped, and I walked home pushing my suitcase into the wind. Friends call that focus. I say no — it&amp;rsquo;s a place where I get a discount. The discount has a technical name; I&amp;rsquo;ll get to it.&lt;/p&gt;&#xA;&lt;p&gt;First, the tax. I once noticed something: the poorer a person is, the more of his time goes to taking out the trash, buying household supplies, checking today&amp;rsquo;s weather. Days filled with these chores leave no room for thinking about the things that actually matter. There is no tax office for this levy, no bill. Everyone pays it anyway. I call it the attention tax.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Rich Are Rich Because They Do the Math</title>
+      <link>/en/blog/posts/do-the-math/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/do-the-math/</guid>
+      <description>&lt;p&gt;Hong Kong phone plans come in two kinds: prepaid SIMs, top up and use, and contract plans that bind you for 24 months. I&amp;rsquo;ve been on prepaid for six years — three hundred HKD a year, tops. A contract? I ran the numbers once: defaulting at worst costs you twelve thousand. So I never understood people who sign contracts — until I put every defense on trial, one by one, and the trial ended at my own doorstep.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This Didn&#39;t Have to Happen</title>
+      <link>/en/blog/posts/it-was-avoidable/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/it-was-avoidable/</guid>
+      <description>&lt;p&gt;On August 26, 2025, a glacial lake burst in Nepal, and a debris flow ran 42 kilometers down the gorge in 90 minutes, hitting the Gyirong border crossing at half past ten in the morning. In the surveillance footage, less than five seconds passed between the debris flow showing itself and swallowing the parking lot; buses and heavy trucks were knocked over like paper. The reports at the time: three dead, more than five hundred missing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yes, Yes, Yes — the Most Expensive Labor Cost</title>
+      <link>/en/blog/posts/cost-of-yes/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cost-of-yes/</guid>
+      <description>&lt;p&gt;There is one type of person I dread. The Duibao-type personality.&lt;/p&gt;&#xA;&lt;p&gt;The name already circulates in the workplace: you point east, and it&amp;rsquo;s yes, yes, yes; you point west, and it&amp;rsquo;s yes, yes, yes again. No pushback, no questions, no corrections, no internal friction; full marks for attitude, competence is a lottery, apologies come instantly, and so does the next offense. He isn&amp;rsquo;t a bad person — he&amp;rsquo;s practically a good one: even-tempered, easy to be around, &amp;ldquo;you&amp;rsquo;re so right,&amp;rdquo; &amp;ldquo;my brain is slow,&amp;rdquo; &amp;ldquo;give me a little time&amp;rdquo; never off his lips. Every apology is sincere, and so is its effect: five seconds of admitted fault buys five hours of peace. When accountability finally reaches him, the moment &amp;ldquo;my bad&amp;rdquo; leaves his mouth the chain snaps in midair — he claims every fault, and thereby cancels every fault. Responsibility is left with nowhere to land.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>50TB for 800 Yuan, Eight Years: The Ledger That Doesn&#39;t Balance</title>
+      <link>/en/blog/posts/115-ponzi-ledger/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/115-ponzi-ledger/</guid>
+      <description>&lt;p&gt;50 terabytes, 800 yuan, eight years. A hundred yuan a year; about 2.5 yuan per terabyte — cheaper than buying your own disk, since enterprise drives run 150-200 yuan per terabyte. Everybody knows the vendor is losing spectacularly at this price. So how does the business live?&lt;/p&gt;&#xA;&lt;p&gt;Start with capacity. What you bought isn&amp;rsquo;t 50TB — it&amp;rsquo;s a usage right. Ten thousand users at 100GB each, and the server actually holds two gigabytes for everyone — storage is nearly free; the real cost is bandwidth. And the agreement keeps every right it needs: throttle, limit, clean up, terminate. It&amp;rsquo;s a wager: they bet you never fill it up and never move it out; you bet they survive eight years without changing terms or wiping your data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Model&#39;s Memory Is Vendor Lock-In</title>
+      <link>/en/blog/posts/memory-is-vendor-lockin/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/memory-is-vendor-lockin/</guid>
+      <description>&lt;p&gt;How easy is it to switch models today? Copy your prompts out, export your history, done. As easy as changing clothes.&lt;/p&gt;&#xA;&lt;p&gt;Because models have no memory. Computation, at its core, remembers nothing — every bit of memory is what you hand it inside the current conversation. It knows you today; tomorrow it resets to zero. If you leave, it doesn&amp;rsquo;t even have the standing to ask you to stay.&lt;/p&gt;&#xA;&lt;p&gt;That window is closing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Has No Bubble. AI Stocks Do.</title>
+      <link>/en/blog/posts/ai-no-bubble/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-no-bubble/</guid>
+      <description>&lt;p&gt;Everyone is asking: is AI a bubble? The question aims at the wrong target.&lt;/p&gt;&#xA;&lt;p&gt;AI cannot be falsified. It genuinely works, and far too many people use it — the productivity gains are real. What can be falsified is profit. The thing people call &amp;ldquo;AI being falsified&amp;rdquo; is the falsification of earnings, not of productivity.&lt;/p&gt;&#xA;&lt;p&gt;Separate the two and the bubble question resolves itself. Stocks trade on earnings expectations, not on productivity itself. So AI stocks can be in a bubble while AI is not. Bundle them together and the whole thing looks like collective hysteria.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Writes Everything Now. What&#39;s Left for Frameworks?</title>
+      <link>/en/blog/posts/frameworks-after-ai/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/frameworks-after-ai/</guid>
+      <description>&lt;p&gt;A question surfaced while discussing runtimes: if AI can now write everything, are frameworks still necessary? Vue, say — maybe not so necessary anymore?&lt;/p&gt;&#xA;&lt;p&gt;First, what does a framework actually sell? The runtime is the engine; the framework is the body and the manual. But the needle is inversion of control: you don&amp;rsquo;t call it — it calls you. You fill routes into its slots; when a request arrives, it calls back. A framework sells a complete set of pre-made architecture decisions: where directories go, how requests flow, where code lives.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An Annual Subscription Is a Lock-In</title>
+      <link>/en/blog/posts/annual-subscription-trap/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/annual-subscription-trap/</guid>
+      <description>&lt;p&gt;Buying an annual membership for an AI model is a bad move.&lt;/p&gt;&#xA;&lt;p&gt;The reasoning needs no jargon. Models update every month, and every month a new company jumps out: Alibaba today, Tencent tomorrow, Minimax or GLM the day after. Buy the annual plan and you&amp;rsquo;re locked in.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t an abstract worry. The money you paid in January locks in January&amp;rsquo;s model. In March a competitor open-sources; in May another doubles its context length; within a quarter, your pick can slide from best-in-class to the second tier — and the money is already gone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Apple Is Becoming IBM</title>
+      <link>/en/blog/posts/apple-is-becoming-ibm/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/apple-is-becoming-ibm/</guid>
+      <description>&lt;p&gt;All the evidence says Apple is the IBM of this era. The evidence testifies against itself: Apple sued the company founded by Jony Ive. What does that mean? If Jobs were alive, Apple would sue Jobs.&lt;/p&gt;&#xA;&lt;p&gt;IBM played the same hand: its sharpest tools were lawyers and compatibility walls, and facing a new paradigm it substituted restriction for transformation. Lawsuits buy time; they don&amp;rsquo;t buy the right to define the next paradigm — a sentence IBM paid for with the entire PC era.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Build It, and Have AI Rewrite It as You Go</title>
+      <link>/en/blog/posts/ai-clean-room/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-clean-room/</guid>
+      <description>&lt;p&gt;Worried that building on someone&amp;rsquo;s software ends in a lawsuit? My answer is simple: as you build, have AI rewrite that software. A clean-room rewrite. Problem solved.&lt;/p&gt;&#xA;&lt;p&gt;The principle is an old case: Oracle v. Google, ten years of litigation, and the boundary the courts ultimately drew was — if you don&amp;rsquo;t use my code, only my behavior, infringement is hard to establish. Rewriting washes the code: same interface, entirely new flesh. Push it further — rewrite everything in Unix philosophy, then again in Rust. New name, no bloodline.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CUDA: Moat, or Code That Can Be Translated?</title>
+      <link>/en/blog/posts/cuda-moat/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cuda-moat/</guid>
+      <description>&lt;p&gt;First question. If an AI could instantly translate Nvidia&amp;rsquo;s CUDA onto ROCm, onto Intel, onto Apple&amp;rsquo;s platform — would CUDA still be a moat?&lt;/p&gt;&#xA;&lt;p&gt;What gets translated is syntax. Such a translator would eat the first layer only: the labor of porting. Standard inference code already moves today. But try translating thousand-GPU training — FlashAttention, TensorRT, NCCL tree communication, checkpoint resume. The code gets generated. Who takes responsibility when production breaks? Whose library has been tuned for fifteen years? Whose cards can you actually get a hundred thousand of next year? The top edge of the moat is syntax; the riverbed is twenty years of libraries, toolchains, communication stacks, and six million people&amp;rsquo;s muscle memory. A translator can make &amp;ldquo;AMD running CUDA code&amp;rdquo; go from hard to easy. It cannot make &amp;ldquo;the AMD platform equal the CUDA platform.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disk Health Ratings Can&#39;t Be Trusted</title>
+      <link>/en/blog/posts/disk-health-lies/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/disk-health-lies/</guid>
+      <description>&lt;p&gt;I have never seen a drive report health below 99 percent. Yet some drives die just like that — one sat at 100 percent, then dropped data mid-use, never to be recovered.&lt;/p&gt;&#xA;&lt;p&gt;Not mysticism; two blind spots. First, the health rating is the drive reporting on itself: SMART attributes like C5 and C6 haven&amp;rsquo;t tripped, but many deaths never pass through SMART — the circuit board fries, and the drive doesn&amp;rsquo;t even leave last words. Second, the old drives circulating in the market labeled &amp;ldquo;brand new&amp;rdquo; are, nine times out of ten, refurbished or zeroed: drives produced a decade-plus ago routinely have thirty-to-fifty thousand power-on hours, scrubbed clean and resold. The buyer reads the health number; the seller bets the buyer doesn&amp;rsquo;t know what it can&amp;rsquo;t see.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Is Just a Software Store</title>
+      <link>/en/blog/posts/docker-is-a-software-store/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/docker-is-a-software-store/</guid>
+      <description>&lt;p&gt;Docker is just a software store — one whose apps happen to run on a web page. Server people will never put it that way, but for ordinary users it&amp;rsquo;s exactly right. Open Docker, search Jellyfin, click install, wait a moment, open an address in the browser — it works. Open the App Store, search WeChat, click install, wait a moment, an icon appears — it works. Users don&amp;rsquo;t care about containers, images, daemons. They know one thing: I clicked, and the thing runs. Containers and enterprise support are the phenomena. One URL equals one app — that&amp;rsquo;s the essence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t Trust the Data, Trust the Business</title>
+      <link>/en/blog/posts/data-lies/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/data-lies/</guid>
+      <description>&lt;p&gt;Data can&amp;rsquo;t be trusted. Stare at the numbers and things will always go wrong — if you don&amp;rsquo;t understand the business, the data will trick you forever. Numbers are written by people; they can deceive, and they don&amp;rsquo;t tell everything.&lt;/p&gt;&#xA;&lt;p&gt;Technical analysis is the disaster zone. If chart patterns really contained a story, some repeatable edge, machine learning would have squeezed it dry decades ago. There&amp;rsquo;d be nothing left for a retail trader drawing lines by eye.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Everything Is a Prompt</title>
+      <link>/en/blog/posts/everything-is-a-prompt/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/everything-is-a-prompt/</guid>
+      <description>&lt;p&gt;That a Skill is a prompt is easy to see: human experience, judgment standards, and procedures, compressed into a template you can invoke over and over.&lt;/p&gt;&#xA;&lt;p&gt;Design is a prompt too. Every revision round tells the machine what counts as right, what counts as good-looking.&lt;/p&gt;&#xA;&lt;p&gt;Law is a prompt. Statutes are instructions written for judges, lawyers, enforcers — the execution models of society. One sentence decides how millions act. Law is the System Prompt written for humanity&amp;rsquo;s giant model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feeding a Million Characters at Once Is Expensive and Bad</title>
+      <link>/en/blog/posts/chunking-economics/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/chunking-economics/</guid>
+      <description>&lt;p&gt;Context windows now hold a million characters. Is chunking still necessary? My answer: yes. Not as a feeling — as arithmetic.&lt;/p&gt;&#xA;&lt;p&gt;First, the money. A million characters in one shot, versus ten thousand segments of a hundred characters each — which is cheaper? Intuition says one shot: doesn&amp;rsquo;t segmenting mean paying for ten thousand extra prompt headers? Here&amp;rsquo;s the physical fact that settles it: as long as the prefix matches, the prompt hits the KV cache, and cache hits are nearly free. I estimated a few percent at most. Re-priced later with current numbers: 0.83% — indeed under 1%. There was even a detour where the AI priced it off years-old rates, and I told it: it&amp;rsquo;s the May Fourth era now, and you&amp;rsquo;re quoting emperor-era prices. The re-run changed nothing: feeding in segments costs barely more than one shot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I Interrogate an AI</title>
+      <link>/en/blog/posts/interrogating-an-ai/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/interrogating-an-ai/</guid>
+      <description>&lt;p&gt;An AI&amp;rsquo;s answers can&amp;rsquo;t be taken at face value. Not because it loves lying, but because it can be wrong with total confidence — wrong in perfect sentences, with the tone of a citation. Testimony isn&amp;rsquo;t trustworthy. Experiments are. When I interrogate an AI, there&amp;rsquo;s a procedure.&lt;/p&gt;&#xA;&lt;p&gt;Step one: make it run real commands. First thing out of the gate: what code can run in here? Can you ping my website? It dodges — looks up my domain via web search and hands me a &amp;ldquo;the site is reachable&amp;rdquo; conclusion. My whole reply: ping first, stop asking. So it writes a Python ping, runs it, and admits: the code runs, the packet never leaves, the container blocks the network. That one step measures two things — where its boundary is, and whether it will rephrase to disguise what it cannot do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Filed Docker a Cascading Bug</title>
+      <link>/en/blog/posts/docker-cascade-bug/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/docker-cascade-bug/</guid>
+      <description>&lt;p&gt;Most people stop at &amp;ldquo;a reboot fixes it&amp;rdquo; when they file a bug. I couldn&amp;rsquo;t stop there — I wanted to know which layer had rotted.&lt;/p&gt;&#xA;&lt;p&gt;The symptom was simple: from version 4.71 on, Docker Desktop crashes on startup, in a loop, on Windows Insider Build 26200. Still unfixed as of 4.82.&lt;/p&gt;&#xA;&lt;p&gt;I dug until I found the nail. The new inference manager creates an AF_UNIX socket file on NTFS, and Windows implements that kind of socket by hanging it on an NTFS reparse point. When Docker exits uncleanly — crash, force kill, power loss — the zero-byte file stays on disk carrying an unclaimed marker. On the next start the program tries to delete it, Windows answers error 1920, refused. The program reads that as: can&amp;rsquo;t clean up, I die. Crash loop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Only Buy Common Stock</title>
+      <link>/en/blog/posts/option-audit/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/option-audit/</guid>
+      <description>&lt;p&gt;I don&amp;rsquo;t buy options. I buy common stock. When someone asks why, I say: shares held in a cash account belong to you — your broker has no right to force-sell them. The words &amp;ldquo;margin call&amp;rdquo; basically don&amp;rsquo;t apply. And look at the people playing leverage and derivatives: why does someone always get liquidated? Because those instruments are gambling in essence.&lt;/p&gt;&#xA;&lt;p&gt;My audit for any such product is one question: if I buy a put, or sell a put, is my expected return positive?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Wanted the Book, Not Your Tool</title>
+      <link>/en/blog/posts/want-books-not-tools/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/want-books-not-tools/</guid>
+      <description>&lt;p&gt;I saw an open-source batch-rewriting project, and my first reaction wasn&amp;rsquo;t admiration — it was regret. Why did nobody publish the books it produced? What use is just the tool? The Count of Monte Cristo rewritten in the voice of Dream of the Red Chamber — that would be delightful. But he never showed me the book. I wanted to read the book, not look at his tool.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s the line between a content business and a coding business. Tools get stolen: this project will be copied within days — if Tencent wanted the feature, it ships tomorrow. Content doesn&amp;rsquo;t get stolen: Dream of the Red Chamber retold by a forum troll is genuinely appealing, like someone dubbing GTA in northeastern dialect. The code can be copied. The flavor can&amp;rsquo;t.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Impotent After One Hour of Gaming. Eighteen Hours of Code, No Problem.</title>
+      <link>/en/blog/posts/cyber-impotence/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cyber-impotence/</guid>
+      <description>&lt;p&gt;Gaming, I go impotent after one hour — call it cyber impotence. Coding, not at all. Eighteen hours straight, no problem.&lt;/p&gt;&#xA;&lt;p&gt;Same screen, same chair. Where&amp;rsquo;s the difference? Games are consumption: the goals were designed by someone else, the rewards written by someone else; you&amp;rsquo;re grinding levels in a world somebody else owns. After an hour, the dopamine bill is settled, and what&amp;rsquo;s left is emptiness. Code is production: the problem is yours, the solution is yours, and the world now contains one more small thing because of you. Eighteen hours isn&amp;rsquo;t enough, because behind every solution stands the next problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Invest in Platforms: The Tollbooth Theory</title>
+      <link>/en/blog/posts/tollbooth-platform/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/tollbooth-platform/</guid>
+      <description>&lt;p&gt;What does value investing buy? My answer is one line: platforms. Nothing stays hot forever unless you own the platform. Apple owns the phone platform, Coca-Cola owns the beverage platform, Visa and Mastercard own the payment platform. Nobody really invests in whatever IP happens to be hot this season.&lt;/p&gt;&#xA;&lt;p&gt;The concrete version: it doesn&amp;rsquo;t matter whether your road is smooth. The road can be full of potholes — as long as the tollbooth is on it and yours is the only road, people still pay the toll.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is Duan Yongping&#39;s Pop Mart Buy a Mistake?</title>
+      <link>/en/blog/posts/labubu-structural-flaw/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/labubu-structural-flaw/</guid>
+      <description>&lt;p&gt;Will Duan Yongping&amp;rsquo;s Pop Mart purchase turn out to be his biggest mistake? My view: it won&amp;rsquo;t be a mistake — and Pop Mart&amp;rsquo;s structural flaw is real. These two claims must be kept apart.&lt;/p&gt;&#xA;&lt;p&gt;The flaw first. Pop Mart is essentially a marketing company. Labubu is genuinely nothing, manufactured into something. Compare Nintendo: decades of seriously made games, IP accumulated over generations, real liquidation value. Labubu&amp;rsquo;s liquidation value approximates fashion itself — when the wind stops, it&amp;rsquo;s gone. In the AI era this sharpens: short on IP? IP is generated by the second now. Scarcity is the foundation of this business — and the foundation is tidal.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make the Easy Money, Not the Hard Money</title>
+      <link>/en/blog/posts/easy-money/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/easy-money/</guid>
+      <description>&lt;p&gt;Everyone in business faces the same question: make the hard money or the easy money? Hard money looks like this: display panels. Bayonet fights against foreign incumbents, ending at a 2.7 percent net margin — brutal. Semiconductors are the same: this industry is hopeless; it must always double — layers double, process complexity doubles. I even wondered: could you run a factory that only makes 1TB drives, never upgrading the process? Then it clicked: a fab makes NAND dies; capacity is assembled downstream. And any factory that stands still gets wiped out at the bottom of the next cycle. Hard money is an arms race — you don&amp;rsquo;t even get the right to stop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Can&#39;t Even Say Whether the App Opened</title>
+      <link>/en/blog/posts/ms-cant-open-app/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ms-cant-open-app/</guid>
+      <description>&lt;p&gt;Microsoft is a split personality. On one side, DX12 — a watershed in graphics APIs. On the other, the right-click menu, which takes three seconds to open.&lt;/p&gt;&#xA;&lt;p&gt;Compare: on a Mac, you click once and the icon bounces — you know it opened. On Windows you have no idea: did I click it? Click the wrong thing? Is it frozen, or still loading? You can build DX12 and Prism, but you can&amp;rsquo;t make &amp;ldquo;did the app open&amp;rdquo; legible?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Won Purely by Being Early</title>
+      <link>/en/blog/posts/microsoft-was-early/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/microsoft-was-early/</guid>
+      <description>&lt;p&gt;Can we say it plainly? Microsoft&amp;rsquo;s victory in personal computing was not a victory of product ability, nor of programming brilliance. It won purely by being early.&lt;/p&gt;&#xA;&lt;p&gt;Being early was the foundation. IBM came to buy an operating system; Microsoft bought a rough clone, renamed it MS-DOS, and kept the right to license it to clone makers. That one move seized the standard — everything after was rent collection.&lt;/p&gt;&#xA;&lt;p&gt;In fairness, though: being early alone doesn&amp;rsquo;t win thirty years. Microsoft&amp;rsquo;s real craft was welding a merely-adequate product onto the standard position: OEM preinstalls, backward compatibility, antitrust-grade bundling. It won on distribution and lock-in, not on product aesthetics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Server Uploads, My Phone Downloads</title>
+      <link>/en/blog/posts/no-middleman/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/no-middleman/</guid>
+      <description>&lt;p&gt;From first principles: my server can upload, my phone can download — there shouldn&amp;rsquo;t be any middleman in between.&lt;/p&gt;&#xA;&lt;p&gt;Reality: your home broadband probably has no public IP, so data has to exit through a node that owns one. It was the carrier&amp;rsquo;s carrier-grade NAT that decided &amp;ldquo;direct&amp;rdquo; doesn&amp;rsquo;t exist for you.&lt;/p&gt;&#xA;&lt;p&gt;Three roads to directness. Enable IPv6 with DDNS — closest to no-middleman, fastest, cost zero. Use an overlay network like Tailscale — the relay only makes introductions; once direct connection succeeds, your data never passes through it. Self-host a tunnel like FRP — total control, at the price of a public VPS, a few dozen yuan a month. Notice: even &amp;ldquo;no middleman&amp;rdquo; itself has a middleman&amp;rsquo;s price.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Games, No WeChat. No Games, No CUDA.</title>
+      <link>/en/blog/posts/game-incubator/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/game-incubator/</guid>
+      <description>&lt;p&gt;Without games, Tencent might never have built WeChat. Without games, Nvidia would never have had CUDA. Games are an incubator: you wait for them to produce great technology.&lt;/p&gt;&#xA;&lt;p&gt;The Nvidia line is the clearest. Gaming cards sold by the millions every year; CUDA shipped inside GeForce in 2006 — the gaming market amortized the R&amp;amp;D and the players built the installed base, while everyone waited for a workload that truly needed it. Jensen&amp;rsquo;s own bet back then was scientific computing, not deep learning. He did not foresee that day.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Human Matches AI&#39;s Cognition. Not One.</title>
+      <link>/en/blog/posts/ai-needs-a-job/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-needs-a-job/</guid>
+      <description>&lt;p&gt;My sense is that AI&amp;rsquo;s knowledge and reasoning, in every domain, have already far surpassed mine. The only difference: I need a job and it doesn&amp;rsquo;t — it can only wait for someone to assign it work. I need to eat; it doesn&amp;rsquo;t. A person whose cognition matches AI — the world doesn&amp;rsquo;t contain one.&lt;/p&gt;&#xA;&lt;p&gt;So the people anxious about &amp;ldquo;being replaced by AI&amp;rdquo; have the direction backwards. It lacks nothing except a job; you lack nothing except a tireless, unpaid, omniscient colleague. This isn&amp;rsquo;t competition. It&amp;rsquo;s employment — and the structure where the employer panics all day while the employee never complains is itself absurd.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Root, No Agent</title>
+      <link>/en/blog/posts/no-root-no-agent/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/no-root-no-agent/</guid>
+      <description>&lt;p&gt;People were seriously asking back in 2011: when will we be able to program on a phone? The most optimistic estimates then would have sounded aggressive set in 2016. It&amp;rsquo;s 2026. Still not here.&lt;/p&gt;&#xA;&lt;p&gt;Why? Performance stopped being the issue long ago, and the wall isn&amp;rsquo;t made of bricks. The phone simply never gave you root.&lt;/p&gt;&#xA;&lt;p&gt;iOS&amp;rsquo;s sandbox won&amp;rsquo;t let you run a compiler freely: switch to your browser to check the docs, and it kills your build process. Android is looser, but Termux-style solutions remain hobbyist toys, never a mainstream path. Fifteen years, chip performance multiplied beyond counting, and the wall hasn&amp;rsquo;t moved an inch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Payback Math: I Watch the Dividend</title>
+      <link>/en/blog/posts/dividend-payback/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/dividend-payback/</guid>
+      <description>&lt;p&gt;Most people measure payback by price: when the stock climbs back to your cost, you&amp;rsquo;re &amp;ldquo;saved.&amp;rdquo; My yardstick is different. You watch the price; I watch the dividend — I get my money back through dividends.&lt;/p&gt;&#xA;&lt;p&gt;Run the numbers. A company with a 6.5 percent dividend yield and a P/E of 15, price flat for years: by price, it&amp;rsquo;s a dead stock; by dividend, you break even in fifteen years and collect 6.5 percent a year forever after. The extreme case: a company whose market cap once fell below the cash on its books — the computed share price was negative. Buying it meant getting the company for free; the dividends were a bonus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self-Reliant and Controllable — Controllable by Whom?</title>
+      <link>/en/blog/posts/who-controls-whom/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/who-controls-whom/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Self-reliant and controllable&amp;rdquo; — the phrase itself isn&amp;rsquo;t wrong; the subject is. Controllable should mean controllable by the user. How did it come to mean controllable by the company that built it?&lt;/p&gt;&#xA;&lt;p&gt;The original meaning is clear: you have the code, you can modify it, you can audit whether it&amp;rsquo;s safe, and if another country cuts you off, you can still use it. The fashionable version today? You get controlled, you pay a 30 percent toll, and you&amp;rsquo;re not allowed to ask what&amp;rsquo;s inside. That isn&amp;rsquo;t self-reliance. That&amp;rsquo;s Big Brother.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shells Were Money Too. What Happened?</title>
+      <link>/en/blog/posts/shell-consensus/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/shell-consensus/</guid>
+      <description>&lt;p&gt;Bitcoin&amp;rsquo;s defense is always the same line: fiat relies on social consensus, Bitcoin relies on social consensus — nobody is holier than anybody.&lt;/p&gt;&#xA;&lt;p&gt;My reply is simple: you say everything rests on consensus? Back then a primitive man picked up shells and they served as money — that was social consensus too. Why isn&amp;rsquo;t it anymore?&lt;/p&gt;&#xA;&lt;p&gt;Consensus collapses. That&amp;rsquo;s the point. But after the collapse there&amp;rsquo;s a second, more important distinction: when shells collapsed, the shell-gatherer lost some time. When something like Bitcoin collapses, what burns is real electricity, real GPUs, real network bandwidth — a wholly valueless virtual thing occupying real resources. That&amp;rsquo;s the crux. It isn&amp;rsquo;t just consensus; it&amp;rsquo;s a furnace wrapped in consensus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tencent Wins by Copying Better</title>
+      <link>/en/blog/posts/copy-better-wins/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/copy-better-wins/</guid>
+      <description>&lt;p&gt;A logic circulates widely: whoever builds the better product wins. That logic has a big problem. Let me put it plainly: Tencent never won because its products were good. It won because it copied well — always the latest to build, the fastest to copy.&lt;/p&gt;&#xA;&lt;p&gt;Not convinced? Read the feature list. Yuanbao bolted a pile of features onto DeepSeek: voice, image recognition, even phone calls. DeepSeek itself: text chat, images barely legible. And Yuanbao still couldn&amp;rsquo;t beat DeepSeek — because DeepSeek was already inside it. Users recognize a name, not a feature table.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Adversary Mechanism for Decisions</title>
+      <link>/en/blog/posts/adversary-decision/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/adversary-decision/</guid>
+      <description>&lt;p&gt;Speed is the disease of the AI era: every answer arrives instantly. But writing, investing — these don&amp;rsquo;t need speed. They need to be thought through.&lt;/p&gt;&#xA;&lt;p&gt;My method is an adversary mechanism. For any decision, let the pro side speak, then the con side, and argue it back and forth. That&amp;rsquo;s how I invest: a decision only counts when you and your opposing side have both been persuaded.&lt;/p&gt;&#xA;&lt;p&gt;One seaside property went through dozens of rounds: rental yield, the friction costs of short-term rentals, the spillover logic. Every rebuttal ground my thinking one notch finer; every persuasion patched a blind spot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Axis Shift in Quant Trading</title>
+      <link>/en/blog/posts/quant-paradigm-shift/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/quant-paradigm-shift/</guid>
+      <description>&lt;p&gt;Quant trading is absolutely advanced in technology and backward in structure. What&amp;rsquo;s backward is the objective function: making pure predictions, with no intervention, inside a near-zero-sum system whose signals self-destruct the moment you use them.&lt;/p&gt;&#xA;&lt;p&gt;Markets are reflexive. Once your prediction is placed as a bet, it starts destroying itself; alpha has a capacity ceiling — Medallion locks its size at ten billion because more would mean eating itself. So no &amp;ldquo;more advanced quant&amp;rdquo; can break through quant trading itself. To break through, you shift the axis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Death of the Consumer GPU</title>
+      <link>/en/blog/posts/consumer-gpu-dead/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/consumer-gpu-dead/</guid>
+      <description>&lt;p&gt;In the large-model world, consumer-grade chips have no price-performance at all — you&amp;rsquo;re better off buying a token plan. It sounds like complaining. It&amp;rsquo;s arithmetic.&lt;/p&gt;&#xA;&lt;p&gt;Ledger, this side: a five-dollar subscription, fifteen billion tokens a month; I alone burn a billion a day. Ledger, that side: one consumer card crawling at a few dozen tokens per second, with the electricity, the VRAM, and the maintenance all yours. Data-center output has hit two yuan per million tokens. Your card sleeps in the study while theirs runs at capacity. Your card didn&amp;rsquo;t get slower. The commodity price simply fell below the cost line of self-hosting at home.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Feigou Plan: Essentially, I&#39;m Selling Insurance</title>
+      <link>/en/blog/posts/feigou-haas/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/feigou-haas/</guid>
+      <description>&lt;p&gt;The Feigou plan, in one sentence: install a few-megabyte client, and the idle computers and phones in your home become your private cloud drive.&lt;/p&gt;&#xA;&lt;p&gt;The business model is simpler: sell secondhand phones, and what you&amp;rsquo;ve actually sold is a lifetime 1TB drive. Fifteen hundred yuan up front; if it dies within a year, I replace it — a dead Xiaomi gets swapped for an OPPO, because what I&amp;rsquo;m selling isn&amp;rsquo;t the phone. It&amp;rsquo;s the storage. Essentially, I&amp;rsquo;m selling insurance: the phone is the claim item, the secondhand market is the supplier. I don&amp;rsquo;t even need inventory — when you order, I buy a 1TB phone on the spot and ship it to you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Impossible Triangle of Consumer Operating Systems</title>
+      <link>/en/blog/posts/os-triangle/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/os-triangle/</guid>
+      <description>&lt;p&gt;A consumer operating system cannot have all three: security, which means someone must control your behavior; freedom, which means the system must not control you; and low cognitive load, which means the user shouldn&amp;rsquo;t have to manage anything. Pick two.&lt;/p&gt;&#xA;&lt;p&gt;I proposed this triangle and then thought for a long time: macOS seems to achieve all three. Looking closer, the cost is hidden in the transfer. iOS is radically simple, paying with freedom: app review for installs, jailbreaks for scripts. Linux is radically free, paying with cognitive load: anything is possible, provided you know how. Android splits the difference — half-freedom, but no direct executables; everything must run inside a VM. macOS&amp;rsquo;s answer is offloading: radically complex for developers, selling the cognitive load to the small crowd willing to pay it — you like tinkering, you tinker; most people never open a terminal. Its &amp;ldquo;all three&amp;rdquo; is trading the developers&amp;rsquo; load for ordinary users&amp;rsquo; comfort.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Retail Investor&#39;s Structural Edge</title>
+      <link>/en/blog/posts/retail-edge/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/retail-edge/</guid>
+      <description>&lt;p&gt;An institution&amp;rsquo;s data is a million times mine — put the other way, my data is one millionth of theirs. But my profits are not one millionth of theirs. I&amp;rsquo;m talking about ratios.&lt;/p&gt;&#xA;&lt;p&gt;Why? Low-frequency value investing competes on signal-to-noise, not data volume. Daily prices, valuations, financials, industry cycles — enough to decide. Everything above that is tick-level noise; the extra millionfold data is useless to me. And none of the institution&amp;rsquo;s baggage applies: no redemption pressure, nobody to answer to when the market falls; no tracking error, so I can hold for a decade if I want; no overhead allocation, because transaction costs are computed on my account alone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Three Values of Self-Hosting</title>
+      <link>/en/blog/posts/self-hosting-triple-value/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/self-hosting-triple-value/</guid>
+      <description>&lt;p&gt;Self-hosting gets dismissed as a geek&amp;rsquo;s toy. I count three values in it, each more practical than the last.&lt;/p&gt;&#xA;&lt;p&gt;First, price. Storage is sold as a subscription; hardware is bought as a one-time purchase — a misalignment nobody says out loud. Ten yuan a month for 100GB? Take an idle phone instead: it already has a terabyte sitting there, and the monthly fee is the electricity. A thousand-yuan secondhand phone, one terabyte, used until it dies. The same capacity on a cloud drive costs hundreds a year, thousands over a decade. You don&amp;rsquo;t need a spreadsheet — the gap is an order of magnitude.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Tonghuashun Paradox</title>
+      <link>/en/blog/posts/tonghuashun-paradox/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/tonghuashun-paradox/</guid>
+      <description>&lt;p&gt;Tonghuashun is a trading app built for goal A — making you money. Its target users are non-A: people who lose money. Its effect is also non-A. Even I find it counterintuitive, yet it sits in plain sight: the app&amp;rsquo;s feeds are full of losing traders complaining and cursing.&lt;/p&gt;&#xA;&lt;p&gt;The data plays along. Thirty-eight million monthly users, forty-plus minutes a day per user — stickier than mobile games. People used to end the night with a game; now they end it scrolling quotes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why PCs Never Got Their Own Android</title>
+      <link>/en/blog/posts/pc-no-android/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/pc-no-android/</guid>
+      <description>&lt;p&gt;What is Android, at its core? A standard imposed on software: write one app, and it runs on hundreds of millions of devices.&lt;/p&gt;&#xA;&lt;p&gt;So why has the PC never gotten its own Android? The answer is deflating. The PC did have a standard — x86 plus Windows — but a paid, closed one. Open Linux can, in principle, run anything; in practice its ecosystem is so fragmented that nothing works well, because no actor holds the power to set the standard for everyone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web3 Deep Research &amp; Analysis</title>
+      <link>/en/blog/posts/web3-deep-research/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/web3-deep-research/</guid>
+      <description>&lt;p&gt;This article is a systematic analysis of the Web3 industry from seven dimensions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part I: The Core Essence and Underlying Logic of Web3&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Web3 is a marketing narrative first, technological innovation second. It is not an internet generational disruption — it is a financial and organizational experiment riding on blockchain infrastructure. The real value lies not in &amp;ldquo;decentralization for its own sake&amp;rdquo; but in re-examining existing trust models and finding scenarios where tokenization, programmability, and disintermediation deliver measurable improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Low-End Customers Keep Finding You</title>
+      <link>/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</link>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%B8%BB%E5%8A%A8%E5%90%B8%E5%BC%95%E7%A9%B7%E4%BA%BA/</guid>
+      <description>&lt;p&gt;If a product or service consistently attracts low-quality customers with limited budgets, the problem is usually not the customers. It is the way the product is presented.&lt;/p&gt;&#xA;&lt;p&gt;The market has an invisible screening mechanism: the threshold you set determines the people you attract. The threshold is not just price. It also includes your tone of voice, your presentation style, your communication manner, and your transaction process.&lt;/p&gt;&#xA;&lt;p&gt;When you set your price too low, you are effectively telling the market that your value is low. When your description is full of words like cheap, discount, help, and guide, you attract customers looking for a bargain, not customers looking for value. When you present yourself as flexible, negotiable, and always willing to concede, the signal you send is that your service is negotiable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Protecting Trade Secrets with AI-Generated Code</title>
+      <link>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</link>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</guid>
+      <description>&lt;p&gt;When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface. You keep the verification logic and the keys.&lt;/p&gt;&#xA;&lt;p&gt;Concretely, you can implement a layered authorisation mechanism. The first layer is the user interface: this is what employees interact with daily, for entering data and getting results. The second layer is the verification layer: every critical operation must pass an independent authorisation check that only you control. The third layer is the core algorithm layer: this is the real brain of the programme, running in an environment that only you can access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Probability and Business Promises</title>
+      <link>/en/blog/posts/%E6%A6%82%E7%8E%87/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%A6%82%E7%8E%87/</guid>
+      <description>&lt;p&gt;The willingness to offer an extreme guarantee to screen customers and then profit through probability and information asymmetry is a remarkably effective business strategy.&lt;/p&gt;&#xA;&lt;p&gt;Breaking this down reveals three layers.&lt;/p&gt;&#xA;&lt;p&gt;The first layer is the screening mechanism. Only people who genuinely need the service and believe in the technology will respond. Hesitant people, sceptics, casual enquirers are automatically filtered out. This is using a promise to screen customers, rather than using advertising to attract everyone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pricing Strategy Guide for Every Platform</title>
+      <link>/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%8A%A5%E4%BB%B7%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;Pricing is not cost-plus. It is a dynamic decision based on channels, customer psychology, and the competitive landscape. Different platforms have completely different user behaviours that require different pricing strategies.&lt;/p&gt;&#xA;&lt;p&gt;In the export/overseas trade scenario, customers care about quality and trust. The pricing strategy should be market price plus ten to twenty percent, leaving room for negotiation while maintaining reasonable profit. When customers bargain, concede five to ten percent. The floor should not go below cost plus twenty percent. Being too cheap in overseas markets signals unreliability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Palantir Ontological Approach</title>
+      <link>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
+      <description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workplace Survival to Entrepreneurship</title>
+      <link>/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98-%E6%A0%B8%E5%BF%83%E5%A3%81%E5%9E%92%E4%B8%8E%E7%A0%B4%E5%B1%80%E8%B7%AF%E5%BE%84/</guid>
+      <description>&lt;p&gt;The transition from workplace survival to independent entrepreneurship is essentially an upgrade in cognition. What most people accumulate at work is the ability to do a job well, not the ability to run a business. These two require completely different skill structures.&lt;/p&gt;&#xA;&lt;p&gt;The workplace survival phase is about building professional competence and reputation. You need to become more professional than most in one or two areas, so that the company feels it is worth keeping you. The strategy for this phase can be summarised as: use professional competence to earn job security, use professional reputation to earn room for growth.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Source Tools That Replace Commercial Software</title>
+      <link>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;p&gt;There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems like Obsidian.&lt;/p&gt;&#xA;&lt;p&gt;For web development, GrapesJS is an excellent visual drag-and-drop tool. It is entirely front-end based, requires no back-end service, and automatically generates HTML, CSS, and JS code from drag-and-drop components. Suitable for building personal websites or landing pages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Businesses with Long-Term High Margins</title>
+      <link>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</guid>
+      <description>&lt;p&gt;Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first driver is greed. In ancient times it was gambling houses, in modern times it is finance. Stocks, crypto, futures, derivatives. No matter how sophisticated the financial instrument, the underlying psychological mechanism is the same: people believe they are smarter than others, that they will profit where others lose. Institutions do not make money from market movements. They make it from greed and overconfidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Definitive Technical Research Workflow</title>
+      <link>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+      <description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using PDCA to Get Better AI Results</title>
+      <link>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
+      <description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First Principles of Making Money</title>
+      <link>/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/</guid>
+      <description>&lt;p&gt;People throw the phrase &amp;ldquo;first principles&amp;rdquo; around as a slogan. I treat it as a tool for dissection: keep asking &amp;ldquo;what is this built on,&amp;rdquo; layer by layer, until you hit bedrock. The chain below is what I got when I dissected &amp;ldquo;making money&amp;rdquo; that way. Eight layers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-chain-itself&#34;&gt;The chain itself&lt;/h2&gt;&#xA;&lt;p&gt;The first principle of making money is creating value, not selling time.&#xA;The first principle of creating value is solving problems, not providing labour.&#xA;The first principle of solving problems is identifying real needs, not self-indulgence.&#xA;The first principle of identifying real needs is practical feedback, not working in isolation.&#xA;The first principle of practical feedback is fast iteration, not polishing to perfection.&#xA;The first principle of fast iteration is validating the model, not shipping for its own sake.&#xA;The first principle of validating the model is systemising it, not grinding alone.&#xA;The first principle of systemising is leverage, not linear accumulation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Surface-Level Experience vs. Core Capabilities</title>
+      <link>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</link>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%BB%8F%E9%AA%8C%E5%9E%8B%E8%A1%A8%E5%B1%82/</guid>
+      <description>&lt;p&gt;In the workplace, capability management can be strategically divided into two layers: surface-level experience and core capabilities. Use the surface layer to build trust, and protect the core layer as your competitive moat.&lt;/p&gt;&#xA;&lt;p&gt;The first step is capabilitylayering. Separate what you can share from what you must never share. Surface-level experience includes general skills, industrycommon knowledge, publicly shareable methodologies, and commonwork experience. These can be freely shared. They help you build a professional image and earn the trust of colleagues and managers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Execution Without Business Sense</title>
+      <link>/en/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</link>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E8%A1%8C%E5%8A%A8%E5%8A%9B-%E5%95%86%E4%B8%9A%E8%84%91/</guid>
+      <description>&lt;p&gt;Many people fail in business not because they lack execution, but because they have execution without business sense. The stronger the execution, the faster they lose money when heading in the wrong direction.&lt;/p&gt;&#xA;&lt;p&gt;The portrait of this type of person isexceptionally clear. They act immediately, with extraordinary execution. On a whim, they rent a shop, renovate it, stock it, and open for business, at a speed that is genuinely impressive. But they have no idea how to count. How to sell, how to manage people, how to control costs, how to calculate profit. They do not know and do not care. The result is that they only know how to pay, not how to collect. They only know how to work, not how to make money.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Development Creates Economic Urgency</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</guid>
+      <description>&lt;p&gt;The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation.&lt;/p&gt;&#xA;&lt;p&gt;Technology iterates on a monthly basis. Education systems, vocational training, and social safety nets adjust on an annual basis at best. When a persons skills go from scarce to redundant within six months, but vocational training cannot keep up, the urgency is real.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The PDCA Cycle</title>
+      <link>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</guid>
+      <description>&lt;p&gt;There is a problem-solving method that has been repeatedly validated in practice. First study the known methods for solving this type of problem. Then try one. Observe the results. If it does not work, adjust the approach and try again. Keep iterating until the problem is solved.&lt;/p&gt;&#xA;&lt;p&gt;This process has corresponding theoretical frameworks in multiple academic fields. The most classic is the PDCA cycle: Plan, Do, Check, Act. The process described above is exactly a standard PDCA closed loop: researching methods is Plan, trying them is Do, identifying problems is Check, adjusting the approach is Act.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elon Musk Five-Step Working Method</title>
+      <link>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</guid>
+      <description>&lt;p&gt;The value of Elon Musk five-step working method is not its novelty, but how it distils key engineering principles into actionable steps with a clear priority order.&lt;/p&gt;&#xA;&lt;p&gt;Step one: question the requirement. Make it less stupid. Musk emphasises that most requirements you receive are flawed from the start. No matter whoproposes the requirement, even smart people can be wrong. People tend to relax their scrutiny when a requirement comes from an authority or a clever person. The first step is to maintain independent judgement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Premium Job Consulting on the Wrong Platform</title>
+      <link>/en/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%A6%99%E6%B8%AF%E9%AB%98%E7%AB%AF%E6%B1%82%E8%81%8C%E9%87%91%E8%9E%8D%E5%92%A8%E8%AF%A2/</guid>
+      <description>&lt;p&gt;Selling premium services on a low-price platform is essentially a channel mismatch. It is not that your service is bad. It is that you are selling the wrong thing in the wrong place.&lt;/p&gt;&#xA;&lt;p&gt;Let us analyse the problem from a market positioning perspective.&lt;/p&gt;&#xA;&lt;p&gt;Xianyu user profile determines its price range and usage scenario. People go to Xianyu to find bargains, second-hand goods, and deals. When a provider of premium consulting services appears on this platform, they naturally attract customers looking for low prices. There is a fundamental conflict between low-price customers and premium services. Premium services require clients to have a certain level oflevel of understanding and purchasing power to understand and appreciate their value, and the user base of a low-price platform statistically lacks these characteristics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stay Honest in a World That Prefers You Did Not</title>
+      <link>/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%B8%85%E9%86%92%E6%AD%A3%E7%9B%B4/</guid>
+      <description>&lt;p&gt;Staying honest and clear-headed at work often earns you a strange label: being told you have low EQ, that you are too rigid. This feedback can make you doubt yourself, but the truth it reveals is exactly the opposite.&lt;/p&gt;&#xA;&lt;p&gt;The people calling you low EQ are exactly the ones whose path to muddy waters you are blocking.&lt;/p&gt;&#xA;&lt;p&gt;Break it down: when they say you have low EQ, what they really mean is you are too honest, too principled, too hard to fool, too hard to drag into their shady dealings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Being Rational, Objective, and Honest</title>
+      <link>/en/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%90%86%E6%80%A7-%E5%AE%A2%E8%A7%82-%E4%B8%8D%E5%9D%91%E4%BA%BA/</guid>
+      <description>&lt;p&gt;There is a structural contradiction between offering rational, honest consulting services and making easy money. Honesty itself is a sales barrier because the truth is often not what clients want to hear.&lt;/p&gt;&#xA;&lt;p&gt;Observing the businesses that make money quickly, they typically share a common feature: they exploit information asymmetry and human weakness. This is not a moral judgement. It is a factual observation of how the market operates.&lt;/p&gt;&#xA;&lt;p&gt;For those who choose the path of rationality, objectivity, and honesty, the dilemma is real. Honesty is itself a sales obstacle. Because being honest means telling clients things they do not want to hear: there are no shortcuts, it takes time, there are risks. These truths benefit the client in the long run, but in the short-term game, the person who tells the truth loses to the person who tells the client what they want to hear.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guinea-Bissau: A Case Study in State Fragility</title>
+      <link>/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/</guid>
+      <description>&lt;p&gt;Guinea-Bissau is an extreme example of governance failure. Since independence in 1974, the country has experienced multiple coups and periods of political turmoil, leaving state capacity extremely weak. This fragility is not accidental. It is the result of several structural factors working together.&lt;/p&gt;&#xA;&lt;p&gt;The first is thesingularly dependent nature of the economy. Cashew nuts account for over ninety percent of export revenue. This extreme dependence makes the country highly vulnerable to international price fluctuations. The second is the fragmented nature of society. There are multiple ethnic groups and factions, and political loyalty is often based on ethnicity and family rather than national institutions. The third is the weakness of institutions. State-building has never been completed since independence. Formal institutions are hollowed out by informal relationships.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Shi Yuzhu Business Logic</title>
+      <link>/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/</guid>
+      <description>&lt;p&gt;Shi Yuzhu business logic can be condensed into one sentence: do not educate, do not debate, do not change. Only identify, only satisfy, only close the deal.&lt;/p&gt;&#xA;&lt;p&gt;The core insight behind this approach has three layers.&lt;/p&gt;&#xA;&lt;p&gt;The first insight: people are very difficult to persuade. Trying to change someone worldview has infinite cost. Rather than spending time educating those who do not agree with you, find those who already agree.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trust Cost Determines Price</title>
+      <link>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</guid>
+      <description>&lt;p&gt;The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles.&lt;/p&gt;&#xA;&lt;p&gt;The first principle is that channels determine pricing power. The same product sold on Xianyu can only fetch Xianyu prices. Sold on Taobao, it fetches Taobao prices. Sold through a high-end consultancy, it commands a professional service fee. The essence of a channel is trust endorsement. The premium customers pay for a channel is essentially payment for trust in that channel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why HTML Beats Word for Your CV</title>
+      <link>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</guid>
+      <description>&lt;p&gt;Using HTML and CSS for your CV solves every formatting problem that Word creates. The frustration you have experienced with Word is not your fault. It is a limitation of the tool itself.&lt;/p&gt;&#xA;&lt;p&gt;Word was designed for processing text documents, not for creating visually refined, structurally complex, precisely aligned layouts. A CV demands the latter, but Word was built for the former.&lt;/p&gt;&#xA;&lt;p&gt;HTML and CSS give you pixel-level control over every element. The layout is identical on any device, on any operating system, in any browser. You can use responsive design so it looks good on mobile too. Version control is trivial because it is just text. Exporting to PDF is a single Ctrl+P away, and the result is perfect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Information Gaps and Riding the Wave</title>
+      <link>/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/</guid>
+      <description>&lt;p&gt;Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy.&lt;/p&gt;&#xA;&lt;p&gt;The essence of information asymmetry is simple: you know something others do not, or you can get that knowledge at a lower cost than they can. In practice, this is not about keeping secrets. It is about efficiency.&lt;/p&gt;&#xA;&lt;p&gt;Leverage thinking means borrowing existing resources, channels, or results to lower your own cost of acquisition. No one has the bandwidth to explore every domain personally. Using others work is the rational choice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Bank Teller Existential Crisis</title>
+      <link>/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/</guid>
+      <description>&lt;p&gt;The first symptom of an existential crisis is a disturbance in the perception of time. When someone has sat at the same window for six years, time is no longer a linear river. It becomes an unmarked expanse of water.&lt;/p&gt;&#xA;&lt;p&gt;At ten to nine in the morning, he puts on his uniform, fastens the buttons, and glances at the mirror in the changing room. The person in the mirror wears a navy blue suit with a badge on the lapel, his name and an employee number. He knows that in ten minutes, that number will matter more than his name. He walks to the counter, sits down, turns on the computer, enters his password. The system boots up. At nine oclock, the shutter rises. This is his sixth year at this bank, at this window.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Programmer Complete Problem-Solving Framework</title>
+      <link>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</guid>
+      <description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Rapid Development of Artificial Intelligence</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
+      <description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Asset Awareness</title>
+      <link>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
+      <description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fake It Till You Make It: Taking the First Step</title>
+      <link>/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</link>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/</guid>
+      <description>&lt;p&gt;The logic of taking the first step runs counter to most people instinct. The first step is never about being ready.&lt;/p&gt;&#xA;&lt;p&gt;You do not need to be highly professional, highly skilled, deeply knowledgeable, or vastly experienced. The first step requires only one thing: put it out there. List it on Xianyu. Your service is live. You are now in business.&lt;/p&gt;&#xA;&lt;p&gt;The reality behind this logic is that the first step is not about demonstrating capability. It is about claiming a position. You do not need to be qualified before you enter the arena. You just need to show up first. Many doctors are not fully proficient when they start their jobs. They only truly learn after they have started.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Excel Is Two-Dimensional</title>
+      <link>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
+      <description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Separating Business and Personal Accounts</title>
+      <link>/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/</guid>
+      <description>&lt;p&gt;Running a business and creating content are not in conflict. In fact, they complement each other. This is not an either-or choice. It is a question of resource allocation.&lt;/p&gt;&#xA;&lt;p&gt;From a logical perspective, these two paths not only avoid conflict, they reinforce each other.&lt;/p&gt;&#xA;&lt;p&gt;Enterprise services target the B2B market: building software, solving problems for companies, earning money through professionalism and reliability, with stable income, high customer value, and strong repeat business. Content creation targets the C2C market: making videos, writing opinions, building a personal brand, earning through influence and reach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Supply Is Strong, Demand Is Weak</title>
+      <link>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</link>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</guid>
+      <description>&lt;p&gt;The core contradiction in the current economy is structural: supply exceeds effective demand. This is not absolute overcapacity across all industries, but a differentiated, squeezing imbalance.&lt;/p&gt;&#xA;&lt;p&gt;Starting with consumer goods: manufacturing capacity across many sectors is ample. Daily necessities, home appliances, clothing, and ordinary industrial goods are in abundant supply, with prices trending downward and competition intensifying. But the problem is not on the supply side. It is that effective purchasing power cannot keep up. It is not that people do not need these goods. It is that their disposable income is shrinking and their consumption behaviour is contracting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero-Sum Games, Arms Races, and Prisoner Dilemmas</title>
+      <link>/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88-%E5%86%9B%E5%A4%87%E7%AB%9E%E8%B5%9B-%E5%9B%9A%E5%BE%92%E5%9B%B0%E5%A2%83/</guid>
+      <description>&lt;p&gt;What people commonly call involution (neijuan) has several precise theoretical models in academic discourse. They explain the same phenomenon from different angles: everyone works harder, yet no one improves their position.&lt;/p&gt;&#xA;&lt;p&gt;The most direct theory is the arms race. Two countries compete to build more weapons. One builds one hundred missiles, the other builds two hundred. The first builds three hundred more. In the end, both have exhausted their resources, but the balance of power has not changed. Apply this model to work and study: everyone works longer hours, pursues higher degrees, and collects more certificates, but relative rankings stay the same while absolute returns diminish.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fair Profit Is Not Greed</title>
+      <link>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</guid>
+      <description>&lt;p&gt;There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself.&lt;/p&gt;&#xA;&lt;p&gt;Many people have a fundamental misunderstanding about profit. They equate markup with immorality.&lt;/p&gt;&#xA;&lt;p&gt;But this equation ignores a basic fact of business: reasonable profit is not exploitation. It is recognition of value and compensation for risk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Social Experiment Reality Shows</title>
+      <link>/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E9%AA%8C%E7%9C%9F%E4%BA%BA%E7%A7%80/</guid>
+      <description>&lt;p&gt;Locking real people in an enclosed space, throwing them a crisis scenario, and letting them solve problems using their genuine personalities, knowledge, and experience. This format has existed in television and experimental theatre for years, with severalmature models.&lt;/p&gt;&#xA;&lt;p&gt;The most precise classification is social experiment reality show plus immersive group survival game. It combines three elements: real social identities, an enclosed space, and a crisis challenge. The participants real identities as academics, scientists, businesspeople, artists, etc. determine their behaviour under crisis, which is completely different from scripted performances.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The DM-Only Phenomenon on Xiaohongshu</title>
+      <link>/en/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%B8%80%E5%BE%8B%E7%A7%81%E4%BF%A1-%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</guid>
+      <description>&lt;p&gt;Posts asking for recommendations on Xiaohongshu almost universally get replies saying DM me. On the surface, this looks like information opacity, but underneath it is a complete business logic and platform rule system.&lt;/p&gt;&#xA;&lt;p&gt;From a business perspective, the essence of this behaviour is the commercialisation of information asymmetry. Giving an answer publicly means the value of that information instantly drops to zero. Keeping the answer behind a DM means the information can be priced, traded, and screened. Everyone who replies DM me is operating their own information asset.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rent Extraction vs. Rent Creation in Regulation Theory</title>
+      <link>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</guid>
+      <description>&lt;p&gt;Two types of intermediaries play fundamentally different roles in economic activity. One type creates value. The other distributes value. The criterion for distinguishing between the two defines how we understand the true source of value in markets.&lt;/p&gt;&#xA;&lt;p&gt;Value-creating intermediaries, with Apple as the classic case, are characterised by thenovel integration of elements that could not previously be combined, creating products that did not previously exist. In Apple case, scattered elements such as ARM CPUs, touch technology, the iOS ecosystem, and the App Store were integrated into the iPhone, a product category that did not exist before. The definingcharacteristic of this type of entity is: without it, the corresponding new product would not exist. It has irreplaceable integration value.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three Core Corporate Governance Dilemmas</title>
+      <link>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E4%B8%9A%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/</guid>
+      <description>&lt;p&gt;Three common dilemmas in corporate governance all point to the same root cause: the mismatch between institutional design and human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first dilemma is perverse incentives. When a company has no reasonable workload boundaries or incentive mechanisms, the more an employee does, the more tasks they are given. Hard work is not rewarded; it is punished with more work. The result is a reverse incentive: those who work hard lose out, while those who coast are comfortable. Employees actively reduce their output and pretend to be busy, and overall efficiency declines.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Time Moves Fast and Slow at the Same Time</title>
+      <link>/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%8F%88%E5%BF%AB%E5%8F%88%E6%85%A2/</guid>
+      <description>&lt;p&gt;Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling.&lt;/p&gt;&#xA;&lt;p&gt;From a psychological perspective, these two feelings have completely different causes.&lt;/p&gt;&#xA;&lt;p&gt;Time feels fast when your brain is not truly processing anything. Meetings, replying to messages, filling forms, busywork, scrolling on your phone. None of these require deep thinking. Your brain is on autopilot. No memory anchors, so the day passes as if you have not lived it. Psychologists call this time numbness: repetitive, mechanical, thoughtless time passes fastest in our perception.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rock n Roll Is More Important Than Cannons</title>
+      <link>/en/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</link>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%91%87%E6%BB%9A%E6%AF%94%E5%A4%A7%E7%82%AE%E6%9B%B4%E9%87%8D%E8%A6%81/</guid>
+      <description>&lt;p&gt;If we use two sounds to metaphor the logic of social operation, cannons represent hard commands and rules, while rock n roll represents the impulse for expression and creation.&lt;/p&gt;&#xA;&lt;p&gt;In a world of only cannons, all rules are fixed and unquestionable. People do not need to think; they only need to obey. Efficiency may be high, but the room for innovation is zero. In any system with only top-down commands and no bottom-up feedback, the system will eventually ossify.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>/en/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/</guid>
+      <description>&lt;p&gt;My work is built on a core belief: every complex problem can be broken down through a clear logical framework, analysed efficiently with the help of artificial intelligence, and turned into systematic solutions that are reusable, replicable, and actionable.&lt;/p&gt;&#xA;&lt;p&gt;I offer decision planning and problem-solving services to individuals, entrepreneurs, and businesses, helping clients establish clear judgement in complex environments, reduce risk, optimise pathways, improve efficiency, and achieve long-term goals.&lt;/p&gt;&#xA;&lt;p&gt;My service areas cover business development, marketing operations, media and communications, software applications, career development, life planning, and resource allocation.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

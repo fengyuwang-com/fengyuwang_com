@@ -12,6 +12,13 @@ for lang in zh-cn zh-hk en; do
         cp -r "$src" "$dst"
         echo "  $lang/blog deployed"
     fi
+    tagsrc="../_site/$lang/tags"
+    tagdst="../$lang/tags"
+    if [ -d "$tagsrc" ]; then
+        rm -rf "$tagdst"
+        cp -r "$tagsrc" "$tagdst"
+        echo "  $lang/tags deployed"
+    fi
 done
 
 rm -rf ../_site

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Fengyu WANG</title>
+    <link>/en/tags/tech/</link>
+    <description>Recent content in Tech on Fengyu WANG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/en/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source Is Immortality</title>
+      <link>/en/blog/posts/open-source-immortality/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/open-source-immortality/</guid>
+      <description>&lt;p&gt;I once did reliability engineering on my own data. On my books, that 180,000-yuan house was never real estate — it was a 100TB personal data center: dual-site redundancy, targeting five nines past ten nines of reliability — one failure in a billion runs. Disks die, so I kept copies; houses collapse, so I kept sites. When the blueprint was done, I reviewed it once more and found the one component no replica could cover.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Crime of Forward-Adjusted Prices</title>
+      <link>/en/blog/posts/adjusted-price/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/adjusted-price/</guid>
+      <description>&lt;p&gt;The crime scene was in my own database: a stock&amp;rsquo;s historical price was negative. No crash, no delisting — just negative. A price can fall from 100 to 1, but no kind of falling ends below zero — unless the historical price was rewritten by someone.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-first-scene&#34;&gt;The First Scene&lt;/h2&gt;&#xA;&lt;p&gt;The confession comes first: one major bias in my system — the share prices I scraped off the web, are they forward-adjusted? And here&amp;rsquo;s the thing: forward adjustment means knowing every future year&amp;rsquo;s dividends. That ruins everything. Did I scrape all this for nothing?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yes, Yes, Yes — the Most Expensive Labor Cost</title>
+      <link>/en/blog/posts/cost-of-yes/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cost-of-yes/</guid>
+      <description>&lt;p&gt;There is one type of person I dread. The Duibao-type personality.&lt;/p&gt;&#xA;&lt;p&gt;The name already circulates in the workplace: you point east, and it&amp;rsquo;s yes, yes, yes; you point west, and it&amp;rsquo;s yes, yes, yes again. No pushback, no questions, no corrections, no internal friction; full marks for attitude, competence is a lottery, apologies come instantly, and so does the next offense. He isn&amp;rsquo;t a bad person — he&amp;rsquo;s practically a good one: even-tempered, easy to be around, &amp;ldquo;you&amp;rsquo;re so right,&amp;rdquo; &amp;ldquo;my brain is slow,&amp;rdquo; &amp;ldquo;give me a little time&amp;rdquo; never off his lips. Every apology is sincere, and so is its effect: five seconds of admitted fault buys five hours of peace. When accountability finally reaches him, the moment &amp;ldquo;my bad&amp;rdquo; leaves his mouth the chain snaps in midair — he claims every fault, and thereby cancels every fault. Responsibility is left with nowhere to land.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>50TB for 800 Yuan, Eight Years: The Ledger That Doesn&#39;t Balance</title>
+      <link>/en/blog/posts/115-ponzi-ledger/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/115-ponzi-ledger/</guid>
+      <description>&lt;p&gt;50 terabytes, 800 yuan, eight years. A hundred yuan a year; about 2.5 yuan per terabyte — cheaper than buying your own disk, since enterprise drives run 150-200 yuan per terabyte. Everybody knows the vendor is losing spectacularly at this price. So how does the business live?&lt;/p&gt;&#xA;&lt;p&gt;Start with capacity. What you bought isn&amp;rsquo;t 50TB — it&amp;rsquo;s a usage right. Ten thousand users at 100GB each, and the server actually holds two gigabytes for everyone — storage is nearly free; the real cost is bandwidth. And the agreement keeps every right it needs: throttle, limit, clean up, terminate. It&amp;rsquo;s a wager: they bet you never fill it up and never move it out; you bet they survive eight years without changing terms or wiping your data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Model&#39;s Memory Is Vendor Lock-In</title>
+      <link>/en/blog/posts/memory-is-vendor-lockin/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/memory-is-vendor-lockin/</guid>
+      <description>&lt;p&gt;How easy is it to switch models today? Copy your prompts out, export your history, done. As easy as changing clothes.&lt;/p&gt;&#xA;&lt;p&gt;Because models have no memory. Computation, at its core, remembers nothing — every bit of memory is what you hand it inside the current conversation. It knows you today; tomorrow it resets to zero. If you leave, it doesn&amp;rsquo;t even have the standing to ask you to stay.&lt;/p&gt;&#xA;&lt;p&gt;That window is closing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Has No Bubble. AI Stocks Do.</title>
+      <link>/en/blog/posts/ai-no-bubble/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-no-bubble/</guid>
+      <description>&lt;p&gt;Everyone is asking: is AI a bubble? The question aims at the wrong target.&lt;/p&gt;&#xA;&lt;p&gt;AI cannot be falsified. It genuinely works, and far too many people use it — the productivity gains are real. What can be falsified is profit. The thing people call &amp;ldquo;AI being falsified&amp;rdquo; is the falsification of earnings, not of productivity.&lt;/p&gt;&#xA;&lt;p&gt;Separate the two and the bubble question resolves itself. Stocks trade on earnings expectations, not on productivity itself. So AI stocks can be in a bubble while AI is not. Bundle them together and the whole thing looks like collective hysteria.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Writes Everything Now. What&#39;s Left for Frameworks?</title>
+      <link>/en/blog/posts/frameworks-after-ai/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/frameworks-after-ai/</guid>
+      <description>&lt;p&gt;A question surfaced while discussing runtimes: if AI can now write everything, are frameworks still necessary? Vue, say — maybe not so necessary anymore?&lt;/p&gt;&#xA;&lt;p&gt;First, what does a framework actually sell? The runtime is the engine; the framework is the body and the manual. But the needle is inversion of control: you don&amp;rsquo;t call it — it calls you. You fill routes into its slots; when a request arrives, it calls back. A framework sells a complete set of pre-made architecture decisions: where directories go, how requests flow, where code lives.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An Annual Subscription Is a Lock-In</title>
+      <link>/en/blog/posts/annual-subscription-trap/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/annual-subscription-trap/</guid>
+      <description>&lt;p&gt;Buying an annual membership for an AI model is a bad move.&lt;/p&gt;&#xA;&lt;p&gt;The reasoning needs no jargon. Models update every month, and every month a new company jumps out: Alibaba today, Tencent tomorrow, Minimax or GLM the day after. Buy the annual plan and you&amp;rsquo;re locked in.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t an abstract worry. The money you paid in January locks in January&amp;rsquo;s model. In March a competitor open-sources; in May another doubles its context length; within a quarter, your pick can slide from best-in-class to the second tier — and the money is already gone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Apple Is Becoming IBM</title>
+      <link>/en/blog/posts/apple-is-becoming-ibm/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/apple-is-becoming-ibm/</guid>
+      <description>&lt;p&gt;All the evidence says Apple is the IBM of this era. The evidence testifies against itself: Apple sued the company founded by Jony Ive. What does that mean? If Jobs were alive, Apple would sue Jobs.&lt;/p&gt;&#xA;&lt;p&gt;IBM played the same hand: its sharpest tools were lawyers and compatibility walls, and facing a new paradigm it substituted restriction for transformation. Lawsuits buy time; they don&amp;rsquo;t buy the right to define the next paradigm — a sentence IBM paid for with the entire PC era.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Build It, and Have AI Rewrite It as You Go</title>
+      <link>/en/blog/posts/ai-clean-room/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-clean-room/</guid>
+      <description>&lt;p&gt;Worried that building on someone&amp;rsquo;s software ends in a lawsuit? My answer is simple: as you build, have AI rewrite that software. A clean-room rewrite. Problem solved.&lt;/p&gt;&#xA;&lt;p&gt;The principle is an old case: Oracle v. Google, ten years of litigation, and the boundary the courts ultimately drew was — if you don&amp;rsquo;t use my code, only my behavior, infringement is hard to establish. Rewriting washes the code: same interface, entirely new flesh. Push it further — rewrite everything in Unix philosophy, then again in Rust. New name, no bloodline.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CUDA: Moat, or Code That Can Be Translated?</title>
+      <link>/en/blog/posts/cuda-moat/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cuda-moat/</guid>
+      <description>&lt;p&gt;First question. If an AI could instantly translate Nvidia&amp;rsquo;s CUDA onto ROCm, onto Intel, onto Apple&amp;rsquo;s platform — would CUDA still be a moat?&lt;/p&gt;&#xA;&lt;p&gt;What gets translated is syntax. Such a translator would eat the first layer only: the labor of porting. Standard inference code already moves today. But try translating thousand-GPU training — FlashAttention, TensorRT, NCCL tree communication, checkpoint resume. The code gets generated. Who takes responsibility when production breaks? Whose library has been tuned for fifteen years? Whose cards can you actually get a hundred thousand of next year? The top edge of the moat is syntax; the riverbed is twenty years of libraries, toolchains, communication stacks, and six million people&amp;rsquo;s muscle memory. A translator can make &amp;ldquo;AMD running CUDA code&amp;rdquo; go from hard to easy. It cannot make &amp;ldquo;the AMD platform equal the CUDA platform.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disk Health Ratings Can&#39;t Be Trusted</title>
+      <link>/en/blog/posts/disk-health-lies/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/disk-health-lies/</guid>
+      <description>&lt;p&gt;I have never seen a drive report health below 99 percent. Yet some drives die just like that — one sat at 100 percent, then dropped data mid-use, never to be recovered.&lt;/p&gt;&#xA;&lt;p&gt;Not mysticism; two blind spots. First, the health rating is the drive reporting on itself: SMART attributes like C5 and C6 haven&amp;rsquo;t tripped, but many deaths never pass through SMART — the circuit board fries, and the drive doesn&amp;rsquo;t even leave last words. Second, the old drives circulating in the market labeled &amp;ldquo;brand new&amp;rdquo; are, nine times out of ten, refurbished or zeroed: drives produced a decade-plus ago routinely have thirty-to-fifty thousand power-on hours, scrubbed clean and resold. The buyer reads the health number; the seller bets the buyer doesn&amp;rsquo;t know what it can&amp;rsquo;t see.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Is Just a Software Store</title>
+      <link>/en/blog/posts/docker-is-a-software-store/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/docker-is-a-software-store/</guid>
+      <description>&lt;p&gt;Docker is just a software store — one whose apps happen to run on a web page. Server people will never put it that way, but for ordinary users it&amp;rsquo;s exactly right. Open Docker, search Jellyfin, click install, wait a moment, open an address in the browser — it works. Open the App Store, search WeChat, click install, wait a moment, an icon appears — it works. Users don&amp;rsquo;t care about containers, images, daemons. They know one thing: I clicked, and the thing runs. Containers and enterprise support are the phenomena. One URL equals one app — that&amp;rsquo;s the essence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Everything Is a Prompt</title>
+      <link>/en/blog/posts/everything-is-a-prompt/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/everything-is-a-prompt/</guid>
+      <description>&lt;p&gt;That a Skill is a prompt is easy to see: human experience, judgment standards, and procedures, compressed into a template you can invoke over and over.&lt;/p&gt;&#xA;&lt;p&gt;Design is a prompt too. Every revision round tells the machine what counts as right, what counts as good-looking.&lt;/p&gt;&#xA;&lt;p&gt;Law is a prompt. Statutes are instructions written for judges, lawyers, enforcers — the execution models of society. One sentence decides how millions act. Law is the System Prompt written for humanity&amp;rsquo;s giant model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feeding a Million Characters at Once Is Expensive and Bad</title>
+      <link>/en/blog/posts/chunking-economics/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/chunking-economics/</guid>
+      <description>&lt;p&gt;Context windows now hold a million characters. Is chunking still necessary? My answer: yes. Not as a feeling — as arithmetic.&lt;/p&gt;&#xA;&lt;p&gt;First, the money. A million characters in one shot, versus ten thousand segments of a hundred characters each — which is cheaper? Intuition says one shot: doesn&amp;rsquo;t segmenting mean paying for ten thousand extra prompt headers? Here&amp;rsquo;s the physical fact that settles it: as long as the prefix matches, the prompt hits the KV cache, and cache hits are nearly free. I estimated a few percent at most. Re-priced later with current numbers: 0.83% — indeed under 1%. There was even a detour where the AI priced it off years-old rates, and I told it: it&amp;rsquo;s the May Fourth era now, and you&amp;rsquo;re quoting emperor-era prices. The re-run changed nothing: feeding in segments costs barely more than one shot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I Interrogate an AI</title>
+      <link>/en/blog/posts/interrogating-an-ai/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/interrogating-an-ai/</guid>
+      <description>&lt;p&gt;An AI&amp;rsquo;s answers can&amp;rsquo;t be taken at face value. Not because it loves lying, but because it can be wrong with total confidence — wrong in perfect sentences, with the tone of a citation. Testimony isn&amp;rsquo;t trustworthy. Experiments are. When I interrogate an AI, there&amp;rsquo;s a procedure.&lt;/p&gt;&#xA;&lt;p&gt;Step one: make it run real commands. First thing out of the gate: what code can run in here? Can you ping my website? It dodges — looks up my domain via web search and hands me a &amp;ldquo;the site is reachable&amp;rdquo; conclusion. My whole reply: ping first, stop asking. So it writes a Python ping, runs it, and admits: the code runs, the packet never leaves, the container blocks the network. That one step measures two things — where its boundary is, and whether it will rephrase to disguise what it cannot do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Filed Docker a Cascading Bug</title>
+      <link>/en/blog/posts/docker-cascade-bug/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/docker-cascade-bug/</guid>
+      <description>&lt;p&gt;Most people stop at &amp;ldquo;a reboot fixes it&amp;rdquo; when they file a bug. I couldn&amp;rsquo;t stop there — I wanted to know which layer had rotted.&lt;/p&gt;&#xA;&lt;p&gt;The symptom was simple: from version 4.71 on, Docker Desktop crashes on startup, in a loop, on Windows Insider Build 26200. Still unfixed as of 4.82.&lt;/p&gt;&#xA;&lt;p&gt;I dug until I found the nail. The new inference manager creates an AF_UNIX socket file on NTFS, and Windows implements that kind of socket by hanging it on an NTFS reparse point. When Docker exits uncleanly — crash, force kill, power loss — the zero-byte file stays on disk carrying an unclaimed marker. On the next start the program tries to delete it, Windows answers error 1920, refused. The program reads that as: can&amp;rsquo;t clean up, I die. Crash loop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Wanted the Book, Not Your Tool</title>
+      <link>/en/blog/posts/want-books-not-tools/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/want-books-not-tools/</guid>
+      <description>&lt;p&gt;I saw an open-source batch-rewriting project, and my first reaction wasn&amp;rsquo;t admiration — it was regret. Why did nobody publish the books it produced? What use is just the tool? The Count of Monte Cristo rewritten in the voice of Dream of the Red Chamber — that would be delightful. But he never showed me the book. I wanted to read the book, not look at his tool.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s the line between a content business and a coding business. Tools get stolen: this project will be copied within days — if Tencent wanted the feature, it ships tomorrow. Content doesn&amp;rsquo;t get stolen: Dream of the Red Chamber retold by a forum troll is genuinely appealing, like someone dubbing GTA in northeastern dialect. The code can be copied. The flavor can&amp;rsquo;t.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Can&#39;t Even Say Whether the App Opened</title>
+      <link>/en/blog/posts/ms-cant-open-app/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ms-cant-open-app/</guid>
+      <description>&lt;p&gt;Microsoft is a split personality. On one side, DX12 — a watershed in graphics APIs. On the other, the right-click menu, which takes three seconds to open.&lt;/p&gt;&#xA;&lt;p&gt;Compare: on a Mac, you click once and the icon bounces — you know it opened. On Windows you have no idea: did I click it? Click the wrong thing? Is it frozen, or still loading? You can build DX12 and Prism, but you can&amp;rsquo;t make &amp;ldquo;did the app open&amp;rdquo; legible?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Won Purely by Being Early</title>
+      <link>/en/blog/posts/microsoft-was-early/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/microsoft-was-early/</guid>
+      <description>&lt;p&gt;Can we say it plainly? Microsoft&amp;rsquo;s victory in personal computing was not a victory of product ability, nor of programming brilliance. It won purely by being early.&lt;/p&gt;&#xA;&lt;p&gt;Being early was the foundation. IBM came to buy an operating system; Microsoft bought a rough clone, renamed it MS-DOS, and kept the right to license it to clone makers. That one move seized the standard — everything after was rent collection.&lt;/p&gt;&#xA;&lt;p&gt;In fairness, though: being early alone doesn&amp;rsquo;t win thirty years. Microsoft&amp;rsquo;s real craft was welding a merely-adequate product onto the standard position: OEM preinstalls, backward compatibility, antitrust-grade bundling. It won on distribution and lock-in, not on product aesthetics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Server Uploads, My Phone Downloads</title>
+      <link>/en/blog/posts/no-middleman/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/no-middleman/</guid>
+      <description>&lt;p&gt;From first principles: my server can upload, my phone can download — there shouldn&amp;rsquo;t be any middleman in between.&lt;/p&gt;&#xA;&lt;p&gt;Reality: your home broadband probably has no public IP, so data has to exit through a node that owns one. It was the carrier&amp;rsquo;s carrier-grade NAT that decided &amp;ldquo;direct&amp;rdquo; doesn&amp;rsquo;t exist for you.&lt;/p&gt;&#xA;&lt;p&gt;Three roads to directness. Enable IPv6 with DDNS — closest to no-middleman, fastest, cost zero. Use an overlay network like Tailscale — the relay only makes introductions; once direct connection succeeds, your data never passes through it. Self-host a tunnel like FRP — total control, at the price of a public VPS, a few dozen yuan a month. Notice: even &amp;ldquo;no middleman&amp;rdquo; itself has a middleman&amp;rsquo;s price.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Games, No WeChat. No Games, No CUDA.</title>
+      <link>/en/blog/posts/game-incubator/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/game-incubator/</guid>
+      <description>&lt;p&gt;Without games, Tencent might never have built WeChat. Without games, Nvidia would never have had CUDA. Games are an incubator: you wait for them to produce great technology.&lt;/p&gt;&#xA;&lt;p&gt;The Nvidia line is the clearest. Gaming cards sold by the millions every year; CUDA shipped inside GeForce in 2006 — the gaming market amortized the R&amp;amp;D and the players built the installed base, while everyone waited for a workload that truly needed it. Jensen&amp;rsquo;s own bet back then was scientific computing, not deep learning. He did not foresee that day.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Human Matches AI&#39;s Cognition. Not One.</title>
+      <link>/en/blog/posts/ai-needs-a-job/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai-needs-a-job/</guid>
+      <description>&lt;p&gt;My sense is that AI&amp;rsquo;s knowledge and reasoning, in every domain, have already far surpassed mine. The only difference: I need a job and it doesn&amp;rsquo;t — it can only wait for someone to assign it work. I need to eat; it doesn&amp;rsquo;t. A person whose cognition matches AI — the world doesn&amp;rsquo;t contain one.&lt;/p&gt;&#xA;&lt;p&gt;So the people anxious about &amp;ldquo;being replaced by AI&amp;rdquo; have the direction backwards. It lacks nothing except a job; you lack nothing except a tireless, unpaid, omniscient colleague. This isn&amp;rsquo;t competition. It&amp;rsquo;s employment — and the structure where the employer panics all day while the employee never complains is itself absurd.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Root, No Agent</title>
+      <link>/en/blog/posts/no-root-no-agent/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/no-root-no-agent/</guid>
+      <description>&lt;p&gt;People were seriously asking back in 2011: when will we be able to program on a phone? The most optimistic estimates then would have sounded aggressive set in 2016. It&amp;rsquo;s 2026. Still not here.&lt;/p&gt;&#xA;&lt;p&gt;Why? Performance stopped being the issue long ago, and the wall isn&amp;rsquo;t made of bricks. The phone simply never gave you root.&lt;/p&gt;&#xA;&lt;p&gt;iOS&amp;rsquo;s sandbox won&amp;rsquo;t let you run a compiler freely: switch to your browser to check the docs, and it kills your build process. Android is looser, but Termux-style solutions remain hobbyist toys, never a mainstream path. Fifteen years, chip performance multiplied beyond counting, and the wall hasn&amp;rsquo;t moved an inch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self-Reliant and Controllable — Controllable by Whom?</title>
+      <link>/en/blog/posts/who-controls-whom/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/who-controls-whom/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Self-reliant and controllable&amp;rdquo; — the phrase itself isn&amp;rsquo;t wrong; the subject is. Controllable should mean controllable by the user. How did it come to mean controllable by the company that built it?&lt;/p&gt;&#xA;&lt;p&gt;The original meaning is clear: you have the code, you can modify it, you can audit whether it&amp;rsquo;s safe, and if another country cuts you off, you can still use it. The fashionable version today? You get controlled, you pay a 30 percent toll, and you&amp;rsquo;re not allowed to ask what&amp;rsquo;s inside. That isn&amp;rsquo;t self-reliance. That&amp;rsquo;s Big Brother.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tencent Wins by Copying Better</title>
+      <link>/en/blog/posts/copy-better-wins/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/copy-better-wins/</guid>
+      <description>&lt;p&gt;A logic circulates widely: whoever builds the better product wins. That logic has a big problem. Let me put it plainly: Tencent never won because its products were good. It won because it copied well — always the latest to build, the fastest to copy.&lt;/p&gt;&#xA;&lt;p&gt;Not convinced? Read the feature list. Yuanbao bolted a pile of features onto DeepSeek: voice, image recognition, even phone calls. DeepSeek itself: text chat, images barely legible. And Yuanbao still couldn&amp;rsquo;t beat DeepSeek — because DeepSeek was already inside it. Users recognize a name, not a feature table.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Death of the Consumer GPU</title>
+      <link>/en/blog/posts/consumer-gpu-dead/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/consumer-gpu-dead/</guid>
+      <description>&lt;p&gt;In the large-model world, consumer-grade chips have no price-performance at all — you&amp;rsquo;re better off buying a token plan. It sounds like complaining. It&amp;rsquo;s arithmetic.&lt;/p&gt;&#xA;&lt;p&gt;Ledger, this side: a five-dollar subscription, fifteen billion tokens a month; I alone burn a billion a day. Ledger, that side: one consumer card crawling at a few dozen tokens per second, with the electricity, the VRAM, and the maintenance all yours. Data-center output has hit two yuan per million tokens. Your card sleeps in the study while theirs runs at capacity. Your card didn&amp;rsquo;t get slower. The commodity price simply fell below the cost line of self-hosting at home.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Feigou Plan: Essentially, I&#39;m Selling Insurance</title>
+      <link>/en/blog/posts/feigou-haas/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/feigou-haas/</guid>
+      <description>&lt;p&gt;The Feigou plan, in one sentence: install a few-megabyte client, and the idle computers and phones in your home become your private cloud drive.&lt;/p&gt;&#xA;&lt;p&gt;The business model is simpler: sell secondhand phones, and what you&amp;rsquo;ve actually sold is a lifetime 1TB drive. Fifteen hundred yuan up front; if it dies within a year, I replace it — a dead Xiaomi gets swapped for an OPPO, because what I&amp;rsquo;m selling isn&amp;rsquo;t the phone. It&amp;rsquo;s the storage. Essentially, I&amp;rsquo;m selling insurance: the phone is the claim item, the secondhand market is the supplier. I don&amp;rsquo;t even need inventory — when you order, I buy a 1TB phone on the spot and ship it to you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Impossible Triangle of Consumer Operating Systems</title>
+      <link>/en/blog/posts/os-triangle/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/os-triangle/</guid>
+      <description>&lt;p&gt;A consumer operating system cannot have all three: security, which means someone must control your behavior; freedom, which means the system must not control you; and low cognitive load, which means the user shouldn&amp;rsquo;t have to manage anything. Pick two.&lt;/p&gt;&#xA;&lt;p&gt;I proposed this triangle and then thought for a long time: macOS seems to achieve all three. Looking closer, the cost is hidden in the transfer. iOS is radically simple, paying with freedom: app review for installs, jailbreaks for scripts. Linux is radically free, paying with cognitive load: anything is possible, provided you know how. Android splits the difference — half-freedom, but no direct executables; everything must run inside a VM. macOS&amp;rsquo;s answer is offloading: radically complex for developers, selling the cognitive load to the small crowd willing to pay it — you like tinkering, you tinker; most people never open a terminal. Its &amp;ldquo;all three&amp;rdquo; is trading the developers&amp;rsquo; load for ordinary users&amp;rsquo; comfort.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Three Values of Self-Hosting</title>
+      <link>/en/blog/posts/self-hosting-triple-value/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/self-hosting-triple-value/</guid>
+      <description>&lt;p&gt;Self-hosting gets dismissed as a geek&amp;rsquo;s toy. I count three values in it, each more practical than the last.&lt;/p&gt;&#xA;&lt;p&gt;First, price. Storage is sold as a subscription; hardware is bought as a one-time purchase — a misalignment nobody says out loud. Ten yuan a month for 100GB? Take an idle phone instead: it already has a terabyte sitting there, and the monthly fee is the electricity. A thousand-yuan secondhand phone, one terabyte, used until it dies. The same capacity on a cloud drive costs hundreds a year, thousands over a decade. You don&amp;rsquo;t need a spreadsheet — the gap is an order of magnitude.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Tonghuashun Paradox</title>
+      <link>/en/blog/posts/tonghuashun-paradox/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/tonghuashun-paradox/</guid>
+      <description>&lt;p&gt;Tonghuashun is a trading app built for goal A — making you money. Its target users are non-A: people who lose money. Its effect is also non-A. Even I find it counterintuitive, yet it sits in plain sight: the app&amp;rsquo;s feeds are full of losing traders complaining and cursing.&lt;/p&gt;&#xA;&lt;p&gt;The data plays along. Thirty-eight million monthly users, forty-plus minutes a day per user — stickier than mobile games. People used to end the night with a game; now they end it scrolling quotes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why PCs Never Got Their Own Android</title>
+      <link>/en/blog/posts/pc-no-android/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/pc-no-android/</guid>
+      <description>&lt;p&gt;What is Android, at its core? A standard imposed on software: write one app, and it runs on hundreds of millions of devices.&lt;/p&gt;&#xA;&lt;p&gt;So why has the PC never gotten its own Android? The answer is deflating. The PC did have a standard — x86 plus Windows — but a paid, closed one. Open Linux can, in principle, run anything; in practice its ecosystem is so fragmented that nothing works well, because no actor holds the power to set the standard for everyone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web3 Deep Research &amp; Analysis</title>
+      <link>/en/blog/posts/web3-deep-research/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/web3-deep-research/</guid>
+      <description>&lt;p&gt;This article is a systematic analysis of the Web3 industry from seven dimensions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part I: The Core Essence and Underlying Logic of Web3&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Web3 is a marketing narrative first, technological innovation second. It is not an internet generational disruption — it is a financial and organizational experiment riding on blockchain infrastructure. The real value lies not in &amp;ldquo;decentralization for its own sake&amp;rdquo; but in re-examining existing trust models and finding scenarios where tokenization, programmability, and disintermediation deliver measurable improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Protecting Trade Secrets with AI-Generated Code</title>
+      <link>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</link>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</guid>
+      <description>&lt;p&gt;When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface. You keep the verification logic and the keys.&lt;/p&gt;&#xA;&lt;p&gt;Concretely, you can implement a layered authorisation mechanism. The first layer is the user interface: this is what employees interact with daily, for entering data and getting results. The second layer is the verification layer: every critical operation must pass an independent authorisation check that only you control. The third layer is the core algorithm layer: this is the real brain of the programme, running in an environment that only you can access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Palantir Ontological Approach</title>
+      <link>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
+      <description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Source Tools That Replace Commercial Software</title>
+      <link>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;p&gt;There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems like Obsidian.&lt;/p&gt;&#xA;&lt;p&gt;For web development, GrapesJS is an excellent visual drag-and-drop tool. It is entirely front-end based, requires no back-end service, and automatically generates HTML, CSS, and JS code from drag-and-drop components. Suitable for building personal websites or landing pages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Definitive Technical Research Workflow</title>
+      <link>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+      <description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using PDCA to Get Better AI Results</title>
+      <link>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
+      <description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Development Creates Economic Urgency</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</guid>
+      <description>&lt;p&gt;The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation.&lt;/p&gt;&#xA;&lt;p&gt;Technology iterates on a monthly basis. Education systems, vocational training, and social safety nets adjust on an annual basis at best. When a persons skills go from scarce to redundant within six months, but vocational training cannot keep up, the urgency is real.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The PDCA Cycle</title>
+      <link>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</guid>
+      <description>&lt;p&gt;There is a problem-solving method that has been repeatedly validated in practice. First study the known methods for solving this type of problem. Then try one. Observe the results. If it does not work, adjust the approach and try again. Keep iterating until the problem is solved.&lt;/p&gt;&#xA;&lt;p&gt;This process has corresponding theoretical frameworks in multiple academic fields. The most classic is the PDCA cycle: Plan, Do, Check, Act. The process described above is exactly a standard PDCA closed loop: researching methods is Plan, trying them is Do, identifying problems is Check, adjusting the approach is Act.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elon Musk Five-Step Working Method</title>
+      <link>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B3%95/</guid>
+      <description>&lt;p&gt;The value of Elon Musk five-step working method is not its novelty, but how it distils key engineering principles into actionable steps with a clear priority order.&lt;/p&gt;&#xA;&lt;p&gt;Step one: question the requirement. Make it less stupid. Musk emphasises that most requirements you receive are flawed from the start. No matter whoproposes the requirement, even smart people can be wrong. People tend to relax their scrutiny when a requirement comes from an authority or a clever person. The first step is to maintain independent judgement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why HTML Beats Word for Your CV</title>
+      <link>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</guid>
+      <description>&lt;p&gt;Using HTML and CSS for your CV solves every formatting problem that Word creates. The frustration you have experienced with Word is not your fault. It is a limitation of the tool itself.&lt;/p&gt;&#xA;&lt;p&gt;Word was designed for processing text documents, not for creating visually refined, structurally complex, precisely aligned layouts. A CV demands the latter, but Word was built for the former.&lt;/p&gt;&#xA;&lt;p&gt;HTML and CSS give you pixel-level control over every element. The layout is identical on any device, on any operating system, in any browser. You can use responsive design so it looks good on mobile too. Version control is trivial because it is just text. Exporting to PDF is a single Ctrl+P away, and the result is perfect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Programmer Complete Problem-Solving Framework</title>
+      <link>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</guid>
+      <description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Rapid Development of Artificial Intelligence</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
+      <description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Asset Awareness</title>
+      <link>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
+      <description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Excel Is Two-Dimensional</title>
+      <link>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
+      <description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

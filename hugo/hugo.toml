@@ -2,6 +2,7 @@ baseURL = "/"
 title = "Fengyu WANG"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = true
+buildFuture = true
 publishDir = "../_site"
 [pagination]
 pagerSize = 12
@@ -30,7 +31,7 @@ disableKinds = ["home", "sitemap", "robotsTXT", "404"]
   tag = "tags"
 
 [outputs]
-  section = ["HTML", "RSS"]
+  section = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
   home = ["HTML"]
 

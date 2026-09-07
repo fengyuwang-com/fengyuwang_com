@@ -3,7 +3,7 @@ title: "Protecting Trade Secrets with AI-Generated Code"
 date: 2026-06-08
 description: "When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface, you keep the verification logic and keys."
 slug: "商业机密保护"
-tags: ["Business", "Tech", "Tools"]
+tags: ["Business", "Tech"]
 draft: false
 translationKey: "商业机密保护"
 ---

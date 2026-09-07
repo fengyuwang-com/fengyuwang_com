@@ -39,10 +39,16 @@ body[data-theme="dark"] .block-inner ul{color:#9fb0c3}
 
 ### 验证方法
 
-改完页面后，在浏览器中：
-1. 切换暗色模式，确认 h1/h2/p/block-subtitle/link-card p/section-card/content-text-card 全部可见
-2. 所有文本色应为浅色（#e5ecf4/#9fb0c3/#94a3b8），背景为深色（#0a0e1a/#111827/#0f172a）
-3. `grep -c 'data-theme'` 计数可以作为快速检查
+**首选（2026-09-07 起）：跑全站大脚本，机器判定，不再靠肉眼。**
+
+```bash
+python3 tools/check_site.py   # 全量含暗+亮双向对比度审计 (466页), 全绿才允许 commit/push
+```
+
+它用无头浏览器逐页真实渲染，按 WCAG 对比度公式逐文字检查（暗色问题=亮色正常暗色才坏，
+亮色问题反之），退出码 0 = 全过。发版前、修 bug 后都必须跑（三条铁律见 AGENTS.md
+"Release Gate"节）。手工抽验仅作补充：切暗色看 h1/h2/p/block-subtitle/link-card p/
+section-card/content-text-card 是否全部可见。
 
 ## 固定规则（不可偏离）
 
@@ -58,3 +64,7 @@ body[data-theme="dark"] .block-inner ul{color:#9fb0c3}
 
 - LESSONS.md 记录跨会话高频错误的根本原因和修复方法
 - `.claude/projects/C--Users-a8881-Desktop-fengyuwang-com/memory/` 存持久化记忆
+- **全站唯一检查脚本 = `tools/check_site.py`**（14 节全合并：内容/三语/简繁/部署/死链/
+  搜索索引/暗亮对比度浏览器审计）。发版门禁三铁律见 AGENTS.md "Release Gate"节：
+  ① 大改后、上 master 前，把新问题类型固化成检查节并入大脚本再跑全量；② 出问题修复后
+  用大脚本回归归零再 push；③ 不另建零散检查脚本。
