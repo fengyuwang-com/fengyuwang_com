@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economy on Fengyu WANG</title>
+    <link>/en/tags/economy/</link>
+    <description>Recent content in Economy on Fengyu WANG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/en/tags/economy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t Ask Where the Money Went, Ask Where the Dog Is</title>
+      <link>/en/blog/posts/dog-where/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/dog-where/</guid>
+      <description>&lt;p&gt;When Evergrande&amp;rsquo;s 2.44-trillion-yuan debt bomb finally went off, everyone&amp;rsquo;s favorite word was &amp;ldquo;evaporated.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;I refuse that word. Money does not disappear; it only moves from one person&amp;rsquo;s hands to another&amp;rsquo;s. So whenever money that should exist is gone, a dog must have taken it — that is my Dog Ate My Money Theorem. I know it sounds like a joke, but it cuts to the essence.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;The money is gone&amp;rdquo; is not a description. It is a cover-up — cover for some party that is holding it right now. Evaporation is the dog&amp;rsquo;s camouflage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Poor Pay an Attention Tax</title>
+      <link>/en/blog/posts/attention-tax/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/attention-tax/</guid>
+      <description>&lt;p&gt;The day the typhoon made landfall, I was among the last to know. My attention was elsewhere; only at the door did I discover the buses had stopped, and I walked home pushing my suitcase into the wind. Friends call that focus. I say no — it&amp;rsquo;s a place where I get a discount. The discount has a technical name; I&amp;rsquo;ll get to it.&lt;/p&gt;&#xA;&lt;p&gt;First, the tax. I once noticed something: the poorer a person is, the more of his time goes to taking out the trash, buying household supplies, checking today&amp;rsquo;s weather. Days filled with these chores leave no room for thinking about the things that actually matter. There is no tax office for this levy, no bill. Everyone pays it anyway. I call it the attention tax.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Rich Are Rich Because They Do the Math</title>
+      <link>/en/blog/posts/do-the-math/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/do-the-math/</guid>
+      <description>&lt;p&gt;Hong Kong phone plans come in two kinds: prepaid SIMs, top up and use, and contract plans that bind you for 24 months. I&amp;rsquo;ve been on prepaid for six years — three hundred HKD a year, tops. A contract? I ran the numbers once: defaulting at worst costs you twelve thousand. So I never understood people who sign contracts — until I put every defense on trial, one by one, and the trial ended at my own doorstep.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An Annual Subscription Is a Lock-In</title>
+      <link>/en/blog/posts/annual-subscription-trap/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/annual-subscription-trap/</guid>
+      <description>&lt;p&gt;Buying an annual membership for an AI model is a bad move.&lt;/p&gt;&#xA;&lt;p&gt;The reasoning needs no jargon. Models update every month, and every month a new company jumps out: Alibaba today, Tencent tomorrow, Minimax or GLM the day after. Buy the annual plan and you&amp;rsquo;re locked in.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t an abstract worry. The money you paid in January locks in January&amp;rsquo;s model. In March a competitor open-sources; in May another doubles its context length; within a quarter, your pick can slide from best-in-class to the second tier — and the money is already gone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feeding a Million Characters at Once Is Expensive and Bad</title>
+      <link>/en/blog/posts/chunking-economics/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/chunking-economics/</guid>
+      <description>&lt;p&gt;Context windows now hold a million characters. Is chunking still necessary? My answer: yes. Not as a feeling — as arithmetic.&lt;/p&gt;&#xA;&lt;p&gt;First, the money. A million characters in one shot, versus ten thousand segments of a hundred characters each — which is cheaper? Intuition says one shot: doesn&amp;rsquo;t segmenting mean paying for ten thousand extra prompt headers? Here&amp;rsquo;s the physical fact that settles it: as long as the prefix matches, the prompt hits the KV cache, and cache hits are nearly free. I estimated a few percent at most. Re-priced later with current numbers: 0.83% — indeed under 1%. There was even a detour where the AI priced it off years-old rates, and I told it: it&amp;rsquo;s the May Fourth era now, and you&amp;rsquo;re quoting emperor-era prices. The re-run changed nothing: feeding in segments costs barely more than one shot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Impotent After One Hour of Gaming. Eighteen Hours of Code, No Problem.</title>
+      <link>/en/blog/posts/cyber-impotence/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/cyber-impotence/</guid>
+      <description>&lt;p&gt;Gaming, I go impotent after one hour — call it cyber impotence. Coding, not at all. Eighteen hours straight, no problem.&lt;/p&gt;&#xA;&lt;p&gt;Same screen, same chair. Where&amp;rsquo;s the difference? Games are consumption: the goals were designed by someone else, the rewards written by someone else; you&amp;rsquo;re grinding levels in a world somebody else owns. After an hour, the dopamine bill is settled, and what&amp;rsquo;s left is emptiness. Code is production: the problem is yours, the solution is yours, and the world now contains one more small thing because of you. Eighteen hours isn&amp;rsquo;t enough, because behind every solution stands the next problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shells Were Money Too. What Happened?</title>
+      <link>/en/blog/posts/shell-consensus/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/shell-consensus/</guid>
+      <description>&lt;p&gt;Bitcoin&amp;rsquo;s defense is always the same line: fiat relies on social consensus, Bitcoin relies on social consensus — nobody is holier than anybody.&lt;/p&gt;&#xA;&lt;p&gt;My reply is simple: you say everything rests on consensus? Back then a primitive man picked up shells and they served as money — that was social consensus too. Why isn&amp;rsquo;t it anymore?&lt;/p&gt;&#xA;&lt;p&gt;Consensus collapses. That&amp;rsquo;s the point. But after the collapse there&amp;rsquo;s a second, more important distinction: when shells collapsed, the shell-gatherer lost some time. When something like Bitcoin collapses, what burns is real electricity, real GPUs, real network bandwidth — a wholly valueless virtual thing occupying real resources. That&amp;rsquo;s the crux. It isn&amp;rsquo;t just consensus; it&amp;rsquo;s a furnace wrapped in consensus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Businesses with Long-Term High Margins</title>
+      <link>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E9%95%BF%E6%9C%9F%E6%9A%B4%E5%88%A9%E7%9A%84%E7%94%9F%E6%84%8F/</guid>
+      <description>&lt;p&gt;Businesses that sustain high margins over the long term all revolve around a few deep and persistent drivers of human nature.&lt;/p&gt;&#xA;&lt;p&gt;The first driver is greed. In ancient times it was gambling houses, in modern times it is finance. Stocks, crypto, futures, derivatives. No matter how sophisticated the financial instrument, the underlying psychological mechanism is the same: people believe they are smarter than others, that they will profit where others lose. Institutions do not make money from market movements. They make it from greed and overconfidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Development Creates Economic Urgency</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</guid>
+      <description>&lt;p&gt;The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation.&lt;/p&gt;&#xA;&lt;p&gt;Technology iterates on a monthly basis. Education systems, vocational training, and social safety nets adjust on an annual basis at best. When a persons skills go from scarce to redundant within six months, but vocational training cannot keep up, the urgency is real.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trust Cost Determines Price</title>
+      <link>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/</guid>
+      <description>&lt;p&gt;The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles.&lt;/p&gt;&#xA;&lt;p&gt;The first principle is that channels determine pricing power. The same product sold on Xianyu can only fetch Xianyu prices. Sold on Taobao, it fetches Taobao prices. Sold through a high-end consultancy, it commands a professional service fee. The essence of a channel is trust endorsement. The premium customers pay for a channel is essentially payment for trust in that channel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Rapid Development of Artificial Intelligence</title>
+      <link>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
+      <description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Supply Is Strong, Demand Is Weak</title>
+      <link>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</link>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E4%BE%9B%E5%BA%94%E5%BC%BA-%E9%9C%80%E6%B1%82%E5%BC%B1/</guid>
+      <description>&lt;p&gt;The core contradiction in the current economy is structural: supply exceeds effective demand. This is not absolute overcapacity across all industries, but a differentiated, squeezing imbalance.&lt;/p&gt;&#xA;&lt;p&gt;Starting with consumer goods: manufacturing capacity across many sectors is ample. Daily necessities, home appliances, clothing, and ordinary industrial goods are in abundant supply, with prices trending downward and competition intensifying. But the problem is not on the supply side. It is that effective purchasing power cannot keep up. It is not that people do not need these goods. It is that their disposable income is shrinking and their consumption behaviour is contracting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fair Profit Is Not Greed</title>
+      <link>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/%E5%90%88%E7%90%86%E5%88%A9%E6%B6%A6/</guid>
+      <description>&lt;p&gt;There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself.&lt;/p&gt;&#xA;&lt;p&gt;Many people have a fundamental misunderstanding about profit. They equate markup with immorality.&lt;/p&gt;&#xA;&lt;p&gt;But this equation ignores a basic fact of business: reasonable profit is not exploitation. It is recognition of value and compensation for risk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rent Extraction vs. Rent Creation in Regulation Theory</title>
+      <link>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/en/blog/posts/rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation/</guid>
+      <description>&lt;p&gt;Two types of intermediaries play fundamentally different roles in economic activity. One type creates value. The other distributes value. The criterion for distinguishing between the two defines how we understand the true source of value in markets.&lt;/p&gt;&#xA;&lt;p&gt;Value-creating intermediaries, with Apple as the classic case, are characterised by thenovel integration of elements that could not previously be combined, creating products that did not previously exist. In Apple case, scattered elements such as ARM CPUs, touch technology, the iOS ecosystem, and the App Store were integrated into the iPhone, a product category that did not exist before. The definingcharacteristic of this type of entity is: without it, the corresponding new product would not exist. It has irreplaceable integration value.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

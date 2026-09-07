@@ -3,7 +3,7 @@ title: "Trust Cost Determines Price"
 date: 2026-03-20
 description: "The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles."
 slug: "信任成本决定价格"
-tags: ["Business", "Trust", "Pricing"]
+tags: ["Business", "Society", "Economy"]
 draft: false
 translationKey: "信任成本决定价格"
 ---

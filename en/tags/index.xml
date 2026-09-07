@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Fengyu WANG</title>
+    <link>/en/tags/</link>
+    <description>Recent content in Tags on Fengyu WANG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Business</title>
+      <link>/en/tags/business/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/business/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economy</title>
+      <link>/en/tags/economy/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/economy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Finance</title>
+      <link>/en/tags/finance/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/finance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Investing</title>
+      <link>/en/tags/investing/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/investing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Society</title>
+      <link>/en/tags/society/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/society/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>/en/tags/tech/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Marketing</title>
+      <link>/en/tags/marketing/</link>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/marketing/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

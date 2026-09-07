@@ -3,7 +3,7 @@ title: "*DeepSeek V4，为什么让我对经济极度悲观？"
 date: 2026-06-04
 description: "【终极定稿】视频大纲：DeepSeek V4，为什么我对未来经济极度悲观（普通人残酷现实版）"
 slug: "deepseek-v4-为什么让我对经济极度悲观"
-tags: ["AI", "经济", "社会"]
+tags: ["技术", "经济", "社会"]
 draft: true
 translationKey: "deepseek-v4-为什么让我对经济极度悲观"
 ---

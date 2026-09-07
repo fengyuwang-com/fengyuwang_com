@@ -239,6 +239,14 @@ p:last-child {
 	border: 2px solid #333;
 }
 
+/* 蓝白按钮同排必须等高：flex 行里 .default-btn-one 的 margin-top:5px
+   会让 .default-btn 被 stretch 多撑 5px（54 vs 49），间距交给 gap */
+.cta-row .default-btn,
+.cta-row .default-btn-one {
+	margin-top: 0;
+	margin-right: 0;
+}
+
 .btn-style-four {
 	position: relative;
     display: inline-block;
@@ -3269,7 +3277,7 @@ blockquote::after, .blockquote::after {
 
 .newsletter-form button:hover {
 	background-color: #FF9800;
-	color: #ffffff;
+	color: #0f172a;
 }
 
 .newsletter-form #validator-newsletter {
@@ -3560,3 +3568,19 @@ blockquote::after, .blockquote::after {
 
 .kw-cat-teal { background: #0f766e; }
 .kw-teal { background: #f0fdfa; border-color: #99f6e4; color: #0f766e; }
+
+/* Back-to-top button (moved from per-page inline styles) */
+.back-to-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:#0071e3;color:#fff;border:none;box-shadow:0 8px 24px rgba(0,113,227,.3);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;z-index:999;transition:opacity .2s}
+.back-to-top.show{display:flex}
+.back-to-top:hover{background:#0062cc}
+body[data-theme="dark"] .back-to-top{background:#4f7eff;box-shadow:0 8px 24px rgba(79,126,255,.25)}
+body[data-theme="dark"] .back-to-top:hover{background:#3a6af0}
+
+/* ---- 暗色模式对比度修复 (2026-09-07 全站审计) ---- */
+blockquote, .blockquote { border-radius: 16px; }
+body[data-theme="dark"] blockquote, body[data-theme="dark"] .blockquote { background-color: #1e293b; }
+body[data-theme="dark"] blockquote::before, body[data-theme="dark"] .blockquote::before { color: rgba(148,163,184,.12); }
+body[data-theme="dark"] p { color: #9fb0c3; }
+body[data-theme="dark"] .default-btn-one { color: #e5ecf4; border-color: rgba(148,163,184,.45); }
+body[data-theme="dark"] .default-btn-one:hover { color: #0a0e1a; background-color: #e5ecf4; border-color: #e5ecf4; }
+body[data-theme="dark"] code { color: #f9a8c9; }
