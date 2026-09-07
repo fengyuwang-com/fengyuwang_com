@@ -11,6 +11,11 @@
 
 （第 11 轮站长拍板：除上述外其余待办等日后举措）
 
+## 已完成（2026-09-07 第 12 轮：站长令——上线主线生产）
+
+- [x] dev → master 合并推送（merge commit 886635c，GitHub+Gitee 双推确认）：上线 dev 全量约 57 个提交——FlyGo 专题页+Open 镜像链接、首页改版、博客多批次、全站搜索、暗色对比度修复；合并前全站门禁全绿（EXIT=0），合并树与 dev 完全一致；Cloudflare Pages 自动部署
+- [x] 顺带收编 master-ahead-of-dev 残留：远端 master 独有 652c368（relicense，LICENSE 与 dev 同 blob）经合并自然归位，master/dev 不再分叉
+
 ## 已完成（2026-09-07 第 11 轮：站长拍板——email-classification.md 第三方 HR 姓名邮箱脱敏）
 
 - [x] Open-FengOffice docs/email-classification.md 脱敏（站长拍板「取消掉」）：3 个 HR 个人邮箱（vincci@… / recruitment.globalhr@… / thomas@dayuse…）+ 8 个人名 →【已脱敏】，git filter-repo --replace-text 全历史重写，强推 master 8243ac3→feef33a，GitHub 现文件验证 0 命中；文档本体（四级分类体系）保留，README/CLAUDE.md 引用不断链；公司系统邮箱（Webull/OKX/Ollama 等公开企业地址）非个人隐私，保留。**⚠️ 未来从私仓同步此文件必须重做同样脱敏**

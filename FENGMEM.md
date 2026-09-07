@@ -203,3 +203,9 @@
 - AI 行动: 核实 dev=8f47440 已推、flygo×3 链 Open-FlyGo、门禁绿；Open-FengOffice docs/email-classification.md 脱敏——3 个 HR 个人邮箱 + 8 个人名 →【已脱敏】，git filter-repo --replace-text 全历史重写（仅该文件含这些 PII，已验证），强推 master 8243ac3→feef33a，GitHub 现文件 0 命中；全站门禁全绿 EXIT=0
 - 产出: Open-FengOffice 干净历史 feef33a；todo.md 悬空提交项并入 Open-FengOffice 旧 SHA；第 11 轮入账 commit 推 dev
 - 关键决策: 保留分类文档本体（README/CLAUDE.md 引用不断链），只脱敏第三方个人 PII；公司系统邮箱（Webull/OKX 等公开企业地址）保留；未来私仓同步该文件必须重做同样脱敏；旧提交悬空归入 GitHub Support 工单待办（与 Open-FengMedia 可同单）
+
+## 2026-09-07 15:25 — 第 12 轮
+- 用户要求: 网站 push 到主线生产（明确上线批准）
+- AI 行动: 部署前再跑全站门禁（全绿 EXIT=0）；发现 master/dev 分叉——origin/master 多 652c368（relicense，即 LESSONS 所记事件残留）、本地 master 落后远端；先 ff 同步本地 master 到远端，再合并 dev（LICENSE 两边同 blob 干净通过，合并树与 dev 逐字节一致），push master
+- 产出: master=886635c（GitHub ls-remote + Gitee 输出双确认），Cloudflare Pages 自动部署；dev 已切回、工作树干净；todo/FENGMEM 第 12 轮入账 commit 推 dev
+- 关键决策: 652c368 独有提交经合并自然归位（不 rebase 不强推）；上线内容 = dev 全量（约 57 提交：FlyGo 页/首页改版/博客批次/搜索/暗色修复/check_site 门禁）
