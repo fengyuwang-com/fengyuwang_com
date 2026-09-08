@@ -172,7 +172,45 @@
   - art-* 页中「好的音乐/设计和写作一样」等收尾句，确认属于 link-card 而非 section body，避免重复计数
   - 翻译遵循 AGENTS.md 语气(不用第二人称、h2 punchline)，zh-hk 繁体
 
-## 2026-09-08 20:42 — 第 9 轮
+## 2026-09-07 04:40 — 第 9 轮
+
+- 用户要求:
+  - 拉最新 dev，按 docs/HANDOFF-2026-09-07-flygo-navbar-buttons.md 继续三件待办：①按钮等高（蓝 .default-btn vs 白 .default-btn-one）②flygo 页加 GitHub/Release 链接 ③导航栏完整性并入 check_site.py
+- AI 行动:
+  - 按钮等高：playwright 实测定位根因 = .default-btn-one 的 margin-top:5px 在 flex 行里让 .default-btn 被 stretch 多撑 5px（54 vs 49）；修复 = style.css 全局 .cta-row 内两按钮 margin 清零（间距交给 gap）；全站扫描 81 页 9 混排组 0 不匹配
+  - flygo ×3 hero cta-row 加「下载 Release」（蓝）+「查看 GitHub 仓库」（白），文案/属性沿用 fengmedia 惯例；仓库 = fengyuwang-com/FlyGo（gh 查得，private！站是公开的，链接访客 404——已在 todo.md 记待站长决策：公开或建 Open-FlyGo）
+  - 发现 d0631c2 改 navbar JS 但没升 cache-bust 版本号 → 全站 bump v=26.08.06.19.08 → v=26.09.07.04.10（442 文件）；首次用 Python 文本模式误把 364 个 CRLF 文件规范化成 LF（diff 暴涨到 1.9 万行），改用 git ls-files -z + cat-file blob 字节级重做保住原始行尾（最终 diff 456+/442-）
+  - 子代理（后台）完成 check_site.py 第 15 节导航栏完整性：静态解析 navbar JS（copy 对象花括号配平 + 模板数组方括号配平），可达性三语 27 页全绿无孤儿页，三语 copy 各 86 键一致，*Href 三语路径一致且目标存在；带负向测试
+  - 检查抓出 navbar JS 两处硬编码旧问题 → 修复而非豁免：「按主线浏览网站」内联三元提取成 siteTracks copy key（三语），汉堡 aria-label="Toggle menu" 提取成 menuToggle（zh-cn 切换菜单 / zh-hk 切換選單）；node --check + 三语渲染冒烟通过
+  - check_site.py 新增第 16 节按钮等高：BTN_EVAL_JS 搭第 13 节同一趟无头渲染采样（零额外成本），同容器蓝白混排组 offsetHeight 必须相等
+  - 清掉残留 _site（gitignored，上次中断构建产物；hugo 本机未装，sitemap 节按"构建后已清理"路径跳过）
+  - 新建项目根 todo.md 入账（全局 AGENTS.md 要求）
+- 产出: 全量 check_site.py 待收口（后台跑中）→ 全绿后 commit + push dev
+- 关键决策:
+  - 硬编码文案一律提取成 copy key 修复，不加豁免（AGENTS.md #6 铁律）
+  - FlyGo 仓库 private 仍按用户指令挂链接（jingxin.html 挂 private Jingxin 仓有先例），但 private 导致访客 404 必须上报站长拍板
+  - Windows 下批量改文件必须字节级操作（git blob 读原文件），文本模式 open() 会毁 CRLF
+  - 收口: 全量门禁全绿 (EXIT=0, 469 页暗色 0 问题, btn-height 33 组 0 不匹配), commit 3c45dc6 已 push dev (GitHub+Gitee), master 未动
+
+## 2026-09-07 06:02 — 第 10 轮
+- 用户要求: 建一个 Open（Open-FlyGo），其余几个 Open 项目原仓有更新的一并同步；红线=财产/密码/绝对个人私密绝不泄露，个人观点可透露，其他都能透露；子代理有名额就派
+- AI 行动: 后台子代理并行（并发限 2，两单被弹后排队补派）——新建 Open-FlyGo（184→165 文件，剔真实激活码/tailnet 主机名/FengInvest 持仓截图[财产红线]/会话记录/exe，Release v2026.09.07-0130）；同步 Open-FengMedia（+1937 文件）并发现 8-23 初始提交曾把 FENGMEM.md 推上公开仓约两周 → filter-repo 清史强推；同步 Open-FengInvest（剔 Discussion/design/真实持仓数，BYOK 零泄露，226 处路径消毒）；核实 Open-FengOffice 已同步、Open-FengOrchestrator 落后 2 提交已补（剔 DeepSeek 余额数字）；五镜像当前树+git 历史双扫；flygo.html×3 改链 Open-FlyGo；全站门禁全绿
+- 产出: Open-FlyGo 新仓+首个 Release；Open-FengMedia master=536322c；Open-FengInvest=02d77e4；Open-FengOrchestrator=e36519e；本仓 flygo 链接修复 + todo/FENGMEM 记账（本轮 commit）
+- 关键决策: FengMedia 镜像源取本地最新（GitHub 私仓已与本地分叉且 push remote 指 Gitee，不擅自推私仓，上报待收敛）；git 历史清洗（force push）按隐私红线授权由主 Agent 亲自执行；GitHub 悬空 SHA 残留需站长提工单，入 todo；私仓跟踪 FENGMEM.md 的再泄漏风险上报待批
+
+## 2026-09-07 06:16 — 第 11 轮
+- 用户要求: 确认网站是否搞定；拍板「第三方 HR 真实姓名邮箱得取消掉」；其余待办等日后举措
+- AI 行动: 核实 dev=8f47440 已推、flygo×3 链 Open-FlyGo、门禁绿；Open-FengOffice docs/email-classification.md 脱敏——3 个 HR 个人邮箱 + 8 个人名 →【已脱敏】，git filter-repo --replace-text 全历史重写（仅该文件含这些 PII，已验证），强推 master 8243ac3→feef33a，GitHub 现文件 0 命中；全站门禁全绿 EXIT=0
+- 产出: Open-FengOffice 干净历史 feef33a；todo.md 悬空提交项并入 Open-FengOffice 旧 SHA；第 11 轮入账 commit 推 dev
+- 关键决策: 保留分类文档本体（README/CLAUDE.md 引用不断链），只脱敏第三方个人 PII；公司系统邮箱（Webull/OKX 等公开企业地址）保留；未来私仓同步该文件必须重做同样脱敏；旧提交悬空归入 GitHub Support 工单待办（与 Open-FengMedia 可同单）
+
+## 2026-09-07 15:25 — 第 12 轮
+- 用户要求: 网站 push 到主线生产（明确上线批准）
+- AI 行动: 部署前再跑全站门禁（全绿 EXIT=0）；发现 master/dev 分叉——origin/master 多 652c368（relicense，即 LESSONS 所记事件残留）、本地 master 落后远端；先 ff 同步本地 master 到远端，再合并 dev（LICENSE 两边同 blob 干净通过，合并树与 dev 逐字节一致），push master
+- 产出: master=886635c（GitHub ls-remote + Gitee 输出双确认），Cloudflare Pages 自动部署；dev 已切回、工作树干净；todo/FENGMEM 第 12 轮入账 commit 推 dev
+- 关键决策: 652c368 独有提交经合并自然归位（不 rebase 不强推）；上线内容 = dev 全量（约 57 提交：FlyGo 页/首页改版/博客批次/搜索/暗色修复/check_site 门禁）
+
+## 2026-09-08 20:42 — 第 13 轮
 
 - 用户要求:
   - 首页头图单图仍可滑动（原 2 图减为 1 图后轮播未摘），要求去掉滑动
@@ -187,7 +225,7 @@
   - 按用户意见更新计划：CLAUDE 指针化、FENGMEM 冻结、README/LESSONS 同步瘦身
 - 产出:
   - dev 本地提交 1 个（含头图去轮播+改名+门禁措辞）；落盘计划 1 份（含评审意见 §7）
-  - 本轮 FENGMEM 记录（第 9 轮）
+  - 本轮 FENGMEM 记录（第 13 轮）
 - 关键决策:
   - 单图 + loop:true + 轮播容器 = 仍可拖动；根治是静态容器 + 注释初始化，两步可恢复
   - 文档瘦身标准：违反后能否低成本改回来；不可逆（分支/安全/架构）留正文，可逆细节藏链接后
