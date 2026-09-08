@@ -230,3 +230,18 @@
   - 单图 + loop:true + 轮播容器 = 仍可拖动；根治是静态容器 + 注释初始化，两步可恢复
   - 文档瘦身标准：违反后能否低成本改回来；不可逆（分支/安全/架构）留正文，可逆细节藏链接后
   - FENGMEM 冻结存档一字不动；CLAUDE 瘦成指针；README 保留门面可读性下同步瘦身
+
+## 2026-09-08 21:30 — 第 14 轮
+
+- 用户要求:
+  - 远端有没有更新（有则麻烦）；审查刚做的工作是否符合文档要求；"开始"合并修复
+- AI 行动:
+  - 查远端：origin/dev 有 9-07 功能线 4 提交（导航栏完整性 §15 / 按钮等高 §16 / FlyGo 改链 Open / master 上线 886635c），本地有文档瘦身线 5 提交；执行 git merge origin/dev
+  - 冲突 2 处手工合流：FENGMEM.md 两边历史并存（远端第 9-12 轮保留，本地第 9 轮改记第 13 轮）；check_site.py 取并集（远端 §15/§16/BTN_EVAL + 本地用法措辞 dev--no-dark/master 全量 + 头图静态/署名检查 + archive 审计路径）
+  - 其余自动合流：style.css（品牌头+cta-row 等高）、index×3（hero-static+导航 v=26.09.07.04.10）、navbar JS、博客重建页
+  - `git add` 标记解决 → `check_site.py --no-dark` 全绿（含 navbar §15、hover、struct、parity）→ commit d19f8bd 到 dev（未 push）
+- 产出:
+  - 合并提交 d19f8bd（dev 本地，未 push）；工作树干净；本轮 FENGMEM 记录（第 14 轮）
+- 关键决策:
+  - 回轮号唯一递增（本地 9→13，合并收尾记 14），避免与远端 9-12 重号
+  - 门禁口径：合并验证用 --no-dark 即可；全量暗色审计只在发版 master 前跑
