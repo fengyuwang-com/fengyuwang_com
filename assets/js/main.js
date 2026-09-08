@@ -157,34 +157,36 @@
 	
 }(jQuery));
 
-// Slider 
+// 首页头图: 当前单图静态展示, 轮播已停用。
+// 恢复多图滑动只需两步: 1) 解开下面本块注释; 2) 三语 index.html 里把 hero-static 改回 owl-carousel owl-theme。
 $(document).ready(function() {
-    var owl = $('.slider-section .owl-carousel');
-    // Slider owlCarousel
-    $('.slider-fade .owl-carousel').owlCarousel({
-        items: 1,
-        loop:true,
-        dots: false,
-        margin: 0,
-        autoplay: true,
-        autoplayTimeout: 7000,
-        autoplayHoverPause: false,
-        smartSpeed: 500,
-        animateOut: 'fadeOut',
-        nav: true,
-        navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>']
-    });
-    owl.on('changed.owl.carousel', function(event) {
-        var item = event.item.index - 2;     // Position of the current item
-        $('h4').removeClass('animated fadeInUp');
-        $('h1').removeClass('animated fadeInUp');
-        $('p').removeClass('animated fadeInUp');
-        $('.default-btn').removeClass('animated fadeInUp');
-        $('.default-btn-one').removeClass('animated fadeInUp');
-        $('.owl-item').not('.cloned').eq(item).find('h4').addClass('animated fadeInUp');
-        $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInUp');
-        $('.owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInUp');
-        $('.owl-item').not('.cloned').eq(item).find('.default-btn').addClass('animated fadeInUp');
-        $('.owl-item').not('.cloned').eq(item).find('.default-btn-one').addClass('animated fadeInUp');
-    });
+    // [轮播停用: 单图不需要滑动。如需恢复多图轮播, 解开本块注释]
+    // var owl = $('.slider-section .owl-carousel');
+    // // Slider owlCarousel
+    // $('.slider-fade .owl-carousel').owlCarousel({
+    //     items: 1,
+    //     loop:true,
+    //     dots: false,
+    //     margin: 0,
+    //     autoplay: true,
+    //     autoplayTimeout: 7000,
+    //     autoplayHoverPause: false,
+    //     smartSpeed: 500,
+    //     animateOut: 'fadeOut',
+    //     nav: true,
+    //     navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+    // });
+    // owl.on('changed.owl.carousel', function(event) {
+    //     var item = event.item.index - 2;     // Position of the current item
+    //     $('h4').removeClass('animated fadeInUp');
+    //     $('h1').removeClass('animated fadeInUp');
+    //     $('p').removeClass('animated fadeInUp');
+    //     $('.default-btn').removeClass('animated fadeInUp');
+    //     $('.default-btn-one').removeClass('animated fadeInUp');
+    //     $('.owl-item').not('.cloned').eq(item).find('h4').addClass('animated fadeInUp');
+    //     $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInUp');
+    //     $('.owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInUp');
+    //     $('.owl-item').not('.cloned').eq(item).find('.default-btn').addClass('animated fadeInUp');
+    //     $('.owl-item').not('.cloned').eq(item).find('.default-btn-one').addClass('animated fadeInUp');
+    // });
 });

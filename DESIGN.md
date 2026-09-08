@@ -930,12 +930,12 @@ Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fall
 
 ### 7.9 Homepage Sections (English example)
 
-**Hero Slider:**
-- Owl Carousel 2-slide fade
-- Full-width background images from `assets/img/slider/slider-1.jpg` and `slider-2.jpg`
-- `data-overlay-dark="3"` for dark overlay
-- Slide 1: h4 "Identify Real Needs → Create Value → Scale Systems", h1 "Market Strategy · Value Investing · Engineering", two buttons
-- Slide 2: h4 "Automation Methodology", h2 "5DT-PD Framework", description p, two buttons
+**Hero (single static image, slider disabled):**
+- Single full-width background image `assets/img/slider/slider-1.jpg` in a static `.hero-static` container (NOT `owl-carousel` — single slide must not be draggable)
+- `data-overlay-dark="3"` for dark overlay; full-viewport height (`100vh` + `100svh` fallback)
+- h4 kicker + h1 + description p + two buttons
+- Slider JS in `assets/js/main.js` is commented out but kept for future multi-slide use — to restore: uncomment the block in main.js AND change `hero-static` back to `owl-carousel owl-theme` in all three index.html
+- Historical note: previously a 2-slide Owl fade (slider-1/slide-2 + 5DT-PD slide); reduced to single image, slider shell removed 2026-09-08
 
 **What's New section:**
 - Light grey background (`#f5f5f7`), 40px padding
