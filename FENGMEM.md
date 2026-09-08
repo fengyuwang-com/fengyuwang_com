@@ -171,3 +171,24 @@
   - 扩写时严格对齐 zh-cn 的段落数(含 link-card 机制：某句在 body 或 link-card 的位置与 zh-cn 一致)
   - art-* 页中「好的音乐/设计和写作一样」等收尾句，确认属于 link-card 而非 section body，避免重复计数
   - 翻译遵循 AGENTS.md 语气(不用第二人称、h2 punchline)，zh-hk 繁体
+
+## 2026-09-08 20:42 — 第 9 轮
+
+- 用户要求:
+  - 首页头图单图仍可滑动（原 2 图减为 1 图后轮播未摘），要求去掉滑动
+  - 轮播代码注释保留（以后恢复多图可复用）；模板署名 Zoomin/Barakah 改 FengTemplate；2021/2022 年统一 2026（含 DESIGN.md）
+  - 澄清门禁误解：全量回归只在发版到 master 前跑，日常 dev 只跑快速检查；AGENTS.md 瘦身，细节搬 docs/ 子文件夹，docs/ 根下只留文件夹
+  - 计划先落盘再找独立子代理审查；CLAUDE 改指针文件、FENGMEM 冻结不动、README 同步瘦身；补本轮 FENGMEM
+- AI 行动:
+  - 三语 index.html：`owl-carousel owl-theme` → `hero-static` 静态容器，去滑动；DESIGN.md §7.9 同步为单图静态说明
+  - main.js 头图轮播块整体注释并写两步恢复路径；style.css/responsive.css 头改为 FengTemplate、2026
+  - check_site.py 加 hero-static/残留 owl/模板署名检查；AGENTS.md 门禁改为"dev 跑 --no-dark，master 前跑全量+批准"
+  - `--no-dark` 全绿后 commit 到 dev（未 push）；写 PLAN-文档瘦身与重组-2026-09-08.md 并找独立子代理评审（approve-with-changes，意见并入 §7）
+  - 按用户意见更新计划：CLAUDE 指针化、FENGMEM 冻结、README/LESSONS 同步瘦身
+- 产出:
+  - dev 本地提交 1 个（含头图去轮播+改名+门禁措辞）；落盘计划 1 份（含评审意见 §7）
+  - 本轮 FENGMEM 记录（第 9 轮）
+- 关键决策:
+  - 单图 + loop:true + 轮播容器 = 仍可拖动；根治是静态容器 + 注释初始化，两步可恢复
+  - 文档瘦身标准：违反后能否低成本改回来；不可逆（分支/安全/架构）留正文，可逆细节藏链接后
+  - FENGMEM 冻结存档一字不动；CLAUDE 瘦成指针；README 保留门面可读性下同步瘦身
