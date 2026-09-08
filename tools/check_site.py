@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """全站综合检测脚本 (v2, 2026-09-06)
 
-覆盖审计 docs/AUDIT-全站内容完整审计-2026-09-05.md 中所有可机械判定的 bug 类型:
+覆盖审计 docs/archive/AUDIT-全站内容完整审计-2026-09-05.md 中所有可机械判定的 bug 类型:
   1. 内容规范: 痕迹词 / 新文直角引号「」 / 描述过短 / 汉字过少
   2. 三语对齐: translationKey 三语成组 / frontmatter 必填字段
   3. 简繁质量: zh-hk 正文简体泄漏 (opencc 可转而未转的字符) / zh-cn 繁体泄漏
