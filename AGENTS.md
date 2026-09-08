@@ -487,26 +487,26 @@ Think "Just Do It" or "Think Different." They should make the reader pause and n
 ### Commit Flow
 
 1. (内容改动后) `cd hugo && hugo --gc --cleanDestinationDir && bash deploy.sh` 把博客构建部署到仓库根
-2. **跑全站大脚本** `python3 tools/check_site.py`，必须"全部检查通过 ✔"才能 commit（见下节"发版门禁"）
+2. 日常 dev：跑快速检查 `python3 tools/check_site.py --no-dark`，通过再 commit（见下节"发版门禁"）
 3. `git add -A && git commit -m "descriptive message"`
 4. push dev（master 不动）
-5. 部署上线 master = checkout master + merge dev + push，**必须先获得用户明确批准**
+5. 发版（= 合并并 push 到 master）前：跑全量 `python3 tools/check_site.py`（含浏览器审计），全绿才合，**必须先获得用户明确批准**
 
 ---
 
-## Release Gate — 全站大脚本 (每次发版必跑)
+## Release Gate — 全站大脚本 (发版到 master 前必跑)
 
 全站只有**一个**检查脚本：`tools/check_site.py`。所有能机械判定的检查全部合并在这里
 （14 节：内容规范 / 三语对齐 / 简繁质量 / 围栏结构 / 部署一致性 / sitemap / 站点配置 /
 死链 / en 中文泄漏 / 三语页面对等 / 全站搜索索引 / 暗色+亮色对比度浏览器审计）。
 
-**三条铁律：**
+**三条铁律（只卡发版，不卡日常 dev）：**
 
-1. **大改之后、部署上线 master 之前**：把本次改动暴露的、能机械判定的新问题类型
-   **固化成新的检查节并入大脚本**，然后跑 `python3 tools/check_site.py`，
-   全绿（"全部检查通过 ✔"）才算完成。不允许只修问题不加检查——同样的 bug 不许出现第二次。
-2. **每次出问题**（线上或本地发现任何 bug）：修复后必须用大脚本做全站回归，
-   确认归零、全绿，再更新 push。
+1. **发版 = 合并并 push 到 master 之前**：把本次改动暴露的、能机械判定的新问题类型
+   **固化成新的检查节并入大脚本**，然后跑全量 `python3 tools/check_site.py`，
+   全绿（"全部检查通过 ✔"）才发版。不允许只修问题不加检查——同样的 bug 不许出现第二次。
+2. **日常 dev 提交/push 到 dev**：跑快速检查 `python3 tools/check_site.py --no-dark` 通过即可，
+   不必每次都跑几分钟的浏览器审计。线上或本地发现 bug 并修复后，发版前再用全量做回归。
 3. 检查逻辑只写在大脚本这一处；不要另建零散检查脚本（写作用单篇模式即可）。
 
 **用法：**

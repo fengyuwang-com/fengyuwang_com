@@ -10,7 +10,9 @@
   6. sitemap: URL 数 vs 实际页面数
   7. 站点配置: _headers 是否覆盖 /{lang}/blog* / llms.txt 链接是否存在 /
      CF beacon 占位符 / 死链检查 (根目录 HTML 相对引用)
-用法: python3 tools/check_site.py [--no-dark]          全站发版大检查 (默认含对比度审计)
+用法: python3 tools/check_site.py [--no-dark]          日常 dev 快速检查 (--no-dark) / 发版到 master 前全量必跑 (默认含对比度审计)
+      python3 tools/check_site.py --no-dark            日常提交到 dev 前跑这个即可
+      python3 tools/check_site.py                      全量 (含对比度审计, 约几分钟, 仅发版到 master 前必跑)
       python3 tools/check_site.py --article <md>...   单篇发布前校验
 在仓库根目录执行
 """
@@ -303,6 +305,10 @@ if not issues or all(not i.startswith("[parity]") for i in issues):
 # ---------- 11.5 页面结构与头图 (div 配平 + 首页结构不变量) ----------
 # 背景 1: 首页改版时多写一个 </div> 提前关闭容器, 头图错位、白色分隔消失 —— div 必须配平。
 # 背景 2: 首页结构契约: 单张头图(刚好一屏) → 软件项目三卡 → 关于 → 三主线 → 博客卡。
+# 背景 3: 头图从两张减为单张后, 轮播壳残留导致单图仍可拖动 —— 单图必须用 hero-static
+#         静态容器 (轮播 JS 已注释停用), 多图才用 owl-carousel owl-theme。
+# 背景 4: 站点早已脱离原始模板, 自有样式/脚本文件头不得再挂 Zoomin/Barakah 署名 ——
+#         已统一为 FengTemplate / Fengyu WANG, 压缩第三方库 (*.min.*) 除外。
 DIV_OPEN = re.compile(r"<div\b")
 DIV_CLOSE = re.compile(r"</div\b")
 for l in ("zh-cn", "zh-hk", "en"):
@@ -320,6 +326,10 @@ for l in ("zh-cn", "zh-hk", "en"):
     n_slides = h.count("slider-single-item")
     if n_slides != 1:
         err("struct", f"{hf} 头图应为单张 slider-single-item, 实际 {n_slides} 张")
+    if "hero-static" not in h:
+        err("struct", f"{hf} 单图头图须用 hero-static 静态容器 (禁用轮播滑动)")
+    if "owl-carousel owl-theme" in h:
+        err("struct", f"{hf} 单图头图残留轮播容器 owl-carousel (单图会仍可拖动)")
     if "100svh" not in hfull:
         err("struct", f"{hf} 头图缺 100svh 一屏兜底")
     if "whats-new-section" in h:
@@ -334,6 +344,22 @@ for l in ("zh-cn", "zh-hk", "en"):
     for proj in ("FengInvest", "FengMedia", "FlyGo"):
         if proj not in h:
             err("struct", f"{hf} 软件项目区缺 {proj} 卡片")
+mainjs = open("assets/js/main.js", encoding="utf-8").read()
+live_hero_owl = [ln for ln in mainjs.splitlines()
+                 if ".owlCarousel(" in ln and not ln.lstrip().startswith("//")
+                 and "slider" in ln]  # 只盯头图轮播; testimonial/partner 初始化在全站无对应结构, 空转无影响
+if live_hero_owl:
+    for l in ("zh-cn", "zh-hk", "en"):
+        hf = f"{l}/index.html"
+        h = open(hf, encoding="utf-8").read()
+        if "hero-static" in h[h.index("<body"):]:
+            err("struct", f"{hf} 头图已静态化但 main.js 仍有生效的 .owlCarousel 初始化")
+            break
+for brand_file in ("assets/css/style.css", "assets/css/responsive.css", "assets/js/main.js"):
+    b = open(brand_file, encoding="utf-8").read()
+    for trace in ("Zoomin", "Barakah", "Photography Portfolio"):
+        if trace in b:
+            err("struct", f"{brand_file} 残留原始模板署名 {trace} (应为 FengTemplate)")
 if not issues or all(not i.startswith("[struct]") for i in issues):
     ok("struct", "div 配平 + 三语首页结构不变量全部通过")
 
