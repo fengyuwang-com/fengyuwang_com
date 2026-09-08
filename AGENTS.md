@@ -65,4 +65,3 @@
 | 写博客文章 | `docs/guide/WRITING-博文写作规范.md` |
 | 架构决策、能否加后端 | `docs/decisions/DECISION-0001-zero-runtime-byok.md` |
 | 文档找不到、历史追溯 | `docs/README.md`（地图）、`docs/archive/`（归档） |
-| 整理别的项目文档（通用方法） | `docs/guide/docs-method.md`（诊断→划分线→结构→执行→防复胖） |
