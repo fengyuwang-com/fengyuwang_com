@@ -139,75 +139,23 @@ Triangular Loop (三角闭环)
 
 ## Visual Design System
 
-### White Divider Pattern (白色横线)
-
-每个 `.content-block` 之间必须有 12px 白色横线分隔。
-
-```
-page-wrap { background: #ffffff }
-.content-block { margin-bottom: 12px }
-.content-block:last-of-type { margin-bottom: 0 }
-```
-
-详见 `AGENTS.md` → "页面设计模式：Sections 之间的白色横线"。
-
-### Content Block Types
-
-1. **.content-block** — 基础区块，背景色 `#f5f5f7`
-2. **.content-block.section-bg** — 带背景图 + 毛玻璃效果
-   - `::after` 伪元素提供 `backdrop-filter: saturate(180%) blur(20px)`
-3. **.section-card** — 白色圆角卡片（放在 content-block 内部）
-   - `background: rgba(255,255,255,.90)`, `border-radius: 18px`
-4. **.content-text-card** — 纯白不透明小卡片
-   - `background: #fff`, `border-radius: 14px`
-5. **.link-card** — Cross-link 容器，居中，底部留白
-
-### Capability Chips
-
-```html
-.stack-chip            ← 圆角 999px 药丸徽章
-.cap-group             ← 分组容器
-.cap-group-title       ← 组标题
-```
-
-### QA Groups (5DT-PD Answers)
-
-```html
-.qa-group              ← 每个 Q&A 对
-.qa-group-title        ← 问题（粗体深色）
-.qa-group p            ← 回答（正文）
-```
-
-### Dark Mode
-
-所有组件均有 `body[data-theme="dark"]` 变体：
-- page-wrap → `#0a0e1a`
-- content-block → `#111827`
-- section-card → `rgba(30,41,59,.90)`
-- 文字色 → `#e5ecf4` / `#9fb0c3`
-
-### Responsive Breakpoints
-
-- Max 991px: 网格变 2 列，字体缩小
-- Max 599px: 单列布局
+设计参数唯一源头是 `DESIGN.md`（§6 间距含白色横线、§7 组件含内容块/卡片/chips/QA、§8 响应式、§9 暗色）。
+行为规范见 `AGENTS.md`，任务索引见 `AGENTS.md` 末表。
 
 ---
 
 ## Key Rules
 
 - **Never manually delete `assets/`** — it contains all shared CSS/JS/images
-- `hugo/content/` has the article Markdown. Edit there, then rebuild
-- `hugo/deploy.ps1` handles build + copy. Run it after editing articles
+- `hugo/content/` has the article Markdown. Edit there, then rebuild (`hugo/deploy.sh`)
 - All three languages use `translationKey` to pair articles
+- 行为规范与门禁见 `AGENTS.md`；发版流程见 `docs/guide/release-gate.md`
 
 ## Design Principles
 
-- **Relaxed sincerity** — Short sentences. Real details. No second-person ("我给你").
-- **No self-praise** — Let the work speak. Use objective framing.
-- **White space is a feature** — The white gaps between sections are deliberate.
-- **Frosted glass** — Background images use `backdrop-filter` blur, not solid overlays.
-- **Each page answers one question** — The思想锚点 is the punchline.
-- **Three languages, one source** — zh-cn / en / zh-hk are parallel; content differs only by translation.
+- **Relaxed sincerity** — Short sentences. Real details. No second-person. No self-praise.
+- **White space is a feature. Frosted glass. Each page answers one question. Three languages, one source.**
+- 全文见 `DESIGN.md` §1 与 `docs/guide/voice-and-translation.md`。
 
 ---
 
@@ -234,74 +182,13 @@ Cloudflare Web Analytics 已集成。需要在 Cloudflare Dashboard → Web Anal
 
 ## Development Preview with Docker
 
-### Prerequisites
-- Docker Desktop installed
-- A Cloudflare account (free tier)
-
-### Setup
-
-1. Create a Cloudflare Tunnel:
-   - Go to Cloudflare Dashboard → Zero Trust → Networks → Tunnels
-   - Create a new tunnel (e.g. "fengyu-dev")
-   - Set the service to `http://web:8001`
-   - Set the domain to `test.fengyuwang.com`
-   - Copy the tunnel token
-
-2. Create `.env` file from `.env.example`:
-   ```powershell
-   copy .env.example .env
-   ```
-   Edit `.env` and paste your tunnel token.
-
-3. Start the preview server:
-   ```powershell
-   docker compose up -d
-   ```
-
-4. Open https://test.fengyuwang.com in your browser.
-
-### Daily Workflow
-
 ```powershell
-# Start preview
-docker compose up -d
-
-# Stop preview
-docker compose down
-
-# View logs
-docker compose logs -f
+docker compose up -d    # Start preview at test.fengyuwang.com
+docker compose down     # Stop
 ```
 
-### What gets deployed
-- Only the `main` branch triggers Cloudflare Pages production deployment.
-- The `dev` branch is never deployed to production.
-- The Docker preview is purely local + Cloudflare Tunnel — no Pages deployment involved.
-
----
-
-## Secrets Management
-
-### Never commit these files
-- `.env` — Contains Cloudflare Tunnel token and other secrets
-- Any file with API keys, tokens, passwords
-
-### What to do if a secret is accidentally committed
-
-1. **Do NOT panic.** The secret can be rotated or history can be cleaned.
-2. If the secret is already on GitHub:
-   - Add it to `.gitignore` immediately
-   - Use `git filter-repo --path <file> --invert-paths` to remove from history
-   - Force push: `git push origin <branch> --force`
-3. For tokens that cannot be rotated:
-   - Clean the git history using the method above
-   - The token stays valid, but is removed from public view
-
-### How to verify no secrets are tracked
-```powershell
-git ls-files .env
-git ls-files | Select-String -Pattern "token|secret|key|password"
-```
+完整步骤（含 Tunnel token 配置）与 Secrets 管理见 `docs/guide/release-gate.md`（Docker Preview、Privacy 节）。
+`.env` 永不提交。
 
 ---
 

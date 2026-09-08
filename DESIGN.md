@@ -5,6 +5,8 @@
 
 This document is a complete design specification. Another agent reading it should be able to recreate every page pixel-for-pixel.
 
+> 本文件是视觉参数唯一源头。任务入口（改什么先读哪份）见 `AGENTS.md` 末"任务索引"表；行为规范与门禁见 `AGENTS.md`，手册见 `docs/guide/`。
+
 ---
 
 ## 1. Design Principles

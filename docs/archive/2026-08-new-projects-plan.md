@@ -84,7 +84,7 @@
   - `fengmail.py` CLI：IMAP 收信 + SMTP 回信
   - `docker-compose.yml`：一键部署 Twenty CRM（端口 3002）
   - `newsletter/`：Listmonk + Postgres 订阅系统
-  - 四级邮件分类体系（docs/email-classification.md）
+  - 四级邮件分类体系（docs/email-classification.md —— 该文件历史上就不存在，归档标注，不传播）
   - 全套 AI 管理脚本：加订阅、退订、发 campaign、处理退订邮件
 
 **mkt.html 交叉引用**：
