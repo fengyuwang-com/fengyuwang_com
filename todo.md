@@ -8,6 +8,7 @@
 - [ ] Open-FengMedia 镜像 main（默认分支，落地 README）与 master（同步分支）双分支并存，是否合并/切默认由站长定
 - [ ] Open-FlyGo Release 暂只有源码（flygo.exe 内嵌 365 处编译机路径已连历史剔除）；干净重编译（cargo --remap-path-prefix）后可附回二进制
 - [ ] CF Web Analytics 仍是占位符 token（check_site [config] 节长期 PASS 提醒项）
+- [ ] 内部文档同步改名：站内品牌已从 5DT-PD 改为 "Feng Human-in-the-Loop"（页面/图表/导航栏已换，URL `5dt-pd.html` 与内部键 `pd5` 保留），但 DESIGN.md(3)、README.md(2)、_scripts/fix-seo-descriptions.py(2)、_scripts/uam.py(6)、docs/guide/{WRITING-博文写作规范,page-structure,pitfalls}.md、docs/archive/{REPORT-全站修改建议,REVIEW-全站整合-会说会做}.md 仍写旧名，需要一轮术语同步
 
 （第 11 轮站长拍板：除上述外其余待办等日后举措）
 
