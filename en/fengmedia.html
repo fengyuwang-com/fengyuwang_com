@@ -80,6 +80,11 @@
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
 
+        /* Product screenshots: same rounded-shadow layout as flygo-hero-shot, tightened into an in-card captioned figure */
+        .shot-figure { margin: 22px 0 0; }
+        .shot-figure img { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(148,163,184,.14); box-shadow: 0 18px 48px rgba(15,23,42,.18); }
+        .shot-figure figcaption { max-width: 880px; margin: 10px auto 0; font-size: .85rem; color: #6b7280; text-align: center; line-height: 1.6; }
+
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
         body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
@@ -96,6 +101,8 @@
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
         body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .shot-figure img { border-color: rgba(148,163,184,.08); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .shot-figure figcaption { color: #94a3b8; }
 
         @media (max-width: 991px) {
             .marketing-hero { padding: 36px 24px; }
@@ -185,6 +192,10 @@
                             <li><strong>Tooling as the backstop</strong>: whatever can be automated goes to scripts, so the creator's energy is spent on the expression itself.</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-home-desktop.png" alt="FengMedia overview screen: one-click entry points for copywriting, video production and publishing, plus a wall of finished videos" loading="lazy">
+                        <figcaption>Product overview: entry points for copywriting, video production and publishing, with the finished-video wall below.</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -203,6 +214,10 @@
                             <li><strong>Persona boundary</strong>: what can and can't be said is written in black and white. The account is everything; AI is only a tool, never the voice.</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-ai-draft-gate-desktop.png" alt="AI copy gate screen: two steps, draft generation and human review before the draft advances" loading="lazy">
+                        <figcaption>AI copy gate: draft generation and human review run as two separate steps — AI drafts, the gate approves.</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -227,6 +242,10 @@
                         <span class="stack-chip">Trend tracking</span>
                         <span class="stack-chip">Production SOP</span>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-projects-desktop.png" alt="Project cockpit screen: copy, assets, finished cuts and status for each video at a glance" loading="lazy">
+                        <figcaption>Project cockpit: copy, assets, finished cuts and status for every video in one view.</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -269,6 +288,10 @@
                         <span class="stack-chip">Claude Code commands</span>
                         <span class="stack-chip">FengInvest integration</span>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-prompt-workshop-desktop.png" alt="Prompt workshop screen: emit prompt, paste back for validation and persist, with a task list by creation stage" loading="lazy">
+                        <figcaption>Prompt workshop: emit prompt, paste back for validation, persist — with a task list organized by creation stage.</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
