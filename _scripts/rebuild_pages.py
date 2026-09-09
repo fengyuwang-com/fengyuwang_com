@@ -230,8 +230,6 @@ def make_page(topic, lang):
     <meta property="og:description" content="{meta['desc']}">
     <meta property="og:url" content="https://fengyuwang.com/{lang}/{topic}.html">
     <meta property="og:image" content="/assets/img/logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{meta['title']} | \u738b\u4e30\u7fbd Fengyu WANG">
     <meta name="twitter:description" content="{meta['desc']}">

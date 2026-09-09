@@ -90,8 +90,6 @@ Every page follows this exact structure:
     <meta property="og:description" content="...">
     <meta property="og:url" content="https://fengyuwang.com/en/page.html">
     <meta property="og:image" content="/assets/img/logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="...">
