@@ -6,13 +6,20 @@
     <description>Recent content in Tags on Fengyu WANG</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Business</title>
       <link>/en/tags/business/</link>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <guid>/en/tags/business/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>/en/tags/tech/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>/en/tags/tech/</guid>
       <description></description>
     </item>
     <item>
@@ -41,13 +48,6 @@
       <link>/en/tags/society/</link>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <guid>/en/tags/society/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>/en/tags/tech/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>/en/tags/tech/</guid>
       <description></description>
     </item>
     <item>
