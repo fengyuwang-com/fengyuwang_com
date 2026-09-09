@@ -80,6 +80,13 @@
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
 
+        /* 产品截图：fengmedia shot-figure 同款，卡片内说明图；竖屏移动端截图用 shot-narrow 收窄 */
+        .shot-figure { margin: 22px 0 0; }
+        .shot-figure img { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(148,163,184,.14); box-shadow: 0 18px 48px rgba(15,23,42,.18); }
+        .shot-figure figcaption { max-width: 880px; margin: 10px auto 0; font-size: .85rem; color: #6b7280; text-align: center; line-height: 1.6; }
+        .shot-figure.shot-narrow img { max-width: 300px; }
+        .shot-figure.shot-narrow figcaption { max-width: 420px; }
+
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
         body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
@@ -96,6 +103,8 @@
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
         body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .shot-figure img { border-color: rgba(148,163,184,.08); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .shot-figure figcaption { color: #94a3b8; }
 
         @media (max-width: 991px) {
             .marketing-hero { padding: 36px 24px; }
@@ -257,6 +266,10 @@
                     <div class="content-text-card">
                         <p><strong>状态机拦截跳步</strong>：未完成 L0 无法进入 M，未完成 L3 无法出报告。流程不会因为「感觉差不多了」就跳过任何一步。</p>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fenginvest-report-narrative-desktop.png" alt="FengInvest 报告页：左侧功能导航，右侧为腾讯的结构化研究报告，红队检验列于叙事正文之前" loading="lazy">
+                        <figcaption>L4 报告页：结构化研究报告，红队检验的结论与反方论点列于正文之前。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -298,6 +311,10 @@
                             <li><code>python tools/fengstate.py verify &lt;TICKER&gt;</code> — 全量验证</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure shot-narrow">
+                        <img src="../assets/img/shots/fenginvest-mobile.png" alt="FengInvest 移动端首页：今日研究待办列出各标的需关注的原因与查看入口" loading="lazy">
+                        <figcaption>移动端首页：今日研究待办按标的列出需关注的原因，底部保留常用入口。</figcaption>
+                    </figure>
                     <div class="cta-row">
                         <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">查看 GitHub 仓库</a>
                         <a class="default-btn" href="/zh-cn/invest.html">返回投资框架</a>

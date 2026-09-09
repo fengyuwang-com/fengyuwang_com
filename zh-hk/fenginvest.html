@@ -80,6 +80,13 @@
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
 
+        /* 產品截圖：fengmedia shot-figure 同款，卡片內說明圖；豎屏移動端截圖用 shot-narrow 收窄 */
+        .shot-figure { margin: 22px 0 0; }
+        .shot-figure img { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(148,163,184,.14); box-shadow: 0 18px 48px rgba(15,23,42,.18); }
+        .shot-figure figcaption { max-width: 880px; margin: 10px auto 0; font-size: .85rem; color: #6b7280; text-align: center; line-height: 1.6; }
+        .shot-figure.shot-narrow img { max-width: 300px; }
+        .shot-figure.shot-narrow figcaption { max-width: 420px; }
+
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
         body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
@@ -96,6 +103,8 @@
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
         body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .shot-figure img { border-color: rgba(148,163,184,.08); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .shot-figure figcaption { color: #94a3b8; }
 
         @media (max-width: 991px) {
             .marketing-hero { padding: 36px 24px; }
@@ -257,6 +266,10 @@
                     <div class="content-text-card">
                         <p><strong>狀態機攔截跳步</strong>：未完成 L0 無法進入 M，未完成 L3 無法出報告。流程不會因為「感覺差不多了」就跳過任何一步。</p>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fenginvest-report-narrative-desktop.png" alt="FengInvest 報告頁：左側功能導航，右側為騰訊的結構化研究報告，紅隊檢驗列於敘事正文之前" loading="lazy">
+                        <figcaption>L4 報告頁：結構化研究報告，紅隊檢驗的結論與反方論點列於正文之前。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -298,6 +311,10 @@
                             <li><code>python tools/fengstate.py verify &lt;TICKER&gt;</code> — 全量驗證</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure shot-narrow">
+                        <img src="../assets/img/shots/fenginvest-mobile.png" alt="FengInvest 移動端首頁：今日研究待辦列出各標的需關注的原因與查看入口" loading="lazy">
+                        <figcaption>移動端首頁：今日研究待辦按標的列出需關注的原因，底部保留常用入口。</figcaption>
+                    </figure>
                     <div class="cta-row">
                         <a class="default-btn" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">查看 GitHub 倉庫</a>
                         <a class="default-btn" href="/zh-hk/invest.html">返回投資框架</a>

@@ -33,7 +33,7 @@
 
 ### T1 软件页配图（站长点名最高价值）
 - [x] **T1.1** fengmedia.html 三语配图（子代理×3 或 1 个串行三语）：挑 2-4 张 fengmedia 截图做"产品截图展示区"（参考 flygo.html 做法：img/shots 引用 + alt + lazy + 暗色适配 + 不破坏白线结构；截图放对应介绍段落之后）。门禁 + commit。
-- [ ] **T1.2** fenginvest.html 三语配图：同法，3 张图（desktop / report-narrative / mobile）分配到对应段落。门禁 + commit。
+- [x] **T1.2** fenginvest.html 三语配图：同法，3 张图（desktop / report-narrative / mobile）分配到对应段落。门禁 + commit。（实际：发现 fenginvest-desktop.png 与 report-narrative 字节级相同，已删重复 figure，页面留 2 张）
 - [ ] **T1.3** fengoffice.html / search-king.html：用 aik 搜本地库找有没有可用截图素材（关键词如 "fengoffice 截图"、"search-king 运行"）；找不到 → 写进"晨间决策"（建议站长补图），不改页面。门禁 + commit（若有改动）。
 
 ### T2 文章挖掘（ai-export）
@@ -62,7 +62,8 @@
 
 ## 晨间决策（夜里不拍板，留给站长）
 
--（空）
+- **fenginvest-desktop.png 需重导**：现文件与 report-narrative 字节级相同（同一张报告页截图）。建议重导一张真正的桌面端概览（首页/决策台视图）覆盖 `assets/img/shots/fenginvest-desktop.png`，之后在 fenginvest.html #quality 段把删掉的 figure 加回（三语同位置，版式 shot-figure 现成）。
+- **OPC 草稿博文待晨审**：《一人公司带数百个 AI 员工，翻译成工程语言就五层》draft:true 已在库（1774 汉字，素材来自 FengOrchestrator 愿景对话真实行号）。晨审满意→三语翻译+发布；需要改→直接改 zh-cn 稿。候选清单另 13 条见 OVERNIGHT-CANDIDATES.md。
 
 ## 晨报
 
