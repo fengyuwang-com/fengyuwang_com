@@ -34,7 +34,7 @@
 ### T1 软件页配图（站长点名最高价值）
 - [x] **T1.1** fengmedia.html 三语配图（子代理×3 或 1 个串行三语）：挑 2-4 张 fengmedia 截图做"产品截图展示区"（参考 flygo.html 做法：img/shots 引用 + alt + lazy + 暗色适配 + 不破坏白线结构；截图放对应介绍段落之后）。门禁 + commit。
 - [x] **T1.2** fenginvest.html 三语配图：同法，3 张图（desktop / report-narrative / mobile）分配到对应段落。门禁 + commit。（实际：发现 fenginvest-desktop.png 与 report-narrative 字节级相同，已删重复 figure，页面留 2 张）
-- [ ] **T1.3** fengoffice.html / search-king.html：用 aik 搜本地库找有没有可用截图素材（关键词如 "fengoffice 截图"、"search-king 运行"）；找不到 → 写进"晨间决策"（建议站长补图），不改页面。门禁 + commit（若有改动）。
+- [x] **T1.3** fengoffice.html / search-king.html：用 aik 搜本地库找有没有可用截图素材（关键词如 "fengoffice 截图"、"search-king 运行"）；找不到 → 写进"晨间决策"（建议站长补图），不改页面。门禁 + commit（若有改动）。（实际：本地零命中；两者均为纯 CLI 无 GUI 可截，页面 0 img 自洽，不改）
 
 ### T2 文章挖掘（ai-export）
 - [x] **T2.1**（子代理）aik 多关键词检索（如 OPC/一人公司、人机协作、AI 编辑器、求职自动化、投资复盘），产出 **≥10 条候选博文**（标题 + 3 句话大纲 + 素材出处文件:行号），写入下方"附录 A"。（实际产出 14 条 → 见 `OVERNIGHT-CANDIDATES.md`：高可信 8 / 中高 2 / 中 3 / 低 1；Top 2 =《一人公司带数百 AI 员工，翻译成工程语言就五层》《把投资纪律写成状态机：不懂即 PASS》）
@@ -59,11 +59,14 @@
 - [T0.2✔ 三语] zh-hk 翻译完成（1559 字逐字对应，港式用词 10 项经语料裁定：説/裏/復盤/函數/算法/賬/鏈接/摺合/羣/質量）；en 翻译完成（1444 词，五词术语英文化，首版括注中文触发 en-han 检查已删）。hugo 构建+deploy 完成，三语 tombstone-for-5dt-pd 已部署。
 - [T2.2✔] OPC 五层草稿完成（draft:true，1774 汉字）。check_site 草稿原触发 [translate] 三语不齐——修复：摘草稿 translationKey + tools/check_site.py 第 2 节补 draft 跳过（与第 5 节先例一致，+2 行）。
 - [T0.2/T0.3/T2.2 commit] cff3459 已 push，门禁全绿 ✔。T0 全部完成。下一手：T1.2 fenginvest 配图。
+- [T1.2✔] fenginvest 三语配图：#architecture 配 report-narrative-desktop、#start 配 mobile（shot-narrow 竖版变体）；发现 fenginvest-desktop.png 与 report-narrative 字节级相同（MD5 3e3d77e0）→ 删重复 figure，页面留 2 张；晨间决策记录重导需求。commit 44a70af 已 push。
+- [T1.3✔] fengoffice/search-king 素材检索：aik 本地库零命中，两者纯 CLI 无 GUI；不改页面，无图结论+终端演示图建议入晨间决策。
 
 ## 晨间决策（夜里不拍板，留给站长）
 
 - **fenginvest-desktop.png 需重导**：现文件与 report-narrative 字节级相同（同一张报告页截图）。建议重导一张真正的桌面端概览（首页/决策台视图）覆盖 `assets/img/shots/fenginvest-desktop.png`，之后在 fenginvest.html #quality 段把删掉的 figure 加回（三语同位置，版式 shot-figure 现成）。
 - **OPC 草稿博文待晨审**：《一人公司带数百个 AI 员工，翻译成工程语言就五层》draft:true 已在库（1774 汉字，素材来自 FengOrchestrator 愿景对话真实行号）。晨审满意→三语翻译+发布；需要改→直接改 zh-cn 稿。候选清单另 13 条见 OVERNIGHT-CANDIDATES.md。
+- **fengoffice / search-king 无图结论**：本地全路径检索零命中，且两者均为纯命令行工具（search-king 是 bash wrapper 起 scraper.py；fengoffice 是 CLI 邮件 + Twenty CRM Docker 栈），性质上无 GUI 截图可配。建议：跑一次真实命令截终端演示图（输出本身好看，如 search-king 多引擎回退链），页面图位版式可抄 fengmedia 的 shot-figure；或者接受无图现状（页面结构自洽）。Twenty CRM 界面图属第三方项目，需另行部署截取。
 
 ## 晨报
 
