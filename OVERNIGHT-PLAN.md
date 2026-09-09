@@ -52,6 +52,7 @@
 - [T0.1✔] 子代理完成 bundle 回退：15 处 oversight 字段删除、监督文案并入 subtitle 尾部（简 5/繁 5/英 5），node --check 语法过，check_site --no-dark 全绿。
 - [T0.1 commit] d23a257 已 push overnight 分支。
 - [T2.1✔] 子代理完成 aik 挖掘：16 词检索 13 命中，14 条候选（高可信 8）写入 OVERNIGHT-CANDIDATES.md，Top 2 推荐 OPC 五层总纲篇 + 投资纪律状态机篇。T2.2 起草 Top 1（zh-cn，draft:true）。
+- [T0.2✔ zh-cn] 博文原稿完成：hugo/content/zh-cn/blog/posts/给5DT-PD立一块墓碑——人机协作75年与组织级缺口/index.md（1559 汉字、slug tombstone-for-5dt-pd、translationKey tombstone-5dt-pd、draft:false、规范检查 OK）。zh-hk/en 翻译已派出。
 
 ## 晨间决策（夜里不拍板，留给站长）
 

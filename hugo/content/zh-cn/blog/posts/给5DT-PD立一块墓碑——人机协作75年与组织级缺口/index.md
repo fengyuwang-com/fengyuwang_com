@@ -1,0 +1,87 @@
+---
+title: "给 5DT-PD 立一块墓碑：人机协作七十五年与一个组织级缺口"
+date: 2026-09-10
+description: "5DT-PD 退役，五层骨架改名 Feng Human-in-the-Loop 继续服役。本文梳理人机协作的理论谱系与开源项目对照，指出任务级 HITL 已有标准答案、组织级仍是空位，并给出本站框架的站位与实测成本。"
+slug: "tombstone-for-5dt-pd"
+tags: ["技术", "商业"]
+draft: false
+translationKey: "tombstone-5dt-pd"
+---
+
+先立一块碑，再指一块空地。
+
+> 5DT-PD
+>
+> 2026 — 2026
+>
+> 卒于命名：缩写要先解码才能懂。
+>
+> 五层骨架无恙，改名 Feng Human-in-the-Loop，继续服役。
+
+碑是真的，立在 zh-cn/5dt-pd.html 的问答区第一组，页面照常开着。URL 不改——链接比名字长寿，断链的代价，换不来改址的收益。遗址即 URL。
+
+死因值得多写一行。缩写的成本按次收取：每一次转述、每一回口头提起，都得先交一遍解码税；名字在被理解之前要先被翻译，挡住的就不只是陌生人。退役手续也办得体面：原称呼仅存于 URL 与内部键，其余场合一律让位。碑上刻的退役原因，比多数项目的说明书写得都诚实。
+
+改名不是翻案，是一次纠错。Feng Human-in-the-Loop，见词明义：人在回路里，由人把关。骨架五层、横梁三根，一个没动；动的只是称呼。名字死了，判断还活着。
+
+## 任务级的考卷都交了
+
+> 人机协作七十五年，攒出的答案全在同一量级。
+
+2000 年，Parasuraman、Sheridan 与 Wickens 在 IEEE 的论文里画了一张至今通用的地图：自动化到什么程度，人退到什么位置。行业沿用至今的是三分法——in-the-loop，人批准才能继续；on-the-loop，人监控、可随时叫停；out-of-the-loop，全自动，人只管例外。翻译成大白话：副驾驶、教练、乘客。
+
+地图管分配，不管真假。HITL 这个词，说的人多，过判据的少：人被放进回路，却从不推翻机器的建议——部分领域人工推翻算法推荐的比例不足 5%，图章盖得很勤；到 2026 年，行业综述还在重复这条批评。检验的办法只有两问：技术上，人能否决吗？人否决时，有能力判断好坏吗？第二问更难，它有名字，叫自动化自满（Parasuraman & Manzey 2010）。
+
+23 年后，Lightman 等人补上质量那一半：80 万步级人工标注证明，对推理的每一步给反馈，显著优于只对最终结果给反馈（arXiv:2305.20050）。翻译成大白话：别等期末考再算总账，每次作业都要批改。阶段门禁的学理出处就在这里——证据高于口说，没过不放行。
+
+反馈还在下沉。RLHF 把人的判断逐条喂进模型权重，人最累；Constitutional AI 把原则写成宪章，AI 审 AI，人退到章程层。前者是逐条审批，后者是立法。宪章化的反馈搬到 agent 组织里还有一层新意：反馈不进权重，进组织记忆，复盘修的是章程，不是模型。再往前翻，1999 年 Horvitz 已把理想说完：好的协作里机器也该主动——不确定性高就开口请示，置信够高再放胆推进。
+
+四条脉络摆在一起，是同一个落点：全部停在任务级。一个 agent、一次暂停、一次批准——判据、反馈、章程、请示，样样有人做。任务级的考卷交齐了；组织级那张，摊在桌上，还空着。
+
+## 开源都挤在同一个量级
+
+> interrupt 那一行，抄的人最多。
+
+| 项目 | 管哪一段 |
+|---|---|
+| LangGraph | interrupt 暂停、checkpoint 存档、resume 续跑，连回滚重放都有了名字（Time Travel），任务级 HITL 的事实标准原语 |
+| AutoGen | 人以与会者身份进群聊，走审批放行的工作流 |
+| CrewAI | 一个 human_input 开关，任务完成时向人索取输入 |
+| Spec Kit | 规格先行：写规格、人批准、拆任务、再实现 |
+
+四家合起来，量级没变：一个任务的暂停、插话、批准、规格。执行层早已饱和，任务级有标准答案可抄，抄的人也确实多。而把一支 agent 队伍当组织来治理的部分——编制、汇报线、门禁、签字留痕、复盘、转正——检索范围内没有现成的开源实现。所有人都在抄同一行代码，恰好量出了另一层的空。
+
+## 有人会说这是修庙
+
+> 最强反驳：一个函数就够的事，要什么编制。
+
+反驳有对的一半。单人单任务，interrupt 确实够；无责可追的场合，审批单就是废纸。庙不该乱修。
+
+错在另一半。interrupt 管暂停与恢复，不管谁有资格批、批了留什么痕、批错了谁复盘、下次怎么不重犯。前者是工程问题，一个函数收尾；后者是组织问题，一个函数收不了。任务会结束，队伍不会——不会结束的东西，才需要制度。
+
+## 空位上放五个词
+
+> 编制、门禁、签字、复盘、转正。
+
+本站框架的站位就在这五个词：把 HITL 从任务级抬到组织级。
+
+编制，谁在岗——汇报线是铁律，supervisor 永不亲自写码，只管分派与验收；一人公司不豁免这一条，恰恰相反，一位真人带数百个 AI 角色，编制与签字一个都少不了。门禁，阶段之间卡质量关，证据高于口说，不过不放行——in-the-loop，过判据的那种，不是图章。签字，审批单留痕：谁、何时、批准了什么——meaningful human control 讲的 tracing，事后能沿因果链追到具体的人。复盘，教训写回组织记忆，章程照此修订。转正，达标一个，转正一个——AI 员工也有人事。
+
+评价也定了四项：打回率、审批延迟、每份可接受交付物的成本、复盘采纳率。四项全部从现成台账回算，不另埋点。阶段四的目标——AI 专业人士超过真人——要成立，先从这四项开始度量。
+
+账单也拿到了。一次完整流程实测：约 4 分钟，79K 输入 token 加 21K 输出 token，$0.0095 一场，折合人民币不足一毛。HITL 文献优化的是准确率与安全；这套框架把第一性指标换掉：每一份可接受的交付物，花多少钱。以成本作第一指标的 HITL 评测，检索范围内未见同类——九厘五美元，是目前唯一的实测锚点。
+
+回到碑。名字死于解码成本，葬在 URL 里；骨架活下来，站位写进正文：任务级的世界很满，组织级空着一层，四条脉络、四家开源，全绕开了它。
+
+空地就在那里。下一个把编制、门禁、签字、复盘写进开源代码的，会是谁？
+
+## 参考文献
+
+1. Parasuraman R., Sheridan T.B., Wickens C.D. (2000). A Model for Types and Levels of Human Interaction with Automation. IEEE Trans. SMC-A.
+2. Parasuraman R., Manzey D.H. (2010). Complacency and Bias in Human Use of Automation. Human Factors.
+3. Horvitz E. (1999). Principles of Mixed-Initiative User Interfaces. CHI '99.
+4. Santoni de Sio F., van den Hoven J. (2018). Meaningful Human Control over Autonomous Systems. Frontiers in Robotics and AI.
+5. Christiano P. et al. (2017). Deep RL from Human Preferences. arXiv:1706.03741.
+6. Bai Y. et al. (2022). Constitutional AI: Harmlessness from AI Feedback. arXiv:2212.08073.
+7. Lightman H. et al. (2023). Let's Verify Step by Step. arXiv:2305.20050.
+8. LangChain Blog: Making it easier to build human-in-the-loop agents with interrupt. langchain.com/blog.
