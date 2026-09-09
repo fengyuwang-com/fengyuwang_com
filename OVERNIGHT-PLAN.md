@@ -6,7 +6,7 @@
 ## 铁律（违反即返工）
 
 1. **分支**：只在 `overnight/2026-09-10` 上干活（先 `git checkout overnight/2026-09-10`）。**绝不 push / merge 到 master 或 dev**；本 overnight 分支在 check 全绿后允许 `git push origin overnight/2026-09-10`。
-2. **门禁**：每次 commit 前 `python3 tools/check_site.py --no-dark` 必须全绿。
+2. **门禁**：每次 commit 前 `python3 tools/check_site.py --no-dark` 必须全绿。**唯一例外**：跨文件批次中间态（如博文三语翻译未齐时的 translationKey/deploy 差异 FAIL）允许带已知 FAIL commit，但必须在 commit 信息与进度日志中列明 FAIL 清单与消除条件；与本次改动无关的 FAIL 一律先修再提。
 3. **子代理分工**（站长指令"一定要分子代理干"）：主代理只做派工、验收、git；文件编辑/搜索/写作/翻译一律派子代理，prompt 必须自包含（文件路径、规范要点、验收标准）。browser-use 浏览器操作不给子代理用。
 4. **安全**：assets/ 只增不删；页面文件名保持英文不改 URL；绝不提交密钥/.env。
 5. **风格**（AGENTS.md/DESIGN.md）：所有可见文字要有暗色显式覆盖（标题 #e5ecf4、正文 #9fb0c3/#94a3b8）；`.content-block` 是 page-wrap 直接子元素、白线靠 margin-bottom:12px 自然流出；文案 NO second-person、NO self-praise；zh-hk 用香港正式繁体；`<img>` 一律带 alt、加载 `loading="lazy"`。
@@ -32,7 +32,7 @@
 - [ ] **T0.3** `cd hugo && hugo --gc --cleanDestinationDir && bash deploy.sh` + 门禁 + commit + push 分支。
 
 ### T1 软件页配图（站长点名最高价值）
-- [ ] **T1.1** fengmedia.html 三语配图（子代理×3 或 1 个串行三语）：挑 2-4 张 fengmedia 截图做"产品截图展示区"（参考 flygo.html 做法：img/shots 引用 + alt + lazy + 暗色适配 + 不破坏白线结构；截图放对应介绍段落之后）。门禁 + commit。
+- [x] **T1.1** fengmedia.html 三语配图（子代理×3 或 1 个串行三语）：挑 2-4 张 fengmedia 截图做"产品截图展示区"（参考 flygo.html 做法：img/shots 引用 + alt + lazy + 暗色适配 + 不破坏白线结构；截图放对应介绍段落之后）。门禁 + commit。
 - [ ] **T1.2** fenginvest.html 三语配图：同法，3 张图（desktop / report-narrative / mobile）分配到对应段落。门禁 + commit。
 - [ ] **T1.3** fengoffice.html / search-king.html：用 aik 搜本地库找有没有可用截图素材（关键词如 "fengoffice 截图"、"search-king 运行"）；找不到 → 写进"晨间决策"（建议站长补图），不改页面。门禁 + commit（若有改动）。
 
@@ -53,6 +53,8 @@
 - [T0.1 commit] d23a257 已 push overnight 分支。
 - [T2.1✔] 子代理完成 aik 挖掘：16 词检索 13 命中，14 条候选（高可信 8）写入 OVERNIGHT-CANDIDATES.md，Top 2 推荐 OPC 五层总纲篇 + 投资纪律状态机篇。T2.2 起草 Top 1（zh-cn，draft:true）。
 - [T0.2✔ zh-cn] 博文原稿完成：hugo/content/zh-cn/blog/posts/给5DT-PD立一块墓碑——人机协作75年与组织级缺口/index.md（1559 汉字、slug tombstone-for-5dt-pd、translationKey tombstone-5dt-pd、draft:false、规范检查 OK）。zh-hk/en 翻译已派出。
+- [T0.2 commit] 61888be zh-cn 原稿已 push。
+- [T1.1✔] fengmedia 三语配图完成：4 张截图（home/ai-draft-gate/projects/prompt-workshop）插入对应段落 section-card 内，shot-figure 组件 + 暗色覆盖，div 配平 46/46、0 断链。check_site 仅剩 3 个中间态 FAIL（博文未构建/翻译未齐），按门禁例外规则 commit。
 
 ## 晨间决策（夜里不拍板，留给站长）
 

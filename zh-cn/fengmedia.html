@@ -80,6 +80,11 @@
         .link-card p { color: #6b7280; margin-bottom: 12px; }
         .link-card .default-btn { min-width: 200px; }
 
+        /* 产品截图：flygo-hero-shot 同款圆角阴影版式，收紧为卡片内说明图 */
+        .shot-figure { margin: 22px 0 0; }
+        .shot-figure img { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(148,163,184,.14); box-shadow: 0 18px 48px rgba(15,23,42,.18); }
+        .shot-figure figcaption { max-width: 880px; margin: 10px auto 0; font-size: .85rem; color: #6b7280; text-align: center; line-height: 1.6; }
+
         body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
         body[data-theme="dark"] .content-block { background-color: #111827; }
         body[data-theme="dark"] .content-block.section-bg { background-color: #0a0e1a; }
@@ -96,6 +101,8 @@
         body[data-theme="dark"] .content-text-card h3 { color: #e5ecf4; }
         body[data-theme="dark"] .stack-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
         body[data-theme="dark"] .link-card p { color: #94a3b8; }
+        body[data-theme="dark"] .shot-figure img { border-color: rgba(148,163,184,.08); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+        body[data-theme="dark"] .shot-figure figcaption { color: #94a3b8; }
 
         @media (max-width: 991px) {
             .marketing-hero { padding: 36px 24px; }
@@ -185,6 +192,10 @@
                             <li><strong>工具兜底</strong>：能自动化的交给脚本，内容创作者把精力留给表达本身。</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-home-desktop.png" alt="FengMedia 总览界面：写文案、做视频、发布三步入口与成品视频墙" loading="lazy">
+                        <figcaption>产品总览：写文案、做视频、发布三步入口，下方为成品视频墙。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -203,6 +214,10 @@
                             <li><strong>人设边界</strong>：什么能说、什么绝不能说白纸黑字写清楚，账号是命根子，AI 只是工具，不替你表达。</li>
                         </ul>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-ai-draft-gate-desktop.png" alt="AI 文案闸门界面：生成草稿与人审过门两个步骤" loading="lazy">
+                        <figcaption>AI 文案闸门：生成草稿与人审过门分两步，AI 只出草稿。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -227,6 +242,10 @@
                         <span class="stack-chip">热点追踪</span>
                         <span class="stack-chip">生产 SOP</span>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-projects-desktop.png" alt="项目驾驶舱界面：每部片子的文案、素材、成片等资产与状态" loading="lazy">
+                        <figcaption>项目驾驶舱：每部片子的文案、素材、成片等资产与状态一览。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -269,6 +288,10 @@
                         <span class="stack-chip">Claude Code 指令</span>
                         <span class="stack-chip">FengInvest 接入</span>
                     </div>
+                    <figure class="shot-figure">
+                        <img src="../assets/img/shots/fengmedia-prompt-workshop-desktop.png" alt="Prompt 工坊界面：出 Prompt、贴回校验、落盘三步与任务清单" loading="lazy">
+                        <figcaption>Prompt 工坊：出 Prompt、贴回校验、落盘三步流程，按创作环节列出任务清单。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
