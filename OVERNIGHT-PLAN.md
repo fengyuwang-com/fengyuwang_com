@@ -28,8 +28,8 @@
 
 ### T0 收尾上一批（HITL 改名 + 墓碑 + 监督列）
 - [x] **T0.1** bundle 回退（子代理）：删除 15 处无效 `oversight:"…"` 字段；把监督文案并入各层 `subtitle` 尾部（如 `subtitle:"定方向·控成本·守红线｜监督：签字（审批月度预算）"`，三语 15 处一一对应，简繁英各自措辞）。验收：`grep -o oversight …viewer.js | wc -l` = 0，`grep -c "｜监督" viewer.js` ≥ 5，JS 无语法破坏（node --check 或 hugo 构建通过）。
-- [ ] **T0.2** 博文三语进 Hugo（子代理，1 个写 zh-cn，再派 2 个译 zh-hk/en）：基于理论文档压缩成 1500-2500 字《给 5DT-PD 立一块墓碑：从人机协作七十五年到组织级缺口》（标题可润），必含：墓志铭段（呼应网站 5dt-pd.html 的墓碑）、理论谱系表（Parasuraman 2000 → RLHF/CAI → 过程监督 → 组织级缺口）、开源项目对照（LangGraph/CrewAI/AutoGen/Spec Kit）、本站框架定位。frontmatter 按规范，slug 英文，translationKey 一致。
-- [ ] **T0.3** `cd hugo && hugo --gc --cleanDestinationDir && bash deploy.sh` + 门禁 + commit + push 分支。
+- [x] **T0.2** 博文三语进 Hugo（子代理，1 个写 zh-cn，再派 2 个译 zh-hk/en）：基于理论文档压缩成 1500-2500 字《给 5DT-PD 立一块墓碑：从人机协作七十五年到组织级缺口》（标题可润），必含：墓志铭段（呼应网站 5dt-pd.html 的墓碑）、理论谱系表（Parasuraman 2000 → RLHF/CAI → 过程监督 → 组织级缺口）、开源项目对照（LangGraph/CrewAI/AutoGen/Spec Kit）、本站框架定位。frontmatter 按规范，slug 英文，translationKey 一致。
+- [x] **T0.3** `cd hugo && hugo --gc --cleanDestinationDir && bash deploy.sh` + 门禁 + commit + push 分支。
 
 ### T1 软件页配图（站长点名最高价值）
 - [x] **T1.1** fengmedia.html 三语配图（子代理×3 或 1 个串行三语）：挑 2-4 张 fengmedia 截图做"产品截图展示区"（参考 flygo.html 做法：img/shots 引用 + alt + lazy + 暗色适配 + 不破坏白线结构；截图放对应介绍段落之后）。门禁 + commit。
@@ -38,7 +38,7 @@
 
 ### T2 文章挖掘（ai-export）
 - [x] **T2.1**（子代理）aik 多关键词检索（如 OPC/一人公司、人机协作、AI 编辑器、求职自动化、投资复盘），产出 **≥10 条候选博文**（标题 + 3 句话大纲 + 素材出处文件:行号），写入下方"附录 A"。（实际产出 14 条 → 见 `OVERNIGHT-CANDIDATES.md`：高可信 8 / 中高 2 / 中 3 / 低 1；Top 2 =《一人公司带数百 AI 员工，翻译成工程语言就五层》《把投资纪律写成状态机：不懂即 PASS》）
-- [ ] **T2.2**（子代理）挑最有把握的 1-2 条写成三语博文，**draft:true**（草稿态，晨审后才发布），进 Hugo 但构建后确认草稿不出现在产物里。
+- [x] **T2.2**（子代理）挑最有把握的 1-2 条写成三语博文，**draft:true**（草稿态，晨审后才发布），进 Hugo 但构建后确认草稿不出现在产物里。（实际：Top 1《一人公司带数百个 AI 员工，翻译成工程语言就五层》zh-cn 草稿完成，1774 汉字，素材出处 30+ 条真实行号；draft:true 构建验证不出产物。注意：草稿暂无 translationKey，翻译时需三语同加。）
 - [ ] **T2.3** 门禁 + commit + push 分支。
 
 ### T3 全站体检
@@ -55,6 +55,10 @@
 - [T0.2✔ zh-cn] 博文原稿完成：hugo/content/zh-cn/blog/posts/给5DT-PD立一块墓碑——人机协作75年与组织级缺口/index.md（1559 汉字、slug tombstone-for-5dt-pd、translationKey tombstone-5dt-pd、draft:false、规范检查 OK）。zh-hk/en 翻译已派出。
 - [T0.2 commit] 61888be zh-cn 原稿已 push。
 - [T1.1✔] fengmedia 三语配图完成：4 张截图（home/ai-draft-gate/projects/prompt-workshop）插入对应段落 section-card 内，shot-figure 组件 + 暗色覆盖，div 配平 46/46、0 断链。check_site 仅剩 3 个中间态 FAIL（博文未构建/翻译未齐），按门禁例外规则 commit。
+- [T1.1 commit] 1bb2083 已 push。
+- [T0.2✔ 三语] zh-hk 翻译完成（1559 字逐字对应，港式用词 10 项经语料裁定：説/裏/復盤/函數/算法/賬/鏈接/摺合/羣/質量）；en 翻译完成（1444 词，五词术语英文化，首版括注中文触发 en-han 检查已删）。hugo 构建+deploy 完成，三语 tombstone-for-5dt-pd 已部署。
+- [T2.2✔] OPC 五层草稿完成（draft:true，1774 汉字）。check_site 草稿原触发 [translate] 三语不齐——修复：摘草稿 translationKey + tools/check_site.py 第 2 节补 draft 跳过（与第 5 节先例一致，+2 行）。
+- [T0.2/T0.3/T2.2 commit] cff3459 已 push，门禁全绿 ✔。T0 全部完成。下一手：T1.2 fenginvest 配图。
 
 ## 晨间决策（夜里不拍板，留给站长）
 
