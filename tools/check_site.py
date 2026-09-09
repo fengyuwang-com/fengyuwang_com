@@ -118,6 +118,8 @@ for lang in LANGS:
 groups = {}
 for lang in LANGS:
     for p in posts[lang]:
+        if re.search(r"^draft:\s*true", p["fm"], re.M):
+            continue  # 草稿不参与三语对齐 (与第 5 节部署一致性检测的 draft 排除保持一致)
         tk = re.search(r'translationKey:\s*"?([^"\n]+)"?', p["fm"])
         key = tk.group(1).strip() if tk else p["dir"]
         groups.setdefault(key, {})[lang] = p["path"]
