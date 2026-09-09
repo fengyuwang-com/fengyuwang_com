@@ -39,12 +39,12 @@
 ### T2 文章挖掘（ai-export）
 - [x] **T2.1**（子代理）aik 多关键词检索（如 OPC/一人公司、人机协作、AI 编辑器、求职自动化、投资复盘），产出 **≥10 条候选博文**（标题 + 3 句话大纲 + 素材出处文件:行号），写入下方"附录 A"。（实际产出 14 条 → 见 `OVERNIGHT-CANDIDATES.md`：高可信 8 / 中高 2 / 中 3 / 低 1；Top 2 =《一人公司带数百 AI 员工，翻译成工程语言就五层》《把投资纪律写成状态机：不懂即 PASS》）
 - [x] **T2.2**（子代理）挑最有把握的 1-2 条写成三语博文，**draft:true**（草稿态，晨审后才发布），进 Hugo 但构建后确认草稿不出现在产物里。（实际：Top 1《一人公司带数百个 AI 员工，翻译成工程语言就五层》zh-cn 草稿完成，1774 汉字，素材出处 30+ 条真实行号；draft:true 构建验证不出产物。注意：草稿暂无 translationKey，翻译时需三语同加。）
-- [ ] **T2.3** 门禁 + commit + push 分支。
+- [x] **T2.3** 门禁 + commit + push 分支。（实际：随 cff3459 一并完成，门禁全绿）
 
 ### T3 全站体检
-- [ ] **T3.1**（子代理 + 主代理修）跑全量 `python3 tools/check_site.py`（含暗色审计）：FAIL 逐个修，PASS 但有 warning 的记录。
-- [ ] **T3.2**（子代理）软件四页 + mkt/capabilities 的 meta description / OG 标签完整性、死链、alt 缺失扫描；小问题直接修，大问题记录"晨间决策"。
-- [ ] **T3.3** 全部任务完成后写"晨报"。
+- [x] **T3.1**（子代理 + 主代理修）跑全量 `python3 tools/check_site.py`（含暗色审计）：FAIL 逐个修，PASS 但有 warning 的记录。（实际：全绿 0 FAIL 0 warning；暗色审计 472 页 0 问题；24 条 [skip] 为分页重定向壳预期跳过；唯一跟进项 = CF Web Analytics 占位 token，入晨间决策）
+- [x] **T3.2**（子代理）软件四页 + mkt/capabilities 的 meta description / OG 标签完整性、死链、alt 缺失扫描；小问题直接修，大问题记录"晨间决策"。（实际：必修 0；修复 en description 压缩 ×6 + 失实 og:image 尺寸声明全站清除 53 文件含模板与 DESIGN.md，死链/alt/og 齐全性全过；建议补 1200×630 OG 卡片图入晨间决策）
+- [x] **T3.3** 全部任务完成后写"晨报"。
 
 ## 进度日志（每次唤醒追加，格式：`[HH:MM] 完成… / commit abc123 / 下一手…`）
 
@@ -60,17 +60,50 @@
 - [T2.2✔] OPC 五层草稿完成（draft:true，1774 汉字）。check_site 草稿原触发 [translate] 三语不齐——修复：摘草稿 translationKey + tools/check_site.py 第 2 节补 draft 跳过（与第 5 节先例一致，+2 行）。
 - [T0.2/T0.3/T2.2 commit] cff3459 已 push，门禁全绿 ✔。T0 全部完成。下一手：T1.2 fenginvest 配图。
 - [T1.2✔] fenginvest 三语配图：#architecture 配 report-narrative-desktop、#start 配 mobile（shot-narrow 竖版变体）；发现 fenginvest-desktop.png 与 report-narrative 字节级相同（MD5 3e3d77e0）→ 删重复 figure，页面留 2 张；晨间决策记录重导需求。commit 44a70af 已 push。
-- [T1.3✔] fengoffice/search-king 素材检索：aik 本地库零命中，两者纯 CLI 无 GUI；不改页面，无图结论+终端演示图建议入晨间决策。
+- [T1.3✔] fengoffice/search-king 素材检索：aik 本地库零命中，两者纯 CLI 无 GUI；不改页面，无图结论+终端演示图建议入晨间决策。记账 commit e57c156。
+- [T3.1✔] 全量 check_site（含暗色）全绿：0 FAIL 0 warning，暗色审计 472 页 0 问题；24 条 [skip] = blog/tags 分页重定向壳预期跳过；跟进项 CF Analytics token 入晨间决策。
+- [T3.2✔] 元信息审计+修复：18 页审计必修 0；en description 压缩 ×6（147-153 字符）；失实 og:image:width/height（声明 1200×630，实际 logo.png 30×30）全站清除——三语 53 个文件 + rebuild_pages.py 模板 + DESIGN.md（重跑脚本不再复发），og:image 本体全保留。死链/alt/lazy 全过。
+- [T3.2 commit] b8dfa4e 已 push；快速+全量门禁双绿 ✔。
+- [T3.3✔] 晨报已写入本文件，通宵任务全部完成。
 
 ## 晨间决策（夜里不拍板，留给站长）
 
 - **fenginvest-desktop.png 需重导**：现文件与 report-narrative 字节级相同（同一张报告页截图）。建议重导一张真正的桌面端概览（首页/决策台视图）覆盖 `assets/img/shots/fenginvest-desktop.png`，之后在 fenginvest.html #quality 段把删掉的 figure 加回（三语同位置，版式 shot-figure 现成）。
 - **OPC 草稿博文待晨审**：《一人公司带数百个 AI 员工，翻译成工程语言就五层》draft:true 已在库（1774 汉字，素材来自 FengOrchestrator 愿景对话真实行号）。晨审满意→三语翻译+发布；需要改→直接改 zh-cn 稿。候选清单另 13 条见 OVERNIGHT-CANDIDATES.md。
 - **fengoffice / search-king 无图结论**：本地全路径检索零命中，且两者均为纯命令行工具（search-king 是 bash wrapper 起 scraper.py；fengoffice 是 CLI 邮件 + Twenty CRM Docker 栈），性质上无 GUI 截图可配。建议：跑一次真实命令截终端演示图（输出本身好看，如 search-king 多引擎回退链），页面图位版式可抄 fengmedia 的 shot-figure；或者接受无图现状（页面结构自洽）。Twenty CRM 界面图属第三方项目，需另行部署截取。
+- **OG 分享卡片图缺真图**：全站 og:image 一直指向 logo.png（30×30），社交平台分享卡片效果差；本次已把失实的 1200×630 尺寸声明全部删除（53 文件+模板+DESIGN.md），元数据现在诚实但分享图仍小。建议制作一张真 1200×630 站点卡片图放 `assets/img/`，然后全站 og:image/twitter:image 换新（改一处模板 + 批量替换即可，rebuild_pages.py 模板已同步可改）。
+- **CF Web Analytics 仍是占位 token**：check_site [config] 项提示。要启用统计就填真实 token；不打算用可忽略。
 
 ## 晨报
 
--（待全部完成后写）
+**通宵任务全部完成（T0-T3），分支 `overnight/2026-09-10`，全程未碰 master/dev。** 最终门禁：快速 `--no-dark` 与全量（含暗色审计）双绿。
+
+### 做了什么（按 commit 链）
+
+| commit | 内容 |
+|---|---|
+| bc659b8 | 上一批收尾进分支：Q5"和行业已有工作什么关系" chips（三语×2页）+ 5DT-PD 墓碑（三语 5dt-pd.html）+ 框架图监督数据 |
+| d23a257 | T0.1 bundle 回退：viewer.js 15 处 oversight 死数据删除，监督文案并入五层 subtitle 尾部（三语）——组件本就不渲染该字段，信息零丢失 |
+| 4fae5f7 | T2.1 aik 本地对话库挖掘：16 关键词 13 命中 → 14 条候选博文（`OVERNIGHT-CANDIDATES.md`，高可信 8 条） |
+| 61888be→cff3459 | T0.2/T0.3 墓碑博文三语进 Hugo 并构建部署（《给 5DT-PD 立一块墓碑》，zh 1559 字/en 1444 词，理论谱系+开源对照+墓志铭）；en 括注中文触发 en-han 已清 |
+| 9ba9182 | T2.2 OPC 五层草稿（draft:true，1774 汉字，素材 30+ 条真实行号）；check_site 补草稿跳过（与先例一致 +2 行） |
+| 1bb2083 | T1.1 fengmedia 三语配图：4 张产品截图入对应段落（shot-figure 组件+暗色覆盖） |
+| 44a70af | T1.2 fenginvest 三语配图：报告叙事+移动端 2 张；**发现 fenginvest-desktop.png 与 report-narrative 字节级相同**，删重复 figure |
+| e57c156 | T1.3 收口：fengoffice/search-king 本地零素材且纯 CLI 无 GUI，无图结论入晨间决策 |
+| b8dfa4e | T3.2 全站元信息修复：en 页 description 压缩 ×6；**失实 og:image 尺寸声明（1200×630 vs 实际 30×30）全站清除 53 文件**+生成脚本模板+DESIGN.md，重跑脚本不复发 |
+
+### T3 体检结论
+
+- 全量 check_site（含暗色 472 页审计）：**0 FAIL 0 warning**；24 条 [skip] 为 blog/tags 分页重定向壳的预期跳过。
+- 18 页元信息审计：死链 0、alt/lazy 缺失 0、og 标签齐全。
+
+### 交给站长的早晨清单
+
+1. **晨审 OPC 草稿**《一人公司带数百个 AI 员工，翻译成工程语言就五层》（`hugo/content/zh-cn/blog/posts/一人公司带数百个AI员工——翻译成工程语言就五层/index.md`，draft:true）→ 满意就三语翻译+发布。
+2. **重导 fenginvest-desktop.png**（现与 report-narrative 相同），之后在 fenginvest.html #quality 把删掉的 figure 加回（三语，版式现成）。
+3. **决定 fengoffice / search-king 配图**：终端演示截图 or 保持无图。
+4. **OG 卡片图 / CF Analytics token**：见晨间决策两条。
+5. 另有 13 条候选博文在 `OVERNIGHT-CANDIDATES.md` 等排期。
 
 ## 附录 A：候选博文清单（T2.1 填）
 
