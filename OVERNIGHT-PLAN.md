@@ -27,7 +27,7 @@
 ## 任务清单
 
 ### T0 收尾上一批（HITL 改名 + 墓碑 + 监督列）
-- [ ] **T0.1** bundle 回退（子代理）：删除 15 处无效 `oversight:"…"` 字段；把监督文案并入各层 `subtitle` 尾部（如 `subtitle:"定方向·控成本·守红线｜监督：签字（审批月度预算）"`，三语 15 处一一对应，简繁英各自措辞）。验收：`grep -o oversight …viewer.js | wc -l` = 0，`grep -c "｜监督" viewer.js` ≥ 5，JS 无语法破坏（node --check 或 hugo 构建通过）。
+- [x] **T0.1** bundle 回退（子代理）：删除 15 处无效 `oversight:"…"` 字段；把监督文案并入各层 `subtitle` 尾部（如 `subtitle:"定方向·控成本·守红线｜监督：签字（审批月度预算）"`，三语 15 处一一对应，简繁英各自措辞）。验收：`grep -o oversight …viewer.js | wc -l` = 0，`grep -c "｜监督" viewer.js` ≥ 5，JS 无语法破坏（node --check 或 hugo 构建通过）。
 - [ ] **T0.2** 博文三语进 Hugo（子代理，1 个写 zh-cn，再派 2 个译 zh-hk/en）：基于理论文档压缩成 1500-2500 字《给 5DT-PD 立一块墓碑：从人机协作七十五年到组织级缺口》（标题可润），必含：墓志铭段（呼应网站 5dt-pd.html 的墓碑）、理论谱系表（Parasuraman 2000 → RLHF/CAI → 过程监督 → 组织级缺口）、开源项目对照（LangGraph/CrewAI/AutoGen/Spec Kit）、本站框架定位。frontmatter 按规范，slug 英文，translationKey 一致。
 - [ ] **T0.3** `cd hugo && hugo --gc --cleanDestinationDir && bash deploy.sh` + 门禁 + commit + push 分支。
 
@@ -49,6 +49,7 @@
 ## 进度日志（每次唤醒追加，格式：`[HH:MM] 完成… / commit abc123 / 下一手…`）
 
 - [setup] 计划创建；改名批次（Q5×2 页三语 + 墓碑×三语 5dt-pd.html）已在工作区，随首个 commit 进 overnight/2026-09-10 分支。
+- [T0.1✔] 子代理完成 bundle 回退：15 处 oversight 字段删除、监督文案并入 subtitle 尾部（简 5/繁 5/英 5），node --check 语法过，check_site --no-dark 全绿。
 
 ## 晨间决策（夜里不拍板，留给站长）
 
