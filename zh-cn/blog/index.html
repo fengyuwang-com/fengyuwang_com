@@ -94,7 +94,7 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/zh-cn/tags/%E6%8A%80%E6%9C%AF/">技术 (45)</a><a href="/zh-cn/tags/%E9%87%91%E8%9E%8D/">金融 (16)</a><a href="/zh-cn/tags/%E7%BB%8F%E6%B5%8E/">经济 (15)</a><a href="/zh-cn/tags/%E7%AB%8B%E5%9C%BA/">立场 (2)</a><a href="/zh-cn/tags/%E5%95%86%E4%B8%9A/">商业 (50)</a><a href="/zh-cn/tags/%E7%A4%BE%E4%BC%9A/">社会 (32)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA/">市场 (2)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA%E5%AD%A6/">市场学 (3)</a><a href="/zh-cn/tags/%E6%8A%95%E8%B5%84/">投资 (16)</a></div>
+<div class="tag-cloud"><a href="/zh-cn/tags/%E9%A3%8E%E9%99%A9/">风险 (1)</a><a href="/zh-cn/tags/%E6%8A%80%E6%9C%AF/">技术 (45)</a><a href="/zh-cn/tags/%E9%87%91%E8%9E%8D/">金融 (16)</a><a href="/zh-cn/tags/%E7%BB%8F%E6%B5%8E/">经济 (15)</a><a href="/zh-cn/tags/%E7%AB%8B%E5%9C%BA/">立场 (2)</a><a href="/zh-cn/tags/%E5%95%86%E4%B8%9A/">商业 (50)</a><a href="/zh-cn/tags/%E7%A4%BE%E4%BC%9A/">社会 (32)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA/">市场 (2)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA%E5%AD%A6/">市场学 (3)</a><a href="/zh-cn/tags/%E6%95%B0%E5%AD%A6/">数学 (1)</a><a href="/zh-cn/tags/%E6%8A%95%E8%B5%84/">投资 (17)</a></div>
 <div class="sort-shell">
     <label for="sortSelect">排序</label>
     <select id="sortSelect">
@@ -104,6 +104,12 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 </div>
 
 <div class="blog-grid" id="blogGrid">
+
+<a class="blog-card" href="/zh-cn/blog/posts/leverage-cant-buy-time/" data-title="杠杆借不来时间" data-summary="无限的钱加够久的时间，算出来是无限的财富——利息算得比这更快。" data-date="2026-09-12" data-tags="投资,风险,数学">
+    <h3>杠杆借不来时间</h3>
+    <hr class="summary-divider"><div class="summary-text">无限的钱加够久的时间，算出来是无限的财富——利息算得比这更快。</div>
+    <div class="blog-tags"><span>投资</span><span>风险</span><span>数学</span></div>
+</a>
 
 <a class="blog-card" href="/zh-cn/blog/posts/hold-is-buy/" data-title="持有就是买入" data-summary="评级清单里买入满天飞、卖出凤毛麟角，因为卖的不是预测，是掩护。" data-date="2026-09-12" data-tags="投资,市场,立场">
     <h3>持有就是买入</h3>
@@ -115,12 +121,6 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
     <h3>百万曹公，救不了赌场</h3>
     <hr class="summary-divider"><div class="summary-text">牵扯多少人就业，都论证不了一个靠成瘾牟利的产业正当。</div>
     <div class="blog-tags"><span>市场</span><span>立场</span><span>经济</span></div>
-</a>
-
-<a class="blog-card" href="/zh-cn/blog/posts/attention-tax/" data-title="穷人注意力税" data-summary="一笔没人来收、人人都在交的税。" data-date="2026-09-06" data-tags="社会,经济">
-    <h3>穷人注意力税</h3>
-    <hr class="summary-divider"><div class="summary-text">一笔没人来收、人人都在交的税。</div>
-    <div class="blog-tags"><span>社会</span><span>经济</span></div>
 </a>
 
 <a class="blog-card" href="/zh-cn/blog/posts/adjusted-price/" data-title="前复权之罪" data-summary="改写历史不需要坏人，一个默认参数就够了。" data-date="2026-09-06" data-tags="金融,技术,投资">
@@ -182,9 +182,9 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="pagination-shell" id="paginationShell">
     <span class="page-btn" style="opacity:.3;cursor:default;">← 上一页</span>
-    <span class="page-btn active">1</span><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><a href="/zh-cn/blog/page/4/" class="page-btn">4</a><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><a href="/zh-cn/blog/page/6/" class="page-btn">6</a><a href="/zh-cn/blog/page/7/" class="page-btn">7</a><a href="/zh-cn/blog/page/8/" class="page-btn">8</a>
+    <span class="page-btn active">1</span><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><a href="/zh-cn/blog/page/3/" class="page-btn">3</a><a href="/zh-cn/blog/page/4/" class="page-btn">4</a><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><a href="/zh-cn/blog/page/6/" class="page-btn">6</a><a href="/zh-cn/blog/page/7/" class="page-btn">7</a><a href="/zh-cn/blog/page/8/" class="page-btn">8</a><a href="/zh-cn/blog/page/9/" class="page-btn">9</a>
     <a href="/zh-cn/blog/page/2/" class="page-nav">下一页 →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="9" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
@@ -193,7 +193,7 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/zh-cn\/blog\/index.json";
-var TAGURLS={ "商业":"\/zh-cn\/tags\/%E5%95%86%E4%B8%9A\/","市场":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA\/","市场学":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA%E5%AD%A6\/","技术":"\/zh-cn\/tags\/%E6%8A%80%E6%9C%AF\/","投资":"\/zh-cn\/tags\/%E6%8A%95%E8%B5%84\/","社会":"\/zh-cn\/tags\/%E7%A4%BE%E4%BC%9A\/","立场":"\/zh-cn\/tags\/%E7%AB%8B%E5%9C%BA\/","经济":"\/zh-cn\/tags\/%E7%BB%8F%E6%B5%8E\/","金融":"\/zh-cn\/tags\/%E9%87%91%E8%9E%8D\/", };
+var TAGURLS={ "商业":"\/zh-cn\/tags\/%E5%95%86%E4%B8%9A\/","市场":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA\/","市场学":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA%E5%AD%A6\/","技术":"\/zh-cn\/tags\/%E6%8A%80%E6%9C%AF\/","投资":"\/zh-cn\/tags\/%E6%8A%95%E8%B5%84\/","数学":"\/zh-cn\/tags\/%E6%95%B0%E5%AD%A6\/","社会":"\/zh-cn\/tags\/%E7%A4%BE%E4%BC%9A\/","立场":"\/zh-cn\/tags\/%E7%AB%8B%E5%9C%BA\/","经济":"\/zh-cn\/tags\/%E7%BB%8F%E6%B5%8E\/","金融":"\/zh-cn\/tags\/%E9%87%91%E8%9E%8D\/","风险":"\/zh-cn\/tags\/%E9%A3%8E%E9%99%A9\/", };
 var L_ART=" 篇文章 · ";
 var L_TAG=" 个标签";
 var L_TAGS="相关标签：";
@@ -230,7 +230,7 @@ si.value="";si.addEventListener("input",function(){
   if(ce)ce.textContent="…";
   fetch(INDEX_URL).then(function(r){return r.json()}).then(function(d){IDX=d;loading=false;var n=si.value.toLowerCase().trim();if(n)render(n)}).catch(function(){loading=false;if(ce)ce.textContent=""});
 });
-var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 9 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
