@@ -67,14 +67,14 @@ python -m http.server 8001
 │   └── js/
 │       ├── shared-subpage-navbar.js    ← Universal navbar
 │       ├── shared-site-footer.js       ← Universal footer
-│       └── 5dt-pd/                     ← 5DT-PD framework viewer (React)
+│       └── human-in-the-loop/                     ← Human-in-the-Loop framework viewer (React)
 ├── en/                    ← English site pages
 │   ├── index.html         ← Home
 │   ├── mkt.html           ← Marketing (市场学)
 │   ├── invest.html        ← Investment (投资)
 │   ├── portfolio.html     ← Technical portfolio (技术作品)
 │   ├── capabilities.html  ← Capability structure (能力结构)
-│   ├── 5dt-pd.html        ← 5DT-PD Framework
+│   ├── human-in-the-loop.html        ← Human-in-the-Loop Framework
 │   └── web3.html          ← Web3
 ├── zh-cn/                 ← Simplified Chinese (same structure as en/)
 ├── zh-hk/                 ← Traditional Chinese (same structure as en/)

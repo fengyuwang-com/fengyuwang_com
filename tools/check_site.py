@@ -1042,6 +1042,10 @@ for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("
         probs.append(".punchline 缺字号声明")
     if re.search(r'class="[^"]*\bcase-desc', s) and not re.search(r"\.case-desc\s*{[^}]*font-size", style):
         probs.append(".case-desc 缺字号声明")
+    if "<h2" in s and not re.search(r"h2[^{}]*\{[^}]*font-size", style):
+        probs.append("h2 缺字号声明 (2026-09-12 审计: 全站已合规, 此后新增页须显式声明)")
+    if "<h3" in s and not re.search(r"h3[^{}]*\{[^}]*font-size", style):
+        probs.append("h3 缺字号声明 (2026-09-12 审计: 全站已合规, 此后新增页须显式声明)")
     if probs:
         err("key-selector", f"{f}: {'; '.join(probs)}")
     else:

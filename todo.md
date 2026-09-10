@@ -8,10 +8,10 @@
 - [ ] Open-FengMedia 镜像 main（默认分支，落地 README）与 master（同步分支）双分支并存，是否合并/切默认由站长定
 - [ ] Open-FlyGo Release 暂只有源码（flygo.exe 内嵌 365 处编译机路径已连历史剔除）；干净重编译（cargo --remap-path-prefix）后可附回二进制
 - [x] CF Web Analytics 占位符已解决（2026-09-11: 60 处占位 beacon 删除, 统计由 Pages 项目开关自动注入, 后台已有数据）
-- [ ] 内部文档同步改名：站内品牌已从 5DT-PD 改为 "Feng Human-in-the-Loop"（页面/图表/导航栏已换；2026-09-11 URL 也改为 `human-in-the-loop`，301 保权重，内部键 `pd5` 保留），但 DESIGN.md(3)、README.md(2)、_scripts/fix-seo-descriptions.py(2)、_scripts/uam.py(6)、docs/guide/{WRITING-博文写作规范,page-structure,pitfalls}.md、docs/archive/{REPORT-全站修改建议,REVIEW-全站整合-会说会做}.md 仍写旧名，需要一轮术语同步
+- [x] 内部文档同步改名（2026-09-12 定时审计完成）：DESIGN.md / README.md / docs/guide/{WRITING,pitfalls,page-structure,release-gate}.md / _scripts/{uam,fix-seo-descriptions}.py 全部换 "Feng Human-in-the-Loop" 与 human-in-the-loop 路径；fix-seo-descriptions 失效键已修；docs/archive/ 按历史档案保留原文不改
 
-- [ ] 全站字号体系深审：门禁现有 h1-size + key-selector（section-card 内 punchline/case-desc），还应扩到 h2/h3/正文字号与颜色的"关键选择器清单"，逐页核对与全站模板一致
-- [ ] 页面必备元素清单已入门禁（page-elements 10 项）——但首页 index.html 的 hero 结构一致性（slider-caption 等）尚未纳入
+- [x] 全站字号体系深审第一期（2026-09-12 定时审计）：h2/h3 字号声明纳入 key-selector 门禁（审计时全站已合规，0 违规，规则防新增页回归）；正文 p 与颜色清单待第二期
+- [ ] 首页 index.html hero 结构一致性（slider-caption 等）纳入门禁（page-elements 已覆盖子页 10 项）
 - [ ] 暗色模式人工抽检实战块：human-in-the-loop 页新增的实战块暗色对比已过门禁，建议站长肉眼复核一次观感
 
 （第 13 轮站长令：接下来一律只推 dev，未经批准不碰 master；每小时定时任务按本清单继续）
