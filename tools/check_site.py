@@ -194,7 +194,7 @@ if os.path.exists("sitemap.xml"):
         err("sitemap", f"sitemap {locs} loc vs 构建 {pages} 页, 需重生成")
     else:
         ok("sitemap", f"sitemap {locs} loc ≈ 构建 {pages} 页")
-    if "https://fengyuwang.com/en/blog/" not in sm:
+    if "https://www.fengyuwang.com/en/blog/" not in sm:
         err("sitemap", "sitemap 缺博客索引 URL")
 else:
     err("sitemap", "根目录 sitemap.xml 缺失")
