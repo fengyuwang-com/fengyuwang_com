@@ -65,6 +65,7 @@ try:
     from opencc import OpenCC
     cc = OpenCC("s2hk")
     cc_t = OpenCC("hk2s")
+    cc_t2s_global = OpenCC("t2s")
 except ImportError:
     cc = cc_t = None
 
@@ -138,7 +139,9 @@ if cc:
             if "\u4e00" <= ch <= "\u9fff" and cc_t.convert(ch) != ch and cc.convert(ch) != ch:
                 resid[ch] = p["body"].count(ch)
         # 只报 opencc s2hk 能转的简体字 (上下文相关字如 里/干/佣/游 不算)
-        simp = {ch: n for ch, n in resid.items() if cc.convert(ch) != ch}
+        # 排除 s2hk 误映射到简体字的正体 (如 稅→税: 目标本身不再被 t2s 转换, 说明它是简体, 该字并非泄漏)
+        simp = {ch: n for ch, n in resid.items()
+                if cc.convert(ch) != ch and cc_t2s_global.convert(cc.convert(ch)) != cc.convert(ch)}
         if sum(simp.values()) > 3:
             err("zh-hk-simp", f"{p['path']}: 简体泄漏 {sum(simp.values())} 处: {simp}")
     from opencc import OpenCC as _O
