@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Scaling 不再是堆數字 | Fengyu WANG</title>
+    <meta name="description" content="大模型行業花了五年時間把參數量當成進步本身，然後一筆一筆把這筆賬算錯了回去。Scaling 沒停，只是目標函數換了。">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Scaling 不再是堆數字">
+    <meta property="og:description" content="大模型行業花了五年時間把參數量當成進步本身，然後一筆一筆把這筆賬算錯了回去。Scaling 沒停，只是目標函數換了。">
+    <meta property="og:url" content="https://www.fengyuwang.com/zh-hk/blog/posts/scaling-not-parameters/">
+    <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="article:published_time" content="2026-09-11">
+    <link rel="canonical" href="https://www.fengyuwang.com/zh-hk/blog/posts/scaling-not-parameters/">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/scaling-not-parameters/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="https://www.fengyuwang.com/zh-cn/blog/posts/scaling-not-parameters/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="https://www.fengyuwang.com/zh-hk/blog/posts/scaling-not-parameters/">
+      
+        <link rel="alternate" hreflang="en" href="https://www.fengyuwang.com/en/blog/posts/scaling-not-parameters/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/scaling-not-parameters/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/scaling-not-parameters/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/scaling-not-parameters/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.09.07.04.10"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"Scaling 不再是堆數字\"","datePublished":"2026-09-11","dateModified":"2026-09-11","url":"\"https://www.fengyuwang.com/zh-hk/blog/posts/scaling-not-parameters/\"","inLanguage":"zh-hk","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"大模型行業花了五年時間把參數量當成進步本身，然後一筆一筆把這筆賬算錯了回去。Scaling 沒停，只是目標函數換了。\"","keywords":"\"科技\""}</script>
+<style>
+
+
+
+
+
+
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>Scaling 不再是堆數字</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-11</span>
+        <span class="meta-sep">·</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">科技</span>
+    </div>
+    <div class="article-content"><p>聊大模型，多數人開口第一句還是參數多大。這件事本身就該被問一句：參數量單獨拿出來，到底說明甚麼？過去幾年這個行業用真金白銀驗證了答案——幾乎說明不了甚麼。參數量必須跟另外三件事放在一起看：模型有多少數據、算力花在了哪、誰在甚麼條件下運行它。</p>
+<h2 id="三版賬本一版比一版接近真相">三版賬本，一版比一版接近真相</h2>
+<p>Scaling Law 這幾年的演進，本質是賬本換了三次。2020 年，Kaplan 等人算出一個比例：參數增長應該比數據增長快得多，大約 2.7 比 1。整個行業照此辦理，模型越做越大，萬億參數一度被當成進步的必經之路。2022 年，Hoffmann 等人拿四百多個模型重做實驗，結論反轉：算力最優的分配接近每個參數 20 個 Token，算力繼續增加時，參數和數據應該以差不多的速度一起增長——這就是 Chinchilla Scaling Law。回頭看過往那一批最大的模型，恰恰是算力分配最失衡的一批：參數堆得太快，數據沒跟上，錢花了，效果沒跟上。</p>
+<p>第三次換賬本發生在模型上線之後。Chinchilla 考慮的是一個模型訓練一次、拿去評測的成本結構，但今天的大模型上線後每天被調用幾十億次，推理成本遠遠大於那次訓練。把這筆賬也算進去，最優解就往更小、訓練更久的模型移動——訓練貴一點沒關係，每次回答省下來的算力是真金白銀。</p>
+<p>到了 MoE 時代，簡單的比例公式徹底不夠用了。新的研究把兩個此前被混為一談的東西拆開：總參數量決定模型能裝下多少知識、事實和長尾信息；激活參數和每次前向計算的有效深度決定長程推理能力。需要記憶的任務更吃參數量，需要推理的任務更吃數據。甚至出現了更反直覺的結論：在每參數 Token 數固定時，繼續增加總參數可能讓推理變差，而激活更多專家反而穩定提升推理能力。</p>
+<h2 id="一次控制變量實驗">一次控制變量實驗</h2>
+<p>這套邏輯有個現成的驗證案例。GLM-5.3 與上一代 GLM-5.2 的基座完全相同：總參數 753B，激活 40B，硬件一行未動。但 AA 指數從 53 分升到 60 分，編程體感被普遍評為國產第一梯隊。升分靠的是甚麼？餵更高質量的數據、優化訓練方法——不改硬件，只改數據與算法。這相當於一次控制變量實驗：當參數和激活完全鎖死，分數的增量只能來自數據側，而它確實來了。</p>
+<p>這才是本篇的結論：大模型到底有多聰明，早就沒法被一個總參數量概括了。Scaling 依然在繼續，沒有停；但它已經從一個越堆越大的數字，變成了尋找最優解的遊戲。錢不再花在把數字變大上，而是花在把賬算對上——算力往哪個維度分配，比堆了多高更決定成敗。</p>
+</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+</body>
+</html>
+
