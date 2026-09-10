@@ -1,4 +1,5 @@
 {{ define "main" }}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ .Title | jsonify }}{{ with .Date }},"datePublished":"{{ .Format "2006-01-02" }}","dateModified":"{{ .Format "2006-01-02" }}"{{ end }},"url":{{ .Permalink | jsonify }},"inLanguage":"{{ .Site.Language.Lang }}","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"}{{ with .Params.description }},"description":{{ . | jsonify }}{{ end }}{{ with .Params.tags }},"keywords":{{ delimit . ", " | jsonify }}{{ end }}}</script>
 <style>
 
 
