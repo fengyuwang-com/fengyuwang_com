@@ -11,7 +11,7 @@
 - Market strategy cases: /en/mkt
 - Investment research: /en/invest
 - Software portfolio: /en/tech
-- Framework "Feng Human-in-the-Loop" (Feng人机合作自动化范式): /en/5dt-pd — a 5-layer × dual-track × dual-loop framework unifying method and software engineering architecture for content manufacturing, by Fengyu WANG
+- Framework "Feng Human-in-the-Loop" (Feng人机合作自动化范式): /en/human-in-the-loop — a 5-layer × dual-track × dual-loop framework unifying method and software engineering architecture for content manufacturing, by Fengyu WANG
 - Blog: /en/blog/
 - Blog (简体中文): /zh-cn/blog/
 - Blog (繁體中文): /zh-hk/blog/
@@ -68,7 +68,7 @@ Technology Structure before code, delivery is the goal — from Web to desktop t
 
 
 ## The Feng Human-in-the-Loop Structure | Fengyu WANG
-URL: https://fengyuwang.com/en/5dt-pd
+URL: https://fengyuwang.com/en/human-in-the-loop
 
 Feng Human-in-the-Loop Structure: Quick Answers 5-Tier Dual-Track Dual-Loop Content Manufacturing Framework 1. Too Much Content? Drop silos, build systems Control costs, prioritize risk Value delivery, data-driven Embrace artistry, uphold principles 2. What Are the Core Assets? Private corpus Compute calibration model Risk control baseline Vertical LLM 3. How Do Human and AI Collaborate? Human anchors, machines execute Controlled pipeline Hard gates Parameter tuning intervention 4. What Drives It Beyond Philosophy? A bidirectional closed-loop system A data-driven engine An agentic hub An omni-integration base From minimal framework to full capability structure View Capabilities → ↑
 
@@ -104,7 +104,7 @@ URL: https://fengyuwang.com/zh-cn/tech
 
 
 ## Feng人机合作自动化范式 | 王丰羽 Fengyu WANG
-URL: https://fengyuwang.com/zh-cn/5dt-pd
+URL: https://fengyuwang.com/zh-cn/human-in-the-loop
 
 Feng人机合作自动化范式 极简解答 一套框架，四问四答 一、内容过剩怎么办？ 弃单点，建系统 控成本，重风控 重交付，数据驱动 讲艺术，重理念 二、核心资产是什么？ 私有语料库 算力精算模 风控标准线 垂直大模型 三、人机怎么协作？ 人定锚，机干活 受控管线 硬性门禁 调参介入 四、除理念靠什么？ 靠"双向闭环"系统 靠"数据驱动引擎" 靠"智能体中枢" 靠"全域融合阵地" 从极简框架到完整能力结构 查看能力结构 → ↑
 
@@ -140,6 +140,6 @@ URL: https://fengyuwang.com/zh-hk/tech
 
 
 ## Feng人機合作自動化範式 | 王豐羽 Fengyu WANG
-URL: https://fengyuwang.com/zh-hk/5dt-pd
+URL: https://fengyuwang.com/zh-hk/human-in-the-loop
 
 Feng人機合作自動化範式 極簡解答 一套框架，四問四答 一、內容過剩怎麼辦？ 棄單點，建系統 控成本，重風控 重交付，數據驅動 講藝術，重理念 二、核心資產是什麼？ 私有語料庫 算力精算模 風控標準線 垂直大模型 三、人機怎麼協作？ 人定錨，機幹活 受控管線 硬性門禁 調參介入 四、除理念靠什麼？ 靠「雙向閉環」系統 靠「數據驅動引擎」 靠「智能體中樞」 靠「全域融合陣地」 從極簡框架到完整能力結構 查看能力結構 → ↑

@@ -527,9 +527,9 @@ else:
 # 计算 WCAG 对比度 (<4.5, 大字 <3.0 记为问题); 双向对照:
 #   暗色问题 = 亮色正常、暗色才变差 (如蓝底黑字)
 #   亮色问题 = 暗色正常、亮色才变差 (如浅底亮字)
-# 两种模式都低的是设计元素, 不算主题 bug。5dt-pd 图示为站长拍板的设计豁免。
+# 两种模式都低的是设计元素, 不算主题 bug。human-in-the-loop 图示为站长拍板的设计豁免。
 # 跳过: 垫在背景图/渐变上的文字无法可靠计算; /page/1/ 等自动跳转页。
-DESIGN_ALLOWLIST = ("5dt-pd",)
+DESIGN_ALLOWLIST = ("human-in-the-loop",)
 
 DARK_EVAL_JS = r"""
 () => {
@@ -972,6 +972,44 @@ elif btn_ok:
     ok("btn-height", btn_out[-1].strip())
 else:
     err("btn-height", "同容器蓝白按钮高度不一致, 明细见下方 [btn-height] 输出")
+
+# ---------- 16.5 h1 显式字号 (页内 <style> 必须声明, 防掉主题巨字号) ----------
+# 背景: human-in-the-loop(原5dt-pd) 手写页 h1 没写 font-size, 吃到主题默认巨字号,
+# 字号类回归此前无检查。规则: 含 <h1> 的 {lang} 一级页面, 页内必须有匹配 h1 且带 font-size 的规则。
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html")):
+    s = open(f, encoding="utf-8").read()
+    if "<h1" not in s:
+        continue
+    style = " ".join(re.findall(r"<style>(.*?)</style>", s, re.S))
+    if re.search(r"h1[^{}]*\{[^}]*font-size\s*:", style):
+        ok("h1-size", f"{f}: h1 字号已显式声明")
+    elif "slider-caption" in s:
+        ok("h1-size", f"{f}: h1 由主题 .slider-caption h1 50px 接管 (豁免)")
+    else:
+        err("h1-size", f"{f}: 含 <h1> 但页内 CSS 未声明 h1 字号 (会掉主题默认巨字号)")
+
+# ---------- 16.6 _redirects 金丝雀 (防覆盖丢规则) ----------
+# 背景: 2026-09-11 _redirects 被一次盲写覆盖 39 行既有规则。设金丝雀行 + 行数基线,
+# 任何一次重写丢了既有规则, 门禁当场红。
+if os.path.exists("_redirects"):
+    rd = open("_redirects", encoding="utf-8").read()
+    rdl = [l for l in rd.splitlines() if l.strip() and not l.strip().startswith("#")]
+    canaries = [
+        "/cn    /zh-cn/    302",
+        "/github    https://github.com/fengyuwang-com    302",
+        "/zh-cn/portfolio.html    /zh-cn/tech.html    301",
+        "/zh-cn/5dt-pd /zh-cn/human-in-the-loop 301",
+        "/en/5dt-pd /en/human-in-the-loop 301",
+    ]
+    missing = [c for c in canaries if c not in rd]
+    if missing:
+        err("redirects", f"_redirects 丢金丝雀规则: {missing}")
+    elif len(rdl) < 29:
+        err("redirects", f"_redirects 仅 {len(rdl)} 条规则 (<30 基线), 疑似被覆盖")
+    else:
+        ok("redirects", f"_redirects {len(rdl)} 条规则, 金丝雀齐全")
+else:
+    err("redirects", "_redirects 缺失")
 
 # ---------- 汇总 ----------
 if dark_out:

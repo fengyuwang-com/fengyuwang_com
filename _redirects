@@ -37,3 +37,11 @@
 /blog    /zh-cn/blog/    302
 
 # 301 redirects for old/aliased pages (permanent)
+
+# 5dt-pd 改名 human-in-the-loop (2026-09-11): 旧地址 301 保留权重
+/zh-cn/5dt-pd /zh-cn/human-in-the-loop 301
+/zh-hk/5dt-pd /zh-hk/human-in-the-loop 301
+/en/5dt-pd /en/human-in-the-loop 301
+/zh-cn/5dt-pd.html /zh-cn/human-in-the-loop 301
+/zh-hk/5dt-pd.html /zh-hk/human-in-the-loop 301
+/en/5dt-pd.html /en/human-in-the-loop 301
