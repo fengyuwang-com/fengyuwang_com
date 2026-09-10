@@ -7,8 +7,14 @@
 - [ ] 私仓跟踪 FENGMEM.md（会话记录）有再泄漏风险：FlyGo / FengOffice / FengOrchestrator 均在 git 跟踪里，未来全量同步可能重演 Open-FengMedia 泄漏；建议各私仓 git rm --cached + gitignore（私仓操作待站长批准）
 - [ ] Open-FengMedia 镜像 main（默认分支，落地 README）与 master（同步分支）双分支并存，是否合并/切默认由站长定
 - [ ] Open-FlyGo Release 暂只有源码（flygo.exe 内嵌 365 处编译机路径已连历史剔除）；干净重编译（cargo --remap-path-prefix）后可附回二进制
-- [ ] CF Web Analytics 仍是占位符 token（check_site [config] 节长期 PASS 提醒项）
-- [ ] 内部文档同步改名：站内品牌已从 5DT-PD 改为 "Feng Human-in-the-Loop"（页面/图表/导航栏已换，URL `5dt-pd.html` 与内部键 `pd5` 保留），但 DESIGN.md(3)、README.md(2)、_scripts/fix-seo-descriptions.py(2)、_scripts/uam.py(6)、docs/guide/{WRITING-博文写作规范,page-structure,pitfalls}.md、docs/archive/{REPORT-全站修改建议,REVIEW-全站整合-会说会做}.md 仍写旧名，需要一轮术语同步
+- [x] CF Web Analytics 占位符已解决（2026-09-11: 60 处占位 beacon 删除, 统计由 Pages 项目开关自动注入, 后台已有数据）
+- [ ] 内部文档同步改名：站内品牌已从 5DT-PD 改为 "Feng Human-in-the-Loop"（页面/图表/导航栏已换；2026-09-11 URL 也改为 `human-in-the-loop`，301 保权重，内部键 `pd5` 保留），但 DESIGN.md(3)、README.md(2)、_scripts/fix-seo-descriptions.py(2)、_scripts/uam.py(6)、docs/guide/{WRITING-博文写作规范,page-structure,pitfalls}.md、docs/archive/{REPORT-全站修改建议,REVIEW-全站整合-会说会做}.md 仍写旧名，需要一轮术语同步
+
+- [ ] 全站字号体系深审：门禁现有 h1-size + key-selector（section-card 内 punchline/case-desc），还应扩到 h2/h3/正文字号与颜色的"关键选择器清单"，逐页核对与全站模板一致
+- [ ] 页面必备元素清单已入门禁（page-elements 10 项）——但首页 index.html 的 hero 结构一致性（slider-caption 等）尚未纳入
+- [ ] 暗色模式人工抽检实战块：human-in-the-loop 页新增的实战块暗色对比已过门禁，建议站长肉眼复核一次观感
+
+（第 13 轮站长令：接下来一律只推 dev，未经批准不碰 master；每小时定时任务按本清单继续）
 
 （第 11 轮站长拍板：除上述外其余待办等日后举措）
 
