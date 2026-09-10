@@ -1007,6 +1007,47 @@ for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("
                 elif ".html" in u:
                     err("seo-url", f"{f}: {label} 带 .html (会 308): {u}")
 
+# ---------- 16.5c 页面必备元素清单 ----------
+# 背景: footer/back-to-top/og 标签此前靠人记, 手写页容易漏。每个子页必须齐备。
+REQUIRED_SNIPPETS = [
+    ('id="shared-subpage-navbar"', "导航栏挂载点"),
+    ('id="shared-site-footer"', "footer 挂载点"),
+    ('id="backToTop"', "返回顶部按钮"),
+    ('name="description"', "description meta"),
+    ('rel="canonical"', "canonical"),
+    ('property="og:title"', "og:title"),
+    ('property="og:description"', "og:description"),
+    ('property="og:image"', "og:image"),
+    ('name="twitter:card"', "twitter:card"),
+    ('hreflang="x-default"', "hreflang x-default"),
+]
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html")):
+    s = open(f, encoding="utf-8").read()
+    missing = [label for snippet, label in REQUIRED_SNIPPETS if snippet not in s]
+    if missing:
+        err("page-elements", f"{f}: 缺 {', '.join(missing)}")
+    else:
+        ok("page-elements", f"{f}: 必备元素 10/10")
+
+# ---------- 16.5d 关键选择器字号+颜色声明 (section-card 卡片内 h2/punchline/case-desc) ----------
+# 背景: human-in-the-loop 页 h1 漏写 font-size 掉主题巨字号。凡使用 .section-card 的页面,
+# 其 h2 与 .punchline 必须在页内 CSS 声明字号; .punchline/.case-desc 必须声明颜色(含暗色覆盖)。
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html")):
+    s = open(f, encoding="utf-8").read()
+    if "section-card" not in s:
+        continue
+    style = " ".join(re.findall(r"<style>(.*?)</style>", s, re.S))
+    probs = []
+    if re.search(r'class="[^"]*\bpunchline', s) and not re.search(r"\.punchline\s*{[^}]*font-size", style):
+        probs.append(".punchline 缺字号声明")
+    if re.search(r'class="[^"]*\bcase-desc', s) and not re.search(r"\.case-desc\s*{[^}]*font-size", style):
+        probs.append(".case-desc 缺字号声明")
+    if probs:
+        err("key-selector", f"{f}: {'; '.join(probs)}")
+    else:
+        ok("key-selector", f"{f}: 关键选择器字号齐备")
+
+
 
 # ---------- 16.6 _redirects 金丝雀 (防覆盖丢规则) ----------
 # 背景: 2026-09-11 _redirects 被一次盲写覆盖 39 行既有规则。设金丝雀行 + 行数基线,
