@@ -11,6 +11,7 @@
 - Market strategy cases: /en/mkt.html
 - Investment research: /en/invest.html
 - Software portfolio: /en/tech.html
+- Framework "Feng Human-in-the-Loop" (Feng人机合作自动化范式): /en/5dt-pd.html — a 5-layer × dual-track × dual-loop framework unifying method and software engineering architecture for content manufacturing, by Fengyu WANG
 - Blog: /en/blog/
 - Blog (简体中文): /zh-cn/blog/
 - Blog (繁體中文): /zh-hk/blog/
