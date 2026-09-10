@@ -988,6 +988,26 @@ for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("
     else:
         err("h1-size", f"{f}: 含 <h1> 但页内 CSS 未声明 h1 字号 (会掉主题默认巨字号)")
 
+# ---------- 16.5b SEO URL 一致性: 全部指向 https://www.fengyuwang.com 且不带 .html ----------
+# 背景: 81 页 og:url 非 www、canonical 带 .html 曾溜进生产 (Cloudflare Pages 308 到无后缀,
+# SEO 指向类 URL 必须是 200 终点)。SEO 指向类标签逐页扫, 域名/后缀双重校验。
+SEO_URL_PATS = [
+    (r'rel="canonical" href="([^"]*)"', "canonical"),
+    (r'property="og:url" content="([^"]*)"', "og:url"),
+    (r'hreflang="[^"]*" href="([^"]*)"', "hreflang"),
+    (r'"url":\s*"([^"]*)"', "jsonld-url"),
+]
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html") + ["index.html"]):
+    s = open(f, encoding="utf-8").read()
+    for pat, label in SEO_URL_PATS:
+        for u in re.findall(pat, s):
+            if u.startswith("http"):
+                if not u.startswith("https://www.fengyuwang.com"):
+                    err("seo-url", f"{f}: {label} 非 www 统一域: {u}")
+                elif ".html" in u:
+                    err("seo-url", f"{f}: {label} 带 .html (会 308): {u}")
+
+
 # ---------- 16.6 _redirects 金丝雀 (防覆盖丢规则) ----------
 # 背景: 2026-09-11 _redirects 被一次盲写覆盖 39 行既有规则。设金丝雀行 + 行数基线,
 # 任何一次重写丢了既有规则, 门禁当场红。
