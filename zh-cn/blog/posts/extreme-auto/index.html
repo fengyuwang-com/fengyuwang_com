@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>防御是设计出来的 | Fengyu WANG</title>
+    <meta name="description" content="极端行情里人工反应永远慢半拍：一套自研的自动防御系统用规则加股指期货空单吸收冲击。">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="防御是设计出来的">
+    <meta property="og:description" content="极端行情里人工反应永远慢半拍：一套自研的自动防御系统用规则加股指期货空单吸收冲击。">
+    <meta property="og:url" content="https://www.fengyuwang.com/zh-cn/blog/posts/extreme-auto/">
+    <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta property="article:published_time" content="2026-09-11">
+    <link rel="canonical" href="https://www.fengyuwang.com/zh-cn/blog/posts/extreme-auto/">
+    <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/extreme-auto/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="https://www.fengyuwang.com/zh-cn/blog/posts/extreme-auto/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="https://www.fengyuwang.com/zh-hk/blog/posts/extreme-auto/">
+      
+        <link rel="alternate" hreflang="en" href="https://www.fengyuwang.com/en/blog/posts/extreme-auto/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/extreme-auto/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/extreme-auto/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/extreme-auto/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.09.07.04.10"></script>
+    <section class="content-section">
+        <div class="container">
+            
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"防御是设计出来的\"","datePublished":"2026-09-11","dateModified":"2026-09-11","url":"\"https://www.fengyuwang.com/zh-cn/blog/posts/extreme-auto/\"","inLanguage":"zh-cn","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"极端行情里人工反应永远慢半拍：一套自研的自动防御系统用规则加股指期货空单吸收冲击。\"","keywords":"\"投资\""}</script>
+<style>
+
+
+
+
+
+
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>防御是设计出来的</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-11</span>
+        <span class="meta-sep">·</span>
+        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">投资</span>
+    </div>
+    <div class="article-content"><p>大跌那天，人是怎么反应不过来的？开盘半小时，指数跳水，跌得最快的那几分钟，人在做什么——盯着屏幕，犹豫，安慰自己这次不一样。等下定决心动作，最坏的一段已经过去了。下跌最猛的时间以分钟计，从看见到相信，从相信到行动，每一步都要时间，加起来就是最贵的那几步。极端行情里，人慢的从来不是判断，是反应。</p>
+<p>所以判断必须提前写死。有一套自研的极端行情自动防御系统：把触发条件写成规则，规则一旦触发，股指期货空单自动挂出，不需要任何人到场按下按钮。规则不睡觉，不犹豫，不看盘面脸色；该出手的那一秒，它就在那一秒。这套系统的本质，是用自动化的对冲工具，弥补人工交易在极端行情下的反应滞后，守住本金安全的底线。</p>
+<p>2021 年 7 月，A 股大跌。这套系统自动通过股指期货空单，吸收了极端波动的冲击，一组资金曲线在那个月创出新高。跌市里创新高，靠的不是把行情预测得多准，是规则早就写好，等的就是那一天。这里没有什么戏剧性：规则触发，空单挂出，冲击被对冲掉。戏剧性属于行情，平静属于设计。</p>
+<p>它躲不开三个质疑。一个一个接。</p>
+<p>第一个质疑最直接：黑天鹅是一瞬间的事，提前写好的规则，怎么覆盖没见过的行情。</p>
+<p>这个质疑听着有力，其实问错了对象。规则要覆盖的从来不是某一种具体行情，是反应速度这件事本身。人慢的是反应，不是判断——把判断提前写进规则，剩下的交给执行。极端波动的冲击，打的是慢的人。行情可以没见过，慢这个变量，早就见过了。写规则的人赌的不是方向，是承认自己会慢；愿意承认会慢的规则，比相信自己不会慢的人快。</p>
+<p>第二个质疑听起来更实惠：空单常年挂着，牛市里纯属拖累，不如满仓等涨，把这份成本省下来。</p>
+<p>省下来的正是保费。对冲的成本平时看得见，价值平时看不见，底线的意义只在极端那天兑现。牛市里嫌空单拖累的人，和出事那天懊悔没对冲的人，常常是同一个人。满仓等涨赚的是行情的钱，防线守住的是下一次还能出手的本钱。</p>
+<p>第三个质疑最釜底抽薪：期指门槛高，普通资金玩不起，这套东西与散户无关。</p>
+<p>无关的是工具，有关的是原理。极端行情来之前，路只有三条：要么有对冲，要么有现金，要么提前降仓。三条路任占一条，都算把防御设计进了组合；什么都不占，才是真正与防御无关。工具可以缺，设计不能缺。对冲不生产收益，它托住的是亏损的那一端；底线守住了，剩下的才轮得到判断说话。</p>
+<p>边界也要写清楚。这套系统不预测黑天鹅，只对冲黑天鹅的冲击；规则管的是反应速度，不管方向判断。方向本身看错，对冲救不了判断。它也不给任何当下的行情结论——2021 年 7 月那一役说的是机制，不是预告。</p>
+<p>最可惜的是那些把扛单当胆量的人：跌下来一动不动，不是定力好，是没得选，把没得选说成沉着，是最贵的一种错觉。</p>
+<p>回到开头。极端行情不考验谁的判断更准，考验谁的反应更快；快，不是临场练出来的，是提前设计出来的。防御也一样——是设计出来的，不是扛出来的。</p>
+</div>
+</article>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+</body>
+</html>
+
