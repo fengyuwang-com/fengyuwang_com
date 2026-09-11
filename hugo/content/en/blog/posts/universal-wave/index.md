@@ -1,0 +1,23 @@
+---
+title: "Waves Follow the Soil"
+date: 2026-09-11
+description: "Wave patterns are not universal truth; they grow out of a market's soil — seller's markets grow traditional waves, buyer's markets need a four-segment structure."
+slug: "universal-wave"
+tags: ["Investing"]
+draft: false
+translationKey: "universal-wave"
+---
+
+Why does the same wave theory count so neatly in US stocks, yet fail everywhere in A-shares? The first reaction is that the theory is outdated, or that the counting was wrong. Neither. A wave pattern is not universal truth; it grows out of a market's soil. Change the soil, and the waves that grow out of it must change.
+
+One framework puts this plainly: traditional wave theory fits the US registration-based system — scarce share supply, a seller's market. Under the A-share approval-based system, supply is abundant — a buyer's market — and traditional waves fail there. The difference is not in the charts; it is in the supply structure of chips. A market with scarce supply and a market with abundant supply are two different games: in one, goods are few and money is plenty, and participants bid against each other; in the other, goods are many and money is scarce, and prices are pressed down by supply. Feed the same rule into two structures, and the price action that grows out of it wears two faces. This is not a national trait; it is structural. Waves record the game between chips and money. When the raw material of the game changes, the shape of the record changes with it.
+
+On the soil of a buyer's market, this framework builds a different, four-segment structure: the bottom range, the main advance, the second rebound, and the main decline — built specifically for judging the large cycles of indices and sectors. Its use has nothing to do with prophecy: it does not forecast the market, it only verifies it — refusing to call tops and bottoms in advance, waiting for signals to appear, checking against them, then acting.
+
+Now the strongest counterargument: counting waves is mysticism. The same price action can be counted into whatever shape the counter wants to see; building another wave set for a buyer's market is a prettier mysticism. The blow lands hard, but on the wrong target. The problem with mysticism is not the waves; it is treating waves as prophecy — conclusion first, then bend the count to fit, and any count can be squared. The four-segment structure works in the opposite way: it is checked after the fact. Does the bottom range have a boundary? Has the main advance actually run? Has the second rebound confirmed? Has the main decline broken down? Every segment has observable edges. Miscount, admit it; no rewriting the count to save face. To call a checkable structure mysticism is to put a ruler and a fortune-telling stick into the same drawer.
+
+Second objection, from another direction: a tool should be universal. Tailoring a wave set to one market is cutting the foot to fit the shoe, pandering to the local — hardly a theory. That sounds fair, but it reads the causality backwards. The foundation of wave patterns is not aesthetics; it is chip supply. Different supply, different game; different game, different price structure. A tool following the structure is not pandering — it is calibration. Measure a tree with a ruler made for the wrong soil, and the error belongs to the ruler, not the tree. Admitting that structures have soil is the honesty a theory owes; claiming one ruler measures all soils is turning theory into faith.
+
+Third objection is the most practical: even if the four segments can be told apart, so what? Judging the large cycles of indices and sectors has no direct use for stock picking. This question strikes the foundation of the framework. The framework's order is indices and sectors first, individual stocks second, and waves govern exactly the first layer: where the market sits in its large cycle determines the direction of flexible positions and the pacing of adding to core positions. If the first layer is wrong, the second layer can be picked perfectly and still fail to recover the direction missed at the first layer. The bill for skipping the first layer was settled long ago by the market — winning the index while losing the stock is a bill the market settled long ago. The pity is not being wrong; it is being right in an order that never mattered.
+
+So: waves follow the soil. A seller's market grows traditional waves; a buyer's market grows the four-segment structure; tools calibrate to structure, and that is all. A ruler does not prophesy how tall the tree will grow; it only measures. Before measuring, ask one question: what soil is underfoot.
