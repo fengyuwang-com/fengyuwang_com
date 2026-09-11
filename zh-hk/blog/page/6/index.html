@@ -94,7 +94,7 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜尋文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/zh-hk/tags/%E5%B8%82%E5%A0%B4/">市場 (2)</a><a href="/zh-hk/tags/%E5%B8%82%E5%A0%B4%E5%AD%B8/">市場學 (3)</a><a href="/zh-hk/tags/%E7%AB%8B%E5%A0%B4/">立場 (2)</a><a href="/zh-hk/tags/%E6%8A%80%E8%A1%93/">技術 (45)</a><a href="/zh-hk/tags/%E6%8A%95%E8%B3%87/">投資 (53)</a><a href="/zh-hk/tags/%E7%A4%BE%E6%9C%83/">社會 (32)</a><a href="/zh-hk/tags/%E9%87%91%E8%9E%8D/">金融 (16)</a><a href="/zh-hk/tags/%E7%A7%91%E6%8A%80/">科技 (2)</a><a href="/zh-hk/tags/%E9%A2%A8%E9%9A%AA/">風險 (1)</a><a href="/zh-hk/tags/%E5%95%86%E6%A5%AD/">商業 (53)</a><a href="/zh-hk/tags/%E7%B5%84%E7%B9%94/">組織 (1)</a><a href="/zh-hk/tags/%E7%B6%93%E6%BF%9F/">經濟 (15)</a><a href="/zh-hk/tags/%E6%95%B8%E5%AD%B8/">數學 (1)</a></div>
+<div class="tag-cloud"><a href="/zh-hk/tags/%E5%B8%82%E5%A0%B4/">市場 (2)</a><a href="/zh-hk/tags/%E5%B8%82%E5%A0%B4%E5%AD%B8/">市場學 (3)</a><a href="/zh-hk/tags/%E7%AB%8B%E5%A0%B4/">立場 (2)</a><a href="/zh-hk/tags/%E6%8A%80%E8%A1%93/">技術 (45)</a><a href="/zh-hk/tags/%E6%8A%95%E8%B3%87/">投資 (56)</a><a href="/zh-hk/tags/%E7%A4%BE%E6%9C%83/">社會 (32)</a><a href="/zh-hk/tags/%E9%87%91%E8%9E%8D/">金融 (16)</a><a href="/zh-hk/tags/%E7%A7%91%E6%8A%80/">科技 (2)</a><a href="/zh-hk/tags/%E9%A2%A8%E9%9A%AA/">風險 (1)</a><a href="/zh-hk/tags/%E5%95%86%E6%A5%AD/">商業 (53)</a><a href="/zh-hk/tags/%E7%B5%84%E7%B9%94/">組織 (1)</a><a href="/zh-hk/tags/%E7%B6%93%E6%BF%9F/">經濟 (15)</a><a href="/zh-hk/tags/%E6%95%B8%E5%AD%B8/">數學 (1)</a></div>
 <div class="sort-shell">
     <label for="sortSelect">排序</label>
     <select id="sortSelect">
@@ -104,24 +104,6 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 </div>
 
 <div class="blog-grid" id="blogGrid">
-
-<a class="blog-card" href="/zh-hk/blog/posts/no-middleman/" data-title="我的服務器上傳，我的手機下載" data-summary="中間商不是技術必然，是地址稀缺的租。" data-date="2026-09-05" data-tags="技術">
-    <h3>我的服務器上傳，我的手機下載</h3>
-    <hr class="summary-divider"><div class="summary-text">中間商不是技術必然，是地址稀缺的租。</div>
-    <div class="blog-tags"><span>技術</span></div>
-</a>
-
-<a class="blog-card" href="/zh-hk/blog/posts/self-hosting-triple-value/" data-title="自部署的三重價值" data-summary="價格、隱私、環保——一重比一重實際。" data-date="2026-09-05" data-tags="技術">
-    <h3>自部署的三重價值</h3>
-    <hr class="summary-divider"><div class="summary-text">價格、隱私、環保——一重比一重實際。</div>
-    <div class="blog-tags"><span>技術</span></div>
-</a>
-
-<a class="blog-card" href="/zh-hk/blog/posts/who-controls-whom/" data-title="自主可控，到底誰可控" data-summary="自主可控是使用的人可控，不是開發公司可控。" data-date="2026-09-05" data-tags="技術">
-    <h3>自主可控，到底誰可控</h3>
-    <hr class="summary-divider"><div class="summary-text">自主可控是使用的人可控，不是開發公司可控。</div>
-    <div class="blog-tags"><span>技術</span></div>
-</a>
 
 <a class="blog-card" href="/zh-hk/blog/posts/annual-subscription-trap/" data-title="年費會員是一種鎖定" data-summary="月付買的是退路，年付是替廠商背現金流。" data-date="2026-09-05" data-tags="技術,經濟">
     <h3>年費會員是一種鎖定</h3>
@@ -175,6 +157,24 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
     <h3>Docker 就是個軟件商店</h3>
     <hr class="summary-divider"><div class="summary-text">名詞是給工程師的，動作是給用户的。</div>
     <div class="blog-tags"><span>技術</span><span>商業</span></div>
+</a>
+
+<a class="blog-card" href="/zh-hk/blog/posts/cuda-moat/" data-title="CUDA 是護城河，還是一段能被翻譯的代碼？" data-summary="語法是護城河的上沿，生態是河牀；翻譯器吃掉上沿，吃不掉河牀。" data-date="2026-09-05" data-tags="技術">
+    <h3>CUDA 是護城河，還是一段能被翻譯的代碼？</h3>
+    <hr class="summary-divider"><div class="summary-text">語法是護城河的上沿，生態是河牀；翻譯器吃掉上沿，吃不掉河牀。</div>
+    <div class="blog-tags"><span>技術</span></div>
+</a>
+
+<a class="blog-card" href="/zh-hk/blog/posts/ai-no-bubble/" data-title="AI 沒有泡沫，AI 股票有" data-summary="能證偽的是利潤，不是生產力。" data-date="2026-09-05" data-tags="金融,技術,投資">
+    <h3>AI 沒有泡沫，AI 股票有</h3>
+    <hr class="summary-divider"><div class="summary-text">能證偽的是利潤，不是生產力。</div>
+    <div class="blog-tags"><span>金融</span><span>技術</span><span>投資</span></div>
+</a>
+
+<a class="blog-card" href="/zh-hk/blog/posts/frameworks-after-ai/" data-title="AI 全都會寫了，框架還剩什麼" data-summary="AI 吃掉的是血肉，吃不掉骨架。" data-date="2026-09-05" data-tags="技術">
+    <h3>AI 全都會寫了，框架還剩什麼</h3>
+    <hr class="summary-divider"><div class="summary-text">AI 吃掉的是血肉，吃不掉骨架。</div>
+    <div class="blog-tags"><span>技術</span></div>
 </a>
 
 </div>
