@@ -18,6 +18,14 @@
 
 ## 定时写作任务（2026-09-12 站长令：每 5 分钟唤醒；子代理写正文、主代理选题/查重/主观审读/门禁/推送）
 
+本轮（第 34 轮唤醒）产出：
+- [x] 第 145 篇 nobody-fired-for-ibm《选贵的那家，买的是免责》三语齐备：CYA=cover your ass，企业采购贵价里藏职业保险费——选 Microsoft/IBM 永不被批评，便宜一半功能齐全照样落选；反方（大厂稳定论=接一半：参数表上没有"出错时谁来背"一栏/试错便宜论=免责按次收费/胆小鬼文化论=没人有义务先当烈士/自建论=IT 预算工期从没估准过，自建是换一口锅）；语料源 CRM Implementation Plan_727234.md
+- [x] 第 146 篇 culture-one-hundred-million《一亿美元以下的方案，免谈》三语齐备：AIG 东京提案第三四页被纽约 CEO 打断（文化底线=增量收入≥$100M）+ Salesforce 全球单落地东京无人知情没做成——文化是提案的第一读者；反方（武断论=筛子收费论/方案不好论=毙掉它的是页数/总部越权论=签了约也能不发生/先改文化论=责任反了先摸门槛）；同源
+- [x] 第 147 篇 end-user-absent《那套系统是猜出来的》三语齐备：30 年前香港救火亲历，数百万美元 CRM"完全错误"，病因"他们不想参与"——沉默是被问过白问训练出来的，缺席失败不是技术失败；反方（猜错≠失职论=错在猜到底/用户不参与论=沉默是设计出来的/MVP 已解决论=新工具装着旧缺席/进度即价值论=上线后错误长成事实）；同源
+- [x] 主观审读：nobody/end-user 逐篇 PASS；culture L33 元话语"本轮"打回——主代理亲修三语（→"这里只说一件事"）；主代理 regex 实测 1018/1020/1030 汉字、en 717/640/646 词（子代理自报完全吻合）；"cover your ass"系 brief ② 授权引文豁免（zh 1 处，r31 先例）；0 說/粤字/直角引号/你-you/「」
+- [x] 门禁：--article 9/9 OK + hugo 构建+deploy+check_site --no-dark 全绿，三语各 193 篇；commit fcadad91 已推 dev
+- [x] 语料矿脉：727234（263 行）与 911106（129 行，同课中译互证）本轮采三条，CRM 实施线收网（余料： Papua New Guinea 测试市场、麦记薯条→Amazon 书→雅诗兰黛 ANR 推荐链"you want fries with that"、project outcome vs business outcome 双账本已并入 147）；老客经济学 798338 残段（60-70%/20%/7x）与 retention-5to1 同族暂避；下轮候选（已验行数，未读内容）：Creating Perceived Value in Products_551874（905 行）、Business Growth Strategies_498242（1313 行）、Fast Retailing's Growth and Strategy_286914（538 行）、Apple's Sales Decline in China_417602（406 行）
+
 本轮（第 33 轮唤醒）产出：
 - [x] 第 142 篇 hold-the-reservation《订位容易，留位难》三语齐备：Seinfeld 租车预订桥段（会接≠会留）+主管表演式服务；反方（超售合理论=惯例前提是承担后果/系统背锅论=系统放大流程的缺/补救无用论=结案方式才是罪）；语料源 Customer Service Automation_240130.md（Seinfeld 段 L6-24）
 - [x] 第 143 篇 remembered-name《被记住名字的那一刻》三语齐备：日本面部识别售货机"欢迎回来，吉恩"+雷先生周五马提尼（连点都不用开口）——服务的最小单位是一个名字，技术只是规模化；反方（新鲜感衰减论=腻的是被方式记住/成本倒挂论=识别驱动复购/机器廉价论=人情在内容里/冷市场论=越冷越值钱）；同源；品牌名转写 garbled（露得清/Proactiv 混淆），正文按 brief 只写"一家美国祛痘品牌"
