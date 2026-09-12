@@ -6,8 +6,15 @@
     <description>Recent content in Business on Fengyu WANG</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.fengyuwang.com/en/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Person, Hundreds of AI Employees: Translated into Engineering, It&#39;s Five Layers</title>
+      <link>https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</link>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</guid>
+      <description>&lt;p&gt;The phrase &amp;ldquo;one-person company&amp;rdquo; sounds like a consolation prize — a dignified label for a startup that failed. My version is an engineering problem: a firm with exactly one human, running hundreds of AI employees, with AI leading AI. The chairman does two things only — sets targets, signs acceptances.&lt;/p&gt;&#xA;&lt;p&gt;Slogans are cheap. The trouble is they have to land. Hundreds of employees: how are they staffed? Who approves when work goes wrong? How are lessons reviewed? Staffing, approval, review — all of them organizational problems, not intelligence problems. Org theory was written for people; software engineering was written for code. Hundreds of AI employees sit stuck in between: they need organizational discipline, yet can only be implemented as code.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Money That Doesn&#39;t Bet on Direction</title>
       <link>https://www.fengyuwang.com/en/blog/posts/spread-not-direction/</link>
