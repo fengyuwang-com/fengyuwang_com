@@ -7,7 +7,7 @@
     <language>en</language>
     <generator>Hugo</generator>
     <atom:link href="https://www.fengyuwang.com/en/blog/" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 13 Sep 2026 01:38:57 &#43;0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 02:22:42 &#43;0800</lastBuildDate>
     
     <item>
       <title>Leverage Can&#39;t Buy Time</title>
@@ -40,6 +40,47 @@
 </description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 &#43;0000</pubDate>
       <category>Investing</category><category>Marketing</category>
+    </item>
+    
+    <item>
+      <title>One Person, Hundreds of AI Employees: Translated into Engineering, It&#39;s Five Layers</title>
+      <link>https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</link>
+      <guid isPermaLink="true">https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</guid>
+      <description>&lt;p&gt;The phrase &amp;ldquo;one-person company&amp;rdquo; sounds like a consolation prize — a dignified label for a startup that failed. My version is an engineering problem: a firm with exactly one human, running hundreds of AI employees, with AI leading AI. The chairman does two things only — sets targets, signs acceptances.&lt;/p&gt;
+&lt;p&gt;Slogans are cheap. The trouble is they have to land. Hundreds of employees: how are they staffed? Who approves when work goes wrong? How are lessons reviewed? Staffing, approval, review — all of them organizational problems, not intelligence problems. Org theory was written for people; software engineering was written for code. Hundreds of AI employees sit stuck in between: they need organizational discipline, yet can only be implemented as code.&lt;/p&gt;
+&lt;h2 id=&#34;one-sentence-of-vision-five-layers-of-engineering&#34;&gt;One sentence of vision, five layers of engineering&lt;/h2&gt;
+&lt;p&gt;Break the vision down and the pain points fall into three: AI employees don&amp;rsquo;t know how to organize themselves, don&amp;rsquo;t know how to collaborate with humans, don&amp;rsquo;t know where to look things up. Translate further and the answer converges into five layers. Skip any one and the structure falls:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intent: one target from the chairman, plus a signature;&lt;/li&gt;
+&lt;li&gt;Organization: the brain that has AI lead AI — who works, how they are staffed, how work is handed over, how it is accepted;&lt;/li&gt;
+&lt;li&gt;Talent: where qualified &amp;ldquo;people&amp;rdquo; for each specialty come from;&lt;/li&gt;
+&lt;li&gt;Execution: the command-line engines that actually do the work;&lt;/li&gt;
+&lt;li&gt;Safeguards: approval, memory, notification, knowledge.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-waist-is-what-goes-missing-first&#34;&gt;The waist is what goes missing first&lt;/h2&gt;
+&lt;p&gt;The list reads backward too. The earliest mistake was treating a parts list as the architecture: picking approval tools, memory tools, notification tools one by one — dressing up layer-five patches as the whole design. Once that was seen clearly, the order fixed itself: patches are layer five&amp;rsquo;s business; the main course is layer two.&lt;/p&gt;
+&lt;p&gt;Of the five layers, the organization layer is the one most often skipped. This pit was paid for: talent library and execution engine both in hand, work dispatched straight past staffing, batch-summoning the same generic &amp;ldquo;developer.&amp;rdquo; Talent became a crowd of day laborers; strong execution made them no less headless. The organization layer is the waist of the whole structure.&lt;/p&gt;
+&lt;p&gt;The open-source organization manual found later had a command structure isomorphic to chairman → CEO → specialist AI, and staffing in three sizes: 5 to 10 roles for micro, 15 to 25 for a sprint, and full. How to staff hundreds of AI employees — those three sizes are the answer. No fourth needs inventing.&lt;/p&gt;
+&lt;h2 id=&#34;275-roles-21-hired&#34;&gt;275 roles, 21 hired&lt;/h2&gt;
+&lt;p&gt;The talent layer paid tuition in plainer numbers. A library of 275 specialist roles in Chinese, reviewed one by one: one third gems, two thirds empty shells. In the end 21 were hired — 25 slots in total inside the orchestrator. From 275 down to 21, with no mercy for the cut. &amp;ldquo;Rather none than mediocre&amp;rdquo; applies to AI employees as much as to people.&lt;/p&gt;
+&lt;h2 id=&#34;cost-is-a-hard-constraint&#34;&gt;Cost is a hard constraint&lt;/h2&gt;
+&lt;p&gt;Execution closed the loop first: chosen from 40-plus candidate projects after source-level review; an official example run cost $0.0095 — under a cent. Cheap as it is, cost stays a hard constraint: API balances burned out, prepaid subscriptions burned out, and at the tightest moments free models served as the bypass for verification. A small-field exercise with three selected roles still hasn&amp;rsquo;t been fought — it waits on one thing: a ruling on cost accounting. Every step the blueprint takes, an invoice follows.&lt;/p&gt;
+&lt;h2 id=&#34;safeguards-first-name-what-is-being-defended-against&#34;&gt;Safeguards: first, name what is being defended against&lt;/h2&gt;
+&lt;p&gt;The collaboration pain point lands on the approval gate. In the vision the chairman only signs; in engineering, a signature means: before an AI takes a high-risk action — emailing a client, spending budget, dropping a database — it asks first, and the ask arrives as an approval card pushed to a phone. A policy engine auto-allows and auto-denies by rule; the rest goes to a human, with an audit log throughout.&lt;/p&gt;
+&lt;p&gt;A one-person company has no colleagues watching; internal control matters more, not less. Signing authority is an organizational problem, not a technical one. Fixed flows go through a manual approval gate in the pipeline; fluid scenarios go through runtime approval. Two legs, each covering half the ground.&lt;/p&gt;
+&lt;p&gt;The other four safeguards answer four kinds of failure. Memory, against AI forgetting when done — a stated reply preference should already be known to the next recruit on the first day. Notification, against work finished and no one knowing — a contract cleared at midnight should reach the chairman&amp;rsquo;s phone for a signature. Knowledge supply, against blindness — ask a finance AI about last month&amp;rsquo;s spending and it digs the ledger, instead of asking back where the data is. Acceptance benchmarks, against good-enough-by-whose-standard — the same task graded against an industry benchmark, role by role; only passing scores become permanent. The first three layers are offense; the safeguard layer is defense: able to work, and also unable to fail silently, run wasted, go unheard, or forget.&lt;/p&gt;
+&lt;h2 id=&#34;review-the-shopping-list-cut-to-one-line&#34;&gt;Review: the shopping list cut to one line&lt;/h2&gt;
+&lt;p&gt;The safeguard layer deserves the best review. At stocktaking, four layers were closed; the fifth was the gap. The first move was shopping to fill blanks — approval, memory, notification, knowledge, acceptance: five gaps, five open-source projects, a tidy list. The search was honest: current reality checked by search, not old memory, each project matched to its gap after reading.&lt;/p&gt;
+&lt;p&gt;The review flipped the conclusion. Four of the five exist natively in the platform — approval is the CEO asking directly before a high-risk action; memory is the project&amp;rsquo;s memory files; notification is a written polling script; acceptance swaps in another agent to grade. One true gap remained: letting every AI employee read the company&amp;rsquo;s documents.&lt;/p&gt;
+&lt;p&gt;A shopping list cut to one line. The lesson, on record: attitude is not review — the list has to be re-audited against the ground.&lt;/p&gt;
+&lt;h2 id=&#34;locked-into-one-skill&#34;&gt;Locked into one Skill&lt;/h2&gt;
+&lt;p&gt;The organization layer finally hardened into a manual packed into a single Skill. Give it a target in one sentence — review this contract, produce a risk assessment — and it judges staffing on its own, summons a legal-review role that ships with acceptance criteria, splits the work across seven phases, gates each one, and aggregates reports up to a signature. The discipline is written hard: evidence outranks claims; fail the gate and the work goes back, three strikes at most; handovers must carry templates — a number in the org manual puts 73 percent of collaboration failures at the handover boundary. One iron rule presses on the bottom: the CEO never writes code. It orchestrates.&lt;/p&gt;
+&lt;h2 id=&#34;where-this-does-not-apply&#34;&gt;Where this does not apply&lt;/h2&gt;
+&lt;p&gt;The five layers have clear edges. They answer one question: how to staff hundreds of AI employees. One human with one AI doing scattered tasks needs one layer, not five — everything past the first is a sledgehammer on a chicken. Nor is this an automation utopia: the chairman&amp;rsquo;s two jobs — setting targets, signing — are the only parts of the design not outsourced. The more automatic the five layers become, the heavier those two get.&lt;/p&gt;
+&lt;p&gt;One question is left: where does the human stand in the five layers? Not inside a layer — at every layer&amp;rsquo;s door. The target enters at the intent layer; rejected work goes back at the gate; the signature happens at the approval door. Task-level human-AI collaboration already has a standard answer in the open-source world; the organization-level link is what remains — the structure is laid out on the site&amp;rsquo;s &lt;a href=&#34;https://www.fengyuwang.com/en/human-in-the-loop.html&#34;&gt;Feng Human-in-the-Loop&lt;/a&gt; page.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <category>Tech</category><category>Business</category>
     </item>
     
     <item>
@@ -397,27 +438,6 @@
 &lt;p&gt;Mania, confusion, despair — none of what we&amp;rsquo;re going through now is happening for the first time, and none of it will be the last. The cycle will return, and so will the harvest. When it comes again next time, will your name be on the list — or off it?&lt;/p&gt;
 </description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 &#43;0000</pubDate>
-      <category>Investing</category>
-    </item>
-    
-    <item>
-      <title>Valuation&#39;s First Cut Is a Pair of Scissors</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/sum-of-parts/</link>
-      <guid isPermaLink="true">https://www.fengyuwang.com/en/blog/posts/sum-of-parts/</guid>
-      <description>&lt;p&gt;The same company, two PE ratios: one says cheap, one says expensive, each waving a historical percentile. The question is not which number is right; it is that a single PE cannot cover a company. Total market cap divided by total profit — one divisor flattens every difference between segments. The first cut of valuation should not land on a calculator. It should land on scissors: split the company open first, then talk about what it is worth.&lt;/p&gt;
-&lt;h2 id=&#34;one-divisor-flattens-everything&#34;&gt;One Divisor Flattens Everything&lt;/h2&gt;
-&lt;p&gt;PE is total market cap over total profit. One divisor erases segment differences — assets priced like cigar butts can sit beside businesses priced like bubbles, all folded in half and folded again inside one multiple. Someone will say valuation is not that mystical: look up the PE&amp;rsquo;s historical percentile, and cheap or expensive is plain at a glance. That argument assumes the whole company wears one face. In reality a company is often a bundle of several businesses — one earns hard money, one lives off a license, one tells a story. Reading a percentile over the bundle means pricing three different things at the same number.&lt;/p&gt;
-&lt;p&gt;So one system writes the rule in stone: no single PE or PEG, no sell-side linear optimism. Split the company into independent business segments. Find a global or domestic benchmark leader for each. Convert each segment into a market value by ratio of revenue and market share. Add all segments together to get intrinsic value. If the current market cap stands far below that sum, there is a margin of safety. Five steps; not one is optional.&lt;/p&gt;
-&lt;h2 id=&#34;split-hengrui-and-the-numbers-sit-on-the-table&#34;&gt;Split Hengrui and the Numbers Sit on the Table&lt;/h2&gt;
-&lt;p&gt;A pharmaceutical company makes the test. Hengrui splits into three businesses — oncology, anesthesia, contrast agents — benchmarked against Roche, Humanwell, and Beilu respectively. Added up, they give a reasonable center of value; set against the market cap of the time, the conclusion was a large premium. The judgment has a handrail: the constraint on benchmarking lives in the conversion ratios of share and revenue, not in imagination. The gap between the summed value and the market price is exactly where the margin of safety comes from. The finer the split, the harder to cherry-pick only the pretty segment.&lt;/p&gt;
-&lt;p&gt;The hard part is not the splitting; it is the willingness to throw the story away. Sell-side forecasts stretching to 2030 — none of it enters the valuation. Only assets, revenue, and cash flow that already exist on the ground today count. The objection goes: benchmarking measures the present, but growth stocks are bought for the future. A distant story can serve as a reason to buy; it cannot serve as a basis of value. Folding the story into the market cap means advancing the share price against profits that do not yet exist. Such advances get repaid, and repayment arrives as a decline. Cash flow belongs to today, the story to next year; two ledgers that must never share one divisor.&lt;/p&gt;
-&lt;h2 id=&#34;benchmarks-picked-by-mouth&#34;&gt;Benchmarks Picked by Mouth?&lt;/h2&gt;
-&lt;p&gt;One more question: if the benchmark is just whoever the analyst picks, the same arithmetic can manufacture any conclusion. It sounds unanswerable, yet a segment-by-segment comparison is precisely the hardest thing to rig. Each conversion must survive scrutiny against shares of revenue; the gap after the parts are summed sits in the open. The analysis of CIMC Group is the extreme case: assume the entire marine equipment business loses everything and is written to zero, value only the land, and if the market cap still sits below the land&amp;rsquo;s equity, that is a real margin of safety. Hidden assets valued on their own, loss-making businesses zeroed before the sum — pessimism&amp;rsquo;s ruler used up first. Anyone assembling a conclusion would not dare split this way.&lt;/p&gt;
-&lt;p&gt;The worst-hit are ordinary investors who go all-in on one percentile: not lazy, just never handed a pair of scissors.&lt;/p&gt;
-&lt;h2 id=&#34;a-discount-left-after-the-splitting-deserves-the-name&#34;&gt;A Discount Left After the Splitting Deserves the Name&lt;/h2&gt;
-&lt;p&gt;The limits of this procedure are equally clear: it measures assets already on the ground, predicts nothing, and names no price target. What it gives is a benchmark — how far the market cap sits from that base, how deep the discount. A market cap far below the sum after the splitting is the reason to act; a premium after the sum means even the loveliest story is still a premium. Scissors in hand: cut first, then add, and only then reach for the calculator.&lt;/p&gt;
-</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 &#43;0000</pubDate>
       <category>Investing</category>
     </item>
     

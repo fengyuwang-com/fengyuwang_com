@@ -16,6 +16,13 @@
       <description>&lt;p&gt;Start with an idea that looks airtight: if I could borrow unlimited money and put all of it into Buffett&amp;rsquo;s company, then in theory, given enough time, I could earn unlimited money. Berkshire has compounded at nearly twenty percent annually for decades; once compounding rolls, the interest on my borrowing looks like pocket change. This isn&amp;rsquo;t speculation — this is standing next to history&amp;rsquo;s most successful compounding machine and collecting.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>One Person, Hundreds of AI Employees: Translated into Engineering, It&#39;s Five Layers</title>
+      <link>https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</link>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.fengyuwang.com/en/blog/posts/opc-five-layers/</guid>
+      <description>&lt;p&gt;The phrase &amp;ldquo;one-person company&amp;rdquo; sounds like a consolation prize — a dignified label for a startup that failed. My version is an engineering problem: a firm with exactly one human, running hundreds of AI employees, with AI leading AI. The chairman does two things only — sets targets, signs acceptances.&lt;/p&gt;&#xA;&lt;p&gt;Slogans are cheap. The trouble is they have to land. Hundreds of employees: how are they staffed? Who approves when work goes wrong? How are lessons reviewed? Staffing, approval, review — all of them organizational problems, not intelligence problems. Org theory was written for people; software engineering was written for code. Hundreds of AI employees sit stuck in between: they need organizational discipline, yet can only be implemented as code.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Scaling Is No Longer a Bigger Number</title>
       <link>https://www.fengyuwang.com/en/blog/posts/scaling-not-parameters/</link>
       <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
