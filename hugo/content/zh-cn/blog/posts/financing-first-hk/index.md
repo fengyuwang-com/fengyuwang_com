@@ -1,6 +1,6 @@
 ---
 title: "融资全球第一，涨幅没得看"
-date: 2026-09-11
+date: 2026-04-01
 description: "港交所把融资榜刷到了榜首，代价是十年期涨幅榜上找不到自己的名字。"
 slug: "financing-first-hk"
 tags: ["投资"]

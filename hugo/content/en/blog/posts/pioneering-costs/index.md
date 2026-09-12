@@ -1,6 +1,6 @@
 ---
 title: "Going First Means Paying Everyone's Tuition"
-date: 2026-09-11
+date: 2026-06-06
 description: "First-mover advantages are real, and so is the first-mover invoice; both pages of the ledger count."
 slug: "pioneering-costs"
 tags: ["Marketing"]

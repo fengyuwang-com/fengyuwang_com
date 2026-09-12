@@ -1,6 +1,6 @@
 ---
 title: The Answer in Four SIM Slots
-date: 2026-09-11
+date: 2026-08-31
 description: "Transsion became the king of African mobile phones without being the cheapest or the most advanced — its answers live in the user's circumstances: four SIM slots, a thirty-day battery, a camera tuned for dark skin."
 slug: users-not-tech
 tags: ["Marketing"]

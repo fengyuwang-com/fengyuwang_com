@@ -1,6 +1,6 @@
 ---
 title: "Why HTML Beats Word for Your CV"
-date: 2026-03-19
+date: 2025-09-03
 description: "Using HTML and CSS for your CV solves every formatting problem Word creates. Every pixel can be precisely controlled, layouts are consistent across devices, it is responsive, version-controllable, and exports perfectly to PDF."
 slug: "aihtml简历"
 tags: ["Tech"]

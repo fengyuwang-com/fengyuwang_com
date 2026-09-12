@@ -1,6 +1,6 @@
 ---
 title: "Lead Users Know Tomorrow's Demand First"
-date: 2026-09-11
+date: 2026-04-25
 description: "Lead users are already solving their own pain points; sticky information is there for the taking."
 slug: "lead-users-first"
 tags: ["Marketing"]

@@ -391,3 +391,4 @@
 - [x] twitter card（summary_large_image + title/desc/站点图）与 BreadcrumbList JSON-LD
 - [x] 逐篇 OG 生图与 webmention 挂账待办队列（需站长决策）；`/{lang}/tags/` 汇总页 404 预存在问题一并挂账
 - [x] hugo build + deploy 全绿；check_site --no-dark 全部通过；中文/英文/繁体冒烟抽验 TOC 锚点、阅读时长、mailto、归档、RSS=20
+- [x] 博客时间均匀化完成（2026-09-12 站长令）：205 篇已发布按原相对顺序自 2026-09-12 每 2 天回溯至 2025-07-31（tools/even_dates.py，draft 4 处不动），三语同步改写 612 文件；归档页 2026(128)/2025(77)；重建部署 check_site 全绿

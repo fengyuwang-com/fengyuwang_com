@@ -1,6 +1,6 @@
 ---
 title: "融資全球第一，漲幅沒得看"
-date: 2026-09-11
+date: 2026-04-01
 description: "港交所把融資榜刷到了榜首，代價是十年期漲幅榜上找不到自己的名字。"
 slug: "financing-first-hk"
 tags: ["投資"]

@@ -1,6 +1,6 @@
 ---
 title: "俄羅斯的國運，掛在油價上"
-date: 2026-09-11
+date: 2026-07-12
 description: "坐擁全球頂級資源儲量，經濟週期卻由美元和油價代管——漲靠油價，跌靠制裁，輪迴靠全球信貸放水。"
 slug: "russia-resource-cycle"
 tags: ["投資"]

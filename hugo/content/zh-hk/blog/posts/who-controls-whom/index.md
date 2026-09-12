@@ -1,6 +1,6 @@
 ---
 title: "自主可控，到底誰可控"
-date: 2026-09-05
+date: 2026-01-09
 description: "自主可控是使用的人可控，不是開發公司可控。"
 slug: "who-controls-whom"
 tags: ["技術"]

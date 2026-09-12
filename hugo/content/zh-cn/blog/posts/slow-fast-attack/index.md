@@ -1,6 +1,6 @@
 ---
 title: 慢慢打，才是快攻
-date: 2026-09-11
+date: 2026-07-26
 description: "最快的手是慢的手：盘中不操作，盘后才决策，积小胜为大胜。"
 slug: slow-fast-attack
 tags: ["投资"]

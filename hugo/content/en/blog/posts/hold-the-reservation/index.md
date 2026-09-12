@@ -1,6 +1,6 @@
 ---
 title: "Easy to Take a Booking, Hard to Keep It"
-date: 2026-09-11
+date: 2026-04-13
 description: "Anyone can accept a reservation; keeping it is the reservation. That is where service fails."
 slug: "hold-the-reservation"
 tags: ["Marketing"]

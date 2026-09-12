@@ -1,6 +1,6 @@
 ---
 title: "民用显卡之死"
-date: 2026-09-05
+date: 2025-11-08
 description: "算力变成了水电，没有人家自己发电。"
 slug: "consumer-gpu-dead"
 tags: ["技术"]

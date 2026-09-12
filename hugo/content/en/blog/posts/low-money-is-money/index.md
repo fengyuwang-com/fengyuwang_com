@@ -1,6 +1,6 @@
 ---
 title: "Low Money Is Still Money"
-date: 2026-09-11
+date: 2026-04-29
 description: "An ad researcher holding Pinduoduo stock gets offended daily by its own ads. Both facts together reveal the business."
 slug: "low-money-is-money"
 tags: ["Business"]

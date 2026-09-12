@@ -1,6 +1,6 @@
 ---
 title: "A Persona Is a Contract You Can't Exit"
-date: 2026-09-11
+date: 2026-06-04
 description: "Why does Lei Jun keep getting criticized? Because in 2011 he signed an invisible contract with consumers. A persona brings a premium — and sets the penalty for breach. And he cannot walk away."
 slug: "persona-as-contract"
 tags: ["Business"]

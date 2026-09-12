@@ -1,6 +1,6 @@
 ---
 title: "Scaling 不再是堆數字"
-date: 2026-09-11
+date: 2026-07-16
 description: "大模型行業花了五年時間把參數量當成進步本身，然後一筆一筆把這筆賬算錯了回去。Scaling 沒停，只是目標函數換了。"
 slug: "scaling-not-parameters"
 tags: ["科技"]

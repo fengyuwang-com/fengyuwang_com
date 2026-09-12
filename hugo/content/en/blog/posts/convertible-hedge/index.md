@@ -1,6 +1,6 @@
 ---
 title: "Bullish, But Not Stubborn"
-date: 2026-09-11
+date: 2026-03-04
 description: "When a hot sector gets expensive, swap the stock for its convertible bond: the drawdown gets cushioned, the sector upside stays."
 slug: "convertible-hedge"
 tags: ["Investing"]

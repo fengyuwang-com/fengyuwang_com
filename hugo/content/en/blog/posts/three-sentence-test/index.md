@@ -1,6 +1,6 @@
 ---
 title: "Three Sentences or Pass"
-date: 2026-09-11
+date: 2026-08-13
 description: "The first screen in fundamental research is not valuation but restatement: if a company's core, unchanging asset cannot be explained in three sentences, pass. Complexity is not depth; it is a source of error."
 slug: "three-sentence-test"
 tags: ["Investing"]

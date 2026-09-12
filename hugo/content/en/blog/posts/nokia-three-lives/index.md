@@ -1,6 +1,6 @@
 ---
 title: "Companies That Live a Century Keep Arriving as Outsiders"
-date: 2026-09-11
+date: 2026-05-27
 description: "Nokia changed trades three times in a century, entering each as an amateur; survival meant rewriting its own identity."
 slug: "nokia-three-lives"
 tags: ["Marketing"]

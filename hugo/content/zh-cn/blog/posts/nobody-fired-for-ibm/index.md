@@ -1,6 +1,6 @@
 ---
 title: "选贵的那家，买的是免责"
-date: 2026-09-11
+date: 2026-05-25
 description: "贵价里藏着一笔职业保险费，出事时没人追问当初是谁选的。"
 slug: "nobody-fired-for-ibm"
 tags: ["市场"]

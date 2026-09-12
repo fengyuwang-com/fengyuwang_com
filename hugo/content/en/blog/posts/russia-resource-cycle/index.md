@@ -1,6 +1,6 @@
 ---
 title: "Russia's Fortune Hangs on the Oil Price"
-date: 2026-09-11
+date: 2026-07-12
 description: "A country with world-class resource reserves still doesn't own its economic cycle — it rides the oil price up, sanctions down, and global credit through every loop."
 slug: "russia-resource-cycle"
 tags: ["Investing"]

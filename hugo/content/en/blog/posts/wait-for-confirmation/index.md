@@ -1,6 +1,6 @@
 ---
 title: "Wait for Confirmation"
-date: 2026-09-11
+date: 2026-09-04
 description: "Turning points cannot be predicted, but they can be confirmed — follow only valid breakouts, and let the 2B structure turn 'looks like a top' into 'safe to act'."
 slug: "wait-for-confirmation"
 tags: ["Investing"]

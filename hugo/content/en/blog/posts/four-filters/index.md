@@ -1,6 +1,6 @@
 ---
 title: "Be Greedy When Others Are Fearful, Written as Code"
-date: 2026-09-06
+date: 2026-01-23
 description: "Fear isn't a day; it's a structure."
 slug: "four-filters"
 tags: ["Finance", "Investing"]

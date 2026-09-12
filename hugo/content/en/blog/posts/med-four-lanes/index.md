@@ -1,6 +1,6 @@
 ---
 title: "Four Lanes, Four Scripts in Pharma"
-date: 2026-09-11
+date: 2026-05-13
 description: "Pharma is not one track but four businesses: blood products live on license-driven supply rigidity, traditional Chinese medicine on inventory cycles, innovative drugs on R&D spending, generics on centralized-procurement cycles. Same sector, entirely different scripts — ask which bowl each lane eats from before asking how long to hold."
 slug: "med-four-lanes"
 tags: ["Investing"]

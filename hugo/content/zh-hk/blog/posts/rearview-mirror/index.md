@@ -1,6 +1,6 @@
 ---
 title: "後視鏡認識論"
-date: 2026-09-06
+date: 2026-01-29
 description: "牌沒翻開之前，一切判斷都是後視鏡。"
 slug: "rearview-mirror"
 tags: ["金融", "社會", "投資"]

@@ -1,6 +1,6 @@
 ---
 title: "数据处死假设，不用道歉"
-date: 2026-09-11
+date: 2026-04-15
 description: "137 人的研究里三条行业直觉接连被数据打反；假设先死是研究的目的，不是事故。"
 slug: "hypotheses-die-first"
 tags: ["市场"]

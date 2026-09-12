@@ -1,6 +1,6 @@
 ---
 title: "十亿美元，按时间算才不冤"
-date: 2026-09-11
+date: 2026-02-20
 description: "对价高达十亿美元，账面上是六千万月活，实际买到的是绕开红海的入场时间。"
 slug: "buying-a-head-start"
 tags: ["市场"]

@@ -1,6 +1,6 @@
 ---
 title: "Stocks Are Just Chips to a Quant"
-date: 2026-09-11
+date: 2026-06-16
 description: "Quant managers really don't care about a stock's story — it has been desymbolized into a stream of numbers. But that is not a toy, it is a precision factory, and the worst thing a retail investor can do is imitate it."
 slug: "quant-desymbolization"
 tags: ["Investing"]

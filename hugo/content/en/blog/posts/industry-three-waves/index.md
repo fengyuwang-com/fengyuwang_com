@@ -1,6 +1,6 @@
 ---
 title: "A Sector Comes in Three Waves"
-date: 2026-09-11
+date: 2026-04-17
 description: "A sector upgrade arrives in three waves: base stations first, equipment next, the device-upgrade cycle last. Each wave crowns a different protagonist — ask which wave it is before asking what to hold."
 slug: "industry-three-waves"
 tags: ["Investing"]

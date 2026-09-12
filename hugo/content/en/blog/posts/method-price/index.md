@@ -1,6 +1,6 @@
 ---
 title: The Method That Publishes Its Own Price List
-date: 2026-09-11
+date: 2026-05-15
 description: "Every method that survives has a published price: long waits, heavy work, no lottery tickets, and misses even when the calls are right. Those costs are the definition, not the defect."
 slug: method-price
 tags: ["Investing"]

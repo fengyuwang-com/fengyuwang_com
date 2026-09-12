@@ -1,6 +1,6 @@
 ---
 title: "市场换了四副面孔"
-date: 2026-09-11
+date: 2026-05-07
 description: "四十年市场经济四副面孔：物资短缺、渠道溢价、流量品牌、AI 自动化。每一段什么为王，决定赛道池里该装什么。"
 slug: "market-four-stages"
 tags: ["投资"]

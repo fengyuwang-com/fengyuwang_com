@@ -1,6 +1,6 @@
 ---
 title: "后视镜认识论"
-date: 2026-09-06
+date: 2026-01-29
 description: "牌没翻开之前，一切判断都是后视镜。"
 slug: "rearview-mirror"
 tags: ["金融", "社会", "投资"]

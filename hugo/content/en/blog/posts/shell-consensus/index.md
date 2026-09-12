@@ -1,6 +1,6 @@
 ---
 title: "Shells Were Money Too. What Happened?"
-date: 2026-09-05
+date: 2026-01-01
 description: "Consensus collapses. The real question: what remains when it does?"
 slug: "shell-consensus"
 tags: ["Economy", "Finance"]

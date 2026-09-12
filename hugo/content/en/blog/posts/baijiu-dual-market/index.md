@@ -1,6 +1,6 @@
 ---
 title: "Baijiu Is a Cyclical Asset Too"
-date: 2026-09-11
+date: 2026-02-10
 description: "Demand for baijiu never went away; what cycles is the financial layer stacked on top of the drinking. Want to know if a commodity has entered its speculative phase? Watch how much of it gets hoarded."
 slug: "baijiu-dual-market"
 tags: ["Investing"]

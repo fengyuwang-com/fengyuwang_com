@@ -1,6 +1,6 @@
 ---
 title: "他们把质量也本土化了"
-date: 2026-09-11
+date: 2026-06-14
 description: "价格可以随乡，质量一旦跟着本土化，降下来的就不止是价格。"
 slug: "quality-localized-too"
 tags: ["市场"]

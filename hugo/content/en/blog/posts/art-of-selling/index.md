@@ -1,6 +1,6 @@
 ---
 title: "Knowing When to Sell Beats Knowing What to Buy."
-date: 2026-09-11
+date: 2026-02-08
 description: "The moment that decides whether you win or lose rarely happens at entry — selling is not the epilogue of buying, it is a craft of its own."
 slug: "art-of-selling"
 tags: ["Investing"]

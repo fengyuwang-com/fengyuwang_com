@@ -1,6 +1,6 @@
 ---
 title: "I Filed Docker a Cascading Bug"
-date: 2026-09-05
+date: 2025-11-22
 description: "A zero-byte file brought down the engine. Fix one, the next one appears."
 slug: "docker-cascade-bug"
 tags: ["Tech"]

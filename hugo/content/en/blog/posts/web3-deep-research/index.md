@@ -1,6 +1,6 @@
 ---
 title: "Web3 Deep Research & Analysis"
-date: 2026-07-05
+date: 2025-10-21
 description: "A comprehensive deep-dive into the Web3 industry: core concepts, regulatory frameworks across jurisdictions, business value analysis, enterprise adoption strategies, and five in-depth research topics covering stablecoins, RWA, AI+Web3, on-chain governance, and more."
 slug: "web3-deep-research"
 tags: ["Tech", "Society"]

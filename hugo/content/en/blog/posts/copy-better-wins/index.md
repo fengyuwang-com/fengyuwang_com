@@ -1,6 +1,6 @@
 ---
 title: "Tencent Wins by Copying Better"
-date: 2026-09-05
+date: 2025-11-10
 description: "Always the latest to build, the fastest to copy."
 slug: "copy-better-wins"
 tags: ["Business", "Tech"]

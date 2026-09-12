@@ -1,6 +1,6 @@
 ---
 title: "拔野草，澆鮮花"
-date: 2026-09-11
+date: 2026-09-06
 description: "漲跌從來不是加減倉的依據，墊在下面的是什麼才是——走弱高估的逐步減，景氣低估的持續加。"
 slug: "weeds-and-flowers"
 tags: ["投资"]

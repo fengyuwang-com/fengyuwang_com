@@ -1,6 +1,6 @@
 ---
 title: "財富不是錢，是使你能賺錢的東西"
-date: 2026-09-11
+date: 2026-06-12
 description: "賬上的數字可以蒸發，生產能力不能。《專業投機原理》裏那句被引了半個世紀的話，值得當成一條資產負債表的檢驗標準。"
 slug: "production-creates-wealth"
 tags: ["投資"]

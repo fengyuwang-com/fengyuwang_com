@@ -1,6 +1,6 @@
 ---
 title: "The Order Is the Knowledge"
-date: 2026-09-11
+date: 2026-04-27
 description: "Learning to invest is not collecting facts but installing an operating system in dependency order: four core courses read in sequence, two electives, and no substitute for the loop."
 slug: learning-path
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Elon Musk Five-Step Working Method"
-date: 2026-04-16
+date: 2025-09-21
 description: "The value of Elon Musk five-step method is not its novelty but how it distils key engineering principles into actionable steps with a clear priority order."
 slug: "马斯克的五步工作法"
 tags: ["Business", "Tech"]

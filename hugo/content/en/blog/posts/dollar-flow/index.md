@@ -1,6 +1,6 @@
 ---
 title: "The Dollar Gate"
-date: 2026-09-11
+date: 2026-03-20
 description: "The dollar is the gate of global capital: read the gate, and the external water level makes sense."
 slug: "dollar-flow"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Why PCs Never Got Their Own Android"
-date: 2026-09-05
+date: 2025-12-24
 description: "What's missing isn't technology — it's the power to set a standard."
 slug: "pc-no-android"
 tags: ["Tech"]

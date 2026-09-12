@@ -1,6 +1,6 @@
 ---
 title: "没有游戏，就没有微信和 CUDA"
-date: 2026-09-05
+date: 2025-12-04
 description: "游戏是孵化器；孵化器里的东西，往往不是孵化者亲手接生的。"
 slug: "game-incubator"
 tags: ["商业", "技术"]

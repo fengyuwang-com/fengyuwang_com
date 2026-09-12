@@ -1,6 +1,6 @@
 ---
 title: "Telling Time Is Free, What Gets Worn Is Not"
-date: 2026-09-11
+date: 2026-08-15
 description: "Once the function is free, the price moves into meaning."
 slug: "time-is-free"
 tags: ["Marketing"]

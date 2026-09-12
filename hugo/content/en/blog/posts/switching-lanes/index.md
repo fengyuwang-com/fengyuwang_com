@@ -1,6 +1,6 @@
 ---
 title: "Tracks Are Rented, Discipline Is Yours"
-date: 2026-09-11
+date: 2026-08-09
 description: "Rotation is not chasing what is hot; it is switching lanes and redeploying positions when two triggers fire — a reversal in interest rates, a reversal in industry momentum. While the triggers stay silent, not one step; once they fire, the old lane gets handed back. The lane changes; the ruler and the discipline do not."
 slug: "switching-lanes"
 tags: ["Investing"]

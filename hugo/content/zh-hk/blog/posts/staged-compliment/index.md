@@ -1,6 +1,6 @@
 ---
 title: "那聲誇獎是安排好的"
-date: 2026-09-11
+date: 2026-08-03
 description: "第五聲誇獎才讓人反應過來,體驗可以真誠,真誠可以排練。"
 slug: "staged-compliment"
 tags: ["市場"]

@@ -1,6 +1,6 @@
 ---
 title: "A Good Company Is Not a Good Stock"
-date: 2026-09-11
+date: 2026-04-09
 description: "A good stock equals a good company plus an undervalued gap; paying any price for a great company is the most common form of pseudo-value investing."
 slug: "good-company-good-stock"
 tags: ["Investing"]

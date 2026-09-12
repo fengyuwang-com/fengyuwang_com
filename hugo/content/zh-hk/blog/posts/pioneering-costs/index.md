@@ -1,6 +1,6 @@
 ---
 title: "系統過時了，忠誠還在續費"
-date: 2026-09-11
+date: 2026-06-06
 description: "先發優勢是真的，先發票據也是真的，兩頁賬不能只看一頁。"
 slug: "pioneering-costs"
 tags: ["市場"]

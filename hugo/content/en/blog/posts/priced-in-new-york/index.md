@@ -1,6 +1,6 @@
 ---
 title: "Priced in New York, Traded in Hong Kong"
-date: 2026-09-11
+date: 2026-06-10
 description: "Southbound money bought a record quarter and still doesn't set tech-stock prices. The session that prices Hong Kong opens nightly in New York."
 slug: "priced-in-new-york"
 tags: ["Investing"]

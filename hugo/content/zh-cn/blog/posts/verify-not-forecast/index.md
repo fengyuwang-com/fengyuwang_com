@@ -1,6 +1,6 @@
 ---
 title: "不预测，只验证"
-date: 2026-09-11
+date: 2026-09-02
 description: "预测和验证是两门相反的手艺：预测先有结论再找证据，验证先定标准等市场表态。"
 slug: "verify-not-forecast"
 tags: ["投资"]

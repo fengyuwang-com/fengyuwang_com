@@ -1,6 +1,6 @@
 ---
 title: "精算师也预测不了未来"
-date: 2026-09-11
+date: 2026-02-04
 description: "保险的本质是对未来定价，而没有人能预测未来。这门生意活下来的技术，不是算得准，是留得厚。"
 slug: "actuary-cant-predict"
 tags: ["投资"]

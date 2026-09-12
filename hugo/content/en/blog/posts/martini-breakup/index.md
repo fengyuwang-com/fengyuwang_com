@@ -1,6 +1,6 @@
 ---
 title: "The Day the Martini Shrank"
-date: 2026-09-11
+date: 2026-05-09
 description: "Fifteen years of Thursdays, settled by one downsized martini."
 slug: "martini-breakup"
 tags: ["Marketing"]

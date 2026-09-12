@@ -1,6 +1,6 @@
 ---
 title: "遊戲一小時就陽痿，代碼十八小時"
-date: 2026-09-05
+date: 2025-11-14
 description: "心流不是玄學，是所有權的副產品。"
 slug: "cyber-impotence"
 tags: ["社會", "經濟"]

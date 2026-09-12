@@ -1,6 +1,6 @@
 ---
 title: "買分歧，賣共識"
-date: 2026-09-11
+date: 2026-02-16
 description: "超額收益的進出時點不在價格裏，在人群的意見分佈裏：分歧最大處買入，共識形成時離場。"
 slug: "buy-diversiveness"
 tags: ["投資"]

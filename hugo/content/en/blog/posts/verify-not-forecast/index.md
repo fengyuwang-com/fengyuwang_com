@@ -1,6 +1,6 @@
 ---
 title: "Verify, Don't Forecast"
-date: 2026-09-11
+date: 2026-09-02
 description: "Forecasting and verification are opposite crafts: one starts with a conclusion and hunts for evidence, the other sets criteria first and lets the market answer."
 slug: "verify-not-forecast"
 tags: ["Investing"]

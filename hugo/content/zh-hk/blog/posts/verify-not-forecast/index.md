@@ -1,6 +1,6 @@
 ---
 title: "不預測，只驗證"
-date: 2026-09-11
+date: 2026-09-02
 description: "預測和驗證是兩門相反的手藝：預測先有結論再找證據，驗證先定標準等市場表態。"
 slug: "verify-not-forecast"
 tags: ["投資"]

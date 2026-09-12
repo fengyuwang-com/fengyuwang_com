@@ -1,6 +1,6 @@
 ---
 title: "貴不貴，要看跟誰比"
-date: 2026-09-11
+date: 2026-03-06
 description: "估值不是絕對數，是坐標——跟同業比、跟歷史週期比、跟海外對標比，賺的是價差博弈的錢，不賭絕對價格高低。"
 slug: "coordinate-principle"
 tags: ["投資"]

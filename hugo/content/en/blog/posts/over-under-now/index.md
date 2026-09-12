@@ -1,6 +1,6 @@
 ---
 title: "What's Overrated, What's Underrated"
-date: 2026-09-11
+date: 2026-06-02
 description: "Judge overrated versus underrated not by price but by narrative density: overrated is the part with stories and no execution; underrated is the sector whose fundamentals are fine but whose attention has been pulled away. Over- and under-rating is an attention problem, not a value problem."
 slug: "over-under-now"
 tags: ["Investing"]

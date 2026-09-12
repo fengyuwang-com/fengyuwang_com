@@ -1,6 +1,6 @@
 ---
 title: Slow Is the Fast Attack
-date: 2026-09-11
+date: 2026-07-26
 description: "The fastest hand is the slow one: no trades during the session, decisions after the close, small wins compounding into big ones."
 slug: slow-fast-attack
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "顶部五个信号，底部五个信号"
-date: 2026-09-11
+date: 2026-08-17
 description: "顶和底不用猜，用数：十个可观测的信号，数出来的位置感比猜出来的点位可靠。"
 slug: "top-bottom-signals"
 tags: ["投资"]

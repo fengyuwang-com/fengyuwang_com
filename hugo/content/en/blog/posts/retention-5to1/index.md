@@ -1,6 +1,6 @@
 ---
 title: One Point Of Retention, Five Points Of Profit
-date: 2026-09-11
+date: 2026-07-04
 description: "An insurer pushed its lapse-prediction model from 89% to 92%, and every point of retention added about 5% to the bottom line. The old nest of profit is not new business; it is the customers who stay."
 slug: retention-5to1
 tags: ["Marketing"]

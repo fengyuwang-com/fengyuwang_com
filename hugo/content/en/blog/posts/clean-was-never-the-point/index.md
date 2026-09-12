@@ -1,6 +1,6 @@
 ---
 title: "Clean Was Never the Point"
-date: 2026-09-11
+date: 2026-02-26
 description: "Belief is not an ad line; it is a ledger. Only delivery gives soap pricing power."
 slug: "clean-was-never-the-point"
 tags: ["Marketing"]

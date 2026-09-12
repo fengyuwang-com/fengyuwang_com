@@ -1,6 +1,6 @@
 ---
 title: "The Feigou Plan: Essentially, I'm Selling Insurance"
-date: 2026-09-05
+date: 2025-11-30
 description: "Turn an 8,000-yuan subscription into a 1,500-yuan buyout."
 slug: "feigou-haas"
 tags: ["Business", "Tech"]

@@ -1,6 +1,6 @@
 ---
 title: Buy, Then the Homework Starts
-date: 2026-09-11
+date: 2026-02-18
 description: "Buying is not the finish line: three tracking rulers — asset anchor, earnings anchor, industry inflection — must be checked on a schedule, and once the core logic breaks, exit unconditionally. There is no long-termism that holds to the bitter end."
 slug: buy-then-work
 tags: ["Investing"]

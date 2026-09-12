@@ -1,6 +1,6 @@
 ---
 title: "Rolling the Cost Basis to Zero"
-date: 2026-09-11
+date: 2026-03-08
 description: "Expose your principal to the market only once; let paper gains do the carrying. Split one ledger into two, and roll the cost basis down to zero."
 slug: "cost-to-zero"
 tags: ["Investing"]

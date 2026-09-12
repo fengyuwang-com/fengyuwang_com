@@ -1,6 +1,6 @@
 ---
 title: "訂位容易，留位難"
-date: 2026-09-11
+date: 2026-04-13
 description: "接受預訂人人都會，守住預訂才是預訂的本體。"
 slug: "hold-the-reservation"
 tags: ["市場"]

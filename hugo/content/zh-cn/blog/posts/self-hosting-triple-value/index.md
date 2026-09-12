@@ -1,6 +1,6 @@
 ---
 title: "自部署的三重价值"
-date: 2026-09-05
+date: 2025-12-30
 description: "价格、隐私、环保——一重比一重实际。"
 slug: "self-hosting-triple-value"
 tags: ["技术"]

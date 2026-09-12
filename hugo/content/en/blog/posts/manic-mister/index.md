@@ -1,6 +1,6 @@
 ---
 title: "Mr. Market Is Manic-Depressive"
-date: 2026-09-11
+date: 2026-05-05
 description: "The efficient market is a textbook assumption; the real Mr. Market is a manic-depressive whose quotes are often laughably absurd. The market's irrationality is not a flaw — it is the entire source of long-term returns. Cure the market's illness and you kill the returns with it."
 slug: "manic-mister"
 tags: ["Investing"]

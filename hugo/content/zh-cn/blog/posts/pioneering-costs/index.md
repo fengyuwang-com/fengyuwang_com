@@ -1,6 +1,6 @@
 ---
 title: "先发不是抢跑，是垫付学费"
-date: 2026-09-11
+date: 2026-06-06
 description: "先发优势是真的，先发票据也是真的，两页账不能只看一页。"
 slug: "pioneering-costs"
 tags: ["市场"]

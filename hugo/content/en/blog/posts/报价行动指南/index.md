@@ -1,6 +1,6 @@
 ---
 title: "Pricing Strategy Guide for Every Platform"
-date: 2026-05-25
+date: 2025-10-13
 description: "Pricing is not cost-plus. It is a dynamic decision based on channels, customer psychology, and competitive landscape. Different platforms have completely different user behaviours that require different pricing strategies."
 slug: "报价行动指南"
 tags: ["Business", "Society"]

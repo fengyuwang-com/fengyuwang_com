@@ -1,6 +1,6 @@
 ---
 title: "This Didn't Have to Happen"
-date: 2026-09-06
+date: 2026-01-25
 description: "A 90-minute window; a 5-second run."
 slug: "it-was-avoidable"
 tags: ["Society"]

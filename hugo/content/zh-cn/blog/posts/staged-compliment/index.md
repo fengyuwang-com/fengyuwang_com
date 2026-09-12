@@ -1,6 +1,6 @@
 ---
 title: "那声夸奖是安排好的"
-date: 2026-09-11
+date: 2026-08-03
 description: "第五声夸奖才让人反应过来,体验可以真诚,真诚可以排练。"
 slug: "staged-compliment"
 tags: ["市场"]

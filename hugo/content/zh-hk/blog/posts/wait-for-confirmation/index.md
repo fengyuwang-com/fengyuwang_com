@@ -1,6 +1,6 @@
 ---
 title: "別搶跑，等確認"
-date: 2026-09-11
+date: 2026-09-04
 description: "拐點不可預判，但可以確認——阻力最小路線只等區間有效突破再跟隨，2B 結構把看起來像頂變成可以動手的頂。"
 slug: "wait-for-confirmation"
 tags: ["投資"]

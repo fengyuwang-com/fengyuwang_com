@@ -1,6 +1,6 @@
 ---
 title: "匯率漲跌都能賺的錢"
-date: 2026-09-11
+date: 2026-08-01
 description: "找換店的答案樸素到近乎無聊：不賭方向，只吃價差。但正是這種生意，把不確定性變成了客戶流量。"
 slug: "spread-not-direction"
 tags: ["商業"]

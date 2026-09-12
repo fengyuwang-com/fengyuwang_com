@@ -1,6 +1,6 @@
 ---
 title: "Even Actuaries Can't Predict the Future"
-date: 2026-09-11
+date: 2026-02-04
 description: "Insurance prices the future, and nobody can predict the future. The business survives on cushion, not accuracy."
 slug: "actuary-cant-predict"
 tags: ["Investing"]

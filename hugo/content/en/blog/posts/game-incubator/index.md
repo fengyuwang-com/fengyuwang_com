@@ -1,6 +1,6 @@
 ---
 title: "No Games, No WeChat. No Games, No CUDA."
-date: 2026-09-05
+date: 2025-12-04
 description: "Games are an incubator — and what hatches rarely belongs to the incubator's owner."
 slug: "game-incubator"
 tags: ["Business", "Tech"]

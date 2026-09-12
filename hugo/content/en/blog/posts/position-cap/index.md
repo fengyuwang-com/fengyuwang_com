@@ -1,6 +1,6 @@
 ---
 title: "The Deeper the Fall, the Smaller the Cap"
-date: 2026-09-11
+date: 2026-06-08
 description: "Everyone talks about stop-losses on single stocks; nobody runs one on total exposure. This counterintuitive rule — the deeper the fall, the lower the position cap — rests not on point forecasts but on systemic risk. It looks like waste in calm years; on the day things break, it is the account's airbag."
 slug: "position-cap"
 tags: ["Investing"]

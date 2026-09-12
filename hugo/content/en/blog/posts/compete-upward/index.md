@@ -1,6 +1,6 @@
 ---
 title: "Competing Upward"
-date: 2026-09-11
+date: 2026-02-28
 description: "Escaping the race to the bottom means carrying one core competence into a bigger market: growth is capped by dimension, not effort."
 slug: "compete-upward"
 tags: ["Investing"]

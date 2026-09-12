@@ -1,6 +1,6 @@
 ---
 title: "Feeding a Million Characters at Once Is Expensive and Bad"
-date: 2026-09-05
+date: 2025-11-06
 description: "However large the context window, chunking still wins — and the reason is arithmetic, not feeling."
 slug: "chunking-economics"
 tags: ["Tech", "Economy"]

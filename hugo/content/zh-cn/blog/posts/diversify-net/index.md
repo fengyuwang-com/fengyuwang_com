@@ -1,6 +1,6 @@
 ---
 title: "分散，是为了网住大鱼"
-date: 2026-09-11
+date: 2026-03-18
 description: "同一张网，两种用法：学院派用它磨平曲线，这套体系用它网住错杀的大鱼。"
 slug: "diversify-net"
 tags: ["投资"]

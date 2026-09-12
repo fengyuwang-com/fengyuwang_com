@@ -1,6 +1,6 @@
 ---
 title: "Diversifying to Catch the Big Fish"
-date: 2026-09-11
+date: 2026-03-18
 description: "One net, two uses: academics cast it to smooth the curve; one system casts it to catch mispriced big fish."
 slug: "diversify-net"
 tags: ["Investing"]

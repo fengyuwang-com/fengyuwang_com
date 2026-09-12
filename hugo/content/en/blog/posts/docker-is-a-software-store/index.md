@@ -1,6 +1,6 @@
 ---
 title: "Docker Is Just a Software Store"
-date: 2026-09-05
+date: 2025-11-24
 description: "Nouns are for engineers; actions are for users."
 slug: "docker-is-a-software-store"
 tags: ["Tech", "Business"]

@@ -1,6 +1,6 @@
 ---
 title: "一邊做，一邊讓 AI 重寫一遍"
-date: 2026-09-05
+date: 2025-10-27
 description: "接口一樣，血肉全換。"
 slug: "ai-clean-room"
 tags: ["技術"]

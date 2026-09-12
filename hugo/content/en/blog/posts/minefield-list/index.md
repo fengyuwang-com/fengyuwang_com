@@ -1,6 +1,6 @@
 ---
 title: "Clear the Mines Before You Talk Value"
-date: 2026-09-11
+date: 2026-05-17
 description: "The first step in picking stocks is not finding great companies — it is eliminating the ones that die for certain — four rules, each bought with real money."
 slug: "minefield-list"
 tags: ["Investing"]

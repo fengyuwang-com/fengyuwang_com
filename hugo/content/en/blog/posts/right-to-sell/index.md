@@ -1,6 +1,6 @@
 ---
 title: "Stopping Out Is the Shareholder's Core Right"
-date: 2026-09-11
+date: 2026-07-06
 description: "A stock pays no principal and no interest; its only route to cash is a sale. Treating the right to sell as failure means handing back the only control a shareholder has."
 slug: "right-to-sell"
 tags: ["Investing"]

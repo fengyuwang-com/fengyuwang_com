@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Balance Sheet, Vote with Your Feet"
-date: 2026-09-11
+date: 2026-03-28
 description: "Annual reports hold only the past; turning points live on the road and on the shelf. Do the fieldwork before you take a heavy position."
 slug: "field-research"
 tags: ["Investing"]

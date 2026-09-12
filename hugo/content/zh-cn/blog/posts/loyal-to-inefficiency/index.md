@@ -1,6 +1,6 @@
 ---
 title: "系统过时了，忠诚还在续费"
-date: 2026-09-11
+date: 2026-05-01
 description: "忠诚是先发者最值钱的资产，也是用户最容易付错的一笔钱。"
 slug: "loyal-to-inefficiency"
 tags: ["市场"]

@@ -1,6 +1,6 @@
 ---
 title: "The Door Speculation Keeps Shut"
-date: 2026-09-11
+date: 2026-07-30
 description: "The line between speculation and investing is not holding period but anchor — and the door to speculation is closed to ordinary people by structure, not by morality."
 slug: "speculation-line"
 tags: ["Investing"]

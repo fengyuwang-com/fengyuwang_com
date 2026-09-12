@@ -1,6 +1,6 @@
 ---
 title: "Pull the Weeds, Water the Flowers"
-date: 2026-09-11
+date: 2026-09-06
 description: "Price movement is never a reason to size up or down — what lies underneath is. Trim the weak and overvalued, add to the strong and undervalued."
 slug: "weeds-and-flowers"
 tags: ["Investing"]

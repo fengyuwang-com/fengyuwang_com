@@ -1,6 +1,6 @@
 ---
 title: "亮的是獲客，藏的是風險"
-date: 2026-09-11
+date: 2026-09-08
 description: "Zara 把曝光預算花在店舖和 logo 上，把名字藏進風險欄，亮與藏各記各的賬。"
 slug: "zara-anonymous"
 tags: ["市場"]

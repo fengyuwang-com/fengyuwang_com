@@ -1,6 +1,6 @@
 ---
 title: "A Rally Only Ranks Its Leader"
-date: 2026-09-11
+date: 2026-07-18
 description: "The sector cycle drives 70% of a stock's move; within a sector, only the leader is worth holding — it falls less in drawdowns and rebounds first. The bargain price of the laggards is just another name for poor liquidity and weak elasticity."
 slug: "sector-leader"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "贝壳也是货币，后来怎么就不是了"
-date: 2026-09-05
+date: 2026-01-01
 description: "共识会崩；要害是崩了之后还剩什么。"
 slug: "shell-consensus"
 tags: ["经济", "金融"]

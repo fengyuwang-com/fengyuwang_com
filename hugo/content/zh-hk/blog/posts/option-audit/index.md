@@ -1,6 +1,6 @@
 ---
 title: "只買正股"
-date: 2026-09-05
+date: 2025-12-20
 description: "買之前先問一句：我的期望收益是正數嗎？"
 slug: "option-audit"
 tags: ["金融", "投資"]

@@ -1,6 +1,6 @@
 ---
 title: "窮人注意力税"
-date: 2026-09-06
+date: 2026-01-13
 description: "一筆沒人來收、人人都在交的税。"
 slug: "attention-tax"
 tags: ["社會", "經濟"]

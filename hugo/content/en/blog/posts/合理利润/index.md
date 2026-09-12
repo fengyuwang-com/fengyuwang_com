@@ -1,6 +1,6 @@
 ---
 title: "Fair Profit Is Not Greed"
-date: 2026-02-12
+date: 2025-08-12
 description: "There is a clear line between marking up and ripping someone off, but most people draw it in the wrong place. Charging ten times cost is not necessarily wrong, but charging nothing over cost means you are losing on yourself."
 slug: "合理利润"
 tags: ["Business", "Economy", "Society"]

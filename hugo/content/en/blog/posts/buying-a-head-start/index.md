@@ -1,6 +1,6 @@
 ---
 title: "A Billion Dollars Buys a Head Start"
-date: 2026-09-11
+date: 2026-02-20
 description: "The price tag reads sixty million monthly users; the actual purchase is the red-ocean years skipped."
 slug: "buying-a-head-start"
 tags: ["Marketing"]

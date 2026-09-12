@@ -1,6 +1,6 @@
 ---
 title: "責任有樓層，捐款單只記一層"
-date: 2026-09-11
+date: 2026-07-02
 description: "按時發工資本身就是重要的社會責任，捐得少不等於不負責。"
 slug: "responsibility-has-layers"
 tags: ["市場"]

@@ -1,6 +1,6 @@
 ---
 title: "韓國人不是賭性重"
-date: 2026-09-11
+date: 2026-04-23
 description: "三十年走完兩百年的路，社會把普通人逼進了投機這條唯一的窄門——週期換標的，不換宿命。"
 slug: "korea-compressed-modernity"
 tags: ["投資"]

@@ -1,6 +1,6 @@
 ---
 title: "Churn Has Only Three Doors"
-date: 2026-09-11
+date: 2026-02-24
 description: "Economic, functional, psychological — the door out is the door in."
 slug: "churn-three-values"
 tags: ["Marketing"]

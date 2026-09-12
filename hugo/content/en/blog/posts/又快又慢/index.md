@@ -1,6 +1,6 @@
 ---
 title: "Time Moves Fast and Slow at the Same Time"
-date: 2026-01-18
+date: 2025-08-06
 description: "Nearly every office worker experiences this split perception of time: the day flies by, yet every minute feels like it is dragging. There is a clear psychological mechanism behind this feeling."
 slug: "又快又慢"
 tags: ["Society"]

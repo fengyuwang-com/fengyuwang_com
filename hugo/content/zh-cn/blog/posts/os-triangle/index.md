@@ -1,6 +1,6 @@
 ---
 title: "消费级操作系统不可能三角"
-date: 2026-09-05
+date: 2025-12-22
 description: "安全、自由、低认知负载，三角只能选两个。"
 slug: "os-triangle"
 tags: ["技术"]

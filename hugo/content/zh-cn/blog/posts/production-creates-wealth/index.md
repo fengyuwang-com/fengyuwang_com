@@ -1,6 +1,6 @@
 ---
 title: "财富不是钱，是使你能赚钱的东西"
-date: 2026-09-11
+date: 2026-06-12
 description: "账上的数字可以蒸发，生产能力不能。《专业投机原理》里那句被引了半个世纪的话，值得当成一条资产负债表的检验标准。"
 slug: "production-creates-wealth"
 tags: ["投资"]

@@ -1,6 +1,6 @@
 ---
 title: "分散，是為了網住大魚"
-date: 2026-09-11
+date: 2026-03-18
 description: "同一張網，兩種用法：學院派用它磨平曲綫，這套體系用它網住錯殺的大魚。"
 slug: "diversify-net"
 tags: ["投資"]
