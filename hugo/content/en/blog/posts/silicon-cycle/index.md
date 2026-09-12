@@ -29,3 +29,4 @@ The current call: the AI-compute-driven upcycle is entering top territory. With 
 The basis for that call is not bullish headlines but the industry's own gauges: utilization rates and the expansion wave. Full utilization plus concentrated capex spending means capacity is being stacked onto the future; when that capacity lands together while demand growth cools, a glut becomes a matter of time. The cycle's position is written in factory blueprints, not in news headlines.
 
 A business that must produce at a loss is a business that must endure the trough at a loss. The cycle never dies — it just changes the name on the chip.
+The boundary as usual: 2027-2028 is a deduced position in the cycle, not a trading date; no stock picks, no price targets here. Utilization and capex readings follow official disclosure — misread the data and the cycle reads wrong in turn; that risk belongs to every reader personally.
