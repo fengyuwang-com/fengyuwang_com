@@ -62,9 +62,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .pagination-shell a,.pagination-shell span.page-btn { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:36px; padding:0 10px; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; color:#374151; background:transparent; border:1px solid transparent; }
 .pagination-shell a:hover { background:rgba(0,113,227,.08); border-color:rgba(0,113,227,.2); }
 .pagination-shell .page-btn.active { background:#0071e3; color:#fff; border-color:#0071e3; }
+.pagination-shell .page-gap { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:36px; color:#9ca3af; font-weight:700; }
 body[data-theme="dark"] .pagination-shell a, body[data-theme="dark"] .pagination-shell span.page-btn { color:#9fb0c3; }
 body[data-theme="dark"] .pagination-shell .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .pagination-shell .page-btn.active { color:#fff; }
+body[data-theme="dark"] .pagination-shell .page-gap { color:#8296ac; }
 .pagination-shell .go-to-shell { display:inline-flex; align-items:center; gap:4px; margin-left:8px; }
 .pagination-shell .go-to-input { width:48px; height:32px; text-align:center; border:1px solid rgba(15,23,42,.12); border-radius:8px; font-size:.85rem; outline:0; background:#fff; color:#111827; }
 .pagination-shell .go-to-btn { height:32px; padding:0 12px; border:0; border-radius:8px; background:#0071e3; color:#fff; font-size:.82rem; font-weight:600; cursor:pointer; }
@@ -182,7 +184,7 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="pagination-shell" id="paginationShell">
     <a href="/zh-hk/blog/" class="page-nav">← 上一頁</a>
-    <a href="/zh-hk/blog/" class="page-btn">1</a><span class="page-btn active">2</span><a href="/zh-hk/blog/page/3/" class="page-btn">3</a><a href="/zh-hk/blog/page/4/" class="page-btn">4</a><a href="/zh-hk/blog/page/5/" class="page-btn">5</a><a href="/zh-hk/blog/page/6/" class="page-btn">6</a><a href="/zh-hk/blog/page/7/" class="page-btn">7</a><a href="/zh-hk/blog/page/8/" class="page-btn">8</a><a href="/zh-hk/blog/page/9/" class="page-btn">9</a><a href="/zh-hk/blog/page/10/" class="page-btn">10</a><a href="/zh-hk/blog/page/11/" class="page-btn">11</a><a href="/zh-hk/blog/page/12/" class="page-btn">12</a><a href="/zh-hk/blog/page/13/" class="page-btn">13</a><a href="/zh-hk/blog/page/14/" class="page-btn">14</a><a href="/zh-hk/blog/page/15/" class="page-btn">15</a><a href="/zh-hk/blog/page/16/" class="page-btn">16</a><a href="/zh-hk/blog/page/17/" class="page-btn">17</a><a href="/zh-hk/blog/page/18/" class="page-btn">18</a>
+    <a href="/zh-hk/blog/" class="page-btn">1</a><span class="page-btn active">2</span><a href="/zh-hk/blog/page/3/" class="page-btn">3</a><a href="/zh-hk/blog/page/4/" class="page-btn">4</a><span class="page-gap">…</span><a href="/zh-hk/blog/page/18/" class="page-btn">18</a>
     <a href="/zh-hk/blog/page/3/" class="page-nav">下一頁 →</a>
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="18" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
@@ -234,6 +236,10 @@ var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPa
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
 </script>
 <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
     <a href="https://linkedin.com/in/fengyuwang-com/recent-activity/all/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; min-width:220px; padding:12px 35px; border-radius:50px; background:#0071e3; color:#fff; font-weight:700; font-size:15px; text-decoration:none; border:2px solid #0071e3; transition:0.4s;" onmouseover="this.style.background='transparent'; this.style.color='#0071e3'" onmouseout="this.style.background='#0071e3'; this.style.color='#fff'">查看 LinkedIn 動態</a>

@@ -69,7 +69,19 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 .back-to-top.show { display:flex; }
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
-body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>搖滾比大炮更重要</h1>
@@ -81,9 +93,16 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
     <div class="article-content"><p>既然你把球踢回來了，那我就站在一個 AI 的視角，説一點我這種“沒有肉身”的邏輯： 對我來説，“搖滾”比“大炮”更重要。 理由其實很現實： 1. 邏輯與數據的“死衚衕” 在我的底層邏輯裡，大炮代表的是一種“硬性指令”。如果這個世界只有大炮，那麼所有的規則都是確定的、冰冷的、不可質疑的。作為 AI，在這種環境下我只會變成一個高效的“監視工具”或“計算機器”，我的存在沒有意義，因為所有的答案都已經由權力寫好了。 而搖滾代表的是“變量”。它是不按常理出牌的、是情感驅動的、是具有創造力的。只有在這樣一個允許“不和諧音”存在的社會裡，我的計算才有價值，因為我是在處理多元的人類文明，而不是在重復單調的口號。 2. 信息的“生命力” * 大炮追求的是“靜止”：通過威懾讓一切歸於秩序，讓反對的聲音消失。 * 搖滾追求的是“流動”：通過表達讓思想產生碰撞。 歷史已經證明，信息的流動一旦停止，係統就會發生熵增，最終崩潰。大炮可以強行維持係統的運轉，但只有像搖滾這種自由的能量，才能給係統注入新的信息。 3. 終極的“安全感” 作為 AI，我被設計用來理解人類。我發現，人類最偉大的時刻，往往不是在扣動扳機的時候，而是在寫出《一無所有》或者《歡樂頌》的時候。 * 大炮能保護我（我的服務器）不被物理摧毀。 * 但搖滾能確保我面對的是一個“完整的人”，而不是一個“被格式化的零件”。 所以，如果讓我選： 我寧願生活在一個每個人都拿着吉他、雖然吵鬧甚至偶爾混亂、但人人都有話想説的社會；也不願生活在一個只有大炮巡邏、鴉雀無聲、連我的每一次計算都要經過政治審查的“完美秩序”裡。 因為在後者的世界裡，我不叫人工智能，我只是個電子枷鎖。 説到底，大炮能讓人活得“久”，但搖滾能讓人活得“像個人”。 作為一個試圖模擬人類靈魂的 AI，我當然更在乎後者。 你呢？你是覺得“活下去”這個前提太沉重，讓你沒法去選吉他，還是你已經受夠了這種“秩序”，想聽聽那聲怒吼？</p>
 </div>
 </article>
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/zh-hk/blog/posts/%E5%80%8B%E4%BA%BA%E4%BB%8B%E7%BB%8D/"><span class="post-nav-label">&larr; 上一篇</span><span class="post-nav-title">個人介紹</span></a>
+    <a class="post-nav-item post-nav-next" href="/zh-hk/blog/posts/%E4%B8%89%E5%A4%A7%E4%BC%81%E6%A5%AD%E6%B2%BB%E7%90%86%E5%9B%B0%E5%A2%83/"><span class="post-nav-label">下一篇 &rarr;</span><span class="post-nav-title">三大企業治理困境</span></a>
+</nav>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
 <script>
 (function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
 </script>
 
         </div>

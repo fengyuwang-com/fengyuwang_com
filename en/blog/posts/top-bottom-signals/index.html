@@ -69,7 +69,19 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 .back-to-top.show { display:flex; }
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
-body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/en/blog/">Back to Blog</a></div>
 <article class="blog-article">
     <h1>Five Signals of a Top, Five Signals of a Bottom</h1>
@@ -103,9 +115,16 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 <p>The boundary deserves to be drawn explicitly: signals give you a sense of position, not a timing tool. Three top signals mean you are in overvalued territory; they do not tell you which day to sell. All five bottom signals can line up and the market can keep grinding down for another year. This list does not apply to V-shaped reversals caused by sudden events — war, abrupt policy shifts — where the market&rsquo;s leg breaks and resets before any observation of behavioral temperature can register. A sense of position tells you winter is coming; it cannot stop a cold snap from arriving overnight. So my conclusion is simple: targets are guessed, positions are counted. Guessing right once is luck; counting right across a cycle is a checklist. The next time everyone says this time is different — will you count first, or believe first?</p>
 </div>
 </article>
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/en/blog/posts/four-nested-cycles/"><span class="post-nav-label">&larr; Older post</span><span class="post-nav-title">Four Cycles, One Nest</span></a>
+    <a class="post-nav-item post-nav-next" href="/en/blog/posts/financing-first-hk/"><span class="post-nav-label">Newer post &rarr;</span><span class="post-nav-title">First in Fundraising, Nowhere in Returns</span></a>
+</nav>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
 <script>
 (function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
 </script>
 
         </div>

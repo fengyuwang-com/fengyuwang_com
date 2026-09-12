@@ -71,6 +71,8 @@ body[data-theme="dark"] .tag-back-btn { background:rgba(41,151,255,.12); color:#
 <style>
 .term-page-btn { min-width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;color:#374151;text-decoration:none;font-weight:600; }
 body[data-theme="dark"] .term-page-btn { color:#9fb0c3; }
+.term-page-gap { min-width:24px;height:36px;display:inline-flex;align-items:center;justify-content:center;color:#9ca3af;font-weight:700; }
+body[data-theme="dark"] .term-page-gap { color:#8296ac; }
 </style>
 <div class="page-header"><h1>Tag: Tech (46 articles)</h1></div>
 <div class="tag-back-shell"><a class="tag-back-btn" href="/en/blog/">All Articles</a></div>
@@ -154,6 +156,10 @@ body[data-theme="dark"] .term-page-btn { color:#9fb0c3; }
     <span style="min-width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#0071e3;color:#fff;font-weight:600;">1</span><a href="/en/tags/tech/page/2/" class="term-page-btn">2</a><a href="/en/tags/tech/page/3/" class="term-page-btn">3</a><a href="/en/tags/tech/page/4/" class="term-page-btn">4</a>
 </div>
 
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
+</script>
 
         </div>
     </section>

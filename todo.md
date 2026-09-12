@@ -370,3 +370,10 @@
 - [x] flygo.html ×3 链接改指 Open-FlyGo（仓库+Release，对齐 fengmedia.html 链 Open 镜像先例）
 - [x] 五个公开镜像当前树 + git 历史 secret/隐私双扫归零（Office/Orch 历史本来就干净）
 - [x] 全站门禁全绿（EXIT=0，navbar/btn-height/dark 全过）→ commit → push dev（master 未动）
+
+## 已完成（2026-09-12：站长令——博客三处体验修复）
+
+- [x] 分页窗口式省略号：blog/list.html + _default/term.html 页码改为「首尾 + 当前±2 + …」窗口（如 `1 … 7 8 9 10 11 … 18`），≤5 页自动不出现省略号；新增 .page-gap/.term-page-gap 含暗色覆盖
+- [x] 文章页「回到博客」恢复来源页：list/term 页 sessionStorage 记 blogListUrl+blogListScroll（滚动节流+pagehide 兜底），文章页点击返回按钮跳回来源列表页并恢复滚动位置；无记录时回退默认第 1 页
+- [x] 文章页上一篇/下一篇：single.html 文章卡下方双卡导航（左←上一篇=较早、右下一篇→较新，含标题链接；缺一侧用占位保布局），三语标签；实测本版 Hugo `.PrevInSection`=较早、`.NextInSection`=较新（与记忆相反，5 个数据点验证后对调）
+- [x] 重建 deploy + 抽验三语分页形状/导航方向/脚本就位 + check_site --no-dark 全绿；777 个构建产物随提交更新
