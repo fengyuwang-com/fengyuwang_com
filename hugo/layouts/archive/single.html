@@ -1,0 +1,45 @@
+{{ define "main" }}{{ $lang := .Site.Language.Lang }}
+{{ $posts := where .Site.RegularPages "Type" "blog" }}
+<style>
+.archive-wrap { max-width:760px; margin:0 auto; }
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+.archive-head { margin-bottom:32px; }
+.archive-head h1 { font-size:2rem; font-weight:800; color:#111827; margin:0 0 8px; }
+.archive-head .archive-sub { font-size:.92rem; color:#6b7280; margin:0; }
+body[data-theme="dark"] .archive-head h1 { color:#e5ecf4; }
+body[data-theme="dark"] .archive-head .archive-sub { color:#9fb0c3; }
+.archive-year { background:#fff; border-radius:20px; padding:24px 28px; margin-bottom:16px; box-shadow:0 4px 16px rgba(15,23,42,.06); border:1px solid rgba(15,23,42,.06); }
+.archive-year h2 { font-size:1.3rem; font-weight:800; color:#111827; margin:0 0 14px; }
+.archive-year .year-count { font-size:.85rem; font-weight:600; color:#6b7280; margin-left:8px; }
+.archive-year ul { list-style:none; margin:0; padding:0; }
+.archive-year li { display:flex; align-items:baseline; gap:14px; padding:7px 0; border-top:1px solid rgba(15,23,42,.05); min-width:0; }
+.archive-year li:first-child { border-top:0; }
+.archive-year .archive-date { font-size:.82rem; color:#9ca3af; font-variant-numeric:tabular-nums; flex:none; width:44px; }
+.archive-year li a { color:#0071e3; font-size:.95rem; font-weight:600; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.archive-year li a:hover { text-decoration:underline; }
+body[data-theme="dark"] .archive-year { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .archive-year h2 { color:#e5ecf4; }
+body[data-theme="dark"] .archive-year .year-count { color:#9fb0c3; }
+body[data-theme="dark"] .archive-year .archive-date { color:#8296ac; }
+body[data-theme="dark"] .archive-year li a { color:#60a5fa; }
+@media (max-width:767px) { .archive-year { padding:18px 20px; } }
+</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="{{ "/blog/" | relLangURL }}">{{ if eq $lang "en" }}Back to Blog{{ else }}返回博客{{ end }}</a></div>
+<div class="archive-wrap">
+<div class="archive-head"><h1>{{ .Title }}</h1><p class="archive-sub">{{ if eq $lang "en" }}{{ len $posts }} posts, newest first.{{ else }}{{ len $posts }} 篇，按时间倒序。{{ end }}</p></div>
+{{ range sort ($posts.GroupByDate "2006") "Key" "desc" }}
+<div class="archive-year">
+    <h2>{{ .Key }}<span class="year-count">{{ if eq $lang "en" }}({{ len .Pages }} posts){{ else }}（{{ len .Pages }} 篇）{{ end }}</span></h2>
+    <ul>
+    {{ range .Pages.ByDate.Reverse }}
+        <li><span class="archive-date">{{ .Date.Format "01-02" }}</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+</div>
+{{ end }}
+</div>
+{{ end }}
