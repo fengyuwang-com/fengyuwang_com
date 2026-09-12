@@ -245,3 +245,7 @@
 - 关键决策:
   - 回轮号唯一递增（本地 9→13，合并收尾记 14），避免与远端 9-12 重号
   - 门禁口径：合并验证用 --no-dark 即可；全量暗色审计只在发版 master 前跑
+
+## 2026-09-13 — FengOrchestrator 会话代办
+- 用户要求: 写学术级文章放本仓库根目录（待编入网站）。
+- AI 行动/产出: 根目录新增 TWO-LAYER-INTERFACE.md（两层界面原则：chat-first + Generative UI + local-first + 文档治理面三元命题，含参考文献）。未动 hugo/zh-cn 结构，待丰羽收录。
