@@ -7,7 +7,155 @@
     <language>en</language>
     <generator>Hugo</generator>
     <atom:link href="https://www.fengyuwang.com/en/blog/" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 13 Sep 2026 04:00:12 &#43;0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 04:34:22 &#43;0800</lastBuildDate>
+    
+    <item>
+      <title>The Two-Layer Interface Principle: Software Interaction Architecture for the AI Era</title>
+      <link>https://www.fengyuwang.com/en/blog/posts/two-layer-interface/</link>
+      <guid isPermaLink="true">https://www.fengyuwang.com/en/blog/posts/two-layer-interface/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Generative AI has pushed the graphical-interface paradigm of &amp;ldquo;operating software,&amp;rdquo; unchanged for four decades, to the point of paradigm replacement. Based on a complete audit and refactoring practice across a one-person software company (the FengProj ecosystem: investment research, content production, and private-cloud products — three real systems), this paper proposes and tests the &lt;strong&gt;Two-Layer Interface Principle (2LIP)&lt;/strong&gt;: any software system should keep only two interaction layers — (1) the &lt;strong&gt;conversation layer&lt;/strong&gt;, natural-language exchange between human and AI (with Skills as its scripted form), carrying all daily operations; (2) the &lt;strong&gt;viewing layer&lt;/strong&gt;, a read-only graphical interface that exists only for &amp;ldquo;people who do not operate.&amp;rdquo; Data always lives in local files, and interaction output flows into a backup-able pipeline. The paper places this principle against three parallel industry currents — YC&amp;rsquo;s &amp;ldquo;Chat is the interface,&amp;rdquo; Generative UI, and the MCP-UI architecture of the OpenAI Apps SDK — and shows that all three converge structurally on the same proposition. It further argues that when AI becomes the first operator, documents (AGENTS/MISSION/todo/logs) themselves constitute a &lt;strong&gt;third interface&lt;/strong&gt; — a governance interface facing the AI — extending &amp;ldquo;interface&amp;rdquo; from two ends, human and machine, into a triadic structure of human–AI–document. The case section presents a compliance audit of five systems and their consolidation paths, showing that the principle lands on both personal production systems and external commercial products.&lt;/p&gt;
+&lt;h2 id=&#34;1-the-problem&#34;&gt;1. The Problem&lt;/h2&gt;
+&lt;p&gt;The classic software interaction model is client-centric: users click and fill forms in a graphical interface, and results settle into the client&amp;rsquo;s database; the interface is both the operating entrance and the data container. Two premises implicit in this model no longer hold in 2026:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Operations must be initiated by humans.&lt;/strong&gt; Once an AI Agent can be entrusted with the full pipeline — topic selection, drafting, research, publishing, diagnostics — &amp;ldquo;humans press buttons&amp;rdquo; is demoted from necessity to option.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Results must stay in the client.&lt;/strong&gt; Once data has a local-file source of truth (Markdown/JSON/SQLite), the client degrades into a view, and backup and migration become file-level operations rather than database engineering.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;From this the author re-conceived the whole shape of software: &lt;strong&gt;I only need to talk to the AI — because most of the work was textual exchange to begin with; UI exists for two kinds of moments: letting people who don&amp;rsquo;t understand see it, and making it convenient for those who look.&lt;/strong&gt; This paper formalizes that intuition into an auditable engineering principle and validates it on a real multi-system ecosystem.&lt;/p&gt;
+&lt;h2 id=&#34;2-the-two-layer-interface-principle&#34;&gt;2. The Two-Layer Interface Principle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Principle (Two-Layer Interface Principle, 2LIP)&lt;/strong&gt;: a software system built for the AI era keeps only two interaction layers —&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Layer&lt;/th&gt;
+          &lt;th&gt;Serves&lt;/th&gt;
+          &lt;th&gt;Form&lt;/th&gt;
+          &lt;th&gt;Duty&lt;/th&gt;
+          &lt;th&gt;Anti-pattern&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Conversation (L1)&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Operators (human) and AI&lt;/td&gt;
+          &lt;td&gt;Natural language + Skills (scripted instructions)&lt;/td&gt;
+          &lt;td&gt;All daily operations: CRUD, workflow triggers, exception handling&lt;/td&gt;
+          &lt;td&gt;Burying operations in buttons the AI cannot reach&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Viewing (L2)&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Watchers (human, usually non-operating)&lt;/td&gt;
+          &lt;td&gt;Read-only Web UI / dashboards&lt;/td&gt;
+          &lt;td&gt;Displaying state and results for understanding, acceptance, and external demo&lt;/td&gt;
+          &lt;td&gt;Building write operations into the viewing layer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Plus two resource constraints:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C1 (data local)&lt;/strong&gt;: the source of truth is always a local file or local database; any client or cloud service holds only copies or views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C2 (output backup-able)&lt;/strong&gt;: all interaction output lands in a versionable, multi-replica sync pipeline (git dual-push, multi-device sync).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whether a system complies with 2LIP takes four questions: Is the data local? Do daily operations go through conversation? Is the UI read-only? Can the output be backed up?&lt;/p&gt;
+&lt;h2 id=&#34;3-industry-alignment-three-currents-converging&#34;&gt;3. Industry Alignment: Three Currents Converging&lt;/h2&gt;
+&lt;h3 id=&#34;31-chat-is-the-interface&#34;&gt;3.1 &amp;ldquo;Chat is the interface&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;In 2026, Y Combinator&amp;rsquo;s Gary Tan and Jared publicly revised their earlier stance, confirming that &amp;ldquo;conversation as the interface&amp;rdquo; is the correct form for AI applications (the Pete Koomen discussion spread widely). Products echo it: neww.ai&amp;rsquo;s slogan &amp;ldquo;Chat is the interface. The operating system is the product.&amp;rdquo;; arg.ai simply cancelled all feature pages, with the Agent reading and writing files directly through chat; XBuild, for contractors, made conversation the estimating flow itself. This shows 2LIP&amp;rsquo;s L1 layer has been accepted by the industry as the main channel, not a bolted-on chatbot.&lt;/p&gt;
+&lt;h3 id=&#34;32-generative-ui-the-viewing-layer-need-not-be-pre-built&#34;&gt;3.2 Generative UI: the viewing layer need not be pre-built&lt;/h3&gt;
+&lt;p&gt;The further question: does L2 require &amp;ldquo;careful development&amp;rdquo;? Generative UI answers no — the interface is assembled on demand by the Agent for the problem at hand (cards, charts, whole pages of HTML), not a fixed layout predefined by designers (definitions from Google Cloud, CopilotKit, and Decagon converge). Its argument: dashboards make people dig through filters for answers, while GenUI &amp;ldquo;turns the interface into a response, not a destination.&amp;rdquo; Yet 2026 practice reflection (e.g., the r/UXDesign community) points out equally: &lt;strong&gt;fixed dashboards that show everything at a glance are irreplaceable in predictability and glanceability&lt;/strong&gt;. The two combine into 2LIP&amp;rsquo;s position: keep the viewing layer, but skip the fine finish — fixed views cover &amp;ldquo;one glance a day,&amp;rdquo; generated views cover &amp;ldquo;details right now.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;33-mcp-apps--openai-apps-sdk-growing-a-visualization-onto-the-customers-skill&#34;&gt;3.3 MCP Apps / OpenAI Apps SDK: growing a visualization onto the customer&amp;rsquo;s Skill&lt;/h3&gt;
+&lt;p&gt;2LIP&amp;rsquo;s counterpart in external products has been platformized: the OpenAI Apps SDK lets an MCP server (that is, &amp;ldquo;a Skill given to the customer&amp;rdquo;) return UI resources rendered as React components inside the chat flow (such as Zillow listing cards). This is the official form of &amp;ldquo;a Skill inside the Web UI&amp;rdquo;: &lt;strong&gt;the Skill is the body; the UI is a visualization attachment returned by the Skill&lt;/strong&gt;, not an independent portal. For desktop/mobile native products the equivalent corollary: embed the customer conversation entrance in the product; operations go through conversation; panels retreat to display and fallback.&lt;/p&gt;
+&lt;h3 id=&#34;34-local-first-industry-consensus-on-the-resource-constraints&#34;&gt;3.4 Local-first: industry consensus on the resource constraints&lt;/h3&gt;
+&lt;p&gt;Constraints C1/C2 correspond to the local-first AI Agent current: agents read and write local data first, with asynchronous sync for backup (fast.io); local indexing plus on-demand cloud as a tiered data strategy (data placement decided by sensitivity, not by a &amp;ldquo;local&amp;rdquo; dogma); the runtime, memory, skills, and scheduled tasks of a personal agent fully localized (r3zz.io&amp;rsquo;s &amp;ldquo;boring architecture&amp;rdquo;). The consensus: full offline is unrealistic; the key is &lt;strong&gt;data tiering&lt;/strong&gt; — sensitive data never leaves the local machine. 2LIP adopts the same conclusion and goes further in a single-machine personal ecosystem: the source of truth can be 100% local.&lt;/p&gt;
+&lt;h2 id=&#34;4-the-third-interface-documents-as-the-ais-governance-plane&#34;&gt;4. The Third Interface: Documents as the AI&amp;rsquo;s Governance Plane&lt;/h2&gt;
+&lt;p&gt;2LIP answers &amp;ldquo;how do humans operate the software,&amp;rdquo; but leaves one question: &lt;strong&gt;how is the AI operated?&lt;/strong&gt; The answer grew out of practice long ago: not APIs, not a config center, but &lt;strong&gt;documents&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The author&amp;rsquo;s multi-machine development ecosystem (FengASNI) ran a commonality analysis over 70 governance documents and converged on a &amp;ldquo;supervising-document paradigm&amp;rdquo;: a four-piece set of &lt;code&gt;AGENTS.md&lt;/code&gt; (rules, single source), &lt;code&gt;MISSION.md&lt;/code&gt; (north-star goal and DoD), &lt;code&gt;todo.md&lt;/code&gt; (task ledger), and &lt;code&gt;FENGMEM.md&lt;/code&gt; (session logs), supplemented by Skills (&lt;code&gt;SKILL.md&lt;/code&gt;) as reusable operation wrappers. Its mechanism: the AI reads documents before work to obtain identity, rules, and tasks; action results are written back to the ledger and logs; rule changes are written back to AGENTS. &lt;strong&gt;The document is the control plane&lt;/strong&gt; — the new role of Docs-as-Code after its confluence with agent-native development: documents&amp;rsquo; readers expanded from &amp;ldquo;humans&amp;rdquo; to &amp;ldquo;humans and AI,&amp;rdquo; and the AI is the stricter reader (it executes word for word).&lt;/p&gt;
+&lt;p&gt;The core extended proposition follows: software interaction in the AI era is a &lt;strong&gt;triadic structure&lt;/strong&gt; —&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;human ──natural language──&amp;gt; AI ──tool calls──&amp;gt; system
+│                                ↑
+└──documents (rules/goals/ledger/logs)──────┘
+        documents = the interface facing the AI (governance plane)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;conversation layer&lt;/strong&gt; is the interface for &amp;ldquo;humans operating the AI&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;document layer&lt;/strong&gt; is the interface for &amp;ldquo;(humans, through the AI) governing the AI and the system&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;viewing layer&lt;/strong&gt; is the interface for &amp;ldquo;humans confirming system state,&amp;rdquo; visualizing the results of the first two.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The three layers are not parallel: the document layer constrains the conversation layer (Skills must obey the AGENTS iron rules), the conversation layer drives the system, and the viewing layer only reflects the output of the first two. This structure explains why a 2LIP system needs no complex permission backend — governance is already carried by the rules and ledgers of the document layer.&lt;/p&gt;
+&lt;h2 id=&#34;5-case-study-audit-and-consolidation-of-a-real-ecosystem&#34;&gt;5. Case Study: Audit and Consolidation of a Real Ecosystem&lt;/h2&gt;
+&lt;p&gt;The following is an audit of the author&amp;rsquo;s personal ecosystem (all local-first real production systems) against the four 2LIP questions:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;System&lt;/th&gt;
+          &lt;th&gt;Domain&lt;/th&gt;
+          &lt;th&gt;UI status&lt;/th&gt;
+          &lt;th&gt;Verdict&lt;/th&gt;
+          &lt;th&gt;Action&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FengInvest&lt;/td&gt;
+          &lt;td&gt;Investment research (62 tools, 2.7 GB local market-data library)&lt;/td&gt;
+          &lt;td&gt;Read-only report browser (fengweb)&lt;/td&gt;
+          &lt;td&gt;✅ Benchmark: data local and gitignored, all operations through conversation, UI purely viewing, output git dual-pushed&lt;/td&gt;
+          &lt;td&gt;Leave as is&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FengMedia&lt;/td&gt;
+          &lt;td&gt;Content production&lt;/td&gt;
+          &lt;td&gt;Battle map + topic library / check-ins (has write operations)&lt;/td&gt;
+          &lt;td&gt;⚠️ UI mixed with operations&lt;/td&gt;
+          &lt;td&gt;Move write operations into conversation (&amp;ldquo;record a topic&amp;rdquo; writes JSON directly); UI retreats to read-only&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FlyGo&lt;/td&gt;
+          &lt;td&gt;Private-cloud product (external, commercial)&lt;/td&gt;
+          &lt;td&gt;Panel + APK as the product itself&lt;/td&gt;
+          &lt;td&gt;➖ Special: the UI is the deliverable; L2&amp;rsquo;s &amp;ldquo;retreat&amp;rdquo; clause does not apply; but lacks a customer conversation layer&lt;/td&gt;
+          &lt;td&gt;Embed a &amp;ldquo;customer Skill&amp;rdquo; following the MCP Apps pattern; panel retreats to display&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FengOS&lt;/td&gt;
+          &lt;td&gt;Project command center&lt;/td&gt;
+          &lt;td&gt;3D galaxy overview + system probes&lt;/td&gt;
+          &lt;td&gt;✅ The ecosystem-level &amp;ldquo;viewing deck&amp;rdquo; itself&lt;/td&gt;
+          &lt;td&gt;Upgrade to the unified viewing entrance (aggregate read-only views of each system, move no data)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pure tools (TTS-UI etc.)&lt;/td&gt;
+          &lt;td&gt;Desktop utilities&lt;/td&gt;
+          &lt;td&gt;GUI as the interaction itself&lt;/td&gt;
+          &lt;td&gt;➖ Not applicable (no AI layer needed)&lt;/td&gt;
+          &lt;td&gt;Leave as is&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The audit reveals a universal decision order: &lt;strong&gt;first decide whether the system is a &amp;ldquo;self-use production system&amp;rdquo; or an &amp;ldquo;external product.&amp;rdquo;&lt;/strong&gt; The former strictly applies 2LIP; for the latter the UI is the product itself, and 2LIP&amp;rsquo;s application becomes &amp;ldquo;add a conversation layer inside the product, not cancel the UI.&amp;rdquo; Meanwhile, the ecosystem-level viewing deck (FengOS) should consolidate the viewing entrances of all systems while holding to &amp;ldquo;iframe/link aggregation, move no data,&amp;rdquo; guarding C1&amp;rsquo;s single source of truth.&lt;/p&gt;
+&lt;h2 id=&#34;6-discussion-boundaries-and-costs&#34;&gt;6. Discussion: Boundaries and Costs&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;2LIP is not &amp;ldquo;abolishing the UI.&amp;rdquo;&lt;/strong&gt; Counter-evidence is real: glanceability scenarios — monitoring walls, cockpits, demoing to investors — favor fixed views over conversation; efficiency for unambiguous operations (volume should not be adjusted by typing). The correct reading of 2LIP is &lt;strong&gt;transfer of operating rights&lt;/strong&gt;, not the death of UI: operating rights go to the conversation layer; the UI keeps the right of confirmation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The reproducibility of the conversation layer depends on the document layer.&lt;/strong&gt; The risk of pure conversation is &amp;ldquo;said and lost.&amp;rdquo; The document paradigm (tasks into the ledger, logs appended, DoD acceptance statements) is exactly the completion: every round of conversation&amp;rsquo;s instructions and results lands as machine-readable ledger entries, giving the conversation layer an auditability traditional GUI never had — the operation history is not a clickstream log but structured text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The change in cost structure.&lt;/strong&gt; 2LIP shifts the development center of gravity from &amp;ldquo;front-end interface engineering&amp;rdquo; to &amp;ldquo;Skill engineering + document governance + on-demand generation of viewing pages.&amp;rdquo; For a one-person company, this means the largest non-outsourceable asset (the interface) is depreciating, while the hardest-to-copy assets (domain-rules documents, personas, judgment standards) are appreciating.&lt;/p&gt;
+&lt;h2 id=&#34;7-conclusion&#34;&gt;7. Conclusion&lt;/h2&gt;
+&lt;p&gt;The Two-Layer Interface Principle condenses the shape of software in the AI era into one sentence: &lt;strong&gt;the conversation layer does, the viewing layer shows, the document layer governs; data stays local, output goes to backup.&lt;/strong&gt; That three industry currents (chat-first, Generative UI, MCP Apps) and local-first practice converge structurally on this principle suggests it is not a personal preference but an early position on a paradigm direction. For individuals and small organizations, 2LIP offers an immediately executable refactoring path: audit existing systems&amp;rsquo; UI write operations and move them into conversation, aggregate viewing entrances into a single viewing deck, and embed a Skill-form customer conversation layer into external products — and the foundation of all of it is treating documents as first-class citizens facing the AI.&lt;/p&gt;
+&lt;h2 id=&#34;references-retrieved-2026-09&#34;&gt;References (retrieved 2026-09)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;YC &amp;ldquo;chat is the interface&amp;rdquo; stance shift: Pete Koomen interview coverage, biggo.com&lt;/li&gt;
+&lt;li&gt;Google Cloud, &lt;em&gt;What is Generative UI?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;CopilotKit, &lt;em&gt;Generative UI&lt;/em&gt;; Decagon, &lt;em&gt;What is Generative UI?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Thesys, &lt;em&gt;From Static Dashboards to Generative UI&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open Data Science, &lt;em&gt;Generative UI: When the Agent Builds the Interface for You&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;OpenAI, &lt;em&gt;Apps SDK / Add UI to your MCP server&lt;/em&gt; (developers.openai.com)&lt;/li&gt;
+&lt;li&gt;Render, &lt;em&gt;Building with the OpenAI Apps SDK: A Field Guide&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;r3zz.io, &lt;em&gt;The Boring Architecture Behind a Useful Personal AI Agent&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;fast.io, &lt;em&gt;How to Implement Local-First Storage for AI Agents&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Medium/Data Science Collective, &lt;em&gt;My Local-First AI Agent Stack&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Reddit r/UXDesign, &lt;em&gt;Generative UI feels like the next &amp;ldquo;voice will replace screens&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Internal practice: FengASNI DocsParadigm (commonality analysis of 70 governance documents and paradigm proposal); FengOrchestrator five-layer architecture master plan and TTS-UI fleet battle retrospective&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <category>Tech</category><category>Business</category>
+    </item>
     
     <item>
       <title>Leverage Can&#39;t Buy Time</title>
@@ -410,34 +558,6 @@
 &lt;p&gt;So it comes down to one line: the lane changes; the ruler and the discipline do not. Rates give the master switch, momentum gives the lane switch, and discipline governs when to move and how much. The lane is rented — returned when the term ends. The ruler is one&amp;rsquo;s own — carried for life. Next time the itch to switch lanes comes, stay off the leaderboard — ask first: has the trigger fired?&lt;/p&gt;
 </description>
       <pubDate>Sun, 09 Aug 2026 00:00:00 &#43;0000</pubDate>
-      <category>Investing</category>
-    </item>
-    
-    <item>
-      <title>Survive the Cycle First</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/survive-the-cycle/</link>
-      <guid isPermaLink="true">https://www.fengyuwang.com/en/blog/posts/survive-the-cycle/</guid>
-      <description>&lt;p&gt;The cycle harvests in a fixed order: first it lures people in at the top, then scares them out at the bottom, cuts off their supplies along the way, and finally takes everything from those who bet on the wrong horse. So when I talk about crossing cycles, I don&amp;rsquo;t want to start with any indicator. I want to start with something else: why most people can&amp;rsquo;t even hold on to their own judgment inside a cycle.&lt;/p&gt;
-&lt;h2 id=&#34;long-cycles-rewrite-what-people-believe&#34;&gt;Long cycles rewrite what people believe&lt;/h2&gt;
-&lt;p&gt;When a cycle runs long enough, something strange happens: people stop treating it as a cycle. Real estate is the best example — its cycle is so long, and its imprint so deep, that people come to see it not as an accident of history but as a law of nature. Prices always go up. An experience hardens into an axiom.&lt;/p&gt;
-&lt;p&gt;An axiom needs no defense. So people max out leverage, drain their savings, and stake everything on one direction, because &amp;ldquo;this time is different.&amp;rdquo; But the axiom is fake. The cycle just moves slowly — so slowly that one generation&amp;rsquo;s memory holds only half of it. By the time the cycle plays out its second half, the people who believed in the law of nature never even left themselves room to prepare.&lt;/p&gt;
-&lt;p&gt;Once belief is rewritten, the harvest just needs to run its five steps. One step at a time.&lt;/p&gt;
-&lt;h2 id=&#34;step-one-at-the-top-dont-go-where-the-crowds-are&#34;&gt;Step one: at the top, &amp;ldquo;don&amp;rsquo;t go where the crowds are&amp;rdquo;&lt;/h2&gt;
-&lt;p&gt;The harvest begins with chasing. When everyone around you is talking about the same hot theme, odds are you&amp;rsquo;re already in the middle-to-late stage of a bubble — a bull market doesn&amp;rsquo;t need to persuade anyone, it only needs a crowd. Once people who understand nothing can recite the logic fluently, the money has already been made, and the only task left is finding someone to hand the bag to. Retail investors never lose big at the bottom — they lose big by charging in fully loaded where the noise is loudest. So the principle is one sentence: don&amp;rsquo;t chase the top of a bubble. Crowds mean money, and where the money is thickest, the holes are deepest.&lt;/p&gt;
-&lt;h2 id=&#34;step-two-at-the-bottom-dont-sell--with-one-hard-condition&#34;&gt;Step two: at the bottom, don&amp;rsquo;t sell — with one hard condition&lt;/h2&gt;
-&lt;p&gt;The other half of the harvest happens at the bottom. Forgotten sectors often hide the next cycle&amp;rsquo;s opportunity, but before it comes back, it grinds away everyone&amp;rsquo;s patience first. People who sell at the bottom aren&amp;rsquo;t usually stupid — they&amp;rsquo;re exhausted. They hand their chips, at the cheapest price, to whoever can wait the longest.&lt;/p&gt;
-&lt;p&gt;But don&amp;rsquo;t copy that sentence down yet. Not selling has one hard condition: the asset itself must not disappear. Industries cycle, companies rise and fall, but as long as the asset still produces value, winter is only winter. Coins that go to zero and scams are not covered here — they aren&amp;rsquo;t in winter; they never had a spring. If you can&amp;rsquo;t tell the two apart, selling is actually cutting your losses.&lt;/p&gt;
-&lt;h2 id=&#34;step-three-in-between-cash-flow-is-king&#34;&gt;Step three: in between, cash flow is king&lt;/h2&gt;
-&lt;p&gt;Getting in at the top and out at the bottom sounds easy; what sits in between is a long grind. What kills people in the grind usually isn&amp;rsquo;t the drawdown — it&amp;rsquo;s running out of supplies. Life costs money, buying the dip costs money, and the money is all locked in losing positions. That&amp;rsquo;s why surviving the cycle matters more than making fast money: only with enough cash on hand can you pick up cheap chips at the bottom. Cash flow isn&amp;rsquo;t return; it&amp;rsquo;s oxygen. Nobody thinks oxygen is valuable in normal times, but in winter, only those with oxygen live to see spring.&lt;/p&gt;
-&lt;h2 id=&#34;step-four-all-the-way-through-diversify&#34;&gt;Step four: all the way through, diversify&lt;/h2&gt;
-&lt;p&gt;Suppose you&amp;rsquo;ve done the first three. There&amp;rsquo;s still one move that can wipe you out: all-in. Don&amp;rsquo;t go all-in on any single cyclical sector — combining assets from different phases of the cycle is what smooths out the swings. Staking everything on one sector means binding your survival to a single cycle: right cycle, sudden wealth; wrong cycle, zero. Diversification isn&amp;rsquo;t for earning more. It&amp;rsquo;s so that at any phase of any cycle, no single blow can take you out entirely. What it buys isn&amp;rsquo;t return — it&amp;rsquo;s the right to stay in the game.&lt;/p&gt;
-&lt;h2 id=&#34;principle-five-your-capital-is-yourself&#34;&gt;Principle five: your capital is yourself&lt;/h2&gt;
-&lt;p&gt;The first four protect your money; the last one protects the source of it. Your own ability is the core asset that crosses every cycle — more important than any investment. Industries cool down, sectors die, but the skill of solving real problems is scarce in every cycle. Assets can be harvested; ability can&amp;rsquo;t: it isn&amp;rsquo;t registered on any ledger, so nobody can take it from you. That&amp;rsquo;s why I&amp;rsquo;ve always treated learning as the position with the heaviest weighting — it just never shows a return.&lt;/p&gt;
-&lt;h2 id=&#34;boundaries&#34;&gt;Boundaries&lt;/h2&gt;
-&lt;p&gt;Let me draw the boundary clearly: these are principles, not trading signals. They answer no specific buy-or-sell timing — how to read positioning is another article&amp;rsquo;s job. The use of principles is to make you ask five questions before acting: Is the crowd too big? Can this asset disappear? Is my cash enough to outlast the winter? Am I betting on too few things? Has my own ability grown faster than the cycle?&lt;/p&gt;
-&lt;p&gt;Mania, confusion, despair — none of what we&amp;rsquo;re going through now is happening for the first time, and none of it will be the last. The cycle will return, and so will the harvest. When it comes again next time, will your name be on the list — or off it?&lt;/p&gt;
-</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 &#43;0000</pubDate>
       <category>Investing</category>
     </item>
     
