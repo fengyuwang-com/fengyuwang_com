@@ -13,6 +13,9 @@
 - [x] 全站字号体系深审第一期（2026-09-12 定时审计）：h2/h3 字号声明纳入 key-selector 门禁（审计时全站已合规，0 违规，规则防新增页回归）；正文 p 与颜色清单待第二期
 - [ ] 首页 index.html hero 结构一致性（slider-caption 等）纳入门禁（page-elements 已覆盖子页 10 项）
 - [ ] 暗色模式人工抽检实战块：human-in-the-loop 页新增的实战块暗色对比已过门禁，建议站长肉眼复核一次观感
+- [ ] 博文逐篇 OG 生图：现 twitter card 三语共用站点图；逐篇约 615 张 PNG 涉及设计风格与仓库体积，需站长定夺后再做（可仿 og-image-creator 流程）
+- [ ] Webmention / 读者互动：零运行时约束下只能走 webmention.io + 前端 BYOK 展示，收益待估，站长点头前不动
+- [ ] `/{lang}/tags/` 标签汇总页 404（预存在问题）：Hugo 从未给 taxonomy-list 配布局，站内也无入口直链；若站长要此页，补 layouts/taxonomy/list.html 即可
 
 （第 13 轮站长令：接下来一律只推 dev，未经批准不碰 master；每小时定时任务按本清单继续）
 
@@ -377,3 +380,14 @@
 - [x] 文章页「回到博客」恢复来源页：list/term 页 sessionStorage 记 blogListUrl+blogListScroll（滚动节流+pagehide 兜底），文章页点击返回按钮跳回来源列表页并恢复滚动位置；无记录时回退默认第 1 页
 - [x] 文章页上一篇/下一篇：single.html 文章卡下方双卡导航（左←上一篇=较早、右下一篇→较新，含标题链接；缺一侧用占位保布局），三语标签；实测本版 Hugo `.PrevInSection`=较早、`.NextInSection`=较新（与记忆相反，5 个数据点验证后对调）
 - [x] 重建 deploy + 抽验三语分页形状/导航方向/脚本就位 + check_site --no-dark 全绿；777 个构建产物随提交更新
+
+## 已完成（2026-09-12：站长令——博客体系补全"能解决的全部解决"）
+
+- [x] sitemap 全自动全量：新增 tools/gen_sitemap.py（canonical 去重 + 博文 lastmod 取 frontmatter、页面取 git log），deploy.sh 挂钩；745 URL（含 615 篇博文，旧口径仅各语言 94 篇），check_site 门禁改按 canonical 校验（总量≥博文数、三语 blog/archive/全部 tag 页必备、每语博文数精确相等）
+- [x] RSS 补全：feed 截前 20 篇全文+分类标签+lastBuildDate；baseof 加 `<link rel=alternate>` 自动发现；博客列表页加 RSS 订阅 / 按年份归档 两枚 chip（含暗色覆盖）；check_site RSS 条数门禁同步 min(20, 源数)
+- [x] 文章页单页体验：TOC（≥2 标题才显示，标题自动挂 # 锚点，scroll-margin 80px，zh-hk「目錄」）；阅读时长（en 220wpm / 中文 350字每分钟向上取整）；更新于（`lastmod` frontmatter，archetype 加提示注释）；相关阅读（同标签 intersect 取 3 篇）；作者卡片（头像+一句话+首页链接+mailto 反馈，subject 带文章标题，Go escaper 实测正确编码）
+- [x] 归档页：content/{lang}/archive/ + layouts/archive/single.html（按年分组倒序，三语，hreflang 齐全）；deploy.sh 复制 {lang}/archive；_headers 三语 archive 路径 no-cache；llms.txt 补归档与三语 RSS 行
+- [x] 列表页搜索状态入 URL：?q= 读写（URLSearchParams + replaceState，进页面自动回放查询），check_site 加 needle 门禁
+- [x] twitter card（summary_large_image + title/desc/站点图）与 BreadcrumbList JSON-LD
+- [x] 逐篇 OG 生图与 webmention 挂账待办队列（需站长决策）；`/{lang}/tags/` 汇总页 404 预存在问题一并挂账
+- [x] hugo build + deploy 全绿；check_site --no-dark 全部通过；中文/英文/繁体冒烟抽验 TOC 锚点、阅读时长、mailto、归档、RSS=20

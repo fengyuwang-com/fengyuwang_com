@@ -176,29 +176,39 @@ for lang in LANGS:
         err("deploy", f"{lang}: {len(miss)} 篇源文件未部署: {sorted(miss)[:5]}… (需 hugo + deploy.sh)")
     if extra:
         err("deploy", f"{lang}: {len(extra)} 篇部署副本无源文件: {sorted(extra)[:5]}")
-    # RSS 一致
+    # RSS 一致 (feed 只保留最近 20 篇全文, 见 layouts/blog/rss.xml)
     rss = f"{lang}/blog/index.xml"
     if os.path.exists(rss):
         n = open(rss, encoding="utf-8").read().count("<item>")
-        if n != len(src):
-            err("deploy", f"{lang}: 根目录 RSS {n} 条 vs 源 {len(src)} 篇")
+        expected = min(20, len(src))
+        if n != expected:
+            err("deploy", f"{lang}: 根目录 RSS {n} 条 vs 预期 {expected} (源 {len(src)} 篇, feed 上限 20)")
     else:
         err("deploy", f"{lang}: 根目录 RSS 缺失")
 ok("deploy", f"部署副本: " + ", ".join(f"{l} {len(glob.glob(l+'/blog/posts/*'))} 篇" for l in LANGS))
 
-# ---------- 6. sitemap ----------
+# ---------- 6. sitemap (tools/gen_sitemap.py 自动生成, 全量覆盖) ----------
 if os.path.exists("sitemap.xml"):
     sm = open("sitemap.xml", encoding="utf-8").read()
-    locs = sm.count("<loc>")
-    pages = len(glob.glob("_site/**/*.html", recursive=True))
-    if pages == 0:
-        notes.append("[sitemap] _site 不存在 (构建后已清理), 跳过数量比对; 当前 loc={}".format(locs))
-    elif abs(locs - pages) > 5:
-        err("sitemap", f"sitemap {locs} loc vs 构建 {pages} 页, 需重生成")
+    locs = set(re.findall(r"<loc>([^<]+)</loc>", sm))
+    n_posts_src = sum(sum(1 for p in posts[l] if "draft: true" not in p["fm"]) for l in LANGS)
+    if len(locs) < n_posts_src:  # 至少覆盖全部博文 (canonical 去重后 pagination 页不单独成 URL)
+        err("sitemap", f"sitemap 仅 {len(locs)} 个 URL (<{n_posts_src} 篇博文), 疑漏生成, 需重跑 tools/gen_sitemap.py (deploy.sh 已挂钩)")
     else:
-        ok("sitemap", f"sitemap {locs} loc ≈ 构建 {pages} 页")
-    if "https://www.fengyuwang.com/en/blog/" not in sm:
-        err("sitemap", "sitemap 缺博客索引 URL")
+        ok("sitemap", f"sitemap {len(locs)} 个 URL (canonical 去重后)")
+    import urllib.parse
+    for l in LANGS:
+        want = {f"https://www.fengyuwang.com/{l}/blog/", f"https://www.fengyuwang.com/{l}/archive/"}
+        for d in glob.glob(f"{l}/tags/*/index.html"):
+            want.add(f"https://www.fengyuwang.com/{l}/tags/{urllib.parse.quote(os.path.basename(os.path.dirname(d)))}/")
+        missing = sorted(want - locs)
+        if missing:
+            err("sitemap", f"{l}: sitemap 缺 {len(missing)} 个页面 URL: {missing[:3]}")
+    for l in LANGS:
+        n_src = sum(1 for p in posts[l] if "draft: true" not in p["fm"])
+        n_sm = sum(1 for u in locs if f"/{l}/blog/posts/" in u)
+        if n_sm != n_src:
+            err("sitemap", f"{l}: sitemap 博文 URL {n_sm} 篇 vs 源 {n_src} 篇")
 else:
     err("sitemap", "根目录 sitemap.xml 缺失")
 
@@ -398,9 +408,13 @@ for l in LANGS:
     if os.path.exists(lp):
         lh = open(lp, encoding="utf-8").read()
         for needle, label in [('id="blogSearch"', "搜索框"), ('id="searchResults"', "搜索结果容器"),
-                              ("index.json", "索引引用"), ('id="blogGrid"', "文章网格")]:
+                              ("index.json", "索引引用"), ('id="blogGrid"', "文章网格"),
+                              ('application/rss+xml', "RSS 自动发现"), ('/archive/', "归档入口"),
+                              ('new URLSearchParams', "搜索 URL 状态")]:
             if needle not in lh:
                 err("search", f"{lp} 缺{label} ({needle})")
+    if not os.path.exists(f"{l}/archive/index.html"):
+        err("search", f"{l}/archive/index.html 归档页未部署 (需 hugo + deploy.sh)")
 
 # ---------- 12.5 hover 态对比度 (静态 CSS 分析) ----------
 # 背景: 首页 default-btn-one 暗色 hover 白底白字 bug (内联暗色规则压过全局 hover 规则)。

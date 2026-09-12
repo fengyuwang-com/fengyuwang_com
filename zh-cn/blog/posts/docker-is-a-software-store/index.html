@@ -11,6 +11,11 @@
     <meta property="og:url" content="https://www.fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store/">
     <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
     <meta property="og:site_name" content="Fengyu WANG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Docker 就是个软件商店">
+    <meta name="twitter:description" content="名词是给工程师的，动作是给用户的。">
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    
     <meta property="article:published_time" content="2026-09-05">
     <link rel="canonical" href="https://www.fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store/">
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/posts/docker-is-a-software-store/">
@@ -44,14 +49,11 @@
     <section class="content-section">
         <div class="container">
             
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"Docker 就是个软件商店\"","datePublished":"2026-09-05","dateModified":"2026-09-05","url":"\"https://www.fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store/\"","inLanguage":"zh-cn","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"名词是给工程师的，动作是给用户的。\"","keywords":"\"技术, 商业\""}</script>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"Docker 就是个软件商店\"","datePublished":"2026-09-05","dateModified":"2026-09-05","url":"\"https://www.fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store/\"","inLanguage":"zh-cn","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"名词是给工程师的，动作是给用户的。\"","keywords":"\"技术, 商业\""</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.fengyuwang.com/zh-cn/"},{"@type":"ListItem","position":2,"name":"\"博客\"","item":"\"https://www.fengyuwang.com/zh-cn/blog/\""},{"@type":"ListItem","position":3,"name":"\"Docker 就是个软件商店\"","item":"\"https://www.fengyuwang.com/zh-cn/blog/posts/docker-is-a-software-store/\""}]}</script>
 <style>
-
-
-
-
-
-
 .blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
 body[data-theme="dark"] .blog-article { background:#1e293b; }
 .blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
@@ -64,12 +66,61 @@ body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
 .blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
 body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
 body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+.blog-article .article-content h2[id],.blog-article .article-content h3[id] { scroll-margin-top:80px; position:relative; }
+.heading-anchor { opacity:0; margin-left:8px; color:#0071e3; text-decoration:none; font-weight:700; transition:opacity .15s; }
+.blog-article .article-content h2:hover .heading-anchor,.blog-article .article-content h3:hover .heading-anchor { opacity:.65; }
+.heading-anchor:hover { opacity:1 !important; }
+body[data-theme="dark"] .heading-anchor { color:#60a5fa; }
+.article-toc { background:rgba(0,113,227,.04); border:1px solid rgba(15,23,42,.08); border-radius:16px; padding:18px 24px; margin-bottom:28px; }
+.article-toc .toc-title { font-size:.82rem; font-weight:800; letter-spacing:.06em; color:#6b7280; margin-bottom:8px; }
+.article-toc nav { display:block; }
+.article-toc ul { margin:0; padding-left:18px; }
+.article-toc li { font-size:.9rem; line-height:1.9; }
+.article-toc a { color:#0071e3; text-decoration:none; }
+.article-toc a:hover { text-decoration:underline; }
+body[data-theme="dark"] .article-toc { background:rgba(41,151,255,.06); border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .article-toc .toc-title { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc li { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc a { color:#60a5fa; }
+.author-card { display:flex; align-items:center; gap:18px; flex-wrap:wrap; background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:20px; padding:24px 28px; margin-top:28px; box-shadow:0 4px 16px rgba(15,23,42,.05); }
+.author-card .author-avatar { width:56px; height:56px; border-radius:50%; object-fit:cover; flex:none; }
+.author-card .author-body { flex:1; min-width:200px; }
+.author-card .author-name { font-size:1.05rem; font-weight:800; color:#111827; }
+.author-card .author-line { font-size:.88rem; color:#6b7280; margin:4px 0 0; line-height:1.6; }
+.author-card .author-links { display:flex; gap:10px; flex-wrap:wrap; }
+.author-card .author-links a { display:inline-flex; align-items:center; padding:8px 18px; border-radius:999px; font-size:.85rem; font-weight:600; text-decoration:none; }
+.author-card .author-links a.author-home { background:#0071e3; color:#fff; }
+.author-card .author-links a.author-home:hover { background:#0062cc; }
+.author-card .author-links a.author-mail { background:rgba(0,113,227,.08); color:#0071e3; }
+.author-card .author-links a.author-mail:hover { background:rgba(0,113,227,.16); }
+body[data-theme="dark"] .author-card { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .author-card .author-name { color:#e5ecf4; }
+body[data-theme="dark"] .author-card .author-line { color:#9fb0c3; }
+body[data-theme="dark"] .author-card .author-links a.author-home { background:#4f7eff; color:#fff; }
+body[data-theme="dark"] .author-card .author-links a.author-mail { background:rgba(41,151,255,.12); color:#60a5fa; }
+.related-shell { margin-top:36px; }
+.related-shell .related-title { font-size:1.1rem; font-weight:800; color:#111827; margin:0 0 14px; }
+.related-shell ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; }
+.related-shell li { display:flex; align-items:baseline; gap:10px; min-width:0; }
+.related-shell a { color:#0071e3; text-decoration:none; font-size:.93rem; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.related-shell a:hover { text-decoration:underline; }
+.related-shell .related-date { font-size:.8rem; color:#9ca3af; flex:none; }
+body[data-theme="dark"] .related-shell .related-title { color:#e5ecf4; }
+body[data-theme="dark"] .related-shell a { color:#60a5fa; }
+body[data-theme="dark"] .related-shell .related-date { color:#8296ac; }
+@media (max-width:767px) { .related-shell ul { grid-template-columns:1fr; } }
 @media (max-width:767px) { .blog-article { padding:24px; } }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
 .back-to-top.show { display:flex; }
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
-body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
 .post-nav { display:flex; gap:16px; margin-top:28px; }
 .post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
 .post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
@@ -81,21 +132,43 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
 body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
 body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
-@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }</style>
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }
+</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>Docker 就是个软件商店</h1>
     <div class="article-meta">
         <span class="article-date">2026-09-05</span>
-        <span class="meta-sep">·</span>
-        <span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span>
+        
+        <span class="meta-sep">·</span><span>约 4 分钟</span>
+        <span class="meta-sep">·</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技术</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商业</span>
     </div>
+    
     <div class="article-content"><p>Docker 就是个软件商店,只不过它这个商店里的软件跑在网页上。搞服务器的肯定不这么说,对普通用户来说就是。打开 Docker,搜 Jellyfin,点安装,等一会儿,浏览器打开一个地址,能用。打开 App Store,搜微信,点安装,等一会儿,图标出现,能用。用户不关心容器、镜像、守护进程——他只知道我点了一下,东西跑起来了。container、企业支持,这些都是现象。一个网址等于一个软件,这才是本质。</p>
 <p>最强反论在这儿:商店卖成品,它卖零件。每个容器是乐高零件——播放器是零件,数据库是零件,组网是零件,电影存在哪块盘、配置放哪个目录,用户自己说了算。App Store 里你不可能给微信指定一个数据库。所以严格讲,Docker 是一家零件店,这也是它永远成不了苹果的原因:苹果卖成品,成品要开箱即用。</p>
 <p>反论收到,判断不变。判断一个东西是什么,别看它的名词,看用户的动作。用户的动作是搜、装、用——名词是给工程师的,动作是给用户的。</p>
 <p>零件和成品之间有一门生意:把零件预拼成成品再卖。为什么没人做?做成品要负责拼装、负责售后,零件店可以两手一摊。这门生意有个老名字,叫产品。</p>
 </div>
 </article>
+<div class="author-card">
+    <img class="author-avatar" src="/assets/img/logo.png" alt="Fengyu WANG">
+    <div class="author-body">
+        <div class="author-name">Fengyu WANG</div>
+        <p class="author-line">市场 × 投资 × 工程——一个人，一套底层逻辑。</p>
+    </div>
+    <div class="author-links">
+        <a class="author-home" href="/zh-cn/">首页</a>
+        <a class="author-mail" href="mailto:fengyuwang1@outlook.com?subject=Docker%20%e5%b0%b1%e6%98%af%e4%b8%aa%e8%bd%af%e4%bb%b6%e5%95%86%e5%ba%97%20%e2%80%94%20fengyuwang.com">邮件反馈</a>
+    </div>
+</div>
+
+
+
+<nav class="related-shell">
+    <h2 class="related-title">相关阅读</h2>
+    <ul><li><span class="related-date">2026-09</span><a href="/zh-cn/blog/posts/low-money-is-money/">Low 的钱也是钱</a></li><li><span class="related-date">2026-09</span><a href="/zh-cn/blog/posts/spread-not-direction/">汇率涨跌都能赚的钱</a></li><li><span class="related-date">2026-09</span><a href="/zh-cn/blog/posts/persona-as-contract/">人设是一份还不完的契约</a></li></ul>
+</nav>
+
 
 <nav class="post-nav">
     <a class="post-nav-item" href="/zh-cn/blog/posts/115-ponzi-ledger/"><span class="post-nav-label">&larr; 上一篇</span><span class="post-nav-title">八年 50TB，800 块：算不通的账</span></a>
@@ -106,6 +179,7 @@ body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
 <script>
 (function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
 (function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
+(function(){document.querySelectorAll('.article-content h2[id],.article-content h3[id]').forEach(function(h){var a=document.createElement('a');a.className='heading-anchor';a.href='#'+h.id;a.setAttribute('aria-hidden','true');a.textContent='#';h.appendChild(a);});if(location.hash){var t=document.querySelector(location.hash);if(t){setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},80);}}})();
 </script>
 
         </div>

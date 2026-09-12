@@ -15,7 +15,8 @@
 - Blog: /en/blog/
 - Blog (简体中文): /zh-cn/blog/
 - Blog (繁體中文): /zh-hk/blog/
-- Blog RSS: /en/blog/index.xml
+- Blog archive by year: /en/archive/ · /zh-cn/archive/ · /zh-hk/archive/
+- Blog RSS: /en/blog/index.xml · /zh-cn/blog/index.xml · /zh-hk/blog/index.xml
 
 ## About
 
