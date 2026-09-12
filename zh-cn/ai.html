@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
     <title>AI 工程与自动化 | 王丰羽 Fengyu WANG</title>
-    <meta name="description" content="AI工程不是调API。从Harness Engineering到AI Agent开发，覆盖提示工程、RAG架构、模型部署与自动化工作流的实战记录。">
+    <meta name="description" content="AI工程不是调API。从Harness Engineering、AI Agent到两层界面原则——对话层承载操作，图形界面退居观景台，文档层治理AI。">
     <meta name="keywords" content="AI 工程与自动化, Docker, Cloudflare, DevOps, 王丰羽">
     <meta name="author" content="王丰羽">
     <meta name="robots" content="index,follow">
@@ -20,12 +20,12 @@
     <meta property="og:locale" content="zh_CN">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AI 工程与自动化 | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统">
+    <meta property="og:description" content="AI工程不是调API。从Harness Engineering、AI Agent到两层界面原则——对话层承载操作，图形界面退居观景台，文档层治理AI。">
     <meta property="og:url" content="https://www.fengyuwang.com/zh-cn/ai">
     <meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI 工程与自动化 | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统">
+    <meta name="twitter:description" content="AI工程不是调API。从Harness Engineering、AI Agent到两层界面原则——对话层承载操作，图形界面退居观景台，文档层治理AI。">
     <meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -110,7 +110,7 @@
         <div class="container">
             <div class="marketing-hero">
                 <h1>AI 工程与自动化</h1>
-                <p>从 Harness Engineering 到 AI Agent——构建能够思考、行动、迭代的系统</p>
+                <p>从 Harness Engineering 到两层界面原则——操作走对话，界面退居观景</p>
             </div>
             <div class="card-grid">
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80')" onclick="document.getElementById('harness').scrollIntoView({behavior:'smooth'})">
@@ -138,6 +138,13 @@
                 <div class="card-content">
                     <h3>AI 驱动的自动化</h3>
                     <p>将 AI 接入真实工作流</p>
+                    <button class="card-btn">了解详情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80');grid-column:1 / -1" onclick="document.getElementById('twolayer').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>说话就是操作</h3>
+                    <p>两层界面原则：对话层承载操作，界面退居观景，文档治理 AI</p>
                     <button class="card-btn">了解详情</button>
                 </div>
             </div>
@@ -210,6 +217,23 @@
         </div>
     </div>
 
+
+    <div id="twolayer" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>操作走对话，界面退居观景</h2>
+                <p class="block-subtitle">两层界面原则：AI 时代的软件交互架构</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>对话层承载操作</strong>：增删改查、流程触发、异常处置全部走自然语言与 Skill，AI 够得着每一个操作。</li>
+                    <li><strong>观景层只读</strong>：图形界面为"不参与操作的人"存在——确认状态、验收结果、对外演示，不开发写操作。</li>
+                    <li><strong>文档层治理 AI</strong>：规则、目标、账本、日志以文档为唯一真源，AI 逐字执行，文档成为面向 AI 的第三个界面。</li>
+                    <li><strong>本地优先</strong>：真理源恒为本地文件，交互产出纳入可备份管道，客户端只持有副本与视图。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="link-card">
             <p>工程能力需要商业场景才有价值</p>
