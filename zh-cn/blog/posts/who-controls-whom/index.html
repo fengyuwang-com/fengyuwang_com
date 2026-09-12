@@ -69,7 +69,19 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 .back-to-top.show { display:flex; }
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
-body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>自主可控，到底谁可控</h1>
@@ -86,9 +98,16 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 <p>使用的人能看、能改、能在断供的时候接着用,这才叫自主。主语是使用的人。不是那家公司。</p>
 </div>
 </article>
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/zh-cn/blog/posts/web3-deep-research/"><span class="post-nav-label">&larr; 上一篇</span><span class="post-nav-title">Web3 深度研究与分析</span></a>
+    <a class="post-nav-item post-nav-next" href="/zh-cn/blog/posts/self-hosting-triple-value/"><span class="post-nav-label">下一篇 &rarr;</span><span class="post-nav-title">自部署的三重价值</span></a>
+</nav>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
 <script>
 (function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
 </script>
 
         </div>

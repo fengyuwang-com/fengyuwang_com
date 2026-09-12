@@ -69,7 +69,19 @@ body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"]
 .back-to-top.show { display:flex; }
 .back-to-top:hover { background:#0062cc; }
 body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
-body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }</style>
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-shell { margin-bottom:48px; }.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }.blog-back-btn::before { content:"←"; }body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }</style>
 <div class="blog-back-shell"><a class="blog-back-btn" href="/zh-cn/blog/">返回博客</a></div>
 <article class="blog-article">
     <h1>人设是一份还不完的契约</h1>
@@ -87,9 +99,16 @@ body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }.blog-back-she
 <p>他为什么退不了？对照物摆在那里：马云顺利退场，库克无需直面大众，马斯克争议再大不影响基本盘。而雷军绑定了 ToC 硬件和小米汽车两大核心 IP，个人形象直接决定销量，没有抽身退路——人设签到最后，签名人和公司长得一模一样，想撕也没处下手。这份契约还压着一条行业条款：极致性价比持续压缩全行业整机利润，企业可用于研发的钱受限，长期难以冲击苹果的高端壁垒；生态链企业石头科技、华米做大后全力去小米化，因为渠道、定价、品牌的话语权都在小米手里，随时可以被替换。契约是双向的：他向消费者让渡了利润，也向生态伙伴收走了独立性。人设从来不是免费的资产，它是一份还不完的合同。</p>
 </div>
 </article>
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/zh-cn/blog/posts/base-position/"><span class="post-nav-label">&larr; 上一篇</span><span class="post-nav-title">人无底仓不富</span></a>
+    <a class="post-nav-item post-nav-next" href="/zh-cn/blog/posts/money-life-cycle/"><span class="post-nav-label">下一篇 &rarr;</span><span class="post-nav-title">钱的一生，只有四站</span></a>
+</nav>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
 <script>
 (function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
 </script>
 
         </div>
