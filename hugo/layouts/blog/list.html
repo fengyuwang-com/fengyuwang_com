@@ -36,6 +36,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -84,11 +86,11 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 </div>
 
 <div class="blog-grid" id="blogGrid">
-{{ range .Paginator.Pages.ByDate.Reverse }}
+{{ range .Paginator.Pages.ByDate.Reverse }}{{ $rt := 1 }}{{ if eq $lang "en" }}{{ $rt = int (math.Ceil (div (float .WordCount) 220.0)) }}{{ else }}{{ $rt = int (math.Ceil (div (float (len .Plain)) 350.0)) }}{{ end }}
 <a class="blog-card" href="{{ .RelPermalink }}" data-title="{{ .Title }}" data-summary="{{ .Params.description }}" data-date="{{ .Date.Format "2006-01-02" }}" data-tags="{{ with .Params.tags }}{{ delimit . "," }}{{ end }}">
     <h3>{{ .Title }}</h3>
     {{ if .Params.description }}<hr class="summary-divider"><div class="summary-text">{{ .Params.description }}</div>{{ end }}
-    {{ if .Params.tags }}<div class="blog-tags">{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    <div class="blog-tags"><span class="card-rt">{{ if eq $lang "en" }}{{ $rt }} min read{{ else if eq $lang "zh-hk" }}約 {{ $rt }} 分鐘{{ else }}约 {{ $rt }} 分钟{{ end }}</span>{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div>
 </a>
 {{ end }}
 </div>
@@ -111,6 +113,7 @@ var TAGURLS={ {{ range $name, $tax := .Site.Taxonomies.tags }}"{{ $name }}":"{{ 
 var L_ART={{ if eq $lang "en" }}" articles · "{{ else if eq $lang "zh-hk" }}" 篇文章 · "{{ else }}" 篇文章 · "{{ end }};
 var L_TAG={{ if eq $lang "en" }}" tags"{{ else if eq $lang "zh-hk" }}" 個標籤"{{ else }}" 个标签"{{ end }};
 var L_TAGS={{ if eq $lang "en" }}"Matching tags:"{{ else if eq $lang "zh-hk" }}"相關標籤："{{ else }}"相关标签："{{ end }};
+var L_RTFMT={{ if eq $lang "en" }}"$1 min read"{{ else if eq $lang "zh-hk" }}"約 $1 分鐘"{{ else }}"约 $1 分钟"{{ end }};
 var L_EMPTY={{ if eq $lang "en" }}"No matching articles or tags."{{ else if eq $lang "zh-hk" }}"沒有匹配的文章或標籤。"{{ else }}"没有匹配的文章或标签。"{{ end }};
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -129,7 +132,7 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
