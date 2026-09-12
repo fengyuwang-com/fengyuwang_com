@@ -249,3 +249,8 @@
 ## 2026-09-13 — FengOrchestrator 会话代办
 - 用户要求: 写学术级文章放本仓库根目录（待编入网站）。
 - AI 行动/产出: 根目录新增 TWO-LAYER-INTERFACE.md（两层界面原则：chat-first + Generative UI + local-first + 文档治理面三元命题，含参考文献）。未动 hugo/zh-cn 结构，待丰羽收录。
+
+## 2026-09-13 — 事故记录：文章提交被 rebase 丢弃后恢复
+- 事故: pull --rebase origin dev 时，文章提交 3635e801 被静默丢弃（rebase finish 落在 fb4c048a，未保留补丁），本地文件一并消失，gitee 也被 force 到无文章的 fb4c048a——即此前"dev 同步"结论覆盖的是不含文章的状态。
+- 处置: reflog 定位 3635e801 → cherry-pick 为 b2147654 → GitHub+gitee 双推成功（fb4c048a..b2147654）。
+- 教训: rebase 后必须 git show 验证关键文件仍在远端，不能只对哈希；本次用户以"fb4c048a 有我文章吗"抓住，主会话此前核验不严。
