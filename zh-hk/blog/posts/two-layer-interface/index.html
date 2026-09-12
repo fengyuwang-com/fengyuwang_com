@@ -165,7 +165,7 @@ body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
   </ul>
 </nav></div>
     <div class="article-content"><h2 id="摘要">摘要</h2>
-<p>生成式 AI 把&quot;軟件操作&quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司（FengProj 生態，含投資研究、內容生產、私有雲產品三個真實系統）的完整審查與重構實踐，提出並檢驗**&ldquo;兩層界面原則&rdquo;<strong>：任何軟件系統只應保留兩個交互層次——(1) <strong>對話層</strong>：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；(2) <strong>觀景層</strong>：只讀的圖形界面，僅為&quot;不參與操作的人&quot;提供可視化確認。資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 &ldquo;Chat is the interface&rdquo;、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了</strong>第三個界面**——面向 AI 的治理界面，從而把&quot;界面&quot;概念從人機兩端擴展為&quot;人—AI—文檔&quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。</p>
+<p>生成式 AI 把&quot;軟件操作&quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司（FengProj 生態，含投資研究、內容生產、私有雲產品三個真實系統）的完整審查與重構實踐，提出並檢驗<strong>兩層界面原則</strong>：任何軟件系統只應保留兩個交互層次——(1) <strong>對話層</strong>：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；(2) <strong>觀景層</strong>：只讀的圖形界面，僅為&quot;不參與操作的人&quot;提供可視化確認。資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 &ldquo;Chat is the interface&rdquo;、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了<strong>第三個界面</strong>——面向 AI 的治理界面，從而把&quot;界面&quot;概念從人機兩端擴展為&quot;人—AI—文檔&quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。</p>
 <h2 id="一問題的提出">一、問題的提出</h2>
 <p>經典軟件的交互模型是&quot;客户端中心&quot;的：用户在圖形界面裏點擊、填表，操作結果沉澱在客户端的數據庫裏，界面既是操作入口又是數據容器。這一模型隱含了兩個 2026 年已不再成立的前提：</p>
 <ol>
@@ -212,7 +212,7 @@ body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
 <h3 id="31-chat-is-the-interface">3.1 &ldquo;Chat is the interface&rdquo;</h3>
 <p>2026 年，Y Combinator 的 Gary Tan 與 Jared 公開修正了此前的立場，確認&quot;對話即界面&quot;是 AI 應用的正確形態（Pete Koomen 相關討論廣泛傳播）。產品側同聲相應：neww.ai 的口號 &ldquo;Chat is the interface. The operating system is the product.&quot;；arg.ai 乾脆取消全部功能頁面，Agent 經聊天直接讀寫文件；面向承包商的 XBuild 讓&quot;對話就是估算流程本身&rdquo;。這説明 2LIP 的 L1 層已被業界接受為主通道，而非聊天機械人式的附加件（bolted-on chatbot）。</p>
 <h3 id="32-generative-ui觀景層也無需預建">3.2 Generative UI：觀景層也無需預建</h3>
-<p>進一步的問題是：L2 觀景層要不要&quot;精心開發&rdquo;？生成式界面（Generative UI）給出否定回答——界面由 Agent 針對當前問題按需拼裝（卡片、圖表、整頁 HTML），而非設計師預定義的固定佈局（Google Cloud、CopilotKit、Decagon 諸家的定義趨同）。其論證是：儀表盤要求人去翻篩選器找答案，而 GenUI 把&quot;界面變成一次回應，而不是一個目的地&quot;。但 2026 年的實踐反思（如 r/UXDesign 社區）同樣指出：<strong>&ldquo;一眼掃全局&quot;的固定儀表盤在可預期性與可掃視性上不可替代</strong>。二者恰好合成 2LIP 的立場：觀景層保留，但不必精裝修——固定視圖管&quot;日常掃一眼&rdquo;，生成視圖管&quot;臨時看細節&quot;。</p>
+<p>進一步的問題是：L2 觀景層要不要&quot;精心開發&rdquo;？生成式界面（Generative UI）給出否定回答——界面由 Agent 針對當前問題按需拼裝（卡片、圖表、整頁 HTML），而非設計師預定義的固定佈局（Google Cloud、CopilotKit、Decagon 諸家的定義趨同）。其論證是：儀表盤要求人去翻篩選器找答案，而 GenUI 把&quot;界面變成一次回應，而不是一個目的地&quot;。但 2026 年的實踐反思（如 r/UXDesign 社區）同樣指出：<strong>一眼掃全局</strong>的固定儀表盤在可預期性與可掃視性上不可替代。二者恰好合成 2LIP 的立場：觀景層保留，但不必精裝修——固定視圖管&quot;日常掃一眼&quot;，生成視圖管&quot;臨時看細節&quot;。</p>
 <h3 id="33-mcp-apps--openai-apps-sdk給客户的-skill-長出可視化">3.3 MCP Apps / OpenAI Apps SDK：給客户的 Skill 長出可視化</h3>
 <p>2LIP 在對外產品上的對應物已經平台化：OpenAI Apps SDK 讓 MCP server（即&quot;給客户用的 Skill&quot;）返回 UI 資源，在聊天流內以 React 組件渲染（如 Zillow 房源卡片）。這正是&quot;Web UI 裏要有 Skill&quot;的官方形態：<strong>Skill 是主體，UI 是 Skill 返回的可視化附件</strong>，而非獨立門戶。對桌面/移動端自有產品而言，等價推論是：客户對話入口內嵌於產品，操作走對話，面板退居展示與兜底。</p>
 <h3 id="34-local-first資源約束的業界共識">3.4 Local-first：資源約束的業界共識</h3>
