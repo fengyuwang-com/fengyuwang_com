@@ -38,3 +38,17 @@ disableKinds = ["home", "sitemap", "robotsTXT", "404"]
 [outputFormats.RSS]
   mediatype = "application/rss"
   baseName = "index"
+# 相关阅读：按题材相关度排序（标签+标题+正文词频），取代旧"同标签取最新3篇"的时间序
+[related]
+  threshold = 0
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "title"
+    weight = 60
+  [[related.indices]]
+    name = "text"
+    weight = 40
