@@ -3,7 +3,7 @@ title: "段永平买泡泡玛特，算失误吗"
 date: 2025-12-08
 description: "结构有洞，纪律可以补；纪律有洞，神仙难救。"
 slug: "labubu-structural-flaw"
-tags: ["金融", "商业", "投资"]
+tags: ["投资", "商业", "经济"]
 draft: false
 translationKey: "labubu-structural-flaw"
 ---

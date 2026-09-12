@@ -3,7 +3,7 @@ title: "Ask Whose Writing It Is, and It Says Whoever You Suggest"
 date: 2026-02-06
 description: "The same article, asked whether AI wrote it: yes. Asked whether a human wrote it: also yes. That is not detection — that is compliance. AI detection is barely credible today."
 slug: "ai-flip-flop"
-tags: ["Technology"]
+tags: ["Tech"]
 draft: false
 translationKey: "ai-flip-flop"
 ---

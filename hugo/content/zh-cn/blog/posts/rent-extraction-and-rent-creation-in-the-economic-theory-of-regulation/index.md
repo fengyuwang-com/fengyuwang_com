@@ -4,7 +4,7 @@ date: 2025-08-08
 
 description: "个人原创感悟与对应学术理论完整大纲"
 slug: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
-tags: ["经济", "商业", "社会"]
+tags: ["商业", "经济", "社会"]
 draft: false
 translationKey: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
 ---

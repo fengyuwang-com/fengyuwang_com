@@ -3,7 +3,7 @@ title: "Leverage Can't Buy Time"
 date: 2026-09-12
 description: "Infinite money plus enough time computes to infinite wealth — interest computes faster."
 slug: "leverage-cant-buy-time"
-tags: ["Investing", "Risk", "Math"]
+tags: ["Investing", "Tech"]
 draft: false
 translationKey: "leverage-cant-buy-time"
 ---

@@ -3,7 +3,7 @@ title: "Don't Trust the Data, Trust the Business"
 date: 2025-11-16
 description: "Data is someone else's answer sheet; the business is the exam."
 slug: "data-lies"
-tags: ["Finance", "Business", "Investing"]
+tags: ["Investing", "Business", "Economy"]
 draft: false
 translationKey: "data-lies"
 ---

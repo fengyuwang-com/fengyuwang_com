@@ -3,7 +3,7 @@ title: "回本学：我看的是股息"
 date: 2025-11-20
 description: "股价是别人的出价，股息是公司的交代。"
 slug: "dividend-payback"
-tags: ["金融", "投资"]
+tags: ["投资", "经济"]
 draft: false
 translationKey: "dividend-payback"
 ---

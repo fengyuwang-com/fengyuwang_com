@@ -3,7 +3,7 @@ title: "八年 50TB，800 块：算不通的账"
 date: 2025-10-23
 description: "现金流还行，摊销下去，账没法算。"
 slug: "115-ponzi-ledger"
-tags: ["技术", "商业"]
+tags: ["商业", "技术"]
 draft: false
 translationKey: "115-ponzi-ledger"
 ---

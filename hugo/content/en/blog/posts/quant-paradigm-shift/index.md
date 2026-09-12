@@ -3,7 +3,7 @@ title: "The Axis Shift in Quant Trading"
 date: 2025-12-26
 description: "From predicting the market to designing it."
 slug: "quant-paradigm-shift"
-tags: ["Finance", "Investing"]
+tags: ["Investing", "Economy"]
 draft: false
 translationKey: "quant-paradigm-shift"
 ---

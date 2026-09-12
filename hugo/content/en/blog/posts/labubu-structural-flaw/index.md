@@ -3,7 +3,7 @@ title: "Is Duan Yongping's Pop Mart Buy a Mistake?"
 date: 2025-12-08
 description: "A hole in the structure can be patched by discipline. A hole in discipline can't be patched at all."
 slug: "labubu-structural-flaw"
-tags: ["Finance", "Business", "Investing"]
+tags: ["Investing", "Business", "Economy"]
 draft: false
 translationKey: "labubu-structural-flaw"
 ---

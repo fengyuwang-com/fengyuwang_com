@@ -3,7 +3,7 @@ title: "问它是谁写的，它就说是谁"
 date: 2026-02-06
 description: "同一篇文章，问是不是 AI 写的，答案是；问是不是人写的，答案也是。这不是鉴定，这是顺从——AI 检测在今天基本不可信。"
 slug: "ai-flip-flop"
-tags: ["科技"]
+tags: ["技术"]
 draft: false
 translationKey: "ai-flip-flop"
 ---

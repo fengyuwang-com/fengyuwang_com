@@ -3,7 +3,7 @@ title: The Organization That Wanted to Change, and Died Wanting
 date: 2026-06-30
 description: "Kodak's leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom's judgment, it lived in the organization's skill structure. For innovation to survive, it has to be the CEO's job."
 slug: resistance-inside
-tags: ["Markets"]
+tags: ["Marketing"]
 draft: false
 translationKey: resistance-inside
 ---

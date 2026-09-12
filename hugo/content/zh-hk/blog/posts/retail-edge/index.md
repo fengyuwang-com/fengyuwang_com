@@ -3,7 +3,7 @@ title: "散户的結構性優勢"
 date: 2025-12-28
 description: "數據是它的百萬分之一，盈利可不是它的百萬分之一。"
 slug: "retail-edge"
-tags: ["金融", "投資"]
+tags: ["投資", "經濟"]
 draft: false
 translationKey: "retail-edge"
 ---

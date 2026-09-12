@@ -3,7 +3,7 @@ title: "Scaling 不再是堆数字"
 date: 2026-07-16
 description: "大模型行业花了五年时间把参数量当成进步本身，然后一笔一笔把这笔账算错了回去。Scaling 没停，只是目标函数换了。"
 slug: "scaling-not-parameters"
-tags: ["科技"]
+tags: ["技术"]
 draft: false
 translationKey: "scaling-not-parameters"
 ---

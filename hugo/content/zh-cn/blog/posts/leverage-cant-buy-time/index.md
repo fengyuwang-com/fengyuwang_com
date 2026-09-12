@@ -3,7 +3,7 @@ title: "杠杆借不来时间"
 date: 2026-09-12
 description: "无限的钱加够久的时间，算出来是无限的财富——利息算得比这更快。"
 slug: "leverage-cant-buy-time"
-tags: ["投资", "风险", "数学"]
+tags: ["投资", "技术"]
 draft: false
 translationKey: "leverage-cant-buy-time"
 ---

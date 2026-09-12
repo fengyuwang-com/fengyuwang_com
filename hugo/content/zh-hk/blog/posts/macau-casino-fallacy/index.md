@@ -3,7 +3,7 @@ title: "百萬曹公，救不了賭場"
 date: 2026-05-03
 description: "牽扯多少人就業，都論證不了一個靠成癮牟利的產業正當。"
 slug: "macau-casino-fallacy"
-tags: ["市場", "立場", "經濟"]
+tags: ["市場", "經濟"]
 draft: false
 translationKey: "macau-casino-fallacy"
 ---

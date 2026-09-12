@@ -3,7 +3,7 @@ title: "Rent Extraction vs. Rent Creation in Regulation Theory"
 date: 2025-08-08
 description: "Two types of intermediaries play fundamentally different roles in economic activity. One type creates value, the other distributes value. The criterion for distinguishing between them defines how we understand the source of real value in markets."
 slug: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
-tags: ["Economy", "Business", "Society"]
+tags: ["Business", "Economy", "Society"]
 draft: false
 translationKey: "rent-extraction-and-rent-creation-in-the-economic-theory-of-regulation"
 ---

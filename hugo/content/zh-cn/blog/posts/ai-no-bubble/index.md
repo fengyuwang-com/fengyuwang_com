@@ -3,7 +3,7 @@ title: "AI 没有泡沫，AI 股票有"
 date: 2025-10-31
 description: "能证伪的是利润，不是生产力。"
 slug: "ai-no-bubble"
-tags: ["金融", "技术", "投资"]
+tags: ["投资", "技术", "经济"]
 draft: false
 translationKey: "ai-no-bubble"
 ---

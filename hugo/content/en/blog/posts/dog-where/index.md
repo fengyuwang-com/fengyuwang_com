@@ -3,7 +3,7 @@ title: "Don't Ask Where the Money Went, Ask Where the Dog Is"
 date: 2026-01-21
 description: "The Dog Ate My Money Theorem: from a punchline to a universal formula."
 slug: "dog-where"
-tags: ["Finance", "Economy", "Investing"]
+tags: ["Investing", "Economy"]
 draft: false
 translationKey: "dog-where"
 ---

@@ -3,7 +3,7 @@ title: "微軟的勝利純粹是來得早"
 date: 2025-12-12
 description: "先發是彩票，鎖定是手藝。"
 slug: "microsoft-was-early"
-tags: ["技術", "商業"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "microsoft-was-early"
 ---
