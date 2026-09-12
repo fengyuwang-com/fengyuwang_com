@@ -254,55 +254,6 @@
       <description>&lt;p&gt;50 terabytes, 800 yuan, eight years. A hundred yuan a year; about 2.5 yuan per terabyte — cheaper than buying your own disk, since enterprise drives run 150-200 yuan per terabyte. Everybody knows the vendor is losing spectacularly at this price. So how does the business live?&lt;/p&gt;&#xA;&lt;p&gt;Start with capacity. What you bought isn&amp;rsquo;t 50TB — it&amp;rsquo;s a usage right. Ten thousand users at 100GB each, and the server actually holds two gigabytes for everyone — storage is nearly free; the real cost is bandwidth. And the agreement keeps every right it needs: throttle, limit, clean up, terminate. It&amp;rsquo;s a wager: they bet you never fill it up and never move it out; you bet they survive eight years without changing terms or wiping your data.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Web3 Deep Research &amp; Analysis</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/web3-deep-research/</link>
-      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/web3-deep-research/</guid>
-      <description>&lt;p&gt;This article is a systematic analysis of the Web3 industry from seven dimensions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part I: The Core Essence and Underlying Logic of Web3&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Web3 is a marketing narrative first, technological innovation second. It is not an internet generational disruption — it is a financial and organizational experiment riding on blockchain infrastructure. The real value lies not in &amp;ldquo;decentralization for its own sake&amp;rdquo; but in re-examining existing trust models and finding scenarios where tokenization, programmability, and disintermediation deliver measurable improvements.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Protecting Trade Secrets with AI-Generated Code</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</link>
-      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/%E5%95%86%E4%B8%9A%E6%9C%BA%E5%AF%86%E4%BF%9D%E6%8A%A4/</guid>
-      <description>&lt;p&gt;When building business tools with AI-generated code, the core principle is to completely separate programme functionality from access permissions. Employees get the interface. You keep the verification logic and the keys.&lt;/p&gt;&#xA;&lt;p&gt;Concretely, you can implement a layered authorisation mechanism. The first layer is the user interface: this is what employees interact with daily, for entering data and getting results. The second layer is the verification layer: every critical operation must pass an independent authorisation check that only you control. The third layer is the core algorithm layer: this is the real brain of the programme, running in an environment that only you can access.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Palantir Ontological Approach</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</link>
-      <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/palantir-%E6%9C%AC%E4%BD%93%E8%AE%BA%E6%80%9D%E8%B7%AF/</guid>
-      <description>&lt;p&gt;The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. It is not about statistical inference from large models. It builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships into a multi-dimensional, cross-referencing network.&lt;/p&gt;&#xA;&lt;p&gt;Apply this to second-hand phone trading, for example. Every business factor becomes a connectable node: model, condition, battery, repair history, buyback price, selling price, profit margin, turnover time, seller type, buyer, channel, time period, weather, new product launches, market sentiment. None of these are isolated columns in a spreadsheet. They are all nodes with real relationships between them.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Open Source Tools That Replace Commercial Software</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/</guid>
-      <description>&lt;p&gt;There is a class of excellent open source tools that can replace commercial software for web development, document processing, data management, and image hosting. They are all open source, self-hostable, and integrable with personal knowledge systems like Obsidian.&lt;/p&gt;&#xA;&lt;p&gt;For web development, GrapesJS is an excellent visual drag-and-drop tool. It is entirely front-end based, requires no back-end service, and automatically generates HTML, CSS, and JS code from drag-and-drop components. Suitable for building personal websites or landing pages.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Using PDCA to Get Better AI Results</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/ai%E5%B8%AE%E5%8A%A9pdca/</guid>
-      <description>&lt;p&gt;The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random, hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process.&lt;/p&gt;&#xA;&lt;p&gt;The Plan phase is about defining the problem boundary. Before asking the AI anything, clarify what specific problem you are trying to solve, what format you expect the output to take, what information isknown, what is unknown, and how you will judge whether the output is useful. A common mistake is describing the problem too vaguely, causing the AI to produce lengthy output in the wrong direction. Before the AI receives any input, the human must first be clear about what they want.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI Development Creates Economic Urgency</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</link>
-      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95%E5%BF%85%E7%84%B6%E9%80%A0%E6%88%90%E7%BB%8F%E6%B5%8E%E4%B8%8A%E7%9A%84%E7%B4%A7%E8%BF%AB%E6%84%9F/</guid>
-      <description>&lt;p&gt;The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation.&lt;/p&gt;&#xA;&lt;p&gt;Technology iterates on a monthly basis. Education systems, vocational training, and social safety nets adjust on an annual basis at best. When a persons skills go from scarce to redundant within six months, but vocational training cannot keep up, the urgency is real.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The PDCA Cycle</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/pdca-%E5%BE%AA%E7%8E%AF/</guid>
-      <description>&lt;p&gt;There is a problem-solving method that has been repeatedly validated in practice. First study the known methods for solving this type of problem. Then try one. Observe the results. If it does not work, adjust the approach and try again. Keep iterating until the problem is solved.&lt;/p&gt;&#xA;&lt;p&gt;This process has corresponding theoretical frameworks in multiple academic fields. The most classic is the PDCA cycle: Plan, Do, Check, Act. The process described above is exactly a standard PDCA closed loop: researching methods is Plan, trying them is Do, identifying problems is Check, adjusting the approach is Act.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>A Programmer Complete Problem-Solving Framework</title>
       <link>https://www.fengyuwang.com/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
@@ -310,39 +261,11 @@
       <description>&lt;p&gt;The methodology that programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or specific frameworks. It is about a structured approach to defining, decomposing, and solving problems.&lt;/p&gt;&#xA;&lt;p&gt;Step one is defining the problem. Programmers absolutely refuse to accept vague descriptions. They treat all I think,roughly, sort of statements as traps. The problem must be translated into measurable, verifiable indicators. The core actions are: restate the problem in your own words until the other person confirms it is correct, clarify the input, output, and constraints, and ask upfront what counts as solved and what does not. Solving the wrong problem is worse than not solving the problem at all.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The Definitive Technical Research Workflow</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
-      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/%E6%8A%80%E6%9C%AFresearch%E7%BB%88%E6%9E%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
-      <description>&lt;p&gt;The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure, with built-in correction mechanisms at every stage.&lt;/p&gt;&#xA;&lt;p&gt;The complete workflow can be divided into several stages. The first stage is requirement definition. Clarify what real problem you are trying to solve, not what technology you want toresearch. The problem definition determines the direction of allsubsequent steps.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Why HTML Beats Word for Your CV</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</link>
-      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/</guid>
-      <description>&lt;p&gt;Using HTML and CSS for your CV solves every formatting problem that Word creates. The frustration you have experienced with Word is not your fault. It is a limitation of the tool itself.&lt;/p&gt;&#xA;&lt;p&gt;Word was designed for processing text documents, not for creating visually refined, structurally complex, precisely aligned layouts. A CV demands the latter, but Word was built for the former.&lt;/p&gt;&#xA;&lt;p&gt;HTML and CSS give you pixel-level control over every element. The layout is identical on any device, on any operating system, in any browser. You can use responsive design so it looks good on mobile too. Version control is trivial because it is just text. Exporting to PDF is a single Ctrl+P away, and the result is perfect.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>The Rapid Development of Artificial Intelligence</title>
       <link>https://www.fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://www.fengyuwang.com/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/</guid>
       <description>&lt;p&gt;The rapid advancement of AI has a highly differentiated impact on different economies. For economies that occupy the lower-end of the technology chain and rely on large-scale labour as their engine, this impact first manifests as economic urgency.&lt;/p&gt;&#xA;&lt;p&gt;Take parts of Southeast Asia as an example. Their past competitiveness did not come from technological advantage. It came from the scale and cost advantage of their labour force. This is a development path that compensates for efficiency through quantity. As AI increasingly replaces standardised intellectual and manual labour, the sustainability of this path is being fundamentally shaken.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Data Asset Awareness</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</link>
-      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/</guid>
-      <description>&lt;p&gt;Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.&lt;/p&gt;&#xA;&lt;p&gt;For BD professionals, a spreadsheet is ascratchpad, not a structured database. Their core work logic is: chase clients, record information, track progress. The spreadsheet is just a tool for getting the job done, not a data asset that needs managing. This usage context means they will not spend time maintaining data standards, because the benefit they get from it is too small and the effort required is too large.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Excel Is Two-Dimensional</title>
-      <link>https://www.fengyuwang.com/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</link>
-      <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.fengyuwang.com/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/</guid>
-      <description>&lt;p&gt;Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.&lt;/p&gt;&#xA;&lt;p&gt;Take mobile phone recycling as an example. The factors that affect the value of a single phone include at least a dozen dimensions: model, condition, battery, channel, time ofbuyback, weather, market sentiment, new product launches, inventory levels, profit margin, turnover days. These dimensions also interact with each other: weather affectsbuyback price, buyback price determines profit margin, profit margin relates to inventory strategy. Excel cannot naturally express this kind of multi-dimensional relational network.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

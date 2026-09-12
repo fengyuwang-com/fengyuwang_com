@@ -16,6 +16,7 @@
 - [ ] 博文逐篇 OG 生图：现 twitter card 三语共用站点图；逐篇约 615 张 PNG 涉及设计风格与仓库体积，需站长定夺后再做（可仿 og-image-creator 流程）
 - [ ] Webmention / 读者互动：零运行时约束下只能走 webmention.io + 前端 BYOK 展示，收益待估，站长点头前不动
 - [ ] `/{lang}/tags/` 标签汇总页 404（预存在问题）：Hugo 从未给 taxonomy-list 配布局，站内也无入口直链；若站长要此页，补 layouts/taxonomy/list.html 即可
+- [ ] 博客原则全量审计处置（2026-09-12 通读 207 篇完成，全文见 docs/archive/AUDIT-博客原则全量审计-2026-09-12.md）：P0×34 裸 AI 粘贴簇（三语均已上线）待站长定下线/重写口径；银行柜员、长期暴利两篇需作者认领是否亲笔；deepseek-v4 draft 勿上线；人工智能的急速发展重复对三语各删一篇；P3×6 补边界段/前篇引用；dog-where 定理英名三方定唯一名；个人介绍迁出博客；opc-five-layers 上线前修重复段+translationKey+三语；zh-hk「係統/聯係」过度转换约 20 篇批量修；标点半/全角定口径统一
 
 （第 13 轮站长令：接下来一律只推 dev，未经批准不碰 master；每小时定时任务按本清单继续）
 
