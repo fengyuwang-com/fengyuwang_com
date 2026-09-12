@@ -3,7 +3,7 @@ title: "持有就是买入"
 date: 2026-09-10
 description: "评级清单里买入满天飞、卖出凤毛麟角，因为卖的不是预测，是掩护。"
 slug: "hold-is-buy"
-tags: ["投资", "市场", "立场"]
+tags: ["投资", "市场"]
 draft: false
 translationKey: "hold-is-buy"
 ---

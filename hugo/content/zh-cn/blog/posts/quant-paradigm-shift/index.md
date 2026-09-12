@@ -3,7 +3,7 @@ title: "量化交易的换轴"
 date: 2025-12-26
 description: "从预测市场，到设计市场。"
 slug: "quant-paradigm-shift"
-tags: ["金融", "投资"]
+tags: ["投资", "经济"]
 draft: false
 translationKey: "quant-paradigm-shift"
 ---

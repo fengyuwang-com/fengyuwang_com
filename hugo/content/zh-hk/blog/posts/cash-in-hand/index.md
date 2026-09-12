@@ -3,7 +3,7 @@ title: "到手的錢"
 date: 2026-01-15
 description: "利潤表是作文，存摺不是。"
 slug: "cash-in-hand"
-tags: ["金融", "投資"]
+tags: ["投資", "經濟"]
 draft: false
 translationKey: "cash-in-hand"
 ---

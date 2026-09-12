@@ -3,7 +3,7 @@ title: "Using PDCA to Get Better AI Results"
 date: 2025-10-03
 description: "The seemingly simple act of asking an AI a question can be systematically managed. Incorporating AI prompting into the PDCA cycle turns random hit-or-miss queries into a standardised, repeatable, and controllable closed-loop process."
 slug: "ai帮助pdca"
-tags: ["Tech", "Business"]
+tags: ["Business", "Tech"]
 draft: false
 translationKey: "ai帮助pdca"
 ---

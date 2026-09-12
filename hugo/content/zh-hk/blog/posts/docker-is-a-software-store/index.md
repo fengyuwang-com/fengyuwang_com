@@ -3,7 +3,7 @@ title: "Docker 就是個軟件商店"
 date: 2025-11-24
 description: "名詞是給工程師的，動作是給用户的。"
 slug: "docker-is-a-software-store"
-tags: ["技術", "商業"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "docker-is-a-software-store"
 ---

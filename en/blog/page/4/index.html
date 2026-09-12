@@ -116,7 +116,7 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>Blog</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/en/tags/business/">Business (53)</a><a href="/en/tags/economics/">Economics (1)</a><a href="/en/tags/economy/">Economy (14)</a><a href="/en/tags/finance/">Finance (16)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/market/">Market (1)</a><a href="/en/tags/marketing/">Marketing (31)</a><a href="/en/tags/markets/">Markets (3)</a><a href="/en/tags/math/">Math (1)</a><a href="/en/tags/organizations/">Organizations (1)</a><a href="/en/tags/principles/">Principles (2)</a><a href="/en/tags/risk/">Risk (1)</a><a href="/en/tags/society/">Society (32)</a><a href="/en/tags/tech/">Tech (46)</a><a href="/en/tags/technology/">Technology (2)</a></div>
+<div class="tag-cloud"><a href="/en/tags/business/">Business (54)</a><a href="/en/tags/economy/">Economy (29)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/marketing/">Marketing (35)</a><a href="/en/tags/society/">Society (32)</a><a href="/en/tags/tech/">Tech (48)</a></div>
 <div class="util-chips">
     <a class="util-chip rss" id="rssChip" href="/en/blog/index.xml" title="Copy the feed URL for your RSS reader">Subscribe via RSS</a>
     <a class="util-chip" href="/en/archive/">Archive by year</a>
@@ -141,10 +141,10 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
     <div class="blog-tags"><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/resistance-inside/" data-title="The Organization That Wanted to Change, and Died Wanting" data-summary="Kodak&#39;s leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom&#39;s judgment, it lived in the organization&#39;s skill structure. For innovation to survive, it has to be the CEO&#39;s job." data-date="2026-06-30" data-tags="Markets">
+<a class="blog-card" href="/en/blog/posts/resistance-inside/" data-title="The Organization That Wanted to Change, and Died Wanting" data-summary="Kodak&#39;s leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom&#39;s judgment, it lived in the organization&#39;s skill structure. For innovation to survive, it has to be the CEO&#39;s job." data-date="2026-06-30" data-tags="Marketing">
     <h3>The Organization That Wanted to Change, and Died Wanting</h3>
     <hr class="summary-divider"><div class="summary-text">Kodak&#39;s leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom&#39;s judgment, it lived in the organization&#39;s skill structure. For innovation to survive, it has to be the CEO&#39;s job.</div>
-    <div class="blog-tags"><span>Markets</span></div>
+    <div class="blog-tags"><span>Marketing</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/research-order/" data-title="Industry First, Then the Business, Then the Numbers" data-summary="A balance sheet is last term&#39;s report card; the industry is tomorrow&#39;s exam. Get the order wrong and all the effort is wasted." data-date="2026-06-28" data-tags="Investing">
@@ -223,7 +223,7 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/en\/blog\/index.json";
-var TAGURLS={ "business":"\/en\/tags\/business\/","economics":"\/en\/tags\/economics\/","economy":"\/en\/tags\/economy\/","finance":"\/en\/tags\/finance\/","investing":"\/en\/tags\/investing\/","market":"\/en\/tags\/market\/","marketing":"\/en\/tags\/marketing\/","markets":"\/en\/tags\/markets\/","math":"\/en\/tags\/math\/","organizations":"\/en\/tags\/organizations\/","principles":"\/en\/tags\/principles\/","risk":"\/en\/tags\/risk\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/","technology":"\/en\/tags\/technology\/", };
+var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
 var L_ART=" articles · ";
 var L_TAG=" tags";
 var L_TAGS="Matching tags:";

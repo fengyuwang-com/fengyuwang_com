@@ -3,7 +3,7 @@ title: "我是怎麼審訊一個 AI 的"
 date: 2025-12-06
 description: "口供不可信，實驗才可信：真命令、列家底、復跑、雙盲同碼。"
 slug: "interrogating-an-ai"
-tags: ["技術", "商業"]
+tags: ["商業", "技術"]
 draft: false
 translationKey: "interrogating-an-ai"
 ---

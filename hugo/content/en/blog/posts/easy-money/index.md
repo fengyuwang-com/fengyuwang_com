@@ -3,7 +3,7 @@ title: "Make the Easy Money, Not the Hard Money"
 date: 2025-11-26
 description: "Hard money pits capital against generations; easy money pits insight against patience. An individual can't afford to lose time."
 slug: "easy-money"
-tags: ["Business", "Finance", "Investing"]
+tags: ["Investing", "Business", "Economy"]
 draft: false
 translationKey: "easy-money"
 ---

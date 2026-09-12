@@ -3,7 +3,7 @@ title: "50TB for 800 Yuan, Eight Years: The Ledger That Doesn't Balance"
 date: 2025-10-23
 description: "Cash flow looks fine; amortize it and the books fall apart."
 slug: "115-ponzi-ledger"
-tags: ["Tech", "Business"]
+tags: ["Business", "Tech"]
 draft: false
 translationKey: "115-ponzi-ledger"
 ---

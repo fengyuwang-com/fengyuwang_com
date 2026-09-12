@@ -3,7 +3,7 @@ title: "I Wanted the Book, Not Your Tool"
 date: 2026-01-07
 description: "Tools sell possibility; content sells results. People pay only for results."
 slug: "want-books-not-tools"
-tags: ["Tech", "Business", "Marketing"]
+tags: ["Business", "Tech", "Marketing"]
 draft: false
 translationKey: "want-books-not-tools"
 ---

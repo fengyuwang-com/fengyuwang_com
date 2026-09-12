@@ -3,7 +3,7 @@ title: "Three People Can't Make a Decision"
 date: 2026-07-10
 description: "The three-person supreme council feels self-evidently wise. History has no surviving example of one."
 slug: "rule-of-three"
-tags: ["Organizations"]
+tags: ["Business"]
 draft: false
 translationKey: "rule-of-three"
 ---

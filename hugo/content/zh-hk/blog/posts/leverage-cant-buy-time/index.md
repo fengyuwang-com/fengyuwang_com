@@ -3,7 +3,7 @@ title: "槓桿借不來時間"
 date: 2026-09-12
 description: "無限的錢加夠久的時間，算出來是無限的財富——利息算得比這更快。"
 slug: "leverage-cant-buy-time"
-tags: ["投資", "風險", "數學"]
+tags: ["投資", "技術"]
 draft: false
 translationKey: "leverage-cant-buy-time"
 ---

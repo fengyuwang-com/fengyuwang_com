@@ -3,7 +3,7 @@ title: "The Money That Actually Lands"
 date: 2026-01-15
 description: "The income statement is an essay. A passbook is not."
 slug: "cash-in-hand"
-tags: ["Finance", "Investing"]
+tags: ["Investing", "Economy"]
 draft: false
 translationKey: "cash-in-hand"
 ---

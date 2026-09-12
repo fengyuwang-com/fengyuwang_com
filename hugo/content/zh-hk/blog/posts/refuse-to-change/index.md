@@ -3,7 +3,7 @@ title: "變的時候他不想變，他就結束了"
 date: 2026-01-31
 description: "兩個王安，一種死法。"
 slug: "refuse-to-change"
-tags: ["社會", "商業"]
+tags: ["商業", "社會"]
 draft: false
 translationKey: "refuse-to-change"
 ---

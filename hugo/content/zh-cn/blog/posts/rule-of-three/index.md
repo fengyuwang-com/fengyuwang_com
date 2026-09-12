@@ -3,7 +3,7 @@ title: "三个人做不出决定"
 date: 2026-07-10
 description: "三人决策制的直觉很美好：两票对一票，总能选出更理性的方案。历史里找不到一个活下来的例子。"
 slug: "rule-of-three"
-tags: ["组织"]
+tags: ["商业"]
 draft: false
 translationKey: "rule-of-three"
 ---
