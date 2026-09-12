@@ -410,6 +410,7 @@ for l in LANGS:
         for needle, label in [('id="blogSearch"', "搜索框"), ('id="searchResults"', "搜索结果容器"),
                               ("index.json", "索引引用"), ('id="blogGrid"', "文章网格"),
                               ('application/rss+xml', "RSS 自动发现"), ('/archive/', "归档入口"),
+                              ('id="rssToast"', "RSS 订阅提示"),
                               ('new URLSearchParams', "搜索 URL 状态")]:
             if needle not in lh:
                 err("search", f"{lp} 缺{label} ({needle})")
