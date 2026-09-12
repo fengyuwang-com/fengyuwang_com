@@ -86,6 +86,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -138,13 +140,13 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 <a class="blog-card" href="/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/" data-title="A Bank Teller&#39;s Existential Crisis" data-summary="Six years behind the glass deserves dissection, not pity: time gone pathological, labour that evaporates, the smile billed as a separate line item — every symptom of the service economy, concentrated in one teller window." data-date="2025-08-30" data-tags="Business,Society">
     <h3>A Bank Teller&#39;s Existential Crisis</h3>
     <hr class="summary-divider"><div class="summary-text">Six years behind the glass deserves dissection, not pity: time gone pathological, labour that evaporates, the smile billed as a separate line item — every symptom of the service economy, concentrated in one teller window.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Business</span><span>Society</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/" data-title="The Rapid Development of Artificial Intelligence" data-summary="The rapid advancement of AI has a highly differentiated impact on different economies. For economies that rely on large-scale labour, this impact first manifests as economic urgency." data-date="2025-08-28" data-tags="Tech,Economy,Society">
     <h3>The Rapid Development of Artificial Intelligence</h3>
     <hr class="summary-divider"><div class="summary-text">The rapid advancement of AI has a highly differentiated impact on different economies. For economies that rely on large-scale labour, this impact first manifests as economic urgency.</div>
-    <div class="blog-tags"><span>Tech</span><span>Economy</span><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">1 min read</span><span>Tech</span><span>Economy</span><span>Society</span></div>
 </a>
 
 </div>
@@ -167,6 +169,7 @@ var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy
 var L_ART=" articles · ";
 var L_TAG=" tags";
 var L_TAGS="Matching tags:";
+var L_RTFMT="$1 min read";
 var L_EMPTY="No matching articles or tags.";
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -185,7 +188,7 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
