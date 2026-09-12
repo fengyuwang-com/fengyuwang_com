@@ -107,8 +107,7 @@ body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
         <a class="author-mail" href="mailto:fengyuwang1@outlook.com?subject={{ printf "%s — fengyuwang.com" .Title }}">{{ if eq $plang "en" }}Email feedback{{ else if eq $plang "zh-hk" }}郵件回饋{{ else }}邮件反馈{{ end }}</a>
     </div>
 </div>
-{{ $rel := where (where .Site.RegularPages "Type" "blog") "Params.tags" "intersect" (.Params.tags | default slice) }}
-{{ $rel = first 3 (where $rel "Permalink" "ne" .Permalink) }}
+{{ $rel := first 3 (where (where (.Site.RegularPages.Related .) "Type" "blog") "Permalink" "ne" .Permalink) }}
 {{ if $rel }}
 <nav class="related-shell">
     <h2 class="related-title">{{ if eq $plang "en" }}Related reading{{ else if eq $plang "zh-hk" }}相關閱讀{{ else }}相关阅读{{ end }}</h2>
