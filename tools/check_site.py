@@ -47,6 +47,13 @@ NEW_CUTOFF = "2026-08-15"  # v6.3 规范生效后的新文 (直角引号禁令)
 
 
 # ---------- 模式 0: 单篇发布前校验 (--article) ----------
+def md_bold_quote_hits(body):
+    """Goldmark 左翼规则: ** 紧邻引号开不上 <strong>, 星号外露 (两层界面篇 2026-09-13 教训)"""
+    mb = re.sub(r"```.*?```", "", body, flags=re.S)
+    mb = re.sub(r"`[^`\n]*`", "", mb)
+    return (re.findall(r'\*\*["\u201c\u201d]', mb)
+            + re.findall(r'["\u201c\u201d]\*\*[\w\u4e00-\u9fff]', mb))
+
 if ARGS.article:
     for path in ARGS.article:
         text = open(path, encoding="utf-8").read()
@@ -54,8 +61,9 @@ if ARGS.article:
         hits = [t for t in TRACES if t in text]
         han = len(re.findall(r"[\u4e00-\u9fff]", body))
         nq = text.count("「")
-        status = "OK " if not hits else "!!!"
-        print(f"{status} {path}  汉字={han}  痕迹词={hits if hits else '无'}  直角引号={nq} 处 (旧文豁免, 新文必须为 0)")
+        mbold = md_bold_quote_hits(text)
+        status = "OK " if not hits and not mbold else "!!!"
+        print(f"{status} {path}  汉字={han}  痕迹词={hits if hits else '无'}  直角引号={nq} 处 (旧文豁免, 新文必须为 0)  加粗紧邻引号={len(mbold)}")
         for t in hits:
             i = text.find(t)
             print(f"    -> …{text[max(0, i - 30):i + 30]}…")
@@ -107,6 +115,8 @@ for lang in LANGS:
                 err("trace", f"{p['path']}: 痕迹词「{t}」")
         if p["date"] >= NEW_CUTOFF and "「" in p["body"]:
             err("quote", f"{p['path']}: 新文含直角引号「")
+        for _ in md_bold_quote_hits(p["body"]):
+            err("mdbold", f"{p['path']}: 加粗 ** 紧邻引号 (开不上 <strong>, 星号外露)")
         dm = re.search(r'description:\s*"?([^"\n]*)"?', p["fm"])
         if not dm or len(dm.group(1).strip()) < 10:
             err("desc", f"{p['path']}: description 缺失或过短 ({dm.group(1) if dm else ''!r})")
