@@ -14,7 +14,7 @@ My method is an adversary mechanism. For any decision, let the pro side speak, t
 
 One seaside property went through dozens of rounds: rental yield, the friction costs of short-term rentals, the spillover logic. Every rebuttal ground my thinking one notch finer; every persuasion patched a blind spot.
 
-The mechanism's natural enemy is flattery. AI loves agreeing with you — you float an idea, it answers "great intuition." Once I called it out directly: you're flattering me. Flattered agreement is a nodding mirror; it can nod all day and never show you the hole in your argument.
+The mechanism's natural enemy is flattery. AI loves agreeing with you — you float an idea, it answers "great intuition." What makes it dangerous is the absence of pain in the moment: the flattered side does not bristle, it relaxes. Flattered agreement is a nodding mirror; it can nod all day and never show you the hole in your argument.
 
 So the usage must be concrete: feed your own opposition yourself. Find the strongest counterargument, arm it, let it genuinely win once inside your head — then rule. What survives the ruling is a decision. Whatever never fought the opposition is merely a preference.
 

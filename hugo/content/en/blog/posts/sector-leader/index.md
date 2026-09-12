@@ -39,3 +39,4 @@ It sounds industrious, but it bets against the order. The cycle decides seventy 
 The people who truly lose are the diligent ones whose effort went to the wrong place — no homework skipped, only all of it done outside the seventy percent.
 
 The homework skipped on the copycats is handed back to the market in the end, collected with interest when the tide goes out. Every rally tells that sentence once more.
+The boundary, drawn as usual: “only the leader” is a research discipline, not an operating order — no stock picks, no price targets, no shortlists. Which leader, at what price, entering when, are separate exams; this piece answers none of them.

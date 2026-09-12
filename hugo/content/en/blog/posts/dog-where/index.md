@@ -1,7 +1,7 @@
 ---
 title: "Don't Ask Where the Money Went, Ask Where the Dog Is"
 date: 2026-01-21
-description: "The Dog Ate My Money Theorem: from a punchline to a universal formula."
+description: "The Dog-Takes-the-Money Theorem: from a punchline to a universal formula."
 slug: "dog-where"
 tags: ["Investing", "Economy"]
 draft: false
@@ -10,7 +10,7 @@ translationKey: "dog-where"
 
 When Evergrande's 2.44-trillion-yuan debt bomb finally went off, everyone's favorite word was "evaporated."
 
-I refuse that word. Money does not disappear; it only moves from one person's hands to another's. So whenever money that should exist is gone, a dog must have taken it — that is my Dog Ate My Money Theorem. I know it sounds like a joke, but it cuts to the essence.
+I refuse that word. Money does not disappear; it only moves from one person's hands to another's. So whenever money that should exist is gone, a dog must have taken it — that is my Dog-Takes-the-Money Theorem. I know it sounds like a joke, but it cuts to the essence.
 
 "The money is gone" is not a description. It is a cover-up — cover for some party that is holding it right now. Evaporation is the dog's camouflage.
 
@@ -36,7 +36,7 @@ Money and goods are two separate ledgers. Money is a bookkeeping symbol; goods a
 
 > The rent-seeker is that dog.
 
-Economics has no theorem called Dog Ate My Money. But its relatives are all there: there is no free lunch — every gain hides a cost; zero-sum games — your decrease is someone else's increase; double-entry bookkeeping — every debit has a credit, and they must balance. The closest bloodline is rent-seeking: taking wealth that others created through unproductive means. Textbooks file all of this under "market failure," phrased politely. Dog Ate My Money says it in one line — and points at the dog.
+Economics has no theorem called Dog-Takes-the-Money. But its relatives are all there: there is no free lunch — every gain hides a cost; zero-sum games — your decrease is someone else's increase; double-entry bookkeeping — every debit has a credit, and they must balance. The closest bloodline is rent-seeking: taking wealth that others created through unproductive means. Textbooks file all of this under "market failure," phrased politely. Dog-Takes-the-Money Theorem says it in one line — and points at the dog.
 
 ## The Strongest Objections
 
@@ -58,9 +58,9 @@ With all five swallowed, the theorem has exactly one soft spot left: it cannot p
 
 > Private gains, socialized losses.
 
-Translated into academic language: when a wealth loss occurs, there exist parties who have already taken real gains from this chain of transactions yet bear none of the cost. That is the most unfair structure there is — private gains, socialized losses. Evergrande is its best case study: dividends, cash-outs, and offshore gains were banked long ago, and the 2.44-trillion-yuan hole was left to homebuyers, suppliers, and wealth-management investors. I have a dedicated page on this site that works through that ledger, item by item. The theorem's English name — The Dog Ate My Money Theorem — is the one that page already uses.
+Translated into academic language: when a wealth loss occurs, there exist parties who have already taken real gains from this chain of transactions yet bear none of the cost. That is the most unfair structure there is — private gains, socialized losses. Evergrande is its best case study: dividends, cash-outs, and offshore gains were banked long ago, and the 2.44-trillion-yuan hole was left to homebuyers, suppliers, and wealth-management investors. I have a dedicated page on this site that works through that ledger, item by item. The theorem's English name — The Dog-Takes-the-Money Theorem — is the one that page already uses.
 
-Laozi saw through this chain long ago: the Way of Heaven takes from those who have too much and gives to those who have too little; the way of man takes from those who have too little and gives to those who have too much. Dog Ate My Money is the way of man in its contemporary draft — a violation of Heaven's way, yet the dog still took it.
+Laozi saw through this chain long ago: the Way of Heaven takes from those who have too much and gives to those who have too little; the way of man takes from those who have too little and gives to those who have too much. Dog-Takes-the-Money Theorem is the way of man in its contemporary draft — a violation of Heaven's way, yet the dog still took it.
 
 So the next time you hear someone say "the money is gone," don't sigh along.
 

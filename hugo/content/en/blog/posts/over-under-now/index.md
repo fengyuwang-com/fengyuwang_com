@@ -32,11 +32,11 @@ Four things, sharing one trait: the fundamentals are fine, nobody is just lookin
 
 **Stable-cash-flow value assets.** Utilities, consumer staples, offline services — pushed out of view by the "tech narrative above all" reflex. Nobody talks about liquor stocks anymore; the market's hottest story is now tech. Every time attention moves house, valuations get reshuffled.
 
-**Crypto and Web3.** Retail is gone; the bottom is where nobody looks. Bitcoin itself didn't disappear — its narrative priority dropped.
+**Crypto and Web3.** Retail is gone; the bottom is where nobody looks. Bitcoin itself didn't disappear — its narrative priority dropped; the rotation itself was dissected in “Silence Is What a Bottom Sounds Like”, so only the conclusion is borrowed here.
 
 ## The Most Overlooked Item
 
-Not anything on either list, but the lag in overcapacity. The frantically expanding AI infrastructure comes online one to two years from now, all at once; by the time the glut is visible, the price has already finished its move. The lag is exactly why nobody sees it coming — and that is what makes it dangerous.
+Not anything on either list, but the lag in overcapacity. The frantically expanding AI infrastructure comes online one to two years from now, all at once; by the time the glut is visible, the price has already finished its move. The lag is exactly why nobody sees it coming — and that is what makes it dangerous — the lag mechanism itself was laid open in “The Bubble Died, the Rails Remained”; this piece cites it as a known quantity.
 
 The other side deserves its hearing: when do the underrated come back? The honest answer is that there is no date. A bottom is a phase, not a day on the calendar; underrated can get more underrated, overrated more overrated. And the judgment "AI adoption is too slow" may itself be wrong — adoption may genuinely be fast, monetization may genuinely work. That is not a flaw in this piece; that is its falsifiable edge. Look back in two years, and the numbers will say who was right.
 

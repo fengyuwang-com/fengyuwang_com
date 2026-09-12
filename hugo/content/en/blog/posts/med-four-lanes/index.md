@@ -27,3 +27,4 @@ Third objection: if you cannot tell them apart, buy a bit of everything — phar
 The pity is for those who took the wrong script: holding a cyclical's patience, waiting on a quote that stays overpriced forever.
 
 So the order of questions comes first: ask which bowl it eats from, then talk about how long to hold. Licenses give the floor, inventory gives the rhythm, R&D counsels avoidance, procurement marks the scale of waiting. Four businesses share one sector's name; they do not share one script. The next time the word pharma comes up, before judging cheap or dear, ask first: which script is it playing?
+The boundary is drawn as usual: this is a structural read of four business scripts, not investment advice — no stock picks, no price targets. “Avoid the innovative-drug line” is a call about structure, not about timing. Misread the script and you lose; read the script right but the timing wrong, and you lose too.
