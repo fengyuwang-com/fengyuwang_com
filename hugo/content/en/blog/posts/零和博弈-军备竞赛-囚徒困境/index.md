@@ -1,6 +1,6 @@
 ---
 title: "Zero-Sum Games, Arms Races, and Prisoner Dilemmas"
-date: 2026-02-13
+date: 2025-08-16
 description: "What people commonly call involution has several precise theoretical models in academic discourse. They explain the same phenomenon from different angles: everyone works harder, yet no one improves their position."
 slug: "零和博弈-军备竞赛-囚徒困境"
 tags: ["Society", "Business"]

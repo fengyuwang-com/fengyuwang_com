@@ -1,6 +1,6 @@
 ---
 title: "Excel Is Two-Dimensional"
-date: 2026-02-27
+date: 2025-08-20
 description: "Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional."
 slug: "excel是二维的"
 tags: ["Tech"]

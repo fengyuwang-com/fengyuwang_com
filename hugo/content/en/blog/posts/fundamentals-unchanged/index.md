@@ -1,6 +1,6 @@
 ---
 title: "Fundamentals Are the Part That Doesn't Change"
-date: 2026-09-11
+date: 2026-04-07
 description: "Fundamentals are not last quarter's earnings sheet — they are whether this business still opens its doors tomorrow. Short-term results are noise; permanent damage is the signal."
 slug: "fundamentals-unchanged"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Drops Are the Fuel of Drip Investing"
-date: 2026-09-11
+date: 2026-08-25
 description: "The retail investor's one structural edge only pays off under discipline: cash for the dip, broad indexes only, and buy with more composure as prices fall."
 slug: "ubw-index-drip"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Won Purely by Being Early"
-date: 2026-09-05
+date: 2025-12-12
 description: "Being first is a lottery ticket. Lock-in is a craft."
 slug: "microsoft-was-early"
 tags: ["Tech", "Business"]

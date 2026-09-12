@@ -1,6 +1,6 @@
 ---
 title: "The Market Has Worn Four Faces"
-date: 2026-09-11
+date: 2026-05-07
 description: "Forty years of market economy in four faces: material scarcity, channel premium, traffic and branding, AI automation. Whoever reigns in each era decides what belongs in the track pool."
 slug: "market-four-stages"
 tags: ["Investing"]

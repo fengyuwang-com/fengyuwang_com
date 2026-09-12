@@ -1,6 +1,6 @@
 ---
 title: "The Palantir Ontological Approach"
-date: 2026-05-25
+date: 2025-10-11
 description: "The uniqueness of the Palantir methodology is that it does not rely on complex mathematical functions to fit data. Instead, it builds a knowledge graph based on ontology, defining real-world objects as nodes and connecting their true relationships."
 slug: "palantir-本体论思路"
 tags: ["Tech", "Business"]

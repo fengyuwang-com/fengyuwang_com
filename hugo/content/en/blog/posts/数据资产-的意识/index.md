@@ -1,6 +1,6 @@
 ---
 title: "Data Asset Awareness"
-date: 2026-03-02
+date: 2025-08-26
 description: "Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering."
 slug: "数据资产-的意识"
 tags: ["Tech", "Business"]

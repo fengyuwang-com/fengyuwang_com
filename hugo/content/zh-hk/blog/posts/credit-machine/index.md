@@ -1,6 +1,6 @@
 ---
 title: "信貸是預支的支出"
-date: 2026-09-11
+date: 2026-03-10
 description: "信貸不是錢的搬運，是把未來的支出搬到今天；一個人的支出是另一個人的收入，週期就是這麼造出來的。"
 slug: "credit-machine"
 translationKey: "credit-machine"

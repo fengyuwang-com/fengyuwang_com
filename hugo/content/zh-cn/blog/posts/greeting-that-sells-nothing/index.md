@@ -1,6 +1,6 @@
 ---
 title: 不卖货的那条生日短信
-date: 2026-09-11
+date: 2026-04-11
 description: "十五年前每条生日短信都塞着推销，如今最佳实践只说生日快乐。每一次触点都在记账：带推销的问候是提款，不推销的问候是存款。"
 slug: greeting-that-sells-nothing
 tags: ["市场"]

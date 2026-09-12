@@ -1,6 +1,6 @@
 ---
 title: Two Trades, One Incomplete Education
-date: 2026-09-11
+date: 2026-08-21
 description: "Pure value dies from ignoring timing, pure timing dies with no anchor: picking stocks and timing entries are two trades, and one teacher cannot teach both."
 slug: two-masters
 tags: ["Investing"]

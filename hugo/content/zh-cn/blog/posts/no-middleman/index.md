@@ -1,6 +1,6 @@
 ---
 title: "我的服务器上传，我的手机下载"
-date: 2026-09-05
+date: 2025-12-16
 description: "中间商不是技术必然，是地址稀缺的租。"
 slug: "no-middleman"
 tags: ["技术"]

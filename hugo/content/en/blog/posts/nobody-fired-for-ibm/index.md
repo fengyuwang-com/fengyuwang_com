@@ -1,6 +1,6 @@
 ---
 title: "Nobody Gets Fired for Buying IBM"
-date: 2026-09-11
+date: 2026-05-25
 description: "Part of the premium buys the product; the rest buys silence when things break."
 slug: "nobody-fired-for-ibm"
 tags: ["Marketing"]

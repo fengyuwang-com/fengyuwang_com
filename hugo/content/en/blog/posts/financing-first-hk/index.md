@@ -1,6 +1,6 @@
 ---
 title: "First in Fundraising, Nowhere in Returns"
-date: 2026-09-11
+date: 2026-04-01
 description: "HKEX topped the global IPO league. Its ten-year return chart is where the bill shows up."
 slug: "financing-first-hk"
 tags: ["Investing"]

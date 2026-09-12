@@ -1,6 +1,6 @@
 ---
 title: "看涨，但不硬扛"
-date: 2026-09-11
+date: 2026-03-04
 description: "估值泡沫期放弃正股、改买对应可转债：回撤被缓冲，赛道收益保留。"
 slug: "convertible-hedge"
 tags: ["投资"]

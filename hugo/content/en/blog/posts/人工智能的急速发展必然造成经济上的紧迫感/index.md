@@ -1,6 +1,6 @@
 ---
 title: "AI Development Creates Economic Urgency"
-date: 2026-05-01
+date: 2025-09-25
 description: "The rapid development of AI inevitably creates economic urgency. Its direct source is the mismatch between the speed of technological substitution and the speed of social adaptation."
 slug: "人工智能的急速发展必然造成经济上的紧迫感"
 tags: ["Tech", "Economy", "Society"]

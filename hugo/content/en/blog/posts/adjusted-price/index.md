@@ -1,6 +1,6 @@
 ---
 title: "The Crime of Forward-Adjusted Prices"
-date: 2026-09-06
+date: 2026-01-11
 description: "It takes no villain to rewrite history — just a default parameter."
 slug: "adjusted-price"
 tags: ["Finance", "Tech", "Investing"]

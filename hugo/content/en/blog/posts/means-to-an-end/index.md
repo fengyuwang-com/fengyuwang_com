@@ -1,6 +1,6 @@
 ---
 title: "Investing Is the Means, Living Is the End"
-date: 2026-09-11
+date: 2026-05-11
 description: "Financial freedom is not a number; it is not having to do, for money, what one would rather not do. Everyone keeps the account's ledger; almost nobody keeps the calendar's. Two ledgers record one life — don't pay one's winnings against the other's debt."
 slug: "means-to-an-end"
 tags: ["Investing"]

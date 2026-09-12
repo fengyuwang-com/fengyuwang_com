@@ -1,6 +1,6 @@
 ---
 title: Cheap Enough To Sleep On
-date: 2026-09-11
+date: 2026-07-24
 description: "A bottom line before buying: the target must be backed by hard assets, and the price must sit at sixty to seventy cents on the dollar of realizable assets. This system tests not returns, but whether eyes can close at night."
 slug: sleep-well
 tags: ["Investing"]

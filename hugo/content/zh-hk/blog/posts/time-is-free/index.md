@@ -1,6 +1,6 @@
 ---
 title: "看時間是免費的，戴什麼是收費的"
-date: 2026-09-11
+date: 2026-08-15
 description: "功能免費之後，價格搬進了意義裏。"
 slug: "time-is-free"
 tags: ["市場"]

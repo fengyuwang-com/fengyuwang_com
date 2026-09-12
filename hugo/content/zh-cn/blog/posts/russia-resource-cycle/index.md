@@ -1,6 +1,6 @@
 ---
 title: "俄罗斯的国运，挂在油价上"
-date: 2026-09-11
+date: 2026-07-12
 description: "坐拥全球顶级资源储量，经济周期却由美元和油价代管——涨靠油价，跌靠制裁，轮回靠全球信贷放水。"
 slug: "russia-resource-cycle"
 tags: ["投资"]

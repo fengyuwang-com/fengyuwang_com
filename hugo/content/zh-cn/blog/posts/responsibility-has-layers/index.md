@@ -1,6 +1,6 @@
 ---
 title: "责任有楼层，捐款单只记一层"
-date: 2026-09-11
+date: 2026-07-02
 description: "按时发工资本身就是重要的社会责任，捐得少不等于不负责。"
 slug: "responsibility-has-layers"
 tags: ["市场"]

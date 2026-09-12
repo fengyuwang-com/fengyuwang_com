@@ -1,6 +1,6 @@
 ---
 title: Position Size Follows Certainty, Not Nerve
-date: 2026-09-11
+date: 2026-02-22
 description: "The first question of allocation is not what looks promising but how certain it is: one system ranks assets by certainty, giving the heaviest weight to the most certain and a lottery-sized slot to the most lottery-like, because position size is a function of certainty, not nerve."
 slug: certainty-ladder
 tags: ["Investing"]

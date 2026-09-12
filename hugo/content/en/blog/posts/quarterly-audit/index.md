@@ -1,6 +1,6 @@
 ---
 title: "Twice a Year, Put the Judgment Back on the Scale"
-date: 2026-09-11
+date: 2026-06-18
 description: "The annual-report and quarterly windows are not for reading earnings; they are inspection windows for the judgment itself: whether the unchanging assets still stand, whether the valuation coordinates have drifted. Step back on the scale twice a year — and those who pass the inspection do nothing."
 slug: "quarterly-audit"
 tags: ["Investing"]

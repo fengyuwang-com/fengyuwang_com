@@ -1,6 +1,6 @@
 ---
 title: "No Core Position, No Wealth"
-date: 2026-09-11
+date: 2026-02-12
 description: "Accounts rarely fail because of stock picking. They fail because three kinds of money get merged into one."
 slug: "base-position"
 tags: ["Investing"]

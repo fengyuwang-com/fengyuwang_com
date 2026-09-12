@@ -1,6 +1,6 @@
 ---
 title: "Money That Doesn't Bet on Direction"
-date: 2026-09-11
+date: 2026-08-01
 description: "The money-changer's answer is almost boring: never bet direction, only collect the spread. Yet that is what turns volatility into foot traffic."
 slug: "spread-not-direction"
 tags: ["Business"]

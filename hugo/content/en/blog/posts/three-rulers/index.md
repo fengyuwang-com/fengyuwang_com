@@ -1,6 +1,6 @@
 ---
 title: "Match the Ruler to the Asset"
-date: 2026-09-11
+date: 2026-08-11
 description: "Three asset classes, three rulers: cyclicals are measured by capacity and supply cycles, defense by asset injections and long-term orders, consumer and pharma by brands, licenses, and the installed base of customers. The ruler follows the asset; a bargain measured with the wrong ruler is a false bargain."
 slug: "three-rulers"
 tags: ["Investing"]

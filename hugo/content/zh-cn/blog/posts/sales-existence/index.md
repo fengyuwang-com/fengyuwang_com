@@ -1,6 +1,6 @@
 ---
 title: "销售存在论"
-date: 2026-09-06
+date: 2026-02-02
 description: "销售不是病，是病在报警。"
 slug: "sales-existence"
 tags: ["商业"]

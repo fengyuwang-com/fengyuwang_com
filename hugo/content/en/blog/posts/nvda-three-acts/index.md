@@ -1,6 +1,6 @@
 ---
 title: "One Company, Three Bosses"
-date: 2026-09-11
+date: 2026-05-31
 description: "Nvidia didn't rally three times — the same company was taken over in turn by three cycles: gaming fed it, Bitcoin paid its toll, AI gave it the throne."
 slug: "nvda-three-acts"
 tags: ["Investing"]

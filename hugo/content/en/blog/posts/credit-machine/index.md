@@ -1,6 +1,6 @@
 ---
 title: "Credit Is Spending Borrowed From the Future"
-date: 2026-09-11
+date: 2026-03-10
 description: "Credit doesn't move money around; it moves future spending into today. One person's spending is another's income — that's how cycles get built."
 slug: "credit-machine"
 translationKey: "credit-machine"

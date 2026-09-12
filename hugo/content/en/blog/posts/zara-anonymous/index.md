@@ -1,6 +1,6 @@
 ---
 title: "Loud in the Mall, Silent on the Tag"
-date: 2026-09-11
+date: 2026-09-08
 description: "Zara books exposure under acquisition and hides its names under risk; two ledgers, one budget."
 slug: "zara-anonymous"
 tags: ["Marketing"]

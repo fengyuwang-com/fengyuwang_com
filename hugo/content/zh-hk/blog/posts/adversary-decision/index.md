@@ -1,6 +1,6 @@
 ---
 title: "對抗機制決策法"
-date: 2026-09-05
+date: 2025-10-25
 description: "當你和你的反方向都被説服的時候，才算有決定。"
 slug: "adversary-decision"
 tags: ["商業"]

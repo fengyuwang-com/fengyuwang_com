@@ -1,6 +1,6 @@
 ---
 title: "好公司，坏股票"
-date: 2026-09-11
+date: 2026-04-09
 description: "好股票等于好公司加低估价差；为伟大公司付任何价格，是伪价值投资最常见的形态。"
 slug: "good-company-good-stock"
 tags: ["投资"]

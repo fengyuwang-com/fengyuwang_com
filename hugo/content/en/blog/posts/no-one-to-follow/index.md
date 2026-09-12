@@ -1,6 +1,6 @@
 ---
 title: "No One Left to Copy"
-date: 2026-09-11
+date: 2026-05-23
 description: "After reaching number one, no one is left to copy; humility is the only free insurance of leadership."
 slug: "no-one-to-follow"
 tags: ["Marketing"]

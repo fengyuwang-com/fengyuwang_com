@@ -1,6 +1,6 @@
 ---
 title: "我給 Docker 報了一個級聯 bug"
-date: 2026-09-05
+date: 2025-11-22
 description: "一個 0 字節的文件讓引擎起不來，修掉一個，露出下一個。"
 slug: "docker-cascade-bug"
 tags: ["技術"]

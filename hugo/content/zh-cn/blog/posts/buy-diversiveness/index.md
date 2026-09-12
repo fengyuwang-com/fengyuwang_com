@@ -1,6 +1,6 @@
 ---
 title: "买分歧，卖共识"
-date: 2026-09-11
+date: 2026-02-16
 description: "超额收益的进出时点不在价格里，在人群的意见分布里：分歧最大处买入，共识形成时离场。"
 slug: "buy-diversiveness"
 tags: ["投资"]

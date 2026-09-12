@@ -1,6 +1,6 @@
 ---
 title: "没人可抄的那段路"
-date: 2026-09-11
+date: 2026-05-23
 description: "成为第一之后没人可抄，谦卑不是姿态，是领先者唯一的免费保险。"
 slug: "no-one-to-follow"
 tags: ["市场"]

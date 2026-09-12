@@ -1,6 +1,6 @@
 ---
 title: "信贷是预支的支出"
-date: 2026-09-11
+date: 2026-03-10
 description: "信贷不是钱的搬运，是把未来的支出搬到今天；一个人的支出是另一个人的收入，周期就是这么造出来的。"
 slug: "credit-machine"
 translationKey: "credit-machine"

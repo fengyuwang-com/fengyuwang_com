@@ -1,6 +1,6 @@
 ---
 title: "The Bubble Died, the Rails Remained"
-date: 2026-09-11
+date: 2026-04-19
 description: "British railways, 2000-era fiber, today's compute: three bubbles on one path. The bubble kills companies and leaves infrastructure behind. The companies didn't die because the technology was wrong — they died because the price was."
 slug: "infra-legacy"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Direction Is Right; Stay Inside the Lines"
-date: 2026-09-11
+date: 2026-04-03
 description: "Above stock-picking sit four iron rules: nation sets the floor, rates set the ratio, coordinates set value, discipline sets restraint. Method decides how much you make; the rules decide whether you live to settle."
 slug: "four-iron-rules"
 tags: ["Investing"]

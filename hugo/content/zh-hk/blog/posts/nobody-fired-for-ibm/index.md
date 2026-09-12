@@ -1,6 +1,6 @@
 ---
 title: "選貴的那家，買的是免責"
-date: 2026-09-11
+date: 2026-05-25
 description: "貴价裏藏着一筆職業保險費，出事時沒人追問當初是誰選的。"
 slug: "nobody-fired-for-ibm"
 tags: ["市場"]

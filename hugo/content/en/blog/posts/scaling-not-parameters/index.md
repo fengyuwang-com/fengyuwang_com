@@ -1,6 +1,6 @@
 ---
 title: "Scaling Is No Longer a Bigger Number"
-date: 2026-09-11
+date: 2026-07-16
 description: "The AI industry spent five years treating parameter count as progress itself, then patiently proved the accounting wrong. Scaling never stopped — only its objective function changed."
 slug: "scaling-not-parameters"
 tags: ["Technology"]

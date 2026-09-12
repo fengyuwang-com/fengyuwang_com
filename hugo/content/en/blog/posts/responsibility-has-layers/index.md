@@ -1,6 +1,6 @@
 ---
 title: "Responsibility Has Layers; Donations Record Only One"
-date: 2026-09-11
+date: 2026-07-02
 description: "Paying wages on time is already a serious social responsibility; giving little is not the same as being irresponsible."
 slug: "responsibility-has-layers"
 tags: ["Marketing"]

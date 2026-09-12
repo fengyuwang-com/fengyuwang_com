@@ -1,6 +1,6 @@
 ---
 title: "The Ones Who Complain Have Not Left"
-date: 2026-09-11
+date: 2026-03-02
 description: "A customer angry enough to call is a customer still willing to engage. Handled well, complainers turn into the most satisfied customers — the problem flipped over is the opportunity."
 slug: "complaint-flip-side"
 tags: ["Marketing"]

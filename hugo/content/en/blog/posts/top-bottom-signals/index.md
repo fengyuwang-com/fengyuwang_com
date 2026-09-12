@@ -1,6 +1,6 @@
 ---
 title: "Five Signals of a Top, Five Signals of a Bottom"
-date: 2026-09-11
+date: 2026-08-17
 description: "You don't guess tops and bottoms, you count them: ten observable signals, and a position counted from a checklist beats a price target guessed from a hunch."
 slug: "top-bottom-signals"
 tags: ["Investing"]

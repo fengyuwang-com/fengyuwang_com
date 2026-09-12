@@ -1,6 +1,6 @@
 ---
 title: "本來是有辦法不發生這種事"
-date: 2026-09-06
+date: 2026-01-25
 description: "90 分鐘的窗口，5 秒的奔跑。"
 slug: "it-was-avoidable"
 tags: ["社會"]

@@ -1,6 +1,6 @@
 ---
 title: "Repeat Buyers Are Not Loyal Buyers"
-date: 2026-09-11
+date: 2026-06-26
 description: "A high repeat-purchase rate is not loyalty. The customer matrix has a quadrant built for this: they buy again and again — and cannot stand the company."
 slug: "rented-loyalty"
 tags: ["Marketing"]

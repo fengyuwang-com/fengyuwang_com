@@ -1,6 +1,6 @@
 ---
 title: "系統過時了，忠誠還在續費"
-date: 2026-09-11
+date: 2026-05-01
 description: "忠誠是先發者最值錢的資產，也是用戶最容易付錯的一筆錢。"
 slug: "loyal-to-inefficiency"
 tags: ["市場"]

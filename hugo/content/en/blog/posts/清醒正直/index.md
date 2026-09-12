@@ -1,6 +1,6 @@
 ---
 title: "Stay Honest in a World That Prefers You Did Not"
-date: 2026-04-13
+date: 2025-09-17
 description: "Staying honest and clear-headed at work often earns you a strange label, being told you have low EQ, that you are too rigid. This feedback can make you doubt yourself, but the truth it reveals is exactly the opposite."
 slug: "清醒正直"
 tags: ["Business", "Society"]

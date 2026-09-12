@@ -1,6 +1,6 @@
 ---
 title: "Holding Is Buying"
-date: 2026-09-12
+date: 2026-09-10
 description: "Buy ratings everywhere, sell ratings almost nowhere — because what's sold isn't a forecast, it's cover."
 slug: "hold-is-buy"
 tags: ["Investing", "Markets", "Principles"]

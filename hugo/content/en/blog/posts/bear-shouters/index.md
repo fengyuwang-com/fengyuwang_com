@@ -1,6 +1,6 @@
 ---
 title: "The Loudest Bears Load Up Fastest"
-date: 2026-09-11
+date: 2026-02-14
 description: "Persistent bears in a bear market are not the best risk managers; they are venting from sitting out. Don't debate them — return to one's own valuation coordinates."
 slug: "bear-shouters"
 tags: ["Investing"]

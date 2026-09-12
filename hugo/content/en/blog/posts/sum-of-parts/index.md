@@ -1,6 +1,6 @@
 ---
 title: Valuation's First Cut Is a Pair of Scissors
-date: 2026-09-11
+date: 2026-08-05
 description: "One PE ratio cannot cover a company: split it into independent business segments, benchmark each against a global leader by revenue and market share, and add up the parts. The first cut of valuation is not a calculator, it is scissors."
 slug: sum-of-parts
 tags: ["Investing"]

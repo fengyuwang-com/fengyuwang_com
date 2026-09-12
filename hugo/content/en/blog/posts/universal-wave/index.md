@@ -1,6 +1,6 @@
 ---
 title: "Waves Follow the Soil"
-date: 2026-09-11
+date: 2026-08-29
 description: "Wave patterns are not universal truth; they grow out of a market's soil — seller's markets grow traditional waves, buyer's markets need a four-segment structure."
 slug: "universal-wave"
 tags: ["Investing"]

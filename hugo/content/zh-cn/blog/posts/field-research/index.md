@@ -1,6 +1,6 @@
 ---
 title: "报表之外，用脚投票"
-date: 2026-09-11
+date: 2026-03-28
 description: "年报里只有过去，拐点在路上和货架上——重仓之前，先去现场走一趟。"
 slug: "field-research"
 tags: ["投资"]

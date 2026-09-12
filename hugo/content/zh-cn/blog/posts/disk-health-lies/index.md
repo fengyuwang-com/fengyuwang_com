@@ -1,6 +1,6 @@
 ---
 title: "硬盘健康度不可信"
-date: 2026-09-05
+date: 2025-11-18
 description: "硬盘的谎言只有一种：报平安。"
 slug: "disk-health-lies"
 tags: ["技术"]

@@ -1,6 +1,6 @@
 ---
 title: "Most Lose by Trading, Not by Choosing"
-date: 2026-09-11
+date: 2026-07-28
 description: "What fund advisory actually delivers is not a return promise — it is keeping a lid on the hand that trades too often. Most people do not lose because they chose badly; they lose because they churn."
 slug: "slow-the-hands"
 tags: ["Investing"]

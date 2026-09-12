@@ -1,6 +1,6 @@
 ---
 title: "被記住名字的那一刻"
-date: 2026-09-11
+date: 2026-06-24
 description: "記住名字是服務的最小單位，技術只是把它規模化。"
 slug: "remembered-name"
 tags: ["市場"]

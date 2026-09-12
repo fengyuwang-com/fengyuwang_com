@@ -1,6 +1,6 @@
 ---
 title: "The Smallest Unit of Service Is a Name"
-date: 2026-09-11
+date: 2026-06-24
 description: "Remembering a name is the smallest unit of service; technology only scaled it."
 slug: "remembered-name"
 tags: ["Marketing"]

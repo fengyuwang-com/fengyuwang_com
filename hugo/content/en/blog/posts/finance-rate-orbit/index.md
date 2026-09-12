@@ -1,6 +1,6 @@
 ---
 title: "The Look of Defense, the Bones of a Cycle"
-date: 2026-09-11
+date: 2026-03-30
 description: "The three financial brothers hang on the same hooks: insurers track the rate cycle, brokers feed on trading volume, and banks trading below book price carry embedded bad-loan doubts. Defense is the look; the cycle is the bones. Ask first what the revenue follows, then ask how long to hold."
 slug: "finance-rate-orbit"
 tags: ["Investing"]

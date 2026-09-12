@@ -1,6 +1,6 @@
 ---
 title: "先产业，再生意，最后报表"
-date: 2026-09-11
+date: 2026-06-28
 description: "报表是过去的成绩单，产业才是明天的考卷——顺序一倒，努力全废。"
 slug: "research-order"
 tags: ["投资"]

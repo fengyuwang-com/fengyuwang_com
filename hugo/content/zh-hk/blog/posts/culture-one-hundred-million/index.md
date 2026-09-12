@@ -1,6 +1,6 @@
 ---
 title: "一億美元以下的方案，免談"
-date: 2026-09-11
+date: 2026-03-12
 description: "方案的第一讀者是公司文化，門檻先於質量決定生死。"
 slug: "culture-one-hundred-million"
 tags: ["市場"]

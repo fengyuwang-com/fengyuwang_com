@@ -1,6 +1,6 @@
 ---
 title: "Survive the Cycle First"
-date: 2026-09-11
+date: 2026-08-07
 description: "Only a few principles keep you from being harvested by the cycle: avoid the crowds, don't sell at the bottom, cash is oxygen, diversify, and your own ability is the asset that crosses every cycle."
 slug: "survive-the-cycle"
 tags: ["Investing"]

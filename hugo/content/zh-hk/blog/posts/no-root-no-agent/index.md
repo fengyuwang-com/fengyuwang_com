@@ -1,6 +1,6 @@
 ---
 title: "沒有 root，就沒有 Agent"
-date: 2026-09-05
+date: 2025-12-18
 description: "權限就是 AI 的手；手被綁住的 Agent，再聰明也只是顧問。"
 slug: "no-root-no-agent"
 tags: ["技術", "商業"]

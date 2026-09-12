@@ -1,6 +1,6 @@
 ---
 title: "一亿美元以下的方案，免谈"
-date: 2026-09-11
+date: 2026-03-12
 description: "方案的第一读者是公司文化，门槛先于质量决定生死。"
 slug: "culture-one-hundred-million"
 tags: ["市场"]

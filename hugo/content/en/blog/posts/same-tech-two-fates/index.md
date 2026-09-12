@@ -1,6 +1,6 @@
 ---
 title: "Octopus Died in Australia, and Lived in Hong Kong"
-date: 2026-09-11
+date: 2026-07-14
 description: "The same contactless card technology was rejected by Australian rail and adopted by the MTR — a technology's fate lives not in the lab but in the soil it lands on."
 slug: same-tech-two-fates
 tags: ["Market"]

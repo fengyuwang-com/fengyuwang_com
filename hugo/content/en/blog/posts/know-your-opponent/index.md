@@ -1,6 +1,6 @@
 ---
 title: "Winners Study the Crowd, Losers Study the Stock"
-date: 2026-09-11
+date: 2026-04-21
 description: "Ten years at the same charts, two different outcomes: the difference is not effort but the object of study — the cards, or the players."
 slug: "know-your-opponent"
 tags: ["Investing"]

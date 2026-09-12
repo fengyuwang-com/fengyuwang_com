@@ -1,6 +1,6 @@
 ---
 title: "開源工具"
-date: 2026-05-22
+date: 2025-10-07
 description: "下面給你一份純HTML/JS/前端開源工具清單，完全覆蓋你要的：Web建站、Word/Excel/PPT替代、數據庫、圖牀，全部開源、可本地/私有化部署、可嵌入Obsidian。"
 slug: "開源工具"
 tags: ["技術"]

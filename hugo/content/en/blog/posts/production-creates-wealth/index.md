@@ -1,6 +1,6 @@
 ---
 title: "Wealth Isn't Money — It's What Lets You Earn It"
-date: 2026-09-11
+date: 2026-06-12
 description: "A number on the account can evaporate; the capacity to produce cannot. That half-century-old line from Professional Speculation deserves to be read as a test for any balance sheet."
 slug: "production-creates-wealth"
 tags: ["Investing"]

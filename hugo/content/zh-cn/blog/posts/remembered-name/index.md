@@ -1,6 +1,6 @@
 ---
 title: "被记住名字的那一刻"
-date: 2026-09-11
+date: 2026-06-24
 description: "记住名字是服务的最小单位，技术只是把它规模化。"
 slug: "remembered-name"
 tags: ["市场"]

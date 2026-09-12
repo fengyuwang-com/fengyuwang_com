@@ -1,6 +1,6 @@
 ---
 title: "馬天尼縮水那天，十五年的熟客走了"
-date: 2026-09-11
+date: 2026-05-09
 description: "忠誠是存量不是合同,減配是提款,分手是一場對賬。"
 slug: "martini-breakup"
 tags: ["市場"]

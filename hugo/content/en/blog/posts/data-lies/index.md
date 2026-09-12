@@ -1,6 +1,6 @@
 ---
 title: "Don't Trust the Data, Trust the Business"
-date: 2026-09-05
+date: 2025-11-16
 description: "Data is someone else's answer sheet; the business is the exam."
 slug: "data-lies"
 tags: ["Finance", "Business", "Investing"]

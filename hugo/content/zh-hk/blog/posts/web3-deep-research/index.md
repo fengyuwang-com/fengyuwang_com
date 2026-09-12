@@ -1,6 +1,6 @@
 ---
 title: "Web3 深度研究與分析"
-date: 2026-07-05
+date: 2025-10-21
 description: "對 Web3 行業的系統性深度分析：核心概念、全球監管框架、商業價值分析、企業入局策略，以及五大專題研究。"
 slug: "web3-deep-research"
 tags: ["技術", "社會"]

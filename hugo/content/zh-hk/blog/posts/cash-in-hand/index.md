@@ -1,6 +1,6 @@
 ---
 title: "到手的錢"
-date: 2026-09-06
+date: 2026-01-15
 description: "利潤表是作文，存摺不是。"
 slug: "cash-in-hand"
 tags: ["金融", "投資"]

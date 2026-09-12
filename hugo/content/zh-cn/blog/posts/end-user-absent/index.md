@@ -1,6 +1,6 @@
 ---
 title: "那套系统是猜出来的"
-date: 2026-09-11
+date: 2026-03-22
 description: "最贵的系统错误不在代码，在从头到尾没人问过真正要用它的人。"
 slug: "end-user-absent"
 tags: ["市场"]

@@ -1,6 +1,6 @@
 ---
 title: "Quality Got Localized Too"
-date: 2026-09-11
+date: 2026-06-14
 description: "Prices can adapt to the local market; once quality follows, what drops is more than the price."
 slug: "quality-localized-too"
 tags: ["Marketing"]

@@ -1,6 +1,6 @@
 ---
 title: "对抗机制决策法"
-date: 2026-09-05
+date: 2025-10-25
 description: "当你和你的反方向都被说服的时候，才算有决定。"
 slug: "adversary-decision"
 tags: ["商业"]

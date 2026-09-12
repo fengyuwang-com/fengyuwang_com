@@ -1,6 +1,6 @@
 ---
 title: "銷售存在論"
-date: 2026-09-06
+date: 2026-02-02
 description: "銷售不是病，是病在報警。"
 slug: "sales-existence"
 tags: ["商業"]

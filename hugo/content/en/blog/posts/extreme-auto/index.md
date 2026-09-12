@@ -1,6 +1,6 @@
 ---
 title: "Defense Is Designed, Not Endured"
-date: 2026-09-11
+date: 2026-03-24
 description: "In a crash, human reaction is always half a beat late: a self-built automated defense system uses rules plus index-futures shorts to absorb the shock."
 slug: "extreme-auto"
 tags: ["Investing"]

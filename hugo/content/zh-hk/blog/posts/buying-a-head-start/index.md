@@ -1,6 +1,6 @@
 ---
 title: "十億美元，按時間算才不冤"
-date: 2026-09-11
+date: 2026-02-20
 description: "對價高達十億美元，賬面上是六千萬月活，實際買到的是繞開紅海的入場時間。"
 slug: "buying-a-head-start"
 tags: ["市場"]

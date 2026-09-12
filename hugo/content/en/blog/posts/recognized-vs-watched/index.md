@@ -1,6 +1,6 @@
 ---
 title: "Recognized, Not Watched"
-date: 2026-09-11
+date: 2026-06-20
 description: "The same recognition technology: recognizing is service, watching is business. The line is consent."
 slug: "recognized-vs-watched"
 tags: ["Marketing"]

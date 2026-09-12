@@ -1,6 +1,6 @@
 ---
 title: A Bull-Bear Cycle Is a Campaign, Not a Decision
-date: 2026-09-11
+date: 2026-07-08
 description: "Before position sizing decides what to buy, you need a route map: one bull-bear cycle is not a single decision but a sequence of battles, each sector switch gated by a fundamentals inflection and a sentiment check."
 slug: rotation-campaign
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "Palantir 本體論思路"
-date: 2026-05-25
+date: 2025-10-11
 description: "Palantir 本體論思路 + 用到你二手手機生意上 + 過擬合問題 + 為什麼不能用死公式 全部串起來，説得又準又明白，直接能放進 Obsidian。"
 slug: "palantir-本體論思路"
 tags: ["技術", "商業"]

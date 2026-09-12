@@ -1,6 +1,6 @@
 ---
 title: "别抢跑，等确认"
-date: 2026-09-11
+date: 2026-09-04
 description: "拐点不可预判，但可以确认——阻力最小路线只等区间有效突破再跟随，2B 结构把看起来像顶变成可以动手的顶。"
 slug: "wait-for-confirmation"
 tags: ["投资"]

@@ -1,6 +1,6 @@
 ---
 title: "流失的客戶，只從三個門走"
-date: 2026-09-11
+date: 2026-02-24
 description: "經濟,功能,心理——離開的門,和當初進來的門,是同一扇。"
 slug: "churn-three-values"
 tags: ["市場"]

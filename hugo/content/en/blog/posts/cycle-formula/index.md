@@ -1,6 +1,6 @@
 ---
 title: "A Cycle Isn't One Force. It's Three."
-date: 2026-09-11
+date: 2026-03-14
 description: "Debt decides survival, sentiment decides how crazy, structure decides what gets speculated — take the three layers apart and the cycle stops being mysticism."
 slug: "cycle-formula"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "看不懂，就不打"
-date: 2026-09-11
+date: 2026-07-22
 description: "空仓不是失败，是仓位的一种：看不懂的时候不下场，既是判断力，也是纪律。"
 slug: sit-out-in-cash
 tags: ["投资"]

@@ -1,6 +1,6 @@
 ---
 title: "The Data Executes the Hypotheses, and Apologizes to No One"
-date: 2026-09-11
+date: 2026-04-15
 description: "In a 137-person study, three industry instincts were reversed by the data; hypotheses dying first is the purpose of research, not an accident."
 slug: "hypotheses-die-first"
 tags: ["Marketing"]

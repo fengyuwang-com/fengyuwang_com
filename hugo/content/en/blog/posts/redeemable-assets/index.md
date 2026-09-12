@@ -1,6 +1,6 @@
 ---
 title: "Only What Can Be Redeemed Counts as an Asset"
-date: 2026-09-11
+date: 2026-06-22
 description: "What sits on the balance sheet is not the same as what can enter a valuation; only assets that convert into sustained cash flow count, and redeemability is the line between assets and hollow ones."
 slug: "redeemable-assets"
 tags: ["Investing"]

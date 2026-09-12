@@ -1,6 +1,6 @@
 ---
 title: "The Retail Investor's Structural Edge"
-date: 2026-09-05
+date: 2025-12-28
 description: "My data is one millionth of theirs. My profits aren't."
 slug: "retail-edge"
 tags: ["Finance", "Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "The System Was a Guess"
-date: 2026-09-11
+date: 2026-03-22
 description: "The most expensive system failures are not technical; they begin when nobody asks the end user."
 slug: "end-user-absent"
 tags: ["Marketing"]

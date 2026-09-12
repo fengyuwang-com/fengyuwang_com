@@ -1,6 +1,6 @@
 ---
 title: "认出你，和盯着你"
-date: 2026-09-11
+date: 2026-06-20
 description: "同一套识别技术，认出人是服务，盯人是生意，分界线在知情与受益。"
 slug: "recognized-vs-watched"
 tags: ["市场"]

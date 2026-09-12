@@ -1,6 +1,6 @@
 ---
 title: "The Life Cycle of Money"
-date: 2026-09-11
+date: 2026-05-19
 description: "A country's money supply and withdrawal follow the residents' life cycle: issuance at birth, expansion at work, property at family formation, withdrawal at retirement. Four stations, and the super-long bull-bear cycles of property and equities finally have coordinates."
 slug: "money-life-cycle"
 tags: ["Investing"]

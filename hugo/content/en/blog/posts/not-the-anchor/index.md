@@ -1,6 +1,6 @@
 ---
 title: "These Do Not Count as Fundamentals"
-date: 2026-09-11
+date: 2026-05-29
 description: "Anything that vanishes with results or sentiment — short-term revenue, one-off subsidies, hit products, management promises — is not fundamentals and cannot anchor a valuation."
 slug: "not-the-anchor"
 tags: ["Investing"]

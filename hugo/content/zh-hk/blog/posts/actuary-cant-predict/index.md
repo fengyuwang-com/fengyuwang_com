@@ -1,6 +1,6 @@
 ---
 title: "精算師也預測不了未來"
-date: 2026-09-11
+date: 2026-02-04
 description: "保險的本質是對未來定價，而沒有人能預測未來。這門生意活下來的技術，不是算得準，是留得厚。"
 slug: "actuary-cant-predict"
 tags: ["投資"]

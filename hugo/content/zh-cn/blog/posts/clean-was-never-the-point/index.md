@@ -1,6 +1,6 @@
 ---
 title: "洗得干净，从来不是卖点"
-date: 2026-09-11
+date: 2026-02-26
 description: "信念不是广告词，是账目；说到做到，肥皂才有定价权。"
 slug: "clean-was-never-the-point"
 tags: ["市场"]

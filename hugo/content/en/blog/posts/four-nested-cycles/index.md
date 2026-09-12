@@ -1,6 +1,6 @@
 ---
 title: "Four Cycles, One Nest"
-date: 2026-09-11
+date: 2026-04-05
 description: "The economy doesn't oscillate in one cycle. It stacks four cycles whose time scales differ by an order of magnitude. The layer you trade in decides which indicators you should watch."
 slug: "four-nested-cycles"
 tags: ["Investing"]

@@ -1,6 +1,6 @@
 ---
 title: "汇率涨跌都能赚的钱"
-date: 2026-09-11
+date: 2026-08-01
 description: "找换店的答案朴素到近乎无聊：不赌方向，只吃价差。但正是这种生意，把不确定性变成了客户流量。"
 slug: "spread-not-direction"
 tags: ["商业"]

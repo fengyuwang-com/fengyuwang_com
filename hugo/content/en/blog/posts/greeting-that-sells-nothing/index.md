@@ -1,6 +1,6 @@
 ---
 title: The Birthday Greeting That Sells Nothing
-date: 2026-09-11
+date: 2026-04-11
 description: "Fifteen years ago every birthday greeting carried a pitch; today's best practice sells nothing. Every touchpoint posts to an account: a pitched greeting withdraws, a pitch-free one deposits."
 slug: greeting-that-sells-nothing
 tags: ["Marketing"]

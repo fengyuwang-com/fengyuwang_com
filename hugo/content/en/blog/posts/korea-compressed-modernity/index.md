@@ -1,6 +1,6 @@
 ---
 title: "Koreans Aren't Born Gamblers."
-date: 2026-09-11
+date: 2026-04-23
 description: "A society that compressed two hundred years into thirty pushed ordinary people into the one narrow door left: speculation. Cycles change the asset; the fate doesn't."
 slug: "korea-compressed-modernity"
 tags: ["Investing"]

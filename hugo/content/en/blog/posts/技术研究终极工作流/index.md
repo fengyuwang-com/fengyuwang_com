@@ -1,6 +1,6 @@
 ---
 title: "The Definitive Technical Research Workflow"
-date: 2026-05-19
+date: 2025-09-11
 description: "The most common failure mode in technical research is not choosing the wrong technology. It is lacking structure in the research process itself. A closed-loop workflow dramatically reduces the chance of failure."
 slug: "技术research终极工作流"
 tags: ["Tech", "Business"]

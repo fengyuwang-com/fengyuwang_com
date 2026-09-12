@@ -1,6 +1,6 @@
 ---
 title: "把别人恐慌我贪婪写成代码"
-date: 2026-09-06
+date: 2026-01-23
 description: "恐惧不是一个日子，是一个结构。"
 slug: "four-filters"
 tags: ["金融", "投资"]

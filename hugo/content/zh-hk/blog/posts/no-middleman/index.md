@@ -1,6 +1,6 @@
 ---
 title: "我的服務器上傳，我的手機下載"
-date: 2026-09-05
+date: 2025-12-16
 description: "中間商不是技術必然，是地址稀缺的租。"
 slug: "no-middleman"
 tags: ["技術"]

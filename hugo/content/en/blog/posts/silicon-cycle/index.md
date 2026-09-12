@@ -1,6 +1,6 @@
 ---
 title: "The Business That Produces at a Loss"
-date: 2026-09-11
+date: 2026-07-20
 description: "Semiconductors are the most cyclical industry there is: at the trough, fabs keep producing at a loss because shutting down costs more than selling chips below cost. The shortage-expansion-glut cycle will never go away."
 slug: "silicon-cycle"
 tags: ["Investing"]

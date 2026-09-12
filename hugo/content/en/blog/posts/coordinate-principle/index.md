@@ -1,6 +1,6 @@
 ---
 title: "Expensive Compared to What?"
-date: 2026-09-11
+date: 2026-03-06
 description: "Valuation is not an absolute number but a coordinate system — compare against peers, against the company's own cycle, against overseas counterparts; you trade the spread, not the absolute price."
 slug: "coordinate-principle"
 tags: ["Investing"]

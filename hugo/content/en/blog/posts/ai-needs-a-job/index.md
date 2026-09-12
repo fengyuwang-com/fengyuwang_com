@@ -1,6 +1,6 @@
 ---
 title: "No Human Matches AI's Cognition. Not One."
-date: 2026-09-05
+date: 2025-10-29
 description: "It lacks nothing except a job. You lack nothing except a tireless colleague."
 slug: "ai-needs-a-job"
 tags: ["Tech", "Business"]

@@ -1,6 +1,6 @@
 ---
 title: "Industry First, Then the Business, Then the Numbers"
-date: 2026-09-11
+date: 2026-06-28
 description: "A balance sheet is last term's report card; the industry is tomorrow's exam. Get the order wrong and all the effort is wasted."
 slug: "research-order"
 tags: ["Investing"]

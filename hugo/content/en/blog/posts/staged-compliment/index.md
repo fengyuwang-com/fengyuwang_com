@@ -1,6 +1,6 @@
 ---
 title: "The Compliment Was Scheduled"
-date: 2026-09-11
+date: 2026-08-03
 description: "By the fifth compliment on his commute, the design had already shown itself."
 slug: "staged-compliment"
 tags: ["Marketing"]

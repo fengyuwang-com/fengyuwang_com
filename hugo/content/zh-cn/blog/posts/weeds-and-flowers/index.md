@@ -1,6 +1,6 @@
 ---
 title: "拔野草，浇鲜花"
-date: 2026-09-11
+date: 2026-09-06
 description: "涨跌从来不是加减仓的依据，垫在下面的是什么才是——走弱高估的逐步减，景气低估的持续加。"
 slug: "weeds-and-flowers"
 tags: ["投资"]

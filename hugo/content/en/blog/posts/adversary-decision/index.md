@@ -1,6 +1,6 @@
 ---
 title: "The Adversary Mechanism for Decisions"
-date: 2026-09-05
+date: 2025-10-25
 description: "A decision only counts when your opposing side has been persuaded too."
 slug: "adversary-decision"
 tags: ["Business"]

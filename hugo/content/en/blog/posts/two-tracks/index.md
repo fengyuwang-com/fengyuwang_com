@@ -1,6 +1,6 @@
 ---
 title: One Ledger, Two Pages
-date: 2026-09-11
+date: 2026-08-23
 description: "A single system can run two paths side by side: a value base position earning margin of safety, an event-arbitrage sleeve earning the event itself. Two tracks are not indecision; the one precondition is that the two ledgers never merge."
 slug: two-tracks
 tags: ["Investing"]

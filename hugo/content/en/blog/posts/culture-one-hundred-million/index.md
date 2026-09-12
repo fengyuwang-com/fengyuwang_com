@@ -1,6 +1,6 @@
 ---
 title: "No Proposal Under a Hundred Million"
-date: 2026-09-11
+date: 2026-03-12
 description: "The first reader of any proposal is the company culture, and the threshold decides before quality does."
 slug: "culture-one-hundred-million"
 tags: ["Marketing"]

@@ -1,6 +1,6 @@
 ---
 title: "When You Can't Read It, Don't Play"
-date: 2026-09-11
+date: 2026-07-22
 description: "Staying in cash is not failure; it is a position — sitting out when you can't read the market is both judgment and discipline."
 slug: sit-out-in-cash
 tags: ["Investing"]

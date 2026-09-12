@@ -1,6 +1,6 @@
 ---
 title: "Loyalty Does Not Expire When the System Does"
-date: 2026-09-11
+date: 2026-05-01
 description: "Loyalty is the first mover's most valuable asset — and the easiest money users ever pay to the wrong account."
 slug: "loyal-to-inefficiency"
 tags: ["Marketing"]

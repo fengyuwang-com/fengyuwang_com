@@ -1,6 +1,6 @@
 ---
 title: "Silence Is What a Bottom Sounds Like"
-date: 2026-09-11
+date: 2026-05-21
 description: "Bitcoin hasn't been falsified or disappeared — its narrative priority has simply been siphoned off by AI. Being forgotten is an observable phase of the cycle, and it tends to mark the bottom."
 slug: "narrative-rotation"
 tags: ["Investing"]

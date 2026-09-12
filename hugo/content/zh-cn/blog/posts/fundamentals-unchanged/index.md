@@ -1,6 +1,6 @@
 ---
 title: "基本面，是基本不变的那一面"
-date: 2026-09-11
+date: 2026-04-07
 description: "基本面不是最近一季的业绩表，是这家生意明天还开不开门——短期业绩是噪音，永久受损才是信号。"
 slug: "fundamentals-unchanged"
 tags: ["投资"]

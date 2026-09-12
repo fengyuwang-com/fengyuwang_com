@@ -1,6 +1,6 @@
 ---
 title: "Treating Everyone Equally Punishes the Best Customers"
-date: 2026-09-11
+date: 2026-08-27
 description: "Diamond members reach a human right away; everyone else stays in the queue. Equal treatment sounds fair — it treats the best customers the worst."
 slug: "unequal-by-design"
 tags: ["Marketing"]

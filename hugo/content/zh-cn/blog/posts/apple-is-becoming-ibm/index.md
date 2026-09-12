@@ -1,6 +1,6 @@
 ---
 title: "苹果正在变成 IBM"
-date: 2026-09-05
+date: 2025-11-04
 description: "诉讼能争取时间，争取不来范式定义权。"
 slug: "apple-is-becoming-ibm"
 tags: ["商业", "技术"]

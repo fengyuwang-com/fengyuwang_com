@@ -1,6 +1,6 @@
 ---
 title: "A Million Jobs Won't Save a Casino"
-date: 2026-09-11
+date: 2026-05-03
 description: "No amount of employment justifies a business that profits from addiction."
 slug: "macau-casino-fallacy"
 tags: ["Markets", "Principles", "Economics"]

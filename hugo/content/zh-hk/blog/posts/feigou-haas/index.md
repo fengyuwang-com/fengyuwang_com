@@ -1,6 +1,6 @@
 ---
 title: "飛狗計劃：本質上我是賣保險的"
-date: 2026-09-05
+date: 2025-11-30
 description: "把八千塊的訂閲，砍成一千五的買斷。"
 slug: "feigou-haas"
 tags: ["商業", "技術"]

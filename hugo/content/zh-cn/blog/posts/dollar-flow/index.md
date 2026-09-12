@@ -1,6 +1,6 @@
 ---
 title: "美元的闸门"
-date: 2026-09-11
+date: 2026-03-20
 description: "美元是全球资本的闸门：看懂闸门的开合，才看得懂外部水位的涨落。"
 slug: "dollar-flow"
 tags: ["投资"]

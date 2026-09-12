@@ -1,6 +1,6 @@
 ---
 title: "AI Has No Bubble. AI Stocks Do."
-date: 2026-09-05
+date: 2025-10-31
 description: "What can be falsified is profit, not productivity."
 slug: "ai-no-bubble"
 tags: ["Finance", "Tech", "Investing"]

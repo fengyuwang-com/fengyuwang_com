@@ -1,6 +1,6 @@
 ---
 title: Hunt Fast, Farm Slow
-date: 2026-09-11
+date: 2026-03-26
 description: "Advancing in investing means changing trades: chasing hot themes is hunting, rotating sectors is herding, holding a base position is farming — three stages in order of dependence, not rank."
 slug: farm-not-hunt
 tags: ["Investing"]

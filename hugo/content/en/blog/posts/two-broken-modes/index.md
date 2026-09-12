@@ -1,6 +1,6 @@
 ---
 title: "The Strongest Businesses Fall First"
-date: 2026-09-11
+date: 2026-08-19
 description: "The monopoly-tax model and the money-burning model look the strongest, yet their deaths are written in advance: one stands against its customers waiting for regulators, the other bets that funding never dries up."
 slug: "two-broken-modes"
 tags: ["Investing"]

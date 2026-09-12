@@ -1,6 +1,6 @@
 ---
 title: The Next Product Is Never in the Survey
-date: 2026-09-11
+date: 2026-03-16
 description: "Demand comes in two kinds: current demand can be asked for, and the answers only add up to incremental improvement; potential demand cannot be asked for — it gets claimed only after it is shown. Innovation does not answer surveys; it generates demand."
 slug: demand-you-cant-ask
 tags: ["Marketing"]
