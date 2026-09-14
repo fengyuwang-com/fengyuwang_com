@@ -86,6 +86,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -116,7 +118,7 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>Blog</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/en/tags/business/">Business (30)</a><a href="/en/tags/economy/">Economy (24)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/marketing/">Marketing (33)</a><a href="/en/tags/society/">Society (11)</a><a href="/en/tags/tech/">Tech (38)</a><a href="/en/tags/technology/">Technology (1)</a></div>
+<div class="tag-cloud"><a href="/en/tags/business/">Business (30)</a><a href="/en/tags/economy/">Economy (24)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/marketing/">Marketing (33)</a><a href="/en/tags/society/">Society (11)</a><a href="/en/tags/tech/">Tech (39)</a></div>
 <div class="util-chips">
     <a class="util-chip rss" id="rssChip" href="/en/blog/index.xml" title="Copy the feed URL for your RSS reader">Subscribe via RSS</a>
     <a class="util-chip" href="/en/archive/">Archive by year</a>
@@ -138,73 +140,73 @@ body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 <a class="blog-card" href="/en/blog/posts/base-position/" data-title="No Core Position, No Wealth" data-summary="Accounts rarely fail because of stock picking. They fail because three kinds of money get merged into one." data-date="2026-02-12" data-tags="Investing">
     <h3>No Core Position, No Wealth</h3>
     <hr class="summary-divider"><div class="summary-text">Accounts rarely fail because of stock picking. They fail because three kinds of money get merged into one.</div>
-    <div class="blog-tags"><span>Investing</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/baijiu-dual-market/" data-title="Baijiu Is a Cyclical Asset Too" data-summary="Demand for baijiu never went away; what cycles is the financial layer stacked on top of the drinking. Want to know if a commodity has entered its speculative phase? Watch how much of it gets hoarded." data-date="2026-02-10" data-tags="Investing">
     <h3>Baijiu Is a Cyclical Asset Too</h3>
     <hr class="summary-divider"><div class="summary-text">Demand for baijiu never went away; what cycles is the financial layer stacked on top of the drinking. Want to know if a commodity has entered its speculative phase? Watch how much of it gets hoarded.</div>
-    <div class="blog-tags"><span>Investing</span></div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Investing</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/art-of-selling/" data-title="Knowing When to Sell Beats Knowing What to Buy." data-summary="The moment that decides whether you win or lose rarely happens at entry — selling is not the epilogue of buying, it is a craft of its own." data-date="2026-02-08" data-tags="Investing">
     <h3>Knowing When to Sell Beats Knowing What to Buy.</h3>
     <hr class="summary-divider"><div class="summary-text">The moment that decides whether you win or lose rarely happens at entry — selling is not the epilogue of buying, it is a craft of its own.</div>
-    <div class="blog-tags"><span>Investing</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/ai-flip-flop/" data-title="Ask Whose Writing It Is, and It Says Whoever You Suggest" data-summary="The same article, asked whether AI wrote it: yes. Asked whether a human wrote it: also yes. That is not detection — that is compliance. AI detection is barely credible today." data-date="2026-02-06" data-tags="Tech">
     <h3>Ask Whose Writing It Is, and It Says Whoever You Suggest</h3>
     <hr class="summary-divider"><div class="summary-text">The same article, asked whether AI wrote it: yes. Asked whether a human wrote it: also yes. That is not detection — that is compliance. AI detection is barely credible today.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Tech</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/actuary-cant-predict/" data-title="Even Actuaries Can&#39;t Predict the Future" data-summary="Insurance prices the future, and nobody can predict the future. The business survives on cushion, not accuracy." data-date="2026-02-04" data-tags="Investing">
     <h3>Even Actuaries Can&#39;t Predict the Future</h3>
     <hr class="summary-divider"><div class="summary-text">Insurance prices the future, and nobody can predict the future. The business survives on cushion, not accuracy.</div>
-    <div class="blog-tags"><span>Investing</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/sales-existence/" data-title="The Existence of Sales" data-summary="Sales isn&#39;t the disease — it&#39;s the disease setting off alarms." data-date="2026-02-02" data-tags="Business">
     <h3>The Existence of Sales</h3>
     <hr class="summary-divider"><div class="summary-text">Sales isn&#39;t the disease — it&#39;s the disease setting off alarms.</div>
-    <div class="blog-tags"><span>Business</span></div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Business</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/refuse-to-change/" data-title="Refuse to Change, and It&#39;s Over" data-summary="Two men named Wang An, nine centuries apart, one diagnosis." data-date="2026-01-31" data-tags="Business,Society">
     <h3>Refuse to Change, and It&#39;s Over</h3>
     <hr class="summary-divider"><div class="summary-text">Two men named Wang An, nine centuries apart, one diagnosis.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Business</span><span>Society</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/rearview-mirror/" data-title="Rearview-Mirror Epistemology" data-summary="Before the cards are turned, every judgment is a rearview mirror." data-date="2026-01-29" data-tags="Investing,Economy,Society">
     <h3>Rearview-Mirror Epistemology</h3>
     <hr class="summary-divider"><div class="summary-text">Before the cards are turned, every judgment is a rearview mirror.</div>
-    <div class="blog-tags"><span>Investing</span><span>Economy</span><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Investing</span><span>Economy</span><span>Society</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/open-source-immortality/" data-title="Open Source Is Immortality" data-summary="Ten nines of reliability, and the flakiest component is still me." data-date="2026-01-27" data-tags="Tech,Society">
     <h3>Open Source Is Immortality</h3>
     <hr class="summary-divider"><div class="summary-text">Ten nines of reliability, and the flakiest component is still me.</div>
-    <div class="blog-tags"><span>Tech</span><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Tech</span><span>Society</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/it-was-avoidable/" data-title="This Didn&#39;t Have to Happen" data-summary="A 90-minute window; a 5-second run." data-date="2026-01-25" data-tags="Society">
     <h3>This Didn&#39;t Have to Happen</h3>
     <hr class="summary-divider"><div class="summary-text">A 90-minute window; a 5-second run.</div>
-    <div class="blog-tags"><span>Society</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Society</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/four-filters/" data-title="Be Greedy When Others Are Fearful, Written as Code" data-summary="Fear isn&#39;t a day; it&#39;s a structure." data-date="2026-01-23" data-tags="Investing,Economy">
     <h3>Be Greedy When Others Are Fearful, Written as Code</h3>
     <hr class="summary-divider"><div class="summary-text">Fear isn&#39;t a day; it&#39;s a structure.</div>
-    <div class="blog-tags"><span>Investing</span><span>Economy</span></div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span><span>Economy</span></div>
 </a>
 
 <a class="blog-card" href="/en/blog/posts/dog-where/" data-title="Don&#39;t Ask Where the Money Went, Ask Where the Dog Is" data-summary="The Dog-Takes-the-Money Theorem: from a punchline to a universal formula." data-date="2026-01-21" data-tags="Investing,Economy">
     <h3>Don&#39;t Ask Where the Money Went, Ask Where the Dog Is</h3>
     <hr class="summary-divider"><div class="summary-text">The Dog-Takes-the-Money Theorem: from a punchline to a universal formula.</div>
-    <div class="blog-tags"><span>Investing</span><span>Economy</span></div>
+    <div class="blog-tags"><span class="card-rt">5 min read</span><span>Investing</span><span>Economy</span></div>
 </a>
 
 </div>
@@ -223,10 +225,11 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/en\/blog\/index.json";
-var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/","technology":"\/en\/tags\/technology\/", };
+var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
 var L_ART=" articles · ";
 var L_TAG=" tags";
 var L_TAGS="Matching tags:";
+var L_RTFMT="$1 min read";
 var L_EMPTY="No matching articles or tags.";
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -245,7 +248,7 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";

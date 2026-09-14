@@ -7,6 +7,7 @@
     "description" (.Params.description | default "")
     "tags" (.Params.tags | default slice)
     "date" (.Date.Format "2006-01-02")
+    "rt" (cond (eq site.Language.Lang "en") (int (math.Ceil (div (float .WordCount) 220.0))) (int (math.Ceil (div (float (len .Plain)) 350.0))))
     "content" (.Content | plainify)
 ) -}}
 {{- end -}}
