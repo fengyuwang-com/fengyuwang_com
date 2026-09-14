@@ -7,28 +7,21 @@
     <language>zh-HK</language>
     <generator>Hugo</generator>
     <atom:link href="https://www.fengyuwang.com/zh-hk/blog/" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 15 Sep 2026 05:32:53 &#43;0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 05:47:49 &#43;0800</lastBuildDate>
     
     <item>
       <title>兩層界面原則：AI 時代的軟件交互架構</title>
       <link>https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/</link>
       <guid isPermaLink="true">https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;本文保留學術結構的完整版：摘要、七節、參考文獻俱全。原始文稿存檔見&lt;a href=&#34;https://github.com/fengyuwang-com/fengyuwang_com/blob/master/TWO-LAYER-INTERFACE.md&#34;&gt;《兩層界面原則》全文（GitHub）&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;
-&lt;p&gt;生成式 AI 把&amp;quot;軟件操作&amp;quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司的完整審查與重構實踐——投資研究、內容生產、私有雲產品三個真實系統——提出並檢驗**&amp;ldquo;兩層界面原則&amp;rdquo;**：任何軟件系統只應保留兩個交互層次。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;對話層&lt;/strong&gt;：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;觀景層&lt;/strong&gt;：只讀的圖形界面，僅為&amp;quot;不參與操作的人&amp;quot;提供可視化確認。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 Chat is the interface、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了&lt;strong&gt;第三個界面&lt;/strong&gt;——面向 AI 的治理界面，從而把&amp;quot;界面&amp;quot;概念從人機兩端擴展為&amp;quot;人—AI—文檔&amp;quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。&lt;/p&gt;
+      <description>&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;
+&lt;p&gt;生成式 AI 把&amp;quot;軟件操作&amp;quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司（FengProj 生態，含投資研究、內容生產、私有雲產品三個真實系統）的完整審查與重構實踐，提出並檢驗&lt;strong&gt;兩層界面原則&lt;/strong&gt;：任何軟件系統只應保留兩個交互層次——(1) &lt;strong&gt;對話層&lt;/strong&gt;：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；(2) &lt;strong&gt;觀景層&lt;/strong&gt;：只讀的圖形界面，僅為&amp;quot;不參與操作的人&amp;quot;提供可視化確認。資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 &amp;ldquo;Chat is the interface&amp;rdquo;、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了&lt;strong&gt;第三個界面&lt;/strong&gt;——面向 AI 的治理界面，從而把&amp;quot;界面&amp;quot;概念從人機兩端擴展為&amp;quot;人—AI—文檔&amp;quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。&lt;/p&gt;
 &lt;h2 id=&#34;一問題的提出&#34;&gt;一、問題的提出&lt;/h2&gt;
-&lt;p&gt;經典軟件的交互模型是&amp;quot;客戶端中心&amp;quot;的：用戶在圖形界面裏點擊、填表，操作結果沉澱在客戶端的數據庫裏，界面既是操作入口又是數據容器。這一模型隱含了兩個 2026 年已不再成立的前提：&lt;/p&gt;
+&lt;p&gt;經典軟件的交互模型是&amp;quot;客户端中心&amp;quot;的：用户在圖形界面裏點擊、填表，操作結果沉澱在客户端的數據庫裏，界面既是操作入口又是數據容器。這一模型隱含了兩個 2026 年已不再成立的前提：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;操作必須由人發起&lt;/strong&gt;。當 AI Agent 可以受託執行選題、寫稿、研究、發佈、診斷等全流程操作時，&amp;ldquo;人點按鈕&amp;quot;從必需品降格為選項。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;結果必須留在客戶端&lt;/strong&gt;。數據一旦以本地文件（Markdown/JSON/SQLite）為真理源，客戶端就退化為一個視圖，備份與遷移成為文件級操作而非數據庫工程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;結果必須留在客户端&lt;/strong&gt;。數據一旦以本地文件（Markdown/JSON/SQLite）為真理源，客户端就退化為一個視圖，備份與遷移成為文件級操作而非數據庫工程。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;我由此重新構想整個軟件形態：&lt;strong&gt;我只需要跟 AI 説話——因為大部分工作本來就是文字交流；UI 只為兩類時刻存在：讓不懂的人看懂，以及讓看的人方便。&lt;/strong&gt; 本文將這一直覺形式化為可審計的工程原則，並用一個真實的多系統生態驗證它。&lt;/p&gt;
+&lt;p&gt;筆者由此重新構想整個軟件形態：&lt;strong&gt;我只需要跟 AI 説話——因為大部分工作本來就是文字交流；UI 只為兩類時刻存在：讓不懂的人看懂，以及讓看的人方便。&lt;/strong&gt; 本文將這一直覺形式化為可審計的工程原則，並用一個真實的多系統生態驗證它。&lt;/p&gt;
 &lt;h2 id=&#34;二兩層界面原則&#34;&gt;二、兩層界面原則&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;原則（Two-Layer Interface Principle, 2LIP）&lt;/strong&gt;：一個面向 AI 時代的軟件系統，其交互面只保留兩層——&lt;/p&gt;
 &lt;table&gt;
@@ -60,22 +53,22 @@
 &lt;/table&gt;
 &lt;p&gt;外加兩條資源約束：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;C1（資料本地）&lt;/strong&gt;：真理源恆為本地文件或本地庫；任何客戶端/雲服務只持有副本或視圖。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C1（資料本地）&lt;/strong&gt;：真理源恆為本地文件或本地庫；任何客户端/雲服務只持有副本或視圖。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;C2（結果可備份）&lt;/strong&gt;：一切交互產出落入可版本化、可多副本同步的管道（git 雙推、多設備同步）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;判別一個系統是否符合 2LIP，只需四問：數據在不在本地？日常操作走不走對話？UI 是否只讀？產出能否備份？&lt;/p&gt;
 &lt;h2 id=&#34;三業界對位三條脈絡的收斂&#34;&gt;三、業界對位：三條脈絡的收斂&lt;/h2&gt;
-&lt;h3 id=&#34;31-chat-is-the-interface&#34;&gt;3.1 Chat is the interface&lt;/h3&gt;
-&lt;p&gt;2026 年，Y Combinator 的 Gary Tan 與 Jared Friedman 公開修正了此前的立場，確認&amp;quot;對話即界面&amp;quot;是 AI 應用的正確形態（Pete Koomen 相關討論廣泛傳播）。產品側同聲相應：neww.ai 的口號是 Chat is the interface. The operating system is the product.；arg.ai 乾脆取消全部功能頁面，Agent 經聊天直接讀寫文件；面向承包商的 XBuild 讓&amp;quot;對話就是估算流程本身&amp;rdquo;。這説明 2LIP 的 L1 層已被業界接受為主通道，而非聊天機器人式的附加件。&lt;/p&gt;
+&lt;h3 id=&#34;31-chat-is-the-interface&#34;&gt;3.1 &amp;ldquo;Chat is the interface&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;2026 年，Y Combinator 的 Gary Tan 與 Jared 公開修正了此前的立場，確認&amp;quot;對話即界面&amp;quot;是 AI 應用的正確形態（Pete Koomen 相關討論廣泛傳播）。產品側同聲相應：neww.ai 的口號 &amp;ldquo;Chat is the interface. The operating system is the product.&amp;quot;；arg.ai 乾脆取消全部功能頁面，Agent 經聊天直接讀寫文件；面向承包商的 XBuild 讓&amp;quot;對話就是估算流程本身&amp;rdquo;。這説明 2LIP 的 L1 層已被業界接受為主通道，而非聊天機械人式的附加件（bolted-on chatbot）。&lt;/p&gt;
 &lt;h3 id=&#34;32-generative-ui觀景層也無需預建&#34;&gt;3.2 Generative UI：觀景層也無需預建&lt;/h3&gt;
-&lt;p&gt;進一步的問題是：L2 觀景層要不要&amp;quot;精心開發&amp;quot;？生成式界面（Generative UI）給出否定回答——界面由 Agent 針對當前問題按需拼裝（卡片、圖表、整頁 HTML），而非設計師預定義的固定佈局（Google Cloud、CopilotKit、Decagon 諸家的定義趨同）。其論證是：儀表盤要求人去翻篩選器找答案，而 GenUI 把&amp;quot;界面變成一次回應，而不是一個目的地&amp;quot;。但 2026 年的實踐反思（如 r/UXDesign 社區）同樣指出：&lt;strong&gt;&amp;ldquo;一眼掃全局&amp;quot;的固定儀表盤在可預期性與可掃視性上不可替代&lt;/strong&gt;。二者恰好合成 2LIP 的立場：觀景層保留，但不必精裝修——固定視圖管&amp;quot;日常掃一眼&amp;rdquo;，生成視圖管&amp;quot;臨時看細節&amp;quot;。&lt;/p&gt;
-&lt;h3 id=&#34;33-mcp-apps--openai-apps-sdk給客戶的-skill-長出可視化&#34;&gt;3.3 MCP Apps / OpenAI Apps SDK：給客戶的 Skill 長出可視化&lt;/h3&gt;
-&lt;p&gt;2LIP 在對外產品上的對應物已經平台化：OpenAI Apps SDK 讓 MCP server（即&amp;quot;給客戶用的 Skill&amp;quot;）返回 UI 資源，在聊天流內以 React 組件渲染（如 Zillow 房源卡片）。這正是&amp;quot;Web UI 裏要有 Skill&amp;quot;的官方形態：&lt;strong&gt;Skill 是主體，UI 是 Skill 返回的可視化附件&lt;/strong&gt;，而非獨立門戶。對桌面/移動端自有產品而言，等價推論是：客戶對話入口內嵌於產品，操作走對話，面板退居展示與兜底。&lt;/p&gt;
+&lt;p&gt;進一步的問題是：L2 觀景層要不要&amp;quot;精心開發&amp;rdquo;？生成式界面（Generative UI）給出否定回答——界面由 Agent 針對當前問題按需拼裝（卡片、圖表、整頁 HTML），而非設計師預定義的固定佈局（Google Cloud、CopilotKit、Decagon 諸家的定義趨同）。其論證是：儀表盤要求人去翻篩選器找答案，而 GenUI 把&amp;quot;界面變成一次回應，而不是一個目的地&amp;quot;。但 2026 年的實踐反思（如 r/UXDesign 社區）同樣指出：&lt;strong&gt;一眼掃全局&lt;/strong&gt;的固定儀表盤在可預期性與可掃視性上不可替代。二者恰好合成 2LIP 的立場：觀景層保留，但不必精裝修——固定視圖管&amp;quot;日常掃一眼&amp;quot;，生成視圖管&amp;quot;臨時看細節&amp;quot;。&lt;/p&gt;
+&lt;h3 id=&#34;33-mcp-apps--openai-apps-sdk給客户的-skill-長出可視化&#34;&gt;3.3 MCP Apps / OpenAI Apps SDK：給客户的 Skill 長出可視化&lt;/h3&gt;
+&lt;p&gt;2LIP 在對外產品上的對應物已經平台化：OpenAI Apps SDK 讓 MCP server（即&amp;quot;給客户用的 Skill&amp;quot;）返回 UI 資源，在聊天流內以 React 組件渲染（如 Zillow 房源卡片）。這正是&amp;quot;Web UI 裏要有 Skill&amp;quot;的官方形態：&lt;strong&gt;Skill 是主體，UI 是 Skill 返回的可視化附件&lt;/strong&gt;，而非獨立門戶。對桌面/移動端自有產品而言，等價推論是：客户對話入口內嵌於產品，操作走對話，面板退居展示與兜底。&lt;/p&gt;
 &lt;h3 id=&#34;34-local-first資源約束的業界共識&#34;&gt;3.4 Local-first：資源約束的業界共識&lt;/h3&gt;
 &lt;p&gt;C1/C2 兩條資源約束對應 local-first AI Agent 脈絡：Agent 讀寫本地數據優先、異步同步備份（fast.io）；本地索引 + 按需上雲的分層數據策略（數據去向由敏感性而非&amp;quot;本地&amp;quot;教條決定）；個人 Agent 的運行時/記憶/技能/定時任務全棧本地化（r3zz.io 的&amp;quot;無聊架構&amp;quot;）。共識性結論是：完全離線不現實，關鍵在&lt;strong&gt;數據分級&lt;/strong&gt;——敏感數據不出本地。2LIP 採納同一結論，且在單機個人生態下走得更遠：真理源可以 100% 本地。&lt;/p&gt;
 &lt;h2 id=&#34;四第三個界面文檔作為-ai-的治理面&#34;&gt;四、第三個界面：文檔作為 AI 的治理面&lt;/h2&gt;
 &lt;p&gt;2LIP 解決&amp;quot;人怎麼操作軟件&amp;quot;，但留下一個問題：&lt;strong&gt;AI 怎麼被操作？&lt;/strong&gt; 答案在實踐裏早已長出：不是 API，不是配置中心，而是&lt;strong&gt;文檔&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;我對自己的多機開發生態裏 70 份治理文檔做過共性分析，收斂出一套&amp;quot;督促文檔範式&amp;quot;：&lt;code&gt;AGENTS.md&lt;/code&gt;（規則，唯一真源）、&lt;code&gt;MISSION.md&lt;/code&gt;（北極星目標與 DoD）、&lt;code&gt;todo.md&lt;/code&gt;（任務賬本）、&lt;code&gt;FENGMEM.md&lt;/code&gt;（會話日誌）四件套，輔以 Skill（&lt;code&gt;SKILL.md&lt;/code&gt;）作為可複用的操作封裝。其運行機制是：AI 開工先讀文檔獲得身份、規則與任務；行動結果回寫賬本與日誌；規則變更回寫 AGENTS。&lt;strong&gt;文檔即控制平面&lt;/strong&gt;——這正是文檔驅動開發（Docs-as-Code）與 Agent 原生開發合流後的新角色：文檔的讀者從&amp;quot;人&amp;quot;擴展為&amp;quot;人與 AI&amp;quot;，且 AI 是更嚴格的讀者（它真的逐字執行）。&lt;/p&gt;
+&lt;p&gt;筆者的多機開發生態（FengASNI）對 70 份治理文檔做過共性分析，收斂出一套&amp;quot;督促文檔範式&amp;quot;：&lt;code&gt;AGENTS.md&lt;/code&gt;（規則，唯一真源）、&lt;code&gt;MISSION.md&lt;/code&gt;（北極星目標與 DoD）、&lt;code&gt;todo.md&lt;/code&gt;（任務賬本）、&lt;code&gt;FENGMEM.md&lt;/code&gt;（會話日誌）四件套，輔以 Skill（&lt;code&gt;SKILL.md&lt;/code&gt;）作為可復用的操作封裝。其運行機制是：AI 開工先讀文檔獲得身份、規則與任務；行動結果回寫賬本與日誌；規則變更回寫 AGENTS。&lt;strong&gt;文檔即控制平面&lt;/strong&gt;——這正是文檔驅動開發（Docs-as-Code）與 Agent 原生開發合流後的新角色：文檔的讀者從&amp;quot;人&amp;quot;擴展為&amp;quot;人與 AI&amp;quot;，且 AI 是更嚴格的讀者（它真的逐字執行）。&lt;/p&gt;
 &lt;p&gt;由此得到本文的核心擴展命題：AI 時代的軟件交互是&lt;strong&gt;三元結構&lt;/strong&gt;——&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;人 ──自然語言──&amp;gt; AI ──工具調用──&amp;gt; 系統
 │                                ↑
@@ -88,7 +81,7 @@
 &lt;/ul&gt;
 &lt;p&gt;三層的關係不是並列：文檔層約束對話層（Skill 必須符合 AGENTS 鐵律），對話層驅動系統，觀景層只反映前兩者的產出。這一結構解釋了為何 2LIP 系統不需要複雜的權限後台——治理已經由文檔層的規則與賬本承擔。&lt;/p&gt;
 &lt;h2 id=&#34;五案例研究一個真實生態的審計與收束&#34;&gt;五、案例研究：一個真實生態的審計與收束&lt;/h2&gt;
-&lt;p&gt;以下為我個人生態（全部為本地優先的真實生產系統）按 2LIP 四問的審計結果：&lt;/p&gt;
+&lt;p&gt;以下為筆者個人生態（全部為本地優先的真實生產系統）按 2LIP 四問的審計結果：&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -118,8 +111,8 @@
           &lt;td&gt;FlyGo&lt;/td&gt;
           &lt;td&gt;私有雲產品（對外商業）&lt;/td&gt;
           &lt;td&gt;面板+APK 即產品本體&lt;/td&gt;
-          &lt;td&gt;➖ 特殊：UI 是交付物，不適用 L2&amp;quot;退居&amp;quot;條款；但缺客戶對話層&lt;/td&gt;
-          &lt;td&gt;借 MCP Apps 模式嵌&amp;quot;客戶 Skill&amp;rdquo;，面板退居展示&lt;/td&gt;
+          &lt;td&gt;➖ 特殊：UI 是交付物，不適用 L2&amp;quot;退居&amp;quot;條款；但缺客户對話層&lt;/td&gt;
+          &lt;td&gt;借 MCP Apps 模式嵌&amp;quot;客户 Skill&amp;rdquo;，面板退居展示&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;FengOS&lt;/td&gt;
@@ -137,13 +130,13 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;審計揭示出一條普適的判定序：&lt;strong&gt;先分清系統是&amp;quot;自用生產系統&amp;quot;還是&amp;quot;對外產品&amp;quot;&lt;/strong&gt;。前者嚴格適用 2LIP；後者的 UI 是產品本體，2LIP 的應用方式變為&amp;quot;在產品內增加對話層，而非取消 UI&amp;quot;。同時，生態級觀景台（FengOS）應收束各系統的查看入口，但堅持&amp;quot;iframe/鏈接聚合、不搬數據&amp;quot;，以守住 C1 的單一真理源。&lt;/p&gt;
+&lt;p&gt;審計揭示出一條普適的判定序：&lt;strong&gt;先分清系統是&amp;quot;自用生產系統&amp;quot;還是&amp;quot;對外產品&amp;quot;&lt;/strong&gt;。前者嚴格適用 2LIP；後者的 UI 是產品本體，2LIP 的應用方式變為&amp;quot;在產品內增加對話層，而非取消 UI&amp;quot;。同時，生態級觀景台（FengOS）應收束各系統的查看入口，但堅持&amp;quot;iframe/連結聚合、不搬數據&amp;quot;，以守住 C1 的單一真理源。&lt;/p&gt;
 &lt;h2 id=&#34;六討論邊界與代價&#34;&gt;六、討論：邊界與代價&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;2LIP 不是&amp;quot;消滅 UI&amp;quot;。&lt;/strong&gt; 反對證據真實存在：可掃視性（glanceability）場景——監控大屏、駕駛艙、給投資人演示——固定視圖優於對話；無歧義操作的效率（調音量不該靠打字）。2LIP 的正確讀法是&lt;strong&gt;操作權轉移&lt;/strong&gt;而非 UI 消亡：操作權歸對話層，UI 保留確認權。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;對話層的可復現性依賴文檔層。&lt;/strong&gt; 純對話交互的風險是&amp;quot;説過就丟&amp;quot;。文檔範式（任務入賬、日誌追加、DoD 驗收語句）正是對此的補全：每一輪對話的指令與結果都落為機器可讀的賬本，這使對話層獲得了傳統 GUI 所沒有的可審計性——操作歷史不是點擊流日誌，而是結構化文本。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;成本結構的變化。&lt;/strong&gt; 2LIP 將開發重心從&amp;quot;前端界面工程&amp;quot;轉向&amp;quot;Skill 工程 + 文檔治理 + 觀景頁按需生成&amp;quot;。對一人公司，這意味着此前最大的不可外包資產（界面）貶值，而最難複製的資產（領域規則文檔、人設、判斷標準）增值。&lt;/p&gt;
 &lt;h2 id=&#34;七結論&#34;&gt;七、結論&lt;/h2&gt;
-&lt;p&gt;兩層界面原則把 AI 時代的軟件形態收束為一句話：&lt;strong&gt;對話層負責&amp;quot;做&amp;quot;，觀景層負責&amp;quot;看&amp;quot;，文檔層負責&amp;quot;管&amp;quot;，資料留在本地，產出交給備份。&lt;/strong&gt; 業界三條脈絡（chat-first、Generative UI、MCP Apps）與 local-first 實踐在結構上與該原則收斂，説明這不是個人偏好而是範式方向的提前卡位。對個人與小型組織，2LIP 提供了一條可立即執行的重構路徑：審計現有系統的 UI 寫操作並收進對話，把查看入口聚合為單一觀景台，為對外產品嵌入 Skill 形態的客戶對話層——而這一切的地基，是把文檔當作面向 AI 的第一公民來建設。&lt;/p&gt;
+&lt;p&gt;兩層界面原則把 AI 時代的軟件形態收束為一句話：&lt;strong&gt;對話層負責&amp;quot;做&amp;quot;，觀景層負責&amp;quot;看&amp;quot;，文檔層負責&amp;quot;管&amp;quot;，資料留在本地，產出交給備份。&lt;/strong&gt; 業界三條脈絡（chat-first、Generative UI、MCP Apps）與 local-first 實踐在結構上與該原則收斂，説明這不是個人偏好而是範式方向的提前卡位。對個人與小型組織，2LIP 提供了一條可立即執行的重構路徑：審計現有系統的 UI 寫操作並收進對話，把查看入口聚合為單一觀景台，為對外產品嵌入 Skill 形態的客户對話層——而這一切的地基，是把文檔當作面向 AI 的第一公民來建設。&lt;/p&gt;
 &lt;h2 id=&#34;參考文獻2026-09-檢索&#34;&gt;參考文獻（2026-09 檢索）&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;YC &amp;ldquo;chat is the interface&amp;rdquo; 立場轉向：Pete Koomen 訪談報道，biggo.com&lt;/li&gt;
@@ -157,7 +150,7 @@
 &lt;li&gt;fast.io, &lt;em&gt;How to Implement Local-First Storage for AI Agents&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Medium/Data Science Collective, &lt;em&gt;My Local-First AI Agent Stack&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Reddit r/UXDesign, &lt;em&gt;Generative UI feels like the next &amp;ldquo;voice will replace screens&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;內部實踐：本人多機開發生態的治理文檔範式研究（70 份治理文檔共性分析與範式提案）；一人公司五層組織架構總綱與桌面 TTS 工具艦隊實戰覆盤&lt;/li&gt;
+&lt;li&gt;內部實踐：FengASNI DocsParadigm（70 份治理文檔共性分析與範式提案）；FengOrchestrator 五層架構總綱與 TTS-UI 艦隊實戰覆盤&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       <pubDate>Sun, 13 Sep 2026 00:00:00 &#43;0000</pubDate>

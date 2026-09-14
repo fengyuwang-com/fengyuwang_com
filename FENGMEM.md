@@ -254,3 +254,17 @@
 - 事故: pull --rebase origin dev 时，文章提交 3635e801 被静默丢弃（rebase finish 落在 fb4c048a，未保留补丁），本地文件一并消失，gitee 也被 force 到无文章的 fb4c048a——即此前"dev 同步"结论覆盖的是不含文章的状态。
 - 处置: reflog 定位 3635e801 → cherry-pick 为 b2147654 → GitHub+gitee 双推成功（fb4c048a..b2147654）。
 - 教训: rebase 后必须 git show 验证关键文件仍在远端，不能只对哈希；本次用户以"fb4c048a 有我文章吗"抓住，主会话此前核验不严。
+
+## 2026-09-13 — 博客清理通宵任务 + 博客/AI 页优化（主会话）
+- 用户要求: 通宵执行博客审计处置（删/重写/批量修，全权负责）；后追加：opc 三语补齐、相关阅读题材化+加框、博客列表阅读时长、用 TWO-LAYER-INTERFACE.md 优化 AI 页、博客原样推送、文案须对照 voice-and-translation 规范。
+- AI 行动/产出:
+  - S1 删 37 目录×3 语=111 篇（60fdfce9）；S2 重写/修补 R1-R9（0f334732、867f8d98）；S3 zh-hk 简体全站清扫（户等 opencc 盲区 46 文件）+ 三语 39 篇正文半角→全角 2830 处（bccbcd31）；S4 全量门禁绿 + 顺带修 4 类改版遗留低对比度（b1f60380）。台账 docs/notes/博客清理-执行台账.md 标 DONE。
+  - opc 五层三语补齐转正（cd6f4b65，每语 170 篇上线，sitemap 616）。
+  - 相关阅读弃时间序改 [related] 倒排索引（tags100/title60/text40）+ 淡蓝面板框（fb4c048a）。
+  - 博客列表页三语阅读时长 chip（card-rt + JSON rt 字段 + 搜索结果渲染同步）。
+  - AI 页×3 编入两层界面原则：跨两列卡片 + 第五节四条 + hero/meta 改写（45df5895）。
+- 关键决策:
+  - 教训：写文案前必须重读 docs/guide/voice-and-translation.md，不可凭记忆——卡片 h3 曾写成名词标签（generic 反例），经站长提醒后改 punchline「说话就是操作/Talking is the operation/説話就是操作」。
+  - opencc s2hk 对 戶/户 互穿、检不出 户：zh-hk 简体扫描必须叠加密文清单（户/价/谁/叙/霉/准 等）。
+  - 相关阅读 first 3 取的是日期序：Hugo 页面默认按日期排，"同标签取前3"恒等于"最新3篇"。
+  - master 全程未动，上线待发版门禁+站长批准。
