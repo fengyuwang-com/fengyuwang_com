@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>兩層界面原則：AI 時代的軟件交互架構 | Fengyu WANG</title>
+    <meta name="description" content="任何軟件系統只保留兩層交互：對話層承載全部日常操作，觀景層只讀展示；文檔是面向 AI 的第三個界面。基於一個一人公司五個真實系統的審計與收束實踐。">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="兩層界面原則：AI 時代的軟件交互架構">
+    <meta property="og:description" content="任何軟件系統只保留兩層交互：對話層承載全部日常操作，觀景層只讀展示；文檔是面向 AI 的第三個界面。基於一個一人公司五個真實系統的審計與收束實踐。">
+    <meta property="og:url" content="https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/">
+    <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="兩層界面原則：AI 時代的軟件交互架構">
+    <meta name="twitter:description" content="任何軟件系統只保留兩層交互：對話層承載全部日常操作，觀景層只讀展示；文檔是面向 AI 的第三個界面。基於一個一人公司五個真實系統的審計與收束實踐。">
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    
+    <meta property="article:published_time" content="2026-09-13">
+    <link rel="canonical" href="https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/">
+    <link rel="alternate" hreflang="zh-HK" href="/zh-hk/blog/posts/two-layer-interface/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="https://www.fengyuwang.com/zh-cn/blog/posts/two-layer-interface/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/">
+      
+        <link rel="alternate" hreflang="en" href="https://www.fengyuwang.com/en/blog/posts/two-layer-interface/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/two-layer-interface/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/two-layer-interface/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/two-layer-interface/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.09.07.04.10"></script>
+    <section class="content-section">
+        <div class="container">
+            
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"兩層界面原則：AI 時代的軟件交互架構\"","datePublished":"2026-09-13","dateModified":"2026-09-13","url":"\"https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/\"","inLanguage":"zh-hk","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"任何軟件系統只保留兩層交互：對話層承載全部日常操作，觀景層只讀展示；文檔是面向 AI 的第三個界面。基於一個一人公司五個真實系統的審計與收束實踐。\"","keywords":"\"技術, 商業\""</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主頁","item":"https://www.fengyuwang.com/zh-hk/"},{"@type":"ListItem","position":2,"name":"\"博客\"","item":"\"https://www.fengyuwang.com/zh-hk/blog/\""},{"@type":"ListItem","position":3,"name":"\"兩層界面原則：AI 時代的軟件交互架構\"","item":"\"https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/\""}]}</script>
+<style>
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+.blog-article .article-content h2[id],.blog-article .article-content h3[id] { scroll-margin-top:80px; position:relative; }
+.heading-anchor { opacity:0; margin-left:8px; color:#0071e3; text-decoration:none; font-weight:700; transition:opacity .15s; }
+.blog-article .article-content h2:hover .heading-anchor,.blog-article .article-content h3:hover .heading-anchor { opacity:.65; }
+.heading-anchor:hover { opacity:1 !important; }
+body[data-theme="dark"] .heading-anchor { color:#60a5fa; }
+.article-toc { background:rgba(0,113,227,.04); border:1px solid rgba(15,23,42,.08); border-radius:16px; padding:18px 24px; margin-bottom:28px; }
+.article-toc .toc-title { font-size:.82rem; font-weight:800; letter-spacing:.06em; color:#6b7280; margin-bottom:8px; }
+.article-toc nav { display:block; }
+.article-toc ul { margin:0; padding-left:18px; }
+.article-toc li { font-size:.9rem; line-height:1.9; }
+.article-toc a { color:#0b64c8; text-decoration:none; }
+.article-toc a:hover { text-decoration:underline; }
+body[data-theme="dark"] .article-toc { background:rgba(41,151,255,.06); border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .article-toc .toc-title { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc li { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc a { color:#60a5fa; }
+.author-card { display:flex; align-items:center; gap:18px; flex-wrap:wrap; background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:20px; padding:24px 28px; margin-top:28px; box-shadow:0 4px 16px rgba(15,23,42,.05); }
+.author-card .author-avatar { width:56px; height:56px; border-radius:50%; object-fit:cover; flex:none; }
+.author-card .author-body { flex:1; min-width:200px; }
+.author-card .author-name { font-size:1.05rem; font-weight:800; color:#111827; }
+.author-card .author-line { font-size:.88rem; color:#6b7280; margin:4px 0 0; line-height:1.6; }
+.author-card .author-links { display:flex; gap:10px; flex-wrap:wrap; }
+.author-card .author-links a { display:inline-flex; align-items:center; padding:8px 18px; border-radius:999px; font-size:.85rem; font-weight:600; text-decoration:none; }
+.author-card .author-links a.author-home { background:#0071e3; color:#fff; }
+.author-card .author-links a.author-home:hover { background:#0062cc; }
+.author-card .author-links a.author-mail { background:rgba(0,113,227,.08); color:#0b64c8; }
+.author-card .author-links a.author-mail:hover { background:rgba(0,113,227,.16); }
+body[data-theme="dark"] .author-card { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .author-card .author-name { color:#e5ecf4; }
+body[data-theme="dark"] .author-card .author-line { color:#9fb0c3; }
+body[data-theme="dark"] .author-card .author-links a.author-home { background:#3663d3; color:#fff; }
+body[data-theme="dark"] .author-card .author-links a.author-mail { background:rgba(41,151,255,.12); color:#60a5fa; }
+.related-shell { margin-top:36px; }
+.related-shell .related-title { font-size:1.1rem; font-weight:800; color:#111827; margin:0 0 14px; }
+.related-shell ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; }
+.related-shell li { display:flex; align-items:baseline; gap:10px; min-width:0; }
+.related-shell a { color:#0b64c8; text-decoration:none; font-size:.93rem; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.related-shell a:hover { text-decoration:underline; }
+.related-shell .related-date { font-size:.8rem; color:#6b7280; flex:none; }
+body[data-theme="dark"] .related-shell .related-title { color:#e5ecf4; }
+body[data-theme="dark"] .related-shell a { color:#60a5fa; }
+body[data-theme="dark"] .related-shell .related-date { color:#8296ac; }
+@media (max-width:767px) { .related-shell ul { grid-template-columns:1fr; } }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }
+</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/zh-hk/blog/">返回博客</a></div>
+<article class="blog-article">
+    <h1>兩層界面原則：AI 時代的軟件交互架構</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-13</span>
+        
+        <span class="meta-sep">·</span><span>約 35 分鐘</span>
+        <span class="meta-sep">·</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">技術</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">商業</span>
+    </div>
+    <div class="article-toc"><div class="toc-title">目錄</div><nav id="TableOfContents">
+  <ul>
+    <li><a href="#摘要">摘要</a></li>
+    <li><a href="#一問題的提出">一、問題的提出</a></li>
+    <li><a href="#二兩層界面原則">二、兩層界面原則</a></li>
+    <li><a href="#三業界對位三條脈絡的收斂">三、業界對位：三條脈絡的收斂</a>
+      <ul>
+        <li><a href="#31-chat-is-the-interface">3.1 Chat is the interface</a></li>
+        <li><a href="#32-generative-ui觀景層也無需預建">3.2 Generative UI：觀景層也無需預建</a></li>
+        <li><a href="#33-mcp-apps--openai-apps-sdk給客戶的-skill-長出可視化">3.3 MCP Apps / OpenAI Apps SDK：給客戶的 Skill 長出可視化</a></li>
+        <li><a href="#34-local-first資源約束的業界共識">3.4 Local-first：資源約束的業界共識</a></li>
+      </ul>
+    </li>
+    <li><a href="#四第三個界面文檔作為-ai-的治理面">四、第三個界面：文檔作為 AI 的治理面</a></li>
+    <li><a href="#五案例研究一個真實生態的審計與收束">五、案例研究：一個真實生態的審計與收束</a></li>
+    <li><a href="#六討論邊界與代價">六、討論：邊界與代價</a></li>
+    <li><a href="#七結論">七、結論</a></li>
+    <li><a href="#參考文獻2026-09-檢索">參考文獻（2026-09 檢索）</a></li>
+  </ul>
+</nav></div>
+    <div class="article-content"><blockquote>
+<p>本文保留學術結構的完整版：摘要、七節、參考文獻俱全。原始文稿存檔見<a href="https://github.com/fengyuwang-com/fengyuwang_com/blob/master/TWO-LAYER-INTERFACE.md">《兩層界面原則》全文（GitHub）</a>。</p></blockquote>
+<h2 id="摘要">摘要</h2>
+<p>生成式 AI 把&quot;軟件操作&quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司的完整審查與重構實踐——投資研究、內容生產、私有雲產品三個真實系統——提出並檢驗**&ldquo;兩層界面原則&rdquo;**：任何軟件系統只應保留兩個交互層次。</p>
+<ul>
+<li><strong>對話層</strong>：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；</li>
+<li><strong>觀景層</strong>：只讀的圖形界面，僅為&quot;不參與操作的人&quot;提供可視化確認。</li>
+</ul>
+<p>資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 Chat is the interface、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了<strong>第三個界面</strong>——面向 AI 的治理界面，從而把&quot;界面&quot;概念從人機兩端擴展為&quot;人—AI—文檔&quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。</p>
+<h2 id="一問題的提出">一、問題的提出</h2>
+<p>經典軟件的交互模型是&quot;客戶端中心&quot;的：用戶在圖形界面裏點擊、填表，操作結果沉澱在客戶端的數據庫裏，界面既是操作入口又是數據容器。這一模型隱含了兩個 2026 年已不再成立的前提：</p>
+<ol>
+<li><strong>操作必須由人發起</strong>。當 AI Agent 可以受託執行選題、寫稿、研究、發佈、診斷等全流程操作時，&ldquo;人點按鈕&quot;從必需品降格為選項。</li>
+<li><strong>結果必須留在客戶端</strong>。數據一旦以本地文件（Markdown/JSON/SQLite）為真理源，客戶端就退化為一個視圖，備份與遷移成為文件級操作而非數據庫工程。</li>
+</ol>
+<p>我由此重新構想整個軟件形態：<strong>我只需要跟 AI 説話——因為大部分工作本來就是文字交流；UI 只為兩類時刻存在：讓不懂的人看懂，以及讓看的人方便。</strong> 本文將這一直覺形式化為可審計的工程原則，並用一個真實的多系統生態驗證它。</p>
+<h2 id="二兩層界面原則">二、兩層界面原則</h2>
+<p><strong>原則（Two-Layer Interface Principle, 2LIP）</strong>：一個面向 AI 時代的軟件系統，其交互面只保留兩層——</p>
+<table>
+  <thead>
+      <tr>
+          <th>層</th>
+          <th>服務對象</th>
+          <th>形態</th>
+          <th>職責</th>
+          <th>反模式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>對話層（L1）</strong></td>
+          <td>操作者（人）與 AI</td>
+          <td>自然語言 + Skill（腳本化指令）</td>
+          <td>承載全部日常操作：增刪改查、流程觸發、異常處置</td>
+          <td>把操作埋進按鈕讓 AI 夠不着</td>
+      </tr>
+      <tr>
+          <td><strong>觀景層（L2）</strong></td>
+          <td>觀看者（人，通常不操作）</td>
+          <td>只讀 Web UI / 儀表盤</td>
+          <td>展示狀態與結果，供理解、驗收與對外演示</td>
+          <td>在觀景層開發寫操作</td>
+      </tr>
+  </tbody>
+</table>
+<p>外加兩條資源約束：</p>
+<ul>
+<li><strong>C1（資料本地）</strong>：真理源恆為本地文件或本地庫；任何客戶端/雲服務只持有副本或視圖。</li>
+<li><strong>C2（結果可備份）</strong>：一切交互產出落入可版本化、可多副本同步的管道（git 雙推、多設備同步）。</li>
+</ul>
+<p>判別一個系統是否符合 2LIP，只需四問：數據在不在本地？日常操作走不走對話？UI 是否只讀？產出能否備份？</p>
+<h2 id="三業界對位三條脈絡的收斂">三、業界對位：三條脈絡的收斂</h2>
+<h3 id="31-chat-is-the-interface">3.1 Chat is the interface</h3>
+<p>2026 年，Y Combinator 的 Gary Tan 與 Jared Friedman 公開修正了此前的立場，確認&quot;對話即界面&quot;是 AI 應用的正確形態（Pete Koomen 相關討論廣泛傳播）。產品側同聲相應：neww.ai 的口號是 Chat is the interface. The operating system is the product.；arg.ai 乾脆取消全部功能頁面，Agent 經聊天直接讀寫文件；面向承包商的 XBuild 讓&quot;對話就是估算流程本身&rdquo;。這説明 2LIP 的 L1 層已被業界接受為主通道，而非聊天機器人式的附加件。</p>
+<h3 id="32-generative-ui觀景層也無需預建">3.2 Generative UI：觀景層也無需預建</h3>
+<p>進一步的問題是：L2 觀景層要不要&quot;精心開發&quot;？生成式界面（Generative UI）給出否定回答——界面由 Agent 針對當前問題按需拼裝（卡片、圖表、整頁 HTML），而非設計師預定義的固定佈局（Google Cloud、CopilotKit、Decagon 諸家的定義趨同）。其論證是：儀表盤要求人去翻篩選器找答案，而 GenUI 把&quot;界面變成一次回應，而不是一個目的地&quot;。但 2026 年的實踐反思（如 r/UXDesign 社區）同樣指出：<strong>&ldquo;一眼掃全局&quot;的固定儀表盤在可預期性與可掃視性上不可替代</strong>。二者恰好合成 2LIP 的立場：觀景層保留，但不必精裝修——固定視圖管&quot;日常掃一眼&rdquo;，生成視圖管&quot;臨時看細節&quot;。</p>
+<h3 id="33-mcp-apps--openai-apps-sdk給客戶的-skill-長出可視化">3.3 MCP Apps / OpenAI Apps SDK：給客戶的 Skill 長出可視化</h3>
+<p>2LIP 在對外產品上的對應物已經平台化：OpenAI Apps SDK 讓 MCP server（即&quot;給客戶用的 Skill&quot;）返回 UI 資源，在聊天流內以 React 組件渲染（如 Zillow 房源卡片）。這正是&quot;Web UI 裏要有 Skill&quot;的官方形態：<strong>Skill 是主體，UI 是 Skill 返回的可視化附件</strong>，而非獨立門戶。對桌面/移動端自有產品而言，等價推論是：客戶對話入口內嵌於產品，操作走對話，面板退居展示與兜底。</p>
+<h3 id="34-local-first資源約束的業界共識">3.4 Local-first：資源約束的業界共識</h3>
+<p>C1/C2 兩條資源約束對應 local-first AI Agent 脈絡：Agent 讀寫本地數據優先、異步同步備份（fast.io）；本地索引 + 按需上雲的分層數據策略（數據去向由敏感性而非&quot;本地&quot;教條決定）；個人 Agent 的運行時/記憶/技能/定時任務全棧本地化（r3zz.io 的&quot;無聊架構&quot;）。共識性結論是：完全離線不現實，關鍵在<strong>數據分級</strong>——敏感數據不出本地。2LIP 採納同一結論，且在單機個人生態下走得更遠：真理源可以 100% 本地。</p>
+<h2 id="四第三個界面文檔作為-ai-的治理面">四、第三個界面：文檔作為 AI 的治理面</h2>
+<p>2LIP 解決&quot;人怎麼操作軟件&quot;，但留下一個問題：<strong>AI 怎麼被操作？</strong> 答案在實踐裏早已長出：不是 API，不是配置中心，而是<strong>文檔</strong>。</p>
+<p>我對自己的多機開發生態裏 70 份治理文檔做過共性分析，收斂出一套&quot;督促文檔範式&quot;：<code>AGENTS.md</code>（規則，唯一真源）、<code>MISSION.md</code>（北極星目標與 DoD）、<code>todo.md</code>（任務賬本）、<code>FENGMEM.md</code>（會話日誌）四件套，輔以 Skill（<code>SKILL.md</code>）作為可複用的操作封裝。其運行機制是：AI 開工先讀文檔獲得身份、規則與任務；行動結果回寫賬本與日誌；規則變更回寫 AGENTS。<strong>文檔即控制平面</strong>——這正是文檔驅動開發（Docs-as-Code）與 Agent 原生開發合流後的新角色：文檔的讀者從&quot;人&quot;擴展為&quot;人與 AI&quot;，且 AI 是更嚴格的讀者（它真的逐字執行）。</p>
+<p>由此得到本文的核心擴展命題：AI 時代的軟件交互是<strong>三元結構</strong>——</p>
+<pre tabindex="0"><code>人 ──自然語言──&gt; AI ──工具調用──&gt; 系統
+│                                ↑
+└──文檔（規則/目標/賬本/日誌）──────┘
+        文檔 = 面向 AI 的界面（治理面）
+</code></pre><ul>
+<li><strong>對話層</strong>是&quot;人操作 AI&quot;的界面；</li>
+<li><strong>文檔層</strong>是&quot;（人經 AI）治理 AI 與系統&quot;的界面；</li>
+<li><strong>觀景層</strong>是&quot;人確認系統狀態&quot;的界面，為前兩層的結果提供可視化。</li>
+</ul>
+<p>三層的關係不是並列：文檔層約束對話層（Skill 必須符合 AGENTS 鐵律），對話層驅動系統，觀景層只反映前兩者的產出。這一結構解釋了為何 2LIP 系統不需要複雜的權限後台——治理已經由文檔層的規則與賬本承擔。</p>
+<h2 id="五案例研究一個真實生態的審計與收束">五、案例研究：一個真實生態的審計與收束</h2>
+<p>以下為我個人生態（全部為本地優先的真實生產系統）按 2LIP 四問的審計結果：</p>
+<table>
+  <thead>
+      <tr>
+          <th>系統</th>
+          <th>領域</th>
+          <th>UI 現狀</th>
+          <th>審計判定</th>
+          <th>改造動作</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>FengInvest</td>
+          <td>投資研究（62 工具、2.7GB 本地行情庫）</td>
+          <td>只讀報告瀏覽器（fengweb）</td>
+          <td>✅ 標杆：數據本地 gitignored、操作全走對話、UI 純觀景、產出 git 雙推</td>
+          <td>不動</td>
+      </tr>
+      <tr>
+          <td>FengMedia</td>
+          <td>內容生產</td>
+          <td>作戰地圖 + 選題庫/打卡（有寫操作）</td>
+          <td>⚠️ UI 混入操作</td>
+          <td>寫操作收進對話（&ldquo;記一個選題&quot;即落 JSON），UI 退為只讀</td>
+      </tr>
+      <tr>
+          <td>FlyGo</td>
+          <td>私有雲產品（對外商業）</td>
+          <td>面板+APK 即產品本體</td>
+          <td>➖ 特殊：UI 是交付物，不適用 L2&quot;退居&quot;條款；但缺客戶對話層</td>
+          <td>借 MCP Apps 模式嵌&quot;客戶 Skill&rdquo;，面板退居展示</td>
+      </tr>
+      <tr>
+          <td>FengOS</td>
+          <td>項目指揮中心</td>
+          <td>3D 星系總覽+系統探針</td>
+          <td>✅ 即生態級&quot;觀景台&quot;本體</td>
+          <td>升級為統一觀景入口（聚合各系統只讀視圖，不搬數據）</td>
+      </tr>
+      <tr>
+          <td>純工具（TTS-UI 等）</td>
+          <td>桌面小工具</td>
+          <td>GUI 即交互本體</td>
+          <td>➖ 不適用（無 AI 層需求）</td>
+          <td>不動</td>
+      </tr>
+  </tbody>
+</table>
+<p>審計揭示出一條普適的判定序：<strong>先分清系統是&quot;自用生產系統&quot;還是&quot;對外產品&quot;</strong>。前者嚴格適用 2LIP；後者的 UI 是產品本體，2LIP 的應用方式變為&quot;在產品內增加對話層，而非取消 UI&quot;。同時，生態級觀景台（FengOS）應收束各系統的查看入口，但堅持&quot;iframe/鏈接聚合、不搬數據&quot;，以守住 C1 的單一真理源。</p>
+<h2 id="六討論邊界與代價">六、討論：邊界與代價</h2>
+<p><strong>2LIP 不是&quot;消滅 UI&quot;。</strong> 反對證據真實存在：可掃視性（glanceability）場景——監控大屏、駕駛艙、給投資人演示——固定視圖優於對話；無歧義操作的效率（調音量不該靠打字）。2LIP 的正確讀法是<strong>操作權轉移</strong>而非 UI 消亡：操作權歸對話層，UI 保留確認權。</p>
+<p><strong>對話層的可復現性依賴文檔層。</strong> 純對話交互的風險是&quot;説過就丟&quot;。文檔範式（任務入賬、日誌追加、DoD 驗收語句）正是對此的補全：每一輪對話的指令與結果都落為機器可讀的賬本，這使對話層獲得了傳統 GUI 所沒有的可審計性——操作歷史不是點擊流日誌，而是結構化文本。</p>
+<p><strong>成本結構的變化。</strong> 2LIP 將開發重心從&quot;前端界面工程&quot;轉向&quot;Skill 工程 + 文檔治理 + 觀景頁按需生成&quot;。對一人公司，這意味着此前最大的不可外包資產（界面）貶值，而最難複製的資產（領域規則文檔、人設、判斷標準）增值。</p>
+<h2 id="七結論">七、結論</h2>
+<p>兩層界面原則把 AI 時代的軟件形態收束為一句話：<strong>對話層負責&quot;做&quot;，觀景層負責&quot;看&quot;，文檔層負責&quot;管&quot;，資料留在本地，產出交給備份。</strong> 業界三條脈絡（chat-first、Generative UI、MCP Apps）與 local-first 實踐在結構上與該原則收斂，説明這不是個人偏好而是範式方向的提前卡位。對個人與小型組織，2LIP 提供了一條可立即執行的重構路徑：審計現有系統的 UI 寫操作並收進對話，把查看入口聚合為單一觀景台，為對外產品嵌入 Skill 形態的客戶對話層——而這一切的地基，是把文檔當作面向 AI 的第一公民來建設。</p>
+<h2 id="參考文獻2026-09-檢索">參考文獻（2026-09 檢索）</h2>
+<ol>
+<li>YC &ldquo;chat is the interface&rdquo; 立場轉向：Pete Koomen 訪談報道，biggo.com</li>
+<li>Google Cloud, <em>What is Generative UI?</em></li>
+<li>CopilotKit, <em>Generative UI</em>; Decagon, <em>What is Generative UI?</em></li>
+<li>Thesys, <em>From Static Dashboards to Generative UI</em></li>
+<li>Open Data Science, <em>Generative UI: When the Agent Builds the Interface for You</em></li>
+<li>OpenAI, <em>Apps SDK / Add UI to your MCP server</em>（developers.openai.com）</li>
+<li>Render, <em>Building with the OpenAI Apps SDK: A Field Guide</em></li>
+<li>r3zz.io, <em>The Boring Architecture Behind a Useful Personal AI Agent</em></li>
+<li>fast.io, <em>How to Implement Local-First Storage for AI Agents</em></li>
+<li>Medium/Data Science Collective, <em>My Local-First AI Agent Stack</em></li>
+<li>Reddit r/UXDesign, <em>Generative UI feels like the next &ldquo;voice will replace screens&rdquo;</em></li>
+<li>內部實踐：本人多機開發生態的治理文檔範式研究（70 份治理文檔共性分析與範式提案）；一人公司五層組織架構總綱與桌面 TTS 工具艦隊實戰覆盤</li>
+</ol>
+</div>
+</article>
+<div class="author-card">
+    <img class="author-avatar" src="/assets/img/logo.png" alt="Fengyu WANG">
+    <div class="author-body">
+        <div class="author-name">Fengyu WANG</div>
+        <p class="author-line">市場 × 投資 × 工程——一個人，一套底層邏輯。</p>
+    </div>
+    <div class="author-links">
+        <a class="author-home" href="/zh-hk/">主頁</a>
+        <a class="author-mail" href="mailto:fengyuwang1@outlook.com?subject=%e5%85%a9%e5%b1%a4%e7%95%8c%e9%9d%a2%e5%8e%9f%e5%89%87%ef%bc%9aAI%20%e6%99%82%e4%bb%a3%e7%9a%84%e8%bb%9f%e4%bb%b6%e4%ba%a4%e4%ba%92%e6%9e%b6%e6%a7%8b%20%e2%80%94%20fengyuwang.com">郵件回饋</a>
+    </div>
+</div>
+
+
+<nav class="related-shell">
+    <h2 class="related-title">相關閱讀</h2>
+    <ul><li><span class="related-date">2026-09</span><a href="/zh-hk/blog/posts/opc-five-layers/">一人公司帶數百個 AI 員工，翻譯成工程語言就五層</a></li><li><span class="related-date">2026-01</span><a href="/zh-hk/blog/posts/cost-of-yes/">對對對，是最貴的人力成本</a></li><li><span class="related-date">2026-01</span><a href="/zh-hk/blog/posts/want-books-not-tools/">我是想看書，不是想看你的工具</a></li></ul>
+</nav>
+
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/zh-hk/blog/posts/leverage-cant-buy-time/"><span class="post-nav-label">&larr; 上一篇</span><span class="post-nav-title">槓桿借不來時間</span></a>
+    <span class="post-nav-item post-nav-next post-nav-placeholder" aria-hidden="true"></span>
+</nav>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
+(function(){document.querySelectorAll('.article-content h2[id],.article-content h3[id]').forEach(function(h){var a=document.createElement('a');a.className='heading-anchor';a.href='#'+h.id;a.setAttribute('aria-hidden','true');a.textContent='#';h.appendChild(a);});if(location.hash){var t=document.querySelector(location.hash);if(t){setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},80);}}})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+</body>
+</html>
+
