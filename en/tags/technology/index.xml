@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Fengyu WANG</title>
+    <link>https://www.fengyuwang.com/en/tags/technology/</link>
+    <description>Recent content in Technology on Fengyu WANG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 13 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.fengyuwang.com/en/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era</title>
+      <link>https://www.fengyuwang.com/en/blog/posts/two-layer-interface/</link>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.fengyuwang.com/en/blog/posts/two-layer-interface/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This article keeps the full academic structure: abstract, seven sections, references. The original manuscript is archived as &lt;a href=&#34;https://github.com/fengyuwang-com/fengyuwang_com/blob/master/TWO-LAYER-INTERFACE.md&#34;&gt;The Two-Layer Interface Principle (GitHub)&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Generative AI has pushed the forty-year-old paradigm of graphical interfaces for &amp;ldquo;operating software&amp;rdquo; to the point of replacement. Based on a complete audit and restructuring practice across a one-person software company — three real systems covering investment research, content production, and a private cloud product — this article proposes and tests the &lt;strong&gt;Two-Layer Interface Principle (2LIP)&lt;/strong&gt;: any software system should keep only two interaction layers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

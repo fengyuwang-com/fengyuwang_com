@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era | Fengyu WANG</title>
+    <meta name="description" content="Any software system should keep only two interaction layers: a conversation layer that carries all daily operations, and a read-only viewing layer. Documents form the third interface — the governance plane for AI. Audited across five real production systems of a one-person company.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era">
+    <meta property="og:description" content="Any software system should keep only two interaction layers: a conversation layer that carries all daily operations, and a read-only viewing layer. Documents form the third interface — the governance plane for AI. Audited across five real production systems of a one-person company.">
+    <meta property="og:url" content="https://www.fengyuwang.com/en/blog/posts/two-layer-interface/">
+    <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <meta property="og:site_name" content="Fengyu WANG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era">
+    <meta name="twitter:description" content="Any software system should keep only two interaction layers: a conversation layer that carries all daily operations, and a read-only viewing layer. Documents form the third interface — the governance plane for AI. Audited across five real production systems of a one-person company.">
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    
+    <meta property="article:published_time" content="2026-09-13">
+    <link rel="canonical" href="https://www.fengyuwang.com/en/blog/posts/two-layer-interface/">
+    <link rel="alternate" hreflang="en" href="/en/blog/posts/two-layer-interface/">
+    
+    
+      
+        <link rel="alternate" hreflang="zh-CN" href="https://www.fengyuwang.com/zh-cn/blog/posts/two-layer-interface/">
+      
+        <link rel="alternate" hreflang="zh-HK" href="https://www.fengyuwang.com/zh-hk/blog/posts/two-layer-interface/">
+      
+        <link rel="alternate" hreflang="en" href="https://www.fengyuwang.com/en/blog/posts/two-layer-interface/">
+      
+    
+    <link rel="alternate" hreflang="x-default" href="/en/blog/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/blog-static.css">
+<style>.hidden-trans{display:none!important}</style>
+</head>
+<body class="blog-static-page">
+    <div id="shared-subpage-navbar" data-section="blog"><i class="hidden-trans" data-lang="zh-cn" data-url="/zh-cn/blog/posts/two-layer-interface/"></i><i class="hidden-trans" data-lang="zh-hk" data-url="/zh-hk/blog/posts/two-layer-interface/"></i><i class="hidden-trans" data-lang="en" data-url="/en/blog/posts/two-layer-interface/"></i></div>
+    <script src="/assets/js/shared-subpage-navbar.js?v=26.09.07.04.10"></script>
+    <section class="content-section">
+        <div class="container">
+            
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"\"The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era\"","datePublished":"2026-09-13","dateModified":"2026-09-13","url":"\"https://www.fengyuwang.com/en/blog/posts/two-layer-interface/\"","inLanguage":"en","author":{"@type":"Person","name":"Fengyu WANG","url":"https://fengyuwang.com/"},"publisher":{"@type":"Person","name":"Fengyu WANG"},"description":"\"Any software system should keep only two interaction layers: a conversation layer that carries all daily operations, and a read-only viewing layer. Documents form the third interface — the governance plane for AI. Audited across five real production systems of a one-person company.\"","keywords":"\"Technology, Business\""</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fengyuwang.com/en/"},{"@type":"ListItem","position":2,"name":"\"Blog\"","item":"\"https://www.fengyuwang.com/en/blog/\""},{"@type":"ListItem","position":3,"name":"\"The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era\"","item":"\"https://www.fengyuwang.com/en/blog/posts/two-layer-interface/\""}]}</script>
+<style>
+.blog-article { background:#fff; border-radius:24px; padding:40px; box-shadow:0 8px 30px rgba(15,23,42,.08); }
+body[data-theme="dark"] .blog-article { background:#1e293b; }
+.blog-article h1 { font-size:2rem; font-weight:800; margin:0 0 16px; color:#111827; line-height:1.3; }
+body[data-theme="dark"] .blog-article h1 { color:#e5ecf4; }
+.blog-article .article-meta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:20px; font-size:.88rem; color:#6b7280; }
+.blog-article .article-meta .article-date { font-weight:600; }
+body[data-theme="dark"] .blog-article .article-meta { color:#9fb0c3; }
+.blog-article .article-content { margin-top:8px; }
+.blog-article .article-content h2 { font-size:1.4rem; margin-top:1.8em; margin-bottom:.7em; color:#111827; }
+.blog-article .article-content p,.blog-article .article-content li { line-height:1.8; color:#374151; }
+body[data-theme="dark"] .blog-article .article-content h2 { color:#e5ecf4; }
+body[data-theme="dark"] .blog-article .article-content p,body[data-theme="dark"] .blog-article .article-content li { color:#9fb0c3; }
+.blog-article .article-content h2[id],.blog-article .article-content h3[id] { scroll-margin-top:80px; position:relative; }
+.heading-anchor { opacity:0; margin-left:8px; color:#0071e3; text-decoration:none; font-weight:700; transition:opacity .15s; }
+.blog-article .article-content h2:hover .heading-anchor,.blog-article .article-content h3:hover .heading-anchor { opacity:.65; }
+.heading-anchor:hover { opacity:1 !important; }
+body[data-theme="dark"] .heading-anchor { color:#60a5fa; }
+.article-toc { background:rgba(0,113,227,.04); border:1px solid rgba(15,23,42,.08); border-radius:16px; padding:18px 24px; margin-bottom:28px; }
+.article-toc .toc-title { font-size:.82rem; font-weight:800; letter-spacing:.06em; color:#6b7280; margin-bottom:8px; }
+.article-toc nav { display:block; }
+.article-toc ul { margin:0; padding-left:18px; }
+.article-toc li { font-size:.9rem; line-height:1.9; }
+.article-toc a { color:#0b64c8; text-decoration:none; }
+.article-toc a:hover { text-decoration:underline; }
+body[data-theme="dark"] .article-toc { background:rgba(41,151,255,.06); border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .article-toc .toc-title { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc li { color:#9fb0c3; }
+body[data-theme="dark"] .article-toc a { color:#60a5fa; }
+.author-card { display:flex; align-items:center; gap:18px; flex-wrap:wrap; background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:20px; padding:24px 28px; margin-top:28px; box-shadow:0 4px 16px rgba(15,23,42,.05); }
+.author-card .author-avatar { width:56px; height:56px; border-radius:50%; object-fit:cover; flex:none; }
+.author-card .author-body { flex:1; min-width:200px; }
+.author-card .author-name { font-size:1.05rem; font-weight:800; color:#111827; }
+.author-card .author-line { font-size:.88rem; color:#6b7280; margin:4px 0 0; line-height:1.6; }
+.author-card .author-links { display:flex; gap:10px; flex-wrap:wrap; }
+.author-card .author-links a { display:inline-flex; align-items:center; padding:8px 18px; border-radius:999px; font-size:.85rem; font-weight:600; text-decoration:none; }
+.author-card .author-links a.author-home { background:#0071e3; color:#fff; }
+.author-card .author-links a.author-home:hover { background:#0062cc; }
+.author-card .author-links a.author-mail { background:rgba(0,113,227,.08); color:#0b64c8; }
+.author-card .author-links a.author-mail:hover { background:rgba(0,113,227,.16); }
+body[data-theme="dark"] .author-card { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .author-card .author-name { color:#e5ecf4; }
+body[data-theme="dark"] .author-card .author-line { color:#9fb0c3; }
+body[data-theme="dark"] .author-card .author-links a.author-home { background:#3663d3; color:#fff; }
+body[data-theme="dark"] .author-card .author-links a.author-mail { background:rgba(41,151,255,.12); color:#60a5fa; }
+.related-shell { margin-top:36px; }
+.related-shell .related-title { font-size:1.1rem; font-weight:800; color:#111827; margin:0 0 14px; }
+.related-shell ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; }
+.related-shell li { display:flex; align-items:baseline; gap:10px; min-width:0; }
+.related-shell a { color:#0b64c8; text-decoration:none; font-size:.93rem; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.related-shell a:hover { text-decoration:underline; }
+.related-shell .related-date { font-size:.8rem; color:#6b7280; flex:none; }
+body[data-theme="dark"] .related-shell .related-title { color:#e5ecf4; }
+body[data-theme="dark"] .related-shell a { color:#60a5fa; }
+body[data-theme="dark"] .related-shell .related-date { color:#8296ac; }
+@media (max-width:767px) { .related-shell ul { grid-template-columns:1fr; } }
+@media (max-width:767px) { .blog-article { padding:24px; } }
+.back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }
+.back-to-top.show { display:flex; }
+.back-to-top:hover { background:#0062cc; }
+body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }
+body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }
+.blog-back-shell { margin-bottom:48px; }
+.blog-back-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:999px; background:rgba(0,113,227,.02); color:#0071e3; font-weight:600; font-size:.9rem; text-decoration:none; }
+.blog-back-btn:hover { background:rgba(0,113,227,.14); transform:translateX(-3px); }
+.blog-back-btn::before { content:"←"; }
+body[data-theme="dark"] .blog-back-btn { background:rgba(41,151,255,.12); color:#60a5fa; }
+body[data-theme="dark"] .blog-back-btn:hover { background:rgba(41,151,255,.2); }
+.post-nav { display:flex; gap:16px; margin-top:28px; }
+.post-nav a.post-nav-item,.post-nav span.post-nav-item { flex:1; display:flex; flex-direction:column; gap:6px; padding:18px 22px; border-radius:16px; background:#fff; border:1px solid rgba(15,23,42,.08); text-decoration:none; min-width:0; }
+.post-nav a.post-nav-item { transition:transform .2s ease,box-shadow .2s ease; }
+.post-nav a.post-nav-item:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(15,23,42,.1); }
+.post-nav .post-nav-next { text-align:right; align-items:flex-end; }
+.post-nav .post-nav-label { font-size:.8rem; font-weight:700; color:#0071e3; }
+.post-nav .post-nav-title { font-size:.95rem; font-weight:600; color:#111827; line-height:1.5; }
+.post-nav .post-nav-placeholder { visibility:hidden; }
+body[data-theme="dark"] .post-nav a.post-nav-item,body[data-theme="dark"] .post-nav span.post-nav-item { background:#1e293b; border-color:rgba(148,163,184,.12); }
+body[data-theme="dark"] .post-nav .post-nav-label { color:#60a5fa; }
+body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
+@media (max-width:767px) { .post-nav { flex-direction:column; } .post-nav .post-nav-next { text-align:left; align-items:flex-start; } }
+</style>
+<div class="blog-back-shell"><a class="blog-back-btn" href="/en/blog/">Back to Blog</a></div>
+<article class="blog-article">
+    <h1>The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era</h1>
+    <div class="article-meta">
+        <span class="article-date">2026-09-13</span>
+        
+        <span class="meta-sep">·</span><span>10 min read</span>
+        <span class="meta-sep">·</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Technology</span><span style="display:inline-flex;padding:4px 10px;border-radius:999px;background:rgba(0,113,227,.08);color:#0071e3;font-size:.8rem;font-weight:600;">Business</span>
+    </div>
+    <div class="article-toc"><div class="toc-title">CONTENTS</div><nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#1-the-problem">1. The problem</a></li>
+    <li><a href="#2-the-two-layer-interface-principle">2. The Two-Layer Interface Principle</a></li>
+    <li><a href="#3-industry-alignment-three-currents-converging">3. Industry alignment: three currents converging</a>
+      <ul>
+        <li><a href="#31-chat-is-the-interface">3.1 Chat is the interface</a></li>
+        <li><a href="#32-generative-ui-the-viewing-layer-need-not-be-pre-built">3.2 Generative UI: the viewing layer need not be pre-built</a></li>
+        <li><a href="#33-mcp-apps--openai-apps-sdk-giving-the-customers-skill-a-face">3.3 MCP Apps / OpenAI Apps SDK: giving the customer&rsquo;s Skill a face</a></li>
+        <li><a href="#34-local-first-industry-consensus-on-the-resource-constraints">3.4 Local-first: industry consensus on the resource constraints</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-the-third-interface-documents-as-the-governance-plane-for-ai">4. The third interface: documents as the governance plane for AI</a></li>
+    <li><a href="#5-case-study-audit-and-convergence-of-a-real-ecosystem">5. Case study: audit and convergence of a real ecosystem</a></li>
+    <li><a href="#6-discussion-boundaries-and-costs">6. Discussion: boundaries and costs</a></li>
+    <li><a href="#7-conclusion">7. Conclusion</a></li>
+    <li><a href="#references-retrieved-2026-09">References (retrieved 2026-09)</a></li>
+  </ul>
+</nav></div>
+    <div class="article-content"><blockquote>
+<p>This article keeps the full academic structure: abstract, seven sections, references. The original manuscript is archived as <a href="https://github.com/fengyuwang-com/fengyuwang_com/blob/master/TWO-LAYER-INTERFACE.md">The Two-Layer Interface Principle (GitHub)</a>.</p></blockquote>
+<h2 id="abstract">Abstract</h2>
+<p>Generative AI has pushed the forty-year-old paradigm of graphical interfaces for &ldquo;operating software&rdquo; to the point of replacement. Based on a complete audit and restructuring practice across a one-person software company — three real systems covering investment research, content production, and a private cloud product — this article proposes and tests the <strong>Two-Layer Interface Principle (2LIP)</strong>: any software system should keep only two interaction layers.</p>
+<ul>
+<li><strong>The conversation layer</strong>: natural-language exchange between a human and AI (with Skills as its scripted form), carrying all daily operations;</li>
+<li><strong>The viewing layer</strong>: a read-only graphical interface, existing solely to give &ldquo;people who do not operate&rdquo; visual confirmation.</li>
+</ul>
+<p>Data always lives in local files; interaction output goes into a backup pipeline. The article aligns this principle with three parallel currents in the industry — YC&rsquo;s &ldquo;chat is the interface&rdquo;, Generative UI, and the MCP-UI architecture of OpenAI&rsquo;s Apps SDK — and shows that all three structurally converge on the same proposition. It further argues that when AI becomes the primary operator, documents (AGENTS/MISSION/todo/logs) themselves constitute a <strong>third interface</strong> — a governance plane for AI — extending the concept of &ldquo;interface&rdquo; from the two ends of human and machine into a three-way structure: human, AI, document. The case section presents a conformity audit of five systems and the path that folds them back onto the principle, demonstrating that it works for personal production systems as well as commercial products.</p>
+<h2 id="1-the-problem">1. The problem</h2>
+<p>The classic interaction model of software is client-centric: a user clicks and fills forms in a graphical interface, and the results settle into the client&rsquo;s database. The interface is both the entry point for operations and the container for data. That model rests on two premises that no longer hold in 2026:</p>
+<ol>
+<li><strong>Operations must be initiated by a human.</strong> Once an AI agent can be entrusted with the full pipeline — selecting topics, drafting, researching, publishing, diagnosing — &ldquo;a human clicking buttons&rdquo; drops from a necessity to an option.</li>
+<li><strong>Results must stay in the client.</strong> Once the source of truth is local files (Markdown/JSON/SQLite), the client degrades into a view; backup and migration become file-level operations rather than database engineering.</li>
+</ol>
+<p>This leads to a rethinking of what software should be: <strong>talk to the AI — most work was text exchange to begin with; a UI exists only for two moments, to make things understandable for those who don&rsquo;t know, and convenient for those who look.</strong> This article formalizes that intuition into an auditable engineering principle and validates it against a real multi-system ecosystem.</p>
+<h2 id="2-the-two-layer-interface-principle">2. The Two-Layer Interface Principle</h2>
+<p><strong>The principle (Two-Layer Interface Principle, 2LIP)</strong>: an AI-era software system keeps only two layers on its interaction surface —</p>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Serves</th>
+          <th>Form</th>
+          <th>Duty</th>
+          <th>Anti-pattern</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Conversation layer (L1)</strong></td>
+          <td>Operator (human) and AI</td>
+          <td>Natural language + Skills (scripted commands)</td>
+          <td>All daily operations: CRUD, workflow triggers, exception handling</td>
+          <td>Burying operations in buttons the AI cannot reach</td>
+      </tr>
+      <tr>
+          <td><strong>Viewing layer (L2)</strong></td>
+          <td>Viewer (human, usually not operating)</td>
+          <td>Read-only web UI / dashboards</td>
+          <td>Show state and results for understanding, acceptance, and demonstration</td>
+          <td>Building write operations into the viewing layer</td>
+      </tr>
+  </tbody>
+</table>
+<p>Plus two resource constraints:</p>
+<ul>
+<li><strong>C1 (data local)</strong>: the source of truth is always a local file or local database; any client or cloud service holds only a copy or a view.</li>
+<li><strong>C2 (output backupable)</strong>: every artifact of interaction lands in a version-controlled, multi-replica synced pipeline (dual git push, multi-device sync).</li>
+</ul>
+<p>To judge whether a system conforms to 2LIP, four questions suffice: Is the data local? Do daily operations go through conversation? Is the UI read-only? Can the output be backed up?</p>
+<h2 id="3-industry-alignment-three-currents-converging">3. Industry alignment: three currents converging</h2>
+<h3 id="31-chat-is-the-interface">3.1 Chat is the interface</h3>
+<p>In 2026, Y Combinator&rsquo;s Gary Tan and Jared Friedman publicly revised their earlier stance, confirming that &ldquo;conversation as the interface&rdquo; is the right form for AI applications (the Pete Koomen discussion spread widely). Product echoes followed: neww.ai&rsquo;s slogan, &ldquo;Chat is the interface. The operating system is the product.&rdquo;; arg.ai dropped all feature pages and let the agent read and write files through chat; XBuild, built for contractors, made the conversation itself the estimating workflow. The L1 layer of 2LIP is now accepted as the main channel, not a bolted-on chatbot.</p>
+<h3 id="32-generative-ui-the-viewing-layer-need-not-be-pre-built">3.2 Generative UI: the viewing layer need not be pre-built</h3>
+<p>The next question: does L2 need to be &ldquo;carefully developed&rdquo;? Generative UI answers no — the interface is assembled on demand by the agent for the problem at hand (cards, charts, full-page HTML), rather than a fixed layout predefined by designers (the definitions from Google Cloud, CopilotKit, and Decagon converge). The argument: dashboards make a person dig through filters for an answer, while GenUI &ldquo;turns the interface into a response, not a destination.&rdquo; Yet reflections from 2026 practice (such as the r/UXDesign community) point out that <strong>a fixed &ldquo;see everything at a glance&rdquo; dashboard is irreplaceable in predictability and glanceability</strong>. The two sides combine exactly into the 2LIP position: keep the viewing layer, but skip the fine decoration — fixed views handle &ldquo;one glance at the day,&rdquo; generated views handle &ldquo;a closer look on demand.&rdquo;</p>
+<h3 id="33-mcp-apps--openai-apps-sdk-giving-the-customers-skill-a-face">3.3 MCP Apps / OpenAI Apps SDK: giving the customer&rsquo;s Skill a face</h3>
+<p>The counterpart of 2LIP for external products is already a platform: OpenAI&rsquo;s Apps SDK lets an MCP server — a Skill for customers — return UI resources rendered as React components inside the chat stream (such as Zillow listing cards). This is the official form of &ldquo;the web UI should grow a Skill&rdquo;: <strong>the Skill is the subject; the UI is the visual attachment the Skill returns</strong>, not a separate portal. The equivalent inference for a desktop or mobile own-product is that the customer&rsquo;s conversation entry lives inside the product, operations go through chat, and the panel retreats to display and fallback.</p>
+<h3 id="34-local-first-industry-consensus-on-the-resource-constraints">3.4 Local-first: industry consensus on the resource constraints</h3>
+<p>The C1/C2 constraints correspond to the local-first AI agent current: agents read and write local data first, syncing backups asynchronously (fast.io); local indexing with on-demand cloud tiering, where data placement follows sensitivity rather than a &ldquo;local&rdquo; dogma; a personal agent with runtime, memory, skills, and scheduled tasks fully local (r3zz.io&rsquo;s &ldquo;boring architecture&rdquo;). The consensus: full offline is unrealistic, and the key is <strong>data tiering</strong> — sensitive data never leaves the local machine. 2LIP adopts the same conclusion, and on a single-machine personal ecosystem goes further: the source of truth can be 100% local.</p>
+<h2 id="4-the-third-interface-documents-as-the-governance-plane-for-ai">4. The third interface: documents as the governance plane for AI</h2>
+<p>2LIP answers &ldquo;how does a human operate the software,&rdquo; but leaves a question: <strong>how is the AI operated?</strong> The answer has long since grown out of practice: not an API, not a config center, but <strong>documents</strong>.</p>
+<p>A commonality analysis of 70 governance documents across my own multi-machine development ecosystem converged on a &ldquo;supervision document paradigm&rdquo;: <code>AGENTS.md</code> (rules, single source of truth), <code>MISSION.md</code> (north-star goal and DoD), <code>todo.md</code> (task ledger), and <code>FENGMEM.md</code> (session log), with Skills (<code>SKILL.md</code>) as reusable operation wrappers. The mechanism: an AI starts work by reading documents to obtain identity, rules, and tasks; results of action are written back to the ledger and log; rule changes are written back to AGENTS. <strong>Documents are the control plane</strong> — the new role that emerges once Docs-as-Code and agent-native development merge: the reader of documents expands from &ldquo;humans&rdquo; to &ldquo;humans and AI,&rdquo; and the AI is the stricter reader (it executes every word).</p>
+<p>This yields the article&rsquo;s core extension: software interaction in the AI era is a <strong>three-way structure</strong> —</p>
+<pre tabindex="0"><code>human ──natural language──&gt; AI ──tool calls──&gt; system
+│                                  ↑
+└── documents (rules/goals/ledger/log) ────────┘
+        documents = interface for AI (governance plane)
+</code></pre><ul>
+<li><strong>The conversation layer</strong> is the interface for &ldquo;human operates AI&rdquo;;</li>
+<li><strong>The document layer</strong> is the interface for &ldquo;(human, via AI) governs the AI and the system&rdquo;;</li>
+<li><strong>The viewing layer</strong> is the interface for &ldquo;human confirms system state,&rdquo; visualizing the results of the first two.</li>
+</ul>
+<p>The three layers are not parallel: the document layer constrains the conversation layer (a Skill must obey the AGENTS iron rules), the conversation layer drives the system, and the viewing layer only reflects their output. This structure explains why a 2LIP system needs no complex permission console — governance is already carried by the rules and ledger of the document layer.</p>
+<h2 id="5-case-study-audit-and-convergence-of-a-real-ecosystem">5. Case study: audit and convergence of a real ecosystem</h2>
+<p>Below is the audit of my personal ecosystem — all real, local-first production systems — against the four questions of 2LIP:</p>
+<table>
+  <thead>
+      <tr>
+          <th>System</th>
+          <th>Domain</th>
+          <th>UI status</th>
+          <th>Verdict</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>FengInvest</td>
+          <td>Investment research (62 tools, 2.7GB local market data)</td>
+          <td>Read-only report browser (fengweb)</td>
+          <td>✅ Benchmark: data local and gitignored, operations via chat, purely read-only UI, output dual-pushed to git</td>
+          <td>Keep</td>
+      </tr>
+      <tr>
+          <td>FengMedia</td>
+          <td>Content production</td>
+          <td>Battle map + topic library / check-ins (has write operations)</td>
+          <td>⚠️ UI mixed with operations</td>
+          <td>Fold writes into conversation (&ldquo;log a topic&rdquo; lands as JSON), UI becomes read-only</td>
+      </tr>
+      <tr>
+          <td>FlyGo</td>
+          <td>Private cloud product (commercial, external)</td>
+          <td>Panel + APK as the product itself</td>
+          <td>➖ Special: the UI is the deliverable; L2&rsquo;s &ldquo;retreat&rdquo; clause does not apply, but a customer conversation layer is missing</td>
+          <td>Follow the MCP Apps pattern: embed a customer Skill, panel retreats to display</td>
+      </tr>
+      <tr>
+          <td>FengOS</td>
+          <td>Command center</td>
+          <td>3D galaxy overview + system probes</td>
+          <td>✅ The ecosystem-level viewing deck itself</td>
+          <td>Upgrade into the unified viewing entrance (aggregate read-only views per system, move no data)</td>
+      </tr>
+      <tr>
+          <td>Pure tools (TTS-UI etc.)</td>
+          <td>Desktop utilities</td>
+          <td>GUI as the interaction itself</td>
+          <td>➖ Not applicable (no AI layer needed)</td>
+          <td>Keep</td>
+      </tr>
+  </tbody>
+</table>
+<p>The audit reveals a universal decision order: <strong>first determine whether the system is a &ldquo;personal production system&rdquo; or an &ldquo;external product.&rdquo;</strong> The former follows 2LIP strictly; for the latter the UI is the product itself, and 2LIP is applied as &ldquo;add a conversation layer inside the product, not remove the UI.&rdquo; Meanwhile, the ecosystem-level viewing deck (FengOS) should fold the per-system viewing entrances into one, but stick to &ldquo;iframe/link aggregation, move no data,&rdquo; preserving C1&rsquo;s single source of truth.</p>
+<h2 id="6-discussion-boundaries-and-costs">6. Discussion: boundaries and costs</h2>
+<p><strong>2LIP is not &ldquo;killing the UI.&rdquo;</strong> The counter-evidence is real: glanceability scenarios — monitoring walls, cockpits, investor demos — favor fixed views over conversation; and unambiguous operations are more efficient without typing (volume should not be adjusted by chat). The correct reading of 2LIP is a <strong>transfer of operating rights</strong>, not the death of UI: operating rights go to the conversation layer, while the UI keeps confirmation rights.</p>
+<p><strong>The reproducibility of conversation depends on the document layer.</strong> The risk of pure conversational interaction is &ldquo;said and gone.&rdquo; The document paradigm (tasks on the ledger, appended logs, DoD acceptance statements) completes it: every instruction and result of every round lands as machine-readable ledger entries, giving the conversation layer an auditability traditional GUI never had — the operation history is not a click-stream log but structured text.</p>
+<p><strong>The change in cost structure.</strong> 2LIP shifts the center of development from &ldquo;frontend interface engineering&rdquo; to &ldquo;Skill engineering + document governance + on-demand generated views.&rdquo; For a one-person company this means the largest non-outsourceable asset (the interface) depreciates, while the hardest assets to copy (domain rule documents, persona, standards of judgment) appreciate.</p>
+<h2 id="7-conclusion">7. Conclusion</h2>
+<p>The Two-Layer Interface Principle folds the shape of AI-era software into one sentence: <strong>the conversation layer does, the viewing layer shows, the document layer governs; data stays local, output goes to backup.</strong> Three industry currents (chat-first, Generative UI, MCP Apps) and local-first practice all structurally converge on this principle — which means it is not personal taste but an early position on where the paradigm is heading. For individuals and small organizations, 2LIP offers an immediately executable refactoring path: audit the write operations in existing UIs and fold them into conversation, aggregate the viewing entrances into a single deck, and embed a Skill-form conversation layer for external products — with the foundation of it all being to treat documents as first-class citizens built for AI.</p>
+<h2 id="references-retrieved-2026-09">References (retrieved 2026-09)</h2>
+<ol>
+<li>YC&rsquo;s shift on &ldquo;chat is the interface&rdquo;: reporting on the Pete Koomen interview, biggo.com</li>
+<li>Google Cloud, <em>What is Generative UI?</em></li>
+<li>CopilotKit, <em>Generative UI</em>; Decagon, <em>What is Generative UI?</em></li>
+<li>Thesys, <em>From Static Dashboards to Generative UI</em></li>
+<li>Open Data Science, <em>Generative UI: When the Agent Builds the Interface for You</em></li>
+<li>OpenAI, <em>Apps SDK / Add UI to your MCP server</em> (developers.openai.com)</li>
+<li>Render, <em>Building with the OpenAI Apps SDK: A Field Guide</em></li>
+<li>r3zz.io, <em>The Boring Architecture Behind a Useful Personal AI Agent</em></li>
+<li>fast.io, <em>How to Implement Local-First Storage for AI Agents</em></li>
+<li>Medium/Data Science Collective, <em>My Local-First AI Agent Stack</em></li>
+<li>Reddit r/UXDesign, <em>Generative UI feels like the next &ldquo;voice will replace screens&rdquo;</em></li>
+<li>Internal practice: governance-document paradigm research across a multi-machine development ecosystem (commonality analysis of 70 governance documents); the five-layer organizational framework of a one-person company and field notes from a desktop TTS tool fleet</li>
+</ol>
+</div>
+</article>
+<div class="author-card">
+    <img class="author-avatar" src="/assets/img/logo.png" alt="Fengyu WANG">
+    <div class="author-body">
+        <div class="author-name">Fengyu WANG</div>
+        <p class="author-line">Markets, investing, engineering — one person, one underlying logic.</p>
+    </div>
+    <div class="author-links">
+        <a class="author-home" href="/en/">Homepage</a>
+        <a class="author-mail" href="mailto:fengyuwang1@outlook.com?subject=The%20Two-Layer%20Interface%20Principle%3a%20Software%20Interaction%20Architecture%20in%20the%20AI%20Era%20%e2%80%94%20fengyuwang.com">Email feedback</a>
+    </div>
+</div>
+
+
+<nav class="related-shell">
+    <h2 class="related-title">Related reading</h2>
+    <ul><li><span class="related-date">2026-09</span><a href="/en/blog/posts/opc-five-layers/">One Person, Hundreds of AI Employees: Translated into Engineering, It&#39;s Five Layers</a></li><li><span class="related-date">2026-08</span><a href="/en/blog/posts/spread-not-direction/">Money That Doesn&#39;t Bet on Direction</a></li><li><span class="related-date">2026-07</span><a href="/en/blog/posts/rule-of-three/">Three People Can&#39;t Make a Decision</a></li></ul>
+</nav>
+
+
+<nav class="post-nav">
+    <a class="post-nav-item" href="/en/blog/posts/leverage-cant-buy-time/"><span class="post-nav-label">&larr; Older post</span><span class="post-nav-title">Leverage Can&#39;t Buy Time</span></a>
+    <span class="post-nav-item post-nav-next post-nav-placeholder" aria-hidden="true"></span>
+</nav>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+<script>
+(function(){var btn=document.getElementById('backToTop');if(!btn)return;window.addEventListener('scroll',function(){if(window.scrollY>300)btn.classList.add('show');else btn.classList.remove('show')})})();
+(function(){var b=document.querySelector('.blog-back-btn');if(!b)return;b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.defaultPrevented)return;try{var u=sessionStorage.getItem('blogListUrl');if(u){e.preventDefault();window.location.href=u;}}catch(err){}});})();
+(function(){document.querySelectorAll('.article-content h2[id],.article-content h3[id]').forEach(function(h){var a=document.createElement('a');a.className='heading-anchor';a.href='#'+h.id;a.setAttribute('aria-hidden','true');a.textContent='#';h.appendChild(a);});if(location.hash){var t=document.querySelector(location.hash);if(t){setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},80);}}})();
+</script>
+
+        </div>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/blog-static.js"></script>
+    
+</body>
+</html>
+
