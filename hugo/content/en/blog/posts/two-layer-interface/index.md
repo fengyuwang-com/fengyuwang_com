@@ -1,117 +1,110 @@
 ---
-title: "The Two-Layer Interface Principle: Software Interaction Architecture in the AI Era"
+title: "The Two-Layer Interface Principle: Software Interaction Architecture for the AI Era"
 date: 2026-09-13
-description: "Any software system should keep only two interaction layers: a conversation layer that carries all daily operations, and a read-only viewing layer. Documents form the third interface — the governance plane for AI. Audited across five real production systems of a one-person company."
+description: "The conversation layer becomes the main human-machine channel and the graphical layer retreats to a viewing deck — any software system keeps exactly two interaction layers, and documents form a third interface that faces the AI. Proven by a full audit and consolidation of a real multi-system ecosystem."
 slug: "two-layer-interface"
 translationKey: "two-layer-interface"
-tags: ["Technology", "Business"]
+tags: ["Tech", "Business"]
 draft: false
 ---
 
-> This article keeps the full academic structure: abstract, seven sections, references. The original manuscript is archived as [The Two-Layer Interface Principle (GitHub)](https://github.com/fengyuwang-com/fengyuwang_com/blob/master/TWO-LAYER-INTERFACE.md).
-
 ## Abstract
 
-Generative AI has pushed the forty-year-old paradigm of graphical interfaces for "operating software" to the point of replacement. Based on a complete audit and restructuring practice across a one-person software company — three real systems covering investment research, content production, and a private cloud product — this article proposes and tests the **Two-Layer Interface Principle (2LIP)**: any software system should keep only two interaction layers.
+Generative AI has pushed the graphical-interface paradigm of "operating software," unchanged for four decades, to the point of paradigm replacement. Based on a complete audit and refactoring practice across a one-person software company (the FengProj ecosystem: investment research, content production, and private-cloud products — three real systems), this paper proposes and tests the **Two-Layer Interface Principle (2LIP)**: any software system should keep only two interaction layers — (1) the **conversation layer**, natural-language exchange between human and AI (with Skills as its scripted form), carrying all daily operations; (2) the **viewing layer**, a read-only graphical interface that exists only for "people who do not operate." Data always lives in local files, and interaction output flows into a backup-able pipeline. The paper places this principle against three parallel industry currents — YC's "Chat is the interface," Generative UI, and the MCP-UI architecture of the OpenAI Apps SDK — and shows that all three converge structurally on the same proposition. It further argues that when AI becomes the first operator, documents (AGENTS/MISSION/todo/logs) themselves constitute a **third interface** — a governance interface facing the AI — extending "interface" from two ends, human and machine, into a triadic structure of human–AI–document. The case section presents a compliance audit of five systems and their consolidation paths, showing that the principle lands on both personal production systems and external commercial products.
 
-- **The conversation layer**: natural-language exchange between a human and AI (with Skills as its scripted form), carrying all daily operations;
-- **The viewing layer**: a read-only graphical interface, existing solely to give "people who do not operate" visual confirmation.
+## 1. The Problem
 
-Data always lives in local files; interaction output goes into a backup pipeline. The article aligns this principle with three parallel currents in the industry — YC's "chat is the interface", Generative UI, and the MCP-UI architecture of OpenAI's Apps SDK — and shows that all three structurally converge on the same proposition. It further argues that when AI becomes the primary operator, documents (AGENTS/MISSION/todo/logs) themselves constitute a **third interface** — a governance plane for AI — extending the concept of "interface" from the two ends of human and machine into a three-way structure: human, AI, document. The case section presents a conformity audit of five systems and the path that folds them back onto the principle, demonstrating that it works for personal production systems as well as commercial products.
+The classic software interaction model is client-centric: users click and fill forms in a graphical interface, and results settle into the client's database; the interface is both the operating entrance and the data container. Two premises implicit in this model no longer hold in 2026:
 
-## 1. The problem
+1. **Operations must be initiated by humans.** Once an AI Agent can be entrusted with the full pipeline — topic selection, drafting, research, publishing, diagnostics — "humans press buttons" is demoted from necessity to option.
+2. **Results must stay in the client.** Once data has a local-file source of truth (Markdown/JSON/SQLite), the client degrades into a view, and backup and migration become file-level operations rather than database engineering.
 
-The classic interaction model of software is client-centric: a user clicks and fills forms in a graphical interface, and the results settle into the client's database. The interface is both the entry point for operations and the container for data. That model rests on two premises that no longer hold in 2026:
-
-1. **Operations must be initiated by a human.** Once an AI agent can be entrusted with the full pipeline — selecting topics, drafting, researching, publishing, diagnosing — "a human clicking buttons" drops from a necessity to an option.
-2. **Results must stay in the client.** Once the source of truth is local files (Markdown/JSON/SQLite), the client degrades into a view; backup and migration become file-level operations rather than database engineering.
-
-This leads to a rethinking of what software should be: **talk to the AI — most work was text exchange to begin with; a UI exists only for two moments, to make things understandable for those who don't know, and convenient for those who look.** This article formalizes that intuition into an auditable engineering principle and validates it against a real multi-system ecosystem.
+From this the author re-conceived the whole shape of software: **I only need to talk to the AI — because most of the work was textual exchange to begin with; UI exists for two kinds of moments: letting people who don't understand see it, and making it convenient for those who look.** This paper formalizes that intuition into an auditable engineering principle and validates it on a real multi-system ecosystem.
 
 ## 2. The Two-Layer Interface Principle
 
-**The principle (Two-Layer Interface Principle, 2LIP)**: an AI-era software system keeps only two layers on its interaction surface —
+**Principle (Two-Layer Interface Principle, 2LIP)**: a software system built for the AI era keeps only two interaction layers —
 
 | Layer | Serves | Form | Duty | Anti-pattern |
 |---|---|---|---|---|
-| **Conversation layer (L1)** | Operator (human) and AI | Natural language + Skills (scripted commands) | All daily operations: CRUD, workflow triggers, exception handling | Burying operations in buttons the AI cannot reach |
-| **Viewing layer (L2)** | Viewer (human, usually not operating) | Read-only web UI / dashboards | Show state and results for understanding, acceptance, and demonstration | Building write operations into the viewing layer |
+| **Conversation (L1)** | Operators (human) and AI | Natural language + Skills (scripted instructions) | All daily operations: CRUD, workflow triggers, exception handling | Burying operations in buttons the AI cannot reach |
+| **Viewing (L2)** | Watchers (human, usually non-operating) | Read-only Web UI / dashboards | Displaying state and results for understanding, acceptance, and external demo | Building write operations into the viewing layer |
 
 Plus two resource constraints:
 
-- **C1 (data local)**: the source of truth is always a local file or local database; any client or cloud service holds only a copy or a view.
-- **C2 (output backupable)**: every artifact of interaction lands in a version-controlled, multi-replica synced pipeline (dual git push, multi-device sync).
+- **C1 (data local)**: the source of truth is always a local file or local database; any client or cloud service holds only copies or views.
+- **C2 (output backup-able)**: all interaction output lands in a versionable, multi-replica sync pipeline (git dual-push, multi-device sync).
 
-To judge whether a system conforms to 2LIP, four questions suffice: Is the data local? Do daily operations go through conversation? Is the UI read-only? Can the output be backed up?
+Whether a system complies with 2LIP takes four questions: Is the data local? Do daily operations go through conversation? Is the UI read-only? Can the output be backed up?
 
-## 3. Industry alignment: three currents converging
+## 3. Industry Alignment: Three Currents Converging
 
-### 3.1 Chat is the interface
+### 3.1 "Chat is the interface"
 
-In 2026, Y Combinator's Gary Tan and Jared Friedman publicly revised their earlier stance, confirming that "conversation as the interface" is the right form for AI applications (the Pete Koomen discussion spread widely). Product echoes followed: neww.ai's slogan, "Chat is the interface. The operating system is the product."; arg.ai dropped all feature pages and let the agent read and write files through chat; XBuild, built for contractors, made the conversation itself the estimating workflow. The L1 layer of 2LIP is now accepted as the main channel, not a bolted-on chatbot.
+In 2026, Y Combinator's Gary Tan and Jared publicly revised their earlier stance, confirming that "conversation as the interface" is the correct form for AI applications (the Pete Koomen discussion spread widely). Products echo it: neww.ai's slogan "Chat is the interface. The operating system is the product."; arg.ai simply cancelled all feature pages, with the Agent reading and writing files directly through chat; XBuild, for contractors, made conversation the estimating flow itself. This shows 2LIP's L1 layer has been accepted by the industry as the main channel, not a bolted-on chatbot.
 
 ### 3.2 Generative UI: the viewing layer need not be pre-built
 
-The next question: does L2 need to be "carefully developed"? Generative UI answers no — the interface is assembled on demand by the agent for the problem at hand (cards, charts, full-page HTML), rather than a fixed layout predefined by designers (the definitions from Google Cloud, CopilotKit, and Decagon converge). The argument: dashboards make a person dig through filters for an answer, while GenUI "turns the interface into a response, not a destination." Yet reflections from 2026 practice (such as the r/UXDesign community) point out that **a fixed "see everything at a glance" dashboard is irreplaceable in predictability and glanceability**. The two sides combine exactly into the 2LIP position: keep the viewing layer, but skip the fine decoration — fixed views handle "one glance at the day," generated views handle "a closer look on demand."
+The further question: does L2 require "careful development"? Generative UI answers no — the interface is assembled on demand by the Agent for the problem at hand (cards, charts, whole pages of HTML), not a fixed layout predefined by designers (definitions from Google Cloud, CopilotKit, and Decagon converge). Its argument: dashboards make people dig through filters for answers, while GenUI "turns the interface into a response, not a destination." Yet 2026 practice reflection (e.g., the r/UXDesign community) points out equally: **fixed dashboards that show everything at a glance are irreplaceable in predictability and glanceability**. The two combine into 2LIP's position: keep the viewing layer, but skip the fine finish — fixed views cover "one glance a day," generated views cover "details right now."
 
-### 3.3 MCP Apps / OpenAI Apps SDK: giving the customer's Skill a face
+### 3.3 MCP Apps / OpenAI Apps SDK: growing a visualization onto the customer's Skill
 
-The counterpart of 2LIP for external products is already a platform: OpenAI's Apps SDK lets an MCP server — a Skill for customers — return UI resources rendered as React components inside the chat stream (such as Zillow listing cards). This is the official form of "the web UI should grow a Skill": **the Skill is the subject; the UI is the visual attachment the Skill returns**, not a separate portal. The equivalent inference for a desktop or mobile own-product is that the customer's conversation entry lives inside the product, operations go through chat, and the panel retreats to display and fallback.
+2LIP's counterpart in external products has been platformized: the OpenAI Apps SDK lets an MCP server (that is, "a Skill given to the customer") return UI resources rendered as React components inside the chat flow (such as Zillow listing cards). This is the official form of "a Skill inside the Web UI": **the Skill is the body; the UI is a visualization attachment returned by the Skill**, not an independent portal. For desktop/mobile native products the equivalent corollary: embed the customer conversation entrance in the product; operations go through conversation; panels retreat to display and fallback.
 
 ### 3.4 Local-first: industry consensus on the resource constraints
 
-The C1/C2 constraints correspond to the local-first AI agent current: agents read and write local data first, syncing backups asynchronously (fast.io); local indexing with on-demand cloud tiering, where data placement follows sensitivity rather than a "local" dogma; a personal agent with runtime, memory, skills, and scheduled tasks fully local (r3zz.io's "boring architecture"). The consensus: full offline is unrealistic, and the key is **data tiering** — sensitive data never leaves the local machine. 2LIP adopts the same conclusion, and on a single-machine personal ecosystem goes further: the source of truth can be 100% local.
+Constraints C1/C2 correspond to the local-first AI Agent current: agents read and write local data first, with asynchronous sync for backup (fast.io); local indexing plus on-demand cloud as a tiered data strategy (data placement decided by sensitivity, not by a "local" dogma); the runtime, memory, skills, and scheduled tasks of a personal agent fully localized (r3zz.io's "boring architecture"). The consensus: full offline is unrealistic; the key is **data tiering** — sensitive data never leaves the local machine. 2LIP adopts the same conclusion and goes further in a single-machine personal ecosystem: the source of truth can be 100% local.
 
-## 4. The third interface: documents as the governance plane for AI
+## 4. The Third Interface: Documents as the AI's Governance Plane
 
-2LIP answers "how does a human operate the software," but leaves a question: **how is the AI operated?** The answer has long since grown out of practice: not an API, not a config center, but **documents**.
+2LIP answers "how do humans operate the software," but leaves one question: **how is the AI operated?** The answer grew out of practice long ago: not APIs, not a config center, but **documents**.
 
-A commonality analysis of 70 governance documents across my own multi-machine development ecosystem converged on a "supervision document paradigm": `AGENTS.md` (rules, single source of truth), `MISSION.md` (north-star goal and DoD), `todo.md` (task ledger), and `FENGMEM.md` (session log), with Skills (`SKILL.md`) as reusable operation wrappers. The mechanism: an AI starts work by reading documents to obtain identity, rules, and tasks; results of action are written back to the ledger and log; rule changes are written back to AGENTS. **Documents are the control plane** — the new role that emerges once Docs-as-Code and agent-native development merge: the reader of documents expands from "humans" to "humans and AI," and the AI is the stricter reader (it executes every word).
+The author's multi-machine development ecosystem (FengASNI) ran a commonality analysis over 70 governance documents and converged on a "supervising-document paradigm": a four-piece set of `AGENTS.md` (rules, single source), `MISSION.md` (north-star goal and DoD), `todo.md` (task ledger), and `FENGMEM.md` (session logs), supplemented by Skills (`SKILL.md`) as reusable operation wrappers. Its mechanism: the AI reads documents before work to obtain identity, rules, and tasks; action results are written back to the ledger and logs; rule changes are written back to AGENTS. **The document is the control plane** — the new role of Docs-as-Code after its confluence with agent-native development: documents' readers expanded from "humans" to "humans and AI," and the AI is the stricter reader (it executes word for word).
 
-This yields the article's core extension: software interaction in the AI era is a **three-way structure** —
+The core extended proposition follows: software interaction in the AI era is a **triadic structure** —
 
 ```
 human ──natural language──> AI ──tool calls──> system
-│                                  ↑
-└── documents (rules/goals/ledger/log) ────────┘
-        documents = interface for AI (governance plane)
+│                                ↑
+└──documents (rules/goals/ledger/logs)──────┘
+        documents = the interface facing the AI (governance plane)
 ```
 
-- **The conversation layer** is the interface for "human operates AI";
-- **The document layer** is the interface for "(human, via AI) governs the AI and the system";
-- **The viewing layer** is the interface for "human confirms system state," visualizing the results of the first two.
+- The **conversation layer** is the interface for "humans operating the AI";
+- The **document layer** is the interface for "(humans, through the AI) governing the AI and the system";
+- The **viewing layer** is the interface for "humans confirming system state," visualizing the results of the first two.
 
-The three layers are not parallel: the document layer constrains the conversation layer (a Skill must obey the AGENTS iron rules), the conversation layer drives the system, and the viewing layer only reflects their output. This structure explains why a 2LIP system needs no complex permission console — governance is already carried by the rules and ledger of the document layer.
+The three layers are not parallel: the document layer constrains the conversation layer (Skills must obey the AGENTS iron rules), the conversation layer drives the system, and the viewing layer only reflects the output of the first two. This structure explains why a 2LIP system needs no complex permission backend — governance is already carried by the rules and ledgers of the document layer.
 
-## 5. Case study: audit and convergence of a real ecosystem
+## 5. Case Study: Audit and Consolidation of a Real Ecosystem
 
-Below is the audit of my personal ecosystem — all real, local-first production systems — against the four questions of 2LIP:
+The following is an audit of the author's personal ecosystem (all local-first real production systems) against the four 2LIP questions:
 
 | System | Domain | UI status | Verdict | Action |
 |---|---|---|---|---|
-| FengInvest | Investment research (62 tools, 2.7GB local market data) | Read-only report browser (fengweb) | ✅ Benchmark: data local and gitignored, operations via chat, purely read-only UI, output dual-pushed to git | Keep |
-| FengMedia | Content production | Battle map + topic library / check-ins (has write operations) | ⚠️ UI mixed with operations | Fold writes into conversation ("log a topic" lands as JSON), UI becomes read-only |
-| FlyGo | Private cloud product (commercial, external) | Panel + APK as the product itself | ➖ Special: the UI is the deliverable; L2's "retreat" clause does not apply, but a customer conversation layer is missing | Follow the MCP Apps pattern: embed a customer Skill, panel retreats to display |
-| FengOS | Command center | 3D galaxy overview + system probes | ✅ The ecosystem-level viewing deck itself | Upgrade into the unified viewing entrance (aggregate read-only views per system, move no data) |
-| Pure tools (TTS-UI etc.) | Desktop utilities | GUI as the interaction itself | ➖ Not applicable (no AI layer needed) | Keep |
+| FengInvest | Investment research (62 tools, 2.7 GB local market-data library) | Read-only report browser (fengweb) | ✅ Benchmark: data local and gitignored, all operations through conversation, UI purely viewing, output git dual-pushed | Leave as is |
+| FengMedia | Content production | Battle map + topic library / check-ins (has write operations) | ⚠️ UI mixed with operations | Move write operations into conversation ("record a topic" writes JSON directly); UI retreats to read-only |
+| FlyGo | Private-cloud product (external, commercial) | Panel + APK as the product itself | ➖ Special: the UI is the deliverable; L2's "retreat" clause does not apply; but lacks a customer conversation layer | Embed a "customer Skill" following the MCP Apps pattern; panel retreats to display |
+| FengOS | Project command center | 3D galaxy overview + system probes | ✅ The ecosystem-level "viewing deck" itself | Upgrade to the unified viewing entrance (aggregate read-only views of each system, move no data) |
+| Pure tools (TTS-UI etc.) | Desktop utilities | GUI as the interaction itself | ➖ Not applicable (no AI layer needed) | Leave as is |
 
-The audit reveals a universal decision order: **first determine whether the system is a "personal production system" or an "external product."** The former follows 2LIP strictly; for the latter the UI is the product itself, and 2LIP is applied as "add a conversation layer inside the product, not remove the UI." Meanwhile, the ecosystem-level viewing deck (FengOS) should fold the per-system viewing entrances into one, but stick to "iframe/link aggregation, move no data," preserving C1's single source of truth.
+The audit reveals a universal decision order: **first decide whether the system is a "self-use production system" or an "external product."** The former strictly applies 2LIP; for the latter the UI is the product itself, and 2LIP's application becomes "add a conversation layer inside the product, not cancel the UI." Meanwhile, the ecosystem-level viewing deck (FengOS) should consolidate the viewing entrances of all systems while holding to "iframe/link aggregation, move no data," guarding C1's single source of truth.
 
-## 6. Discussion: boundaries and costs
+## 6. Discussion: Boundaries and Costs
 
-**2LIP is not "killing the UI."** The counter-evidence is real: glanceability scenarios — monitoring walls, cockpits, investor demos — favor fixed views over conversation; and unambiguous operations are more efficient without typing (volume should not be adjusted by chat). The correct reading of 2LIP is a **transfer of operating rights**, not the death of UI: operating rights go to the conversation layer, while the UI keeps confirmation rights.
+**2LIP is not "abolishing the UI."** Counter-evidence is real: glanceability scenarios — monitoring walls, cockpits, demoing to investors — favor fixed views over conversation; efficiency for unambiguous operations (volume should not be adjusted by typing). The correct reading of 2LIP is **transfer of operating rights**, not the death of UI: operating rights go to the conversation layer; the UI keeps the right of confirmation.
 
-**The reproducibility of conversation depends on the document layer.** The risk of pure conversational interaction is "said and gone." The document paradigm (tasks on the ledger, appended logs, DoD acceptance statements) completes it: every instruction and result of every round lands as machine-readable ledger entries, giving the conversation layer an auditability traditional GUI never had — the operation history is not a click-stream log but structured text.
+**The reproducibility of the conversation layer depends on the document layer.** The risk of pure conversation is "said and lost." The document paradigm (tasks into the ledger, logs appended, DoD acceptance statements) is exactly the completion: every round of conversation's instructions and results lands as machine-readable ledger entries, giving the conversation layer an auditability traditional GUI never had — the operation history is not a clickstream log but structured text.
 
-**The change in cost structure.** 2LIP shifts the center of development from "frontend interface engineering" to "Skill engineering + document governance + on-demand generated views." For a one-person company this means the largest non-outsourceable asset (the interface) depreciates, while the hardest assets to copy (domain rule documents, persona, standards of judgment) appreciate.
+**The change in cost structure.** 2LIP shifts the development center of gravity from "front-end interface engineering" to "Skill engineering + document governance + on-demand generation of viewing pages." For a one-person company, this means the largest non-outsourceable asset (the interface) is depreciating, while the hardest-to-copy assets (domain-rules documents, personas, judgment standards) are appreciating.
 
 ## 7. Conclusion
 
-The Two-Layer Interface Principle folds the shape of AI-era software into one sentence: **the conversation layer does, the viewing layer shows, the document layer governs; data stays local, output goes to backup.** Three industry currents (chat-first, Generative UI, MCP Apps) and local-first practice all structurally converge on this principle — which means it is not personal taste but an early position on where the paradigm is heading. For individuals and small organizations, 2LIP offers an immediately executable refactoring path: audit the write operations in existing UIs and fold them into conversation, aggregate the viewing entrances into a single deck, and embed a Skill-form conversation layer for external products — with the foundation of it all being to treat documents as first-class citizens built for AI.
+The Two-Layer Interface Principle condenses the shape of software in the AI era into one sentence: **the conversation layer does, the viewing layer shows, the document layer governs; data stays local, output goes to backup.** That three industry currents (chat-first, Generative UI, MCP Apps) and local-first practice converge structurally on this principle suggests it is not a personal preference but an early position on a paradigm direction. For individuals and small organizations, 2LIP offers an immediately executable refactoring path: audit existing systems' UI write operations and move them into conversation, aggregate viewing entrances into a single viewing deck, and embed a Skill-form customer conversation layer into external products — and the foundation of all of it is treating documents as first-class citizens facing the AI.
 
 ## References (retrieved 2026-09)
 
-1. YC's shift on "chat is the interface": reporting on the Pete Koomen interview, biggo.com
+1. YC "chat is the interface" stance shift: Pete Koomen interview coverage, biggo.com
 2. Google Cloud, *What is Generative UI?*
 3. CopilotKit, *Generative UI*; Decagon, *What is Generative UI?*
 4. Thesys, *From Static Dashboards to Generative UI*
@@ -122,4 +115,4 @@ The Two-Layer Interface Principle folds the shape of AI-era software into one se
 9. fast.io, *How to Implement Local-First Storage for AI Agents*
 10. Medium/Data Science Collective, *My Local-First AI Agent Stack*
 11. Reddit r/UXDesign, *Generative UI feels like the next "voice will replace screens"*
-12. Internal practice: governance-document paradigm research across a multi-machine development ecosystem (commonality analysis of 70 governance documents); the five-layer organizational framework of a one-person company and field notes from a desktop TTS tool fleet
+12. Internal practice: FengASNI DocsParadigm (commonality analysis of 70 governance documents and paradigm proposal); FengOrchestrator five-layer architecture master plan and TTS-UI fleet battle retrospective
