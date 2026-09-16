@@ -11,7 +11,12 @@
     <meta property="og:url" content="https://www.fengyuwang.com/zh-cn/blog/">
     <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
     <meta property="og:site_name" content="Fengyu WANG">
-    <meta property="article:published_time" content="2026-09-10">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="博客">
+    
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <link rel="alternate" type="application/rss+xml" title="Fengyu WANG · 博客" href="https://www.fengyuwang.com/zh-cn/blog/index.xml">
+    <meta property="article:published_time" content="2026-09-13">
     <link rel="canonical" href="https://www.fengyuwang.com/zh-cn/blog/">
     <link rel="alternate" hreflang="zh-CN" href="/zh-cn/blog/">
     
@@ -62,9 +67,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .pagination-shell a,.pagination-shell span.page-btn { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:36px; padding:0 10px; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; color:#374151; background:transparent; border:1px solid transparent; }
 .pagination-shell a:hover { background:rgba(0,113,227,.08); border-color:rgba(0,113,227,.2); }
 .pagination-shell .page-btn.active { background:#0071e3; color:#fff; border-color:#0071e3; }
+.pagination-shell .page-gap { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:36px; color:#6b7280; font-weight:700; }
 body[data-theme="dark"] .pagination-shell a, body[data-theme="dark"] .pagination-shell span.page-btn { color:#9fb0c3; }
 body[data-theme="dark"] .pagination-shell .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .pagination-shell .page-btn.active { color:#fff; }
+body[data-theme="dark"] .pagination-shell .page-gap { color:#8296ac; }
 .pagination-shell .go-to-shell { display:inline-flex; align-items:center; gap:4px; margin-left:8px; }
 .pagination-shell .go-to-input { width:48px; height:32px; text-align:center; border:1px solid rgba(15,23,42,.12); border-radius:8px; font-size:.85rem; outline:0; background:#fff; color:#111827; }
 .pagination-shell .go-to-btn { height:32px; padding:0 12px; border:0; border-radius:8px; background:#0071e3; color:#fff; font-size:.82rem; font-weight:600; cursor:pointer; }
@@ -79,6 +86,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -86,15 +95,38 @@ body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 body[data-theme="dark"] .search-tag-label { color:#9fb0c3; }
 #searchResults mark { background:rgba(255,214,10,.45); color:inherit; border-radius:3px; padding:0 2px; }
 body[data-theme="dark"] #searchResults mark { background:rgba(250,204,21,.28); color:#fde68a; }
-.snippet-text { font-size:.85rem; color:#9ca3af; line-height:1.6; margin:10px 0 0; }
+.snippet-text { font-size:.85rem; color:#6b7280; line-height:1.6; margin:10px 0 0; }
 body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .search-empty { text-align:center; color:#6b7280; font-size:.95rem; padding:40px 0; }
+.util-chips { display:flex; justify-content:center; gap:10px; margin:-14px 0 24px; flex-wrap:wrap; }
+.util-chip { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; border:1px solid rgba(15,23,42,.12); font-size:.8rem; font-weight:600; color:#374151; text-decoration:none; }
+.util-chip:hover { border-color:rgba(0,113,227,.35); color:#0071e3; background:rgba(0,113,227,.06); }
+.util-chip.rss { color:#b45309; border-color:rgba(234,123,28,.35); background:rgba(234,123,28,.06); }
+.util-chip.rss::before { content:""; width:8px; height:8px; border-radius:50%; background:#ea7b1c; }
+.util-chip.rss:hover { background:rgba(234,123,28,.12); }
+body[data-theme="dark"] .util-chip { color:#9fb0c3; border-color:rgba(148,163,184,.2); }
+body[data-theme="dark"] .util-chip:hover { color:#60a5fa; border-color:rgba(96,165,250,.4); background:rgba(41,151,255,.08); }
+body[data-theme="dark"] .util-chip.rss { color:#f5a25b; border-color:rgba(234,123,28,.4); background:rgba(234,123,28,.1); }
+.rss-toast { display:none; justify-content:center; margin:-14px 0 22px; }
+.rss-toast.show { display:flex; }
+.rss-toast-inner { max-width:560px; margin:0 16px; padding:12px 20px; border-radius:14px; background:#fff; border:1px solid rgba(15,23,42,.1); box-shadow:0 10px 28px rgba(15,23,42,.1); font-size:.84rem; line-height:1.6; color:#374151; text-align:center; }
+.rss-toast-url { display:block; margin-top:5px; font-size:.75rem; color:#0071e3; word-break:break-all; user-select:all; }
+body[data-theme="dark"] .rss-toast-inner { background:#1e293b; border-color:rgba(148,163,184,.15); color:#9fb0c3; }
+body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>博客</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="搜索文章..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/zh-cn/tags/%E6%8A%80%E6%9C%AF/">技术 (45)</a><a href="/zh-cn/tags/%E9%87%91%E8%9E%8D/">金融 (16)</a><a href="/zh-cn/tags/%E7%BB%8F%E6%B5%8E/">经济 (14)</a><a href="/zh-cn/tags/%E5%95%86%E4%B8%9A/">商业 (50)</a><a href="/zh-cn/tags/%E7%A4%BE%E4%BC%9A/">社会 (32)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA%E5%AD%A6/">市场学 (3)</a><a href="/zh-cn/tags/%E6%8A%95%E8%B5%84/">投资 (15)</a></div>
+<div class="tag-cloud"><a href="/zh-cn/tags/%E6%8A%80%E6%9C%AF/">技术 (39)</a><a href="/zh-cn/tags/%E7%BB%8F%E6%B5%8E/">经济 (24)</a><a href="/zh-cn/tags/%E5%95%86%E4%B8%9A/">商业 (30)</a><a href="/zh-cn/tags/%E7%A4%BE%E4%BC%9A/">社会 (11)</a><a href="/zh-cn/tags/%E5%B8%82%E5%9C%BA/">市场 (33)</a><a href="/zh-cn/tags/%E6%8A%95%E8%B5%84/">投资 (89)</a></div>
+<div class="util-chips">
+    <a class="util-chip rss" id="rssChip" href="/zh-cn/blog/index.xml" title="复制订阅地址，粘贴到 RSS 阅读器">RSS 订阅</a>
+    <a class="util-chip" href="/zh-cn/archive/">按年份归档</a>
+</div>
+<div class="rss-toast" id="rssToast"><div class="rss-toast-inner">订阅地址已复制，粘贴到任意 RSS 阅读器（Folo · Inoreader · NetNewsWire）即可订阅。未复制成功可手动选取下方地址。<span class="rss-toast-url">https://www.fengyuwang.com/zh-cn/blog/index.xml</span></div></div>
+<script>
+(function(){var chip=document.getElementById("rssChip"),t=document.getElementById("rssToast");if(!chip||!t)return;var timer;chip.addEventListener("click",function(e){e.preventDefault();var url=new URL(chip.getAttribute("href"),location.href).href;var show=function(){t.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){t.classList.remove("show")},8000);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(show,show);}else{show();}});})();
+</script>
 <div class="sort-shell">
     <label for="sortSelect">排序</label>
     <select id="sortSelect">
@@ -105,76 +137,76 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/zh-cn/blog/posts/tollbooth-platform/" data-title="投资就是投平台：收费站理论" data-summary="路修得平不平没事，路上有没有收费站才是壁垒。" data-date="2026-09-05" data-tags="金融,商业,投资">
-    <h3>投资就是投平台：收费站理论</h3>
-    <hr class="summary-divider"><div class="summary-text">路修得平不平没事，路上有没有收费站才是壁垒。</div>
-    <div class="blog-tags"><span>金融</span><span>商业</span><span>投资</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/speculation-line/" data-title="投机的门对谁关着" data-summary="投机和投资的区别不在拿多久，在锚什么——前者的门对普通人关着，不是道德关着，是胜率结构关着。" data-date="2026-07-30" data-tags="投资">
+    <h3>投机的门对谁关着</h3>
+    <hr class="summary-divider"><div class="summary-text">投机和投资的区别不在拿多久，在锚什么——前者的门对普通人关着，不是道德关着，是胜率结构关着。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/tonghuashun-paradox/" data-title="同花顺悖论" data-summary="为赚钱的人做的工具，用户全是亏钱的人。" data-date="2026-09-05" data-tags="金融,技术,投资">
-    <h3>同花顺悖论</h3>
-    <hr class="summary-divider"><div class="summary-text">为赚钱的人做的工具，用户全是亏钱的人。</div>
-    <div class="blog-tags"><span>金融</span><span>技术</span><span>投资</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/slow-the-hands/" data-title="多数人亏在换手，不在选错" data-summary="投顾这门生意，真正交付的不是收益承诺，是替人管住那只频繁交易的手。多数人亏钱不在选错，在换手；四大劣根性是这只手的病历。" data-date="2026-07-28" data-tags="投资">
+    <h3>多数人亏在换手，不在选错</h3>
+    <hr class="summary-divider"><div class="summary-text">投顾这门生意，真正交付的不是收益承诺，是替人管住那只频繁交易的手。多数人亏钱不在选错，在换手；四大劣根性是这只手的病历。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/copy-better-wins/" data-title="腾讯的胜利是抄得好" data-summary="做的都是最晚的，抄的都是最快的。" data-date="2026-09-05" data-tags="商业,技术">
-    <h3>腾讯的胜利是抄得好</h3>
-    <hr class="summary-divider"><div class="summary-text">做的都是最晚的，抄的都是最快的。</div>
-    <div class="blog-tags"><span>商业</span><span>技术</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/slow-fast-attack/" data-title="慢慢打，才是快攻" data-summary="最快的手是慢的手：盘中不操作，盘后才决策，积小胜为大胜。" data-date="2026-07-26" data-tags="投资">
+    <h3>慢慢打，才是快攻</h3>
+    <hr class="summary-divider"><div class="summary-text">最快的手是慢的手：盘中不操作，盘后才决策，积小胜为大胜。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/data-lies/" data-title="数据不可信，生意才可信" data-summary="数据是别人写好的答案，生意是考卷本身。" data-date="2026-09-05" data-tags="金融,商业,投资">
-    <h3>数据不可信，生意才可信</h3>
-    <hr class="summary-divider"><div class="summary-text">数据是别人写好的答案，生意是考卷本身。</div>
-    <div class="blog-tags"><span>金融</span><span>商业</span><span>投资</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/sleep-well/" data-title="买这只股票，睡得着吗" data-summary="买入前一条底线：标的须由硬核资产支撑，价格相对可变现资产要有六七折以上折扣。这套体系检验的不是收益，是夜里闭不闭得上眼。" data-date="2026-07-24" data-tags="投资">
+    <h3>买这只股票，睡得着吗</h3>
+    <hr class="summary-divider"><div class="summary-text">买入前一条底线：标的须由硬核资产支撑，价格相对可变现资产要有六七折以上折扣。这套体系检验的不是收益，是夜里闭不闭得上眼。</div>
+    <div class="blog-tags"><span class="card-rt">约 11 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/retail-edge/" data-title="散户的结构性优势" data-summary="数据是它的百万分之一，盈利可不是它的百万分之一。" data-date="2026-09-05" data-tags="金融,投资">
-    <h3>散户的结构性优势</h3>
-    <hr class="summary-divider"><div class="summary-text">数据是它的百万分之一，盈利可不是它的百万分之一。</div>
-    <div class="blog-tags"><span>金融</span><span>投资</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/sit-out-in-cash/" data-title="看不懂，就不打" data-summary="空仓不是失败，是仓位的一种：看不懂的时候不下场，既是判断力，也是纪律。" data-date="2026-07-22" data-tags="投资">
+    <h3>看不懂，就不打</h3>
+    <hr class="summary-divider"><div class="summary-text">空仓不是失败，是仓位的一种：看不懂的时候不下场，既是判断力，也是纪律。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/apple-is-becoming-ibm/" data-title="苹果正在变成 IBM" data-summary="诉讼能争取时间，争取不来范式定义权。" data-date="2026-09-05" data-tags="商业,技术">
-    <h3>苹果正在变成 IBM</h3>
-    <hr class="summary-divider"><div class="summary-text">诉讼能争取时间，争取不来范式定义权。</div>
-    <div class="blog-tags"><span>商业</span><span>技术</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/silicon-cycle/" data-title="亏钱也要生产的生意" data-summary="半导体是周期性最强的行业：低谷期厂商亏着钱也得继续造，因为停产比降价卖芯片亏得更多。缺芯、扩产、过剩的循环因此永不消失。" data-date="2026-07-20" data-tags="投资">
+    <h3>亏钱也要生产的生意</h3>
+    <hr class="summary-divider"><div class="summary-text">半导体是周期性最强的行业：低谷期厂商亏着钱也得继续造，因为停产比降价卖芯片亏得更多。缺芯、扩产、过剩的循环因此永不消失。</div>
+    <div class="blog-tags"><span class="card-rt">约 9 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/annual-subscription-trap/" data-title="年费会员是一种锁定" data-summary="月付买的是退路，年付是替厂商背现金流。" data-date="2026-09-05" data-tags="技术,经济">
-    <h3>年费会员是一种锁定</h3>
-    <hr class="summary-divider"><div class="summary-text">月付买的是退路，年付是替厂商背现金流。</div>
-    <div class="blog-tags"><span>技术</span><span>经济</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/sector-leader/" data-title="行情只认领头羊" data-summary="行业周期决定个股七成涨跌，板块内部真正值得做的只有领头羊——调整时跌得少、反弹时起得快；跟风杂毛的便宜，是流动性差、弹性弱的另一种写法。" data-date="2026-07-18" data-tags="投资">
+    <h3>行情只认领头羊</h3>
+    <hr class="summary-divider"><div class="summary-text">行业周期决定个股七成涨跌，板块内部真正值得做的只有领头羊——调整时跌得少、反弹时起得快；跟风杂毛的便宜，是流动性差、弹性弱的另一种写法。</div>
+    <div class="blog-tags"><span class="card-rt">约 14 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/memory-is-vendor-lockin/" data-title="模型的记忆是供应商锁定" data-summary="换模型今天容易，因为模型没记忆；明天就不容易了。" data-date="2026-09-05" data-tags="技术">
-    <h3>模型的记忆是供应商锁定</h3>
-    <hr class="summary-divider"><div class="summary-text">换模型今天容易，因为模型没记忆；明天就不容易了。</div>
-    <div class="blog-tags"><span>技术</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/scaling-not-parameters/" data-title="Scaling 不再是堆数字" data-summary="大模型行业花了五年时间把参数量当成进步本身，然后一笔一笔把这笔账算错了回去。Scaling 没停，只是目标函数换了。" data-date="2026-07-16" data-tags="技术">
+    <h3>Scaling 不再是堆数字</h3>
+    <hr class="summary-divider"><div class="summary-text">大模型行业花了五年时间把参数量当成进步本身，然后一笔一笔把这笔账算错了回去。Scaling 没停，只是目标函数换了。</div>
+    <div class="blog-tags"><span class="card-rt">约 9 分钟</span><span>技术</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/consumer-gpu-dead/" data-title="民用显卡之死" data-summary="算力变成了水电，没有人家自己发电。" data-date="2026-09-05" data-tags="技术">
-    <h3>民用显卡之死</h3>
-    <hr class="summary-divider"><div class="summary-text">算力变成了水电，没有人家自己发电。</div>
-    <div class="blog-tags"><span>技术</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/same-tech-two-fates/" data-title="八达通在澳洲死了，在香港活了" data-summary="同一项无源卡技术，澳大利亚铁路拒绝，香港地铁采纳——技术的命运不在实验室里，在它落地的土壤里。" data-date="2026-07-14" data-tags="市场">
+    <h3>八达通在澳洲死了，在香港活了</h3>
+    <hr class="summary-divider"><div class="summary-text">同一项无源卡技术，澳大利亚铁路拒绝，香港地铁采纳——技术的命运不在实验室里，在它落地的土壤里。</div>
+    <div class="blog-tags"><span class="card-rt">约 11 分钟</span><span>市场</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/game-incubator/" data-title="没有游戏，就没有微信和 CUDA" data-summary="游戏是孵化器；孵化器里的东西，往往不是孵化者亲手接生的。" data-date="2026-09-05" data-tags="商业,技术">
-    <h3>没有游戏，就没有微信和 CUDA</h3>
-    <hr class="summary-divider"><div class="summary-text">游戏是孵化器；孵化器里的东西，往往不是孵化者亲手接生的。</div>
-    <div class="blog-tags"><span>商业</span><span>技术</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/russia-resource-cycle/" data-title="俄罗斯的国运，挂在油价上" data-summary="坐拥全球顶级资源储量，经济周期却由美元和油价代管——涨靠油价，跌靠制裁，轮回靠全球信贷放水。" data-date="2026-07-12" data-tags="投资">
+    <h3>俄罗斯的国运，挂在油价上</h3>
+    <hr class="summary-divider"><div class="summary-text">坐拥全球顶级资源储量，经济周期却由美元和油价代管——涨靠油价，跌靠制裁，轮回靠全球信贷放水。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/no-root-no-agent/" data-title="没有 root，就没有 Agent" data-summary="权限就是 AI 的手；手被绑住的 Agent，再聪明也只是顾问。" data-date="2026-09-05" data-tags="技术,商业">
-    <h3>没有 root，就没有 Agent</h3>
-    <hr class="summary-divider"><div class="summary-text">权限就是 AI 的手；手被绑住的 Agent，再聪明也只是顾问。</div>
-    <div class="blog-tags"><span>技术</span><span>商业</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/rule-of-three/" data-title="三个人做不出决定" data-summary="三人决策制的直觉很美好：两票对一票，总能选出更理性的方案。历史里找不到一个活下来的例子。" data-date="2026-07-10" data-tags="商业">
+    <h3>三个人做不出决定</h3>
+    <hr class="summary-divider"><div class="summary-text">三人决策制的直觉很美好：两票对一票，总能选出更理性的方案。历史里找不到一个活下来的例子。</div>
+    <div class="blog-tags"><span class="card-rt">约 12 分钟</span><span>商业</span></div>
 </a>
 
-<a class="blog-card" href="/zh-cn/blog/posts/quant-paradigm-shift/" data-title="量化交易的换轴" data-summary="从预测市场，到设计市场。" data-date="2026-09-05" data-tags="金融,投资">
-    <h3>量化交易的换轴</h3>
-    <hr class="summary-divider"><div class="summary-text">从预测市场，到设计市场。</div>
-    <div class="blog-tags"><span>金融</span><span>投资</span></div>
+<a class="blog-card" href="/zh-cn/blog/posts/rotation-campaign/" data-title="一轮牛熊，是一串战役" data-summary="仓位决定买什么之前，先有一张行军图：一轮牛熊不是一次决策，是一串有先后次序的战役，每次板块切换都要基本面拐点和情绪冷热双验证。" data-date="2026-07-08" data-tags="投资">
+    <h3>一轮牛熊，是一串战役</h3>
+    <hr class="summary-divider"><div class="summary-text">仓位决定买什么之前，先有一张行军图：一轮牛熊不是一次决策，是一串有先后次序的战役，每次板块切换都要基本面拐点和情绪冷热双验证。</div>
+    <div class="blog-tags"><span class="card-rt">约 10 分钟</span><span>投资</span></div>
 </a>
 
 </div>
@@ -182,9 +214,9 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="pagination-shell" id="paginationShell">
     <a href="/zh-cn/blog/page/2/" class="page-nav">← 上一页</a>
-    <a href="/zh-cn/blog/" class="page-btn">1</a><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><span class="page-btn active">3</span><a href="/zh-cn/blog/page/4/" class="page-btn">4</a><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><a href="/zh-cn/blog/page/6/" class="page-btn">6</a><a href="/zh-cn/blog/page/7/" class="page-btn">7</a><a href="/zh-cn/blog/page/8/" class="page-btn">8</a>
+    <a href="/zh-cn/blog/" class="page-btn">1</a><a href="/zh-cn/blog/page/2/" class="page-btn">2</a><span class="page-btn active">3</span><a href="/zh-cn/blog/page/4/" class="page-btn">4</a><a href="/zh-cn/blog/page/5/" class="page-btn">5</a><span class="page-gap">…</span><a href="/zh-cn/blog/page/15/" class="page-btn">15</a>
     <a href="/zh-cn/blog/page/4/" class="page-nav">下一页 →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="15" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
@@ -193,10 +225,11 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/zh-cn\/blog\/index.json";
-var TAGURLS={ "商业":"\/zh-cn\/tags\/%E5%95%86%E4%B8%9A\/","市场学":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA%E5%AD%A6\/","技术":"\/zh-cn\/tags\/%E6%8A%80%E6%9C%AF\/","投资":"\/zh-cn\/tags\/%E6%8A%95%E8%B5%84\/","社会":"\/zh-cn\/tags\/%E7%A4%BE%E4%BC%9A\/","经济":"\/zh-cn\/tags\/%E7%BB%8F%E6%B5%8E\/","金融":"\/zh-cn\/tags\/%E9%87%91%E8%9E%8D\/", };
+var TAGURLS={ "商业":"\/zh-cn\/tags\/%E5%95%86%E4%B8%9A\/","市场":"\/zh-cn\/tags\/%E5%B8%82%E5%9C%BA\/","技术":"\/zh-cn\/tags\/%E6%8A%80%E6%9C%AF\/","投资":"\/zh-cn\/tags\/%E6%8A%95%E8%B5%84\/","社会":"\/zh-cn\/tags\/%E7%A4%BE%E4%BC%9A\/","经济":"\/zh-cn\/tags\/%E7%BB%8F%E6%B5%8E\/", };
 var L_ART=" 篇文章 · ";
 var L_TAG=" 个标签";
 var L_TAGS="相关标签：";
+var L_RTFMT="约 $1 分钟";
 var L_EMPTY="没有匹配的文章或标签。";
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -215,25 +248,34 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
   if(ce)ce.textContent="";
 }
 function resetView(){res.style.display="none";res.innerHTML="";grid.style.display="";if(pag)pag.style.display="";if(sortShell)sortShell.style.display="";if(ce)ce.textContent=""}
-si.value="";si.addEventListener("input",function(){
-  var q=this.value.toLowerCase().trim();
+var qp=null;try{qp=new URLSearchParams(location.search).get("q")}catch(e){}
+function setQ(raw){try{var u=new URL(location.href);if(raw)u.searchParams.set("q",raw);else u.searchParams.delete("q");history.replaceState(null,"",u)}catch(e){}}
+si.value=qp||"";
+si.addEventListener("input",function(){
+  var raw=this.value;var q=raw.toLowerCase().trim();
+  setQ(q?raw:"");
   if(!q){resetView();return}
   if(IDX){render(q);return}
   if(loading)return;loading=true;
   if(ce)ce.textContent="…";
   fetch(INDEX_URL).then(function(r){return r.json()}).then(function(d){IDX=d;loading=false;var n=si.value.toLowerCase().trim();if(n)render(n)}).catch(function(){loading=false;if(ce)ce.textContent=""});
 });
-var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+if(si.value){si.dispatchEvent(new Event("input"))}
+var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 15 ){window.location.href="\/zh-cn\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
 </script>
 <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
     <a href="https://linkedin.com/in/fengyuwang-com/recent-activity/all/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; min-width:220px; padding:12px 35px; border-radius:50px; background:#0071e3; color:#fff; font-weight:700; font-size:15px; text-decoration:none; border:2px solid #0071e3; transition:0.4s;" onmouseover="this.style.background='transparent'; this.style.color='#0071e3'" onmouseout="this.style.background='#0071e3'; this.style.color='#fff'">查看 LinkedIn 动态</a>

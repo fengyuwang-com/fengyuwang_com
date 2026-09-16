@@ -1,6 +1,6 @@
 ---
 title: "Build It, and Have AI Rewrite It as You Go"
-date: 2026-09-05
+date: 2025-10-27
 description: "Same interface, new flesh."
 slug: "ai-clean-room"
 tags: ["Tech"]

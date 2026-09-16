@@ -3,17 +3,20 @@
   <channel>
     <title>{{ .Site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{ .Site.Params.description }}</description>
+    <description>{{ .Site.Title }} — {{ .Title }}</description>
     <language>{{ .Site.Language.LanguageCode }}</language>
+    <generator>Hugo</generator>
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
-    {{ range .Pages }}{{ if eq .Kind "page" }}
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{ range first 20 (sort (where .Pages "Type" "blog") "Date" "desc") }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <guid isPermaLink="true">{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
       {{ with .Date }}<pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>{{ end }}
+      {{ with .Params.tags }}{{ range . }}<category>{{ . }}</category>{{ end }}{{ end }}
     </item>
-    {{ end }}{{ end }}
+    {{ end }}
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 ---
 title: "萬物皆 Prompt"
-date: 2026-09-05
+date: 2025-11-28
 description: "Skill 是經驗的提示詞，設計是審美的提示詞，法律是社會的提示詞。"
 slug: "everything-is-a-prompt"
 tags: ["技術"]

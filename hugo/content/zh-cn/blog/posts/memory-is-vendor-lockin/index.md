@@ -1,6 +1,6 @@
 ---
 title: "模型的记忆是供应商锁定"
-date: 2026-09-05
+date: 2025-12-10
 description: "换模型今天容易，因为模型没记忆；明天就不容易了。"
 slug: "memory-is-vendor-lockin"
 tags: ["技术"]

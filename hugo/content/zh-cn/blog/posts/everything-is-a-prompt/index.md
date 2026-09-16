@@ -1,6 +1,6 @@
 ---
 title: "万物皆 Prompt"
-date: 2026-09-05
+date: 2025-11-28
 description: "Skill 是经验的提示词，设计是审美的提示词，法律是社会的提示词。"
 slug: "everything-is-a-prompt"
 tags: ["技术"]

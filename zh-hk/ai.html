@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
     <title>AI 工程與自動化 | 王丰羽 Fengyu WANG</title>
-    <meta name="description" content="AI工程不是調API。從Harness Engineering到AI Agent開發，覆蓋提示工程、RAG架構、模型部署與自動化工作流的實戰記錄。">
+    <meta name="description" content="AI工程不是調API。從Harness Engineering、AI Agent到兩層界面原則——對話層承載操作，圖形界面退居觀景台，文檔層治理AI。">
     <meta name="keywords" content="AI 工程與自動化, Docker, Cloudflare, DevOps, 王丰羽">
     <meta name="author" content="王丰羽">
     <meta name="robots" content="index,follow">
@@ -20,13 +20,13 @@
     <meta property="og:locale" content="zh_HK">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AI 工程與自動化 | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="從 Harness Engineering 到 AI Agent——構建能夠思考、行動、迭代的系統">
+    <meta property="og:description" content="AI工程不是調API。從Harness Engineering、AI Agent到兩層界面原則——對話層承載操作，圖形界面退居觀景台，文檔層治理AI。">
     <meta property="og:url" content="https://www.fengyuwang.com/zh-hk/ai">
     <meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI 工程與自動化 | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="從 Harness Engineering 到 AI Agent——構建能夠思考、行動、迭代的系統">
-    <meta name="twitter:image" content="/assets/img/logo.png">
+    <meta name="twitter:description" content="AI工程不是調API。從Harness Engineering、AI Agent到兩層界面原則——對話層承載操作，圖形界面退居觀景台，文檔層治理AI。">
+    <meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -110,7 +110,7 @@
         <div class="container">
             <div class="marketing-hero">
                 <h1>AI 工程與自動化</h1>
-                <p>從 Harness Engineering 到 AI Agent——構建能夠思考、行動、迭代的系統</p>
+                <p>從 Harness Engineering 到兩層界面原則——操作走對話，界面退居觀景</p>
             </div>
             <div class="card-grid">
             <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80')" onclick="document.getElementById('harness').scrollIntoView({behavior:'smooth'})">
@@ -139,6 +139,13 @@
                     <h3>AI 驅動的自動化</h3>
                     <p>將 AI 接入真實工作流</p>
                     <button class="card-btn">瞭解詳情</button>
+                </div>
+            </div>
+            <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80');grid-column:1 / -1" onclick="document.getElementById('twolayer').scrollIntoView({behavior:'smooth'})">
+                <div class="card-content">
+                    <h3>説話就是操作</h3>
+                    <p>兩層界面原則：對話層承載操作，界面退居觀景，文檔治理 AI</p>
+                    <button class="card-btn">了解詳情</button>
                 </div>
             </div>
             </div>
@@ -210,6 +217,23 @@
         </div>
     </div>
 
+
+    <div id="twolayer" class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80')">
+        <div class="block-inner">
+            <div class="section-card">
+                <h2>操作走對話，界面退居觀景</h2>
+                <p class="block-subtitle">兩層界面原則：AI 時代的軟件交互架構</p>
+                <div class="content-text-card">
+                    <ul>
+                    <li><strong>對話層承載操作</strong>：增刪改查、流程觸發、異常處置全部走自然語言與 Skill，AI 夠得着每一個操作。</li>
+                    <li><strong>觀景層只讀</strong>：圖形界面為"不參與操作的人"存在——確認狀態、驗收結果、對外演示，不開發寫操作。</li>
+                    <li><strong>文檔層治理 AI</strong>：規則、目標、賬本、日誌以文檔為唯一真源，AI 逐字執行，文檔成為面向 AI 的第三個界面。</li>
+                    <li><strong>本地優先</strong>：真理源恆為本地文件，交互產出納入可備份管道，客戶端只持有副本與視圖。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="link-card">
             <p>工程能力需要商業場景才有價值</p>
