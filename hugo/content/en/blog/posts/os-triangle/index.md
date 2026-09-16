@@ -1,6 +1,6 @@
 ---
 title: "The Impossible Triangle of Consumer Operating Systems"
-date: 2026-09-05
+date: 2025-12-22
 description: "Security, freedom, low cognitive load — pick two."
 slug: "os-triangle"
 tags: ["Tech"]

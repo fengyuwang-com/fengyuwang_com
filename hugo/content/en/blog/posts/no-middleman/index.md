@@ -1,6 +1,6 @@
 ---
 title: "My Server Uploads, My Phone Downloads"
-date: 2026-09-05
+date: 2025-12-16
 description: "The middleman isn't a technical necessity. It's the rent on scarce addresses."
 slug: "no-middleman"
 tags: ["Tech"]

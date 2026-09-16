@@ -1,6 +1,6 @@
 ---
 title: "A Model's Memory Is Vendor Lock-In"
-date: 2026-09-05
+date: 2025-12-10
 description: "Switching models is easy today because models have no memory. It won't stay easy."
 slug: "memory-is-vendor-lockin"
 tags: ["Tech"]

@@ -18,9 +18,9 @@
 
 **Fix**: Check the Cross-Link Mapping table in `page-structure.md`. The mkt page should always link to portfolio (technical).
 
-## 3. 5DT-PD section without white divider
+## 3. Human-in-the-Loop section without white divider
 
-**Symptom**: The 5DT-PD Answers section on mkt.html has no 12px gap above it.
+**Symptom**: The Human-in-the-Loop Answers section on mkt.html has no 12px gap above it.
 
 **Fix**: Ensure the previous section (`:last-of-type` before insertion) is no longer `:last-of-type` after insertion — `margin-bottom: 12px` applies automatically.
 
@@ -81,7 +81,7 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 
 **Symptom**: In dark mode some text is hard or impossible to read because it keeps its light-mode dark color on the dark background.
 
-**Fix**: This site has **no global `body[data-theme="dark"] h1,h2,h3,p { … }` fallback** — every dark text color is a per-class, per-page inline rule, and anything not covered stays near-black. Every user-facing text element must get an explicit `body[data-theme="dark"]` override (light `#e5ecf4` headings, `#9fb0c3`/`#94a3b8` body). Known gaps already fixed: `5dt-pd` `.section-card h1`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, homepage About 区/博客卡片/分页/blockquote/全局 `p`/`a`/`code` (2026-09-07 全站双向审计归零). Call out — never leave a `#0f172a`/`#1d1d1f`/`#1e293b`/`#475569`/`#515154` color on a text element without a dark counterpart. See DESIGN.md §9.
+**Fix**: This site has **no global `body[data-theme="dark"] h1,h2,h3,p { … }` fallback** — every dark text color is a per-class, per-page inline rule, and anything not covered stays near-black. Every user-facing text element must get an explicit `body[data-theme="dark"]` override (light `#e5ecf4` headings, `#9fb0c3`/`#94a3b8` body). Known gaps already fixed: `human-in-the-loop` (原5dt-pd) `.section-card h1`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, homepage About 区/博客卡片/分页/blockquote/全局 `p`/`a`/`code` (2026-09-07 全站双向审计归零). Call out — never leave a `#0f172a`/`#1d1d1f`/`#1e293b`/`#475569`/`#515154` color on a text element without a dark counterpart. See DESIGN.md §9.
 
 ## 12. zh-hk 混入粤语口语 / 残留简体（from LESSONS.md)
 

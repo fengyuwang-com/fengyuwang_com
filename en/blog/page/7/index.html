@@ -11,7 +11,12 @@
     <meta property="og:url" content="https://www.fengyuwang.com/en/blog/">
     <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
     <meta property="og:site_name" content="Fengyu WANG">
-    <meta property="article:published_time" content="2026-09-06">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog">
+    
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <link rel="alternate" type="application/rss+xml" title="Fengyu WANG · Blog" href="https://www.fengyuwang.com/en/blog/index.xml">
+    <meta property="article:published_time" content="2026-09-13">
     <link rel="canonical" href="https://www.fengyuwang.com/en/blog/">
     <link rel="alternate" hreflang="en" href="/en/blog/">
     
@@ -62,9 +67,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .pagination-shell a,.pagination-shell span.page-btn { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:36px; padding:0 10px; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; color:#374151; background:transparent; border:1px solid transparent; }
 .pagination-shell a:hover { background:rgba(0,113,227,.08); border-color:rgba(0,113,227,.2); }
 .pagination-shell .page-btn.active { background:#0071e3; color:#fff; border-color:#0071e3; }
+.pagination-shell .page-gap { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:36px; color:#6b7280; font-weight:700; }
 body[data-theme="dark"] .pagination-shell a, body[data-theme="dark"] .pagination-shell span.page-btn { color:#9fb0c3; }
 body[data-theme="dark"] .pagination-shell .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .pagination-shell .page-btn.active { color:#fff; }
+body[data-theme="dark"] .pagination-shell .page-gap { color:#8296ac; }
 .pagination-shell .go-to-shell { display:inline-flex; align-items:center; gap:4px; margin-left:8px; }
 .pagination-shell .go-to-input { width:48px; height:32px; text-align:center; border:1px solid rgba(15,23,42,.12); border-radius:8px; font-size:.85rem; outline:0; background:#fff; color:#111827; }
 .pagination-shell .go-to-btn { height:32px; padding:0 12px; border:0; border-radius:8px; background:#0071e3; color:#fff; font-size:.82rem; font-weight:600; cursor:pointer; }
@@ -79,6 +86,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -86,15 +95,38 @@ body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 body[data-theme="dark"] .search-tag-label { color:#9fb0c3; }
 #searchResults mark { background:rgba(255,214,10,.45); color:inherit; border-radius:3px; padding:0 2px; }
 body[data-theme="dark"] #searchResults mark { background:rgba(250,204,21,.28); color:#fde68a; }
-.snippet-text { font-size:.85rem; color:#9ca3af; line-height:1.6; margin:10px 0 0; }
+.snippet-text { font-size:.85rem; color:#6b7280; line-height:1.6; margin:10px 0 0; }
 body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .search-empty { text-align:center; color:#6b7280; font-size:.95rem; padding:40px 0; }
+.util-chips { display:flex; justify-content:center; gap:10px; margin:-14px 0 24px; flex-wrap:wrap; }
+.util-chip { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; border:1px solid rgba(15,23,42,.12); font-size:.8rem; font-weight:600; color:#374151; text-decoration:none; }
+.util-chip:hover { border-color:rgba(0,113,227,.35); color:#0071e3; background:rgba(0,113,227,.06); }
+.util-chip.rss { color:#b45309; border-color:rgba(234,123,28,.35); background:rgba(234,123,28,.06); }
+.util-chip.rss::before { content:""; width:8px; height:8px; border-radius:50%; background:#ea7b1c; }
+.util-chip.rss:hover { background:rgba(234,123,28,.12); }
+body[data-theme="dark"] .util-chip { color:#9fb0c3; border-color:rgba(148,163,184,.2); }
+body[data-theme="dark"] .util-chip:hover { color:#60a5fa; border-color:rgba(96,165,250,.4); background:rgba(41,151,255,.08); }
+body[data-theme="dark"] .util-chip.rss { color:#f5a25b; border-color:rgba(234,123,28,.4); background:rgba(234,123,28,.1); }
+.rss-toast { display:none; justify-content:center; margin:-14px 0 22px; }
+.rss-toast.show { display:flex; }
+.rss-toast-inner { max-width:560px; margin:0 16px; padding:12px 20px; border-radius:14px; background:#fff; border:1px solid rgba(15,23,42,.1); box-shadow:0 10px 28px rgba(15,23,42,.1); font-size:.84rem; line-height:1.6; color:#374151; text-align:center; }
+.rss-toast-url { display:block; margin-top:5px; font-size:.75rem; color:#0071e3; word-break:break-all; user-select:all; }
+body[data-theme="dark"] .rss-toast-inner { background:#1e293b; border-color:rgba(148,163,184,.15); color:#9fb0c3; }
+body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>Blog</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/en/tags/business/">Business (50)</a><a href="/en/tags/economy/">Economy (14)</a><a href="/en/tags/finance/">Finance (16)</a><a href="/en/tags/investing/">Investing (15)</a><a href="/en/tags/marketing/">Marketing (3)</a><a href="/en/tags/society/">Society (32)</a><a href="/en/tags/tech/">Tech (46)</a></div>
+<div class="tag-cloud"><a href="/en/tags/business/">Business (30)</a><a href="/en/tags/economy/">Economy (24)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/marketing/">Marketing (33)</a><a href="/en/tags/society/">Society (11)</a><a href="/en/tags/tech/">Tech (39)</a></div>
+<div class="util-chips">
+    <a class="util-chip rss" id="rssChip" href="/en/blog/index.xml" title="Copy the feed URL for your RSS reader">Subscribe via RSS</a>
+    <a class="util-chip" href="/en/archive/">Archive by year</a>
+</div>
+<div class="rss-toast" id="rssToast"><div class="rss-toast-inner">Feed URL copied — paste it into any RSS reader (Folo · Inoreader · NetNewsWire) to subscribe. Not copied? Select the address below manually.<span class="rss-toast-url">https://www.fengyuwang.com/en/blog/index.xml</span></div></div>
+<script>
+(function(){var chip=document.getElementById("rssChip"),t=document.getElementById("rssToast");if(!chip||!t)return;var timer;chip.addEventListener("click",function(e){e.preventDefault();var url=new URL(chip.getAttribute("href"),location.href).href;var show=function(){t.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){t.classList.remove("show")},8000);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(show,show);}else{show();}});})();
+</script>
 <div class="sort-shell">
     <label for="sortSelect">Sort by</label>
     <select id="sortSelect">
@@ -105,76 +137,76 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/en/blog/posts/%E5%87%A0%E5%86%85%E4%BA%9A%E6%AF%94%E7%BB%8D%E5%AE%8C%E6%95%B4%E5%9B%BD%E6%83%85%E4%B8%8Epower-behind-the-throne%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84/" data-title="Guinea-Bissau: A Case Study in State Fragility" data-summary="Guinea-Bissau is an extreme example of governance failure. Since independence in 1974, the country has experienced multiple coups and periods of political turmoil, leaving state capacity extremely weak." data-date="2026-03-23" data-tags="Society">
-    <h3>Guinea-Bissau: A Case Study in State Fragility</h3>
-    <hr class="summary-divider"><div class="summary-text">Guinea-Bissau is an extreme example of governance failure. Since independence in 1974, the country has experienced multiple coups and periods of political turmoil, leaving state capacity extremely weak.</div>
-    <div class="blog-tags"><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/lead-users-first/" data-title="Lead Users Know Tomorrow&#39;s Demand First" data-summary="Lead users are already solving their own pain points; sticky information is there for the taking." data-date="2026-04-25" data-tags="Marketing">
+    <h3>Lead Users Know Tomorrow&#39;s Demand First</h3>
+    <hr class="summary-divider"><div class="summary-text">Lead users are already solving their own pain points; sticky information is there for the taking.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E5%8F%B2%E7%8E%89%E6%9F%B1%E9%80%BB%E8%BE%91/" data-title="The Shi Yuzhu Business Logic" data-summary="Shi Yuzhu business logic can be condensed into one sentence: do not educate, do not debate, do not change. Only identify, only satisfy, only close the deal." data-date="2026-03-21" data-tags="Business,Marketing">
-    <h3>The Shi Yuzhu Business Logic</h3>
-    <hr class="summary-divider"><div class="summary-text">Shi Yuzhu business logic can be condensed into one sentence: do not educate, do not debate, do not change. Only identify, only satisfy, only close the deal.</div>
-    <div class="blog-tags"><span>Business</span><span>Marketing</span></div>
+<a class="blog-card" href="/en/blog/posts/korea-compressed-modernity/" data-title="Koreans Aren&#39;t Born Gamblers." data-summary="A society that compressed two hundred years into thirty pushed ordinary people into the one narrow door left: speculation. Cycles change the asset; the fate doesn&#39;t." data-date="2026-04-23" data-tags="Investing">
+    <h3>Koreans Aren&#39;t Born Gamblers.</h3>
+    <hr class="summary-divider"><div class="summary-text">A society that compressed two hundred years into thirty pushed ordinary people into the one narrow door left: speculation. Cycles change the asset; the fate doesn&#39;t.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E4%BF%A1%E4%BB%BB%E6%88%90%E6%9C%AC%E5%86%B3%E5%AE%9A%E4%BB%B7%E6%A0%BC/" data-title="Trust Cost Determines Price" data-summary="The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles." data-date="2026-03-20" data-tags="Business,Society,Economy">
-    <h3>Trust Cost Determines Price</h3>
-    <hr class="summary-divider"><div class="summary-text">The same person, the same service, the same product can sell for dramatically different prices in different channels. This is not an illusion. It is determined by several clear economic principles.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span><span>Economy</span></div>
+<a class="blog-card" href="/en/blog/posts/know-your-opponent/" data-title="Winners Study the Crowd, Losers Study the Stock" data-summary="Ten years at the same charts, two different outcomes: the difference is not effort but the object of study — the cards, or the players." data-date="2026-04-21" data-tags="Investing">
+    <h3>Winners Study the Crowd, Losers Study the Stock</h3>
+    <hr class="summary-divider"><div class="summary-text">Ten years at the same charts, two different outcomes: the difference is not effort but the object of study — the cards, or the players.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/aihtml%E7%AE%80%E5%8E%86/" data-title="Why HTML Beats Word for Your CV" data-summary="Using HTML and CSS for your CV solves every formatting problem Word creates. Every pixel can be precisely controlled, layouts are consistent across devices, it is responsive, version-controllable, and exports perfectly to PDF." data-date="2026-03-19" data-tags="Tech">
-    <h3>Why HTML Beats Word for Your CV</h3>
-    <hr class="summary-divider"><div class="summary-text">Using HTML and CSS for your CV solves every formatting problem Word creates. Every pixel can be precisely controlled, layouts are consistent across devices, it is responsive, version-controllable, and exports perfectly to PDF.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/infra-legacy/" data-title="The Bubble Died, the Rails Remained" data-summary="British railways, 2000-era fiber, today&#39;s compute: three bubbles on one path. The bubble kills companies and leaves infrastructure behind. The companies didn&#39;t die because the technology was wrong — they died because the price was." data-date="2026-04-19" data-tags="Investing">
+    <h3>The Bubble Died, the Rails Remained</h3>
+    <hr class="summary-divider"><div class="summary-text">British railways, 2000-era fiber, today&#39;s compute: three bubbles on one path. The bubble kills companies and leaves infrastructure behind. The companies didn&#39;t die because the technology was wrong — they died because the price was.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E4%BF%A1%E6%81%AF%E5%B7%AE%E5%92%8C%E5%80%9F%E5%8A%BF/" data-title="Information Gaps and Riding the Wave" data-summary="Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy." data-date="2026-03-18" data-tags="Business,Society">
-    <h3>Information Gaps and Riding the Wave</h3>
-    <hr class="summary-divider"><div class="summary-text">Information asymmetry and leverage thinking are two of the most fundamental yet effective profit logics in business. They can be used separately or combined into a powerful strategy.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/industry-three-waves/" data-title="A Sector Comes in Three Waves" data-summary="A sector upgrade arrives in three waves: base stations first, equipment next, the device-upgrade cycle last. Each wave crowns a different protagonist — ask which wave it is before asking what to hold." data-date="2026-04-17" data-tags="Investing">
+    <h3>A Sector Comes in Three Waves</h3>
+    <hr class="summary-divider"><div class="summary-text">A sector upgrade arrives in three waves: base stations first, equipment next, the device-upgrade cycle last. Each wave crowns a different protagonist — ask which wave it is before asking what to hold.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E9%93%B6%E8%A1%8C%E6%9F%9C%E5%91%98%E7%9A%84%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%8D%B1%E6%9C%BA/" data-title="A Bank Teller Existential Crisis" data-summary="The first symptom of an existential crisis is a disturbance in the perception of time. When someone has sat at the same window for six years, time is no longer a linear river. It becomes an unmarked expanse of water." data-date="2026-03-16" data-tags="Society,Business">
-    <h3>A Bank Teller Existential Crisis</h3>
-    <hr class="summary-divider"><div class="summary-text">The first symptom of an existential crisis is a disturbance in the perception of time. When someone has sat at the same window for six years, time is no longer a linear river. It becomes an unmarked expanse of water.</div>
-    <div class="blog-tags"><span>Society</span><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/hypotheses-die-first/" data-title="The Data Executes the Hypotheses, and Apologizes to No One" data-summary="In a 137-person study, three industry instincts were reversed by the data; hypotheses dying first is the purpose of research, not an accident." data-date="2026-04-15" data-tags="Marketing">
+    <h3>The Data Executes the Hypotheses, and Apologizes to No One</h3>
+    <hr class="summary-divider"><div class="summary-text">In a 137-person study, three industry instincts were reversed by the data; hypotheses dying first is the purpose of research, not an accident.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%9D%E7%BB%B4pipeline/" data-title="A Programmer Complete Problem-Solving Framework" data-summary="The methodology programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or frameworks, it is about a structured approach to defining, decomposing, and solving problems." data-date="2026-03-15" data-tags="Tech">
-    <h3>A Programmer Complete Problem-Solving Framework</h3>
-    <hr class="summary-divider"><div class="summary-text">The methodology programmers develop through debugging and writing code can be applied to nearly every domain. It is not about syntax or frameworks, it is about a structured approach to defining, decomposing, and solving problems.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/hold-the-reservation/" data-title="Easy to Take a Booking, Hard to Keep It" data-summary="Anyone can accept a reservation; keeping it is the reservation. That is where service fails." data-date="2026-04-13" data-tags="Marketing">
+    <h3>Easy to Take a Booking, Hard to Keep It</h3>
+    <hr class="summary-divider"><div class="summary-text">Anyone can accept a reservation; keeping it is the reservation. That is where service fails.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%80%A5%E9%80%9F%E5%8F%91%E5%B1%95/" data-title="The Rapid Development of Artificial Intelligence" data-summary="The rapid advancement of AI has a highly differentiated impact on different economies. For economies that rely on large-scale labour, this impact first manifests as economic urgency." data-date="2026-03-10" data-tags="Tech,Economy,Society">
-    <h3>The Rapid Development of Artificial Intelligence</h3>
-    <hr class="summary-divider"><div class="summary-text">The rapid advancement of AI has a highly differentiated impact on different economies. For economies that rely on large-scale labour, this impact first manifests as economic urgency.</div>
-    <div class="blog-tags"><span>Tech</span><span>Economy</span><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/greeting-that-sells-nothing/" data-title="The Birthday Greeting That Sells Nothing" data-summary="Fifteen years ago every birthday greeting carried a pitch; today&#39;s best practice sells nothing. Every touchpoint posts to an account: a pitched greeting withdraws, a pitch-free one deposits." data-date="2026-04-11" data-tags="Marketing">
+    <h3>The Birthday Greeting That Sells Nothing</h3>
+    <hr class="summary-divider"><div class="summary-text">Fifteen years ago every birthday greeting carried a pitch; today&#39;s best practice sells nothing. Every touchpoint posts to an account: a pitched greeting withdraws, a pitch-free one deposits.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E5%81%87%E8%A3%85%E8%87%AA%E5%B7%B1%E4%BC%9A-%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5/" data-title="Fake It Till You Make It: Taking the First Step" data-summary="The logic of taking the first step runs counter to most people instinct. The first step is never about being ready, it is about claiming your position first and learning to stand once you are there." data-date="2026-03-02" data-tags="Business,Society">
-    <h3>Fake It Till You Make It: Taking the First Step</h3>
-    <hr class="summary-divider"><div class="summary-text">The logic of taking the first step runs counter to most people instinct. The first step is never about being ready, it is about claiming your position first and learning to stand once you are there.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/good-company-good-stock/" data-title="A Good Company Is Not a Good Stock" data-summary="A good stock equals a good company plus an undervalued gap; paying any price for a great company is the most common form of pseudo-value investing." data-date="2026-04-09" data-tags="Investing">
+    <h3>A Good Company Is Not a Good Stock</h3>
+    <hr class="summary-divider"><div class="summary-text">A good stock equals a good company plus an undervalued gap; paying any price for a great company is the most common form of pseudo-value investing.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7-%E7%9A%84%E6%84%8F%E8%AF%86/" data-title="Data Asset Awareness" data-summary="Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering." data-date="2026-03-02" data-tags="Tech,Business">
-    <h3>Data Asset Awareness</h3>
-    <hr class="summary-divider"><div class="summary-text">Why are spreadsheets created by business development teams always messy? The answer is not carelessness or poor data literacy. It is a structural disconnect between the BD mindset and the standardisation required by data engineering.</div>
-    <div class="blog-tags"><span>Tech</span><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/fundamentals-unchanged/" data-title="Fundamentals Are the Part That Doesn&#39;t Change" data-summary="Fundamentals are not last quarter&#39;s earnings sheet — they are whether this business still opens its doors tomorrow. Short-term results are noise; permanent damage is the signal." data-date="2026-04-07" data-tags="Investing">
+    <h3>Fundamentals Are the Part That Doesn&#39;t Change</h3>
+    <hr class="summary-divider"><div class="summary-text">Fundamentals are not last quarter&#39;s earnings sheet — they are whether this business still opens its doors tomorrow. Short-term results are noise; permanent damage is the signal.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/%E5%95%86%E5%8A%A1%E4%B8%AA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E5%88%86%E5%BC%80/" data-title="Separating Business and Personal Accounts" data-summary="Running a business and creating content are not in conflict. In fact, they complement each other. The two directions serve different markets and different customer bases, so there is no confusion." data-date="2026-02-27" data-tags="Business,Society">
-    <h3>Separating Business and Personal Accounts</h3>
-    <hr class="summary-divider"><div class="summary-text">Running a business and creating content are not in conflict. In fact, they complement each other. The two directions serve different markets and different customer bases, so there is no confusion.</div>
-    <div class="blog-tags"><span>Business</span><span>Society</span></div>
+<a class="blog-card" href="/en/blog/posts/four-nested-cycles/" data-title="Four Cycles, One Nest" data-summary="The economy doesn&#39;t oscillate in one cycle. It stacks four cycles whose time scales differ by an order of magnitude. The layer you trade in decides which indicators you should watch." data-date="2026-04-05" data-tags="Investing">
+    <h3>Four Cycles, One Nest</h3>
+    <hr class="summary-divider"><div class="summary-text">The economy doesn&#39;t oscillate in one cycle. It stacks four cycles whose time scales differ by an order of magnitude. The layer you trade in decides which indicators you should watch.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/excel%E6%98%AF%E4%BA%8C%E7%BB%B4%E7%9A%84/" data-title="Excel Is Two-Dimensional" data-summary="Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional." data-date="2026-02-27" data-tags="Tech">
-    <h3>Excel Is Two-Dimensional</h3>
-    <hr class="summary-divider"><div class="summary-text">Excel uses rows and columns because two-dimensional tables are the easiest structure for the human eye and brain to understand. But the real world is not two-dimensional.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/four-iron-rules/" data-title="Direction Is Right; Stay Inside the Lines" data-summary="Above stock-picking sit four iron rules: nation sets the floor, rates set the ratio, coordinates set value, discipline sets restraint. Method decides how much you make; the rules decide whether you live to settle." data-date="2026-04-03" data-tags="Investing">
+    <h3>Direction Is Right; Stay Inside the Lines</h3>
+    <hr class="summary-divider"><div class="summary-text">Above stock-picking sit four iron rules: nation sets the floor, rates set the ratio, coordinates set value, discipline sets restraint. Method decides how much you make; the rules decide whether you live to settle.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
 </div>
@@ -182,9 +214,9 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="pagination-shell" id="paginationShell">
     <a href="/en/blog/page/6/" class="page-nav">← Previous</a>
-    <a href="/en/blog/" class="page-btn">1</a><a href="/en/blog/page/2/" class="page-btn">2</a><a href="/en/blog/page/3/" class="page-btn">3</a><a href="/en/blog/page/4/" class="page-btn">4</a><a href="/en/blog/page/5/" class="page-btn">5</a><a href="/en/blog/page/6/" class="page-btn">6</a><span class="page-btn active">7</span><a href="/en/blog/page/8/" class="page-btn">8</a>
+    <a href="/en/blog/" class="page-btn">1</a><span class="page-gap">…</span><a href="/en/blog/page/5/" class="page-btn">5</a><a href="/en/blog/page/6/" class="page-btn">6</a><span class="page-btn active">7</span><a href="/en/blog/page/8/" class="page-btn">8</a><a href="/en/blog/page/9/" class="page-btn">9</a><span class="page-gap">…</span><a href="/en/blog/page/15/" class="page-btn">15</a>
     <a href="/en/blog/page/8/" class="page-nav">Next →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="15" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
@@ -193,10 +225,11 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/en\/blog\/index.json";
-var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","finance":"\/en\/tags\/finance\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
+var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
 var L_ART=" articles · ";
 var L_TAG=" tags";
 var L_TAGS="Matching tags:";
+var L_RTFMT="$1 min read";
 var L_EMPTY="No matching articles or tags.";
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -215,25 +248,34 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
   if(ce)ce.textContent="";
 }
 function resetView(){res.style.display="none";res.innerHTML="";grid.style.display="";if(pag)pag.style.display="";if(sortShell)sortShell.style.display="";if(ce)ce.textContent=""}
-si.value="";si.addEventListener("input",function(){
-  var q=this.value.toLowerCase().trim();
+var qp=null;try{qp=new URLSearchParams(location.search).get("q")}catch(e){}
+function setQ(raw){try{var u=new URL(location.href);if(raw)u.searchParams.set("q",raw);else u.searchParams.delete("q");history.replaceState(null,"",u)}catch(e){}}
+si.value=qp||"";
+si.addEventListener("input",function(){
+  var raw=this.value;var q=raw.toLowerCase().trim();
+  setQ(q?raw:"");
   if(!q){resetView();return}
   if(IDX){render(q);return}
   if(loading)return;loading=true;
   if(ce)ce.textContent="…";
   fetch(INDEX_URL).then(function(r){return r.json()}).then(function(d){IDX=d;loading=false;var n=si.value.toLowerCase().trim();if(n)render(n)}).catch(function(){loading=false;if(ce)ce.textContent=""});
 });
-var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+if(si.value){si.dispatchEvent(new Event("input"))}
+var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 15 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
 </script>
 <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
     <a href="https://linkedin.com/in/fengyuwang-com/recent-activity/all/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; min-width:220px; padding:12px 35px; border-radius:50px; background:#0071e3; color:#fff; font-weight:700; font-size:15px; text-decoration:none; border:2px solid #0071e3; transition:0.4s;" onmouseover="this.style.background='transparent'; this.style.color='#0071e3'" onmouseout="this.style.background='#0071e3'; this.style.color='#fff'">View LinkedIn Activity</a>

@@ -74,11 +74,11 @@ Key rules:
 | Page | Key Sections | Cross-link To | Special Elements |
 |------|-------------|--------------|-----------------|
 | **index.html** | Hero, Track cards, About, Blog | None (hub) | Homepage track-grid |
-| **mkt.html** | Data, Creative, Listen, Global, Projects, Market Capabilities, 5DT-PD Answers | portfolio.html | Cap chip groups, QA groups |
+| **mkt.html** | Data, Creative, Listen, Global, Projects, Market Capabilities, Human-in-the-Loop Answers | portfolio.html | Cap chip groups, QA groups |
 | **portfolio.html** | Delivery, Tech capability, Web/App/Automation/Design | invest.html | mkt-card grid, CTA row |
 | **invest.html** | Academic, Business judgment | blog | Frosted glass sections |
 | **capabilities.html** | Market understanding, Tech capability, Business judgment, Triangular Loop | None (standalone) | Cap chips, Stack chips, Full skill tree |
-| **5dt-pd.html** | Framework viewer (React), Minimal answers | None | React viewer in #root |
+| **human-in-the-loop.html** | Framework viewer (React), Minimal answers | None | React viewer in #root |
 
 ## Cross-Link Strategy
 

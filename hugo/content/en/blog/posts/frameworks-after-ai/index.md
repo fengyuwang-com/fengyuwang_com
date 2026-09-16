@@ -1,6 +1,6 @@
 ---
 title: "AI Writes Everything Now. What's Left for Frameworks?"
-date: 2026-09-05
+date: 2025-12-02
 description: "AI eats the flesh and can't eat the skeleton."
 slug: "frameworks-after-ai"
 tags: ["Tech"]

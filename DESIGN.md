@@ -38,7 +38,7 @@ Each language folder has identical structure. Only the copy differs.
 - `mkt.html` — Marketing strategy cases
 - `portfolio.html` — Tech portfolio
 - `invest.html` — Investment research
-- `5dt-pd.html` — 5DT-PD framework viewer
+- `human-in-the-loop.html` — Human-in-the-Loop framework viewer
 - `ai.html` — AI engineering
 - `cloud.html` — Cloud infrastructure
 - `web3.html` — Web3 deep research
@@ -439,7 +439,7 @@ body { padding-top: 44px !important; }
 **Desktop menu items (injected order):**
 1. Home (▾ submenu: Welcome, About, "Explore the site by track")
 2. Capabilities
-3. Marketing (▾ submenu: **Marketing Overview**, 5DT-PD Framework)
+3. Marketing (▾ submenu: **Marketing Overview**, Human-in-the-Loop Framework)
 4. Tech (▾ submenu: **Tech Overview**, 软件项目: Jingxin/FengOffice/FengMedia/Search King, 技术研究: Web3/AI/Automation/Cloud)
 5. Investment (▾ submenu: **Investment Overview**, FengInvest — the investment tool belongs here, not under Tech)
 6. Art (▾ submenu: **Art Overview**, Painting & Sculpture, Sculpture, Architecture & Garden, Music, Literature, Design, Film & Narrative)
@@ -935,7 +935,7 @@ Also has `<meta http-equiv="refresh" content="0; url=zh-cn/index.html">` as fall
 - `data-overlay-dark="3"` for dark overlay; full-viewport height (`100vh` + `100svh` fallback)
 - h4 kicker + h1 + description p + two buttons
 - Slider JS in `assets/js/main.js` is commented out but kept for future multi-slide use — to restore: uncomment the block in main.js AND change `hero-static` back to `owl-carousel owl-theme` in all three index.html
-- Historical note: previously a 2-slide Owl fade (slider-1/slide-2 + 5DT-PD slide); reduced to single image, slider shell removed 2026-09-08
+- Historical note: previously a 2-slide Owl fade (slider-1/slide-2 + Human-in-the-Loop slide); reduced to single image, slider shell removed 2026-09-08
 
 **What's New section:**
 - Light grey background (`#f5f5f7`), 40px padding
@@ -1216,7 +1216,7 @@ On mobile (`≤599px`) the nested card chain — `.block-inner(0 24px) → .sect
 }
 ```
 
-This recovers ~64px → ~279px usable width (~14 chars/line). Cards keep their rounded-corner look. Apply this to every content sub-page (tech/mkt/invest/ai/cloud/web3/automation/ethos/art*/5dt-pd/capabilities/feng*). The homepage `track-split-shell` is a different structure and is **not** affected. The batch script `scripts/apply-mobile-fix.js` applies these inline (per-page CSS in both minified and spaced variants).
+This recovers ~64px → ~279px usable width (~14 chars/line). Cards keep their rounded-corner look. Apply this to every content sub-page (tech/mkt/invest/ai/cloud/web3/automation/ethos/art*/human-in-the-loop/capabilities/feng*). The homepage `track-split-shell` is a different structure and is **not** affected. The batch script `scripts/apply-mobile-fix.js` applies these inline (per-page CSS in both minified and spaced variants).
 
 **CTA buttons equal width (`≤ any width`, added 2026-08-06):** Buttons inside `.cta-row` used to size by their text (so a row of "查看官网 →" and "GitHub" looked uneven). Set them to stretch to the longest and cap:
 
@@ -1266,7 +1266,7 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | `.content-text-card` color | `#475569` | `#9fb0c3` |
 | `.content-text-card h3` color | `#0f172a` (art uses `#1d1d1f`) | `#e5ecf4` |
 | `.content-text-card ul` color | `#475569` | `#9fb0c3` |
-| `.section-card h1` (5dt-pd) | inherits slate | `#e5ecf4` |
+| `.section-card h1` (human-in-the-loop) | inherits slate | `#e5ecf4` |
 | `.qa-group-title` color | `#0f172a` | `#e5ecf4` |
 | `.pillar-card h3` color | `#0f172a` | `#e5ecf4` |
 | `.pillar-card p` color | `#475569` | `#9fb0c3` |
@@ -1307,7 +1307,7 @@ Activated by: `body[data-theme="dark"]` set via `localStorage` or `prefers-color
 | `.track-split-shell` (dark) | `linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.96))` | `linear-gradient(135deg, #020617, #111827)` |
 | `.track-card` (dark) | `rgba(255,255,255,.08)` border `rgba(255,255,255,.12)` | `rgba(15,23,42,.82)` border `rgba(148,163,184,.16)` |
 
-**Principle (dark-text coverage):** There is **no global `body[data-theme="dark"] h1,h2,h3,p { ... }` fallback** in this site — every dark text color is a per-class per-page inline rule. Any text color not explicitly covered stays its light-mode value and will read as near-black on the dark bg. **Every element that shows user-facing text must therefore have an explicit `body[data-theme="dark"]` override.** When adding a new card/section/class, add its dark text rule in the same file's dark block. Neglected spots are the `5dt-pd` `<h1>`, `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and inline-colored spans (e.g. `zh-cn/index.html` "查看详情" span → fixed to `#00a1d6`).
+**Principle (dark-text coverage):** There is **no global `body[data-theme="dark"] h1,h2,h3,p { ... }` fallback** in this site — every dark text color is a per-class per-page inline rule. Any text color not explicitly covered stays its light-mode value and will read as near-black on the dark bg. **Every element that shows user-facing text must therefore have an explicit `body[data-theme="dark"]` override.** When adding a new card/section/class, add its dark text rule in the same file's dark block. Neglected spots are the `human-in-the-loop` `<h1>` (fixed 2026-09-11), `art.html` `.content-text-card h3`, `capabilities` `.tree-toggle`, and inline-colored spans (e.g. `zh-cn/index.html` "查看详情" span → fixed to `#00a1d6`).
 
 ---
 
@@ -1369,7 +1369,7 @@ Root `index.html` (not in any language folder). Contains:
 │   ├── mkt.html
 │   ├── portfolio.html
 │   ├── invest.html
-│   ├── 5dt-pd.html
+│   ├── human-in-the-loop.html
 │   ├── ai.html
 │   ├── cloud.html
 │   ├── web3.html

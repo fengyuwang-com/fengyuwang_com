@@ -1,6 +1,6 @@
 ---
 title: "Apple Is Becoming IBM"
-date: 2026-09-05
+date: 2025-11-04
 description: "Lawsuits buy time. They don't buy the right to define the next paradigm."
 slug: "apple-is-becoming-ibm"
 tags: ["Business", "Tech"]

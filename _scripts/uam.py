@@ -16,7 +16,7 @@ Read it thoroughly before making any changes. **It preserves context across sess
 7. [页面设计模式：Sections 之间的白色横线](#页面设计模式sections-之间的白色横线)
 8. [Content Block Patterns](#content-block-patterns)
 9. [Capability Chips Pattern](#capability-chips-pattern)
-10. [QA Group Pattern (5DT-PD)](#qa-group-pattern-5dt-pd)
+10. [QA Group Pattern (Human-in-the-Loop)](#qa-group-pattern-human-in-the-loop)
 11. [Cross-Link Strategy](#cross-link-strategy)
 12. [Dark Mode](#dark-mode)
 13. [Responsive Design](#responsive-design)
@@ -145,11 +145,11 @@ Home (index.html)
 | Page | Key Sections | Cross-link To | Special Elements |
 |------|-------------|--------------|-----------------|
 | **index.html** | Hero, Track cards, About, Blog | None (hub) | Homepage track-grid |
-| **mkt.html** | Data, Creative, Listen, Global, Projects, Market Capabilities, 5DT-PD Answers | portfolio.html | Cap chip groups, QA groups |
+| **mkt.html** | Data, Creative, Listen, Global, Projects, Market Capabilities, Human-in-the-Loop Answers | portfolio.html | Cap chip groups, QA groups |
 | **portfolio.html** | Delivery, Tech capability, Web/App/Automation/Design | invest.html | mkt-card grid, CTA row |
 | **invest.html** | Academic, Business judgment | blog | Frosted glass sections |
 | **capabilities.html** | Market understanding, Tech capability, Business judgment, Triangular Loop | None (standalone) | Cap chips, Stack chips, Full skill tree |
-| **5dt-pd.html** | Framework viewer (React), Minimal answers | None | React viewer in #root |
+| **human-in-the-loop.html** | Framework viewer (React), Minimal answers | None | React viewer in #root |
 
 ---
 
@@ -296,9 +296,9 @@ Used on capabilities.html and mkt.html to show skill tags.
 
 ---
 
-## QA Group Pattern (5DT-PD)
+## QA Group Pattern (Human-in-the-Loop)
 
-Used in the 5DT-PD Minimal Answers section (mkt.html and 5dt-pd.html).
+Used in the Human-in-the-Loop Minimal Answers section (mkt.html and human-in-the-loop.html).
 
 ```html
 <div class="qa-group">
@@ -465,9 +465,9 @@ The tunnel uses a token from Cloudflare Zero Trust → Tunnels. Put it in `.env`
 
 **Fix**: Check the Cross-Link Mapping table above. The mkt page should always link to portfolio (technical).
 
-### 3. 5DT-PD section without white divider
+### 3. Human-in-the-Loop section without white divider
 
-**Symptom**: The 5DT-PD Answers section on mkt.html has no 12px gap above it.
+**Symptom**: The Human-in-the-Loop Answers section on mkt.html has no 12px gap above it.
 
 **Fix**: Ensure the previous section (`:last-of-type` before insertion) is no longer `:last-of-type` after insertion — `margin-bottom: 12px` applies automatically.
 

@@ -1,6 +1,6 @@
 ---
 title: "Everything Is a Prompt"
-date: 2026-09-05
+date: 2025-11-28
 description: "A skill is experience written as a prompt; design is taste written as a prompt; law is society written as a prompt."
 slug: "everything-is-a-prompt"
 tags: ["Tech"]

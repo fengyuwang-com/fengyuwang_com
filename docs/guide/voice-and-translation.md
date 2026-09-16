@@ -32,7 +32,10 @@ Capabilities 页的核心概念：
 
 ## 翻译规则
 
-- **zh-hk** = Hong Kong formal Traditional Chinese. 信达雅. Localize jokes.
+- **zh-hk** = Hong Kong **formal written** Traditional Chinese. 信达雅. Localize jokes.
+  - **粤语口语体不可接受（2026-09-12 站长令）：** zh-hk 一律书面正体，禁用口语字词——嘅/唔/係/咗/喺/啲/嘢/乜嘢/佢/哋/嗰/呢/咁/唔该/搬屋 等；「嗰批」「幾時先返嚟」式口语句一律改为书面句（那批/甚麼時候才回來）。
+  - 判据：把 zh-hk 正文念出来像书面文章，不像 TVB 台词。存疑时以 zh-cn 语义为底做书面繁体转换。
+  - 港式术语照用：光模組、伺服器、軟體不強改（依站内既有用法），但语体必须书面。
 - Use `translationKey` to pair articles across languages.
 - Keep structure identical across all three languages.
 - Section titles: translate meaning, not literally.

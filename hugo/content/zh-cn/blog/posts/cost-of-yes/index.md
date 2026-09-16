@@ -1,6 +1,6 @@
 ---
 title: "对对对，是最贵的人力成本"
-date: 2026-09-06
+date: 2026-01-17
 description: "豆包型人格：顺从不是缺点，是全部。"
 slug: "cost-of-yes"
 tags: ["商业", "技术"]

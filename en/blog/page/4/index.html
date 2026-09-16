@@ -11,7 +11,12 @@
     <meta property="og:url" content="https://www.fengyuwang.com/en/blog/">
     <meta property="og:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
     <meta property="og:site_name" content="Fengyu WANG">
-    <meta property="article:published_time" content="2026-09-06">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog">
+    
+    <meta name="twitter:image" content="https://fengyuwang.com/assets/img/og-card.jpg">
+    <link rel="alternate" type="application/rss+xml" title="Fengyu WANG · Blog" href="https://www.fengyuwang.com/en/blog/index.xml">
+    <meta property="article:published_time" content="2026-09-13">
     <link rel="canonical" href="https://www.fengyuwang.com/en/blog/">
     <link rel="alternate" hreflang="en" href="/en/blog/">
     
@@ -62,9 +67,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .pagination-shell a,.pagination-shell span.page-btn { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:36px; padding:0 10px; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; color:#374151; background:transparent; border:1px solid transparent; }
 .pagination-shell a:hover { background:rgba(0,113,227,.08); border-color:rgba(0,113,227,.2); }
 .pagination-shell .page-btn.active { background:#0071e3; color:#fff; border-color:#0071e3; }
+.pagination-shell .page-gap { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:36px; color:#6b7280; font-weight:700; }
 body[data-theme="dark"] .pagination-shell a, body[data-theme="dark"] .pagination-shell span.page-btn { color:#9fb0c3; }
 body[data-theme="dark"] .pagination-shell .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .pagination-shell .page-btn.active { color:#fff; }
+body[data-theme="dark"] .pagination-shell .page-gap { color:#8296ac; }
 .pagination-shell .go-to-shell { display:inline-flex; align-items:center; gap:4px; margin-left:8px; }
 .pagination-shell .go-to-input { width:48px; height:32px; text-align:center; border:1px solid rgba(15,23,42,.12); border-radius:8px; font-size:.85rem; outline:0; background:#fff; color:#111827; }
 .pagination-shell .go-to-btn { height:32px; padding:0 12px; border:0; border-radius:8px; background:#0071e3; color:#fff; font-size:.82rem; font-weight:600; cursor:pointer; }
@@ -79,6 +86,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -86,15 +95,38 @@ body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 body[data-theme="dark"] .search-tag-label { color:#9fb0c3; }
 #searchResults mark { background:rgba(255,214,10,.45); color:inherit; border-radius:3px; padding:0 2px; }
 body[data-theme="dark"] #searchResults mark { background:rgba(250,204,21,.28); color:#fde68a; }
-.snippet-text { font-size:.85rem; color:#9ca3af; line-height:1.6; margin:10px 0 0; }
+.snippet-text { font-size:.85rem; color:#6b7280; line-height:1.6; margin:10px 0 0; }
 body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .search-empty { text-align:center; color:#6b7280; font-size:.95rem; padding:40px 0; }
+.util-chips { display:flex; justify-content:center; gap:10px; margin:-14px 0 24px; flex-wrap:wrap; }
+.util-chip { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; border:1px solid rgba(15,23,42,.12); font-size:.8rem; font-weight:600; color:#374151; text-decoration:none; }
+.util-chip:hover { border-color:rgba(0,113,227,.35); color:#0071e3; background:rgba(0,113,227,.06); }
+.util-chip.rss { color:#b45309; border-color:rgba(234,123,28,.35); background:rgba(234,123,28,.06); }
+.util-chip.rss::before { content:""; width:8px; height:8px; border-radius:50%; background:#ea7b1c; }
+.util-chip.rss:hover { background:rgba(234,123,28,.12); }
+body[data-theme="dark"] .util-chip { color:#9fb0c3; border-color:rgba(148,163,184,.2); }
+body[data-theme="dark"] .util-chip:hover { color:#60a5fa; border-color:rgba(96,165,250,.4); background:rgba(41,151,255,.08); }
+body[data-theme="dark"] .util-chip.rss { color:#f5a25b; border-color:rgba(234,123,28,.4); background:rgba(234,123,28,.1); }
+.rss-toast { display:none; justify-content:center; margin:-14px 0 22px; }
+.rss-toast.show { display:flex; }
+.rss-toast-inner { max-width:560px; margin:0 16px; padding:12px 20px; border-radius:14px; background:#fff; border:1px solid rgba(15,23,42,.1); box-shadow:0 10px 28px rgba(15,23,42,.1); font-size:.84rem; line-height:1.6; color:#374151; text-align:center; }
+.rss-toast-url { display:block; margin-top:5px; font-size:.75rem; color:#0071e3; word-break:break-all; user-select:all; }
+body[data-theme="dark"] .rss-toast-inner { background:#1e293b; border-color:rgba(148,163,184,.15); color:#9fb0c3; }
+body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>Blog</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"><div class="search-count" id="searchCount"></div></div>
-<div class="tag-cloud"><a href="/en/tags/business/">Business (50)</a><a href="/en/tags/economy/">Economy (14)</a><a href="/en/tags/finance/">Finance (16)</a><a href="/en/tags/investing/">Investing (15)</a><a href="/en/tags/marketing/">Marketing (3)</a><a href="/en/tags/society/">Society (32)</a><a href="/en/tags/tech/">Tech (46)</a></div>
+<div class="tag-cloud"><a href="/en/tags/business/">Business (30)</a><a href="/en/tags/economy/">Economy (24)</a><a href="/en/tags/investing/">Investing (89)</a><a href="/en/tags/marketing/">Marketing (33)</a><a href="/en/tags/society/">Society (11)</a><a href="/en/tags/tech/">Tech (39)</a></div>
+<div class="util-chips">
+    <a class="util-chip rss" id="rssChip" href="/en/blog/index.xml" title="Copy the feed URL for your RSS reader">Subscribe via RSS</a>
+    <a class="util-chip" href="/en/archive/">Archive by year</a>
+</div>
+<div class="rss-toast" id="rssToast"><div class="rss-toast-inner">Feed URL copied — paste it into any RSS reader (Folo · Inoreader · NetNewsWire) to subscribe. Not copied? Select the address below manually.<span class="rss-toast-url">https://www.fengyuwang.com/en/blog/index.xml</span></div></div>
+<script>
+(function(){var chip=document.getElementById("rssChip"),t=document.getElementById("rssToast");if(!chip||!t)return;var timer;chip.addEventListener("click",function(e){e.preventDefault();var url=new URL(chip.getAttribute("href"),location.href).href;var show=function(){t.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){t.classList.remove("show")},8000);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(show,show);}else{show();}});})();
+</script>
 <div class="sort-shell">
     <label for="sortSelect">Sort by</label>
     <select id="sortSelect">
@@ -105,76 +137,76 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="blog-grid" id="blogGrid">
 
-<a class="blog-card" href="/en/blog/posts/os-triangle/" data-title="The Impossible Triangle of Consumer Operating Systems" data-summary="Security, freedom, low cognitive load — pick two." data-date="2026-09-05" data-tags="Tech">
-    <h3>The Impossible Triangle of Consumer Operating Systems</h3>
-    <hr class="summary-divider"><div class="summary-text">Security, freedom, low cognitive load — pick two.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/right-to-sell/" data-title="Stopping Out Is the Shareholder&#39;s Core Right" data-summary="A stock pays no principal and no interest; its only route to cash is a sale. Treating the right to sell as failure means handing back the only control a shareholder has." data-date="2026-07-06" data-tags="Investing">
+    <h3>Stopping Out Is the Shareholder&#39;s Core Right</h3>
+    <hr class="summary-divider"><div class="summary-text">A stock pays no principal and no interest; its only route to cash is a sale. Treating the right to sell as failure means handing back the only control a shareholder has.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/feigou-haas/" data-title="The Feigou Plan: Essentially, I&#39;m Selling Insurance" data-summary="Turn an 8,000-yuan subscription into a 1,500-yuan buyout." data-date="2026-09-05" data-tags="Business,Tech">
-    <h3>The Feigou Plan: Essentially, I&#39;m Selling Insurance</h3>
-    <hr class="summary-divider"><div class="summary-text">Turn an 8,000-yuan subscription into a 1,500-yuan buyout.</div>
-    <div class="blog-tags"><span>Business</span><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/retention-5to1/" data-title="One Point Of Retention, Five Points Of Profit" data-summary="An insurer pushed its lapse-prediction model from 89% to 92%, and every point of retention added about 5% to the bottom line. The old nest of profit is not new business; it is the customers who stay." data-date="2026-07-04" data-tags="Marketing">
+    <h3>One Point Of Retention, Five Points Of Profit</h3>
+    <hr class="summary-divider"><div class="summary-text">An insurer pushed its lapse-prediction model from 89% to 92%, and every point of retention added about 5% to the bottom line. The old nest of profit is not new business; it is the customers who stay.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/consumer-gpu-dead/" data-title="The Death of the Consumer GPU" data-summary="Compute became a utility. Nobody generates their own electricity." data-date="2026-09-05" data-tags="Tech">
-    <h3>The Death of the Consumer GPU</h3>
-    <hr class="summary-divider"><div class="summary-text">Compute became a utility. Nobody generates their own electricity.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/responsibility-has-layers/" data-title="Responsibility Has Layers; Donations Record Only One" data-summary="Paying wages on time is already a serious social responsibility; giving little is not the same as being irresponsible." data-date="2026-07-02" data-tags="Marketing">
+    <h3>Responsibility Has Layers; Donations Record Only One</h3>
+    <hr class="summary-divider"><div class="summary-text">Paying wages on time is already a serious social responsibility; giving little is not the same as being irresponsible.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/quant-paradigm-shift/" data-title="The Axis Shift in Quant Trading" data-summary="From predicting the market to designing it." data-date="2026-09-05" data-tags="Finance,Investing">
-    <h3>The Axis Shift in Quant Trading</h3>
-    <hr class="summary-divider"><div class="summary-text">From predicting the market to designing it.</div>
-    <div class="blog-tags"><span>Finance</span><span>Investing</span></div>
+<a class="blog-card" href="/en/blog/posts/resistance-inside/" data-title="The Organization That Wanted to Change, and Died Wanting" data-summary="Kodak&#39;s leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom&#39;s judgment, it lived in the organization&#39;s skill structure. For innovation to survive, it has to be the CEO&#39;s job." data-date="2026-06-30" data-tags="Marketing">
+    <h3>The Organization That Wanted to Change, and Died Wanting</h3>
+    <hr class="summary-divider"><div class="summary-text">Kodak&#39;s leadership saw the digital future early and still nearly vanished: the resistance never lived in the boardroom&#39;s judgment, it lived in the organization&#39;s skill structure. For innovation to survive, it has to be the CEO&#39;s job.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/adversary-decision/" data-title="The Adversary Mechanism for Decisions" data-summary="A decision only counts when your opposing side has been persuaded too." data-date="2026-09-05" data-tags="Business">
-    <h3>The Adversary Mechanism for Decisions</h3>
-    <hr class="summary-divider"><div class="summary-text">A decision only counts when your opposing side has been persuaded too.</div>
-    <div class="blog-tags"><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/research-order/" data-title="Industry First, Then the Business, Then the Numbers" data-summary="A balance sheet is last term&#39;s report card; the industry is tomorrow&#39;s exam. Get the order wrong and all the effort is wasted." data-date="2026-06-28" data-tags="Investing">
+    <h3>Industry First, Then the Business, Then the Numbers</h3>
+    <hr class="summary-divider"><div class="summary-text">A balance sheet is last term&#39;s report card; the industry is tomorrow&#39;s exam. Get the order wrong and all the effort is wasted.</div>
+    <div class="blog-tags"><span class="card-rt">5 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/copy-better-wins/" data-title="Tencent Wins by Copying Better" data-summary="Always the latest to build, the fastest to copy." data-date="2026-09-05" data-tags="Business,Tech">
-    <h3>Tencent Wins by Copying Better</h3>
-    <hr class="summary-divider"><div class="summary-text">Always the latest to build, the fastest to copy.</div>
-    <div class="blog-tags"><span>Business</span><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/rented-loyalty/" data-title="Repeat Buyers Are Not Loyal Buyers" data-summary="A high repeat-purchase rate is not loyalty. The customer matrix has a quadrant built for this: they buy again and again — and cannot stand the company." data-date="2026-06-26" data-tags="Marketing">
+    <h3>Repeat Buyers Are Not Loyal Buyers</h3>
+    <hr class="summary-divider"><div class="summary-text">A high repeat-purchase rate is not loyalty. The customer matrix has a quadrant built for this: they buy again and again — and cannot stand the company.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/shell-consensus/" data-title="Shells Were Money Too. What Happened?" data-summary="Consensus collapses. The real question: what remains when it does?" data-date="2026-09-05" data-tags="Economy,Finance">
-    <h3>Shells Were Money Too. What Happened?</h3>
-    <hr class="summary-divider"><div class="summary-text">Consensus collapses. The real question: what remains when it does?</div>
-    <div class="blog-tags"><span>Economy</span><span>Finance</span></div>
+<a class="blog-card" href="/en/blog/posts/remembered-name/" data-title="The Smallest Unit of Service Is a Name" data-summary="Remembering a name is the smallest unit of service; technology only scaled it." data-date="2026-06-24" data-tags="Marketing">
+    <h3>The Smallest Unit of Service Is a Name</h3>
+    <hr class="summary-divider"><div class="summary-text">Remembering a name is the smallest unit of service; technology only scaled it.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/who-controls-whom/" data-title="Self-Reliant and Controllable — Controllable by Whom?" data-summary="Self-reliance means the user is in control, not the vendor." data-date="2026-09-05" data-tags="Tech">
-    <h3>Self-Reliant and Controllable — Controllable by Whom?</h3>
-    <hr class="summary-divider"><div class="summary-text">Self-reliance means the user is in control, not the vendor.</div>
-    <div class="blog-tags"><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/redeemable-assets/" data-title="Only What Can Be Redeemed Counts as an Asset" data-summary="What sits on the balance sheet is not the same as what can enter a valuation; only assets that convert into sustained cash flow count, and redeemability is the line between assets and hollow ones." data-date="2026-06-22" data-tags="Investing">
+    <h3>Only What Can Be Redeemed Counts as an Asset</h3>
+    <hr class="summary-divider"><div class="summary-text">What sits on the balance sheet is not the same as what can enter a valuation; only assets that convert into sustained cash flow count, and redeemability is the line between assets and hollow ones.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/dividend-payback/" data-title="Payback Math: I Watch the Dividend" data-summary="Price is someone else&#39;s quote; the dividend is the company&#39;s report." data-date="2026-09-05" data-tags="Finance,Investing">
-    <h3>Payback Math: I Watch the Dividend</h3>
-    <hr class="summary-divider"><div class="summary-text">Price is someone else&#39;s quote; the dividend is the company&#39;s report.</div>
-    <div class="blog-tags"><span>Finance</span><span>Investing</span></div>
+<a class="blog-card" href="/en/blog/posts/recognized-vs-watched/" data-title="Recognized, Not Watched" data-summary="The same recognition technology: recognizing is service, watching is business. The line is consent." data-date="2026-06-20" data-tags="Marketing">
+    <h3>Recognized, Not Watched</h3>
+    <hr class="summary-divider"><div class="summary-text">The same recognition technology: recognizing is service, watching is business. The line is consent.</div>
+    <div class="blog-tags"><span class="card-rt">3 min read</span><span>Marketing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/no-root-no-agent/" data-title="No Root, No Agent" data-summary="Permission is the AI&#39;s hand. An agent with tied hands is a consultant, no matter how smart." data-date="2026-09-05" data-tags="Tech,Business">
-    <h3>No Root, No Agent</h3>
-    <hr class="summary-divider"><div class="summary-text">Permission is the AI&#39;s hand. An agent with tied hands is a consultant, no matter how smart.</div>
-    <div class="blog-tags"><span>Tech</span><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/quarterly-audit/" data-title="Twice a Year, Put the Judgment Back on the Scale" data-summary="The annual-report and quarterly windows are not for reading earnings; they are inspection windows for the judgment itself: whether the unchanging assets still stand, whether the valuation coordinates have drifted. Step back on the scale twice a year — and those who pass the inspection do nothing." data-date="2026-06-18" data-tags="Investing">
+    <h3>Twice a Year, Put the Judgment Back on the Scale</h3>
+    <hr class="summary-divider"><div class="summary-text">The annual-report and quarterly windows are not for reading earnings; they are inspection windows for the judgment itself: whether the unchanging assets still stand, whether the valuation coordinates have drifted. Step back on the scale twice a year — and those who pass the inspection do nothing.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/ai-needs-a-job/" data-title="No Human Matches AI&#39;s Cognition. Not One." data-summary="It lacks nothing except a job. You lack nothing except a tireless colleague." data-date="2026-09-05" data-tags="Tech,Business">
-    <h3>No Human Matches AI&#39;s Cognition. Not One.</h3>
-    <hr class="summary-divider"><div class="summary-text">It lacks nothing except a job. You lack nothing except a tireless colleague.</div>
-    <div class="blog-tags"><span>Tech</span><span>Business</span></div>
+<a class="blog-card" href="/en/blog/posts/quant-desymbolization/" data-title="Stocks Are Just Chips to a Quant" data-summary="Quant managers really don&#39;t care about a stock&#39;s story — it has been desymbolized into a stream of numbers. But that is not a toy, it is a precision factory, and the worst thing a retail investor can do is imitate it." data-date="2026-06-16" data-tags="Investing">
+    <h3>Stocks Are Just Chips to a Quant</h3>
+    <hr class="summary-divider"><div class="summary-text">Quant managers really don&#39;t care about a stock&#39;s story — it has been desymbolized into a stream of numbers. But that is not a toy, it is a precision factory, and the worst thing a retail investor can do is imitate it.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Investing</span></div>
 </a>
 
-<a class="blog-card" href="/en/blog/posts/game-incubator/" data-title="No Games, No WeChat. No Games, No CUDA." data-summary="Games are an incubator — and what hatches rarely belongs to the incubator&#39;s owner." data-date="2026-09-05" data-tags="Business,Tech">
-    <h3>No Games, No WeChat. No Games, No CUDA.</h3>
-    <hr class="summary-divider"><div class="summary-text">Games are an incubator — and what hatches rarely belongs to the incubator&#39;s owner.</div>
-    <div class="blog-tags"><span>Business</span><span>Tech</span></div>
+<a class="blog-card" href="/en/blog/posts/quality-localized-too/" data-title="Quality Got Localized Too" data-summary="Prices can adapt to the local market; once quality follows, what drops is more than the price." data-date="2026-06-14" data-tags="Marketing">
+    <h3>Quality Got Localized Too</h3>
+    <hr class="summary-divider"><div class="summary-text">Prices can adapt to the local market; once quality follows, what drops is more than the price.</div>
+    <div class="blog-tags"><span class="card-rt">4 min read</span><span>Marketing</span></div>
 </a>
 
 </div>
@@ -182,9 +214,9 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 
 <div class="pagination-shell" id="paginationShell">
     <a href="/en/blog/page/3/" class="page-nav">← Previous</a>
-    <a href="/en/blog/" class="page-btn">1</a><a href="/en/blog/page/2/" class="page-btn">2</a><a href="/en/blog/page/3/" class="page-btn">3</a><span class="page-btn active">4</span><a href="/en/blog/page/5/" class="page-btn">5</a><a href="/en/blog/page/6/" class="page-btn">6</a><a href="/en/blog/page/7/" class="page-btn">7</a><a href="/en/blog/page/8/" class="page-btn">8</a>
+    <a href="/en/blog/" class="page-btn">1</a><a href="/en/blog/page/2/" class="page-btn">2</a><a href="/en/blog/page/3/" class="page-btn">3</a><span class="page-btn active">4</span><a href="/en/blog/page/5/" class="page-btn">5</a><a href="/en/blog/page/6/" class="page-btn">6</a><span class="page-gap">…</span><a href="/en/blog/page/15/" class="page-btn">15</a>
     <a href="/en/blog/page/5/" class="page-nav">Next →</a>
-    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="8" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
+    <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="15" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
 
 <script>
@@ -193,10 +225,11 @@ var si=document.getElementById("blogSearch");var grid=document.getElementById("b
 if(!si||!grid||!res)return;
 var IDX=null,loading=false;
 var INDEX_URL="\/en\/blog\/index.json";
-var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","finance":"\/en\/tags\/finance\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
+var TAGURLS={ "business":"\/en\/tags\/business\/","economy":"\/en\/tags\/economy\/","investing":"\/en\/tags\/investing\/","marketing":"\/en\/tags\/marketing\/","society":"\/en\/tags\/society\/","tech":"\/en\/tags\/tech\/", };
 var L_ART=" articles · ";
 var L_TAG=" tags";
 var L_TAGS="Matching tags:";
+var L_RTFMT="$1 min read";
 var L_EMPTY="No matching articles or tags.";
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -215,25 +248,34 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
   if(ce)ce.textContent="";
 }
 function resetView(){res.style.display="none";res.innerHTML="";grid.style.display="";if(pag)pag.style.display="";if(sortShell)sortShell.style.display="";if(ce)ce.textContent=""}
-si.value="";si.addEventListener("input",function(){
-  var q=this.value.toLowerCase().trim();
+var qp=null;try{qp=new URLSearchParams(location.search).get("q")}catch(e){}
+function setQ(raw){try{var u=new URL(location.href);if(raw)u.searchParams.set("q",raw);else u.searchParams.delete("q");history.replaceState(null,"",u)}catch(e){}}
+si.value=qp||"";
+si.addEventListener("input",function(){
+  var raw=this.value;var q=raw.toLowerCase().trim();
+  setQ(q?raw:"");
   if(!q){resetView();return}
   if(IDX){render(q);return}
   if(loading)return;loading=true;
   if(ce)ce.textContent="…";
   fetch(INDEX_URL).then(function(r){return r.json()}).then(function(d){IDX=d;loading=false;var n=si.value.toLowerCase().trim();if(n)render(n)}).catch(function(){loading=false;if(ce)ce.textContent=""});
 });
-var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 8 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
+if(si.value){si.dispatchEvent(new Event("input"))}
+var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<= 15 ){window.location.href="\/en\/blog\/".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
 </script>
 <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
     <a href="https://linkedin.com/in/fengyuwang-com/recent-activity/all/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; min-width:220px; padding:12px 35px; border-radius:50px; background:#0071e3; color:#fff; font-weight:700; font-size:15px; text-decoration:none; border:2px solid #0071e3; transition:0.4s;" onmouseover="this.style.background='transparent'; this.style.color='#0071e3'" onmouseout="this.style.background='#0071e3'; this.style.color='#fff'">View LinkedIn Activity</a>

@@ -17,9 +17,11 @@ body[data-theme="dark"] .search-input { background:#1e293b; border-color:rgba(14
 .pagination-shell a,.pagination-shell span.page-btn { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:36px; padding:0 10px; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; color:#374151; background:transparent; border:1px solid transparent; }
 .pagination-shell a:hover { background:rgba(0,113,227,.08); border-color:rgba(0,113,227,.2); }
 .pagination-shell .page-btn.active { background:#0071e3; color:#fff; border-color:#0071e3; }
+.pagination-shell .page-gap { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:36px; color:#6b7280; font-weight:700; }
 body[data-theme="dark"] .pagination-shell a, body[data-theme="dark"] .pagination-shell span.page-btn { color:#9fb0c3; }
 body[data-theme="dark"] .pagination-shell .go-to-input { background:#1e293b; border-color:rgba(148,163,184,.2); color:#e5ecf4; }
 body[data-theme="dark"] .pagination-shell .page-btn.active { color:#fff; }
+body[data-theme="dark"] .pagination-shell .page-gap { color:#8296ac; }
 .pagination-shell .go-to-shell { display:inline-flex; align-items:center; gap:4px; margin-left:8px; }
 .pagination-shell .go-to-input { width:48px; height:32px; text-align:center; border:1px solid rgba(15,23,42,.12); border-radius:8px; font-size:.85rem; outline:0; background:#fff; color:#111827; }
 .pagination-shell .go-to-btn { height:32px; padding:0 12px; border:0; border-radius:8px; background:#0071e3; color:#fff; font-size:.82rem; font-weight:600; cursor:pointer; }
@@ -34,6 +36,8 @@ body[data-theme="dark"] .sort-shell label { color:#9fb0c3; }
 .tag-cloud a:hover { background:rgba(0,113,227,.12); }
 .blog-card .blog-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .blog-card .blog-tags span { display:inline-flex; padding:2px 8px; border-radius:999px; background:rgba(0,113,227,.06); color:#0071e3; font-size:.72rem; font-weight:600; }
+.blog-card .blog-tags span.card-rt { background:rgba(15,23,42,.05); color:#6b7280; }
+body[data-theme="dark"] .blog-card .blog-tags span.card-rt { background:rgba(148,163,184,.12); color:#8296ac; }
 .search-meta { text-align:center; font-size:.88rem; color:#6b7280; font-weight:600; margin:0 0 18px; }
 body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 .search-tag-row { text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
@@ -41,15 +45,38 @@ body[data-theme="dark"] .search-meta { color:#9fb0c3; }
 body[data-theme="dark"] .search-tag-label { color:#9fb0c3; }
 #searchResults mark { background:rgba(255,214,10,.45); color:inherit; border-radius:3px; padding:0 2px; }
 body[data-theme="dark"] #searchResults mark { background:rgba(250,204,21,.28); color:#fde68a; }
-.snippet-text { font-size:.85rem; color:#9ca3af; line-height:1.6; margin:10px 0 0; }
+.snippet-text { font-size:.85rem; color:#6b7280; line-height:1.6; margin:10px 0 0; }
 body[data-theme="dark"] .snippet-text { color:#8296ac; }
 .search-empty { text-align:center; color:#6b7280; font-size:.95rem; padding:40px 0; }
+.util-chips { display:flex; justify-content:center; gap:10px; margin:-14px 0 24px; flex-wrap:wrap; }
+.util-chip { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; border:1px solid rgba(15,23,42,.12); font-size:.8rem; font-weight:600; color:#374151; text-decoration:none; }
+.util-chip:hover { border-color:rgba(0,113,227,.35); color:#0071e3; background:rgba(0,113,227,.06); }
+.util-chip.rss { color:#b45309; border-color:rgba(234,123,28,.35); background:rgba(234,123,28,.06); }
+.util-chip.rss::before { content:""; width:8px; height:8px; border-radius:50%; background:#ea7b1c; }
+.util-chip.rss:hover { background:rgba(234,123,28,.12); }
+body[data-theme="dark"] .util-chip { color:#9fb0c3; border-color:rgba(148,163,184,.2); }
+body[data-theme="dark"] .util-chip:hover { color:#60a5fa; border-color:rgba(96,165,250,.4); background:rgba(41,151,255,.08); }
+body[data-theme="dark"] .util-chip.rss { color:#f5a25b; border-color:rgba(234,123,28,.4); background:rgba(234,123,28,.1); }
+.rss-toast { display:none; justify-content:center; margin:-14px 0 22px; }
+.rss-toast.show { display:flex; }
+.rss-toast-inner { max-width:560px; margin:0 16px; padding:12px 20px; border-radius:14px; background:#fff; border:1px solid rgba(15,23,42,.1); box-shadow:0 10px 28px rgba(15,23,42,.1); font-size:.84rem; line-height:1.6; color:#374151; text-align:center; }
+.rss-toast-url { display:block; margin-top:5px; font-size:.75rem; color:#0071e3; word-break:break-all; user-select:all; }
+body[data-theme="dark"] .rss-toast-inner { background:#1e293b; border-color:rgba(148,163,184,.15); color:#9fb0c3; }
+body[data-theme="dark"] .rss-toast-url { color:#60a5fa; }
 
 @media (max-width:767px) { .blog-grid { grid-template-columns:1fr; } }
 .back-to-top { position:fixed; bottom:30px; right:30px; width:48px; height:48px; border-radius:50%; background:#0071e3; color:#fff; border:none; box-shadow:0 8px 24px rgba(0,113,227,.3); cursor:pointer; font-size:20px; display:none; align-items:center; justify-content:center; z-index:999; transition:opacity .2s; }.back-to-top.show { display:flex; }.back-to-top:hover { background:#0062cc; }body[data-theme="dark"] .back-to-top { background:#4f7eff; box-shadow:0 8px 24px rgba(79,126,255,.25); }body[data-theme="dark"] .back-to-top:hover { background:#3a6af0; }</style>
 <div class="page-header"><h1>{{ .Title }}</h1></div>
 <div class="search-shell"><input class="search-input" type="text" id="blogSearch" placeholder="{{ if eq $lang "en" }}Search articles...{{ else if eq $lang "zh-hk" }}搜尋文章...{{ else }}搜索文章...{{ end }}" autocomplete="off"><div class="search-count" id="searchCount"></div></div>
 <div class="tag-cloud">{{ range .Site.Taxonomies.tags.Alphabetical }}<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} ({{ .Count }})</a>{{ end }}</div>
+<div class="util-chips">
+    <a class="util-chip rss" id="rssChip" href="{{ "/blog/index.xml" | relLangURL }}" title="{{ if eq $lang "en" }}Copy the feed URL for your RSS reader{{ else if eq $lang "zh-hk" }}複製訂閱地址，貼入 RSS 閱讀器{{ else }}复制订阅地址，粘贴到 RSS 阅读器{{ end }}">{{ if eq $lang "en" }}Subscribe via RSS{{ else if eq $lang "zh-hk" }}RSS 訂閱{{ else }}RSS 订阅{{ end }}</a>
+    <a class="util-chip" href="{{ "/archive/" | relLangURL }}">{{ if eq $lang "en" }}Archive by year{{ else if eq $lang "zh-hk" }}按年份歸檔{{ else }}按年份归档{{ end }}</a>
+</div>
+<div class="rss-toast" id="rssToast"><div class="rss-toast-inner">{{ if eq $lang "en" }}Feed URL copied — paste it into any RSS reader (Folo · Inoreader · NetNewsWire) to subscribe. Not copied? Select the address below manually.{{ else if eq $lang "zh-hk" }}訂閱地址已複製，貼入任意 RSS 閱讀器（Folo · Inoreader · NetNewsWire）即可訂閱。未複製成功可手動選取下方地址。{{ else }}订阅地址已复制，粘贴到任意 RSS 阅读器（Folo · Inoreader · NetNewsWire）即可订阅。未复制成功可手动选取下方地址。{{ end }}<span class="rss-toast-url">{{ printf "%sindex.xml" .Permalink }}</span></div></div>
+<script>
+(function(){var chip=document.getElementById("rssChip"),t=document.getElementById("rssToast");if(!chip||!t)return;var timer;chip.addEventListener("click",function(e){e.preventDefault();var url=new URL(chip.getAttribute("href"),location.href).href;var show=function(){t.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){t.classList.remove("show")},8000);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(show,show);}else{show();}});})();
+</script>
 <div class="sort-shell">
     <label for="sortSelect">{{ if eq .Site.Language.Lang "en" }}Sort by{{ else }}排序{{ end }}</label>
     <select id="sortSelect">
@@ -59,11 +86,11 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 </div>
 
 <div class="blog-grid" id="blogGrid">
-{{ range .Paginator.Pages.ByDate.Reverse }}
+{{ range .Paginator.Pages.ByDate.Reverse }}{{ $rt := 1 }}{{ if eq $lang "en" }}{{ $rt = int (math.Ceil (div (float .WordCount) 220.0)) }}{{ else }}{{ $rt = int (math.Ceil (div (float (len .Plain)) 350.0)) }}{{ end }}
 <a class="blog-card" href="{{ .RelPermalink }}" data-title="{{ .Title }}" data-summary="{{ .Params.description }}" data-date="{{ .Date.Format "2006-01-02" }}" data-tags="{{ with .Params.tags }}{{ delimit . "," }}{{ end }}">
     <h3>{{ .Title }}</h3>
     {{ if .Params.description }}<hr class="summary-divider"><div class="summary-text">{{ .Params.description }}</div>{{ end }}
-    {{ if .Params.tags }}<div class="blog-tags">{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    <div class="blog-tags"><span class="card-rt">{{ if eq $lang "en" }}{{ $rt }} min read{{ else if eq $lang "zh-hk" }}約 {{ $rt }} 分鐘{{ else }}约 {{ $rt }} 分钟{{ end }}</span>{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div>
 </a>
 {{ end }}
 </div>
@@ -71,7 +98,7 @@ body[data-theme="dark"] .snippet-text { color:#8296ac; }
 {{ $totalPages := .Paginator.TotalPages }}{{ if gt $totalPages 1 }}
 <div class="pagination-shell" id="paginationShell">
     {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="page-nav">← {{ if eq $lang "en" }}Previous{{ else if eq $lang "zh-hk" }}上一頁{{ else }}上一页{{ end }}</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">← {{ if eq $lang "en" }}Previous{{ else if eq $lang "zh-hk" }}上一頁{{ else }}上一页{{ end }}</span>{{ end }}
-    {{ range .Paginator.Pagers }}{{ if eq .PageNumber $.Paginator.PageNumber }}<span class="page-btn active">{{ .PageNumber }}</span>{{ else }}<a href="{{ .URL }}" class="page-btn">{{ .PageNumber }}</a>{{ end }}{{ end }}
+    {{ $cur := $.Paginator.PageNumber }}{{ range .Paginator.Pagers }}{{ $n := .PageNumber }}{{ if or (eq $n 1) (eq $n $totalPages) (and (ge $n (sub $cur 2)) (le $n (add $cur 2))) }}{{ if eq $n $cur }}<span class="page-btn active">{{ $n }}</span>{{ else }}<a href="{{ .URL }}" class="page-btn">{{ $n }}</a>{{ end }}{{ else if or (eq $n 2) (eq $n (sub $totalPages 1)) }}<span class="page-gap">…</span>{{ end }}{{ end }}
     {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="page-nav">{{ if eq $lang "en" }}Next →{{ else if eq $lang "zh-hk" }}下一頁 →{{ else }}下一页 →{{ end }}</a>{{ else }}<span class="page-btn" style="opacity:.3;cursor:default;">{{ if eq $lang "en" }}Next →{{ else if eq $lang "zh-hk" }}下一頁 →{{ else }}下一页 →{{ end }}</span>{{ end }}
     <span class="go-to-shell"><input class="go-to-input" type="number" id="goToPage" min="1" max="{{ $totalPages }}" placeholder=""><button class="go-to-btn" id="goToBtn">GO</button></span>
 </div>
@@ -86,6 +113,7 @@ var TAGURLS={ {{ range $name, $tax := .Site.Taxonomies.tags }}"{{ $name }}":"{{ 
 var L_ART={{ if eq $lang "en" }}" articles · "{{ else if eq $lang "zh-hk" }}" 篇文章 · "{{ else }}" 篇文章 · "{{ end }};
 var L_TAG={{ if eq $lang "en" }}" tags"{{ else if eq $lang "zh-hk" }}" 個標籤"{{ else }}" 个标签"{{ end }};
 var L_TAGS={{ if eq $lang "en" }}"Matching tags:"{{ else if eq $lang "zh-hk" }}"相關標籤："{{ else }}"相关标签："{{ end }};
+var L_RTFMT={{ if eq $lang "en" }}"$1 min read"{{ else if eq $lang "zh-hk" }}"約 $1 分鐘"{{ else }}"约 $1 分钟"{{ end }};
 var L_EMPTY={{ if eq $lang "en" }}"No matching articles or tags."{{ else if eq $lang "zh-hk" }}"沒有匹配的文章或標籤。"{{ else }}"没有匹配的文章或标签。"{{ end }};
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
 function hlt(s,q){var r="",i=0,low=s.toLowerCase();for(;;){var p=low.indexOf(q,i);if(p<0){r+=esc(s.slice(i));break}r+=esc(s.slice(i,p))+"<mark>"+esc(s.substr(p,q.length))+"</mark>";i=p+q.length}return r}
@@ -104,25 +132,34 @@ function render(q){
     return '<a class="blog-card" href="'+p.url+'"><h3>'+hlt(p.title,q)+'</h3>'
       +(p.description?'<hr class="summary-divider"><div class="summary-text">'+hlt(p.description,q)+'</div>':'')
       +(hitContent?'<hr class="summary-divider"><div class="snippet-text">'+snip(p.content,q)+'</div>':'')
-      +(p.tags.length?'<div class="blog-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
+      +(p.tags.length?'<div class="blog-tags"><span class="card-rt">'+L_RTFMT.replace('$1',p.rt)+'</span>'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div>':'')
       +'</a>'}).join('')+'</div>';
   res.innerHTML=h;res.style.display="";grid.style.display="none";
   if(pag)pag.style.display="none";if(sortShell)sortShell.style.display="none";
   if(ce)ce.textContent="";
 }
 function resetView(){res.style.display="none";res.innerHTML="";grid.style.display="";if(pag)pag.style.display="";if(sortShell)sortShell.style.display="";if(ce)ce.textContent=""}
-si.value="";si.addEventListener("input",function(){
-  var q=this.value.toLowerCase().trim();
+var qp=null;try{qp=new URLSearchParams(location.search).get("q")}catch(e){}
+function setQ(raw){try{var u=new URL(location.href);if(raw)u.searchParams.set("q",raw);else u.searchParams.delete("q");history.replaceState(null,"",u)}catch(e){}}
+si.value=qp||"";
+si.addEventListener("input",function(){
+  var raw=this.value;var q=raw.toLowerCase().trim();
+  setQ(q?raw:"");
   if(!q){resetView();return}
   if(IDX){render(q);return}
   if(loading)return;loading=true;
   if(ce)ce.textContent="…";
   fetch(INDEX_URL).then(function(r){return r.json()}).then(function(d){IDX=d;loading=false;var n=si.value.toLowerCase().trim();if(n)render(n)}).catch(function(){loading=false;if(ce)ce.textContent=""});
 });
+if(si.value){si.dispatchEvent(new Event("input"))}
 var gb=document.getElementById("goToBtn");var gi=document.getElementById("goToPage");if(gb&&gi){function gp(){var p=parseInt(gi.value,10);if(p>=1&&p<={{ $totalPages }}){window.location.href="{{ (index .Paginator.Pagers 0).URL }}".replace("/page/1/","/page/"+p+"/");}}gb.addEventListener("click",gp);gi.addEventListener("keydown",function(e){if(e.key==="Enter")gp();});}})();
 </script>
 <script>
 (function(){var ss=document.getElementById("sortSelect");var grid=document.getElementById("blogGrid");if(!ss||!grid)return;var sv=sessionStorage.getItem("blogSort");if(sv)ss.value=sv;var cards=Array.from(grid.querySelectorAll(".blog-card"));function doSort(){var v=ss.value;cards.sort(function(a,b){if(v==="date"){return(b.getAttribute("data-date")||"").localeCompare(a.getAttribute("data-date")||"")}if(v==="title"){return(a.getAttribute("data-title")||"").localeCompare(b.getAttribute("data-title")||"")}return 0});grid.replaceChildren(...cards)}if(sv)doSort();ss.addEventListener("change",function(){sessionStorage.setItem("blogSort",ss.value);doSort()})})();
+</script>
+<script>
+(function(){try{var su=sessionStorage.getItem("blogListUrl");var sp=parseInt(sessionStorage.getItem("blogListScroll")||"0",10);if(su!==null&&su===location.pathname+location.search&&sp>0){window.scrollTo(0,sp);sessionStorage.removeItem("blogListScroll");}sessionStorage.setItem("blogListUrl",location.pathname+location.search);}catch(e){}
+var lt=0;window.addEventListener("scroll",function(){var n=Date.now();if(n-lt<200)return;lt=n;try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}},{passive:true});window.addEventListener("pagehide",function(){try{sessionStorage.setItem("blogListScroll",String(window.scrollY))}catch(e){}});})();
 </script>
 <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
     <a href="https://linkedin.com/in/fengyuwang-com/recent-activity/all/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; min-width:220px; padding:12px 35px; border-radius:50px; background:#0071e3; color:#fff; font-weight:700; font-size:15px; text-decoration:none; border:2px solid #0071e3; transition:0.4s;" onmouseover="this.style.background='transparent'; this.style.color='#0071e3'" onmouseout="this.style.background='#0071e3'; this.style.color='#fff'">{{ if eq $lang "en" }}View LinkedIn Activity{{ else if eq $lang "zh-hk" }}查看 LinkedIn 動態{{ else }}查看 LinkedIn 动态{{ end }}</a>

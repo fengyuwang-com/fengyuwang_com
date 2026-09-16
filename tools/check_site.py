@@ -47,6 +47,13 @@ NEW_CUTOFF = "2026-08-15"  # v6.3 规范生效后的新文 (直角引号禁令)
 
 
 # ---------- 模式 0: 单篇发布前校验 (--article) ----------
+def md_bold_quote_hits(body):
+    """Goldmark 左翼规则: ** 紧邻引号开不上 <strong>, 星号外露 (两层界面篇 2026-09-13 教训)"""
+    mb = re.sub(r"```.*?```", "", body, flags=re.S)
+    mb = re.sub(r"`[^`\n]*`", "", mb)
+    return (re.findall(r'\*\*["\u201c\u201d]', mb)
+            + re.findall(r'["\u201c\u201d]\*\*[\w\u4e00-\u9fff]', mb))
+
 if ARGS.article:
     for path in ARGS.article:
         text = open(path, encoding="utf-8").read()
@@ -54,8 +61,9 @@ if ARGS.article:
         hits = [t for t in TRACES if t in text]
         han = len(re.findall(r"[\u4e00-\u9fff]", body))
         nq = text.count("「")
-        status = "OK " if not hits else "!!!"
-        print(f"{status} {path}  汉字={han}  痕迹词={hits if hits else '无'}  直角引号={nq} 处 (旧文豁免, 新文必须为 0)")
+        mbold = md_bold_quote_hits(text)
+        status = "OK " if not hits and not mbold else "!!!"
+        print(f"{status} {path}  汉字={han}  痕迹词={hits if hits else '无'}  直角引号={nq} 处 (旧文豁免, 新文必须为 0)  加粗紧邻引号={len(mbold)}")
         for t in hits:
             i = text.find(t)
             print(f"    -> …{text[max(0, i - 30):i + 30]}…")
@@ -65,6 +73,7 @@ try:
     from opencc import OpenCC
     cc = OpenCC("s2hk")
     cc_t = OpenCC("hk2s")
+    cc_t2s_global = OpenCC("t2s")
 except ImportError:
     cc = cc_t = None
 
@@ -106,6 +115,8 @@ for lang in LANGS:
                 err("trace", f"{p['path']}: 痕迹词「{t}」")
         if p["date"] >= NEW_CUTOFF and "「" in p["body"]:
             err("quote", f"{p['path']}: 新文含直角引号「")
+        for _ in md_bold_quote_hits(p["body"]):
+            err("mdbold", f"{p['path']}: 加粗 ** 紧邻引号 (开不上 <strong>, 星号外露)")
         dm = re.search(r'description:\s*"?([^"\n]*)"?', p["fm"])
         if not dm or len(dm.group(1).strip()) < 10:
             err("desc", f"{p['path']}: description 缺失或过短 ({dm.group(1) if dm else ''!r})")
@@ -138,7 +149,9 @@ if cc:
             if "\u4e00" <= ch <= "\u9fff" and cc_t.convert(ch) != ch and cc.convert(ch) != ch:
                 resid[ch] = p["body"].count(ch)
         # 只报 opencc s2hk 能转的简体字 (上下文相关字如 里/干/佣/游 不算)
-        simp = {ch: n for ch, n in resid.items() if cc.convert(ch) != ch}
+        # 排除 s2hk 误映射到简体字的正体 (如 稅→税: 目标本身不再被 t2s 转换, 说明它是简体, 该字并非泄漏)
+        simp = {ch: n for ch, n in resid.items()
+                if cc.convert(ch) != ch and cc_t2s_global.convert(cc.convert(ch)) != cc.convert(ch)}
         if sum(simp.values()) > 3:
             err("zh-hk-simp", f"{p['path']}: 简体泄漏 {sum(simp.values())} 处: {simp}")
     from opencc import OpenCC as _O
@@ -173,29 +186,39 @@ for lang in LANGS:
         err("deploy", f"{lang}: {len(miss)} 篇源文件未部署: {sorted(miss)[:5]}… (需 hugo + deploy.sh)")
     if extra:
         err("deploy", f"{lang}: {len(extra)} 篇部署副本无源文件: {sorted(extra)[:5]}")
-    # RSS 一致
+    # RSS 一致 (feed 只保留最近 20 篇全文, 见 layouts/blog/rss.xml)
     rss = f"{lang}/blog/index.xml"
     if os.path.exists(rss):
         n = open(rss, encoding="utf-8").read().count("<item>")
-        if n != len(src):
-            err("deploy", f"{lang}: 根目录 RSS {n} 条 vs 源 {len(src)} 篇")
+        expected = min(20, len(src))
+        if n != expected:
+            err("deploy", f"{lang}: 根目录 RSS {n} 条 vs 预期 {expected} (源 {len(src)} 篇, feed 上限 20)")
     else:
         err("deploy", f"{lang}: 根目录 RSS 缺失")
 ok("deploy", f"部署副本: " + ", ".join(f"{l} {len(glob.glob(l+'/blog/posts/*'))} 篇" for l in LANGS))
 
-# ---------- 6. sitemap ----------
+# ---------- 6. sitemap (tools/gen_sitemap.py 自动生成, 全量覆盖) ----------
 if os.path.exists("sitemap.xml"):
     sm = open("sitemap.xml", encoding="utf-8").read()
-    locs = sm.count("<loc>")
-    pages = len(glob.glob("_site/**/*.html", recursive=True))
-    if pages == 0:
-        notes.append("[sitemap] _site 不存在 (构建后已清理), 跳过数量比对; 当前 loc={}".format(locs))
-    elif abs(locs - pages) > 5:
-        err("sitemap", f"sitemap {locs} loc vs 构建 {pages} 页, 需重生成")
+    locs = set(re.findall(r"<loc>([^<]+)</loc>", sm))
+    n_posts_src = sum(sum(1 for p in posts[l] if "draft: true" not in p["fm"]) for l in LANGS)
+    if len(locs) < n_posts_src:  # 至少覆盖全部博文 (canonical 去重后 pagination 页不单独成 URL)
+        err("sitemap", f"sitemap 仅 {len(locs)} 个 URL (<{n_posts_src} 篇博文), 疑漏生成, 需重跑 tools/gen_sitemap.py (deploy.sh 已挂钩)")
     else:
-        ok("sitemap", f"sitemap {locs} loc ≈ 构建 {pages} 页")
-    if "https://www.fengyuwang.com/en/blog/" not in sm:
-        err("sitemap", "sitemap 缺博客索引 URL")
+        ok("sitemap", f"sitemap {len(locs)} 个 URL (canonical 去重后)")
+    import urllib.parse
+    for l in LANGS:
+        want = {f"https://www.fengyuwang.com/{l}/blog/", f"https://www.fengyuwang.com/{l}/archive/"}
+        for d in glob.glob(f"{l}/tags/*/index.html"):
+            want.add(f"https://www.fengyuwang.com/{l}/tags/{urllib.parse.quote(os.path.basename(os.path.dirname(d)))}/")
+        missing = sorted(want - locs)
+        if missing:
+            err("sitemap", f"{l}: sitemap 缺 {len(missing)} 个页面 URL: {missing[:3]}")
+    for l in LANGS:
+        n_src = sum(1 for p in posts[l] if "draft: true" not in p["fm"])
+        n_sm = sum(1 for u in locs if f"/{l}/blog/posts/" in u)
+        if n_sm != n_src:
+            err("sitemap", f"{l}: sitemap 博文 URL {n_sm} 篇 vs 源 {n_src} 篇")
 else:
     err("sitemap", "根目录 sitemap.xml 缺失")
 
@@ -395,9 +418,14 @@ for l in LANGS:
     if os.path.exists(lp):
         lh = open(lp, encoding="utf-8").read()
         for needle, label in [('id="blogSearch"', "搜索框"), ('id="searchResults"', "搜索结果容器"),
-                              ("index.json", "索引引用"), ('id="blogGrid"', "文章网格")]:
+                              ("index.json", "索引引用"), ('id="blogGrid"', "文章网格"),
+                              ('application/rss+xml', "RSS 自动发现"), ('/archive/', "归档入口"),
+                              ('id="rssToast"', "RSS 订阅提示"),
+                              ('new URLSearchParams', "搜索 URL 状态")]:
             if needle not in lh:
                 err("search", f"{lp} 缺{label} ({needle})")
+    if not os.path.exists(f"{l}/archive/index.html"):
+        err("search", f"{l}/archive/index.html 归档页未部署 (需 hugo + deploy.sh)")
 
 # ---------- 12.5 hover 态对比度 (静态 CSS 分析) ----------
 # 背景: 首页 default-btn-one 暗色 hover 白底白字 bug (内联暗色规则压过全局 hover 规则)。
@@ -1007,6 +1035,51 @@ for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("
                 elif ".html" in u:
                     err("seo-url", f"{f}: {label} 带 .html (会 308): {u}")
 
+# ---------- 16.5c 页面必备元素清单 ----------
+# 背景: footer/back-to-top/og 标签此前靠人记, 手写页容易漏。每个子页必须齐备。
+REQUIRED_SNIPPETS = [
+    ('id="shared-subpage-navbar"', "导航栏挂载点"),
+    ('id="shared-site-footer"', "footer 挂载点"),
+    ('id="backToTop"', "返回顶部按钮"),
+    ('name="description"', "description meta"),
+    ('rel="canonical"', "canonical"),
+    ('property="og:title"', "og:title"),
+    ('property="og:description"', "og:description"),
+    ('property="og:image"', "og:image"),
+    ('name="twitter:card"', "twitter:card"),
+    ('hreflang="x-default"', "hreflang x-default"),
+]
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html")):
+    s = open(f, encoding="utf-8").read()
+    missing = [label for snippet, label in REQUIRED_SNIPPETS if snippet not in s]
+    if missing:
+        err("page-elements", f"{f}: 缺 {', '.join(missing)}")
+    else:
+        ok("page-elements", f"{f}: 必备元素 10/10")
+
+# ---------- 16.5d 关键选择器字号+颜色声明 (section-card 卡片内 h2/punchline/case-desc) ----------
+# 背景: human-in-the-loop 页 h1 漏写 font-size 掉主题巨字号。凡使用 .section-card 的页面,
+# 其 h2 与 .punchline 必须在页内 CSS 声明字号; .punchline/.case-desc 必须声明颜色(含暗色覆盖)。
+for f in sorted(glob.glob("zh-cn/*.html") + glob.glob("en/*.html") + glob.glob("zh-hk/*.html")):
+    s = open(f, encoding="utf-8").read()
+    if "section-card" not in s:
+        continue
+    style = " ".join(re.findall(r"<style>(.*?)</style>", s, re.S))
+    probs = []
+    if re.search(r'class="[^"]*\bpunchline', s) and not re.search(r"\.punchline\s*{[^}]*font-size", style):
+        probs.append(".punchline 缺字号声明")
+    if re.search(r'class="[^"]*\bcase-desc', s) and not re.search(r"\.case-desc\s*{[^}]*font-size", style):
+        probs.append(".case-desc 缺字号声明")
+    if "<h2" in s and not re.search(r"h2[^{}]*\{[^}]*font-size", style):
+        probs.append("h2 缺字号声明 (2026-09-12 审计: 全站已合规, 此后新增页须显式声明)")
+    if "<h3" in s and not re.search(r"h3[^{}]*\{[^}]*font-size", style):
+        probs.append("h3 缺字号声明 (2026-09-12 审计: 全站已合规, 此后新增页须显式声明)")
+    if probs:
+        err("key-selector", f"{f}: {'; '.join(probs)}")
+    else:
+        ok("key-selector", f"{f}: 关键选择器字号齐备")
+
+
 
 # ---------- 16.6 _redirects 金丝雀 (防覆盖丢规则) ----------
 # 背景: 2026-09-11 _redirects 被一次盲写覆盖 39 行既有规则。设金丝雀行 + 行数基线,
@@ -1030,6 +1103,53 @@ if os.path.exists("_redirects"):
         ok("redirects", f"_redirects {len(rdl)} 条规则, 金丝雀齐全")
 else:
     err("redirects", "_redirects 缺失")
+
+# ---------- 16.7 JSON-LD 结构化数据 (防复发: 2026-09-16 Google Search Console 报
+# Unparsable + Breadcrumb id 无效; 根因有二: ①single.html 模板 BlogPosting 缺 publisher/
+# 根对象闭合括号 ②Go html/template 在 <script> 内对 jsonify 输出做 JS 二次转义, 值被包成
+# "\"...\""。修法: 补 }} + 全部 jsonify 加 | safeJS。本节逐页解析断言。)
+_ld_files = []
+for l in LANGS:
+    _ld_files += sorted(glob.glob(f"{l}/blog/posts/*/index.html"))
+_ld_bad = 0
+for _f in _ld_files:
+    _h = open(_f, encoding="utf-8").read()
+    _blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', _h, re.S)
+    if len(_blocks) != 2:
+        err("jsonld", f"{_f}: ld+json 块 {len(_blocks)} 个 (预期 2: BlogPosting + BreadcrumbList)")
+        _ld_bad += 1
+        continue
+    try:
+        _bp = json.loads(_blocks[0])
+        _bc = json.loads(_blocks[1])
+    except Exception as _e:
+        err("jsonld", f"{_f}: JSON 解析失败 ({str(_e)[:60]})")
+        _ld_bad += 1
+        continue
+    for _k in ("headline", "url", "description", "keywords"):
+        _v = _bp.get(_k)
+        if isinstance(_v, str) and _v.startswith('"'):
+            err("jsonld", f"{_f}: BlogPosting.{_k} 被二次转义 (值以引号开头: {_v[:20]!r})")
+            _ld_bad += 1
+            break
+    else:
+        _items = _bc.get("itemListElement", []) if isinstance(_bc, dict) else []
+        if len(_items) != 3:
+            err("jsonld", f"{_f}: BreadcrumbList 仅 {len(_items)} 节 (预期 3)")
+            _ld_bad += 1
+        else:
+            for _it in _items:
+                _item, _name = _it.get("item", ""), _it.get("name", "")
+                if not (isinstance(_item, str) and _item.startswith("https://www.fengyuwang.com/") and '"' not in _item):
+                    err("jsonld", f"{_f}: 面包屑第 {_it.get('position')} 节 item 非法 ({_item[:50]!r})")
+                    _ld_bad += 1
+                    break
+                if isinstance(_name, str) and _name.startswith('"'):
+                    err("jsonld", f"{_f}: 面包屑第 {_it.get('position')} 节 name 被二次转义 ({_name[:20]!r})")
+                    _ld_bad += 1
+                    break
+if not _ld_bad:
+    ok("jsonld", f"JSON-LD 全绿: {len(_ld_files)} 篇 ×2 块可解析, 值干净, 面包屑 item 合法")
 
 # ---------- 汇总 ----------
 if dark_out:

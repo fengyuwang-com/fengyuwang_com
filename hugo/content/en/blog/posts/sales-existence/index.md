@@ -1,6 +1,6 @@
 ---
 title: "The Existence of Sales"
-date: 2026-09-06
+date: 2026-02-02
 description: "Sales isn't the disease — it's the disease setting off alarms."
 slug: "sales-existence"
 tags: ["Business"]
