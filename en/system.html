@@ -62,7 +62,7 @@
 		.block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
 		.punchline { font-size: 1.15rem; font-weight: 700; color: #1f3b8a; margin: 20px 0 18px; }
 
-		/* 思想体系: SVG 结构图 */
+		/* thinking-system: SVG structure diagram */
 		.sys-diagram-wrap { background-color: #ffffff; border-radius: 18px; border: 1px solid rgba(148,163,184,.10); padding: 8px; margin-bottom: 4px; }
 		.sys-diagram { display: block; width: 100%; height: auto; background-color: #ffffff; border-radius: 14px; color: #0f172a; }
 		.sys-diagram text { fill: #0f172a; font-family: inherit; }
@@ -80,13 +80,13 @@
 		.sys-diagram .dg-arrow { stroke: #0071e3; stroke-width: 2; }
 		.sys-diagram .dg-arrowhead { fill: #0071e3; }
 
-		/* 要点卡 */
+		/* point cards */
 		.sys-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 		.sys-point { background: #ffffff; border-radius: 14px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); }
 		.sys-point h3 { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
 		.sys-point p { margin: 0; color: #475569; font-size: .9rem; line-height: 1.8; }
 
-		/* 领域关系图 */
+		/* domain relation graph */
 		.sys-graph-wrap { background-color: #ffffff; border-radius: 18px; border: 1px solid rgba(148,163,184,.10); padding: 6px; }
 		.sys-graph { display: block; width: 100%; height: auto; background-color: #ffffff; border-radius: 14px; color: #0f172a; }
 		.sys-graph text { fill: #0f172a; font-family: inherit; }
@@ -99,7 +99,7 @@
 		.sys-caption { margin: 18px 0 0; padding-left: 18px; color: #475569; line-height: 1.8; font-size: .88rem; }
 		.sys-caption li + li { margin-top: 5px; }
 
-		/* 筛选条 */
+		/* filter bar */
 		.sys-filter { background: #ffffff; border-radius: 14px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); margin-bottom: 22px; }
 		.sys-filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 		.sys-filter-row + .sys-filter-row { margin-top: 12px; }
@@ -110,7 +110,7 @@
 		.sys-count { margin: 14px 0 4px; font-size: .9rem; font-weight: 700; color: #0f172a; }
 		.sys-filter-note { margin: 0; font-size: .82rem; color: #6b7280; line-height: 1.7; }
 
-		/* 分组与卡片 */
+		/* groups and cards */
 		.sys-group { margin-bottom: 30px; }
 		.sys-group[hidden] { display: none !important; }
 		.sys-group h3 { font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; }
@@ -146,7 +146,7 @@
 		.sys-note-card p { margin: 0 0 14px; font-size: .88rem; color: #475569; line-height: 1.8; }
 		.sys-note-card p:last-child { margin-bottom: 0; }
 
-		/* 结尾引导 */
+		/* closing CTA */
 		.link-card { text-align: center; padding: 48px 0 72px; }
 		.link-card p { color: #6b7280; margin-bottom: 12px; }
 		.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
@@ -416,12 +416,12 @@
 						<label class="sys-filter-label" for="sysDomain">Domain</label>
 						<select class="sys-select" id="sysDomain">
 							<option value="">All domains (78)</option>
-							<option value="工具与实验">Tools &amp; Experiments (38)</option>
-							<option value="内容创作">Content Creation (23)</option>
-							<option value="基础设施与编排">Infrastructure &amp; Orchestration (19)</option>
-							<option value="知识与人机协作">Knowledge &amp; Human-AI Collaboration (14)</option>
-							<option value="自动化执行">Automation &amp; Execution (12)</option>
-							<option value="投资金融">Investment &amp; Finance (6)</option>
+							<option value="tools-experiments">Tools &amp; Experiments (38)</option>
+							<option value="content-creation">Content Creation (23)</option>
+							<option value="infrastructure-orchestration">Infrastructure &amp; Orchestration (19)</option>
+							<option value="knowledge-human-ai">Knowledge &amp; Human-AI Collaboration (14)</option>
+							<option value="automation-execution">Automation &amp; Execution (12)</option>
+							<option value="invest-finance">Investment &amp; Finance (6)</option>
 						</select>
 						<label class="sys-filter-label" for="sysSource">Source</label>
 						<select class="sys-select" id="sysSource">
@@ -434,10 +434,10 @@
 					<p class="sys-count" id="sysCount" aria-live="polite">Showing 78 of 78 projects</p>
 					<p class="sys-filter-note">Domain filtering matches every domain a project is labelled with (a project may belong to several domains, so the filtered count can exceed the group count). With scripts disabled the page shows every project by default and stays readable and shareable.</p>
 				</div>
-				<section class="sys-group" data-group="工具与实验">
+				<section class="sys-group" data-group="tools-experiments">
 					<h3>Tools &amp; Experiments <span class="sys-group-count">27 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="llm-text-processor" data-slug="llm-text-processor" data-domains="工具与实验" data-source="local" data-name="llm text processor">
+						<article class="sys-card" id="llm-text-processor" data-slug="llm-text-processor" data-domains="tools-experiments" data-source="local" data-name="llm text processor">
 						<div class="sys-card-head">
 							<h4>LLM Text Processor</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">TypeScript</span></span>
@@ -463,7 +463,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/llm-text-processor" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="readyoffice" data-slug="readyoffice" data-domains="工具与实验" data-source="local" data-name="readyo">
+						<article class="sys-card" id="readyoffice" data-slug="readyoffice" data-domains="tools-experiments" data-source="local" data-name="readyo">
 						<div class="sys-card-head">
 							<h4>ReadyO</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">TypeScript</span></span>
@@ -486,7 +486,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="tts-ui" data-slug="tts-ui" data-domains="工具与实验|内容创作" data-source="local" data-name="tts-ui">
+						<article class="sys-card" id="tts-ui" data-slug="tts-ui" data-domains="tools-experiments|content-creation" data-source="local" data-name="tts-ui">
 						<div class="sys-card-head">
 							<h4>TTS-UI</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Rust</span></span>
@@ -510,7 +510,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="super-invincible-search-king" data-slug="super-invincible-search-king" data-domains="工具与实验|基础设施与编排" data-source="local" data-name="search king">
+						<article class="sys-card" id="super-invincible-search-king" data-slug="super-invincible-search-king" data-domains="tools-experiments|infrastructure-orchestration" data-source="local" data-name="search king">
 						<div class="sys-card-head">
 							<h4>Search King</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -540,7 +540,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengmail" data-slug="fengmail" data-domains="工具与实验|自动化执行" data-source="local" data-name="fengmail">
+						<article class="sys-card" id="fengmail" data-slug="fengmail" data-domains="tools-experiments|automation-execution" data-source="local" data-name="fengmail">
 						<div class="sys-card-head">
 							<h4>FengMail</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">PowerShell</span></span>
@@ -568,7 +568,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengoffice" data-slug="fengoffice" data-domains="工具与实验|内容创作" data-source="local" data-name="fengoffice">
+						<article class="sys-card" id="fengoffice" data-slug="fengoffice" data-domains="tools-experiments|content-creation" data-source="local" data-name="fengoffice">
 						<div class="sys-card-head">
 							<h4>FengOffice</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -598,7 +598,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="open-fengoffice" data-slug="open-fengoffice" data-domains="工具与实验" data-source="local" data-name="open-fengoffice">
+						<article class="sys-card" id="open-fengoffice" data-slug="open-fengoffice" data-domains="tools-experiments" data-source="local" data-name="open-fengoffice">
 						<div class="sys-card-head">
 							<h4>Open-FengOffice</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -624,7 +624,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="lecoofan" data-slug="lecoofan" data-domains="工具与实验" data-source="local" data-name="lecoofan">
+						<article class="sys-card" id="lecoofan" data-slug="lecoofan" data-domains="tools-experiments" data-source="local" data-name="lecoofan">
 						<div class="sys-card-head">
 							<h4>LecooFan</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -649,7 +649,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/lecoofan" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="speed-change" data-slug="speed-change" data-domains="工具与实验" data-source="local" data-name="speed-change">
+						<article class="sys-card" id="speed-change" data-slug="speed-change" data-domains="tools-experiments" data-source="local" data-name="speed-change">
 						<div class="sys-card-head">
 							<h4>Speed-Change</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -672,7 +672,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="python-deterministic-check" data-slug="python-deterministic-check" data-domains="工具与实验|基础设施与编排" data-source="local" data-name="python deterministic check">
+						<article class="sys-card" id="python-deterministic-check" data-slug="python-deterministic-check" data-domains="tools-experiments|infrastructure-orchestration" data-source="local" data-name="python deterministic check">
 						<div class="sys-card-head">
 							<h4>Python Deterministic Check</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -695,7 +695,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/python-deterministic-check" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengcrm" data-slug="fengcrm" data-domains="工具与实验|知识与人机协作" data-source="local" data-name="fengcrm">
+						<article class="sys-card" id="fengcrm" data-slug="fengcrm" data-domains="tools-experiments|knowledge-human-ai" data-source="local" data-name="fengcrm">
 						<div class="sys-card-head">
 							<h4>FengCRM</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Unknown</span></span>
@@ -718,7 +718,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="ace-step-local-patches" data-slug="ace-step-local-patches" data-domains="工具与实验" data-source="remote" data-name="ace-step local patches">
+						<article class="sys-card" id="ace-step-local-patches" data-slug="ace-step-local-patches" data-domains="tools-experiments" data-source="remote" data-name="ace-step local patches">
 						<div class="sys-card-head">
 							<h4>ACE-Step Local Patches</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -736,7 +736,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="unifiedsearch-snapshot" data-slug="unifiedsearch-snapshot" data-domains="工具与实验" data-source="remote" data-name="unifiedsearch snapshot">
+						<article class="sys-card" id="unifiedsearch-snapshot" data-slug="unifiedsearch-snapshot" data-domains="tools-experiments" data-source="remote" data-name="unifiedsearch snapshot">
 						<div class="sys-card-head">
 							<h4>UnifiedSearch Snapshot</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -759,7 +759,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="my-random-backyard" data-slug="my-random-backyard" data-domains="工具与实验" data-source="remote" data-name="my random backyard">
+						<article class="sys-card" id="my-random-backyard" data-slug="my-random-backyard" data-domains="tools-experiments" data-source="remote" data-name="my random backyard">
 						<div class="sys-card-head">
 							<h4>My Random Backyard</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Shell</span></span>
@@ -777,7 +777,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="joytokeyalternative" data-slug="joytokeyalternative" data-domains="工具与实验" data-source="remote" data-name="joytokeyalternative">
+						<article class="sys-card" id="joytokeyalternative" data-slug="joytokeyalternative" data-domains="tools-experiments" data-source="remote" data-name="joytokeyalternative">
 						<div class="sys-card-head">
 							<h4>JoyToKeyAlternative</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">C#</span></span>
@@ -795,7 +795,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/JoyToKeyAlternative" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="7zevery" data-slug="7zevery" data-domains="工具与实验" data-source="remote" data-name="7zevery">
+						<article class="sys-card" id="7zevery" data-slug="7zevery" data-domains="tools-experiments" data-source="remote" data-name="7zevery">
 						<div class="sys-card-head">
 							<h4>7zEvery</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -818,7 +818,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/7zEvery" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="check_dup" data-slug="check_dup" data-domains="工具与实验" data-source="remote" data-name="check_dup">
+						<article class="sys-card" id="check_dup" data-slug="check_dup" data-domains="tools-experiments" data-source="remote" data-name="check_dup">
 						<div class="sys-card-head">
 							<h4>check_dup</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -836,7 +836,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/check_dup" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="data_floating_window1.2" data-slug="data_floating_window1.2" data-domains="工具与实验" data-source="remote" data-name="data floating window 1.2">
+						<article class="sys-card" id="data_floating_window1.2" data-slug="data_floating_window1.2" data-domains="tools-experiments" data-source="remote" data-name="data floating window 1.2">
 						<div class="sys-card-head">
 							<h4>Data Floating Window 1.2</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -854,7 +854,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/data_floating_window1.2" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengfancontrol" data-slug="fengfancontrol" data-domains="工具与实验" data-source="remote" data-name="fengfancontrol">
+						<article class="sys-card" id="fengfancontrol" data-slug="fengfancontrol" data-domains="tools-experiments" data-source="remote" data-name="fengfancontrol">
 						<div class="sys-card-head">
 							<h4>FengFanControl</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -878,7 +878,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/FengFanControl" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="hide-all" data-slug="hide-all" data-domains="工具与实验" data-source="remote" data-name="hide all">
+						<article class="sys-card" id="hide-all" data-slug="hide-all" data-domains="tools-experiments" data-source="remote" data-name="hide all">
 						<div class="sys-card-head">
 							<h4>Hide All</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Shell</span></span>
@@ -896,7 +896,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/hide-all" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="tag_manager" data-slug="tag_manager" data-domains="工具与实验|知识与人机协作" data-source="remote" data-name="tag_manager">
+						<article class="sys-card" id="tag_manager" data-slug="tag_manager" data-domains="tools-experiments|knowledge-human-ai" data-source="remote" data-name="tag_manager">
 						<div class="sys-card-head">
 							<h4>tag_manager</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -914,7 +914,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/tag_manager" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="unifiedsearch" data-slug="unifiedsearch" data-domains="工具与实验" data-source="remote" data-name="unifiedsearch">
+						<article class="sys-card" id="unifiedsearch" data-slug="unifiedsearch" data-domains="tools-experiments" data-source="remote" data-name="unifiedsearch">
 						<div class="sys-card-head">
 							<h4>UnifiedSearch</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -940,7 +940,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/UnifiedSearch" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="unifiedsearchmobile" data-slug="unifiedsearchmobile" data-domains="工具与实验" data-source="remote" data-name="unifiedsearchmobile">
+						<article class="sys-card" id="unifiedsearchmobile" data-slug="unifiedsearchmobile" data-domains="tools-experiments" data-source="remote" data-name="unifiedsearchmobile">
 						<div class="sys-card-head">
 							<h4>UnifiedSearchMobile</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -963,7 +963,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/UnifiedSearchMobile" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="doubao-input" data-slug="doubao-input" data-domains="工具与实验" data-source="remote" data-name="doubao input">
+						<article class="sys-card" id="doubao-input" data-slug="doubao-input" data-domains="tools-experiments" data-source="remote" data-name="doubao input">
 						<div class="sys-card-head">
 							<h4>Doubao Input</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -981,7 +981,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="stack-docs" data-slug="stack-docs" data-domains="工具与实验" data-source="remote" data-name="stack-docs">
+						<article class="sys-card" id="stack-docs" data-slug="stack-docs" data-domains="tools-experiments" data-source="remote" data-name="stack-docs">
 						<div class="sys-card-head">
 							<h4>stack-docs</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1004,7 +1004,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/stack-docs" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="talkifytts" data-slug="talkifytts" data-domains="工具与实验|内容创作" data-source="remote" data-name="talkifytts">
+						<article class="sys-card" id="talkifytts" data-slug="talkifytts" data-domains="tools-experiments|content-creation" data-source="remote" data-name="talkifytts">
 						<div class="sys-card-head">
 							<h4>TalkifyTTS</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Kotlin</span></span>
@@ -1022,7 +1022,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/TalkifyTTS" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="copyevery" data-slug="copyevery" data-domains="工具与实验" data-source="remote" data-name="copyevery">
+						<article class="sys-card" id="copyevery" data-slug="copyevery" data-domains="tools-experiments" data-source="remote" data-name="copyevery">
 						<div class="sys-card-head">
 							<h4>CopyEvery</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -1047,10 +1047,10 @@
 					</article>
 					</div>
 				</section>
-				<section class="sys-group" data-group="内容创作">
+				<section class="sys-group" data-group="content-creation">
 					<h3>Content Creation <span class="sys-group-count">15 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="fengyuwang_com" data-slug="fengyuwang_com" data-domains="内容创作" data-source="local" data-name="fengyuwang_com">
+						<article class="sys-card" id="fengyuwang_com" data-slug="fengyuwang_com" data-domains="content-creation" data-source="local" data-name="fengyuwang_com">
 						<div class="sys-card-head">
 							<h4>fengyuwang_com</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">HTML</span></span>
@@ -1088,7 +1088,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/fengyuwang_com" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="feng-media" data-slug="feng-media" data-domains="内容创作" data-source="local" data-name="fengmedia">
+						<article class="sys-card" id="feng-media" data-slug="feng-media" data-domains="content-creation" data-source="local" data-name="fengmedia">
 						<div class="sys-card-head">
 							<h4>FengMedia</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -1123,7 +1123,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="jingxin" data-slug="jingxin" data-domains="内容创作|工具与实验" data-source="local" data-name="jingxin">
+						<article class="sys-card" id="jingxin" data-slug="jingxin" data-domains="content-creation|tools-experiments" data-source="local" data-name="jingxin">
 						<div class="sys-card-head">
 							<h4>Jingxin</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Dart</span></span>
@@ -1148,7 +1148,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengyuwang_4" data-slug="fengyuwang_4" data-domains="内容创作" data-source="local" data-name="fengyuwang_4">
+						<article class="sys-card" id="fengyuwang_4" data-slug="fengyuwang_4" data-domains="content-creation" data-source="local" data-name="fengyuwang_4">
 						<div class="sys-card-head">
 							<h4>fengyuwang_4</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">HTML</span></span>
@@ -1171,7 +1171,7 @@
 						</div>
 						<span class="sys-card-tag" title="This project exists only on the local machine with no publicly reachable remote repository, so no external link is offered here.">Local only</span>
 					</article>
-						<article class="sys-card" id="resume" data-slug="resume" data-domains="内容创作|自动化执行" data-source="local" data-name="resume">
+						<article class="sys-card" id="resume" data-slug="resume" data-domains="content-creation|automation-execution" data-source="local" data-name="resume">
 						<div class="sys-card-head">
 							<h4>Resume</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -1213,7 +1213,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="5dt-pd" data-slug="5dt-pd" data-domains="内容创作|自动化执行" data-source="local" data-name="5dt-pd">
+						<article class="sys-card" id="5dt-pd" data-slug="5dt-pd" data-domains="content-creation|automation-execution" data-source="local" data-name="5dt-pd">
 						<div class="sys-card-head">
 							<h4>5DT-PD</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">TypeScript</span></span>
@@ -1236,7 +1236,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/5dt-pd" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="open-fengmedia" data-slug="open-fengmedia" data-domains="内容创作|自动化执行" data-source="local" data-name="open-fengmedia">
+						<article class="sys-card" id="open-fengmedia" data-slug="open-fengmedia" data-domains="content-creation|automation-execution" data-source="local" data-name="open-fengmedia">
 						<div class="sys-card-head">
 							<h4>Open-FengMedia</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Unknown</span></span>
@@ -1260,7 +1260,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-fengmedia" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengmedia-backup" data-slug="fengmedia-backup" data-domains="内容创作|基础设施与编排" data-source="remote" data-name="fengmedia backup">
+						<article class="sys-card" id="fengmedia-backup" data-slug="fengmedia-backup" data-domains="content-creation|infrastructure-orchestration" data-source="remote" data-name="fengmedia backup">
 						<div class="sys-card-head">
 							<h4>FengMedia Backup</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -1283,7 +1283,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengyuwang_2" data-slug="fengyuwang_2" data-domains="内容创作" data-source="remote" data-name="fengyuwang_2">
+						<article class="sys-card" id="fengyuwang_2" data-slug="fengyuwang_2" data-domains="content-creation" data-source="remote" data-name="fengyuwang_2">
 						<div class="sys-card-head">
 							<h4>fengyuwang_2</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1306,7 +1306,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="liugeepic" data-slug="liugeepic" data-domains="内容创作|工具与实验" data-source="remote" data-name="liugeepic">
+						<article class="sys-card" id="liugeepic" data-slug="liugeepic" data-domains="content-creation|tools-experiments" data-source="remote" data-name="liugeepic">
 						<div class="sys-card-head">
 							<h4>LiuGeEpic</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">GDScript</span></span>
@@ -1329,7 +1329,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengmedia" data-slug="fengmedia" data-domains="内容创作" data-source="remote" data-name="fengmedia">
+						<article class="sys-card" id="fengmedia" data-slug="fengmedia" data-domains="content-creation" data-source="remote" data-name="fengmedia">
 						<div class="sys-card-head">
 							<h4>FengMedia</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -1354,7 +1354,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengcv" data-slug="fengcv" data-domains="内容创作" data-source="remote" data-name="fengcv">
+						<article class="sys-card" id="fengcv" data-slug="fengcv" data-domains="content-creation" data-source="remote" data-name="fengcv">
 						<div class="sys-card-head">
 							<h4>FengCV</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1377,7 +1377,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="manifesto-2026" data-slug="manifesto-2026" data-domains="内容创作|知识与人机协作" data-source="remote" data-name="manifesto 2026">
+						<article class="sys-card" id="manifesto-2026" data-slug="manifesto-2026" data-domains="content-creation|knowledge-human-ai" data-source="remote" data-name="manifesto 2026">
 						<div class="sys-card-head">
 							<h4>Manifesto 2026</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1395,7 +1395,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Manifesto-2026" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="vids" data-slug="vids" data-domains="内容创作" data-source="remote" data-name="vids">
+						<article class="sys-card" id="vids" data-slug="vids" data-domains="content-creation" data-source="remote" data-name="vids">
 						<div class="sys-card-head">
 							<h4>Vids</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -1419,7 +1419,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Vids" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengyuwang_5" data-slug="fengyuwang_5" data-domains="内容创作" data-source="remote" data-name="fengyuwang_5">
+						<article class="sys-card" id="fengyuwang_5" data-slug="fengyuwang_5" data-domains="content-creation" data-source="remote" data-name="fengyuwang_5">
 						<div class="sys-card-head">
 							<h4>fengyuwang_5</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1444,10 +1444,10 @@
 					</article>
 					</div>
 				</section>
-				<section class="sys-group" data-group="基础设施与编排">
+				<section class="sys-group" data-group="infrastructure-orchestration">
 					<h3>Infrastructure &amp; Orchestration <span class="sys-group-count">15 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="cchh" data-slug="cchh" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="cchh">
+						<article class="sys-card" id="cchh" data-slug="cchh" data-domains="infrastructure-orchestration|tools-experiments" data-source="local" data-name="cchh">
 						<div class="sys-card-head">
 							<h4>CCHH</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">TypeScript</span></span>
@@ -1471,7 +1471,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/CCHH" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengcloud" data-slug="fengcloud" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="flygo">
+						<article class="sys-card" id="fengcloud" data-slug="fengcloud" data-domains="infrastructure-orchestration|tools-experiments" data-source="local" data-name="flygo">
 						<div class="sys-card-head">
 							<h4>FlyGo</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Rust</span></span>
@@ -1500,7 +1500,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengasni" data-slug="fengasni" data-domains="基础设施与编排|知识与人机协作" data-source="local" data-name="fengasni">
+						<article class="sys-card" id="fengasni" data-slug="fengasni" data-domains="infrastructure-orchestration|knowledge-human-ai" data-source="local" data-name="fengasni">
 						<div class="sys-card-head">
 							<h4>FengASNI</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -1544,7 +1544,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengorchestrator" data-slug="fengorchestrator" data-domains="基础设施与编排" data-source="local" data-name="fengorchestrator">
+						<article class="sys-card" id="fengorchestrator" data-slug="fengorchestrator" data-domains="infrastructure-orchestration" data-source="local" data-name="fengorchestrator">
 						<div class="sys-card-head">
 							<h4>FengOrchestrator</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -1576,7 +1576,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fengdiskcleanup" data-slug="fengdiskcleanup" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="disk-cleanup">
+						<article class="sys-card" id="fengdiskcleanup" data-slug="fengdiskcleanup" data-domains="infrastructure-orchestration|tools-experiments" data-source="local" data-name="disk-cleanup">
 						<div class="sys-card-head">
 							<h4>disk-cleanup</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -1599,7 +1599,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="skill-tailscale-serve" data-slug="skill-tailscale-serve" data-domains="基础设施与编排" data-source="local" data-name="tailscale serve skill">
+						<article class="sys-card" id="skill-tailscale-serve" data-slug="skill-tailscale-serve" data-domains="infrastructure-orchestration" data-source="local" data-name="tailscale serve skill">
 						<div class="sys-card-head">
 							<h4>Tailscale Serve Skill</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Unknown</span></span>
@@ -1622,7 +1622,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/skill-tailscale-serve" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="android-linux-server" data-slug="android-linux-server" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="android linux server">
+						<article class="sys-card" id="android-linux-server" data-slug="android-linux-server" data-domains="infrastructure-orchestration|tools-experiments" data-source="remote" data-name="android linux server">
 						<div class="sys-card-head">
 							<h4>Android Linux Server</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Shell</span></span>
@@ -1640,7 +1640,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/android-linux-server" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="open-fengorchestrator" data-slug="open-fengorchestrator" data-domains="基础设施与编排" data-source="remote" data-name="open-fengorchestrator">
+						<article class="sys-card" id="open-fengorchestrator" data-slug="open-fengorchestrator" data-domains="infrastructure-orchestration" data-source="remote" data-name="open-fengorchestrator">
 						<div class="sys-card-head">
 							<h4>Open-FengOrchestrator</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1663,7 +1663,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengOrchestrator" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="open-flygo" data-slug="open-flygo" data-domains="基础设施与编排" data-source="remote" data-name="open-flygo">
+						<article class="sys-card" id="open-flygo" data-slug="open-flygo" data-domains="infrastructure-orchestration" data-source="remote" data-name="open-flygo">
 						<div class="sys-card-head">
 							<h4>Open-FlyGo</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Rust</span></span>
@@ -1686,7 +1686,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FlyGo" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="bsod-diagnosis-20260914" data-slug="bsod-diagnosis-20260914" data-domains="基础设施与编排|知识与人机协作" data-source="remote" data-name="bsod diagnosis 2026-09-14">
+						<article class="sys-card" id="bsod-diagnosis-20260914" data-slug="bsod-diagnosis-20260914" data-domains="infrastructure-orchestration|knowledge-human-ai" data-source="remote" data-name="bsod diagnosis 2026-09-14">
 						<div class="sys-card-head">
 							<h4>BSOD Diagnosis 2026-09-14</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1713,7 +1713,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="web-app-template" data-slug="web-app-template" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="web-app-template">
+						<article class="sys-card" id="web-app-template" data-slug="web-app-template" data-domains="infrastructure-orchestration|tools-experiments" data-source="remote" data-name="web-app-template">
 						<div class="sys-card-head">
 							<h4>web-app-template</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1731,7 +1731,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="web-app-template-v01" data-slug="web-app-template-v01" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="web-app-template v0.1.0">
+						<article class="sys-card" id="web-app-template-v01" data-slug="web-app-template-v01" data-domains="infrastructure-orchestration|tools-experiments" data-source="remote" data-name="web-app-template v0.1.0">
 						<div class="sys-card-head">
 							<h4>web-app-template v0.1.0</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1754,7 +1754,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="flygo" data-slug="flygo" data-domains="基础设施与编排" data-source="remote" data-name="flygo">
+						<article class="sys-card" id="flygo" data-slug="flygo" data-domains="infrastructure-orchestration" data-source="remote" data-name="flygo">
 						<div class="sys-card-head">
 							<h4>FlyGo</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Rust</span></span>
@@ -1780,7 +1780,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="open-websearch" data-slug="open-websearch" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="open-websearch">
+						<article class="sys-card" id="open-websearch" data-slug="open-websearch" data-domains="infrastructure-orchestration|tools-experiments" data-source="remote" data-name="open-websearch">
 						<div class="sys-card-head">
 							<h4>open-webSearch</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">TypeScript</span></span>
@@ -1803,7 +1803,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-webSearch" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="openclaw-config" data-slug="openclaw-config" data-domains="基础设施与编排" data-source="remote" data-name="openclaw config">
+						<article class="sys-card" id="openclaw-config" data-slug="openclaw-config" data-domains="infrastructure-orchestration" data-source="remote" data-name="openclaw config">
 						<div class="sys-card-head">
 							<h4>OpenClaw Config</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
@@ -1823,10 +1823,10 @@
 					</article>
 					</div>
 				</section>
-				<section class="sys-group" data-group="知识与人机协作">
+				<section class="sys-group" data-group="knowledge-human-ai">
 					<h3>Knowledge &amp; Human-AI Collaboration <span class="sys-group-count">7 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="private-aiexport" data-slug="private-aiexport" data-domains="知识与人机协作|内容创作" data-source="local" data-name="aiexport">
+						<article class="sys-card" id="private-aiexport" data-slug="private-aiexport" data-domains="knowledge-human-ai|content-creation" data-source="local" data-name="aiexport">
 						<div class="sys-card-head">
 							<h4>AIExport</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">JavaScript</span></span>
@@ -1855,7 +1855,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="lessons" data-slug="lessons" data-domains="知识与人机协作|基础设施与编排" data-source="local" data-name="lessons">
+						<article class="sys-card" id="lessons" data-slug="lessons" data-domains="knowledge-human-ai|infrastructure-orchestration" data-source="local" data-name="lessons">
 						<div class="sys-card-head">
 							<h4>lessons</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Unknown</span></span>
@@ -1880,7 +1880,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/lessons" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="free-token-research" data-slug="free-token-research" data-domains="知识与人机协作|工具与实验" data-source="remote" data-name="free token research">
+						<article class="sys-card" id="free-token-research" data-slug="free-token-research" data-domains="knowledge-human-ai|tools-experiments" data-source="remote" data-name="free token research">
 						<div class="sys-card-head">
 							<h4>Free Token Research</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">JavaScript</span></span>
@@ -1898,7 +1898,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/free-token-research" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="agents-project" data-slug="agents-project" data-domains="知识与人机协作" data-source="remote" data-name="agents-project">
+						<article class="sys-card" id="agents-project" data-slug="agents-project" data-domains="knowledge-human-ai" data-source="remote" data-name="agents-project">
 						<div class="sys-card-head">
 							<h4>agents-project</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1916,7 +1916,7 @@
 						<p class="sys-card-none">No relations to other projects recorded in the report</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/agents-project" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="course-projects" data-slug="course-projects" data-domains="知识与人机协作|内容创作" data-source="remote" data-name="course projects">
+						<article class="sys-card" id="course-projects" data-slug="course-projects" data-domains="knowledge-human-ai|content-creation" data-source="remote" data-name="course projects">
 						<div class="sys-card-head">
 							<h4>Course Projects</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1939,7 +1939,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/course-projects" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="marketing-portfolio" data-slug="marketing-portfolio" data-domains="知识与人机协作|内容创作" data-source="remote" data-name="marketing portfolio">
+						<article class="sys-card" id="marketing-portfolio" data-slug="marketing-portfolio" data-domains="knowledge-human-ai|content-creation" data-source="remote" data-name="marketing portfolio">
 						<div class="sys-card-head">
 							<h4>Marketing Portfolio</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1962,7 +1962,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/marketing-portfolio" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengvault" data-slug="fengvault" data-domains="知识与人机协作" data-source="remote" data-name="fengvault">
+						<article class="sys-card" id="fengvault" data-slug="fengvault" data-domains="knowledge-human-ai" data-source="remote" data-name="fengvault">
 						<div class="sys-card-head">
 							<h4>FengVault</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Unknown</span></span>
@@ -1987,10 +1987,10 @@
 					</article>
 					</div>
 				</section>
-				<section class="sys-group" data-group="自动化执行">
+				<section class="sys-group" data-group="automation-execution">
 					<h3>Automation &amp; Execution <span class="sys-group-count">8 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="private-feng-job-hunter" data-slug="private-feng-job-hunter" data-domains="自动化执行" data-source="local" data-name="feng job hunter">
+						<article class="sys-card" id="private-feng-job-hunter" data-slug="private-feng-job-hunter" data-domains="automation-execution" data-source="local" data-name="feng job hunter">
 						<div class="sys-card-head">
 							<h4>Feng Job Hunter</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">HTML</span></span>
@@ -2018,7 +2018,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="private-feng-auto-fill" data-slug="private-feng-auto-fill" data-domains="自动化执行" data-source="local" data-name="feng auto fill">
+						<article class="sys-card" id="private-feng-auto-fill" data-slug="private-feng-auto-fill" data-domains="automation-execution" data-source="local" data-name="feng auto fill">
 						<div class="sys-card-head">
 							<h4>Feng Auto Fill</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2042,7 +2042,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="private-autolinkedin" data-slug="private-autolinkedin" data-domains="自动化执行" data-source="local" data-name="auto linkedin">
+						<article class="sys-card" id="private-autolinkedin" data-slug="private-autolinkedin" data-domains="automation-execution" data-source="local" data-name="auto linkedin">
 						<div class="sys-card-head">
 							<h4>Auto LinkedIn</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2067,7 +2067,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="private-autoapplymac" data-slug="private-autoapplymac" data-domains="自动化执行" data-source="local" data-name="private-autoapplymac">
+						<article class="sys-card" id="private-autoapplymac" data-slug="private-autoapplymac" data-domains="automation-execution" data-source="local" data-name="private-autoapplymac">
 						<div class="sys-card-head">
 							<h4>Private-AutoApplyMac</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2092,7 +2092,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="autoapply3" data-slug="autoapply3" data-domains="自动化执行" data-source="local" data-name="autoapply3">
+						<article class="sys-card" id="autoapply3" data-slug="autoapply3" data-domains="automation-execution" data-source="local" data-name="autoapply3">
 						<div class="sys-card-head">
 							<h4>AutoApply3</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2116,7 +2116,7 @@
 						</div>
 						<span class="sys-card-tag" title="This project exists only on the local machine with no publicly reachable remote repository, so no external link is offered here.">Local only</span>
 					</article>
-						<article class="sys-card" id="private-fengmailmac" data-slug="private-fengmailmac" data-domains="自动化执行|工具与实验" data-source="remote" data-name="private-fengmailmac">
+						<article class="sys-card" id="private-fengmailmac" data-slug="private-fengmailmac" data-domains="automation-execution|tools-experiments" data-source="remote" data-name="private-fengmailmac">
 						<div class="sys-card-head">
 							<h4>Private-fengmailmac</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -2139,7 +2139,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="autoapply5" data-slug="autoapply5" data-domains="自动化执行" data-source="remote" data-name="autoapply5">
+						<article class="sys-card" id="autoapply5" data-slug="autoapply5" data-domains="automation-execution" data-source="remote" data-name="autoapply5">
 						<div class="sys-card-head">
 							<h4>AutoApply5</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -2163,7 +2163,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="private-autoapply4" data-slug="private-autoapply4" data-domains="自动化执行" data-source="remote" data-name="private-autoapply4">
+						<article class="sys-card" id="private-autoapply4" data-slug="private-autoapply4" data-domains="automation-execution" data-source="remote" data-name="private-autoapply4">
 						<div class="sys-card-head">
 							<h4>Private-AutoApply4</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">Python</span></span>
@@ -2189,10 +2189,10 @@
 					</article>
 					</div>
 				</section>
-				<section class="sys-group" data-group="投资金融">
+				<section class="sys-group" data-group="invest-finance">
 					<h3>Investment &amp; Finance <span class="sys-group-count">6 filed here</span></h3>
 					<div class="sys-cards">
-						<article class="sys-card" id="fenginvest" data-slug="fenginvest" data-domains="投资金融" data-source="local" data-name="fenginvest">
+						<article class="sys-card" id="fenginvest" data-slug="fenginvest" data-domains="invest-finance" data-source="local" data-name="fenginvest">
 						<div class="sys-card-head">
 							<h4>FengInvest</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2225,7 +2225,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="open-fenginvest" data-slug="open-fenginvest" data-domains="投资金融" data-source="local" data-name="open-fenginvest">
+						<article class="sys-card" id="open-fenginvest" data-slug="open-fenginvest" data-domains="invest-finance" data-source="local" data-name="open-fenginvest">
 						<div class="sys-card-head">
 							<h4>Open-FengInvest</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2252,7 +2252,7 @@
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">View repository <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="qiheng-bilibili" data-slug="qiheng-bilibili" data-domains="投资金融|知识与人机协作" data-source="local" data-name="qiheng">
+						<article class="sys-card" id="qiheng-bilibili" data-slug="qiheng-bilibili" data-domains="invest-finance|knowledge-human-ai" data-source="local" data-name="qiheng">
 						<div class="sys-card-head">
 							<h4>Qiheng</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Python</span></span>
@@ -2277,7 +2277,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="cross-cycles" data-slug="cross-cycles" data-domains="投资金融|内容创作" data-source="local" data-name="cross cycles">
+						<article class="sys-card" id="cross-cycles" data-slug="cross-cycles" data-domains="invest-finance|content-creation" data-source="local" data-name="cross cycles">
 						<div class="sys-card-head">
 							<h4>Cross Cycles</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">HTML</span></span>
@@ -2300,7 +2300,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="fenglearn" data-slug="fenglearn" data-domains="投资金融|知识与人机协作" data-source="local" data-name="fenglearn">
+						<article class="sys-card" id="fenglearn" data-slug="fenglearn" data-domains="invest-finance|knowledge-human-ai" data-source="local" data-name="fenglearn">
 						<div class="sys-card-head">
 							<h4>FengLearn</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Local</span><span class="sys-card-badge">Unknown</span></span>
@@ -2324,7 +2324,7 @@
 						</div>
 						<span class="sys-card-tag" title="This repository is not public, so visitors cannot open it and no external link is offered here.">Private repo</span>
 					</article>
-						<article class="sys-card" id="private-cross-cycles" data-slug="private-cross-cycles" data-domains="投资金融|内容创作" data-source="remote" data-name="private-cross-cycles">
+						<article class="sys-card" id="private-cross-cycles" data-slug="private-cross-cycles" data-domains="invest-finance|content-creation" data-source="remote" data-name="private-cross-cycles">
 						<div class="sys-card-head">
 							<h4>Private-Cross-Cycles</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Cloud repository</span><span class="sys-card-badge">HTML</span></span>
