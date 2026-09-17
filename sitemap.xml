@@ -10,11 +10,11 @@
   </url>
   <url>
     <loc>https://www.fengyuwang.com/en/ai</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://www.fengyuwang.com/en/archive/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://www.fengyuwang.com/en/art</loc>
@@ -793,6 +793,10 @@
     <lastmod>2026-09-11</lastmod>
   </url>
   <url>
+    <loc>https://www.fengyuwang.com/en/system</loc>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
     <loc>https://www.fengyuwang.com/en/tags/business/</loc>
     <lastmod>2026-09-15</lastmod>
   </url>
@@ -838,7 +842,7 @@
   </url>
   <url>
     <loc>https://www.fengyuwang.com/zh-cn/ai</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://www.fengyuwang.com/zh-cn/archive/</loc>
@@ -1621,6 +1625,10 @@
     <lastmod>2026-09-11</lastmod>
   </url>
   <url>
+    <loc>https://www.fengyuwang.com/zh-cn/system</loc>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
     <loc>https://www.fengyuwang.com/zh-cn/tags/%E5%95%86%E4%B8%9A/</loc>
     <lastmod>2026-09-15</lastmod>
   </url>
@@ -1662,7 +1670,7 @@
   </url>
   <url>
     <loc>https://www.fengyuwang.com/zh-hk/ai</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://www.fengyuwang.com/zh-hk/archive/</loc>
@@ -2443,6 +2451,10 @@
   <url>
     <loc>https://www.fengyuwang.com/zh-hk/search-king</loc>
     <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fengyuwang.com/zh-hk/system</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://www.fengyuwang.com/zh-hk/tags/%E5%95%86%E6%A5%AD/</loc>
