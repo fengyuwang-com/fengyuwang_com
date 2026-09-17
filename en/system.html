@@ -38,7 +38,6 @@
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<style>
 		html { scroll-behavior: smooth; }
-		#root { min-height: 520px; }
 		.page-wrap { background: #ffffff; }
 		.marketing-hero { text-align: center; padding: 52px 0 40px; }
 		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
@@ -484,32 +483,242 @@
 			.sys-stat { min-width: 0; flex: 1 1 100%; }
 			.sys-reset { width: 100%; }
 		}
+
+		/* ===== FX motion layer (2026-09-18): scroll progress, section rail, reveals,
+		   KPI count-up, EKG signal line, ghost numerals, hover lifts.
+		   Literal site palette only; dark variants below; the global reduced-motion
+		   block in <head> neutralises everything for RM users. ===== */
+		.fx-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 9990; pointer-events: none; }
+		.fx-progress i { display: block; height: 100%; background: linear-gradient(90deg,#0071e3,#6b9aff);
+			transform-origin: 0 50%; transform: scaleX(0); }
+		.marketing-hero { position: relative; }
+		.marketing-hero::before { content: ""; position: absolute; left: 0; right: 0; top: -60px; height: 360px;
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(0,113,227,.08), rgba(0,113,227,0) 70%);
+			pointer-events: none; }
+		.marketing-hero .eyebrow .dot { box-shadow: 0 0 0 0 rgba(48,209,88,.45); animation: fx-ping 2.2s ease-out infinite; }
+		@keyframes fx-ping { 0% { box-shadow: 0 0 0 0 rgba(48,209,88,.45); }
+			70% { box-shadow: 0 0 0 9px rgba(48,209,88,0); } 100% { box-shadow: 0 0 0 0 rgba(48,209,88,0); } }
+		.fx-ekg { display: block; width: min(420px, 82%); height: 34px; margin: 0 auto 16px; overflow: visible; }
+		.fx-ekg .base { fill: none; stroke: rgba(0,113,227,.16); stroke-width: 2; stroke-linecap: round; }
+		.fx-ekg .pulse { fill: none; stroke: #0071e3; stroke-width: 2.5; stroke-linecap: round;
+			stroke-dasharray: 150 850; animation: fx-ekg 3.4s linear infinite; }
+		@keyframes fx-ekg { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+		html.fx-js .fx-rv { opacity: 0; transform: translateY(16px);
+			transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+		html.fx-js .fx-rv.fx-on { opacity: 1; transform: none; }
+		.block-inner h2 { position: relative; }
+		.fx-ghost { position: absolute; top: -30px; right: 0; font-size: 4rem; font-weight: 900; line-height: 1;
+			color: #475569; pointer-events: none; user-select: none; letter-spacing: -.02em; }
+		.content-block { scroll-margin-top: 76px; }
+		.fx-rail { position: fixed; left: 14px; top: 50%; transform: translateY(-50%); z-index: 60;
+			display: none; flex-direction: column; gap: 14px; }
+		@media (min-width: 1280px) { .fx-rail { display: flex; } }
+		.fx-rail a { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+		.fx-rail .fx-dot { width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; flex: none;
+			transition: transform .25s ease, background .25s ease; }
+		.fx-rail a.fx-act .fx-dot { background: #0071e3; transform: scale(1.55); }
+		.fx-rail .fx-tip { font-size: 11px; font-weight: 700; color: #475569; background: #ffffff;
+			border: 1px solid rgba(148,163,184,.25); border-radius: 8px; padding: 3px 8px; white-space: nowrap;
+			opacity: 0; transform: translateX(-4px); transition: opacity .2s ease, transform .2s ease;
+			pointer-events: none; box-shadow: 0 2px 8px rgba(15,23,42,.08); }
+		.fx-rail a:hover .fx-tip, .fx-rail a:focus .fx-tip, .fx-rail a.fx-act .fx-tip { opacity: 1; transform: none; }
+		.sys-stat-value { font-variant-numeric: tabular-nums; }
+		.sys-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+		.sys-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.10);
+			border-color: rgba(0,113,227,.30); }
+		.svc { transition: background .2s ease; }
+		.svc:hover { background: rgba(0,113,227,.03); }
+		.md-pills { counter-reset: law; }
+		.md-pill::before { counter-increment: law; content: counter(law, decimal-leading-zero);
+			margin-right: 6px; font-weight: 800; color: #0071e3; }
+		.gcard, .think-card, .sys-point, .tri-node, .rsch-node, .md-pill {
+			transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+		.gcard:hover, .think-card:hover, .sys-point:hover, .rsch-node:hover {
+			transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); border-color: rgba(0,113,227,.28); }
+		.tri-node:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); }
+		.md-pill:hover { border-color: rgba(0,113,227,.45); }
+		.pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(0,113,227,.10)); }
+		.pdca-ring:hover .ring-flow { animation-play-state: paused; }
+		.punchline { border-left: 3px solid #0071e3; padding-left: 12px; }
+		@media (max-width: 599px) { .fx-ghost { font-size: 2.6rem; top: -18px; } }
+		body[data-theme="dark"] .fx-progress i { background: linear-gradient(90deg,#2997ff,#8ab0ff); }
+		body[data-theme="dark"] .marketing-hero::before {
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(41,151,255,.11), rgba(41,151,255,0) 70%); }
+		body[data-theme="dark"] .fx-ekg .base { stroke: rgba(41,151,255,.22); }
+		body[data-theme="dark"] .fx-ekg .pulse { stroke: #2997ff; }
+		body[data-theme="dark"] .fx-ghost { color: rgba(148,163,184,.10); }
+		body[data-theme="dark"] .fx-rail .fx-dot { background: #475569; }
+		body[data-theme="dark"] .fx-rail a.fx-act .fx-dot { background: #2997ff; }
+		body[data-theme="dark"] .fx-rail .fx-tip { background: #1e293b; color: #e5ecf4;
+			border-color: rgba(148,163,184,.22); box-shadow: none; }
+		body[data-theme="dark"] .sys-card:hover { box-shadow: none; border-color: rgba(41,151,255,.42); }
+		body[data-theme="dark"] .svc:hover { background: rgba(41,151,255,.06); }
+		body[data-theme="dark"] .md-pill::before { color: #2997ff; }
+		body[data-theme="dark"] .gcard:hover, body[data-theme="dark"] .think-card:hover,
+			body[data-theme="dark"] .sys-point:hover, body[data-theme="dark"] .rsch-node:hover {
+			box-shadow: none; border-color: rgba(41,151,255,.38); }
+		body[data-theme="dark"] .tri-node:hover { box-shadow: none; }
+		body[data-theme="dark"] .md-pill:hover { border-color: rgba(41,151,255,.50); }
+		body[data-theme="dark"] .pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(41,151,255,.14)); }
+		body[data-theme="dark"] .punchline { border-left-color: #2997ff; }
+        /* Native framework viewer. */
+        #pd5 .section-card { padding: 36px; }
+        html:not(.fx-js) .pd5-pane[hidden] { display: block !important; }
+        html:not(.fx-js) .pd5-tabs { display: none; }
+        .pd5 { color: #475569; font-size: 13px; line-height: 1.65; }
+        .pd5-tabs { display: flex; gap: 8px; padding: 6px; margin: 26px 0; background: #eef2f7; border: 1px solid #d7e0eb; border-radius: 18px; }
+        .pd5-tab { flex: 1; min-width: 0; padding: 16px 12px; border: 1px solid transparent; border-radius: 13px; color: #475569; background: transparent; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s; }
+        .pd5-tab b, .pd5-tab span { display: block; }
+        .pd5-tab b { font-size: 15px; }
+        .pd5-tab span { font-size: 11px; margin-top: 4px; }
+        .pd5-tab[aria-selected="true"] { background: #fff; color: #005bb5; border-color: #bfdbfe; box-shadow: 0 4px 16px #0f172a0c; }
+        .pd5 :focus-visible { outline: 3px solid #0071e3; outline-offset: 4px; }
+        .pd5-pane[hidden] { display: none !important; }
+        .pd5-pane { animation: pd5-enter .4s ease-out; }
+        @keyframes pd5-enter { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .pd5-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 0 0 18px; font-size: 11px; }
+        .pd5-lg { display: inline-flex; align-items: center; gap: 6px; }
+        .pd5-lg .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #0071e3; }
+        .pd5-lg .dh, .pd5-lg .dc { background: #8b5cf6; }
+        .pd5-lg .dr, .pd5-lg .d3 { background: #dc2626; }
+        .pd5-lg .da { background: #087f8c; }
+        .pd5-lg .d2 { background: #7c3aed; }
+        .pd5-lg-sep { height: 16px; border-left: 1px solid #cbd5e1; }
+        .pd5-loop-pill { border: 1px solid #bfdbfe; border-radius: 8px; padding: 5px 9px; background: #eff6ff; color: #1f3b8a; }
+        .pd5-loop-pill.alt { background: #f5f3ff; border-color: #ddd6fe; color: #5b21b6; }
+        .pd5-flowcap { color: #005bb5; font-size: 12px; font-weight: 700; text-align: center; padding: 12px 0 20px; }
+        .pd5-flowcap.up { color: #5b21b6; padding: 20px 0; }
+        .pd5-fw { position: relative; }
+        .pd5-layer { position: relative; display: grid; grid-template-columns: 150px minmax(0,1fr) minmax(0,1fr); gap: 0; border: 1px solid #d7e0eb; border-radius: 18px; background: #fff; overflow: hidden; transition: border-color .25s, box-shadow .25s; }
+        .pd5-layer:hover { border-color: #7aafe4; box-shadow: 0 8px 24px #0f172a0a; }
+        .pd5-badge { padding: 22px 16px; background: #f5f7fb; display: flex; flex-direction: column; gap: 6px; }
+        .pd5-lid { font-size: 30px; font-weight: 900; color: #0066cc; line-height: 1.1; letter-spacing: -.04em; }
+        .pd5-badge b { color: #0f172a; font-size: 17px; }
+        .pd5-badge i, .pd5-badge em { font-style: normal; font-size: 11px; }
+        .pd5-badge em { margin-top: auto; padding-top: 12px; color: #475569; }
+        .pd5-track { min-width: 0; padding: 22px 18px; border-left: 1px solid #e2e8f0; }
+        .pd5-track h5 { font-size: 12px; font-weight: 800; color: #005bb5; margin: 0 0 12px; }
+        .pd5-human { background: #faf9ff; }
+        .pd5-human h5 { color: #5b21b6; }
+        .pd5-track ul { margin: 0; padding-left: 16px; }
+        .pd5-track li { margin: 0 0 7px; overflow-wrap: anywhere; }
+        .pd5-beams { grid-column: 1/-1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; border-top: 1px solid #e2e8f0; padding: 14px 16px; font-size: 11px; }
+        .pd5-beam { padding-left: 8px; border-left: 2px solid #9ca3af; overflow-wrap: anywhere; }
+        .pd5-beam.br { border-color: #dc2626; } .pd5-beam.ba { border-color: #087f8c; } .pd5-beam.bc { border-color: #7c3aed; }
+        .pd5-outs { grid-column: 1/-1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; color: #475569; }
+        .pd5-outs i { font-style: normal; background: #eff6ff; color: #1f3b8a; border-radius: 6px; padding: 2px 8px; }
+        .pd5-arr { text-align: center; color: #0066cc; height: 32px; font-size: 22px; line-height: 32px; }
+        .pd5-tcores { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 12px; }
+        .pd5-tcores-t, .pd5-comps-t { grid-column: 1/-1; font-size: 14px; font-weight: 800; color: #0f172a; margin: 22px 0 8px; }
+        .pd5-tcore, .pd5-moat, .pd5-comp, .pd5-hif { min-width: 0; padding: 18px; border: 1px solid #d7e0eb; border-radius: 14px; background: #fff; }
+        .pd5-tcore > *, .pd5-moat > *, .pd5-comp > *, .pd5-hif > * { display: block; overflow-wrap: anywhere; }
+        .pd5 b { color: #0f172a; }
+        .pd5-tab[aria-selected="true"] b { color: #005bb5; }
+        .pd5-tcore .tk, .pd5-tcore .wh, .pd5-tcore .ro { margin-top: 6px; font-size: 12px; }
+        .pd5-tcore .wh { color: #005bb5; }
+        .pd5-moats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 18px; }
+        .pd5-moat { background: #f5f7fb; }
+        .pd5-moat span { margin-top: 6px; font-size: 12px; }
+        .pd5-pipe { display: flex; flex-direction: column; align-items: center; padding: 24px; border: 1px solid #d7e0eb; border-radius: 18px; background: linear-gradient(135deg,#f5f9ff,#faf9ff); }
+        .pd5-node { width: min(100%,400px); padding: 16px; border: 1px solid #aaccee; border-radius: 12px; background: #fff; text-align: center; font-size: 15px; }
+        .pd5-node.gate { border-color: #b5a2e8; background: #f5f3ff; }
+        .pd5-node.io { background: #f1f5f9; border-style: dashed; }
+        .pd5-link { position: relative; display: flex; align-items: center; width: min(100%,400px); height: 56px; }
+        .pd5-link svg { position: absolute; width: 40px; height: 14px; left: calc(50% - 20px); transform: rotate(90deg); }
+        .pd5-link-lab { width: 44%; font-size: 10px; line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
+        .pd5-gov, .pd5-bus { padding: 22px; margin-top: 16px; border: 1px solid #d7e0eb; border-radius: 16px; background: #f8fafc; }
+        .pd5-gov { border-left: 3px solid #dc2626; }
+        .pd5-gov > *, .pd5-bus-head > * { display: block; }
+        .pd5-gov .gm { margin: 8px 0; } .pd5-gov .gs, .pd5-bus-head span { font-size: 12px; }
+        .pd5-bus { border-left: 3px solid #7c3aed; }
+        .pd5-bus-evs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+        .pd5-bus code { font-size: 11px; color: #5b21b6; background: #ede9fe; border-radius: 6px; padding: 4px 8px; }
+        .pd5-bus-back { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+        .pd5-back { font-size: 12px; } .pd5-back u { display: block; text-decoration: none; color: #5b21b6; font-weight: 700; }
+        .pd5-iface, .pd5-comps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+        .pd5-hif { border-top: 3px solid #7c3aed; }
+        .pd5-hif .hm, .pd5-comp .cr { margin: 10px 0; }
+        .pd5-hif .hs, .pd5-comp .co { font-size: 12px; }
+        .pd5-hif em, .pd5-comp em { font-style: normal; font-size: 11px; color: #005bb5; margin-top: 12px; }
+        .pd5-mvp { display: flex; align-items: flex-start; gap: 10px; padding: 20px 0; }
+        .pd5-mstep { flex: 1; min-width: 0; text-align: center; }
+        .pd5-mdot { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid; border-radius: 50%; margin: 0 auto 10px; font-weight: 800; }
+        .pd5-mstep b, .pd5-mstep .md { display: block; font-size: 12px; overflow-wrap: anywhere; }
+        .pd5-mstep .md { margin-top: 4px; font-size: 11px; } .pd5-marr { padding-top: 6px; color: #0066cc; }
+        html.fx-js .fx-rv { opacity: 1; transform: none; }
+        html.fx-js .fx-rv.fx-on { animation: pd5-enter .45s ease-out; }
+        html.fx-js .sys-card.fx-on:hover { transform: translateY(-3px); }
+        body[data-theme="dark"] .pd5 { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tabs { background: #111827; border-color: #334155; }
+        body[data-theme="dark"] .pd5-tab { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tab[aria-selected="true"] { background: #1e293b; border-color: #426a9b; color: #bfdbfe; box-shadow: none; }
+        body[data-theme="dark"] .pd5 b, body[data-theme="dark"] .pd5-tcores-t, body[data-theme="dark"] .pd5-comps-t { color: #e5ecf4; }
+        body[data-theme="dark"] .pd5-layer, body[data-theme="dark"] .pd5-tcore, body[data-theme="dark"] .pd5-moat,
+        body[data-theme="dark"] .pd5-comp, body[data-theme="dark"] .pd5-hif, body[data-theme="dark"] .pd5-node { background: #0f172a; border-color: #334155; }
+        body[data-theme="dark"] .pd5-layer:hover { border-color: #5585bb; box-shadow: none; }
+        body[data-theme="dark"] .pd5-badge, body[data-theme="dark"] .pd5-gov, body[data-theme="dark"] .pd5-bus { background: #111827; }
+        body[data-theme="dark"] .pd5-human, body[data-theme="dark"] .pd5-node.gate { background: #191a32; }
+        body[data-theme="dark"] .pd5-track, body[data-theme="dark"] .pd5-beams { border-color: #334155; }
+        body[data-theme="dark"] .pd5-lid, body[data-theme="dark"] .pd5-track h5, body[data-theme="dark"] .pd5-flowcap,
+        body[data-theme="dark"] .pd5-arr, body[data-theme="dark"] .pd5-tcore .wh, body[data-theme="dark"] .pd5-hif em,
+        body[data-theme="dark"] .pd5-comp em, body[data-theme="dark"] .pd5-marr { color: #8ab0ff; }
+        body[data-theme="dark"] .pd5-human h5, body[data-theme="dark"] .pd5-flowcap.up, body[data-theme="dark"] .pd5-back u { color: #c4b5fd; }
+        body[data-theme="dark"] .pd5-badge em, body[data-theme="dark"] .pd5-outs { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-outs i, body[data-theme="dark"] .pd5-loop-pill { background: #172b49; color: #bfdbfe; border-color: #426a9b; }
+        body[data-theme="dark"] .pd5-loop-pill.alt, body[data-theme="dark"] .pd5-bus code { background: #25213e; color: #c4b5fd; border-color: #65518b; }
+        body[data-theme="dark"] .pd5-pipe { background: linear-gradient(135deg,#101d30,#191a32); border-color: #334155; }
+        @media(max-width:767px) {
+            #pd5 .section-card { padding: 20px 14px; }
+            .pd5-layer { grid-template-columns: repeat(2,minmax(0,1fr)); }
+            .pd5-badge { grid-column: 1/-1; flex-direction: row; align-items: center; flex-wrap: wrap; padding: 14px; gap: 10px; }
+            .pd5-badge em { padding: 0; margin: 0; } .pd5-track { padding: 16px 12px; }
+            .pd5-beams, .pd5-tcores, .pd5-moats, .pd5-bus-back { grid-template-columns: 1fr; }
+            .pd5-tabs { gap: 4px; } .pd5-tab { padding: 12px 8px; } .pd5-tab b { font-size: 13px; }
+            .pd5-mvp { flex-direction: column; align-items: stretch; } .pd5-marr { text-align: center; transform: rotate(90deg); }
+            .pd5-iface, .pd5-comps { grid-template-columns: 1fr; }
+        }
+        @media(max-width:720px) { #pd5 .pd5-tabs { flex-direction: column; } #pd5 .pd5-tab { width: 100%; } }
+        @media(prefers-reduced-motion:reduce) { .pd5-pane, html.fx-js .fx-rv.fx-on { animation: none; } }
+        @media print { .pd5-pane[hidden] { display: block !important; } }
+
 	</style>
 <style>@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
+<script>document.documentElement.className+=" fx-js";</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"System Overview | Fengyu WANG","url":"https://www.fengyuwang.com/en/system"}</script>
 </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="portfolio"></div>
 	<script src="../assets/js/shared-subpage-navbar.js?v=26.09.17.12.40"></script>
 
+	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
+	<nav class="fx-rail" aria-label="Sections on this page">
+		<a href="#systems" data-rail="systems"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Services</span></a>
+		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Automation</span></a>
+		<a href="#pd5" data-rail="pd5"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The Human-in-the-Loop Paradigm</span></a>
+		<a href="#paper" data-rail="paper"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A paper, drawn</span></a>
+		<a href="#thinking" data-rail="thinking"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Three interfaces, one diagnosis</span></a>
+		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Six domains, not six islands</span></a>
+		<a href="#projects" data-rail="projects"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The complete project inventory</span></a>
+	</nav>
 	<div class="page-wrap">
 		<div class="container">
 			<div class="marketing-hero">
-				<p class="eyebrow"><span class="dot" aria-hidden="true"></span>LIVE · MEASURED</p>
-				<h1>One machine. <span class="accent">Every project, measured live.</span></h1>
-				<p class="sys-hero-tagline">Every number on this page is measured from this machine right now. Nothing staged.</p>
-				<div class="sys-snapshot">
+				<p class="eyebrow fx-rv"><span class="dot" aria-hidden="true"></span>LIVE · MEASURED</p>
+				<h1 class="fx-rv" style="transition-delay:90ms">One machine. <span class="accent">Every project, measured live.</span></h1>
+				<p class="sys-hero-tagline fx-rv" style="transition-delay:180ms">Every number on this page is measured from this machine right now. Nothing staged.</p>
+				<svg class="fx-ekg fx-rv" style="transition-delay:250ms" viewBox="0 0 420 34" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="base" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/><path class="pulse" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/></svg>
+				<div class="sys-snapshot fx-rv" style="transition-delay:320ms">
 					<div class="sys-stat">
-						<span class="sys-stat-value">1,432,605</span>
+						<span class="sys-stat-value fx-count" data-n="1432605">1,432,605</span>
 						<span class="sys-stat-label">lines of code</span>
 					</div>
 					<div class="sys-stat">
-						<span class="sys-stat-value">78</span>
+						<span class="sys-stat-value fx-count" data-n="78">78</span>
 						<span class="sys-stat-label">projects</span>
 						<span class="sys-stat-note">36 local · 42 cloud-only</span>
 					</div>
 					<div class="sys-stat">
-						<span class="sys-stat-value">11</span>
+						<span class="sys-stat-value fx-count" data-n="11">11</span>
 						<span class="sys-stat-label">languages</span>
 						<span class="sys-stat-note">13 further projects have no detected language</span>
 					</div>
@@ -519,8 +728,8 @@
 		</div>
 		<div id="systems" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>Services</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">01</span>Services</h2>
 					<p class="block-subtitle">six local services · ports and purpose at a glance (a static snapshot: listed here, not started from this page)</p>
 					<div class="panel svcs">
 						<div class="svc">
@@ -565,8 +774,8 @@
 		</div>
 		<div id="automation" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>Automation</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">02</span>Automation</h2>
 					<p class="block-subtitle">the five-layer loop, layer by layer (a static snapshot: live counters stay on the local observatory)</p>
 					<p class="pdca">Research → Think → Create → Act → Self-Improve: each round is recorded, reviewed, and fed back into the MD constitution</p>
 					<div class="panel pdca-box">
@@ -751,18 +960,116 @@
 		</div>
 		<div id="pd5" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>The Human-in-the-Loop Paradigm</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">03</span>The Human-in-the-Loop Paradigm</h2>
 					<p class="block-subtitle">Five layers x two tracks x two loops x three crossbeams: the framework panorama and the software architecture, switchable.</p>
-					<div id="root"></div>
+					<div class="pd5">
+						<div class="pd5-tabs" role="tablist">
+							<button class="pd5-tab fx-act" data-pane="framework" role="tab" aria-selected="true"><b>Framework Panorama</b><span>5 Layers x Dual Track x Dual Loop x 3 Beams</span></button>
+							<button class="pd5-tab" data-pane="arch" role="tab" aria-selected="false"><b>Software Architecture</b><span>4 Core Components + 2 Human Interfaces + Event Bus</span></button>
+						</div>
+						<div class="pd5-pane" id="pd5-framework" role="tabpanel">
+							<div class="pd5-legend"><span class="pd5-lg"><i class="dot dm"></i>Machine (Left Track)</span><span class="pd5-lg"><i class="dot dh"></i>Human (Right Track)</span><span class="pd5-lg-sep"></span><span class="pd5-lg"><i class="dot dr"></i>Risk Fuse</span><span class="pd5-lg"><i class="dot da"></i>Asset Sink</span><span class="pd5-lg"><i class="dot dc"></i>Compute Audit</span><span class="pd5-lg-note">cross-layer</span><span class="pd5-lg-sep"></span><span class="pd5-loop-pill">Strategic Loop · L0 ↔ L4 · Dynamic long-term strategy</span><span class="pd5-loop-pill alt">Tactical Loop · L1 ↔ L2 · Real-time batch optimization</span></div>
+							<div class="pd5-flowcap">↓ Strategy → Product → Semantics → Generate → Deliver</div>
+							<div class="pd5-fw">
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L4</span><b>Strategy</b><i>Direction · Budget · Red Lines</i><em>STP + Market Research</em></div>
+									<div class="pd5-track pd5-machine"><h5>Machine (Left Track)</h5><ul><li>Meta Analysis (CDA/Framenet)</li><li>Public sentiment scan</li><li>Compute value assessment</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>Human (Right Track)</h5><ul><li>Define Brand Soul</li><li>Set compliance red lines</li><li>Approve monthly compute budget</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 Risk Auto-block political/extreme topics</span><span class="pd5-beam ba">📦 Asset Raw sentiment data → labeled storage</span><span class="pd5-beam bc">💰 Cost Allocate budget per track, cut ROI&lt;1 topics</span><span class="pd5-outs">Output: <i>Strategy Charter</i> <i>Compute Budget</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L3</span><b>Product</b><i>Category · Asset · ROI</i><em>4P - Product</em></div>
+									<div class="pd5-track pd5-machine"><h5>Machine (Left Track)</h5><ul><li>Competitor deconstruction (TOP10)</li><li>Association rule mining for high-conversion angles</li><li>Generate product prototypes</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>Human (Right Track)</h5><ul><li>Decide SKU format</li><li>Approve core selling points</li><li>Review corpus ingestion standards</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 Risk Product compliance screening</span><span class="pd5-beam ba">📦 Asset Clean data → private corpus / brand lexicon</span><span class="pd5-beam bc">💰 Cost Cap investment, target &gt;=60% gross margin</span><span class="pd5-outs">Output: <i>PRD</i> <i>Private Corpus Index</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L2</span><b>Semantics</b><i>Ammo · Asset · Retrieval Cost</i><em>Supply Chain (RAG)</em></div>
+									<div class="pd5-track pd5-machine"><h5>Machine (Left Track)</h5><ul><li>Execute RAG per PRD</li><li>Semantic match high-fit pain points/cases</li><li>Auto-label retrieval results</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>Human (Right Track)</h5><ul><li>Review material compliance</li><li>Remove low-quality content</li><li>Add exclusive corpus</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 Risk Filter sensitive cases/violations</span><span class="pd5-beam ba">📦 Asset New material → vector DB</span><span class="pd5-beam bc">💰 Cost Prioritize local vector DB, reduce external API</span><span class="pd5-outs">Output: <i>Context Package</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L1</span><b>Generation</b><i>Produce · Control Token · Quality</i><em>4P - Promotion</em></div>
+									<div class="pd5-track pd5-machine"><h5>Machine (Left Track)</h5><ul><li>Load Skill template + assemble Prompt</li><li>LLM batch generation + cache</li><li>Auto-filter violating drafts</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>Human (Right Track)</h5><ul><li>Tweak Skill params (sarcasm/meme density)</li><li>Spot-check output quality</li><li>Reject substandard content</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 Risk Machine pre-check sensitive words + human final review</span><span class="pd5-beam ba">📦 Asset High-quality drafts / golden sentences → storage</span><span class="pd5-beam bc">💰 Cost Select model by value, cache reuse &gt;=40%</span><span class="pd5-outs">Output: <i>Content Draft</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L0</span><b>Delivery</b><i>Ship · Account · Iterate</i><em>4P - Price/Place + KPI</em></div>
+									<div class="pd5-track pd5-machine"><h5>Machine (Left Track)</h5><ul><li>Multi-platform auto distribution</li><li>Data tracking (ROI/conversion/completion)</li><li>Generate cost-revenue reports</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>Human (Right Track)</h5><ul><li>Set pricing/channel strategy</li><li>Review P&amp;L</li><li>Trigger dual-loop adjustments</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 Risk Real-time platform rule monitoring → fuse</span><span class="pd5-beam ba">📦 Asset User feedback / high-rated comments → storage</span><span class="pd5-beam bc">💰 Cost Calculate net profit, adjust budget</span><span class="pd5-outs">Output: <i>Delivered Asset</i> <i>ROI Review Report</i> <i>Strategy Adjustment Order</i></span></div>
+								</div>
+							</div>
+							<div class="pd5-flowcap up">↑ Feedback → Review → Anchor Tune</div>
+							<div class="pd5-tcores"><div class="pd5-tcores-t">Tech Core Mapping</div>
+								<div class="pd5-tcore"><b>Computational Linguistics</b><span class="tk">CDA / Framenet</span><span class="wh">L4 / L1</span><span class="ro">Value identification · Tone consistency</span></div>
+								<div class="pd5-tcore"><b>Machine Learning</b><span class="tk">Clustering / Association Rules / RL</span><span class="wh">L3 / L0</span><span class="ro">Hit mining · ROI optimization</span></div>
+								<div class="pd5-tcore"><b>Computer Science</b><span class="tk">Vector DB / RAG / LLM / Skill</span><span class="wh">L2 / L1</span><span class="ro">Precise retrieval · Industrial production · Cost control</span></div>
+							</div>
+							<div class="pd5-moats">
+								<div class="pd5-moat"><b>Risk Rules / Private Corpus / Compute Audit</b><span>Hard to copy</span></div>
+								<div class="pd5-moat"><b>Human-in-the-Loop Boundary (L4→L0)</b><span>Hard to learn</span></div>
+								<div class="pd5-moat"><b>Tactics tune quality · Strategy locks track</b><span>Hard to penetrate</span></div>
+							</div>
+						</div>
+						<div class="pd5-pane" id="pd5-arch" role="tabpanel" hidden>
+							<div class="pd5-legend"><span class="pd5-lg"><i class="dot d1"></i>Main Pipeline (Production)</span><span class="pd5-lg"><i class="dot d2"></i>Feedback Flow (Dual Loop)</span><span class="pd5-lg"><i class="dot d3"></i>Governance Flow (Cross-cutting)</span></div>
+							<div class="pd5-pipe">
+								<div class="pd5-node io"><b>External Input</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Task (raw question/topic)</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Router</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Routing Ticket</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Asset / RAG</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Context Package</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Executor</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Draft + cost + risk_flags</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Governance</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Approved Draft</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node gate"><b>Approval Gate</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Approved Content</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Delivery</b></div>
+							</div>
+							<div class="pd5-gov"><b>Governance</b><span class="gm">Red-line table management · Sensitive-word filtering · Token/API quota tracking · Audit logging</span><span class="gs">AOP / Middleware cross-cuts all components, does not block flow nodes · Software shell for the 3 beams (Risk + Asset + Cost)</span></div>
+							<div class="pd5-bus"><div class="pd5-bus-head"><b>Event Bus</b><span>Decouples inter-layer communication, carries the dual-loop event-driven mechanism · Bull/BullMQ or Redis Streams or RabbitMQ</span></div><div class="pd5-bus-evs"><code>task.done</code><code>task.posted</code><code>user.reacted</code><code>anchor.patch</code></div><div class="pd5-bus-back"><span class="pd5-back"><u>→ Asset / RAG</u>User feedback/high-rated comments → ingest</span><span class="pd5-back"><u>→ Router</u>Anchor patch (human review → merge)</span><span class="pd5-back"><u>→ Knobs</u>ROI signal → human tuning</span></div></div>
+							<div class="pd5-iface">
+								<div class="pd5-hif"><b>Approval Gate</b><span class="hm">Certain types require human approval before publishing (L0 final review / L3 product decision)</span><span class="hs">Async approval queue — human approves/rejects via Dashboard or notification</span><em>Human right-track Approval Gate</em></div>
+								<div class="pd5-hif"><b>Knobs</b><span class="hm">Human can adjust Skill params, anchor weights, red-line table (without changing code)</span><span class="hs">Web Dashboard or CLI command</span><em>Human right-track Tuning Knob</em></div>
+							</div>
+							<div class="pd5-comps-t">Component Detail</div>
+							<div class="pd5-comps">
+								<div class="pd5-comp"><b>Router</b><span class="cr">Read Task.type / keywords → bind product_line + skill_id + budget_tier → output routing ticket</span><span class="co">Output: Routing Ticket (non-repudiable processing plan)</span><em>L4 machine shell + dispatcher</em></div>
+								<div class="pd5-comp"><b>Asset / RAG</b><span class="cr">Vector indexing/retrieval, versioning, admission gate (L3 candidate → human review → ingest)</span><span class="co">Output: Context Package (cacheable material bundle)</span><em>L3/L2 asset service shell</em></div>
+								<div class="pd5-comp"><b>Executor</b><span class="cr">Controlled AI call — cache(key=hash(ticket+context)) / rate-limit / model selection / retry / post-validation</span><span class="co">Output: Draft + cost + risk_flags</span><em>L1 generation shell</em></div>
+								<div class="pd5-comp"><b>Delivery</b><span class="cr">Multi-platform auto distribution, data tracking (ROI/conversion/completion), cost-revenue reporting</span><span class="co">Output: Event stream (task.done / user.reacted) → Event Bus</span><em>L0 delivery shell</em></div>
+							</div>
+							<div class="pd5-comps-t">Minimum Viable Path (MVP)</div>
+							<div class="pd5-mvp">
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#818cf822;border-color:#818cf8;color:#818cf8">1</span><b>Router</b><span class="md">Question → Routing Ticket</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#3b82f622;border-color:#3b82f6;color:#3b82f6">2</span><b>Asset / RAG</b><span class="md">Context Package per Ticket</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#06b6d422;border-color:#06b6d4;color:#06b6d4">3</span><b>Executor</b><span class="md">Controlled AI → Draft</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#ef444422;border-color:#ef4444;color:#ef4444">4</span><b>Governance</b><span class="md">Red lines + Cost + Audit</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#f59e0b22;border-color:#f59e0b;color:#f59e0b">+</span><b>Gate + Knob</b><span class="md">Human: approve + tune</span></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<script type="module" src="../assets/js/human-in-the-loop/human-in-the-loop-viewer.js"></script>
 		<div id="paper" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>A paper, drawn</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">04</span>A paper, drawn</h2>
 					<p class="block-subtitle">two-layer interface principle: L1 builds, L2 views, docs govern</p>
 					<div class="panel triad">
 						<div class="tri-canvas">
@@ -860,8 +1167,8 @@
 		</div>
 		<div id="thinking" class="content-block">
 			<div class="block-inner">
-				<div class="section-card">
-					<h2>Three interfaces, one diagnosis</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">05</span>Three interfaces, one diagnosis</h2>
 					<p class="block-subtitle">The Two-Layer Interface Principle (2LIP): a software system built for the AI era keeps only two interaction layers. Documents form a third interface that faces the AI and runs vertically across both.</p>
 					<div class="sys-diagram-wrap">
 						<svg class="sys-diagram" viewBox="0 0 660 674" role="img" aria-label="Structure diagram of the Two-Layer Interface Principle: the conversation layer and the viewing layer stacked as two interaction layers, with the document governance plane running vertically across both" xmlns="http://www.w3.org/2000/svg">
@@ -936,8 +1243,8 @@
 		</div>
 		<div id="domains" class="content-block">
 			<div class="block-inner">
-				<div class="section-card">
-					<h2>Six domains, not six islands</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">06</span>Six domains, not six islands</h2>
 					<p class="block-subtitle">Six domains as nodes, cross-domain relationships as edges. Only documented references are drawn; imagined synergy is not.</p>
 					<div class="sys-graph-wrap">
 						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="Six-domain relation graph: six domains as nodes whose size scales with project count, cross-domain relationship counts as edges whose width scales with that count, and numeric labels on the five densest edges" xmlns="http://www.w3.org/2000/svg">
@@ -996,7 +1303,7 @@
 		</div>
 		<div id="projects" class="content-block">
 			<div class="block-inner">
-				<h2>The complete project inventory</h2>
+				<h2><span class="fx-ghost" aria-hidden="true">07</span>The complete project inventory</h2>
 				<p class="block-subtitle">78 self-owned projects grouped by domain; a project in several domains is filed under its first domain, and the remaining domains are marked on the card.</p>
 				<p class="block-subtitle sys-scope-note">Outbound links go to publicly visible repositories only. 42 private repositories and 2 local-only projects carry no public link because visitors cannot open them; the cards mark their status instead. The inventory still lists every entry, none dropped.</p>
 				<div class="sys-filter" id="sysFilterBar">
@@ -2992,7 +3299,7 @@
 			}
 			if(ok&&sv){ok=c.getAttribute("data-source")===sv;}
 			c.hidden=!ok;
-			if(ok)shown++;
+			if(ok){shown++;c.classList.add("fx-on");}
 		}
 		for(var g=0;g<groups.length;g++){
 			groups[g].hidden=!groups[g].querySelector(".sys-card:not([hidden])");
@@ -3003,6 +3310,53 @@
 	d.addEventListener("change",apply);
 	s.addEventListener("change",apply);
 	if(r)r.addEventListener("click",function(){q.value="";d.value="";s.value="";apply();});
+	})();</script>
+<script>(function(){
+var tabs=Array.from(document.querySelectorAll('.pd5-tab'));
+function selectPane(tab){tabs.forEach(function(t){var active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;t.classList.toggle('fx-act',active);document.getElementById('pd5-'+t.dataset.pane).hidden=!active;});}
+tabs.forEach(function(tab,index){tab.id='pd5-tab-'+tab.dataset.pane;tab.setAttribute('aria-controls','pd5-'+tab.dataset.pane);var pane=document.getElementById('pd5-'+tab.dataset.pane);pane.setAttribute('aria-labelledby',tab.id);pane.tabIndex=0;tab.addEventListener('click',function(){selectPane(tab);});tab.addEventListener('keydown',function(e){var next=index;if(e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectPane(tabs[next]);tabs[next].focus();});});
+if(tabs.length)selectPane(tabs[0]);
+var RM=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var prog=document.getElementById("fxProgress"),ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(function(){
+var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+if(prog)prog.style.transform="scaleX("+(max>0?Math.min(1,(h.scrollTop||0)/max):0)+")";
+ticking=false;});}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+var lists=[[".svc",45],[".md-pill",55],[".gcard",60],[".think-card",80],[".si-step",80],
+[".sys-point",80],[".rsch-node",50],[".tri-node",90],[".ribbon",90],[".sys-card",35]];
+var i,j,els;
+for(i=0;i<lists.length;i++){els=document.querySelectorAll(lists[i][0]);
+for(j=0;j<els.length;j++){els[j].classList.add("fx-rv");
+els[j].style.transitionDelay=((j%8)*lists[i][1])+"ms";}}
+var all=[].slice.call(document.querySelectorAll(".fx-rv"));
+function revealAll(){for(i=0;i<all.length;i++)all[i].classList.add("fx-on");}
+if(RM||!("IntersectionObserver" in window)){revealAll();}
+else{var io=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){en[k].target.classList.add("fx-on");io.unobserve(en[k].target);}}},
+{rootMargin:"0px 0px -8% 0px",threshold:0.08});
+for(i=0;i<all.length;i++)io.observe(all[i]);}
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+function runCount(el){var target=parseInt(el.getAttribute("data-n"),10)||0;
+if(RM||target<10){el.textContent=fmt(target);return;}
+var t0=null,dur=1300;
+function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-p,3);
+el.textContent=fmt(Math.round(target*e));if(p<1)requestAnimationFrame(step);}
+requestAnimationFrame(step);}
+var nums=document.querySelectorAll(".fx-count[data-n]");
+if(nums.length){
+if(RM||!("IntersectionObserver" in window)){for(i=0;i<nums.length;i++)runCount(nums[i]);}
+else{var io2=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){runCount(en[k].target);io2.unobserve(en[k].target);}}},{threshold:0.4});
+for(i=0;i<nums.length;i++)io2.observe(nums[i]);}}
+var railLinks=document.querySelectorAll(".fx-rail a[data-rail]");
+if(railLinks.length&&"IntersectionObserver" in window){
+var map={};for(i=0;i<railLinks.length;i++)map[railLinks[i].getAttribute("data-rail")]=railLinks[i];
+var io3=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+var l=map[en[k].target.id];if(!l)continue;
+if(en[k].isIntersecting){for(var m in map)map[m].classList.remove("fx-act");l.classList.add("fx-act");}}},
+{rootMargin:"-40% 0px -55% 0px"});
+for(var id in map){var sec=document.getElementById(id);if(sec)io3.observe(sec);}}
 })();</script>
 </body>
 </html>

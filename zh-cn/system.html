@@ -38,7 +38,6 @@
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<style>
 		html { scroll-behavior: smooth; }
-		#root { min-height: 520px; }
 		.page-wrap { background: #ffffff; }
 		.marketing-hero { text-align: center; padding: 52px 0 40px; }
 		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
@@ -484,32 +483,242 @@
 			.sys-stat { min-width: 0; flex: 1 1 100%; }
 			.sys-reset { width: 100%; }
 		}
+
+		/* ===== FX motion layer (2026-09-18): scroll progress, section rail, reveals,
+		   KPI count-up, EKG signal line, ghost numerals, hover lifts.
+		   Literal site palette only; dark variants below; the global reduced-motion
+		   block in <head> neutralises everything for RM users. ===== */
+		.fx-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 9990; pointer-events: none; }
+		.fx-progress i { display: block; height: 100%; background: linear-gradient(90deg,#0071e3,#6b9aff);
+			transform-origin: 0 50%; transform: scaleX(0); }
+		.marketing-hero { position: relative; }
+		.marketing-hero::before { content: ""; position: absolute; left: 0; right: 0; top: -60px; height: 360px;
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(0,113,227,.08), rgba(0,113,227,0) 70%);
+			pointer-events: none; }
+		.marketing-hero .eyebrow .dot { box-shadow: 0 0 0 0 rgba(48,209,88,.45); animation: fx-ping 2.2s ease-out infinite; }
+		@keyframes fx-ping { 0% { box-shadow: 0 0 0 0 rgba(48,209,88,.45); }
+			70% { box-shadow: 0 0 0 9px rgba(48,209,88,0); } 100% { box-shadow: 0 0 0 0 rgba(48,209,88,0); } }
+		.fx-ekg { display: block; width: min(420px, 82%); height: 34px; margin: 0 auto 16px; overflow: visible; }
+		.fx-ekg .base { fill: none; stroke: rgba(0,113,227,.16); stroke-width: 2; stroke-linecap: round; }
+		.fx-ekg .pulse { fill: none; stroke: #0071e3; stroke-width: 2.5; stroke-linecap: round;
+			stroke-dasharray: 150 850; animation: fx-ekg 3.4s linear infinite; }
+		@keyframes fx-ekg { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+		html.fx-js .fx-rv { opacity: 0; transform: translateY(16px);
+			transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+		html.fx-js .fx-rv.fx-on { opacity: 1; transform: none; }
+		.block-inner h2 { position: relative; }
+		.fx-ghost { position: absolute; top: -30px; right: 0; font-size: 4rem; font-weight: 900; line-height: 1;
+			color: #475569; pointer-events: none; user-select: none; letter-spacing: -.02em; }
+		.content-block { scroll-margin-top: 76px; }
+		.fx-rail { position: fixed; left: 14px; top: 50%; transform: translateY(-50%); z-index: 60;
+			display: none; flex-direction: column; gap: 14px; }
+		@media (min-width: 1280px) { .fx-rail { display: flex; } }
+		.fx-rail a { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+		.fx-rail .fx-dot { width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; flex: none;
+			transition: transform .25s ease, background .25s ease; }
+		.fx-rail a.fx-act .fx-dot { background: #0071e3; transform: scale(1.55); }
+		.fx-rail .fx-tip { font-size: 11px; font-weight: 700; color: #475569; background: #ffffff;
+			border: 1px solid rgba(148,163,184,.25); border-radius: 8px; padding: 3px 8px; white-space: nowrap;
+			opacity: 0; transform: translateX(-4px); transition: opacity .2s ease, transform .2s ease;
+			pointer-events: none; box-shadow: 0 2px 8px rgba(15,23,42,.08); }
+		.fx-rail a:hover .fx-tip, .fx-rail a:focus .fx-tip, .fx-rail a.fx-act .fx-tip { opacity: 1; transform: none; }
+		.sys-stat-value { font-variant-numeric: tabular-nums; }
+		.sys-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+		.sys-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.10);
+			border-color: rgba(0,113,227,.30); }
+		.svc { transition: background .2s ease; }
+		.svc:hover { background: rgba(0,113,227,.03); }
+		.md-pills { counter-reset: law; }
+		.md-pill::before { counter-increment: law; content: counter(law, decimal-leading-zero);
+			margin-right: 6px; font-weight: 800; color: #0071e3; }
+		.gcard, .think-card, .sys-point, .tri-node, .rsch-node, .md-pill {
+			transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+		.gcard:hover, .think-card:hover, .sys-point:hover, .rsch-node:hover {
+			transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); border-color: rgba(0,113,227,.28); }
+		.tri-node:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); }
+		.md-pill:hover { border-color: rgba(0,113,227,.45); }
+		.pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(0,113,227,.10)); }
+		.pdca-ring:hover .ring-flow { animation-play-state: paused; }
+		.punchline { border-left: 3px solid #0071e3; padding-left: 12px; }
+		@media (max-width: 599px) { .fx-ghost { font-size: 2.6rem; top: -18px; } }
+		body[data-theme="dark"] .fx-progress i { background: linear-gradient(90deg,#2997ff,#8ab0ff); }
+		body[data-theme="dark"] .marketing-hero::before {
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(41,151,255,.11), rgba(41,151,255,0) 70%); }
+		body[data-theme="dark"] .fx-ekg .base { stroke: rgba(41,151,255,.22); }
+		body[data-theme="dark"] .fx-ekg .pulse { stroke: #2997ff; }
+		body[data-theme="dark"] .fx-ghost { color: rgba(148,163,184,.10); }
+		body[data-theme="dark"] .fx-rail .fx-dot { background: #475569; }
+		body[data-theme="dark"] .fx-rail a.fx-act .fx-dot { background: #2997ff; }
+		body[data-theme="dark"] .fx-rail .fx-tip { background: #1e293b; color: #e5ecf4;
+			border-color: rgba(148,163,184,.22); box-shadow: none; }
+		body[data-theme="dark"] .sys-card:hover { box-shadow: none; border-color: rgba(41,151,255,.42); }
+		body[data-theme="dark"] .svc:hover { background: rgba(41,151,255,.06); }
+		body[data-theme="dark"] .md-pill::before { color: #2997ff; }
+		body[data-theme="dark"] .gcard:hover, body[data-theme="dark"] .think-card:hover,
+			body[data-theme="dark"] .sys-point:hover, body[data-theme="dark"] .rsch-node:hover {
+			box-shadow: none; border-color: rgba(41,151,255,.38); }
+		body[data-theme="dark"] .tri-node:hover { box-shadow: none; }
+		body[data-theme="dark"] .md-pill:hover { border-color: rgba(41,151,255,.50); }
+		body[data-theme="dark"] .pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(41,151,255,.14)); }
+		body[data-theme="dark"] .punchline { border-left-color: #2997ff; }
+        /* Native framework viewer. */
+        #pd5 .section-card { padding: 36px; }
+        html:not(.fx-js) .pd5-pane[hidden] { display: block !important; }
+        html:not(.fx-js) .pd5-tabs { display: none; }
+        .pd5 { color: #475569; font-size: 13px; line-height: 1.65; }
+        .pd5-tabs { display: flex; gap: 8px; padding: 6px; margin: 26px 0; background: #eef2f7; border: 1px solid #d7e0eb; border-radius: 18px; }
+        .pd5-tab { flex: 1; min-width: 0; padding: 16px 12px; border: 1px solid transparent; border-radius: 13px; color: #475569; background: transparent; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s; }
+        .pd5-tab b, .pd5-tab span { display: block; }
+        .pd5-tab b { font-size: 15px; }
+        .pd5-tab span { font-size: 11px; margin-top: 4px; }
+        .pd5-tab[aria-selected="true"] { background: #fff; color: #005bb5; border-color: #bfdbfe; box-shadow: 0 4px 16px #0f172a0c; }
+        .pd5 :focus-visible { outline: 3px solid #0071e3; outline-offset: 4px; }
+        .pd5-pane[hidden] { display: none !important; }
+        .pd5-pane { animation: pd5-enter .4s ease-out; }
+        @keyframes pd5-enter { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .pd5-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 0 0 18px; font-size: 11px; }
+        .pd5-lg { display: inline-flex; align-items: center; gap: 6px; }
+        .pd5-lg .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #0071e3; }
+        .pd5-lg .dh, .pd5-lg .dc { background: #8b5cf6; }
+        .pd5-lg .dr, .pd5-lg .d3 { background: #dc2626; }
+        .pd5-lg .da { background: #087f8c; }
+        .pd5-lg .d2 { background: #7c3aed; }
+        .pd5-lg-sep { height: 16px; border-left: 1px solid #cbd5e1; }
+        .pd5-loop-pill { border: 1px solid #bfdbfe; border-radius: 8px; padding: 5px 9px; background: #eff6ff; color: #1f3b8a; }
+        .pd5-loop-pill.alt { background: #f5f3ff; border-color: #ddd6fe; color: #5b21b6; }
+        .pd5-flowcap { color: #005bb5; font-size: 12px; font-weight: 700; text-align: center; padding: 12px 0 20px; }
+        .pd5-flowcap.up { color: #5b21b6; padding: 20px 0; }
+        .pd5-fw { position: relative; }
+        .pd5-layer { position: relative; display: grid; grid-template-columns: 150px minmax(0,1fr) minmax(0,1fr); gap: 0; border: 1px solid #d7e0eb; border-radius: 18px; background: #fff; overflow: hidden; transition: border-color .25s, box-shadow .25s; }
+        .pd5-layer:hover { border-color: #7aafe4; box-shadow: 0 8px 24px #0f172a0a; }
+        .pd5-badge { padding: 22px 16px; background: #f5f7fb; display: flex; flex-direction: column; gap: 6px; }
+        .pd5-lid { font-size: 30px; font-weight: 900; color: #0066cc; line-height: 1.1; letter-spacing: -.04em; }
+        .pd5-badge b { color: #0f172a; font-size: 17px; }
+        .pd5-badge i, .pd5-badge em { font-style: normal; font-size: 11px; }
+        .pd5-badge em { margin-top: auto; padding-top: 12px; color: #475569; }
+        .pd5-track { min-width: 0; padding: 22px 18px; border-left: 1px solid #e2e8f0; }
+        .pd5-track h5 { font-size: 12px; font-weight: 800; color: #005bb5; margin: 0 0 12px; }
+        .pd5-human { background: #faf9ff; }
+        .pd5-human h5 { color: #5b21b6; }
+        .pd5-track ul { margin: 0; padding-left: 16px; }
+        .pd5-track li { margin: 0 0 7px; overflow-wrap: anywhere; }
+        .pd5-beams { grid-column: 1/-1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; border-top: 1px solid #e2e8f0; padding: 14px 16px; font-size: 11px; }
+        .pd5-beam { padding-left: 8px; border-left: 2px solid #9ca3af; overflow-wrap: anywhere; }
+        .pd5-beam.br { border-color: #dc2626; } .pd5-beam.ba { border-color: #087f8c; } .pd5-beam.bc { border-color: #7c3aed; }
+        .pd5-outs { grid-column: 1/-1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; color: #475569; }
+        .pd5-outs i { font-style: normal; background: #eff6ff; color: #1f3b8a; border-radius: 6px; padding: 2px 8px; }
+        .pd5-arr { text-align: center; color: #0066cc; height: 32px; font-size: 22px; line-height: 32px; }
+        .pd5-tcores { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 12px; }
+        .pd5-tcores-t, .pd5-comps-t { grid-column: 1/-1; font-size: 14px; font-weight: 800; color: #0f172a; margin: 22px 0 8px; }
+        .pd5-tcore, .pd5-moat, .pd5-comp, .pd5-hif { min-width: 0; padding: 18px; border: 1px solid #d7e0eb; border-radius: 14px; background: #fff; }
+        .pd5-tcore > *, .pd5-moat > *, .pd5-comp > *, .pd5-hif > * { display: block; overflow-wrap: anywhere; }
+        .pd5 b { color: #0f172a; }
+        .pd5-tab[aria-selected="true"] b { color: #005bb5; }
+        .pd5-tcore .tk, .pd5-tcore .wh, .pd5-tcore .ro { margin-top: 6px; font-size: 12px; }
+        .pd5-tcore .wh { color: #005bb5; }
+        .pd5-moats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 18px; }
+        .pd5-moat { background: #f5f7fb; }
+        .pd5-moat span { margin-top: 6px; font-size: 12px; }
+        .pd5-pipe { display: flex; flex-direction: column; align-items: center; padding: 24px; border: 1px solid #d7e0eb; border-radius: 18px; background: linear-gradient(135deg,#f5f9ff,#faf9ff); }
+        .pd5-node { width: min(100%,400px); padding: 16px; border: 1px solid #aaccee; border-radius: 12px; background: #fff; text-align: center; font-size: 15px; }
+        .pd5-node.gate { border-color: #b5a2e8; background: #f5f3ff; }
+        .pd5-node.io { background: #f1f5f9; border-style: dashed; }
+        .pd5-link { position: relative; display: flex; align-items: center; width: min(100%,400px); height: 56px; }
+        .pd5-link svg { position: absolute; width: 40px; height: 14px; left: calc(50% - 20px); transform: rotate(90deg); }
+        .pd5-link-lab { width: 44%; font-size: 10px; line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
+        .pd5-gov, .pd5-bus { padding: 22px; margin-top: 16px; border: 1px solid #d7e0eb; border-radius: 16px; background: #f8fafc; }
+        .pd5-gov { border-left: 3px solid #dc2626; }
+        .pd5-gov > *, .pd5-bus-head > * { display: block; }
+        .pd5-gov .gm { margin: 8px 0; } .pd5-gov .gs, .pd5-bus-head span { font-size: 12px; }
+        .pd5-bus { border-left: 3px solid #7c3aed; }
+        .pd5-bus-evs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+        .pd5-bus code { font-size: 11px; color: #5b21b6; background: #ede9fe; border-radius: 6px; padding: 4px 8px; }
+        .pd5-bus-back { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+        .pd5-back { font-size: 12px; } .pd5-back u { display: block; text-decoration: none; color: #5b21b6; font-weight: 700; }
+        .pd5-iface, .pd5-comps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+        .pd5-hif { border-top: 3px solid #7c3aed; }
+        .pd5-hif .hm, .pd5-comp .cr { margin: 10px 0; }
+        .pd5-hif .hs, .pd5-comp .co { font-size: 12px; }
+        .pd5-hif em, .pd5-comp em { font-style: normal; font-size: 11px; color: #005bb5; margin-top: 12px; }
+        .pd5-mvp { display: flex; align-items: flex-start; gap: 10px; padding: 20px 0; }
+        .pd5-mstep { flex: 1; min-width: 0; text-align: center; }
+        .pd5-mdot { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid; border-radius: 50%; margin: 0 auto 10px; font-weight: 800; }
+        .pd5-mstep b, .pd5-mstep .md { display: block; font-size: 12px; overflow-wrap: anywhere; }
+        .pd5-mstep .md { margin-top: 4px; font-size: 11px; } .pd5-marr { padding-top: 6px; color: #0066cc; }
+        html.fx-js .fx-rv { opacity: 1; transform: none; }
+        html.fx-js .fx-rv.fx-on { animation: pd5-enter .45s ease-out; }
+        html.fx-js .sys-card.fx-on:hover { transform: translateY(-3px); }
+        body[data-theme="dark"] .pd5 { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tabs { background: #111827; border-color: #334155; }
+        body[data-theme="dark"] .pd5-tab { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tab[aria-selected="true"] { background: #1e293b; border-color: #426a9b; color: #bfdbfe; box-shadow: none; }
+        body[data-theme="dark"] .pd5 b, body[data-theme="dark"] .pd5-tcores-t, body[data-theme="dark"] .pd5-comps-t { color: #e5ecf4; }
+        body[data-theme="dark"] .pd5-layer, body[data-theme="dark"] .pd5-tcore, body[data-theme="dark"] .pd5-moat,
+        body[data-theme="dark"] .pd5-comp, body[data-theme="dark"] .pd5-hif, body[data-theme="dark"] .pd5-node { background: #0f172a; border-color: #334155; }
+        body[data-theme="dark"] .pd5-layer:hover { border-color: #5585bb; box-shadow: none; }
+        body[data-theme="dark"] .pd5-badge, body[data-theme="dark"] .pd5-gov, body[data-theme="dark"] .pd5-bus { background: #111827; }
+        body[data-theme="dark"] .pd5-human, body[data-theme="dark"] .pd5-node.gate { background: #191a32; }
+        body[data-theme="dark"] .pd5-track, body[data-theme="dark"] .pd5-beams { border-color: #334155; }
+        body[data-theme="dark"] .pd5-lid, body[data-theme="dark"] .pd5-track h5, body[data-theme="dark"] .pd5-flowcap,
+        body[data-theme="dark"] .pd5-arr, body[data-theme="dark"] .pd5-tcore .wh, body[data-theme="dark"] .pd5-hif em,
+        body[data-theme="dark"] .pd5-comp em, body[data-theme="dark"] .pd5-marr { color: #8ab0ff; }
+        body[data-theme="dark"] .pd5-human h5, body[data-theme="dark"] .pd5-flowcap.up, body[data-theme="dark"] .pd5-back u { color: #c4b5fd; }
+        body[data-theme="dark"] .pd5-badge em, body[data-theme="dark"] .pd5-outs { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-outs i, body[data-theme="dark"] .pd5-loop-pill { background: #172b49; color: #bfdbfe; border-color: #426a9b; }
+        body[data-theme="dark"] .pd5-loop-pill.alt, body[data-theme="dark"] .pd5-bus code { background: #25213e; color: #c4b5fd; border-color: #65518b; }
+        body[data-theme="dark"] .pd5-pipe { background: linear-gradient(135deg,#101d30,#191a32); border-color: #334155; }
+        @media(max-width:767px) {
+            #pd5 .section-card { padding: 20px 14px; }
+            .pd5-layer { grid-template-columns: repeat(2,minmax(0,1fr)); }
+            .pd5-badge { grid-column: 1/-1; flex-direction: row; align-items: center; flex-wrap: wrap; padding: 14px; gap: 10px; }
+            .pd5-badge em { padding: 0; margin: 0; } .pd5-track { padding: 16px 12px; }
+            .pd5-beams, .pd5-tcores, .pd5-moats, .pd5-bus-back { grid-template-columns: 1fr; }
+            .pd5-tabs { gap: 4px; } .pd5-tab { padding: 12px 8px; } .pd5-tab b { font-size: 13px; }
+            .pd5-mvp { flex-direction: column; align-items: stretch; } .pd5-marr { text-align: center; transform: rotate(90deg); }
+            .pd5-iface, .pd5-comps { grid-template-columns: 1fr; }
+        }
+        @media(max-width:720px) { #pd5 .pd5-tabs { flex-direction: column; } #pd5 .pd5-tab { width: 100%; } }
+        @media(prefers-reduced-motion:reduce) { .pd5-pane, html.fx-js .fx-rv.fx-on { animation: none; } }
+        @media print { .pd5-pane[hidden] { display: block !important; } }
+
 	</style>
 <style>@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
+<script>document.documentElement.className+=" fx-js";</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"体系全景 | 王丰羽 Fengyu WANG","url":"https://www.fengyuwang.com/zh-cn/system"}</script>
 </head>
 <body>
 	<div id="shared-subpage-navbar" data-section="portfolio"></div>
 	<script src="../assets/js/shared-subpage-navbar.js?v=26.09.17.12.40"></script>
 
+	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
+	<nav class="fx-rail" aria-label="本页段落导航">
+		<a href="#systems" data-rail="systems"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">服务</span></a>
+		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">自动化</span></a>
+		<a href="#pd5" data-rail="pd5"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">人机合作自动化范式</span></a>
+		<a href="#paper" data-rail="paper"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一篇论文，一张图</span></a>
+		<a href="#thinking" data-rail="thinking"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">三层界面，一个诊断</span></a>
+		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">六大领域，不是六个孤岛</span></a>
+		<a href="#projects" data-rail="projects"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">项目全清单</span></a>
+	</nav>
 	<div class="page-wrap">
 		<div class="container">
 			<div class="marketing-hero">
-				<p class="eyebrow"><span class="dot" aria-hidden="true"></span>实时 · 实测</p>
-				<h1>一台机器。 <span class="accent">每个项目，实时可查。</span></h1>
-				<p class="sys-hero-tagline">本页每一个数字都从这台机器实时测得。</p>
-				<div class="sys-snapshot">
+				<p class="eyebrow fx-rv"><span class="dot" aria-hidden="true"></span>实时 · 实测</p>
+				<h1 class="fx-rv" style="transition-delay:90ms">一台机器。 <span class="accent">每个项目，实时可查。</span></h1>
+				<p class="sys-hero-tagline fx-rv" style="transition-delay:180ms">本页每一个数字都从这台机器实时测得。</p>
+				<svg class="fx-ekg fx-rv" style="transition-delay:250ms" viewBox="0 0 420 34" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="base" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/><path class="pulse" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/></svg>
+				<div class="sys-snapshot fx-rv" style="transition-delay:320ms">
 					<div class="sys-stat">
-						<span class="sys-stat-value">1,432,605</span>
+						<span class="sys-stat-value fx-count" data-n="1432605">1,432,605</span>
 						<span class="sys-stat-label">行代码</span>
 					</div>
 					<div class="sys-stat">
-						<span class="sys-stat-value">78</span>
+						<span class="sys-stat-value fx-count" data-n="78">78</span>
 						<span class="sys-stat-label">个项目</span>
 						<span class="sys-stat-note">本机 36 · 仅云端 42</span>
 					</div>
 					<div class="sys-stat">
-						<span class="sys-stat-value">11</span>
+						<span class="sys-stat-value fx-count" data-n="11">11</span>
 						<span class="sys-stat-label">种语言</span>
 						<span class="sys-stat-note">另有 13 个项目未识别语言</span>
 					</div>
@@ -519,8 +728,8 @@
 		</div>
 		<div id="systems" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>服务</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">01</span>服务</h2>
 					<p class="block-subtitle">六项本地服务 · 端口与用途一览（静态快照：本页只列，不起停）</p>
 					<div class="panel svcs">
 						<div class="svc">
@@ -565,8 +774,8 @@
 		</div>
 		<div id="automation" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>自动化</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">02</span>自动化</h2>
 					<p class="block-subtitle">五层闭环的逐层说明（静态快照：实时计数只在本机观景台）</p>
 					<p class="pdca">研究 → 思考 → 创作 → 行动 → 自我改进：每轮留记录、做复盘，结果回写 MD 宪法，驱动下一轮</p>
 					<div class="panel pdca-box">
@@ -752,18 +961,116 @@
 		</div>
 		<div id="pd5" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>人机合作自动化范式</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">03</span>人机合作自动化范式</h2>
 					<p class="block-subtitle">五层 × 双轨 × 双循环 × 三横梁：这套范式的框架全景与软件工程架构，两张图可切换。</p>
-					<div id="root"></div>
+					<div class="pd5">
+						<div class="pd5-tabs" role="tablist">
+							<button class="pd5-tab fx-act" data-pane="framework" role="tab" aria-selected="true"><b>框架全景图</b><span>五层 × 双轨 × 双循环 × 三横梁</span></button>
+							<button class="pd5-tab" data-pane="arch" role="tab" aria-selected="false"><b>软件工程架构图</b><span>4 核心构件 + 2 人接口 + 事件总线</span></button>
+						</div>
+						<div class="pd5-pane" id="pd5-framework" role="tabpanel">
+							<div class="pd5-legend"><span class="pd5-lg"><i class="dot dm"></i>机（左轨）</span><span class="pd5-lg"><i class="dot dh"></i>人（右轨）</span><span class="pd5-lg-sep"></span><span class="pd5-lg"><i class="dot dr"></i>风控熔断</span><span class="pd5-lg"><i class="dot da"></i>资产沉淀</span><span class="pd5-lg"><i class="dot dc"></i>算力精算</span><span class="pd5-lg-note">贯穿全层</span><span class="pd5-lg-sep"></span><span class="pd5-loop-pill">战略大环 · L0 ↔ L4 · 动态调整长期战略</span><span class="pd5-loop-pill alt">战术小环 · L1 ↔ L2 · 实时优化当批质量</span></div>
+							<div class="pd5-flowcap">↓ 战略→产品→语义→生成→交付</div>
+							<div class="pd5-fw">
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L4</span><b>战略层</b><i>定方向·控成本·守红线</i><em>STP + 市场研究</em></div>
+									<div class="pd5-track pd5-machine"><h5>机（左轨）</h5><ul><li>Meta分析 (CDA/Framenet)</li><li>全网舆情扫描</li><li>算力价值评估（高潜→顶级模型）</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>人（右轨）</h5><ul><li>确立 Brand Soul</li><li>划定合规红线</li><li>审批月度算力预算</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 风控 自动拦截涉政/极端话题</span><span class="pd5-beam ba">📦 资产 原始舆情数据打标入库</span><span class="pd5-beam bc">💰 成本 分配赛道算力配额，砍 ROI&lt;1 选题</span><span class="pd5-outs">产出: <i>战略锚定书</i> <i>算力预算表</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L3</span><b>产品层</b><i>定品类·建资产·算ROI</i><em>4P - Product</em></div>
+									<div class="pd5-track pd5-machine"><h5>机（左轨）</h5><ul><li>竞品拆解（TOP10 爬取）</li><li>关联规则挖掘高转化卖点</li><li>生成产品原型</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>人（右轨）</h5><ul><li>决策 SKU 形态</li><li>拍板核心卖点</li><li>审核语料入库标准</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 风控 排查产品合规风险</span><span class="pd5-beam ba">📦 资产 清洗数据→私有语料库/品牌词库</span><span class="pd5-beam bc">💰 成本 核算投入上限，毛利≥60%</span><span class="pd5-outs">产出: <i>PRD</i> <i>私有语料库索引</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L2</span><b>语义层</b><i>备弹药·充资产·降检索成本</i><em>供应链管理 (RAG)</em></div>
+									<div class="pd5-track pd5-machine"><h5>机（左轨）</h5><ul><li>按 PRD 执行 RAG 检索</li><li>语义匹配高契合度槽点/案例</li><li>检索结果自动打标入库</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>人（右轨）</h5><ul><li>审核素材合规性</li><li>剔除低质内容</li><li>补充独家语料</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 风控 过滤敏感案例/违规表述</span><span class="pd5-beam ba">📦 资产 新增素材→向量数据库</span><span class="pd5-beam bc">💰 成本 优先本地向量库，减少外部 API</span><span class="pd5-outs">产出: <i>上下文素材包</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L1</span><b>生成层</b><i>搞生产·控token·保质量</i><em>4P - Promotion</em></div>
+									<div class="pd5-track pd5-machine"><h5>机（左轨）</h5><ul><li>加载 Skill 模板 + 组装 Prompt</li><li>LLM 批量生成 + 缓存复用</li><li>自动过滤违规草稿</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>人（右轨）</h5><ul><li>调整 Skill 参数（讽刺度/梗密度）</li><li>抽检成品质量</li><li>打回不合格内容</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 风控 机器预检敏感词 + 人工终审</span><span class="pd5-beam ba">📦 资产 优质草稿/金句入库</span><span class="pd5-beam bc">💰 成本 按价值选模型，缓存复用≥40%</span><span class="pd5-outs">产出: <i>内容初稿</i></span></div>
+								</div>
+								<div class="pd5-arr" aria-hidden="true">↓</div>
+								<div class="pd5-layer">
+									<div class="pd5-badge"><span class="pd5-lid">L0</span><b>交付层</b><i>卖货·算账·促迭代</i><em>4P - Price/Place + 绩效管理</em></div>
+									<div class="pd5-track pd5-machine"><h5>机（左轨）</h5><ul><li>多平台自动化分发</li><li>数据埋点（ROI/转化/完播率）</li><li>生成成本收益报表</li></ul></div>
+									<div class="pd5-track pd5-human"><h5>人（右轨）</h5><ul><li>制定定价/渠道策略</li><li>复盘盈亏</li><li>触发双循环调整</li></ul></div>
+									<div class="pd5-beams"><span class="pd5-beam br">🛡 风控 实时监控平台规则→熔断</span><span class="pd5-beam ba">📦 资产 用户反馈/高赞评论入库</span><span class="pd5-beam bc">💰 成本 核算净利润，调整预算</span><span class="pd5-outs">产出: <i>已交付资产</i> <i>ROI复盘报告</i> <i>战略调整指令</i></span></div>
+								</div>
+							</div>
+							<div class="pd5-flowcap up">↑ 反馈→复盘→锚点修正</div>
+							<div class="pd5-tcores"><div class="pd5-tcores-t">技术内核映射</div>
+								<div class="pd5-tcore"><b>计算语言学</b><span class="tk">CDA / Framenet</span><span class="wh">L4 / L1</span><span class="ro">价值观识别·调性统一</span></div>
+								<div class="pd5-tcore"><b>机器学习</b><span class="tk">聚类 / 关联规则 / RL</span><span class="wh">L3 / L0</span><span class="ro">爆款挖掘·ROI优化</span></div>
+								<div class="pd5-tcore"><b>计算机技术</b><span class="tk">向量DB / RAG / LLM / Skill</span><span class="wh">L2 / L1</span><span class="ro">精准检索·工业生产·成本控制</span></div>
+							</div>
+							<div class="pd5-moats">
+								<div class="pd5-moat"><b>风控标准 / 私有语料 / 算力精算</b><span>别人抄不走</span></div>
+								<div class="pd5-moat"><b>Human in the Loop 权责边界（L4→L0）</b><span>别人学不会</span></div>
+								<div class="pd5-moat"><b>战术调质量·战略锁赛道</b><span>别人摸不透</span></div>
+							</div>
+						</div>
+						<div class="pd5-pane" id="pd5-arch" role="tabpanel" hidden>
+							<div class="pd5-legend"><span class="pd5-lg"><i class="dot d1"></i>主管线（生产流）</span><span class="pd5-lg"><i class="dot d2"></i>反馈流（双循环）</span><span class="pd5-lg"><i class="dot d3"></i>治理流（贯穿）</span></div>
+							<div class="pd5-pipe">
+								<div class="pd5-node io"><b>外部输入</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Task（原始问题/选题）</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Router</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Routing Ticket</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Asset / RAG</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Context Package（素材包）</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Executor</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Draft + cost + risk_flags</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Governance</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">审核通过的 Draft</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node gate"><b>Approval Gate</b></div>
+								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">已批准内容</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+								<div class="pd5-node"><b>Delivery</b></div>
+							</div>
+							<div class="pd5-gov"><b>Governance（治理）</b><span class="gm">红线表管理 · 敏感词过滤 · Token/API 配额计数 · 审计日志</span><span class="gs">AOP / Middleware 贯穿所有构件，不独占流程节点 · 三根横梁（风控 + 资产 + 成本）的软件外壳</span></div>
+							<div class="pd5-bus"><div class="pd5-bus-head"><b>Event Bus（事件总线）</b><span>解耦层间通信，承载双循环的事件驱动机制 · Bull/BullMQ 或 Redis Streams 或 RabbitMQ</span></div><div class="pd5-bus-evs"><code>task.done</code><code>task.posted</code><code>user.reacted</code><code>anchor.patch</code></div><div class="pd5-bus-back"><span class="pd5-back"><u>→ Asset / RAG</u>用户反馈/高赞评论→入库</span><span class="pd5-back"><u>→ Router</u>锚点补丁（人会审→合并）</span><span class="pd5-back"><u>→ Knobs</u>ROI 信号→人工调参</span></div></div>
+							<div class="pd5-iface">
+								<div class="pd5-hif"><b>Approval Gate（审批门）</b><span class="hm">某些类型必须人点头才发布（L0 终审 / L3 定品）</span><span class="hs">异步审批队列 — 人通过 Dashboard/通知 审批或打回</span><em>人右轨的「审批门」</em></div>
+								<div class="pd5-hif"><b>Knobs（调参口）</b><span class="hm">人可以改 Skill 参数、锚点权重、红线表（不是改代码）</span><span class="hs">Web Dashboard 或 CLI 命令</span><em>人右轨的「调参口」</em></div>
+							</div>
+							<div class="pd5-comps-t">构件详情</div>
+							<div class="pd5-comps">
+								<div class="pd5-comp"><b>Router</b><span class="cr">读 Task.type / 关键词 → 绑定 product_line + skill_id + budget_tier → 输出路由票据</span><span class="co">输出: Routing Ticket（不可抵赖的处理方案）</span><em>L4 机侧外壳 + 调度中心</em></div>
+								<div class="pd5-comp"><b>Asset / RAG</b><span class="cr">向量索引/检索、版本化、准入门（L3候选→人审→入库）</span><span class="co">输出: Context Package（上下文素材包，可缓存）</span><em>L3/L2 资产服务外壳</em></div>
+								<div class="pd5-comp"><b>Executor</b><span class="cr">受控调 AI — 缓存(key=hash(票据+上下文)) / 限流 / 模型选择 / retry / 后校验</span><span class="co">输出: Draft + cost + risk_flags</span><em>L1 生成层外壳</em></div>
+								<div class="pd5-comp"><b>Delivery</b><span class="cr">多平台分发、数据埋点（ROI/转化/完播）、成本收益报表</span><span class="co">输出: 事件流（task.done / user.reacted）→ Event Bus</span><em>L0 交付层外壳</em></div>
+							</div>
+							<div class="pd5-comps-t">最短实施路径 (MVP)</div>
+							<div class="pd5-mvp">
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#818cf822;border-color:#818cf8;color:#818cf8">1</span><b>Router</b><span class="md">问题→路由票据</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#3b82f622;border-color:#3b82f6;color:#3b82f6">2</span><b>Asset / RAG</b><span class="md">按票据给素材包</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#06b6d422;border-color:#06b6d4;color:#06b6d4">3</span><b>Executor</b><span class="md">受控调 AI 出 Draft</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#ef444422;border-color:#ef4444;color:#ef4444">4</span><b>Governance</b><span class="md">红线+成本+审计</span></div>
+								<span class="pd5-marr" aria-hidden="true">→</span>
+								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#f59e0b22;border-color:#f59e0b;color:#f59e0b">+</span><b>Gate + Knob</b><span class="md">人接口：审批+调参</span></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<script type="module" src="../assets/js/human-in-the-loop/human-in-the-loop-viewer.js"></script>
 		<div id="paper" class="content-block">
 			<div class="block-inner block-inner-wide">
-				<div class="section-card">
-					<h2>一篇论文，一张图</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">04</span>一篇论文，一张图</h2>
 					<p class="block-subtitle">两层界面原则：对话层负责做、观景层负责看、文档层负责管</p>
 					<div class="panel triad">
 						<div class="tri-canvas">
@@ -861,8 +1168,8 @@
 		</div>
 		<div id="thinking" class="content-block">
 			<div class="block-inner">
-				<div class="section-card">
-					<h2>三层界面，一个诊断</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">05</span>三层界面，一个诊断</h2>
 					<p class="block-subtitle">两层界面原则（Two-Layer Interface Principle, 2LIP）：一个面向 AI 时代的软件系统，交互面只保留两层；文档构成面向 AI 的第三个界面，纵向贯穿这两层。</p>
 					<div class="sys-diagram-wrap">
 						<svg class="sys-diagram" viewBox="0 0 660 540" role="img" aria-label="两层界面原则结构图：对话层与观景层两个交互层上下排列，文档治理面作为纵向一列贯穿两层" xmlns="http://www.w3.org/2000/svg">
@@ -929,8 +1236,8 @@
 		</div>
 		<div id="domains" class="content-block">
 			<div class="block-inner">
-				<div class="section-card">
-					<h2>六大领域，不是六个孤岛</h2>
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">06</span>六大领域，不是六个孤岛</h2>
 					<p class="block-subtitle">六个领域为节点，跨领域关系条数为边。连线只画有据可查的引用，不画想象中的协同。</p>
 					<div class="sys-graph-wrap">
 						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="六大领域关系图：六个领域为节点，节点大小按项目数缩放，跨领域关系条数为边，边宽按关系条数缩放，最密的五条边标出数值" xmlns="http://www.w3.org/2000/svg">
@@ -991,7 +1298,7 @@
 		</div>
 		<div id="projects" class="content-block">
 			<div class="block-inner">
-				<h2>项目全清单</h2>
+				<h2><span class="fx-ghost" aria-hidden="true">07</span>项目全清单</h2>
 				<p class="block-subtitle">78 个自有项目按领域分组；一个项目属多个领域时归入第一个领域，其余领域在卡片上标出。</p>
 				<p class="block-subtitle sys-scope-note">外链口径：只给公开可见的仓库。42 个私有仓与 2 个仅本机项目不提供公开链接（访客打不开），卡片上只标注身份；清单仍逐条列全，一条不减。</p>
 				<div class="sys-filter" id="sysFilterBar">
@@ -2987,7 +3294,7 @@
 			}
 			if(ok&&sv){ok=c.getAttribute("data-source")===sv;}
 			c.hidden=!ok;
-			if(ok)shown++;
+			if(ok){shown++;c.classList.add("fx-on");}
 		}
 		for(var g=0;g<groups.length;g++){
 			groups[g].hidden=!groups[g].querySelector(".sys-card:not([hidden])");
@@ -2998,6 +3305,53 @@
 	d.addEventListener("change",apply);
 	s.addEventListener("change",apply);
 	if(r)r.addEventListener("click",function(){q.value="";d.value="";s.value="";apply();});
+	})();</script>
+<script>(function(){
+var tabs=Array.from(document.querySelectorAll('.pd5-tab'));
+function selectPane(tab){tabs.forEach(function(t){var active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;t.classList.toggle('fx-act',active);document.getElementById('pd5-'+t.dataset.pane).hidden=!active;});}
+tabs.forEach(function(tab,index){tab.id='pd5-tab-'+tab.dataset.pane;tab.setAttribute('aria-controls','pd5-'+tab.dataset.pane);var pane=document.getElementById('pd5-'+tab.dataset.pane);pane.setAttribute('aria-labelledby',tab.id);pane.tabIndex=0;tab.addEventListener('click',function(){selectPane(tab);});tab.addEventListener('keydown',function(e){var next=index;if(e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectPane(tabs[next]);tabs[next].focus();});});
+if(tabs.length)selectPane(tabs[0]);
+var RM=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var prog=document.getElementById("fxProgress"),ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(function(){
+var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+if(prog)prog.style.transform="scaleX("+(max>0?Math.min(1,(h.scrollTop||0)/max):0)+")";
+ticking=false;});}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+var lists=[[".svc",45],[".md-pill",55],[".gcard",60],[".think-card",80],[".si-step",80],
+[".sys-point",80],[".rsch-node",50],[".tri-node",90],[".ribbon",90],[".sys-card",35]];
+var i,j,els;
+for(i=0;i<lists.length;i++){els=document.querySelectorAll(lists[i][0]);
+for(j=0;j<els.length;j++){els[j].classList.add("fx-rv");
+els[j].style.transitionDelay=((j%8)*lists[i][1])+"ms";}}
+var all=[].slice.call(document.querySelectorAll(".fx-rv"));
+function revealAll(){for(i=0;i<all.length;i++)all[i].classList.add("fx-on");}
+if(RM||!("IntersectionObserver" in window)){revealAll();}
+else{var io=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){en[k].target.classList.add("fx-on");io.unobserve(en[k].target);}}},
+{rootMargin:"0px 0px -8% 0px",threshold:0.08});
+for(i=0;i<all.length;i++)io.observe(all[i]);}
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+function runCount(el){var target=parseInt(el.getAttribute("data-n"),10)||0;
+if(RM||target<10){el.textContent=fmt(target);return;}
+var t0=null,dur=1300;
+function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-p,3);
+el.textContent=fmt(Math.round(target*e));if(p<1)requestAnimationFrame(step);}
+requestAnimationFrame(step);}
+var nums=document.querySelectorAll(".fx-count[data-n]");
+if(nums.length){
+if(RM||!("IntersectionObserver" in window)){for(i=0;i<nums.length;i++)runCount(nums[i]);}
+else{var io2=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){runCount(en[k].target);io2.unobserve(en[k].target);}}},{threshold:0.4});
+for(i=0;i<nums.length;i++)io2.observe(nums[i]);}}
+var railLinks=document.querySelectorAll(".fx-rail a[data-rail]");
+if(railLinks.length&&"IntersectionObserver" in window){
+var map={};for(i=0;i<railLinks.length;i++)map[railLinks[i].getAttribute("data-rail")]=railLinks[i];
+var io3=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+var l=map[en[k].target.id];if(!l)continue;
+if(en[k].isIntersecting){for(var m in map)map[m].classList.remove("fx-act");l.classList.add("fx-act");}}},
+{rootMargin:"-40% 0px -55% 0px"});
+for(var id in map){var sec=document.getElementById(id);if(sec)io3.observe(sec);}}
 })();</script>
 </body>
 </html>
