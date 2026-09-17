@@ -91,6 +91,13 @@ python -m http.server 8001
 └── sitemap.xml
 ```
 
+> **发布根与 Hugo 边界（2026-09-17 侦察确认）**：仓库根目录**就是** Cloudflare Pages 的发布目录（根目录即产物）。
+> `hugo/` 只负责博客，产物写到 `../_site/`，`hugo/deploy.sh` 只把 `{lang}/{blog,tags,archive}` 拷回根。
+> 因此：在 `hugo/content/` 下加一个 Hugo 页**不会被部署**；新增**纯静态展示页**的正确落点是
+> 根目录 `{zh-cn,zh-hk,en}/<english-name>.html`（三语各一份，文件名一致，见 `docs/guide/page-structure.md`）。
+> 仓库无主题、无 Hugo Modules、无 `hugo/static/`、不走 Hugo asset pipeline；`hugo/layouts/` 仅 7 个极简自定义模板，
+> `baseof.html` 直接引用根 `/assets/...`。
+
 ---
 
 ## Site Architecture & Page Flow

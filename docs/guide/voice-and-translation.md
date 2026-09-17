@@ -85,3 +85,11 @@ Think "Just Do It" or "Think Different." They should make the reader pause and n
 
 - 本章节将介绍云服务的核心能力
 - 本节讨论本地部署的局限性
+
+## 文章 front matter 与对齐门禁（机械阈值，2026-09-17 侦察确认）
+
+- **必填**：`title`、`date`、`description`（≥10 字，门禁 `desc`）、`slug`（＝目录名）、`translationKey`（三语同名）、`tags`、`draft`；`lastmod` 可选，仅修订旧文时填（驱动 `dateModified`/sitemap）。
+- **目录约定**：`hugo/content/{lang}/blog/posts/<slug>/index.md`；骨架见 `hugo/archetypes/default.md`（TOML `+++` 版）。
+- **对齐流程**：zh-cn 原创 → `tools/zh2hk.py`（`OpenCC("s2hk")` + `王豐羽→王丰羽` 回改）转 zh-hk → en 全译；三语齐备才上线（见 `docs/guide/WRITING-博文写作规范.md` §6）。
+- **机械门禁**（`check_site.py`）：第 2 节按 `translationKey`（缺则目录名）要求非 draft 三语齐；第 3 节 opencc 双向查简繁泄漏（zh-hk 可转简体 >3 处报错）；第 9 节 en 博文正文汉字 >50 判漏翻（白名单 `王丰羽/王豐羽/静心/jingxin/损不足以奉有余/不足/有余`），en 页面可见文本出现 `zh_ui_strs`（返回博客/上一页/下一页/搜索文章/排序/查看详情/去看看/查看/排序方式/首页）或 2+ 连续汉字即报错；第 11 节 `parity` 要求三语一级页面清单完全一致（文件名相同，英文名）。
+- 细节与用法见 `docs/guide/release-gate.md`（门禁节速查）。

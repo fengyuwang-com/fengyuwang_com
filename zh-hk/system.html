@@ -38,6 +38,7 @@
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<style>
 		html { scroll-behavior: smooth; }
+		#root { min-height: 520px; }
 		.page-wrap { background: #ffffff; }
 		.marketing-hero { text-align: center; padding: 52px 0 40px; }
 		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
@@ -219,6 +220,254 @@
 		body[data-theme="dark"] .sys-note-card p { color: #9fb0c3; }
 		body[data-theme="dark"] .link-card p { color: #94a3b8; }
 
+		/* ============ ported from the FengOS observatory homepage (services / automation /
+		   one-paper-one-figure). Keeps that page's own class names (.svc/.pdca-*/.tri-*/.rsch-*);
+		   only colors, radii and shadows are re-stated as literal site values (the site has no
+		   CSS variables), and the glass panel becomes a flat white site card. */
+		.block-inner-wide { max-width: 1080px; }
+		.marketing-hero .eyebrow { display: flex; align-items: center; justify-content: center; gap: 9px;
+			font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #6b7280; margin-bottom: 10px; }
+		.marketing-hero .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #30d158; flex: none; }
+		.marketing-hero h1 .accent { display: block; color: #0071e3; }
+
+		/* unified panel: flat white site card (homepage .panel, glass removed) */
+		.panel { background: #ffffff; border: 1px solid rgba(0,0,0,.07); border-radius: 18px;
+			box-shadow: 0 4px 16px rgba(15,23,42,.06); overflow: hidden; }
+		.panel + .panel { margin-top: 18px; }
+
+		/* service rows */
+		.svcs { display: flex; flex-direction: column; }
+		.svc { display: flex; align-items: center; gap: 18px; padding: 18px 22px; flex-wrap: wrap; }
+		.svc + .svc { border-top: 1px solid rgba(0,0,0,.07); }
+		.svc .sname { display: flex; align-items: center; gap: 10px; min-width: 170px; }
+		.svc .name { font-size: 15px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; }
+		.svc .sdesc { margin: 0; font-size: 13.5px; color: #475569; line-height: 1.6; flex: 1; min-width: 200px; }
+		.svc .ts { font-size: 12px; color: #6b7280; direction: ltr; font-variant-numeric: tabular-nums; }
+		.svc .lead { flex: 1; min-width: 20px; height: 1px; border-bottom: 1px solid rgba(0,0,0,.07); align-self: center; }
+		.svc .stop-h { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+		.audit .svc .tag { flex: none; font-size: 12px; font-weight: 600; color: #475569;
+			border: 1px solid rgba(0,0,0,.07); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+		.audit .svc .tag.ok { color: #0071e3; border-color: rgba(0,113,227,.30); }
+
+		/* automation: layer titles and the flow arrows between layers */
+		.pdca { margin: 0 0 14px; font-size: 13.5px; color: #475569; line-height: 1.7; }
+		.layer { padding: 20px 2px 8px; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; color: #6b7280; }
+		.flow { display: flex; justify-content: center; padding: 10px 0 12px; }
+		.farr { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+			border-radius: 50%; border: 1px solid rgba(0,0,0,.07); background: #ffffff; color: #0071e3; font-size: 15px; line-height: 1; }
+		.pdca-box { padding: 16px 22px; margin: 0 0 18px; }
+		.pdca-ring-title { font-size: 15px; font-weight: 700; color: #0f172a; text-align: center; letter-spacing: -.01em; }
+		.pdca-sub { margin-top: 4px; font-size: 12.5px; color: #6b7280; text-align: center; line-height: 1.6; }
+		.pdca-wrap { display: flex; gap: 18px; align-items: center; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+		.pdca-ring { width: min(300px,100%); flex: none; }
+		.pdca-ring svg { display: block; width: 100%; height: auto; }
+		.ring-flow { transform-box: fill-box; transform-origin: center; animation: ring-spin 26s linear infinite; }
+		@keyframes ring-spin { to { transform: rotate(360deg); } }
+		.ring-label { font-family: inherit; font-weight: 600; }
+		.ring-center { font-family: inherit; }
+		.md-const { flex: 1; min-width: 220px; }
+		.md-cap { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; color: #475569; }
+		.md-pills { margin-top: 8px; display: flex; flex-wrap: wrap; }
+		.md-pill { display: inline-flex; align-items: center; max-width: 100%; padding: 6px 12px; margin: 3px;
+			border-radius: 999px; background: #ffffff; border: 1px solid rgba(0,0,0,.07);
+			font-size: 12.5px; font-weight: 600; color: #1f3b8a; white-space: nowrap; }
+		.md-note { margin-top: 8px; font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+		/* research layer: sources -> engines -> stores */
+		.rsch-wrap { padding: 4px 22px 10px; }
+		.rsch-sub { font-size: 12.5px; color: #6b7280; text-align: center; line-height: 1.7; overflow-wrap: anywhere; }
+		.rsch-diagram { display: grid; grid-template-columns: minmax(0,1.3fr) 40px minmax(0,1fr) 40px minmax(0,1fr);
+			gap: 8px; align-items: stretch; margin-top: 14px; }
+		.rsch-stage { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+		.rsch-stitle { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #6b7280; }
+		.rsch-nodes { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+		.rsch-node { background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 10px 12px; min-width: 0; }
+		.rsch-node b { display: block; font-size: 13px; font-weight: 700; color: #0f172a; overflow-wrap: anywhere; }
+		.rsch-node span { display: block; margin-top: 4px; font-size: 12px; color: #475569; line-height: 1.55; overflow-wrap: anywhere; }
+		.rsch-link { display: flex; align-items: center; justify-content: center; }
+		.rsch-link svg { display: block; width: 100%; max-width: 40px; height: 24px; overflow: visible; }
+		.rsch-line { fill: none; stroke: #0071e3; stroke-width: 2; stroke-dasharray: 6 6; }
+
+		/* think layer */
+		.think-box { padding: 6px 22px 12px; }
+		.think-line { font-size: 13.5px; color: #475569; line-height: 1.6; }
+		.think-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+		.pnode { display: inline-flex; align-items: center; max-width: 100%; padding: 8px 14px; border-radius: 999px;
+			background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); font-size: 13px; font-weight: 600; color: #0f172a; white-space: nowrap; }
+		.parr { color: #0071e3; font-size: 14px; font-weight: 600; flex: none; }
+		.think-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+		.think-card { min-width: 0; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 12px 14px; }
+		.think-card .tk-name { font-size: 14px; font-weight: 700; color: #0f172a; }
+		.think-card .tk-desc { margin-top: 4px; font-size: 12px; color: #475569; line-height: 1.55; overflow-wrap: anywhere; }
+
+		/* create layer */
+		.create-def { padding: 6px 22px 10px; }
+		.cr-def-main { display: block; font-size: 13.5px; line-height: 1.6; color: #0f172a; font-weight: 700; }
+		.cr-def-kicker { display: inline-block; margin-right: 8px; font-size: 11px; font-weight: 700;
+			letter-spacing: .12em; color: #0071e3; text-transform: uppercase; }
+		.cr-def-en { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6b7280; line-height: 1.55; }
+		.gen-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; padding: 4px 22px 12px; }
+		.gcard { min-width: 0; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 12px 14px; }
+		.gcard .gn { font-size: 14px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+		.gcard .gd { font-size: 12px; color: #475569; line-height: 1.55; margin-top: 4px; }
+		.gcard.cr-lead { grid-column: 1/-1; border-color: rgba(0,113,227,.30); }
+
+		/* act layer */
+		.act-def { padding: 6px 22px 10px; }
+		.act-def-line { padding: 9px 14px; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07);
+			border-radius: 14px; font-weight: 700; font-size: 13px; color: #0066cc; letter-spacing: -.01em; }
+
+		/* self-improve layer */
+		.si-loop { padding: 6px 22px 12px; }
+		.si-quote { font-size: 13.5px; font-weight: 600; line-height: 1.65; color: #0f172a;
+			border-top: 2px solid #0071e3; padding-top: 8px; }
+		.si-steps { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+		.si-step { display: inline-flex; flex-direction: column; gap: 3px; padding: 8px 14px; border-radius: 999px;
+			background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); }
+		.si-step b { font-size: 12.5px; font-weight: 700; color: #0f172a; }
+		.si-step span { font-size: 11.5px; color: #475569; line-height: 1.45; overflow-wrap: anywhere; }
+		.si-arr { flex: none; color: #0071e3; font-size: 14px; font-weight: 600; align-self: center; }
+
+		/* one paper, one figure: the two-layer interface triad */
+		.panel.triad { padding: 16px 20px; margin: 0 0 18px; }
+		.tri-canvas { position: relative; display: grid; grid-template-columns: minmax(0,1fr) 200px;
+			grid-template-rows: auto auto auto; column-gap: 12px; }
+		.tri-l1 { grid-column: 1/3; grid-row: 1; }
+		.tri-iface { grid-column: 1/3; grid-row: 2; }
+		.tri-l2 { grid-column: 1/3; grid-row: 3; }
+		.tri-l1, .tri-l2 { border: 1px solid rgba(0,0,0,.07); border-radius: 18px; background: #ffffff;
+			box-shadow: 0 2px 8px rgba(15,23,42,.04); padding: 14px 216px 14px 16px; min-width: 0; }
+		.tri-lhead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+		.tri-tag1 { font-size: 10.5px; font-weight: 700; letter-spacing: .12em; color: #6b7280; white-space: nowrap; }
+		.tri-ln { font-size: 15px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; }
+		.tri-ld { font-size: 12.5px; color: #475569; line-height: 1.55; }
+		.tri-row { display: flex; align-items: stretch; margin-top: 10px; }
+		.tri-node { flex: 1 1 0; min-width: 0; background: #fbfbfd; border: 1px solid rgba(0,0,0,.07);
+			border-radius: 14px; padding: 10px 8px; text-align: center; }
+		.tri-node .tri-name { font-size: 13.5px; font-weight: 700; color: #0f172a; }
+		.tri-node .tri-note { margin-top: 4px; font-size: 11.5px; color: #475569; line-height: 1.5; overflow-wrap: anywhere; }
+		.tri-node.tri-ai { border-color: rgba(0,113,227,.35); }
+		.tri-link { flex: 0 0 92px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 0 2px; }
+		.tri-lab { font-size: 10.5px; color: #6b7280; text-align: center; line-height: 1.35; }
+		.tri-link svg { display: block; width: 100%; height: 14px; overflow: visible; }
+		.tri-line { fill: none; stroke: #0071e3; stroke-width: 2; stroke-dasharray: 6 5; animation: tri-dash 1.1s linear infinite; }
+		.tri-line.up { stroke: #30d158; }
+		.tri-head { fill: #0071e3; }
+		.tri-head.up { fill: #30d158; }
+		@keyframes tri-dash { to { stroke-dashoffset: -11; } }
+		.tri-iface { display: flex; justify-content: center; gap: 18px; padding: 8px 216px 8px 0; flex-wrap: wrap; }
+		.tri-iface .if-item { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+		.tri-iface .if-lab { font-size: 11.5px; color: #475569; line-height: 1.4; }
+		.tri-iface svg { flex: none; width: 14px; height: 24px; overflow: visible; }
+		.tri-note2 { margin-top: 8px; font-size: 12px; color: #475569; line-height: 1.6; }
+		.tri-plane { grid-column: 2; grid-row: 1/4; z-index: 2; position: relative; min-width: 0; overflow: hidden;
+			display: flex; flex-direction: column; gap: 10px; border: 1px solid rgba(0,113,227,.28); border-radius: 18px;
+			background: linear-gradient(180deg,rgba(0,113,227,.07),rgba(0,113,227,.04)); padding: 14px 12px 14px 18px; }
+		.tri-plane::before { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px;
+			background-image: linear-gradient(180deg,#0071e3 0 7px,transparent 7px 13px);
+			background-size: 2px 13px; background-repeat: repeat-y; animation: plane-flow 1.1s linear infinite; opacity: .55; }
+		@keyframes plane-flow { to { background-position: 0 13px; } }
+		.tri-plane-t { font-size: 13px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; text-align: center; }
+		.tri-plane-s { font-size: 11px; color: #6b7280; text-align: center; line-height: 1.5; }
+		.tri-junc { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+		.tri-junc-tag { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: #6b7280; white-space: nowrap; }
+		.tri-jrow { display: flex; align-items: center; gap: 7px; min-width: 0; }
+		.tri-jrow svg { flex: none; width: 12px; height: 22px; overflow: visible; }
+		.tri-jrow .jlab { font-size: 11px; color: #475569; line-height: 1.45; min-width: 0; overflow-wrap: anywhere; }
+		.tri-md { display: flex; flex-direction: column; align-items: stretch; margin: auto 0; min-width: 0; }
+		.tri-md .md-pill { margin: 3px 0; justify-content: center; max-width: 100%; font-size: 11.5px; padding: 5px 10px; }
+		.tri-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,.07);
+			display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+		.tri-tagline { margin-top: 10px; text-align: center; font-size: 13.5px; line-height: 1.6; color: #0f172a; }
+		.tri-cases { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: center;
+			align-items: center; font-size: 12px; color: #475569; }
+		.tri-cases .cn { font-weight: 600; color: #0f172a; }
+		.tri-cases .sep { color: #6b7280; }
+		.ribbon { display: inline-flex; align-items: center; max-width: 100%; padding: 5px 12px; border-radius: 999px;
+			font-size: 12px; font-weight: 600; color: #0071e3; border: 1px solid rgba(0,113,227,.30); background: #ffffff; white-space: nowrap; }
+
+		/* ported section: dark theme */
+		body[data-theme="dark"] .panel { background: #0f172a; border-color: rgba(148,163,184,.12); box-shadow: none; }
+		body[data-theme="dark"] .marketing-hero .eyebrow { color: #94a3b8; }
+		body[data-theme="dark"] .marketing-hero h1 .accent { color: #2997ff; }
+		body[data-theme="dark"] .svc .name, body[data-theme="dark"] .pdca-ring-title,
+		body[data-theme="dark"] .tri-ln, body[data-theme="dark"] .tri-plane-t, body[data-theme="dark"] .tri-tagline,
+		body[data-theme="dark"] .tri-node .tri-name, body[data-theme="dark"] .tri-cases .sep,
+		body[data-theme="dark"] .tri-cases .cn, body[data-theme="dark"] .si-quote, body[data-theme="dark"] .si-step b,
+		body[data-theme="dark"] .think-card .tk-name, body[data-theme="dark"] .pnode, body[data-theme="dark"] .gcard .gn,
+		body[data-theme="dark"] .rsch-node b, body[data-theme="dark"] .cr-def-main { color: #e5ecf4; }
+		body[data-theme="dark"] .svc .sdesc, body[data-theme="dark"] .tri-ld, body[data-theme="dark"] .tri-node .tri-note,
+		body[data-theme="dark"] .tri-jrow .jlab, body[data-theme="dark"] .tri-cases, body[data-theme="dark"] .think-line,
+		body[data-theme="dark"] .think-card .tk-desc, body[data-theme="dark"] .gcard .gd, body[data-theme="dark"] .rsch-node span,
+		body[data-theme="dark"] .si-step span, body[data-theme="dark"] .md-note, body[data-theme="dark"] .md-cap,
+		body[data-theme="dark"] .tri-note2, body[data-theme="dark"] .tri-iface .if-lab { color: #9fb0c3; }
+		body[data-theme="dark"] .svc .ts, body[data-theme="dark"] .layer, body[data-theme="dark"] .pdca-sub,
+		body[data-theme="dark"] .rsch-sub, body[data-theme="dark"] .rsch-stitle, body[data-theme="dark"] .tri-tag1,
+		body[data-theme="dark"] .tri-junc-tag, body[data-theme="dark"] .tri-lab, body[data-theme="dark"] .tri-plane-s,
+		body[data-theme="dark"] .cr-def-en { color: #94a3b8; }
+		body[data-theme="dark"] .layer { color: #bfdbfe; }
+		body[data-theme="dark"] .svc + .svc { border-top-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .svc .lead { border-bottom-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .audit .svc .tag { color: #cbd5e1; border-color: rgba(148,163,184,.20); }
+		body[data-theme="dark"] .audit .svc .tag.ok { color: #8ab0ff; border-color: rgba(41,151,255,.35); }
+		body[data-theme="dark"] .farr { background: #111827; border-color: rgba(148,163,184,.20); color: #2997ff; }
+		body[data-theme="dark"] .md-pill { background: #111827; border-color: rgba(148,163,184,.18); color: #bfdbfe; }
+		body[data-theme="dark"] .rsch-node, body[data-theme="dark"] .think-card, body[data-theme="dark"] .gcard,
+		body[data-theme="dark"] .pnode, body[data-theme="dark"] .si-step, body[data-theme="dark"] .tri-node,
+		body[data-theme="dark"] .act-def-line { background: #111827; border-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .act-def-line { color: #8ab0ff; }
+		body[data-theme="dark"] .tri-l1, body[data-theme="dark"] .tri-l2 { background: #0f172a; border-color: rgba(148,163,184,.14); box-shadow: none; }
+		body[data-theme="dark"] .tri-node.tri-ai { border-color: rgba(41,151,255,.35); }
+		body[data-theme="dark"] .tri-foot { border-top-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .tri-line { stroke: #2997ff; }
+		body[data-theme="dark"] .tri-line.up { stroke: #30d158; }
+		body[data-theme="dark"] .tri-head { fill: #2997ff; }
+		body[data-theme="dark"] .tri-head.up { fill: #30d158; }
+		body[data-theme="dark"] .tri-plane { border-color: rgba(41,151,255,.30); background: linear-gradient(180deg,rgba(41,151,255,.10),rgba(41,151,255,.04)); }
+		body[data-theme="dark"] .tri-plane::before { background-image: linear-gradient(180deg,#2997ff 0 7px,transparent 7px 13px); }
+		body[data-theme="dark"] .ribbon { background: #111827; border-color: rgba(41,151,255,.35); color: #8ab0ff; }
+		body[data-theme="dark"] .rsch-line { stroke: #2997ff; }
+		body[data-theme="dark"] .si-quote { border-top-color: #2997ff; }
+		body[data-theme="dark"] .si-arr, body[data-theme="dark"] .parr, body[data-theme="dark"] .cr-def-kicker { color: #8ab0ff; }
+		body[data-theme="dark"] .pdca-ring circle { fill: #0f172a; stroke: rgba(148,163,184,.20); }
+		body[data-theme="dark"] .ring-label, body[data-theme="dark"] .ring-center { fill: #e5ecf4; }
+
+		/* ported section: narrow screens */
+		@media (max-width: 1020px) {
+			.tri-canvas { display: flex; flex-direction: column; gap: 10px; }
+			.tri-plane { order: -1; border-top: 3px solid rgba(0,113,227,.40); }
+			.tri-plane::before { display: none; }
+			.tri-l1, .tri-l2 { padding: 14px 16px; border-top: 3px solid rgba(0,113,227,.40); }
+			.tri-iface { padding: 8px 0; }
+			.tri-md { flex-direction: row; flex-wrap: wrap; }
+		}
+		@media (max-width: 900px) {
+			.gen-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+		}
+		@media (max-width: 767px) {
+			.rsch-diagram { grid-template-columns: minmax(0,1fr); }
+			.rsch-link svg { width: 24px; height: 32px; transform: rotate(90deg); }
+			.think-flow, .si-steps { align-items: flex-start; }
+		}
+		@media (max-width: 640px) {
+			.svc { gap: 8px 12px; padding: 16px 14px; }
+			.svc .sname { min-width: 0; }
+			.svc .sdesc { flex-basis: 100%; min-width: 0; }
+			.svc .lead, .svc .ts { display: none; }
+			.svc .stop-h { margin-left: 0; }
+			.pdca-wrap { gap: 12px; }
+			.pdca-ring { width: min(240px,100%); }
+			.md-cap, .md-note { text-align: center; }
+			.md-pills { justify-content: center; }
+			.think-cards, .gen-grid { grid-template-columns: minmax(0,1fr); }
+			.si-step { flex: 1 1 100%; border-radius: 14px; }
+			.si-arr { transform: rotate(90deg); }
+			.tri-row { flex-direction: column; }
+			.tri-link { flex-direction: row; justify-content: center; align-items: center; gap: 8px; padding: 6px 0; flex-basis: auto; }
+			.tri-link svg { width: 30px; height: 14px; transform: rotate(90deg); flex: none; }
+			.tri-lab { white-space: nowrap; }
+		}
+
 		@media (max-width: 991px) {
 			.marketing-hero { padding: 36px 24px; }
 			.marketing-hero h1 { font-size: 2.4rem; }
@@ -246,24 +495,368 @@
 	<div class="page-wrap">
 		<div class="container">
 			<div class="marketing-hero">
-				<h1>體系全景</h1>
-				<p class="sys-hero-tagline">一個一人軟件公司的思想體系與全部自有項目——兩層界面原則、PDCA 閉環，以及 78 個項目之間的真實關係。</p>
+				<p class="eyebrow"><span class="dot" aria-hidden="true"></span>實時 · 實測</p>
+				<h1>一台機器。 <span class="accent">每個項目，實時可查。</span></h1>
+				<p class="sys-hero-tagline">本頁每一個數字都從這台機器實時測得。</p>
 				<div class="sys-snapshot">
 					<div class="sys-stat">
+						<span class="sys-stat-value">1,432,605</span>
+						<span class="sys-stat-label">行代碼</span>
+					</div>
+					<div class="sys-stat">
 						<span class="sys-stat-value">78</span>
-						<span class="sys-stat-label">自有項目</span>
+						<span class="sys-stat-label">個項目</span>
+						<span class="sys-stat-note">本機 36 · 僅雲端 42</span>
 					</div>
 					<div class="sys-stat">
-						<span class="sys-stat-value">36 / 42</span>
-						<span class="sys-stat-label">本機實現 / 僅雲端倉庫</span>
-					</div>
-					<div class="sys-stat">
-						<span class="sys-stat-value">143.3萬行</span>
-						<span class="sys-stat-label">本機自有代碼</span>
-						<span class="sys-stat-note">1,432,605</span>
+						<span class="sys-stat-value">11</span>
+						<span class="sys-stat-label">種語言</span>
+						<span class="sys-stat-note">另有 13 個項目未識別語言</span>
 					</div>
 				</div>
 				<p class="sys-hero-note">快照 2026-09-17，取自本人開發環境（FengOS 觀景台）的項目目錄報告：本機路徑掃描 + GitHub 名下倉庫，逐條可核，非估算。</p>
+			</div>
+		</div>
+		<div id="systems" class="content-block">
+			<div class="block-inner block-inner-wide">
+				<div class="section-card">
+					<h2>服務</h2>
+					<p class="block-subtitle">六項本地服務 · 端口與用途一覽（靜態快照：本頁只列，不起停）</p>
+					<div class="panel svcs">
+						<div class="svc">
+							<div class="sname"><span class="name">FengInvest</span></div>
+							<p class="sdesc">量化研究與回測平台</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:23456</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengMedia</span></div>
+							<p class="sdesc">內容與媒體生產管線</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:23457</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">AIExport</span></div>
+							<p class="sdesc">AI 對話導出與歸檔工具</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:8787</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">CAO</span></div>
+							<p class="sdesc">AI 幹事艦隊控制面（WSL）</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:9889</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">webcli</span></div>
+							<p class="sdesc">艦隊用的瀏覽器終端</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:8788</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FlyGo</span></div>
+							<p class="sdesc">通用任務自動執行</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="ts">:8388</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="automation" class="content-block">
+			<div class="block-inner block-inner-wide">
+				<div class="section-card">
+					<h2>自動化</h2>
+					<p class="block-subtitle">五層閉環的逐層説明（靜態快照：實時計數只在本機觀景台）</p>
+					<p class="pdca">研究 → 思考 → 創作 → 行動 → 自我改進：每輪留記錄、做覆盤，結果回寫 MD 憲法，驅動下一輪</p>
+					<div class="panel pdca-box">
+						<div class="pdca-ring-title">研究 · 思考 · 創作 · 行動 · 自我改進</div>
+						<div class="pdca-sub">自我改進閉環（PDCA + MD 憲法）：每一輪餵給下一輪</div>
+						<div class="pdca-wrap">
+							<div class="pdca-ring">
+								<svg viewBox="0 0 320 320" role="img" aria-label="五段自我改進閉環：研究到思考到創作到行動到自我改進，再回到研究" xmlns="http://www.w3.org/2000/svg">
+						<g class="ring-flow" fill="none" stroke-width="14" stroke-linecap="round">
+							<path d="M 169.2 55.4 A 105 105 0 0 1 256.7 119.0" stroke="#bfd9fb"/>
+							<path d="M 262.3 136.4 A 105 105 0 0 1 228.9 239.2" stroke="#8fbef8"/>
+							<path d="M 214.1 250.0 A 105 105 0 0 1 105.9 250.0" stroke="#5ea6f4"/>
+							<path d="M 91.1 239.2 A 105 105 0 0 1 57.7 136.4" stroke="#338ff0"/>
+							<path d="M 63.3 119.0 A 105 105 0 0 1 150.8 55.4" stroke="#0071e3"/>
+						</g>
+						<g class="ring-flow" stroke="none">
+							<polygon points="256.7,119.0 249.6,110.4 259.3,108.1" fill="#8fbef8"/>
+							<polygon points="228.9,239.2 233.2,228.9 239.7,236.4" fill="#5ea6f4"/>
+							<polygon points="105.9,250.0 117.0,250.9 111.9,259.4" fill="#338ff0"/>
+							<polygon points="57.7,136.4 60.3,147.3 50.6,145.0" fill="#0071e3"/>
+							<polygon points="150.8,55.4 141.3,61.3 140.4,51.3" fill="#0071e3"/>
+						</g>
+						<circle cx="160" cy="160" r="64" fill="#ffffff" stroke="rgba(0,0,0,.07)"/>
+						<g fill="#1d1d1f">
+							<text class="ring-label" x="207.6" y="94.5" text-anchor="middle" font-size="13">研究</text>
+							<text class="ring-label" x="237" y="185" text-anchor="middle" font-size="13">思考</text>
+							<text class="ring-label" x="160" y="245" text-anchor="middle" font-size="13">創作</text>
+							<text class="ring-label" x="83" y="185" text-anchor="middle" font-size="13">行動</text>
+							<text class="ring-label" x="112.4" y="94.5" text-anchor="middle" font-size="11.5">自我改進</text>
+						</g>
+						<g fill="#1d1d1f">
+							<text class="ring-center" x="160" y="157" text-anchor="middle" font-size="9.5">每次執行留記錄、做覆盤</text>
+							<text class="ring-center" x="160" y="173" text-anchor="middle" font-size="9.5" fill="#6e6e73">供下一次複用</text>
+						</g>
+					</svg>
+							</div>
+							<div class="md-const">
+								<div class="md-cap">MD 憲法在自我改進處迭代</div>
+								<div class="md-pills"><span class="md-pill">AGENTS 規則</span><span class="md-pill">MISSION 目標</span><span class="md-pill">todo 賬本</span><span class="md-pill">FENGMEM 記錄</span><span class="md-pill">Skill 包</span></div>
+								<div class="md-note">規則約束對話，結果回到賬本</div>
+							</div>
+						</div>
+					</div>
+					<div class="layer">研究</div>
+					<div class="panel svcs">
+						<div class="rsch-wrap">
+													<div class="rsch-sub">一條主路：行情 API → 自建腳本 → 本地 SQL 建庫；一條副路：自建通用系統先獲取授權再接 API；Search King 旗艦通搜全網；AIExport 聚合各家 AI 輸出，沉澱自有模型</div>
+													<div class="rsch-diagram still" role="img" aria-label="研究信息全景：源頭到對接再到沉澱">
+														<div class="rsch-stage"><div class="rsch-stitle">入口</div><div class="rsch-nodes">
+															<div class="rsch-node"><b>行情 API</b><span>對接行情數據接口</span></div>
+															<div class="rsch-node"><b>第二路：授權 → API</b><span>自建通用系統先授權再接 API · 本地只讀，憑據絕不展示</span></div>
+															<div class="rsch-node"><b>Search King 旗艦</b><span>通用：搜任何網站、到任何地方</span></div>
+														</div></div>
+														<div class="rsch-link" aria-hidden="true"><svg viewBox="0 0 54 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rschA1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0071e3"></path></marker></defs><line x1="2" y1="12" x2="46" y2="12" class="rsch-line" marker-end="url(#rschA1)"></line></svg></div>
+														<div class="rsch-stage"><div class="rsch-stitle">對接</div><div class="rsch-nodes">
+															<div class="rsch-node"><b>FengInvest 腳本</b><span>對接行情 API 的量化腳本</span></div>
+															<div class="rsch-node"><b>通用檢索入庫</b><span>多後端反爬，結果供建庫</span></div>
+															<div class="rsch-node"><b>AIExport 聚合</b><span>聚合各家 AI 輸出</span></div>
+														</div></div>
+														<div class="rsch-link" aria-hidden="true"><svg viewBox="0 0 54 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rschA2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0071e3"></path></marker></defs><line x1="2" y1="12" x2="46" y2="12" class="rsch-line" marker-end="url(#rschA2)"></line></svg></div>
+														<div class="rsch-stage"><div class="rsch-stitle">沉澱</div><div class="rsch-nodes">
+															<div class="rsch-node"><b>自建 SQL 建庫</b><span>行情等數據落庫，文件留在原處</span></div>
+															<div class="rsch-node"><b>自有模型</b><span>沉澱知識訓練本方模型，AIExport 現聚為未來鋪路</span></div>
+														</div></div>
+													</div>
+												</div>
+						<div class="svc">
+							<div class="sname"><span class="name">語料沉澱</span></div>
+							<p class="sdesc">把外部世界的長文本搬進本地：章節全文留存，隨時離線可讀</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">研究台賬</span></div>
+							<p class="sdesc">研究的每一步都留記錄、蒸餾成可複用資產，餵給下一輪</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengInvest</span></div>
+							<p class="sdesc">量化研究平台：行情腳本對接 API，落成本地 SQL 建庫</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">Search-King</span></div>
+							<p class="sdesc">通用檢索旗艦：多後端反爬，結果供本地建庫</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">AIExport</span></div>
+							<p class="sdesc">聚合各家 AI 輸出，沉澱自有模型語料</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+					</div>
+					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
+					<div class="layer">思考</div>
+					<div class="panel svcs">
+						<div class="think-box">
+														<div class="think-line">思考層的日常：AI 開工先讀 MD 文檔，行動產生的結果再回寫賬本與日誌</div>
+														<div class="think-flow" role="img" aria-label="讀 MD 文檔到獲得身份規則任務到執行到回寫賬本與日誌"><span class="pnode">讀 MD 文檔</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">獲得身份、規則與任務</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">執行</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">回寫賬本與日誌</span></div>
+														<div class="think-cards still">
+															<div class="think-card"><div class="tk-name">GUI 自動駕駛</div><div class="tk-desc">規劃中的 GUI 自動駕駛層：每一步都遵守開工時讀入的 AGENTS 規則</div></div>
+															<div class="think-card"><div class="tk-name">攻略與治理文檔</div><div class="tk-desc">歷輪沉澱的攻略與複用腳本，加治理艦隊的 MD 文檔</div></div>
+														</div>
+													</div>
+					</div>
+					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
+					<div class="layer">創作</div>
+					<div class="panel svcs">
+						<div class="create-def">
+														<span class="cr-def-main"><span class="cr-def-kicker">創作</span>創作 = 做出一個東西，尚未分發給別人</span>
+														<span class="cr-def-en">Create = you make a thing, not yet distributed</span>
+													</div>
+						<div class="gen-grid">
+														<div class="gcard cr-lead"><div class="gn">FengMedia</div><div class="gd">創作主體：從選題到成片的完整管線，本機只讀展示</div></div>
+														<div class="gcard"><div class="gn">文本生成</div><div class="gd">文本與文案生成：作品先留本機，尚未分發</div></div>
+														<div class="gcard"><div class="gn">圖像生成</div><div class="gd">圖像與封面生成：作品先留本機，尚未分發</div></div>
+														<div class="gcard"><div class="gn">音樂生成</div><div class="gd">FengMusician 工具集：FengMedia/tools/fengmusician，本機只讀</div></div>
+														<div class="gcard"><div class="gn">語音 TTS · TTS-UI</div><div class="gd">TTS-UI 桌面程序打包在本機：只讀展示</div></div>
+														<div class="gcard"><div class="gn">數字人</div><div class="gd">真人路線已驗證、動漫 VRM 驗證中：本機只讀</div></div>
+														<div class="gcard"><div class="gn">視頻生成</div><div class="gd">成片走 HyperFrames 工具鏈渲染：草稿可由開源 MoneyPrinterTurbo 起步</div></div>
+													</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengInvest</span></div>
+							<p class="sdesc">Invest 也是創作：行情研究、資產分析報告都是做出來的東西，分發前留在本機</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+					</div>
+					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
+					<div class="layer">行動</div>
+					<div class="panel svcs">
+						<div class="act-def"><div class="act-def-line">行動 = 分發給他人、對外產生影響</div></div>
+						<div class="svc">
+							<div class="sname"><span class="name">JobHunter（Private-feng-job-hunter）</span></div>
+							<p class="sdesc">通用批量表單執行 / 自動化填報；按授權範圍對外逐條提交</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengMail / FENGmailMac（Mac 機）</span></div>
+							<p class="sdesc">郵件外發：授權後走 API，把郵件送達收件人、對外產生影響；FENGmailMac 本機確認存在</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">分發渠道</span></div>
+							<p class="sdesc">git 雙推 GitHub + gitee；發佈/分發動作此處只讀説明</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">授權 → 調外部 API</span></div>
+							<p class="sdesc">FengMail / FENGmailMac 郵件、行情接口，先授權後調用 · 憑據絕不展示 · 只讀</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">自主執行三件套</span></div>
+							<p class="sdesc">對外執行的通用手段：GUI agent + CLI agent + MD 文檔，按 MD 文檔執行 · 規劃中</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+					</div>
+					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
+					<div class="layer">自我改進</div>
+					<div class="panel svcs">
+						<div class="si-loop">
+														<div class="si-quote">文檔即控制平面——每一圈迭代改寫憲法，憲法約束下一圈</div>
+														<div class="si-steps">
+															<div class="si-step"><b>每輪執行留記錄</b><span>FENGMEM 追加 · todo 銷賬 · 覆盤回寫</span></div>
+															<span class="si-arr" aria-hidden="true">&#8594;</span>
+															<div class="si-step"><b>規則在 AGENTS.md 裏改寫</b><span>即對下一輪生效</span></div>
+															<span class="si-arr" aria-hidden="true">&#8594;</span>
+															<div class="si-step"><b>每一圈兜回研究</b><span>AI 是更嚴格的讀者——真的逐字執行</span></div>
+														</div>
+													</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengOrchestrator</span></div>
+							<p class="sdesc">AI 指揮 AI 的艦隊中樞：願景/分工/覆盤全在 MD 裏迭代，改一條規則，下一輪即照新規則執行</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengASNI</span></div>
+							<p class="sdesc">多機 Profile 中樞：每機一檔、Skill/軟件清單共享，人與 AI 讀同一套 MD</p>
+							<div class="lead" aria-hidden="true"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pd5" class="content-block">
+			<div class="block-inner block-inner-wide">
+				<div class="section-card">
+					<h2>人機合作自動化範式</h2>
+					<p class="block-subtitle">五層 × 雙軌 × 雙循環 × 三橫樑：這套範式的框架全景與軟件工程架構，兩張圖可切換。</p>
+					<div id="root"></div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="../assets/js/human-in-the-loop/human-in-the-loop-viewer.js"></script>
+		<div id="paper" class="content-block">
+			<div class="block-inner block-inner-wide">
+				<div class="section-card">
+					<h2>一篇論文，一張圖</h2>
+					<p class="block-subtitle">兩層界面原則：對話層負責做、觀景層負責看、文檔層負責管</p>
+					<div class="panel triad">
+						<div class="tri-canvas">
+							<div class="tri-l1">
+								<div class="tri-lhead">
+									<span class="tri-tag1">L1 · 對話層</span>
+									<span class="tri-ln">對話層</span>
+									<span class="tri-ld">負責做——每個動作都在對話裏跑</span>
+								</div>
+								<div class="tri-row">
+									<div class="tri-node"><div class="tri-name">人 Human</div><div class="tri-note">操作走 ZCode / Skill</div></div>
+									<div class="tri-link"><div class="tri-lab">自然語言（Skill）</div><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+									<div class="tri-node tri-ai"><div class="tri-name">AI</div><div class="tri-note">讀文檔 · 調工具 · 寫回賬本</div></div>
+									<div class="tri-link"><div class="tri-lab">工具調用</div><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
+									<div class="tri-node"><div class="tri-name">系統 System</div><div class="tri-note">真實系統：本頁列出的服務</div></div>
+								</div>
+							</div>
+							<div class="tri-iface">
+								<span class="if-item"><svg viewBox="0 0 14 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="7" y1="0" x2="7" y2="16"/><polygon class="tri-head" points="2.5,16 7,24 11.5,16"/></svg><span class="if-lab">自然語言 / Skill——人驅動 AI</span></span>
+								<span class="if-item"><svg viewBox="0 0 14 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line up" x1="7" y1="24" x2="7" y2="8"/><polygon class="tri-head up" points="2.5,8 7,0 11.5,8"/></svg><span class="if-lab">結果只讀呈現——人只管看</span></span>
+							</div>
+							<div class="tri-l2">
+								<div class="tri-lhead">
+									<span class="tri-tag1">L2 · 觀景層</span>
+									<span class="tri-ln">觀景層</span>
+									<span class="tri-ld">負責看——只讀，用於檢查和展示</span>
+								</div>
+								<div class="tri-note2">本頁即觀景層（FengOS）</div>
+							</div>
+							<aside class="tri-plane">
+								<div class="tri-plane-t">文檔治理面</div>
+								<div class="tri-plane-s">AI 開工先讀，完工寫回</div>
+								<div class="tri-junc">
+									<div class="tri-junc-tag">L1 交界處</div>
+									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="6" y1="0" x2="6" y2="14"/><polygon class="tri-head" points="1.5,14 6,22 10.5,14"/></svg><span class="jlab">讀：開工自帶身份、規則、任務</span></div>
+									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line up" x1="6" y1="22" x2="6" y2="8"/><polygon class="tri-head up" points="1.5,8 6,0 10.5,8"/></svg><span class="jlab">寫：結果落回賬本與日誌</span></div>
+									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="6" y1="4" x2="6" y2="18"/><polygon class="tri-head" points="1.5,4 6,0 10.5,4"/><polygon class="tri-head" points="1.5,18 6,22 10.5,18"/></svg><span class="jlab">規則改寫：AGENTS 即生效</span></div>
+								</div>
+								<div class="tri-md"><span class="md-pill">AGENTS 規則</span><span class="md-pill">MISSION 目標</span><span class="md-pill">todo 賬本</span><span class="md-pill">FENGMEM 記錄</span><span class="md-pill">Skill 包</span></div>
+								<div class="tri-junc">
+									<div class="tri-junc-tag">L2 交界處</div>
+									<div class="tri-jrow"><span class="jlab">L2 只讀：每個數字都是賬本數據的反映</span></div>
+								</div>
+							</aside>
+						</div>
+						<div class="tri-foot">
+							<span class="ribbon">C1 · 資料恆本地</span>
+							<span class="ribbon">C2 · 產出進可備份管道</span>
+						</div>
+						<div class="tri-tagline">文檔即控制平面——AI 是更嚴格的讀者，它真的逐字執行</div>
+						<div class="tri-cases">
+							<span>落地系統</span>
+							<span class="cn">FengInvest</span><span class="sep" aria-hidden="true">·</span>
+							<span class="cn">FengMedia</span><span class="sep" aria-hidden="true">·</span>
+							<span class="cn">FlyGo</span><span class="sep" aria-hidden="true">·</span>
+							<span class="cn">FengMail</span><span class="sep" aria-hidden="true">·</span>
+							<span>純工具</span>
+							<span class="cn">TTS-UI</span>
+						</div>
+					</div>
+					<div class="panel svcs audit">
+						<div class="svc">
+							<div class="sname"><span class="name">FengInvest</span></div>
+							<p class="sdesc">標杆：數據本地、操作走對話、UI 只讀、產出可備份</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="tag ok">&#9989;</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengMedia</span></div>
+							<p class="sdesc">內容生產：寫操作收進對話，UI 退為只讀</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="tag">&#9888;&#65039;</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FlyGo</span></div>
+							<p class="sdesc">對外產品：面板是交付物，面板內嵌客户對話層</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="tag">&#10134;</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">FengOS</span></div>
+							<p class="sdesc">生態觀景台：聚合只讀視圖，不搬數據</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="tag ok">&#9989;</span></div>
+						</div>
+						<div class="svc">
+							<div class="sname"><span class="name">TTS-UI</span></div>
+							<p class="sdesc">桌面小工具：無 AI 層需求，不動</p>
+							<div class="lead" aria-hidden="true"></div>
+							<div class="stop-h"><span class="tag">&#10134;</span></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="thinking" class="content-block">
@@ -2366,7 +2959,7 @@
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/jquery.meanmenu.js"></script>
 	<script src="../assets/js/main.js"></script>
-    <!-- Cloudflare Web Analytics: 由 Pages 项目自动注入 -->
+    <!-- Cloudflare Web Analytics: injected by the Pages project -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:&apos;smooth&apos;})">&#x2191;</button>
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 <script>(function(){

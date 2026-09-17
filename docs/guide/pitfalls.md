@@ -100,3 +100,20 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 - 开工前必须 `git fetch origin` 并检查 `git log --oneline dev..origin/master`（及反向），确认相对位置再动；master 领先先合并进 dev 再开工。
 - 主分支纪律：未经用户明确允许不得 push 到 main/master；dev 是唯一默认推送目标。
 - 批量重写 HTML 用二进制读写保留 CRLF，避免整文件假 diff。
+
+## 14. 新增页面门禁雷区（速查，2026-09-17 侦察归并）
+
+新增 `{lang}/*.html` 展示页时最容易踩红的点（节号见 `docs/guide/release-gate.md` 门禁节速查，权威以 `tools/check_site.py` 为准）：
+
+- **`parity`（第 11 节）**：三语页面清单逐条对等 → 新增页必须**同时**建 `zh-cn/x.html`、`zh-hk/x.html`、`en/x.html`，文件名完全相同（英文名，禁拼音）。
+- **`navbar`（第 15 节）**：每个 `{lang}/*.html` 必须能从导航栏到达。做法是改 `assets/js/shared-subpage-navbar.js`：三个语言 `copy` 对象各加 `xxx` / `xxxHref` 两个 key（键集三语必须一致），且**桌面模板数组与移动 drawer 都要真正引用** `labels.xxxHref`——**只加 key 不加引用仍判不可达**。`*Href` 三语路径结构只差语言前缀；界面文案一律走 copy key，不许硬编码（豁免仅 `NAVBAR_TEXT_EXEMPT`：English/简体中文/繁體中文/GitHub/LinkedIn/YouTube/BiliBili）。`NAVBAR_EXEMPT_PAGES` 只有 `404.html`，不许私自豁免真实内容页。改完 bump `?v=` 版本串。
+- **`page-elements`（16.5c）**：10 项必备片段缺一即红，清单见 `check_site.py` 的 `REQUIRED_SNIPPETS`。
+- **`h1-size` / `key-selector`（16.5 / 16.5d）**：页内 `<style>` 必须**无属性**地写（写成 `<style type="text/css">` 会被正则漏掉）；h1 必须声明 `font-size`；用了 `.section-card` 时 h2/h3 也要声明 `font-size`，`.punchline` / `.case-desc` 还要声明 `color`（暗色另写 `body[data-theme="dark"]` 覆盖）。
+- **`seo-url`（16.5b）**：canonical / og:url / hreflang / JSON-LD 的绝对 URL 必须是 `https://www.fengyuwang.com/...` 且不带 `.html`（带 `.html` 会被 Cloudflare Pages 308）。
+- **`link`（第 8 节）不校验 `<script src>`**：死链检查先整体剥掉 `<script>…</script>`（连标签一起），所以 `<script src>` 指向不存在的文件**永远查不出来**，只能人工盯。**历史实例（已修）**：`a07373ae` 把 `5dt-pd` 改名 `human-in-the-loop` 时，只改了**目录名**没改**文件名**——三语页面全被改成引用 `../assets/js/human-in-the-loop/human-in-the-loop-viewer.js`，盘上却只有 `5dt-pd-viewer.js`，被引文件 404 → `#root` 空、架构图 viewer 完全不加载（2026-09-17 侦察发现，躲过门禁；2026-09-18 `git mv` 对齐文件名修复，三语 headless 复验渲染正常）。**改名类提交必须同时核对「目录名 / 文件名 / 引用串」三者，别只改前两个。**
+- **`btn-height`（第 16 节）**：同容器 `.default-btn` 与 `.default-btn-one` 混排时高度必须相等（`.default-btn-one` 的 `margin-top:5px` 会撑高兄弟按钮 5px）；用 `.cta-row` + `flex:1 1 auto; min-width:160px; max-width:240px`。
+- **`hover`（12.5）**：页内 `<style>` 里 `:hover` 若显式声明背景色，与文字色配对的 WCAG 必须 ≥4.5（历史 bug：首页 `.default-btn-one` 暗色 hover 白底白字）。
+- **`redirects`（16.6）**：`_redirects` 不得丢 5 条金丝雀、有效规则 ≥29（2026-09-11 曾被一次盲写覆盖 39 行既有规则）；任何整文件重写先备份。
+- **`en-han` / `en-ui`（第 9 节）**：en 页面可见文本不得出现 2+ 连续汉字；en 博文汉字 >50 判漏翻。
+
+**数据可视化先例（新页无现成可抄）**：全站手写页原本 0 个手写 `<svg>` / `<canvas>`（2026-09-18 的 `system.html` 是首个例外）；现成"图形化"做法只有两条——纯 CSS 渐变/伪元素（`tech.html` 的 `storm-bg`、`art.html` 的展厅光），或仿 `human-in-the-loop.html` 的 `#root` + 本地打包 JS（`5dt-pd-viewer.js`，188 KB React bundle）。**没有 chord / force / D3 / ECharts 先例**；要做图优先手写内联 SVG（零依赖，自带暗色与 reduced-motion 兜底）。

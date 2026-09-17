@@ -2,6 +2,7 @@
 
 ## 待办队列（需站长决策）
 
+- [ ] 体系全景页返工（2026-09-17 站长判「没掌握精髓」；2026-09-18 追加：**与 5DT-PD 一起重做**、全套本地成品图都要上站、引用↔图 须过综合检查门槛）：需求文档 `docs/notes/REQUIREMENTS-体系全景页-2026-09-18.md`；取活队列在 `FengOrchestrator/FengOS/todo.md`（T53 重做 / T54 引用↔图 门槛 / T55 待站长确认听写「MGS」/ T56 桌面研究报告归档进本站 docs）。现状上限：`{lang}/system.html` 只落了 dev，**未推 master（未获授权）**
 - [ ] GitHub 悬空提交清理：Open-FengMedia 旧提交（含 FENGMEM.md，997b3ae / 7a3a680）与 Open-FengOffice 旧历史（含 HR 姓名邮箱，旧头 8243ac3 / 初始 0674b73）强推后仍可按 SHA 直达，彻底清除需站长向 GitHub Support 提工单（可同单）
 - [ ] FengMedia 私仓分叉：GitHub master=5ca356e（总纲/AI丰林章程/丰林人格.md）与本地 db0f2f5（prompt工坊/5部新视频）互相有独有提交；且本地 push remote 指向 Gitee。需站长决定收敛方式（Open 镜像当前=本地 db0f2f5 口径）
 - [ ] 私仓跟踪 FENGMEM.md（会话记录）有再泄漏风险：FlyGo / FengOffice / FengOrchestrator 均在 git 跟踪里，未来全量同步可能重演 Open-FengMedia 泄漏；建议各私仓 git rm --cached + gitignore（私仓操作待站长批准）
