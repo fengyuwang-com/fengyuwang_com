@@ -1104,6 +1104,53 @@ if os.path.exists("_redirects"):
 else:
     err("redirects", "_redirects 缺失")
 
+# ---------- 16.7 JSON-LD 结构化数据 (防复发: 2026-09-16 Google Search Console 报
+# Unparsable + Breadcrumb id 无效; 根因有二: ①single.html 模板 BlogPosting 缺 publisher/
+# 根对象闭合括号 ②Go html/template 在 <script> 内对 jsonify 输出做 JS 二次转义, 值被包成
+# "\"...\""。修法: 补 }} + 全部 jsonify 加 | safeJS。本节逐页解析断言。)
+_ld_files = []
+for l in LANGS:
+    _ld_files += sorted(glob.glob(f"{l}/blog/posts/*/index.html"))
+_ld_bad = 0
+for _f in _ld_files:
+    _h = open(_f, encoding="utf-8").read()
+    _blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', _h, re.S)
+    if len(_blocks) != 2:
+        err("jsonld", f"{_f}: ld+json 块 {len(_blocks)} 个 (预期 2: BlogPosting + BreadcrumbList)")
+        _ld_bad += 1
+        continue
+    try:
+        _bp = json.loads(_blocks[0])
+        _bc = json.loads(_blocks[1])
+    except Exception as _e:
+        err("jsonld", f"{_f}: JSON 解析失败 ({str(_e)[:60]})")
+        _ld_bad += 1
+        continue
+    for _k in ("headline", "url", "description", "keywords"):
+        _v = _bp.get(_k)
+        if isinstance(_v, str) and _v.startswith('"'):
+            err("jsonld", f"{_f}: BlogPosting.{_k} 被二次转义 (值以引号开头: {_v[:20]!r})")
+            _ld_bad += 1
+            break
+    else:
+        _items = _bc.get("itemListElement", []) if isinstance(_bc, dict) else []
+        if len(_items) != 3:
+            err("jsonld", f"{_f}: BreadcrumbList 仅 {len(_items)} 节 (预期 3)")
+            _ld_bad += 1
+        else:
+            for _it in _items:
+                _item, _name = _it.get("item", ""), _it.get("name", "")
+                if not (isinstance(_item, str) and _item.startswith("https://www.fengyuwang.com/") and '"' not in _item):
+                    err("jsonld", f"{_f}: 面包屑第 {_it.get('position')} 节 item 非法 ({_item[:50]!r})")
+                    _ld_bad += 1
+                    break
+                if isinstance(_name, str) and _name.startswith('"'):
+                    err("jsonld", f"{_f}: 面包屑第 {_it.get('position')} 节 name 被二次转义 ({_name[:20]!r})")
+                    _ld_bad += 1
+                    break
+if not _ld_bad:
+    ok("jsonld", f"JSON-LD 全绿: {len(_ld_files)} 篇 ×2 块可解析, 值干净, 面包屑 item 合法")
+
 # ---------- 汇总 ----------
 if dark_out:
     print("=" * 60)
