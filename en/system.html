@@ -318,8 +318,7 @@
 
 		/* self-improve layer */
 		.si-loop { padding: 6px 22px 12px; }
-		.si-quote { font-size: 13.5px; font-weight: 600; line-height: 1.65; color: #0f172a;
-			border-top: 2px solid #0071e3; padding-top: 8px; }
+		.si-quote { font-size: 13.5px; font-weight: 600; line-height: 1.65; color: #0f172a; }
 		.si-steps { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
 		.si-step { display: inline-flex; flex-direction: column; gap: 3px; padding: 8px 14px; border-radius: 999px;
 			background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); }
@@ -426,7 +425,6 @@
 		body[data-theme="dark"] .tri-plane::before { background-image: linear-gradient(180deg,#2997ff 0 7px,transparent 7px 13px); }
 		body[data-theme="dark"] .ribbon { background: #111827; border-color: rgba(41,151,255,.35); color: #8ab0ff; }
 		body[data-theme="dark"] .rsch-line { stroke: #2997ff; }
-		body[data-theme="dark"] .si-quote { border-top-color: #2997ff; }
 		body[data-theme="dark"] .si-arr, body[data-theme="dark"] .parr, body[data-theme="dark"] .cr-def-kicker { color: #8ab0ff; }
 		body[data-theme="dark"] .pdca-ring circle { fill: #0f172a; stroke: rgba(148,163,184,.20); }
 		body[data-theme="dark"] .ring-label, body[data-theme="dark"] .ring-center { fill: #e5ecf4; }
@@ -434,9 +432,9 @@
 		/* ported section: narrow screens */
 		@media (max-width: 1020px) {
 			.tri-canvas { display: flex; flex-direction: column; gap: 10px; }
-			.tri-plane { order: -1; border-top: 3px solid rgba(0,113,227,.40); }
+			.tri-plane { order: -1; }
 			.tri-plane::before { display: none; }
-			.tri-l1, .tri-l2 { padding: 14px 16px; border-top: 3px solid rgba(0,113,227,.40); }
+			.tri-l1, .tri-l2 { padding: 14px 16px; }
 			.tri-iface { padding: 8px 0; }
 			.tri-md { flex-direction: row; flex-wrap: wrap; }
 		}
@@ -539,7 +537,6 @@
 		.md-pill:hover { border-color: rgba(0,113,227,.45); }
 		.pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(0,113,227,.10)); }
 		.pdca-ring:hover .ring-flow { animation-play-state: paused; }
-		.punchline { border-left: 3px solid #0071e3; padding-left: 12px; }
 		@media (max-width: 599px) { .fx-ghost { font-size: 2.6rem; top: -18px; } }
 		body[data-theme="dark"] .fx-progress i { background: linear-gradient(90deg,#2997ff,#8ab0ff); }
 		body[data-theme="dark"] .marketing-hero::before {
@@ -560,7 +557,6 @@
 		body[data-theme="dark"] .tri-node:hover { box-shadow: none; }
 		body[data-theme="dark"] .md-pill:hover { border-color: rgba(41,151,255,.50); }
 		body[data-theme="dark"] .pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(41,151,255,.14)); }
-		body[data-theme="dark"] .punchline { border-left-color: #2997ff; }
         /* Native framework viewer. */
         #pd5 .section-card { padding: 36px; }
         html:not(.fx-js) .pd5-pane[hidden] { display: block !important; }
@@ -583,7 +579,7 @@
         .pd5-lg .dr, .pd5-lg .d3 { background: #dc2626; }
         .pd5-lg .da { background: #087f8c; }
         .pd5-lg .d2 { background: #7c3aed; }
-        .pd5-lg-sep { height: 16px; border-left: 1px solid #cbd5e1; }
+        .pd5-lg-sep { width: 10px; }
         .pd5-loop-pill { border: 1px solid #bfdbfe; border-radius: 8px; padding: 5px 9px; background: #eff6ff; color: #1f3b8a; }
         .pd5-loop-pill.alt { background: #f5f3ff; border-color: #ddd6fe; color: #5b21b6; }
         .pd5-flowcap { color: #005bb5; font-size: 12px; font-weight: 700; text-align: center; padding: 12px 0 20px; }
@@ -596,15 +592,14 @@
         .pd5-badge b { color: #0f172a; font-size: 17px; }
         .pd5-badge i, .pd5-badge em { font-style: normal; font-size: 11px; }
         .pd5-badge em { margin-top: auto; padding-top: 12px; color: #475569; }
-        .pd5-track { min-width: 0; padding: 22px 18px; border-left: 1px solid #e2e8f0; }
+        .pd5-track { min-width: 0; padding: 22px 18px; }
         .pd5-track h5 { font-size: 12px; font-weight: 800; color: #005bb5; margin: 0 0 12px; }
         .pd5-human { background: #faf9ff; }
         .pd5-human h5 { color: #5b21b6; }
         .pd5-track ul { margin: 0; padding-left: 16px; }
         .pd5-track li { margin: 0 0 7px; overflow-wrap: anywhere; }
         .pd5-beams { grid-column: 1/-1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; border-top: 1px solid #e2e8f0; padding: 14px 16px; font-size: 11px; }
-        .pd5-beam { padding-left: 8px; border-left: 2px solid #9ca3af; overflow-wrap: anywhere; }
-        .pd5-beam.br { border-color: #dc2626; } .pd5-beam.ba { border-color: #087f8c; } .pd5-beam.bc { border-color: #7c3aed; }
+        .pd5-beam { overflow-wrap: anywhere; }
         .pd5-outs { grid-column: 1/-1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; color: #475569; }
         .pd5-outs i { font-style: normal; background: #eff6ff; color: #1f3b8a; border-radius: 6px; padding: 2px 8px; }
         .pd5-arr { text-align: center; color: #0066cc; height: 32px; font-size: 22px; line-height: 32px; }
@@ -627,16 +622,13 @@
         .pd5-link svg { position: absolute; width: 40px; height: 14px; left: calc(50% - 20px); transform: rotate(90deg); }
         .pd5-link-lab { width: 44%; font-size: 10px; line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
         .pd5-gov, .pd5-bus { padding: 22px; margin-top: 16px; border: 1px solid #d7e0eb; border-radius: 16px; background: #f8fafc; }
-        .pd5-gov { border-left: 3px solid #dc2626; }
         .pd5-gov > *, .pd5-bus-head > * { display: block; }
         .pd5-gov .gm { margin: 8px 0; } .pd5-gov .gs, .pd5-bus-head span { font-size: 12px; }
-        .pd5-bus { border-left: 3px solid #7c3aed; }
         .pd5-bus-evs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
         .pd5-bus code { font-size: 11px; color: #5b21b6; background: #ede9fe; border-radius: 6px; padding: 4px 8px; }
         .pd5-bus-back { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
         .pd5-back { font-size: 12px; } .pd5-back u { display: block; text-decoration: none; color: #5b21b6; font-weight: 700; }
         .pd5-iface, .pd5-comps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
-        .pd5-hif { border-top: 3px solid #7c3aed; }
         .pd5-hif .hm, .pd5-comp .cr { margin: 10px 0; }
         .pd5-hif .hs, .pd5-comp .co { font-size: 12px; }
         .pd5-hif em, .pd5-comp em { font-style: normal; font-size: 11px; color: #005bb5; margin-top: 12px; }
@@ -1219,7 +1211,7 @@
 					<defs><marker id="dg-arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="dg-arrowhead" /></marker></defs>
 					</svg>
 					</div>
-					<p class="punchline">Study the structure before starting the project.</p>
+					<p class="punchline">Buttons don't answer. Conversation does.</p>
 					<div class="sys-points">
 						<div class="sys-point">
 							<h3>The conversation layer does</h3>
