@@ -6,6 +6,11 @@
 This document is a complete design specification. Another agent reading it should be able to recreate every page pixel-for-pixel.
 
 > 本文件是视觉参数唯一源头。任务入口（改什么先读哪份）见 `AGENTS.md` 末"任务索引"表；行为规范与门禁见 `AGENTS.md`，手册见 `docs/guide/`。
+>
+> **Token 的存在形式（2026-09-17 实测）**：本站**没有** design-token 文件；`assets/css/style.css` 里 0 个 CSS 自定义属性、0 处 `var(--)`，
+> `.page-wrap`/`.content-block`/`.section-card` 等核心样式**不在**主 CSS，而是**每个手写页在页内 `<style>` 里各写一份**；
+> 全仓唯一的内联自定义属性是 `--section-bg-img`。所以新页最稳的做法是复制既有页（`human-in-the-loop.html` / `dog-ate-my-money.html`）的 `<style>` 块再改，
+> 参数取值仍以本文件为准。
 
 ---
 

@@ -65,7 +65,8 @@ All sub-pages (portfolio, mkt, capabilities, ai, cloud, web3, invest) follow thi
 Key rules:
 
 - **Card grid is required**: every topic/sub-page needs a card grid at the top (between hero and sections), with one card per section below.
-- Card grid uses 2-column layout on desktop, 1-column on mobile.
+- Card grid uses 3-column layout on desktop (`repeat(3, minmax(0,1fr))`), 2-column ≤991px, 1-column ≤599px.
+  (视觉参数以 `DESIGN.md` §7.3 与实际页内 CSS 为准：`zh-cn/mkt.html` 等页实测为 `repeat(3, minmax(0, 1fr))`。)
 - Each card's onclick scrolls to its corresponding section by id.
 - Cards use Unsplash background images (different from section bg images).
 
@@ -109,6 +110,8 @@ The `link-card` is always placed **inside** `page-wrap`, after all `content-bloc
 **All page filenames must use English words/abbreviations, never Chinese pinyin.**
 Examples: `invest.html` (not `touzi.html`), `ethos.html` (not `linian.html`), `dog-ate-my-money.html` (not `gou-na-qian.html`), `tribute-to-laozi.html` (not `zhijing-laozi.html`).
 Brand/project names use their established English names: `fenginvest.html`, `jingxin.html`, `search-king.html`.
+
+**新增页落点**：根目录 `{zh-cn,zh-hk,en}/<english-name>.html` 三份同名文件——不是 `hugo/content/`（Hugo 产物只落在 `../_site/`，不会被 `deploy.sh` 部署；见 `README.md` 发布根说明）。三语页面清单必须一字不差，由门禁 `parity`（`check_site.py` 第 11 节）强制，新增/改名必须三语同时进行。
 
 ## 内容块 / Chips / QA 写法
 
