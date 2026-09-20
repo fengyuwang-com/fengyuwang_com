@@ -66,7 +66,7 @@
 ## 3. 内容范围
 
 - **全部自有项目，一个不落**（当前口径见文末附录）。
-- **5DT-PD 与这一页一起重做**（董事长 2026-09-18 令）。5DT-PD（`C:\FengProj\5dt-pd`，=「五层双轨双循环盈利型内容智造架构」）本机已有两张成品图，必须在这次重做里一并上站：
+- **5DT-PD 与这一页一起重做**（董事长 2026-09-18 令）。5DT-PD（`C:\Projects\5dt-pd`，=「五层双轨双循环盈利型内容智造架构」）本机已有两张成品图，必须在这次重做里一并上站：
   - **框架图**（`5dt-pd-framework.jsx`，516 行）：五层 L0 交付 / L1 生成 / L2 语义 / L3 产品 / L4 战略；双轨 = 机（左轨）/ 人（右轨）；双循环 = 战略大环（L0 ↔ L4）/ 战术小环（L1 ↔ L2）；三根横梁 = 风控 / 资产 / 成本（贯穿全层）；另含三条护城河文案与技术内核映射。
   - **软件工程架构图**（`5dt-pd-architecture.jsx`，645 行）：4 核心构件（Router / Asset / Executor / Delivery）+ 2 人接口（Gate 审批门 / Knob 调参口）+ 事件总线（Event Bus）+ 贯穿式治理（Governance）；含主管线（生产流）/ 反馈流（双循环）/ 治理流（贯穿）三条流与 Task DTO 契约表。
   - 支撑资产：`5dt-pd/` 下的 TypeScript 骨架（router / asset / executor / governance / human(gate,knob) / event-bus，BullMQ + Redis + OpenAI）、`5dt-pd-viewer`（React + Vite 查看器，`npm run dev`）。
@@ -124,8 +124,8 @@
 | 两纸三元 + 治理底座 | `FengOS/web/index.html` | 要 |
 | 授权 → API 第二路 | `FengOS/web/index.html` | 要 |
 | 服务 / 自动化 / 项目 / 一篇论文一张图 等既有分节图 | `FengOS/web/index.html` | 要 |
-| 五层双轨双循环框架图 | `C:\FengProj\5dt-pd\5dt-pd-framework.jsx` | 要（新） |
-| 5DT-PD 软件工程架构图 | `C:\FengProj\5dt-pd\5dt-pd-architecture.jsx` | 要（新） |
+| 五层双轨双循环框架图 | `C:\Projects\5dt-pd\5dt-pd-framework.jsx` | 要（新） |
+| 5DT-PD 软件工程架构图 | `C:\Projects\5dt-pd\5dt-pd-architecture.jsx` | 要（新） |
 | ~~canvas 星系图（Galaxy）~~ | `FengOS/web/index.html` `<canvas id="galaxy">` | **废，不上** |
 
 ## 8. 引用必须过得住门槛：引用 ↔ 图 综合检查（新增，董事长 2026-09-18 令）
