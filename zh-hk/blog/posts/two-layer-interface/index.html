@@ -165,7 +165,7 @@ body[data-theme="dark"] .post-nav .post-nav-title { color:#e5ecf4; }
   </ul>
 </nav></div>
     <div class="article-content"><h2 id="摘要">摘要</h2>
-<p>生成式 AI 把&quot;軟件操作&quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司（FengProj 生態，含投資研究、內容生產、私有雲產品三個真實系統）的完整審查與重構實踐，提出並檢驗<strong>兩層界面原則</strong>：任何軟件系統只應保留兩個交互層次——(1) <strong>對話層</strong>：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；(2) <strong>觀景層</strong>：只讀的圖形界面，僅為&quot;不參與操作的人&quot;提供可視化確認。資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 &ldquo;Chat is the interface&rdquo;、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了<strong>第三個界面</strong>——面向 AI 的治理界面，從而把&quot;界面&quot;概念從人機兩端擴展為&quot;人—AI—文檔&quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。</p>
+<p>生成式 AI 把&quot;軟件操作&quot;這一延續了四十年的圖形界面範式推到了範式更替的臨界點。本文基於一個一人軟件公司（Projects 生態，含投資研究、內容生產、私有雲產品三個真實系統）的完整審查與重構實踐，提出並檢驗<strong>兩層界面原則</strong>：任何軟件系統只應保留兩個交互層次——(1) <strong>對話層</strong>：人與 AI 的自然語言交流（Skill 即其腳本化形態），承載全部日常操作；(2) <strong>觀景層</strong>：只讀的圖形界面，僅為&quot;不參與操作的人&quot;提供可視化確認。資料恆存本地文件，交互產出納入可備份管道。本文將該原則與業界三條並行脈絡——YC 的 &ldquo;Chat is the interface&rdquo;、生成式界面（Generative UI）、OpenAI Apps SDK 的 MCP-UI 架構——做對位分析，指出三者在結構上收斂於同一命題；並進一步論證：當 AI 成為第一操作者時，文檔（AGENTS/MISSION/todo/日誌）本身構成了<strong>第三個界面</strong>——面向 AI 的治理界面，從而把&quot;界面&quot;概念從人機兩端擴展為&quot;人—AI—文檔&quot;三元結構。案例部分給出五個系統的符合度審計與收束改造路徑，證明該原則在個人生產系統與對外商業產品上均可落地。</p>
 <h2 id="一問題的提出">一、問題的提出</h2>
 <p>經典軟件的交互模型是&quot;客户端中心&quot;的：用户在圖形界面裏點擊、填表，操作結果沉澱在客户端的數據庫裏，界面既是操作入口又是數據容器。這一模型隱含了兩個 2026 年已不再成立的前提：</p>
 <ol>

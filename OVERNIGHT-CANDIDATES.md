@@ -8,19 +8,19 @@
 
 ### 1. 一人公司带数百 AI 员工，翻译成工程语言就五层
 - **大纲**：FengOrchestrator 的愿景是"一个只有一位真人的公司，带数百个 AI 员工干活，AI 带领 AI"，董事长只做两件事——下目标、签字验收。把这句话翻译成工程语言正好五层（编排执行 / 角色库 / 组织手册 / 自动回报 / 保障层），缺一层都不成立；当时 ①②③④ 已实测闭环，卡在第⑤保障层。亮点在"愿景一句话、工程五层"的翻译过程，以及按空白对位引入开源（AgentGate/MemPalace/RAGFlow/promptfoo）的选型方法论。
-- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--FengProj-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:134`（愿景原文）；`…_开源参考_8.md:434-436`（"达成目标 = 一套五层系统""其实就五层，缺一层都不成立"）；`…_8.md:840`（五层闭环进度）；`…_8.md:958`（CEO Playbook 固化成 `skills/cao-ceo/SKILL.md`）
+- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--Projects-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:134`（愿景原文）；`…_开源参考_8.md:434-436`（"达成目标 = 一套五层系统""其实就五层，缺一层都不成立"）；`…_8.md:840`（五层闭环进度）；`…_8.md:958`（CEO Playbook 固化成 `skills/cao-ceo/SKILL.md`）
 - **可信度**：高（两份长对话 + 完整进度清单，可写 2000 字）
 - **关联**：网站核心叙事"一人公司"，可投 portfolio/mkt 的 OPC 主线；与现有博文无重叠。
 
 ### 2. 275 个 AI 角色，只有 21 个入编
 - **大纲**：拉了一个 275 角色的中文 agent 人才库逐个评审，结论是三分之一精品、三分之二套壳，最终只精选 21 个入编（编排器共 25 profile）。文章讲"AI 员工的招聘标准"：套壳角色的识别特征、入编门槛是什么、为什么宁缺毋滥。亮点：把 HR 语言（招聘/解雇/绩效）落到 prompt 工程上。
-- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--FengProj-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:146`（"275 角色评审完毕（结论：三分之一精品、三分之二套壳），已精选 21 个入编（CAO 共 25 profile）"）
+- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--Projects-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:146`（"275 角色评审完毕（结论：三分之一精品、三分之二套壳），已精选 21 个入编（CAO 共 25 profile）"）
 - **可信度**：高（有量化结论和具体数字；评审细节可在同目录系列文件中继续挖）
 - **关联**：OPC 叙事的"组织建设"篇章；可内链 portfolio 的 FengOrchestrator 条目。
 
 ### 3. AI 员工的审批门：高危操作跑前请示
 - **大纲**：愿景拆解出三大痛点之一是"人机协作"——AI 不知道怎么和人协作，落点是审批门：把"高危操作跑前请示"变成一张推到手机上的审批卡片（策略引擎自动放行/拒绝/转人工 + 全量审计日志）。文章讲 AI 公司里"签字权"为什么是组织问题而非技术问题，以及 workflow 人工批准门（适合固定流程）与运行时审批（适合灵活场景）的取舍。亮点：一人公司也要有内控。
-- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--FengProj-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:149`（"审批门 ❌ 空白——三大痛点里'人机协作'的核心缺口"）；`:159-160`（AgentGate 方案与轻量替代方案全文）
+- **出处**：`AIEXPORT/local_chats/FenglinLT/claude_code/C--Projects-FengOrchestrator/2026-08-23_项目愿景与开源参考_9.md:149`（"审批门 ❌ 空白——三大痛点里'人机协作'的核心缺口"）；`:159-160`（AgentGate 方案与轻量替代方案全文）
 - **可信度**：高（痛点-方案-取舍三段俱全）
 - **关联**：与站上"治理/信任"类文章同气质；OPC 组织设计系列第三篇。
 
