@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#0f172a">
+	<meta name="format-detection" content="telephone=no">
+	<title>Project Relation Graph | Fengyu WANG</title>
+	<meta name="description" content="78 owned projects and 135 evidenced reference links in one interactive graph: balls sized by relation count, particles flow along the lines, hover lights up neighbors.">
+	<meta name="keywords" content="system overview, two-layer interface principle, conversation layer, viewing layer, document governance plane, PDCA, self-owned projects, Fengyu WANG">
+	<meta name="author" content="Fengyu WANG">
+	<meta name="robots" content="index,follow">
+	<link rel="canonical" href="https://www.fengyuwang.com/en/system-graph">
+	<link rel="alternate" hreflang="en" href="/en/system-graph">
+	<link rel="alternate" hreflang="zh-CN" href="/zh-cn/system-graph">
+	<link rel="alternate" hreflang="zh-HK" href="/zh-hk/system-graph">
+	<link rel="alternate" hreflang="x-default" href="/en/system-graph">
+	<meta property="og:site_name" content="Fengyu WANG">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Project Relation Graph | Fengyu WANG">
+	<meta property="og:description" content="78 owned projects and 135 evidenced reference links in one interactive graph: balls sized by relation count, particles flow along the lines, hover lights up neighbors.">
+	<meta property="og:url" content="https://www.fengyuwang.com/en/system-graph">
+	<meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Project Relation Graph | Fengyu WANG">
+	<meta name="twitter:description" content="78 owned projects and 135 evidenced reference links in one interactive graph: balls sized by relation count, particles flow along the lines, hover lights up neighbors.">
+	<meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/animate.min.css">
+	<link rel="stylesheet" href="../assets/css/meanmenu.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		html { scroll-behavior: smooth; }
+		.page-wrap { background: #ffffff; }
+		.marketing-hero { text-align: center; padding: 52px 0 40px; }
+		.marketing-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
+		.marketing-hero p { color: #64748b; font-size: 1.1rem; line-height: 1.8; max-width: 660px; margin: 0 auto; }
+		.sys-hero-tagline { margin-bottom: 22px; }
+
+		/* Hero snapshot numbers */
+		.sys-snapshot { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 4px 0 16px; }
+		.sys-stat { flex: 0 1 auto; min-width: 150px; padding: 16px 20px; border-radius: 14px; background: #f5f5f7; border: 1px solid rgba(148,163,184,.10); }
+		.sys-stat-value { display: block; font-size: 1.7rem; font-weight: 800; color: #0f172a; line-height: 1.2; }
+		.sys-stat-label { display: block; font-size: .84rem; font-weight: 600; color: #475569; margin-top: 4px; }
+		.sys-stat-note { display: block; font-size: .74rem; color: #475569; margin-top: 3px; }
+		.sys-hero-note { font-size: .82rem; color: #6b7280; line-height: 1.7; max-width: 660px; margin: 0 auto; }
+
+		/* Content blocks */
+		.content-block { position: relative; padding: 44px 0 40px; margin-bottom: 12px; background-color: #f5f5f7; }
+		.content-block:last-of-type { margin-bottom: 0; }
+		.section-card { background: rgba(255,255,255,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 18px; padding: 32px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 16px rgba(15,23,42,.06); }
+		.block-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+		.block-inner h2 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+		.block-subtitle { font-size: 1.02rem; color: #6b7280; line-height: 1.7; margin-bottom: 20px; }
+		.block-inner p { color: #475569; line-height: 1.85; margin-bottom: 14px; font-size: .97rem; }
+		.punchline { font-size: 1.15rem; font-weight: 700; color: #1f3b8a; margin: 20px 0 18px; }
+
+		/* thinking-system: SVG structure diagram */
+		.sys-diagram-wrap { background-color: #ffffff; border-radius: 18px; border: 1px solid rgba(148,163,184,.10); padding: 8px; margin-bottom: 4px; }
+		.sys-diagram { display: block; width: 100%; height: auto; background-color: #ffffff; border-radius: 14px; color: #0f172a; }
+		.sys-diagram text { fill: #0f172a; font-family: inherit; }
+		.sys-diagram .dg-box { fill: #ffffff; stroke: rgba(0,113,227,.35); stroke-width: 1.5; }
+		.sys-diagram .dg-band { fill: #ffffff; stroke: rgba(0,113,227,.35); stroke-width: 1.5; }
+		.sys-diagram .dg-rule { stroke: rgba(148,163,184,.45); stroke-width: 1; }
+		.sys-diagram .dg-layer-title { font-size: 26px; font-weight: 800; fill: #0f172a; }
+		.sys-diagram .dg-layer-sub { font-size: 17px; fill: #475569; }
+		.sys-diagram .dg-layer-item { font-size: 17px; fill: #475569; }
+		.sys-diagram .dg-band-title { font-size: 22px; font-weight: 800; fill: #0f172a; }
+		.sys-diagram .dg-band-sub { font-size: 14px; fill: #6b7280; }
+		.sys-diagram .dg-band-item { font-size: 15px; font-weight: 700; fill: #1f3b8a; }
+		.sys-diagram .dg-band-note { font-size: 13px; fill: #6b7280; }
+		.sys-diagram .dg-flow { font-size: 14px; font-weight: 700; fill: #1f3b8a; }
+		.sys-diagram .dg-arrow { stroke: #0071e3; stroke-width: 2; }
+		.sys-diagram .dg-arrowhead { fill: #0071e3; }
+
+		/* point cards */
+		.sys-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+		.sys-point { background: #ffffff; border-radius: 14px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); }
+		.sys-point h3 { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+		.sys-point p { margin: 0; color: #475569; font-size: .9rem; line-height: 1.8; }
+
+		/* domain relation graph */
+		.sys-graph-wrap { background-color: #ffffff; border-radius: 18px; border: 1px solid rgba(148,163,184,.10); padding: 6px; }
+		.sys-graph { display: block; width: 100%; height: auto; background-color: #ffffff; border-radius: 14px; color: #0f172a; }
+		.sys-graph text { fill: #0f172a; font-family: inherit; }
+		.sys-graph .gn-node { fill: #ffffff; stroke: rgba(0,113,227,.40); stroke-width: 1.5; }
+		.sys-graph .gn-edge { stroke: #0071e3; }
+		.sys-graph .gn-name { font-weight: 800; fill: #0f172a; }
+		.sys-graph .gn-count { fill: #475569; }
+		.sys-graph .gn-weight-bg { fill: #ffffff; stroke: rgba(0,113,227,.30); stroke-width: 1; }
+		.sys-graph .gn-weight { font-size: 15px; font-weight: 800; fill: #1f3b8a; }
+		.sys-caption { margin: 18px 0 0; padding-left: 18px; color: #475569; line-height: 1.8; font-size: .88rem; }
+		.sys-caption li + li { margin-top: 5px; }
+
+		/* filter bar */
+		.sys-filter { background: #ffffff; border-radius: 14px; padding: 18px 20px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); margin-bottom: 22px; }
+		.sys-filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+		.sys-filter-row + .sys-filter-row { margin-top: 12px; }
+		.sys-filter-label { font-size: .84rem; font-weight: 700; color: #334155; }
+		.sys-input, .sys-select { flex: 1 1 160px; min-width: 0; padding: 9px 12px; border-radius: 10px; border: 1px solid rgba(148,163,184,.35); background: #ffffff; color: #0f172a; font-family: inherit; font-size: .92rem; }
+		.sys-input:focus, .sys-select:focus { outline: 2px solid rgba(0,113,227,.45); outline-offset: 1px; }
+		.sys-reset { padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(148,163,184,.30); background: rgba(15,23,42,.05); color: #1e293b; font-family: inherit; font-size: .86rem; font-weight: 700; cursor: pointer; }
+		.sys-count { margin: 14px 0 4px; font-size: .9rem; font-weight: 700; color: #0f172a; }
+		.sys-filter-note { margin: 0; font-size: .82rem; color: #6b7280; line-height: 1.7; }
+
+		/* groups and cards */
+		.sys-group { margin-bottom: 30px; }
+		.sys-group[hidden] { display: none !important; }
+		.sys-group h3 { font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; }
+		.sys-group-count { font-size: .82rem; font-weight: 600; color: #475569; margin-left: 6px; }
+		.sys-cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+		.sys-card { background: #ffffff; border-radius: 18px; padding: 22px 24px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 4px 14px rgba(15,23,42,.05); scroll-margin-top: 70px; }
+		.sys-card[hidden] { display: none !important; }
+		.sys-card:target { border-color: rgba(0,113,227,.55); box-shadow: 0 0 0 3px rgba(0,113,227,.12); }
+		.sys-card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+		.sys-card h4 { font-size: 1.08rem; font-weight: 800; color: #0f172a; margin: 0; overflow-wrap: anywhere; }
+		.sys-card-badges { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+		.sys-card-badge { display: inline-flex; padding: 3px 10px; border-radius: 999px; background: rgba(15,23,42,.06); color: #334155; font-size: .74rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+		.sys-card-oneliner { margin: 0 0 8px; font-size: .95rem; font-weight: 700; color: #1f3b8a; line-height: 1.7; }
+		.sys-card-detail { margin: 0 0 10px; font-size: .9rem; color: #475569; line-height: 1.8; }
+		.sys-card-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .8rem; color: #6b7280; margin-bottom: 10px; }
+		.sys-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin-bottom: 8px; }
+		.sys-row-label { font-size: .78rem; font-weight: 700; color: #334155; letter-spacing: .02em; }
+		.sys-chips { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+		.sys-chip { display: inline-flex; padding: 3px 10px; border-radius: 999px; background: rgba(15,23,42,.06); color: #1e293b; font-size: .76rem; font-weight: 600; border: 1px solid rgba(148,163,184,.14); }
+		.sys-rel-chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 3px 10px; border-radius: 999px; background: rgba(0,113,227,.08); color: #1f3b8a; font-size: .76rem; font-weight: 600; border: 1px solid rgba(0,113,227,.16); text-decoration: none; }
+		.sys-rel-chip:hover { background: rgba(0,113,227,.16); color: #14306e; }
+		.sys-rel-plain { background: rgba(15,23,42,.05); border-color: rgba(148,163,184,.18); color: #334155; }
+		.sys-rel-name { font-weight: 700; }
+		.sys-rel-evi { font-weight: 500; opacity: .85; }
+		.sys-card-none { margin: 0 0 8px; font-size: .8rem; color: #6b7280; }
+		.sys-card > .sys-card-repo:last-child { margin-bottom: 0; }
+		.sys-card-repo { display: inline-flex; align-items: center; gap: 6px; font-size: .84rem; font-weight: 700; color: #0071e3; text-decoration: none; }
+		.sys-card-repo:hover { text-decoration: underline; }
+		.sys-card-tag { display: inline-flex; padding: 3px 10px; border-radius: 999px; background: rgba(15,23,42,.06); color: #334155; font-size: .76rem; font-weight: 700; border: 1px solid rgba(148,163,184,.18); cursor: help; }
+		.sys-scope-note { font-size: .86rem; margin-top: -8px; }
+		.sys-note-card { background: #ffffff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(148,163,184,.10); box-shadow: 0 2px 8px rgba(15,23,42,.04); }
+		.sys-note-card h3 { font-size: 1rem; font-weight: 800; color: #0f172a; margin: 0 0 6px; }
+		.sys-note-card p { margin: 0 0 14px; font-size: .88rem; color: #475569; line-height: 1.8; }
+		.sys-note-card p:last-child { margin-bottom: 0; }
+
+		/* closing CTA */
+		.link-card { text-align: center; padding: 48px 0 72px; }
+		.link-card p { color: #6b7280; margin-bottom: 12px; }
+		.cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 18px; }
+		.cta-row .default-btn { flex: 1 1 auto; min-width: 160px; max-width: 240px; text-align: center; }
+
+		/* Dark mode */
+		body[data-theme="dark"] .page-wrap { background: #0a0e1a; }
+		body[data-theme="dark"] .content-block { background-color: #111827; }
+		body[data-theme="dark"] .marketing-hero h1 { color: #e5ecf4; }
+		body[data-theme="dark"] .marketing-hero p { color: #9fb0c3; }
+		body[data-theme="dark"] .sys-hero-note { color: #94a3b8; }
+		body[data-theme="dark"] .sys-stat { background: #0f172a; border-color: rgba(148,163,184,.04); }
+		body[data-theme="dark"] .sys-stat-value { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-stat-label { color: #94a3b8; }
+		body[data-theme="dark"] .sys-stat-note { color: #8695a8; }
+		body[data-theme="dark"] .section-card { background: rgba(30,41,59,.90); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .block-inner h2 { color: #e5ecf4; }
+		body[data-theme="dark"] .block-subtitle { color: #94a3b8; }
+		body[data-theme="dark"] .block-inner p { color: #9fb0c3; }
+		body[data-theme="dark"] .punchline { color: #8ab0ff; }
+		body[data-theme="dark"] .sys-diagram-wrap { background-color: #0f172a; border-color: rgba(148,163,184,.04); }
+		body[data-theme="dark"] .sys-diagram { background-color: #0f172a; color: #e5ecf4; }
+		body[data-theme="dark"] .sys-diagram text { fill: #e5ecf4; }
+		body[data-theme="dark"] .sys-diagram .dg-box, body[data-theme="dark"] .sys-diagram .dg-band { fill: #0f172a; stroke: rgba(41,151,255,.40); }
+		body[data-theme="dark"] .sys-diagram .dg-rule { stroke: rgba(148,163,184,.25); }
+		body[data-theme="dark"] .sys-diagram .dg-layer-title, body[data-theme="dark"] .sys-diagram .dg-band-title { fill: #e5ecf4; }
+		body[data-theme="dark"] .sys-diagram .dg-layer-sub, body[data-theme="dark"] .sys-diagram .dg-layer-item { fill: #9fb0c3; }
+		body[data-theme="dark"] .sys-diagram .dg-band-sub, body[data-theme="dark"] .sys-diagram .dg-band-note { fill: #94a3b8; }
+		body[data-theme="dark"] .sys-diagram .dg-band-item, body[data-theme="dark"] .sys-diagram .dg-flow { fill: #8ab0ff; }
+		body[data-theme="dark"] .sys-diagram .dg-arrow { stroke: #2997ff; }
+		body[data-theme="dark"] .sys-diagram .dg-arrowhead { fill: #2997ff; }
+		body[data-theme="dark"] .sys-point { background: #0f172a; border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .sys-point h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-point p { color: #9fb0c3; }
+		body[data-theme="dark"] .sys-graph-wrap { background-color: #0f172a; border-color: rgba(148,163,184,.04); }
+		body[data-theme="dark"] .sys-graph { background-color: #0f172a; color: #e5ecf4; }
+		body[data-theme="dark"] .sys-graph text { fill: #e5ecf4; }
+		body[data-theme="dark"] .sys-graph .gn-node { fill: #0f172a; stroke: rgba(41,151,255,.45); }
+		body[data-theme="dark"] .sys-graph .gn-edge { stroke: #2997ff; }
+		body[data-theme="dark"] .sys-graph .gn-name { fill: #e5ecf4; }
+		body[data-theme="dark"] .sys-graph .gn-count { fill: #9fb0c3; }
+		body[data-theme="dark"] .sys-graph .gn-weight-bg { fill: #0f172a; stroke: rgba(41,151,255,.35); }
+		body[data-theme="dark"] .sys-graph .gn-weight { fill: #bfdbfe; }
+		body[data-theme="dark"] .sys-caption { color: #9fb0c3; }
+		body[data-theme="dark"] .sys-filter { background: #0f172a; border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .sys-filter-label { color: #cbd5e1; }
+		body[data-theme="dark"] .sys-input, body[data-theme="dark"] .sys-select { background: #111827; color: #e5ecf4; border-color: rgba(148,163,184,.25); }
+		body[data-theme="dark"] .sys-reset { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.20); }
+		body[data-theme="dark"] .sys-count { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-filter-note { color: #94a3b8; }
+		body[data-theme="dark"] .sys-group h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-group-count { color: #94a3b8; }
+		body[data-theme="dark"] .sys-card { background: #0f172a; border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .sys-card h4 { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-card-badge { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+		body[data-theme="dark"] .sys-card-oneliner { color: #bfdbfe; }
+		body[data-theme="dark"] .sys-card-detail { color: #9fb0c3; }
+		body[data-theme="dark"] .sys-card-meta { color: #94a3b8; }
+		body[data-theme="dark"] .sys-row-label { color: #cbd5e1; }
+		body[data-theme="dark"] .sys-chip { background: rgba(148,163,184,.12); color: #e5ecf4; border-color: rgba(148,163,184,.10); }
+		body[data-theme="dark"] .sys-rel-chip { background: rgba(41,151,255,.12); color: #bfdbfe; border-color: rgba(41,151,255,.20); }
+		body[data-theme="dark"] .sys-rel-chip:hover { background: rgba(41,151,255,.22); color: #dbeafe; }
+		body[data-theme="dark"] .sys-rel-plain { background: rgba(148,163,184,.12); border-color: rgba(148,163,184,.16); color: #e5ecf4; }
+		body[data-theme="dark"] .sys-card-none { color: #94a3b8; }
+		body[data-theme="dark"] .sys-card-repo { color: #2997ff; }
+		body[data-theme="dark"] .sys-card-tag { background: rgba(148,163,184,.12); color: #cbd5e1; border-color: rgba(148,163,184,.16); }
+		body[data-theme="dark"] .sys-scope-note { color: #94a3b8; }
+		body[data-theme="dark"] .sys-note-card { background: #0f172a; border-color: rgba(148,163,184,.04); box-shadow: none; }
+		body[data-theme="dark"] .sys-note-card h3 { color: #e5ecf4; }
+		body[data-theme="dark"] .sys-note-card p { color: #9fb0c3; }
+		body[data-theme="dark"] .link-card p { color: #94a3b8; }
+
+		/* ============ ported from the FengOS observatory homepage (services / automation /
+		   one-paper-one-figure). Keeps that page's own class names (.svc/.pdca-*/.tri-*/.rsch-*);
+		   only colors, radii and shadows are re-stated as literal site values (the site has no
+		   CSS variables), and the glass panel becomes a flat white site card. */
+		.block-inner-wide { max-width: 1080px; }
+		.marketing-hero .eyebrow { display: flex; align-items: center; justify-content: center; gap: 9px;
+			font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #6b7280; margin-bottom: 10px; }
+		.marketing-hero .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #30d158; flex: none; }
+		.marketing-hero h1 .accent { display: block; color: #0071e3; }
+
+		/* unified panel: flat white site card (homepage .panel, glass removed) */
+		.panel { background: #ffffff; border: 1px solid rgba(0,0,0,.07); border-radius: 18px;
+			box-shadow: 0 4px 16px rgba(15,23,42,.06); overflow: hidden; }
+		.panel + .panel { margin-top: 18px; }
+
+		/* service rows */
+		.svcs { display: flex; flex-direction: column; }
+		.svc { display: flex; align-items: center; gap: 18px; padding: 18px 22px; flex-wrap: wrap; }
+		.svc + .svc { border-top: 1px solid rgba(0,0,0,.07); }
+		.svc .sname { display: flex; align-items: center; gap: 10px; min-width: 170px; }
+		.svc .name { font-size: 15px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; }
+		.svc .sdesc { margin: 0; font-size: 13.5px; color: #475569; line-height: 1.6; flex: 1; min-width: 200px; }
+		.svc .ts { font-size: 12px; color: #6b7280; direction: ltr; font-variant-numeric: tabular-nums; }
+		.svc .lead { flex: 1; min-width: 20px; height: 1px; border-bottom: 1px solid rgba(0,0,0,.07); align-self: center; }
+		.svc .stop-h { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+		.audit .svc .tag { flex: none; font-size: 12px; font-weight: 600; color: #475569;
+			border: 1px solid rgba(0,0,0,.07); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+		.audit .svc .tag.ok { color: #0071e3; border-color: rgba(0,113,227,.30); }
+
+		/* automation: layer titles and the flow arrows between layers */
+		.pdca { margin: 0 0 14px; font-size: 13.5px; color: #475569; line-height: 1.7; }
+		.layer { padding: 20px 2px 8px; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; color: #6b7280; }
+		.flow { display: flex; justify-content: center; padding: 10px 0 12px; }
+		.farr { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+			border-radius: 50%; border: 1px solid rgba(0,0,0,.07); background: #ffffff; color: #0071e3; font-size: 15px; line-height: 1; }
+		.pdca-box { padding: 16px 22px; margin: 0 0 18px; }
+		.pdca-ring-title { font-size: 15px; font-weight: 700; color: #0f172a; text-align: center; letter-spacing: -.01em; }
+		.pdca-sub { margin-top: 4px; font-size: 12.5px; color: #6b7280; text-align: center; line-height: 1.6; }
+		.pdca-wrap { display: flex; gap: 18px; align-items: center; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+		.pdca-ring { width: min(300px,100%); flex: none; }
+		.pdca-ring svg { display: block; width: 100%; height: auto; }
+		.ring-flow { transform-box: fill-box; transform-origin: center; animation: ring-spin 26s linear infinite; }
+		@keyframes ring-spin { to { transform: rotate(360deg); } }
+		.ring-label { font-family: inherit; font-weight: 600; }
+		.ring-center { font-family: inherit; }
+		.md-const { flex: 1; min-width: 220px; }
+		.md-cap { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; color: #475569; }
+		.md-pills { margin-top: 8px; display: flex; flex-wrap: wrap; }
+		.md-pill { display: inline-flex; align-items: center; max-width: 100%; padding: 6px 12px; margin: 3px;
+			border-radius: 999px; background: #ffffff; border: 1px solid rgba(0,0,0,.07);
+			font-size: 12.5px; font-weight: 600; color: #1f3b8a; white-space: nowrap; }
+		.md-note { margin-top: 8px; font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+		/* research layer: sources -> engines -> stores */
+		.rsch-wrap { padding: 4px 22px 10px; }
+		.rsch-sub { font-size: 12.5px; color: #6b7280; text-align: center; line-height: 1.7; overflow-wrap: anywhere; }
+		.rsch-diagram { display: grid; grid-template-columns: minmax(0,1.3fr) 40px minmax(0,1fr) 40px minmax(0,1fr);
+			gap: 8px; align-items: stretch; margin-top: 14px; }
+		.rsch-stage { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+		.rsch-stitle { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #6b7280; }
+		.rsch-nodes { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+		.rsch-node { background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 10px 12px; min-width: 0; }
+		.rsch-node b { display: block; font-size: 13px; font-weight: 700; color: #0f172a; overflow-wrap: anywhere; }
+		.rsch-node span { display: block; margin-top: 4px; font-size: 12px; color: #475569; line-height: 1.55; overflow-wrap: anywhere; }
+		.rsch-link { display: flex; align-items: center; justify-content: center; }
+		.rsch-link svg { display: block; width: 100%; max-width: 40px; height: 24px; overflow: visible; }
+		.rsch-line { fill: none; stroke: #0071e3; stroke-width: 2; stroke-dasharray: 6 6; }
+
+		/* think layer */
+		.think-box { padding: 6px 22px 12px; }
+		.think-line { font-size: 13.5px; color: #475569; line-height: 1.6; }
+		.think-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+		.pnode { display: inline-flex; align-items: center; max-width: 100%; padding: 8px 14px; border-radius: 999px;
+			background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); font-size: 13px; font-weight: 600; color: #0f172a; white-space: nowrap; }
+		.parr { color: #0071e3; font-size: 14px; font-weight: 600; flex: none; }
+		.think-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+		.think-card { min-width: 0; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 12px 14px; }
+		.think-card .tk-name { font-size: 14px; font-weight: 700; color: #0f172a; }
+		.think-card .tk-desc { margin-top: 4px; font-size: 12px; color: #475569; line-height: 1.55; overflow-wrap: anywhere; }
+
+		/* create layer */
+		.create-def { padding: 6px 22px 10px; }
+		.cr-def-main { display: block; font-size: 13.5px; line-height: 1.6; color: #0f172a; font-weight: 700; }
+		.cr-def-kicker { display: inline-block; margin-right: 8px; font-size: 11px; font-weight: 700;
+			letter-spacing: .12em; color: #0071e3; text-transform: uppercase; }
+		.cr-def-en { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6b7280; line-height: 1.55; }
+		.gen-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; padding: 4px 22px 12px; }
+		.gcard { min-width: 0; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); border-radius: 14px; padding: 12px 14px; }
+		.gcard .gn { font-size: 14px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+		.gcard .gd { font-size: 12px; color: #475569; line-height: 1.55; margin-top: 4px; }
+		.gcard.cr-lead { grid-column: 1/-1; border-color: rgba(0,113,227,.30); }
+
+		/* act layer */
+		.act-def { padding: 6px 22px 10px; }
+		.act-def-line { padding: 9px 14px; background: #f5f5f7; border: 1px solid rgba(0,0,0,.07);
+			border-radius: 14px; font-weight: 700; font-size: 13px; color: #0066cc; letter-spacing: -.01em; }
+
+		/* self-improve layer */
+		.si-loop { padding: 6px 22px 12px; }
+		.si-quote { font-size: 13.5px; font-weight: 600; line-height: 1.65; color: #0f172a; }
+		.si-steps { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+		.si-step { display: inline-flex; flex-direction: column; gap: 3px; padding: 8px 14px; border-radius: 999px;
+			background: #f5f5f7; border: 1px solid rgba(0,0,0,.07); }
+		.si-step b { font-size: 12.5px; font-weight: 700; color: #0f172a; }
+		.si-step span { font-size: 11.5px; color: #475569; line-height: 1.45; overflow-wrap: anywhere; }
+		.si-arr { flex: none; color: #0071e3; font-size: 14px; font-weight: 600; align-self: center; }
+
+		/* one paper, one figure: the two-layer interface triad */
+		.panel.triad { padding: 16px 20px; margin: 0 0 18px; }
+		.tri-canvas { position: relative; display: grid; grid-template-columns: minmax(0,1fr) 200px;
+			grid-template-rows: auto auto auto; column-gap: 12px; }
+		.tri-l1 { grid-column: 1/3; grid-row: 1; }
+		.tri-iface { grid-column: 1/3; grid-row: 2; }
+		.tri-l2 { grid-column: 1/3; grid-row: 3; }
+		.tri-l1, .tri-l2 { border: 1px solid rgba(0,0,0,.07); border-radius: 18px; background: #ffffff;
+			box-shadow: 0 2px 8px rgba(15,23,42,.04); padding: 14px 216px 14px 16px; min-width: 0; }
+		.tri-lhead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+		.tri-tag1 { font-size: 10.5px; font-weight: 700; letter-spacing: .12em; color: #6b7280; white-space: nowrap; }
+		.tri-ln { font-size: 15px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; }
+		.tri-ld { font-size: 12.5px; color: #475569; line-height: 1.55; }
+		.tri-row { display: flex; align-items: stretch; margin-top: 10px; }
+		.tri-node { flex: 1 1 0; min-width: 0; background: #fbfbfd; border: 1px solid rgba(0,0,0,.07);
+			border-radius: 14px; padding: 10px 8px; text-align: center; }
+		.tri-node .tri-name { font-size: 13.5px; font-weight: 700; color: #0f172a; }
+		.tri-node .tri-note { margin-top: 4px; font-size: 11.5px; color: #475569; line-height: 1.5; overflow-wrap: anywhere; }
+		.tri-node.tri-ai { border-color: rgba(0,113,227,.35); }
+		.tri-link { flex: 0 0 92px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 0 2px; }
+		.tri-lab { font-size: 10.5px; color: #6b7280; text-align: center; line-height: 1.35; }
+		.tri-link svg { display: block; width: 100%; height: 14px; overflow: visible; }
+		.tri-line { fill: none; stroke: #0071e3; stroke-width: 2; stroke-dasharray: 6 5; animation: tri-dash 1.1s linear infinite; }
+		.tri-line.up { stroke: #30d158; }
+		.tri-head { fill: #0071e3; }
+		.tri-head.up { fill: #30d158; }
+		@keyframes tri-dash { to { stroke-dashoffset: -11; } }
+		.tri-iface { display: flex; justify-content: center; gap: 18px; padding: 8px 216px 8px 0; flex-wrap: wrap; }
+		.tri-iface .if-item { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+		.tri-iface .if-lab { font-size: 11.5px; color: #475569; line-height: 1.4; }
+		.tri-iface svg { flex: none; width: 14px; height: 24px; overflow: visible; }
+		.tri-note2 { margin-top: 8px; font-size: 12px; color: #475569; line-height: 1.6; }
+		.tri-plane { grid-column: 2; grid-row: 1/4; z-index: 2; position: relative; min-width: 0; overflow: hidden;
+			display: flex; flex-direction: column; gap: 10px; border: 1px solid rgba(0,113,227,.28); border-radius: 18px;
+			background: linear-gradient(180deg,rgba(0,113,227,.07),rgba(0,113,227,.04)); padding: 14px 12px 14px 18px; }
+		.tri-plane::before { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px;
+			background-image: linear-gradient(180deg,#0071e3 0 7px,transparent 7px 13px);
+			background-size: 2px 13px; background-repeat: repeat-y; animation: plane-flow 1.1s linear infinite; opacity: .55; }
+		@keyframes plane-flow { to { background-position: 0 13px; } }
+		.tri-plane-t { font-size: 13px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; text-align: center; }
+		.tri-plane-s { font-size: 11px; color: #6b7280; text-align: center; line-height: 1.5; }
+		.tri-junc { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+		.tri-junc-tag { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: #6b7280; white-space: nowrap; }
+		.tri-jrow { display: flex; align-items: center; gap: 7px; min-width: 0; }
+		.tri-jrow svg { flex: none; width: 12px; height: 22px; overflow: visible; }
+		.tri-jrow .jlab { font-size: 11px; color: #475569; line-height: 1.45; min-width: 0; overflow-wrap: anywhere; }
+		.tri-md { display: flex; flex-direction: column; align-items: stretch; margin: auto 0; min-width: 0; }
+		.tri-md .md-pill { margin: 3px 0; justify-content: center; max-width: 100%; font-size: 11.5px; padding: 5px 10px; }
+		.tri-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,.07);
+			display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+		.tri-tagline { margin-top: 10px; text-align: center; font-size: 13.5px; line-height: 1.6; color: #0f172a; }
+		.tri-cases { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: center;
+			align-items: center; font-size: 12px; color: #475569; }
+		.tri-cases .cn { font-weight: 600; color: #0f172a; }
+		.tri-cases .sep { color: #6b7280; }
+		.ribbon { display: inline-flex; align-items: center; max-width: 100%; padding: 5px 12px; border-radius: 999px;
+			font-size: 12px; font-weight: 600; color: #0071e3; border: 1px solid rgba(0,113,227,.30); background: #ffffff; white-space: nowrap; }
+
+		/* ported section: dark theme */
+		body[data-theme="dark"] .panel { background: #0f172a; border-color: rgba(148,163,184,.12); box-shadow: none; }
+		body[data-theme="dark"] .marketing-hero .eyebrow { color: #94a3b8; }
+		body[data-theme="dark"] .marketing-hero h1 .accent { color: #2997ff; }
+		body[data-theme="dark"] .svc .name, body[data-theme="dark"] .pdca-ring-title,
+		body[data-theme="dark"] .tri-ln, body[data-theme="dark"] .tri-plane-t, body[data-theme="dark"] .tri-tagline,
+		body[data-theme="dark"] .tri-node .tri-name, body[data-theme="dark"] .tri-cases .sep,
+		body[data-theme="dark"] .tri-cases .cn, body[data-theme="dark"] .si-quote, body[data-theme="dark"] .si-step b,
+		body[data-theme="dark"] .think-card .tk-name, body[data-theme="dark"] .pnode, body[data-theme="dark"] .gcard .gn,
+		body[data-theme="dark"] .rsch-node b, body[data-theme="dark"] .cr-def-main { color: #e5ecf4; }
+		body[data-theme="dark"] .svc .sdesc, body[data-theme="dark"] .tri-ld, body[data-theme="dark"] .tri-node .tri-note,
+		body[data-theme="dark"] .tri-jrow .jlab, body[data-theme="dark"] .tri-cases, body[data-theme="dark"] .think-line,
+		body[data-theme="dark"] .think-card .tk-desc, body[data-theme="dark"] .gcard .gd, body[data-theme="dark"] .rsch-node span,
+		body[data-theme="dark"] .si-step span, body[data-theme="dark"] .md-note, body[data-theme="dark"] .md-cap,
+		body[data-theme="dark"] .tri-note2, body[data-theme="dark"] .tri-iface .if-lab { color: #9fb0c3; }
+		body[data-theme="dark"] .svc .ts, body[data-theme="dark"] .layer, body[data-theme="dark"] .pdca-sub,
+		body[data-theme="dark"] .rsch-sub, body[data-theme="dark"] .rsch-stitle, body[data-theme="dark"] .tri-tag1,
+		body[data-theme="dark"] .tri-junc-tag, body[data-theme="dark"] .tri-lab, body[data-theme="dark"] .tri-plane-s,
+		body[data-theme="dark"] .cr-def-en { color: #94a3b8; }
+		body[data-theme="dark"] .layer { color: #bfdbfe; }
+		body[data-theme="dark"] .svc + .svc { border-top-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .svc .lead { border-bottom-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .audit .svc .tag { color: #cbd5e1; border-color: rgba(148,163,184,.20); }
+		body[data-theme="dark"] .audit .svc .tag.ok { color: #8ab0ff; border-color: rgba(41,151,255,.35); }
+		body[data-theme="dark"] .farr { background: #111827; border-color: rgba(148,163,184,.20); color: #2997ff; }
+		body[data-theme="dark"] .md-pill { background: #111827; border-color: rgba(148,163,184,.18); color: #bfdbfe; }
+		body[data-theme="dark"] .rsch-node, body[data-theme="dark"] .think-card, body[data-theme="dark"] .gcard,
+		body[data-theme="dark"] .pnode, body[data-theme="dark"] .si-step, body[data-theme="dark"] .tri-node,
+		body[data-theme="dark"] .act-def-line { background: #111827; border-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .act-def-line { color: #8ab0ff; }
+		body[data-theme="dark"] .tri-l1, body[data-theme="dark"] .tri-l2 { background: #0f172a; border-color: rgba(148,163,184,.14); box-shadow: none; }
+		body[data-theme="dark"] .tri-node.tri-ai { border-color: rgba(41,151,255,.35); }
+		body[data-theme="dark"] .tri-foot { border-top-color: rgba(148,163,184,.14); }
+		body[data-theme="dark"] .tri-line { stroke: #2997ff; }
+		body[data-theme="dark"] .tri-line.up { stroke: #30d158; }
+		body[data-theme="dark"] .tri-head { fill: #2997ff; }
+		body[data-theme="dark"] .tri-head.up { fill: #30d158; }
+		body[data-theme="dark"] .tri-plane { border-color: rgba(41,151,255,.30); background: linear-gradient(180deg,rgba(41,151,255,.10),rgba(41,151,255,.04)); }
+		body[data-theme="dark"] .tri-plane::before { background-image: linear-gradient(180deg,#2997ff 0 7px,transparent 7px 13px); }
+		body[data-theme="dark"] .ribbon { background: #111827; border-color: rgba(41,151,255,.35); color: #8ab0ff; }
+		body[data-theme="dark"] .rsch-line { stroke: #2997ff; }
+		body[data-theme="dark"] .si-arr, body[data-theme="dark"] .parr, body[data-theme="dark"] .cr-def-kicker { color: #8ab0ff; }
+		body[data-theme="dark"] .pdca-ring circle { fill: #0f172a; stroke: rgba(148,163,184,.20); }
+		body[data-theme="dark"] .ring-label, body[data-theme="dark"] .ring-center { fill: #e5ecf4; }
+
+		/* ported section: narrow screens */
+		@media (max-width: 1020px) {
+			.tri-canvas { display: flex; flex-direction: column; gap: 10px; }
+			.tri-plane { order: -1; }
+			.tri-plane::before { display: none; }
+			.tri-l1, .tri-l2 { padding: 14px 16px; }
+			.tri-iface { padding: 8px 0; }
+			.tri-md { flex-direction: row; flex-wrap: wrap; }
+		}
+		@media (max-width: 900px) {
+			.gen-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+		}
+		@media (max-width: 767px) {
+			.rsch-diagram { grid-template-columns: minmax(0,1fr); }
+			.rsch-link svg { width: 24px; height: 32px; transform: rotate(90deg); }
+			.think-flow, .si-steps { align-items: flex-start; }
+		}
+		@media (max-width: 640px) {
+			.svc { gap: 8px 12px; padding: 16px 14px; }
+			.svc .sname { min-width: 0; }
+			.svc .sdesc { flex-basis: 100%; min-width: 0; }
+			.svc .lead, .svc .ts { display: none; }
+			.svc .stop-h { margin-left: 0; }
+			.pdca-wrap { gap: 12px; }
+			.pdca-ring { width: min(240px,100%); }
+			.md-cap, .md-note { text-align: center; }
+			.md-pills { justify-content: center; }
+			.think-cards, .gen-grid { grid-template-columns: minmax(0,1fr); }
+			.si-step { flex: 1 1 100%; border-radius: 14px; }
+			.si-arr { transform: rotate(90deg); }
+			.tri-row { flex-direction: column; }
+			.tri-link { flex-direction: row; justify-content: center; align-items: center; gap: 8px; padding: 6px 0; flex-basis: auto; }
+			.tri-link svg { width: 30px; height: 14px; transform: rotate(90deg); flex: none; }
+			.tri-lab { white-space: nowrap; }
+		}
+
+		@media (max-width: 991px) {
+			.marketing-hero { padding: 36px 24px; }
+			.marketing-hero h1 { font-size: 2.4rem; }
+			.content-block { padding: 36px 0 28px; }
+			.block-inner h2 { font-size: 1.4rem; }
+			.sys-points { grid-template-columns: 1fr; }
+		}
+		@media (max-width: 599px) {
+			.marketing-hero { padding: 28px 16px; }
+			.content-block { padding: 28px 0 20px; }
+			.block-inner { padding-left: 12px; padding-right: 12px; }
+			.section-card { padding: 20px; }
+			.block-inner h2 { font-size: 1.25rem; }
+			.sys-stat { min-width: 0; flex: 1 1 100%; }
+			.sys-reset { width: 100%; }
+		}
+
+		/* ===== FX motion layer (2026-09-18): scroll progress, section rail, reveals,
+		   KPI count-up, EKG signal line, ghost numerals, hover lifts.
+		   Literal site palette only; dark variants below; the global reduced-motion
+		   block in <head> neutralises everything for RM users. ===== */
+		.fx-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 9990; pointer-events: none; }
+		.fx-progress i { display: block; height: 100%; background: linear-gradient(90deg,#0071e3,#6b9aff);
+			transform-origin: 0 50%; transform: scaleX(0); }
+		.marketing-hero { position: relative; }
+		.marketing-hero::before { content: ""; position: absolute; left: 0; right: 0; top: -60px; height: 360px;
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(0,113,227,.08), rgba(0,113,227,0) 70%);
+			pointer-events: none; }
+		.marketing-hero .eyebrow .dot { box-shadow: 0 0 0 0 rgba(48,209,88,.45); animation: fx-ping 2.2s ease-out infinite; }
+		@keyframes fx-ping { 0% { box-shadow: 0 0 0 0 rgba(48,209,88,.45); }
+			70% { box-shadow: 0 0 0 9px rgba(48,209,88,0); } 100% { box-shadow: 0 0 0 0 rgba(48,209,88,0); } }
+		.fx-ekg { display: block; width: min(420px, 82%); height: 34px; margin: 0 auto 16px; overflow: visible; }
+		.fx-ekg .base { fill: none; stroke: rgba(0,113,227,.16); stroke-width: 2; stroke-linecap: round; }
+		.fx-ekg .pulse { fill: none; stroke: #0071e3; stroke-width: 2.5; stroke-linecap: round;
+			stroke-dasharray: 150 850; animation: fx-ekg 3.4s linear infinite; }
+		@keyframes fx-ekg { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+		html.fx-js .fx-rv { opacity: 0; transform: translateY(16px);
+			transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+		html.fx-js .fx-rv.fx-on { opacity: 1; transform: none; }
+		.block-inner h2 { position: relative; }
+		.fx-ghost { position: absolute; top: -30px; right: 0; font-size: 4rem; font-weight: 900; line-height: 1;
+			color: #475569; pointer-events: none; user-select: none; letter-spacing: -.02em; }
+		.content-block { scroll-margin-top: 76px; }
+		.fx-rail { position: fixed; left: 14px; top: 50%; transform: translateY(-50%); z-index: 60;
+			display: none; flex-direction: column; gap: 14px; }
+		@media (min-width: 1280px) { .fx-rail { display: flex; } }
+		.fx-rail a { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+		.fx-rail .fx-dot { width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; flex: none;
+			transition: transform .25s ease, background .25s ease; }
+		.fx-rail a.fx-act .fx-dot { background: #0071e3; transform: scale(1.55); }
+		.fx-rail .fx-tip { font-size: 11px; font-weight: 700; color: #475569; background: #ffffff;
+			border: 1px solid rgba(148,163,184,.25); border-radius: 8px; padding: 3px 8px; white-space: nowrap;
+			opacity: 0; transform: translateX(-4px); transition: opacity .2s ease, transform .2s ease;
+			pointer-events: none; box-shadow: 0 2px 8px rgba(15,23,42,.08); }
+		.fx-rail a:hover .fx-tip, .fx-rail a:focus .fx-tip, .fx-rail a.fx-act .fx-tip { opacity: 1; transform: none; }
+		.sys-stat-value { font-variant-numeric: tabular-nums; }
+		.sys-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+		.sys-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.10);
+			border-color: rgba(0,113,227,.30); }
+		.svc { transition: background .2s ease; }
+		.svc:hover { background: rgba(0,113,227,.03); }
+		.md-pills { counter-reset: law; }
+		.md-pill::before { counter-increment: law; content: counter(law, decimal-leading-zero);
+			margin-right: 6px; font-weight: 800; color: #0071e3; }
+		.gcard, .think-card, .sys-point, .tri-node, .rsch-node, .md-pill {
+			transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+		.gcard:hover, .think-card:hover, .sys-point:hover, .rsch-node:hover {
+			transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); border-color: rgba(0,113,227,.28); }
+		.tri-node:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15,23,42,.08); }
+		.md-pill:hover { border-color: rgba(0,113,227,.45); }
+		.pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(0,113,227,.10)); }
+		.pdca-ring:hover .ring-flow { animation-play-state: paused; }
+		@media (max-width: 599px) { .fx-ghost { font-size: 2.6rem; top: -18px; } }
+		body[data-theme="dark"] .fx-progress i { background: linear-gradient(90deg,#2997ff,#8ab0ff); }
+		body[data-theme="dark"] .marketing-hero::before {
+			background: radial-gradient(ellipse 620px 280px at 50% 0%, rgba(41,151,255,.11), rgba(41,151,255,0) 70%); }
+		body[data-theme="dark"] .fx-ekg .base { stroke: rgba(41,151,255,.22); }
+		body[data-theme="dark"] .fx-ekg .pulse { stroke: #2997ff; }
+		body[data-theme="dark"] .fx-ghost { color: rgba(148,163,184,.10); }
+		body[data-theme="dark"] .fx-rail .fx-dot { background: #475569; }
+		body[data-theme="dark"] .fx-rail a.fx-act .fx-dot { background: #2997ff; }
+		body[data-theme="dark"] .fx-rail .fx-tip { background: #1e293b; color: #e5ecf4;
+			border-color: rgba(148,163,184,.22); box-shadow: none; }
+		body[data-theme="dark"] .sys-card:hover { box-shadow: none; border-color: rgba(41,151,255,.42); }
+		body[data-theme="dark"] .svc:hover { background: rgba(41,151,255,.06); }
+		body[data-theme="dark"] .md-pill::before { color: #2997ff; }
+		body[data-theme="dark"] .gcard:hover, body[data-theme="dark"] .think-card:hover,
+			body[data-theme="dark"] .sys-point:hover, body[data-theme="dark"] .rsch-node:hover {
+			box-shadow: none; border-color: rgba(41,151,255,.38); }
+		body[data-theme="dark"] .tri-node:hover { box-shadow: none; }
+		body[data-theme="dark"] .md-pill:hover { border-color: rgba(41,151,255,.50); }
+		body[data-theme="dark"] .pdca-ring svg { filter: drop-shadow(0 8px 20px rgba(41,151,255,.14)); }
+        /* Native framework viewer. */
+        #pd5 .section-card { padding: 36px; }
+        html:not(.fx-js) .pd5-pane[hidden] { display: block !important; }
+        html:not(.fx-js) .pd5-tabs { display: none; }
+        .pd5 { color: #475569; font-size: 13px; line-height: 1.65; }
+        .pd5-tabs { display: flex; gap: 8px; padding: 6px; margin: 26px 0; background: #eef2f7; border: 1px solid #d7e0eb; border-radius: 18px; }
+        .pd5-tab { flex: 1; min-width: 0; padding: 16px 12px; border: 1px solid transparent; border-radius: 13px; color: #475569; background: transparent; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s; }
+        .pd5-tab b, .pd5-tab span { display: block; }
+        .pd5-tab b { font-size: 15px; }
+        .pd5-tab span { font-size: 11px; margin-top: 4px; }
+        .pd5-tab[aria-selected="true"] { background: #fff; color: #005bb5; border-color: #bfdbfe; box-shadow: 0 4px 16px #0f172a0c; }
+        .pd5 :focus-visible { outline: 3px solid #0071e3; outline-offset: 4px; }
+        .pd5-pane[hidden] { display: none !important; }
+        .pd5-pane { animation: pd5-enter .4s ease-out; }
+        @keyframes pd5-enter { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .pd5-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 0 0 18px; font-size: 11px; }
+        .pd5-lg { display: inline-flex; align-items: center; gap: 6px; }
+        .pd5-lg .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #0071e3; }
+        .pd5-lg .dh, .pd5-lg .dc { background: #8b5cf6; }
+        .pd5-lg .dr, .pd5-lg .d3 { background: #dc2626; }
+        .pd5-lg .da { background: #087f8c; }
+        .pd5-lg .d2 { background: #7c3aed; }
+        .pd5-lg-sep { width: 10px; }
+        .pd5-loop-pill { border: 1px solid #bfdbfe; border-radius: 8px; padding: 5px 9px; background: #eff6ff; color: #1f3b8a; }
+        .pd5-loop-pill.alt { background: #f5f3ff; border-color: #ddd6fe; color: #5b21b6; }
+        .pd5-flowcap { color: #005bb5; font-size: 12px; font-weight: 700; text-align: center; padding: 12px 0 20px; }
+        .pd5-flowcap.up { color: #5b21b6; padding: 20px 0; }
+        .pd5-fw { position: relative; }
+        .pd5-layer { position: relative; display: grid; grid-template-columns: 150px minmax(0,1fr) minmax(0,1fr); gap: 0; border: 1px solid #d7e0eb; border-radius: 18px; background: #fff; overflow: hidden; transition: border-color .25s, box-shadow .25s; }
+        .pd5-layer:hover { border-color: #7aafe4; box-shadow: 0 8px 24px #0f172a0a; }
+        .pd5-badge { padding: 22px 16px; background: #f5f7fb; display: flex; flex-direction: column; gap: 6px; }
+        .pd5-lid { font-size: 30px; font-weight: 900; color: #0066cc; line-height: 1.1; letter-spacing: -.04em; }
+        .pd5-badge b { color: #0f172a; font-size: 17px; }
+        .pd5-badge i, .pd5-badge em { font-style: normal; font-size: 11px; }
+        .pd5-badge em { margin-top: auto; padding-top: 12px; color: #475569; }
+        .pd5-track { min-width: 0; padding: 22px 18px; }
+        .pd5-track h5 { font-size: 12px; font-weight: 800; color: #005bb5; margin: 0 0 12px; }
+        .pd5-human { background: #faf9ff; }
+        .pd5-human h5 { color: #5b21b6; }
+        .pd5-track ul { margin: 0; padding-left: 16px; }
+        .pd5-track li { margin: 0 0 7px; overflow-wrap: anywhere; }
+        .pd5-beams { grid-column: 1/-1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; border-top: 1px solid #e2e8f0; padding: 14px 16px; font-size: 11px; }
+        .pd5-beam { overflow-wrap: anywhere; }
+        .pd5-outs { grid-column: 1/-1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; color: #475569; }
+        .pd5-outs i { font-style: normal; background: #eff6ff; color: #1f3b8a; border-radius: 6px; padding: 2px 8px; }
+        .pd5-arr { text-align: center; color: #0066cc; height: 32px; font-size: 22px; line-height: 32px; }
+        .pd5-tcores { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 12px; }
+        .pd5-tcores-t, .pd5-comps-t { grid-column: 1/-1; font-size: 14px; font-weight: 800; color: #0f172a; margin: 22px 0 8px; }
+        .pd5-tcore, .pd5-moat, .pd5-comp, .pd5-hif { min-width: 0; padding: 18px; border: 1px solid #d7e0eb; border-radius: 14px; background: #fff; }
+        .pd5-tcore > *, .pd5-moat > *, .pd5-comp > *, .pd5-hif > * { display: block; overflow-wrap: anywhere; }
+        .pd5 b { color: #0f172a; }
+        .pd5-tab[aria-selected="true"] b { color: #005bb5; }
+        .pd5-tcore .tk, .pd5-tcore .wh, .pd5-tcore .ro { margin-top: 6px; font-size: 12px; }
+        .pd5-tcore .wh { color: #005bb5; }
+        .pd5-moats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 18px; }
+        .pd5-moat { background: #f5f7fb; }
+        .pd5-moat span { margin-top: 6px; font-size: 12px; }
+        .pd5-pipe { display: flex; flex-direction: column; align-items: center; padding: 24px; border: 1px solid #d7e0eb; border-radius: 18px; background: linear-gradient(135deg,#f5f9ff,#faf9ff); }
+        .pd5-node { width: min(100%,400px); padding: 16px; border: 1px solid #aaccee; border-radius: 12px; background: #fff; text-align: center; font-size: 15px; }
+        .pd5-node.gate { border-color: #b5a2e8; background: #f5f3ff; }
+        .pd5-node.io { background: #f1f5f9; border-style: dashed; }
+        .pd5-link { position: relative; display: flex; align-items: center; width: min(100%,400px); height: 56px; }
+        .pd5-link svg { position: absolute; width: 40px; height: 14px; left: calc(50% - 20px); transform: rotate(90deg); }
+        .pd5-link-lab { width: 44%; font-size: 10px; line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
+        .pd5-gov, .pd5-bus { padding: 22px; margin-top: 16px; border: 1px solid #d7e0eb; border-radius: 16px; background: #f8fafc; }
+        .pd5-gov > *, .pd5-bus-head > * { display: block; }
+        .pd5-gov .gm { margin: 8px 0; } .pd5-gov .gs, .pd5-bus-head span { font-size: 12px; }
+        .pd5-bus-evs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+        .pd5-bus code { font-size: 11px; color: #5b21b6; background: #ede9fe; border-radius: 6px; padding: 4px 8px; }
+        .pd5-bus-back { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+        .pd5-back { font-size: 12px; } .pd5-back u { display: block; text-decoration: none; color: #5b21b6; font-weight: 700; }
+        .pd5-iface, .pd5-comps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+        .pd5-hif .hm, .pd5-comp .cr { margin: 10px 0; }
+        .pd5-hif .hs, .pd5-comp .co { font-size: 12px; }
+        .pd5-hif em, .pd5-comp em { font-style: normal; font-size: 11px; color: #005bb5; margin-top: 12px; }
+        .pd5-mvp { display: flex; align-items: flex-start; gap: 10px; padding: 20px 0; }
+        .pd5-mstep { flex: 1; min-width: 0; text-align: center; }
+        .pd5-mdot { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid; border-radius: 50%; margin: 0 auto 10px; font-weight: 800; }
+        .pd5-mstep b, .pd5-mstep .md { display: block; font-size: 12px; overflow-wrap: anywhere; }
+        .pd5-mstep .md { margin-top: 4px; font-size: 11px; } .pd5-marr { padding-top: 6px; color: #0066cc; }
+        html.fx-js .fx-rv { opacity: 1; transform: none; }
+        html.fx-js .fx-rv.fx-on { animation: pd5-enter .45s ease-out; }
+        html.fx-js .sys-card.fx-on:hover { transform: translateY(-3px); }
+        body[data-theme="dark"] .pd5 { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tabs { background: #111827; border-color: #334155; }
+        body[data-theme="dark"] .pd5-tab { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-tab[aria-selected="true"] { background: #1e293b; border-color: #426a9b; color: #bfdbfe; box-shadow: none; }
+        body[data-theme="dark"] .pd5 b, body[data-theme="dark"] .pd5-tcores-t, body[data-theme="dark"] .pd5-comps-t { color: #e5ecf4; }
+        body[data-theme="dark"] .pd5-layer, body[data-theme="dark"] .pd5-tcore, body[data-theme="dark"] .pd5-moat,
+        body[data-theme="dark"] .pd5-comp, body[data-theme="dark"] .pd5-hif, body[data-theme="dark"] .pd5-node { background: #0f172a; border-color: #334155; }
+        body[data-theme="dark"] .pd5-layer:hover { border-color: #5585bb; box-shadow: none; }
+        body[data-theme="dark"] .pd5-badge, body[data-theme="dark"] .pd5-gov, body[data-theme="dark"] .pd5-bus { background: #111827; }
+        body[data-theme="dark"] .pd5-human, body[data-theme="dark"] .pd5-node.gate { background: #191a32; }
+        body[data-theme="dark"] .pd5-track, body[data-theme="dark"] .pd5-beams { border-color: #334155; }
+        body[data-theme="dark"] .pd5-lid, body[data-theme="dark"] .pd5-track h5, body[data-theme="dark"] .pd5-flowcap,
+        body[data-theme="dark"] .pd5-arr, body[data-theme="dark"] .pd5-tcore .wh, body[data-theme="dark"] .pd5-hif em,
+        body[data-theme="dark"] .pd5-comp em, body[data-theme="dark"] .pd5-marr { color: #8ab0ff; }
+        body[data-theme="dark"] .pd5-human h5, body[data-theme="dark"] .pd5-flowcap.up, body[data-theme="dark"] .pd5-back u { color: #c4b5fd; }
+        body[data-theme="dark"] .pd5-badge em, body[data-theme="dark"] .pd5-outs { color: #9fb0c3; }
+        body[data-theme="dark"] .pd5-outs i, body[data-theme="dark"] .pd5-loop-pill { background: #172b49; color: #bfdbfe; border-color: #426a9b; }
+        body[data-theme="dark"] .pd5-loop-pill.alt, body[data-theme="dark"] .pd5-bus code { background: #25213e; color: #c4b5fd; border-color: #65518b; }
+        body[data-theme="dark"] .pd5-pipe { background: linear-gradient(135deg,#101d30,#191a32); border-color: #334155; }
+        @media(max-width:767px) {
+            #pd5 .section-card { padding: 20px 14px; }
+            .pd5-layer { grid-template-columns: repeat(2,minmax(0,1fr)); }
+            .pd5-badge { grid-column: 1/-1; flex-direction: row; align-items: center; flex-wrap: wrap; padding: 14px; gap: 10px; }
+            .pd5-badge em { padding: 0; margin: 0; } .pd5-track { padding: 16px 12px; }
+            .pd5-beams, .pd5-tcores, .pd5-moats, .pd5-bus-back { grid-template-columns: 1fr; }
+            .pd5-tabs { gap: 4px; } .pd5-tab { padding: 12px 8px; } .pd5-tab b { font-size: 13px; }
+            .pd5-mvp { flex-direction: column; align-items: stretch; } .pd5-marr { text-align: center; transform: rotate(90deg); }
+            .pd5-iface, .pd5-comps { grid-template-columns: 1fr; }
+        }
+        @media(max-width:720px) { #pd5 .pd5-tabs { flex-direction: column; } #pd5 .pd5-tab { width: 100%; } }
+        @media(prefers-reduced-motion:reduce) { .pd5-pane, html.fx-js .fx-rv.fx-on { animation: none; } }
+        @media print { .pd5-pane[hidden] { display: block !important; } }
+
+	</style>
+<style>@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}</style>
+<script>document.documentElement.className+=" fx-js";</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"System Overview | Fengyu WANG","url":"https://www.fengyuwang.com/en/system-graph"}</script>
+</head>
+<body>
+	<div id="shared-subpage-navbar" data-section="portfolio"></div>
+	<script src="../assets/js/shared-subpage-navbar.js?v=26.09.26.07.30"></script>
+
+	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
+	<nav class="fx-rail" aria-label="Sections on this page">
+		<a href="#systems" data-rail="systems"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Services</span></a>
+		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Automation</span></a>
+		<a href="#pd5" data-rail="pd5"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The Human-in-the-Loop Paradigm</span></a>
+		<a href="#paper" data-rail="paper"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A paper, drawn</span></a>
+		<a href="#thinking" data-rail="thinking"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Three interfaces, one diagnosis</span></a>
+		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Six domains, not six islands</span></a>
+		<a href="#projects" data-rail="projects"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The complete project inventory</span></a>
+	</nav>
+	<div class="page-wrap">
+
+		<div class="container">
+			<div class="marketing-hero">
+				<p class="eyebrow fx-rv"><span class="dot" aria-hidden="true"></span>LIVE · MEASURED</p>
+				<h1 class="fx-rv" style="transition-delay:90ms">One machine. <span class="accent">Every project, measured live.</span></h1>
+				<p class="sys-hero-tagline fx-rv" style="transition-delay:180ms">Every number on this page is measured from this machine right now. Nothing staged.</p>
+				<svg class="fx-ekg fx-rv" style="transition-delay:250ms" viewBox="0 0 420 34" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="base" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/><path class="pulse" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/></svg>
+				<div class="sys-snapshot fx-rv" style="transition-delay:320ms">
+					<div class="sys-stat">
+						<span class="sys-stat-value fx-count" data-n="1432605">1,432,605</span>
+						<span class="sys-stat-label">lines of code</span>
+					</div>
+					<div class="sys-stat">
+						<span class="sys-stat-value fx-count" data-n="78">78</span>
+						<span class="sys-stat-label">projects</span>
+						<span class="sys-stat-note">36 local · 42 cloud-only</span>
+					</div>
+					<div class="sys-stat">
+						<span class="sys-stat-value fx-count" data-n="11">11</span>
+						<span class="sys-stat-label">languages</span>
+						<span class="sys-stat-note">13 further projects have no detected language</span>
+					</div>
+				</div>
+				<p class="sys-hero-note">Snapshot taken 2026-09-17, from the FengOS inventory of my own workspace: a scan of local paths plus the repositories under my GitHub account. Every entry is traceable, not estimated.</p>
+			</div>
+		</div>
+		<div id="domains" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">01</span>Six domains, not six islands</h2>
+					<p class="block-subtitle">Six domains as nodes, cross-domain relationships as edges. Only documented references are drawn; imagined synergy is not.</p>
+					<div class="sys-graph-wrap">
+						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="Six-domain relation graph: six domains as nodes whose size scales with project count, cross-domain relationship counts as edges whose width scales with that count, and numeric labels on the five densest edges" xmlns="http://www.w3.org/2000/svg">
+					<line class="gn-edge" x1="159.1" y1="268.0" x2="159.1" y2="338.8" stroke-width="2.72" stroke-opacity="0.40" />
+					<line class="gn-edge" x1="277.2" y1="142.4" x2="216.9" y2="173.3" stroke-width="2.72" stroke-opacity="0.40" />
+					<line class="gn-edge" x1="493.0" y1="374.2" x2="216.9" y2="232.7" stroke-width="3.27" stroke-opacity="0.44" />
+					<line class="gn-edge" x1="295.9" y1="479.2" x2="221.6" y2="441.0" stroke-width="3.69" stroke-opacity="0.47" />
+					<line class="gn-edge" x1="493.0" y1="443.8" x2="424.1" y2="479.2" stroke-width="4.04" stroke-opacity="0.49" />
+					<line class="gn-edge" x1="360.0" y1="193.0" x2="360.0" y2="440.0" stroke-width="4.04" stroke-opacity="0.49" />
+					<line class="gn-edge" x1="484.5" y1="409.0" x2="229.3" y2="409.0" stroke-width="4.36" stroke-opacity="0.51" />
+					<line class="gn-edge" x1="481.0" y1="203.0" x2="224.1" y2="203.0" stroke-width="4.36" stroke-opacity="0.51" />
+					<line class="gn-edge" x1="517.4" y1="270.0" x2="399.2" y2="451.6" stroke-width="5.14" stroke-opacity="0.57" />
+					<line class="gn-edge" x1="519.3" y1="345.0" x2="410.7" y2="178.0" stroke-width="5.58" stroke-opacity="0.60" />
+					<line class="gn-edge" x1="309.3" y1="178.0" x2="197.4" y2="350.1" stroke-width="6.35" stroke-opacity="0.66" />
+					<line class="gn-edge" x1="489.8" y1="239.4" x2="221.6" y2="377.0" stroke-width="6.85" stroke-opacity="0.70" />
+					<line class="gn-edge" x1="560.9" y1="282.9" x2="560.9" y2="332.6" stroke-width="7.01" stroke-opacity="0.71" />
+					<line class="gn-edge" x1="489.8" y1="166.6" x2="442.8" y2="142.4" stroke-width="7.60" stroke-opacity="0.75" />
+					<rect class="gn-weight-bg" x="443.5" y="136.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="460.5" y="157.5" text-anchor="middle">22</text>
+					<rect class="gn-weight-bg" x="543.9" y="291.0" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="560.9" y="312.0" text-anchor="middle">18</text>
+					<rect class="gn-weight-bg" x="343.0" y="291.0" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="360.0" y="312.0" text-anchor="middle">17</text>
+					<rect class="gn-weight-bg" x="242.5" y="239.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="259.5" y="260.5" text-anchor="middle">14</text>
+					<rect class="gn-weight-bg" x="443.5" y="239.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="460.5" y="260.5" text-anchor="middle">10</text>
+					<circle class="gn-node" cx="360.0" cy="100.0" r="88.0" />
+					<text class="gn-name" x="360.0" y="93.7" text-anchor="middle" font-size="13.9">Tools &amp; Experiments</text>
+					<text class="gn-count" x="360.0" y="114.9" text-anchor="middle" font-size="11.0">38 projects</text>
+					<circle class="gn-node" cx="560.9" cy="203.0" r="74.9" />
+					<text class="gn-name" x="560.9" y="196.7" text-anchor="middle" font-size="14.0">Content Creation</text>
+					<text class="gn-count" x="560.9" y="218.1" text-anchor="middle" font-size="11.0">23 projects</text>
+					<circle class="gn-node" cx="560.9" cy="409.0" r="71.4" />
+					<text class="gn-name" x="560.9" y="401.2" text-anchor="middle" font-size="9.0">Infrastructure &amp; Orchestration</text>
+					<text class="gn-count" x="560.9" y="416.4" text-anchor="middle" font-size="11.0">19 projects</text>
+					<circle class="gn-node" cx="360.0" cy="512.0" r="67.0" />
+					<text class="gn-name" x="360.0" y="504.2" text-anchor="middle" font-size="9.0">Knowledge &amp; Human-AI Collaboration</text>
+					<text class="gn-count" x="360.0" y="519.4" text-anchor="middle" font-size="11.0">14 projects</text>
+					<circle class="gn-node" cx="159.1" cy="409.0" r="65.2" />
+					<text class="gn-name" x="159.1" y="401.2" text-anchor="middle" font-size="9.0">Automation &amp; Execution</text>
+					<text class="gn-count" x="159.1" y="416.4" text-anchor="middle" font-size="11.0">12 projects</text>
+					<circle class="gn-node" cx="159.1" cy="203.0" r="60.0" />
+					<text class="gn-name" x="159.1" y="195.2" text-anchor="middle" font-size="9.0">Investment &amp; Finance</text>
+					<text class="gn-count" x="159.1" y="210.4" text-anchor="middle" font-size="11.0">6 projects</text>
+					</svg>
+					</div>
+					<ul class="sys-caption">
+						<li>Node size scales with the number of projects labelled with that domain (a project may belong to several domains, so the counts sum to more than the project total).</li>
+						<li>Edge width scales with the number of project relationships between the two domains; numeric labels mark only the 5 densest edges.</li>
+						<li>Threshold rule: for each project pair the relations recorded on both sides are merged and the larger reference count is kept; pairs with 1 reference or fewer are treated as noise and dropped. This graph keeps 14 edges covering 75 project relationships.</li>
+						<li>Evidence basis: code references are word-boundary text matches in local source (the graph.py method); doc references are registrations in READMEs, documents and configuration. Source co-occurrence is not a business dependency, and this graph claims no call relationships.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="net" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">02</span>Project relation graph</h2>
+					<p class="block-subtitle">Balls are projects (sized by relations), particles are references in motion. Hover lights up neighbors, click opens the profile. Drag to pan, scroll to zoom, pinch on touch.</p>
+					<div class="sn2-toolbar"><div class="sn2-legend"></div><button type="button" class="sn2-reset" id="sn2Reset">Reset view</button></div>
+					<label class="sn2-alllab"><input type="checkbox" id="sn2AllE"> Show all links (default: strong ties of 3+ only; hovering any ball lights up all of its relations)</label>
+					<div class="sn2-stage" id="sn2Stage"><canvas id="sn2Cv"></canvas><div class="sn2-tip" id="sn2Tip"></div>
+						<div class="sn2-panel" id="sn2Panel"><button class="sn2-x" id="sn2Px" aria-label="Close">✕</button><div id="sn2Body"></div></div>
+					</div>
+					<script type="application/json" id="sn2Data">{"groups":["tools-experiments","content-creation","infrastructure-orchestration","knowledge-human-ai","automation-execution","invest-finance"],"colors":["#0071e3","#8b5cf6","#dc2626","#087f8c","#7c3aed","#ea7b1c"],"nodes":[{"id":"llm-text-processor","name":"LLM Text Processor","one":"Chunks very long text by strategy and feeds it to large language models in parallel batches, with GUI and CLI sharing one Dockerised service.","badges":["Local","TypeScript"],"cl":0,"deg":5},{"id":"readyoffice","name":"ReadyO","one":"A Hong Kong fitted-office leasing matchmaking platform that helps 10-50 person teams graduating from coworking find offices they can move into immediately.","badges":["Local","TypeScript"],"cl":0,"deg":1},{"id":"tts-ui","name":"TTS-UI","one":"A completely free desktop voiceover tool offering 322 Microsoft Edge neural voices, plus a novelty voice engine for playful experiments.","badges":["Local","Rust"],"cl":0,"deg":2},{"id":"super-invincible-search-king","name":"Search King","one":"A multi-source concurrent search aggregator with no API keys and no Docker: image search, text search, web page reading and deep crawling in one tool.","badges":["Local","Python"],"cl":0,"deg":7},{"id":"fengmail","name":"FengMail","one":"An AI email system connecting straight to IMAP across 7 mailboxes with its own OAuth implementation - no middleman and no call quotas.","badges":["Local","PowerShell"],"cl":0,"deg":7},{"id":"fengoffice","name":"FengOffice","one":"Merges a self-built mail system with Twenty CRM into one AI-driven middle platform handling email, contacts, customers and newsletter subscriptions.","badges":["Local","Python"],"cl":0,"deg":9},{"id":"open-fengoffice","name":"Open-FengOffice","one":"The desensitised open-source edition of FengOffice: a CLI mail client, Twenty CRM and a newsletter stack as a three-part kit.","badges":["Local","Python"],"cl":0,"deg":4},{"id":"lecoofan","name":"LecooFan","one":"A complete scheme for silencing a noisy Lenovo N175L laptop, combining CPU undervolting with a rewritten ITE embedded-controller fan curve and restore scripts.","badges":["Local","Python"],"cl":0,"deg":3},{"id":"speed-change","name":"Speed-Change","one":"A minimal audio speed tool: pick a file, drag a slider, get an MP3, implemented in pure Python with no FFmpeg dependency.","badges":["Local","Python"],"cl":0,"deg":1},{"id":"python-deterministic-check","name":"Python Deterministic Check","one":"Runs nine categories of mathematical operations to verify that the numbers come out bit-identical across interpreters, operating systems and CPU architectures.","badges":["Local","Python"],"cl":0,"deg":1},{"id":"fengcrm","name":"FengCRM","one":"An AI-native, email-driven personal CRM shipped as a single binary, where every operation happens by talking to it over MCP.","badges":["Local","Unknown"],"cl":0,"deg":1},{"id":"ace-step-local-patches","name":"ACE-Step Local Patches","one":"Unpushed ACE-Step commits rescued after a blue screen, preserved as a patch file so the local work can be reapplied later.","badges":["Cloud repository","Unknown"],"cl":0,"deg":1},{"id":"unifiedsearch-snapshot","name":"UnifiedSearch Snapshot","one":"The snapshot of UnifiedSearch left by the blue-screen rescue: the original directory had no remote, and uncommitted working-tree changes are not included.","badges":["Cloud repository","Python"],"cl":0,"deg":2},{"id":"my-random-backyard","name":"My Random Backyard","one":"A grab-bag of personal side projects and stray notes for idle moments, whose subdirectories have nothing to do with one another.","badges":["Cloud repository","Shell"],"cl":0,"deg":0},{"id":"joytokeyalternative","name":"JoyToKeyAlternative","one":"A pure C# gamepad-to-keyboard-and-mouse mapper with zero dependencies, written as a learning exercise and a replacement for the closed-source JoyToKey.","badges":["Cloud repository","C#"],"cl":0,"deg":0},{"id":"7zevery","name":"7zEvery","one":"A batch 7z compression and decryption tool for Windows that preserves directory structure, offers optional passwords and shows progress with logs.","badges":["Cloud repository","Python"],"cl":0,"deg":1},{"id":"check_dup","name":"check_dup","one":"A single-file script that compares adjacent lines in a document and prints the number of duplicate groups found to the console.","badges":["Cloud repository","Python"],"cl":0,"deg":0},{"id":"data_floating_window1.2","name":"Data Floating Window 1.2","one":"A pop-up reference and notes overlay for Windows: summoned by hotkey, floating and translucent, with a persistent clipboard and local storage.","badges":["Cloud repository","Python"],"cl":0,"deg":0},{"id":"fengfancontrol","name":"FengFanControl","one":"The complete noise and heat-reduction scheme for a Lecoo N175L laptop, kept here as the predecessor repository of the lecoofan project.","badges":["Cloud repository","Python"],"cl":0,"deg":2},{"id":"hide-all","name":"Hide All","one":"Closes every visible application on macOS with one action, feeling like logging out without actually logging out of the system.","badges":["Cloud repository","Shell"],"cl":0,"deg":0},{"id":"tag_manager","name":"tag_manager","one":"A desktop tool for adding and removing tags in bulk across Obsidian notes and TXT files, with full-text keyword matching.","badges":["Cloud repository","Python"],"cl":0,"deg":0},{"id":"unifiedsearch","name":"UnifiedSearch","one":"Asks several search engines and AI platforms at once, opening every result page in one click for easy side-by-side comparison.","badges":["Cloud repository","Python"],"cl":0,"deg":4},{"id":"unifiedsearchmobile","name":"UnifiedSearchMobile","one":"The mobile edition of one-click search: ask several platforms at once from a phone and open all the result pages.","badges":["Cloud repository","Python"],"cl":0,"deg":1},{"id":"doubao-input","name":"Doubao Input","one":"On Ubuntu, GNOME and Wayland, hold right Ctrl to speak and release to type the text straight into the focused input field.","badges":["Cloud repository","Python"],"cl":0,"deg":0},{"id":"stack-docs","name":"stack-docs","one":"The source code of the official documentation site for the Hugo Stack theme, reused here as a blog documentation submodule.","badges":["Cloud repository","Unknown"],"cl":0,"deg":1},{"id":"talkifytts","name":"TalkifyTTS","one":"An Android TTS engine that produces no speech of its own but bridges cloud voices from Microsoft, Qwen, Doubao and Tencent into system read-aloud.","badges":["Cloud repository","Kotlin"],"cl":0,"deg":0},{"id":"copyevery","name":"CopyEvery","one":"A small Windows desktop tool built around 7-Zip for batch compression, unpacking and format conversion of many files at once.","badges":["Cloud repository","Python"],"cl":0,"deg":1},{"id":"fengyuwang_com","name":"fengyuwang_com","one":"The trilingual personal website and blog main site: one git repository spanning machines and operating systems, carrying the personal brand and an entry point to every project.","badges":["Local","HTML"],"cl":0,"deg":20},{"id":"feng-media","name":"FengMedia","one":"A growth operating system for a finance creator: persona, topic selection, scripting, publishing and review folded into one executable pipeline.","badges":["Local","Python"],"cl":0,"deg":11},{"id":"jingxin","name":"Jingxin","one":"A calm game whose only control is breathing: no failure, no score, and the sole progress is the world waking up.","badges":["Local","Dart"],"cl":0,"deg":4},{"id":"fengyuwang_4","name":"fengyuwang_4","one":"The fourth generation of a trilingual static personal website, shipping with an editing manual written for both AI and humans.","badges":["Local","HTML"],"cl":0,"deg":1},{"id":"resume","name":"Resume","one":"A multilingual resume factory for the Hong Kong job market: single-file A4 HTML that generates general, marketing, tech and investment PDF editions in one pass.","badges":["Local","Python"],"cl":0,"deg":25},{"id":"5dt-pd","name":"5DT-PD","one":"An industrial framework that splits the content business into five layers, twin tracks and twin feedback loops, plus a clickable architecture viewer.","badges":["Local","TypeScript"],"cl":0,"deg":1},{"id":"open-fengmedia","name":"Open-FengMedia","one":"The desensitised open-source edition of a finance content operating system: persona, topic selection, scripting, voiceover, rendering, publishing and review in one pipeline.","badges":["Local","Unknown"],"cl":0,"deg":3},{"id":"fengmedia-backup","name":"FengMedia Backup","one":"A backup snapshot of the local FengMedia repository, rescued after the blue screen of 2026-09-14 to keep the content assets safe.","badges":["Cloud repository","Python"],"cl":0,"deg":2},{"id":"fengyuwang_2","name":"fengyuwang_2","one":"The second generation of the personal website, a Hugo version: static pages, a multilingual blog and an embedded technical documentation submodule.","badges":["Cloud repository","HTML"],"cl":0,"deg":2},{"id":"liugeepic","name":"LiuGeEpic","one":"A long-running game project from world-building plan to Godot implementation, with complete design documents, audits and a playtest remediation plan.","badges":["Cloud repository","GDScript"],"cl":0,"deg":1},{"id":"fengmedia","name":"FengMedia","one":"The remote private repository for Fengyu Wang's complete personal IP operating system: persona to content, tools to platform, code to operations.","badges":["Cloud repository","Python"],"cl":0,"deg":14},{"id":"fengcv","name":"FengCV","one":"Fengyu Wang's bilingual Chinese-English resume repository: HTML layout with multiple PDF editions, maintained from the same source as the Resume repo.","badges":["Cloud repository","HTML"],"cl":0,"deg":1},{"id":"manifesto-2026","name":"Manifesto 2026","one":"A sequel chapter to the Communist Manifesto: long-form political writing that takes digital capitalism and the platform economy as its subject of critique.","badges":["Cloud repository","Unknown"],"cl":0,"deg":0},{"id":"vids","name":"Vids","one":"A video production line that renders HTML into MP4 with HyperFrames, covering product films, faceless explainers, captions and beat-synced edits.","badges":["Cloud repository","Python"],"cl":0,"deg":3},{"id":"fengyuwang_5","name":"fengyuwang_5","one":"The fifth generation of the personal website: a purely static multilingual site with a blog, with design iterations archived in dated batches.","badges":["Cloud repository","HTML"],"cl":0,"deg":1},{"id":"cchh","name":"CCHH","one":"Moves Claude Code from the terminal into a graphical workbench: multi-project sessions, worktrees, diffs, permission approvals and remote access on one screen.","badges":["Local","TypeScript"],"cl":0,"deg":2},{"id":"fengcloud","name":"FlyGo","one":"Turns an idle Windows PC into a full NAS - files, media, photos, multi-way sync, remote access and containers, all summarised on one panel.","badges":["Local","Rust"],"cl":0,"deg":5},{"id":"fengasni","name":"FengASNI","one":"One profile per machine, governing each box's skills, software and configuration so AI capability follows you automatically when you switch computers.","badges":["Local","Python"],"cl":0,"deg":24},{"id":"fengorchestrator","name":"FengOrchestrator","one":"The founder states one strategic goal and multiple coding agents each get on with the work, requiring nothing but a signature - the orchestration blueprint plus a local observatory.","badges":["Local","Python"],"cl":0,"deg":14},{"id":"fengdiskcleanup","name":"disk-cleanup","one":"A battle manual for cleaning the C drive on a coding machine: a read-only scanner proposes candidates and nothing is deleted until a human approves.","badges":["Local","Python"],"cl":0,"deg":1},{"id":"skill-tailscale-serve","name":"Tailscale Serve Skill","one":"A skill wrapper that safely exposes a local 127.0.0.1 web service to phones and other devices on the same Tailnet.","badges":["Local","Unknown"],"cl":0,"deg":1},{"id":"android-linux-server","name":"Android Linux Server","one":"Turns an idle Android phone, without root, into a Linux server reachable over SSH with a graphical desktop and self-healing recovery.","badges":["Cloud repository","Shell"],"cl":0,"deg":0},{"id":"open-fengorchestrator","name":"Open-FengOrchestrator","one":"The desensitised open-source edition of the founder's fleet orchestration scheme: selection conclusions after surveying more than 40 projects, plus a role-division blueprint.","badges":["Cloud repository","HTML"],"cl":0,"deg":1},{"id":"open-flygo","name":"Open-FlyGo","one":"The desensitised open-source edition that turns an old Windows PC into a full NAS: a single Rust exe panel, a control plane and a web terminal.","badges":["Cloud repository","Rust"],"cl":0,"deg":3},{"id":"bsod-diagnosis-20260914","name":"BSOD Diagnosis 2026-09-14","one":"A complete diagnostic report on the physical memory failure of 2026-09-14, together with a checklist for rescuing the Git assets involved.","badges":["Cloud repository","Unknown"],"cl":0,"deg":5},{"id":"web-app-template","name":"web-app-template","one":"A full-stack starter template using TypeScript on both ends, with an Open WebUI chat instance built into its Docker Compose setup.","badges":["Cloud repository","HTML"],"cl":0,"deg":1},{"id":"web-app-template-v01","name":"web-app-template v0.1.0","one":"The Open WebUI full-stack template v0.1.0, committed during the blue-screen rescue when the original repository still had no remote configured.","badges":["Cloud repository","HTML"],"cl":0,"deg":2},{"id":"flygo","name":"FlyGo","one":"The remote private repository for the FlyGo project: architecture documents and configuration files, with all sensitive information stripped out first.","badges":["Cloud repository","Rust"],"cl":0,"deg":8},{"id":"open-websearch","name":"open-webSearch","one":"A multi-engine MCP server, CLI and local daemon that give AI agents key-free web search and full-text page retrieval with no API key.","badges":["Cloud repository","TypeScript"],"cl":0,"deg":1},{"id":"openclaw-config","name":"OpenClaw Config","one":"A configuration backup of the OpenClaw gateway and workspace, keeping agents, devices, flows, plugins and identity together as one complete set.","badges":["Cloud repository","HTML"],"cl":0,"deg":0},{"id":"private-aiexport","name":"AIExport","one":"Exports and archives thousands of long conversations from Yuanbao, Doubao, DeepSeek and Gemini, then close-reads each one to extract content material.","badges":["Local","JavaScript"],"cl":0,"deg":7},{"id":"lessons","name":"lessons","one":"Turns hard-won mistakes into individually searchable rules covering Docker persistence, PowerShell BOM issues, API key leaks and Git history cleanup.","badges":["Local","Unknown"],"cl":0,"deg":3},{"id":"free-token-research","name":"Free Token Research","one":"A survey of the free large-model token ecosystem as of September 2026: who is burning cash on subsidies, where the money flows and where the intelligence sources are.","badges":["Cloud repository","JavaScript"],"cl":0,"deg":0},{"id":"agents-project","name":"agents-project","one":"A README written specifically for AI coding agents: project conventions captured in a single standard document kept at a predictable location.","badges":["Cloud repository","Unknown"],"cl":0,"deg":0},{"id":"course-projects","name":"Course Projects","one":"A collection of project deliverables from an HKUST MSc in marketing and CityU law courses: IMC, branding, CRM and market research in one place.","badges":["Cloud repository","Unknown"],"cl":0,"deg":1},{"id":"marketing-portfolio","name":"Marketing Portfolio","one":"Organises marketing capability into a portfolio by dimension: market research, strategy, brand systems, integrated communications and customer operations, one per row.","badges":["Cloud repository","Unknown"],"cl":0,"deg":1},{"id":"fengvault","name":"FengVault","one":"A personal Obsidian vault repository holding notes across AI, startups and miscellaneous topics, alongside a tagged to-do list of tasks.","badges":["Cloud repository","Unknown"],"cl":0,"deg":3},{"id":"private-feng-job-hunter","name":"Feng Job Hunter","one":"An agent-led bulk application system where a Boss agent reads the workflow and dispatches workers that use playwright-cli to apply to jobs one by one.","badges":["Local","HTML"],"cl":0,"deg":6},{"id":"private-feng-auto-fill","name":"Feng Auto Fill","one":"A general-purpose form-filling engine that discovers fields, understands their meaning, fills and submits them - GUI for humans, CLI for AI.","badges":["Local","Python"],"cl":0,"deg":2},{"id":"private-autolinkedin","name":"Auto LinkedIn","one":"A LinkedIn auto-apply tool aimed at global positions, turning job applications into a pipeline that can run unattended in batches.","badges":["Local","Python"],"cl":0,"deg":3},{"id":"private-autoapplymac","name":"Private-AutoApplyMac","one":"A macOS-oriented auto-apply tool for JobsDB Hong Kong, built on a Playwright persistent browser context and a two-process watchdog architecture.","badges":["Local","Python"],"cl":0,"deg":3},{"id":"autoapply3","name":"AutoApply3","one":"The third generation of JobsDB Hong Kong auto-apply, which established the GUI plus CLI dual-channel protocol skeleton that AI agents can drive.","badges":["Local","Python"],"cl":0,"deg":2},{"id":"private-fengmailmac","name":"Private-fengmailmac","one":"A job-hunting email combat system that picks real interview opportunities out of an email flood and automatically clears machine-generated junk.","badges":["Cloud repository","Python"],"cl":0,"deg":1},{"id":"autoapply5","name":"AutoApply5","one":"The fifth generation of JobsDB auto-apply, refactored in Python while keeping the GUI, CLI and AI modes plus one-click automation.","badges":["Cloud repository","Python"],"cl":0,"deg":2},{"id":"private-autoapply4","name":"Private-AutoApply4","one":"The fourth generation of JobsDB auto-apply, rewritten on Selenium and Edge with GUI, CLI and AI modes plus a watchdog.","badges":["Cloud repository","Python"],"cl":0,"deg":2},{"id":"fenginvest","name":"FengInvest","one":"A complete investment research system: a seven-layer state machine that locks each decision step, 85 Python tools and a knowledge base of 43 investing masters.","badges":["Local","Python"],"cl":0,"deg":12},{"id":"open-fenginvest","name":"Open-FengInvest","one":"The desensitised open-source edition of the FengInvest seven-layer decision framework, packaging its state machine, data pipeline, tool set and web UI.","badges":["Local","Python"],"cl":0,"deg":5},{"id":"qiheng-bilibili","name":"Qiheng","one":"Transcribes, corrects and archives Bilibili videos into research documents whose citations can be verified, plus a complete transcript collection for downstream study.","badges":["Local","Python"],"cl":0,"deg":2},{"id":"cross-cycles","name":"Cross Cycles","one":"A long-form content project that turns debt cycles, crowd sentiment and asset bubbles into a 17-episode self-media series for a general audience.","badges":["Local","HTML"],"cl":0,"deg":1},{"id":"fenglearn","name":"FengLearn","one":"Feeds 400+ Qiheng Bilibili videos and thousands of Xueqiu articles into a RAG knowledge base, then uses spaced repetition to make it stick.","badges":["Local","Unknown"],"cl":0,"deg":2},{"id":"private-cross-cycles","name":"Private-Cross-Cycles","one":"The private complete edition of the Cross Cycles series: the full framework text, 17 episode documents, a fact-check report and HTML slide decks.","badges":["Cloud repository","HTML"],"cl":0,"deg":1}],"edges":[["llm-text-processor","resume",2],["fengasni","llm-text-processor",2],["fenginvest","llm-text-processor",2],["fengmedia","llm-text-processor",1],["fengasni","readyoffice",1],["fengorchestrator","tts-ui",2],["speed-change","tts-ui",2],["fengyuwang_com","super-invincible-search-king",1],["fengasni","super-invincible-search-king",1],["fenginvest","super-invincible-search-king",1],["fengmedia","super-invincible-search-king",1],["resume","super-invincible-search-king",1],["fengorchestrator","super-invincible-search-king",1],["open-fenginvest","super-invincible-search-king",1],["fengmail","fengyuwang_com",2],["fengmail","resume",2],["fengmail","fengoffice",2],["fengmail","open-fengoffice",2],["fengmail","fengorchestrator",2],["fengasni","fengmail",2],["fengoffice","vids",2],["fengoffice","fengyuwang_com",2],["fengoffice","resume",2],["fengoffice","fengorchestrator",2],["fengasni","fengoffice",2],["fengmedia","fengoffice",1],["fengoffice","open-fengoffice",2],["fengyuwang_com","open-fengoffice",2],["fengasni","open-fengoffice",2],["fengfancontrol","lecoofan",2],["fengasni","lecoofan",2],["lecoofan","resume",2],["fengasni","python-deterministic-check",2],["fengcrm","resume",2],["unifiedsearch","unifiedsearch-snapshot",2],["7zevery","resume",1],["fengasni","fengfancontrol",2],["unifiedsearch","unifiedsearchmobile",2],["resume","unifiedsearch",1],["fengyuwang_com","unifiedsearch",2],["fengyuwang_2","stack-docs",1],["copyevery","resume",1],["fengyuwang_com","flygo",2],["fengyuwang_com","open-flygo",1],["fengmedia","fengyuwang_com",2],["fengyuwang_com","open-fengmedia",2],["fenginvest","fengyuwang_com",2],["fengyuwang_com","jingxin",2],["fengyuwang_com","resume",2],["fengyuwang_com","lessons",2],["fengyuwang_com","open-fenginvest",2],["5dt-pd","fengyuwang_com",2],["fengasni","fengyuwang_com",2],["feng-media","vids",1],["feng-media","fengvault",1],["feng-media","open-fengmedia",1],["feng-media","fengmedia",1],["feng-media","resume",1],["feng-media","fenginvest",1],["feng-media","fengyuwang_com",1],["feng-media","fengoffice",1],["feng-media","llm-text-processor",1],["feng-media","fengorchestrator",1],["feng-media","fengasni",1],["jingxin","resume",2],["fengasni","jingxin",2],["fengyuwang_4","lessons",2],["fengcv","resume",2],["fenginvest","resume",2],["fengmedia","resume",1],["private-feng-job-hunter","resume",2],["cchh","resume",2],["private-feng-auto-fill","resume",2],["private-autoapplymac","resume",2],["fengasni","resume",2],["flygo","resume",1],["fengmedia","open-fengmedia",2],["fengmedia","fengmedia-backup",2],["fengyuwang_2","fengyuwang_com",1],["bsod-diagnosis-20260914","liugeepic",2],["fengmedia","vids",1],["fengyuwang_5","fengyuwang_com",1],["cchh","fengasni",2],["fengcloud","open-flygo",1],["fengcloud","resume",1],["fengcloud","fengyuwang_com",1],["fengcloud","fengorchestrator",1],["fengasni","fengcloud",1],["fengasni","open-websearch",2],["fengasni","fengorchestrator",2],["fengasni","fenginvest",2],["fengasni","fengmedia",1],["fengasni","flygo",1],["fengasni","private-feng-job-hunter",2],["fengasni","open-fenginvest",2],["fenginvest","fengorchestrator",2],["fengmedia","fengorchestrator",1],["fengorchestrator","flygo",1],["fengorchestrator","private-feng-job-hunter",2],["fengdiskcleanup","flygo",1],["fengorchestrator","skill-tailscale-serve",1],["fengorchestrator","open-fengorchestrator",1],["flygo","open-flygo",2],["ace-step-local-patches","bsod-diagnosis-20260914",1],["bsod-diagnosis-20260914","fengmedia-backup",1],["bsod-diagnosis-20260914","unifiedsearch-snapshot",1],["bsod-diagnosis-20260914","web-app-template-v01",1],["web-app-template","web-app-template-v01",1],["flygo","jingxin",1],["fengvault","private-aiexport",1],["private-aiexport","resume",1],["fenginvest","private-aiexport",1],["fengorchestrator","private-aiexport",1],["fengasni","private-aiexport",1],["fengmedia","private-aiexport",1],["flygo","private-aiexport",1],["lessons","private-feng-job-hunter",2],["course-projects","marketing-portfolio",2],["fengmedia","fengvault",1],["private-autoapplymac","private-feng-job-hunter",2],["private-autoapplymac","private-feng-auto-fill",2],["private-autolinkedin","resume",1],["private-autolinkedin","private-feng-job-hunter",1],["fengasni","private-autolinkedin",1],["autoapply3","autoapply5",2],["autoapply3","private-autoapply4",2],["fengmail","private-fengmailmac",1],["autoapply5","private-autoapply4",2],["fenginvest","fenglearn",2],["fenginvest","open-fenginvest",2],["fenginvest","fengmedia",1],["fenglearn","open-fenginvest",2],["qiheng-bilibili","resume",1],["fenginvest","qiheng-bilibili",1],["cross-cycles","private-cross-cycles",1]]}</script>
+				</div>
+			</div>
+		</div>
+
+	<style>
+.sn2-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:0 0 10px; }
+.sn2-legend { display:flex; flex-wrap:wrap; gap:6px; }
+.sn2-lg { display:inline-flex; align-items:center; gap:6px; padding:5px 12px; border-radius:999px; border:1px solid rgba(0,113,227,.18); background:rgba(0,113,227,.05); color:#1f3b8a; font-size:.78rem; font-weight:700; cursor:pointer; font-family:inherit; }
+.sn2-lg i { width:9px; height:9px; border-radius:50%; display:inline-block; }
+.sn2-lg:hover { border-color:rgba(0,113,227,.45); }
+.sn2-reset { padding:5px 14px; border-radius:999px; border:1px solid rgba(148,163,184,.3); background:transparent; color:#475569; font-size:.78rem; font-weight:700; cursor:pointer; font-family:inherit; }
+.sn2-reset:hover { border-color:rgba(0,113,227,.4); color:#0066cc; }
+.sn2-alllab { display:inline-flex; align-items:center; gap:6px; font-size:.78rem; color:#64748b; font-weight:600; cursor:pointer; margin:0 0 10px; }
+.sn2-stage { position:relative; border:1px solid rgba(148,163,184,.12); border-radius:14px; background:#fff; overflow:hidden; touch-action:none; cursor:grab; }
+.sn2-stage:active { cursor:grabbing; }
+.sn2-stage canvas { display:block; width:100%; height:auto; }
+.sn2-tip { position:absolute; display:none; pointer-events:none; background:#0f172a; color:#fff; font-size:.75rem; font-weight:700; padding:4px 10px; border-radius:8px; transform:translate(-50%,-160%); white-space:nowrap; z-index:3; }
+.sn2-panel { position:absolute; top:12px; right:12px; width:290px; max-height:calc(100% - 24px); overflow:auto; background:rgba(255,255,255,.97); border:1px solid rgba(148,163,184,.2); border-radius:14px; padding:16px 18px; box-shadow:0 12px 32px rgba(15,23,42,.14); display:none; z-index:4; }
+.sn2-panel h3 { margin:0 0 6px; font-size:1rem; color:#0f172a; overflow-wrap:anywhere; }
+.sn2-panel .sn2-one { font-size:.85rem; font-weight:700; color:#1f3b8a; margin:0 0 8px; line-height:1.6; }
+.sn2-panel .sn2-badges { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px; }
+.sn2-panel .sn2-badges span { font-size:11px; padding:2px 8px; border-radius:999px; background:rgba(15,23,42,.06); color:#334155; font-weight:600; }
+.sn2-panel .sn2-rels { display:flex; flex-wrap:wrap; gap:5px; }
+.sn2-panel .sn2-rel { font-size:11.5px; padding:3px 10px; border-radius:999px; border:1px solid rgba(0,113,227,.2); background:rgba(0,113,227,.06); color:#1f3b8a; cursor:pointer; font-family:inherit; font-weight:600; }
+.sn2-x { position:absolute; top:8px; right:10px; border:0; background:none; font-size:16px; color:#64748b; cursor:pointer; }
+body[data-theme="dark"] .sn2-lg { background:rgba(41,151,255,.1); color:#bfdbfe; border-color:rgba(41,151,255,.22); }
+body[data-theme="dark"] .sn2-reset { color:#9fb0c3; border-color:rgba(148,163,184,.25); }
+body[data-theme="dark"] .sn2-alllab { color:#8296ac; }
+body[data-theme="dark"] .sn2-stage { background:#0f172a; border-color:rgba(148,163,184,.08); }
+body[data-theme="dark"] .sn2-tip { background:#e5ecf4; color:#0f172a; }
+body[data-theme="dark"] .sn2-panel { background:rgba(17,24,39,.97); border-color:rgba(148,163,184,.14); }
+body[data-theme="dark"] .sn2-panel h3 { color:#e5ecf4; }
+body[data-theme="dark"] .sn2-panel .sn2-one { color:#93c5fd; }
+body[data-theme="dark"] .sn2-panel .sn2-badges span { background:rgba(148,163,184,.12); color:#cbd5e1; }
+body[data-theme="dark"] .sn2-panel .sn2-rel { background:rgba(41,151,255,.1); color:#bfdbfe; border-color:rgba(41,151,255,.22); }
+@media (max-width:640px){ .sn2-panel { left:12px; right:12px; width:auto; top:auto; bottom:12px; max-height:46%; } }
+</style>
+<script>
+(function(){
+var D; try { D = JSON.parse(document.getElementById("sn2Data").textContent); } catch(e){ return; }
+var stage=document.getElementById("sn2Stage"); if(!stage||stage.dataset.sn2) return; stage.dataset.sn2="1";
+var cv=document.getElementById("sn2Cv"),ctx=cv.getContext("2d"),tip=document.getElementById("sn2Tip"),
+    panel=document.getElementById("sn2Panel"),bodyEl=document.getElementById("sn2Body");
+var groups=D.groups,colors=D.colors,N=D.nodes,E=D.edges,byId={};
+N.forEach(function(n){byId[n.id]=n});
+function layout(mode){
+  var centers=[],i,a;
+  if(mode==="land"){for(i=0;i<6;i++){a=(-90+i*60)*Math.PI/180;centers.push([720+310*Math.cos(a),470+310*Math.sin(a)])}}
+  else{centers=[[140,190],[400,190],[140,560],[400,560],[140,930],[400,930]]}
+  var base=mode==="land"?24:15,cf=mode==="land"?26:19,pos={},spread=[],bycl={};
+  N.forEach(function(n){(bycl[n.cl]=bycl[n.cl]||[]).push(n)});
+  for(var c in bycl){(function(cl){var ns=bycl[cl].slice().sort(function(x,y){return y.deg-x.deg||(x.id<y.id?-1:1)});
+    ns.forEach(function(n,k){var rr=base+cf*Math.sqrt(k),ang=k*2.39996+cl*0.7;
+      pos[n.id]=[centers[cl][0]+rr*Math.cos(ang),centers[cl][1]+rr*Math.sin(ang)]});
+    spread[cl]=base+cf*Math.sqrt(Math.max(ns.length-1,0))})(c)}
+  return {pos:pos,spread:spread,centers:centers,W:mode==="land"?1440:540,H:mode==="land"?920:1120};
+}
+var mode=innerWidth<640?"port":"land",L=layout(mode),vb={x:0,y:0,w:L.W,h:L.H};
+function resize(){var w=stage.clientWidth,h=w*L.H/L.W;cv.width=w*devicePixelRatio;cv.height=h*devicePixelRatio;cv.style.height=h+"px";ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
+addEventListener("resize",function(){var m=innerWidth<640?"port":"land";if(m!==mode){mode=m;L=layout(mode);vb={x:0,y:0,w:L.W,h:L.H}}resize()});
+var parts=[];
+function spawn(e,rev){var a=byId[e[0]],b=byId[e[1]];parts.push({a:rev?b:a,b:rev?a:b,t:0,v:.004+Math.random()*.006,c:colors[(rev?b:a).cl]})}
+setInterval(function(){if(parts.length<26&&document.hasFocus()){var e=E[Math.floor(Math.random()*E.length)];if(e)spawn(e,Math.random()<.5)}},260);
+function burst(id){E.forEach(function(e){if(e[0]===id)spawn(e,false);if(e[1]===id)spawn(e,true)})}
+var hover=null,sel=null,moved=false,ptrs={},pinch=null,allE=false;
+document.getElementById("sn2AllE").onchange=function(){allE=this.checked};
+function toWorld(px,py){var r=cv.getBoundingClientRect();return[vb.x+(px-r.left)/r.width*vb.w,vb.y+(py-r.top)/r.height*vb.h]}
+function nodeAt(px,py){var p=toWorld(px,py),best=null,bd=1e9;
+  N.forEach(function(n){var q=L.pos[n.id],rr=Math.max(6+n.deg*1.1,14)+8,d=(q[0]-p[0])*(q[0]-p[0])+(q[1]-p[1])*(q[1]-p[1]);if(d<rr*rr&&d<bd){bd=d;best=n}});
+  return best}
+cv.addEventListener("pointerdown",function(e){ptrs[e.pointerId]=[e.clientX,e.clientY];moved=false;
+  var ks=Object.keys(ptrs);if(ks.length===2){var v=[ptrs[ks[0]],ptrs[ks[1]]];pinch={d:Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}});
+cv.addEventListener("pointermove",function(e){
+  if(ptrs[e.pointerId]){var prev=ptrs[e.pointerId];ptrs[e.pointerId]=[e.clientX,e.clientY];
+    var ks=Object.keys(ptrs);
+    if(ks.length===2&&pinch){var v=[ptrs[ks[0]],ptrs[ks[1]]],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);
+      var r=cv.getBoundingClientRect(),mid=[(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2],p=toWorld(mid[0],mid[1]),f=pinch.d/d;
+      var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k};pinch.d=d;return}
+    var dx=e.clientX-prev[0],dy=e.clientY-prev[1];if(Math.abs(dx)+Math.abs(dy)>3)moved=true;
+    var r=cv.getBoundingClientRect();vb.x-=dx/r.width*vb.w;vb.y-=dy/r.height*vb.h;return}
+  var n=nodeAt(e.clientX,e.clientY);
+  if(n!==hover){hover=n;cv.style.cursor=n?"pointer":"grab";if(n)burst(n.id);
+    if(n){tip.textContent=n.name;tip.style.display="block"}else tip.style.display="none"}
+  if(n){var r=cv.getBoundingClientRect();tip.style.left=(e.clientX-r.left)+"px";tip.style.top=(e.clientY-r.top)+"px"}});
+cv.addEventListener("pointerup",function(e){delete ptrs[e.pointerId];if(Object.keys(ptrs).length<2)pinch=null;
+  if(moved)return;var n=nodeAt(e.clientX,e.clientY);
+  if(n){sel=n;showPanel(n)}else{sel=null;panel.style.display="none"}});
+cv.addEventListener("pointerleave",function(){hover=null;tip.style.display="none"});
+cv.addEventListener("wheel",function(e){e.preventDefault();var p=toWorld(e.clientX,e.clientY),f=e.deltaY>0?1.12:.89;
+  var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k}},{passive:false});
+function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
+function showPanel(n){
+  var h="<h3>"+esc(n.name)+"</h3>";
+  if(n.badges&&n.badges.length)h+='<div class="sn2-badges">'+n.badges.map(function(b){return "<span>"+esc(b)+"</span>"}).join("")+"</div>";
+  if(n.one)h+='<p class="sn2-one">'+esc(n.one)+"</p>";
+  h+='<div class="sn2-rels">'+E.filter(function(e){return e[0]===n.id||e[1]===n.id}).map(function(e){
+    var o=byId[e[0]===n.id?e[1]:e[0]];return '<button class="sn2-rel" data-id="'+esc(o.id)+'">'+esc(o.name)+"</button>"}).join("")+"</div>";
+  bodyEl.innerHTML=h;panel.style.display="block";
+  bodyEl.querySelectorAll(".sn2-rel").forEach(function(b){b.onclick=function(){sel=byId[b.dataset.id];showPanel(sel);burst(sel.id)}})}
+document.getElementById("sn2Px").onclick=function(){panel.style.display="none";sel=null};
+var lgBox=document.querySelector(".sn2-legend");
+groups.forEach(function(g,i){var b=document.createElement("button");b.className="sn2-lg";b.innerHTML='<i style="background:'+colors[i]+'"></i>'+esc(g);
+  b.onclick=function(){var c=L.centers[i],r=(L.spread[i]||60)*2.4;vb={x:c[0]-r/2,y:c[1]-r/2,w:r,h:r}};lgBox.appendChild(b)});
+document.getElementById("sn2Reset").onclick=function(){vb={x:0,y:0,w:L.W,h:L.H};panel.style.display="none";sel=null};
+function draw(){
+  var dark=document.body.getAttribute("data-theme")==="dark";
+  var labC=dark?"#cbd5e1":"#334155",halo=dark?"#0f172a":"#ffffff";
+  var r=cv.getBoundingClientRect(),sx=r.width/vb.w,sy=r.height/vb.h;
+  ctx.clearRect(0,0,r.width,r.height);
+  ctx.save();ctx.scale(sx,sy);ctx.translate(-vb.x,-vb.y);
+  var lit=null;if(hover)lit=hover.id;if(sel)lit=sel.id;
+  var nbr={};if(lit)E.forEach(function(e){if(e[0]===lit)nbr[e[1]]=1;if(e[1]===lit)nbr[e[0]]=1});
+  L.centers.forEach(function(c,i){ctx.beginPath();ctx.arc(c[0],c[1],(L.spread[i]||50)+26,0,7);
+    ctx.strokeStyle=colors[i];ctx.globalAlpha=dark?.16:.12;ctx.setLineDash([4,6]);ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1});
+  E.forEach(function(e){var a=L.pos[e[0]],b=L.pos[e[1]];var on=lit&&(e[0]===lit||e[1]===lit);
+    if(!(on||(allE)||(e[2]>=3)))return;
+    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);
+    ctx.strokeStyle=on?(dark?"#60a5fa":"#0071e3"):(dark?"rgba(96,165,250,.18)":"rgba(0,113,227,.14)");
+    ctx.lineWidth=on?1.8:Math.min(.6+e[2]*.3,1.5);ctx.stroke()});
+  var fs=Math.max(9,vb.w/90);
+  ctx.textAlign="center";
+  N.forEach(function(n){var p=L.pos[n.id],rad=6+Math.min(n.deg,12);
+    var isLit=lit&&(n.id===lit||nbr[n.id]);
+    ctx.beginPath();ctx.arc(p[0],p[1],rad,0,7);
+    ctx.fillStyle=isLit?colors[n.cl]:(dark?"#0f172a":"#ffffff");
+    ctx.globalAlpha=lit&&!isLit?.3:1;ctx.fill();
+    ctx.strokeStyle=colors[n.cl];ctx.lineWidth=isLit?(n.id===lit?3.2:2.2):1.5;
+    if(sel&&n.id===sel.id)ctx.lineWidth=3.4;
+    ctx.stroke();
+    ctx.font="600 "+fs+"px -apple-system,'PingFang SC',sans-serif";
+    ctx.globalAlpha=lit&&!isLit?.35:.92;
+    ctx.lineWidth=3;ctx.strokeStyle=halo;ctx.strokeText(n.name,p[0],p[1]+rad+fs+1);
+    ctx.fillStyle=labC;ctx.fillText(n.name,p[0],p[1]+rad+fs+1);
+    ctx.globalAlpha=1});
+  parts=parts.filter(function(pt){pt.t+=pt.v;if(pt.t>=1)return false;
+    var a=L.pos[pt.a.id],b=L.pos[pt.b.id];if(!a||!b)return false;
+    var x=a[0]+(b[0]-a[0])*pt.t,y=a[1]+(b[1]-a[1])*pt.t;
+    ctx.beginPath();ctx.arc(x,y,2.6,0,7);ctx.fillStyle=pt.c;ctx.globalAlpha=.9;ctx.fill();ctx.globalAlpha=1;return true});
+  ctx.restore();requestAnimationFrame(draw)}
+resize();draw();
+})();
+</script>
+		<div class="link-card">
+			<p>All 78 owned projects, grouped by six domains and filterable</p>
+			<div class="cta-row">
+				<a class="default-btn" href="/en/system.html">System overview</a>
+				<a class="default-btn" href="/en/system-projects.html">Project inventory</a>
+			</div>
+		</div>
+<div class="link-card">
+			<p>Keep exploring</p>
+			<div class="cta-row">
+				<a class="default-btn" href="/en/tech.html">Tech projects</a>
+				<a class="default-btn" href="/en/invest.html">Investment framework</a>
+				<a class="default-btn" href="/en/blog/">Blog</a>
+			</div>
+		</div>
+	</div>
+		<div id="shared-site-footer"></div>
+	<script src="../assets/js/shared-site-footer.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.js"></script>
+	<script src="../assets/js/main.js"></script>
+    <!-- Cloudflare Web Analytics: injected by the Pages project -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:&apos;smooth&apos;})">&#x2191;</button>
+<script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
+<script>(function(){
+	var bar=document.getElementById("sysFilterBar");
+	if(!bar)return;
+	var q=document.getElementById("sysQuery"),d=document.getElementById("sysDomain"),
+		s=document.getElementById("sysSource"),r=document.getElementById("sysReset"),
+		out=document.getElementById("sysCount");
+	if(!q||!d||!s||!out)return;
+	var cards=[].slice.call(document.querySelectorAll(".sys-card"));
+	var groups=[].slice.call(document.querySelectorAll(".sys-group"));
+	var total=cards.length,tpl="Showing {n} of {t} projects";
+	function apply(){
+		var query=(q.value||"").trim().toLowerCase(),dv=d.value,sv=s.value,shown=0;
+		for(var i=0;i<cards.length;i++){
+			var c=cards[i];
+			var ok=true;
+			if(query){
+				var hay=(c.textContent||"").toLowerCase()+" "+(c.getAttribute("data-name")||"");
+				ok=hay.indexOf(query)!==-1;
+			}
+			if(ok&&dv){
+				var dl=(c.getAttribute("data-domains")||"").split("|");
+				ok=dl.indexOf(dv)!==-1;
+			}
+			if(ok&&sv){ok=c.getAttribute("data-source")===sv;}
+			c.hidden=!ok;
+			if(ok){shown++;c.classList.add("fx-on");}
+		}
+		for(var g=0;g<groups.length;g++){
+			groups[g].hidden=!groups[g].querySelector(".sys-card:not([hidden])");
+		}
+		out.textContent=tpl.replace("{n}",String(shown)).replace("{t}",String(total));
+	}
+	q.addEventListener("input",apply);
+	d.addEventListener("change",apply);
+	s.addEventListener("change",apply);
+	if(r)r.addEventListener("click",function(){q.value="";d.value="";s.value="";apply();});
+	})();</script>
+<script>(function(){
+var tabs=Array.from(document.querySelectorAll('.pd5-tab'));
+function selectPane(tab){tabs.forEach(function(t){var active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;t.classList.toggle('fx-act',active);document.getElementById('pd5-'+t.dataset.pane).hidden=!active;});}
+tabs.forEach(function(tab,index){tab.id='pd5-tab-'+tab.dataset.pane;tab.setAttribute('aria-controls','pd5-'+tab.dataset.pane);var pane=document.getElementById('pd5-'+tab.dataset.pane);pane.setAttribute('aria-labelledby',tab.id);pane.tabIndex=0;tab.addEventListener('click',function(){selectPane(tab);});tab.addEventListener('keydown',function(e){var next=index;if(e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectPane(tabs[next]);tabs[next].focus();});});
+if(tabs.length)selectPane(tabs[0]);
+var RM=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var prog=document.getElementById("fxProgress"),ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(function(){
+var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+if(prog)prog.style.transform="scaleX("+(max>0?Math.min(1,(h.scrollTop||0)/max):0)+")";
+ticking=false;});}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+var lists=[[".svc",45],[".md-pill",55],[".gcard",60],[".think-card",80],[".si-step",80],
+[".sys-point",80],[".rsch-node",50],[".tri-node",90],[".ribbon",90],[".sys-card",35]];
+var i,j,els;
+for(i=0;i<lists.length;i++){els=document.querySelectorAll(lists[i][0]);
+for(j=0;j<els.length;j++){els[j].classList.add("fx-rv");
+els[j].style.transitionDelay=((j%8)*lists[i][1])+"ms";}}
+var all=[].slice.call(document.querySelectorAll(".fx-rv"));
+function revealAll(){for(i=0;i<all.length;i++)all[i].classList.add("fx-on");}
+if(RM||!("IntersectionObserver" in window)){revealAll();}
+else{var io=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){en[k].target.classList.add("fx-on");io.unobserve(en[k].target);}}},
+{rootMargin:"0px 0px -8% 0px",threshold:0.08});
+for(i=0;i<all.length;i++)io.observe(all[i]);}
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+function runCount(el){var target=parseInt(el.getAttribute("data-n"),10)||0;
+if(RM||target<10){el.textContent=fmt(target);return;}
+var t0=null,dur=1300;
+function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-p,3);
+el.textContent=fmt(Math.round(target*e));if(p<1)requestAnimationFrame(step);}
+requestAnimationFrame(step);}
+var nums=document.querySelectorAll(".fx-count[data-n]");
+if(nums.length){
+if(RM||!("IntersectionObserver" in window)){for(i=0;i<nums.length;i++)runCount(nums[i]);}
+else{var io2=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+if(en[k].isIntersecting){runCount(en[k].target);io2.unobserve(en[k].target);}}},{threshold:0.4});
+for(i=0;i<nums.length;i++)io2.observe(nums[i]);}}
+var railLinks=document.querySelectorAll(".fx-rail a[data-rail]");
+if(railLinks.length&&"IntersectionObserver" in window){
+var map={};for(i=0;i<railLinks.length;i++)map[railLinks[i].getAttribute("data-rail")]=railLinks[i];
+var io3=new IntersectionObserver(function(en){for(var k=0;k<en.length;k++){
+var l=map[en[k].target.id];if(!l)continue;
+if(en[k].isIntersecting){for(var m in map)map[m].classList.remove("fx-act");l.classList.add("fx-act");}}},
+{rootMargin:"-40% 0px -55% 0px"});
+for(var id in map){var sec=document.getElementById(id);if(sec)io3.observe(sec);}}
+})();</script>
+</body>
+</html>
