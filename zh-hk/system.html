@@ -719,515 +719,97 @@
 				<p class="sys-hero-note">快照 2026-09-17，取自本人開發環境（FengOS 觀景台）的項目目錄報告：本機路徑掃描 + GitHub 名下倉庫，逐條可核，非估算。</p>
 			</div>
 		</div>
-		<div id="systems" class="content-block">
-			<div class="block-inner block-inner-wide">
-				<div class="section-card fx-rv">
-					<h2><span class="fx-ghost" aria-hidden="true">01</span>服務</h2>
-					<p class="block-subtitle">六項本地服務 · 端口與用途一覽（靜態快照：本頁只列，不起停）</p>
-					<div class="panel svcs">
-						<div class="svc">
-							<div class="sname"><span class="name">FengInvest</span></div>
-							<p class="sdesc">量化研究與回測平台</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:23456</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengMedia</span></div>
-							<p class="sdesc">內容與媒體生產管線</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:23457</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">AIExport</span></div>
-							<p class="sdesc">AI 對話導出與歸檔工具</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:8787</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">CAO</span></div>
-							<p class="sdesc">AI 幹事艦隊控制面（WSL）</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:9889</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">webcli</span></div>
-							<p class="sdesc">艦隊用的瀏覽器終端</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:8788</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FlyGo</span></div>
-							<p class="sdesc">通用任務自動執行</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="ts">:8388</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="automation" class="content-block">
-			<div class="block-inner block-inner-wide">
-				<div class="section-card fx-rv">
-					<h2><span class="fx-ghost" aria-hidden="true">02</span>自動化</h2>
-					<p class="block-subtitle">五層閉環的逐層説明（靜態快照：實時計數只在本機觀景台）</p>
-					<p class="pdca">研究 → 思考 → 創作 → 行動 → 自我改進：每輪留記錄、做覆盤，結果回寫 MD 憲法，驅動下一輪</p>
-					<div class="panel pdca-box">
-						<div class="pdca-ring-title">研究 · 思考 · 創作 · 行動 · 自我改進</div>
-						<div class="pdca-sub">自我改進閉環（PDCA + MD 憲法）：每一輪餵給下一輪</div>
-						<div class="pdca-wrap">
-							<div class="pdca-ring">
-								<svg viewBox="0 0 320 320" role="img" aria-label="五段自我改進閉環：研究到思考到創作到行動到自我改進，再回到研究" xmlns="http://www.w3.org/2000/svg">
-						<g class="ring-flow" fill="none" stroke-width="14" stroke-linecap="round">
-							<path d="M 169.2 55.4 A 105 105 0 0 1 256.7 119.0" stroke="#bfd9fb"/>
-							<path d="M 262.3 136.4 A 105 105 0 0 1 228.9 239.2" stroke="#8fbef8"/>
-							<path d="M 214.1 250.0 A 105 105 0 0 1 105.9 250.0" stroke="#5ea6f4"/>
-							<path d="M 91.1 239.2 A 105 105 0 0 1 57.7 136.4" stroke="#338ff0"/>
-							<path d="M 63.3 119.0 A 105 105 0 0 1 150.8 55.4" stroke="#0071e3"/>
-						</g>
-						<g class="ring-flow" stroke="none">
-							<polygon points="256.7,119.0 249.6,110.4 259.3,108.1" fill="#8fbef8"/>
-							<polygon points="228.9,239.2 233.2,228.9 239.7,236.4" fill="#5ea6f4"/>
-							<polygon points="105.9,250.0 117.0,250.9 111.9,259.4" fill="#338ff0"/>
-							<polygon points="57.7,136.4 60.3,147.3 50.6,145.0" fill="#0071e3"/>
-							<polygon points="150.8,55.4 141.3,61.3 140.4,51.3" fill="#0071e3"/>
-						</g>
-						<circle cx="160" cy="160" r="64" fill="#ffffff" stroke="rgba(0,0,0,.07)"/>
-						<g fill="#1d1d1f">
-							<text class="ring-label" x="207.6" y="94.5" text-anchor="middle" font-size="13">研究</text>
-							<text class="ring-label" x="237" y="185" text-anchor="middle" font-size="13">思考</text>
-							<text class="ring-label" x="160" y="245" text-anchor="middle" font-size="13">創作</text>
-							<text class="ring-label" x="83" y="185" text-anchor="middle" font-size="13">行動</text>
-							<text class="ring-label" x="112.4" y="94.5" text-anchor="middle" font-size="11.5">自我改進</text>
-						</g>
-						<g fill="#1d1d1f">
-							<text class="ring-center" x="160" y="157" text-anchor="middle" font-size="9.5">每次執行留記錄、做覆盤</text>
-							<text class="ring-center" x="160" y="173" text-anchor="middle" font-size="9.5" fill="#6e6e73">供下一次複用</text>
-						</g>
-					</svg>
-							</div>
-							<div class="md-const">
-								<div class="md-cap">MD 憲法在自我改進處迭代</div>
-								<div class="md-pills"><span class="md-pill">AGENTS 規則</span><span class="md-pill">MISSION 目標</span><span class="md-pill">todo 賬本</span><span class="md-pill">FENGMEM 記錄</span><span class="md-pill">Skill 包</span></div>
-								<div class="md-note">規則約束對話，結果回到賬本</div>
-							</div>
-						</div>
-					</div>
-					<div class="layer">研究</div>
-					<div class="panel svcs">
-						<div class="rsch-wrap">
-													<div class="rsch-sub">一條主路：行情 API → 自建腳本 → 本地 SQL 建庫；一條副路：自建通用系統先獲取授權再接 API；Search King 旗艦通搜全網；AIExport 聚合各家 AI 輸出，沉澱自有模型</div>
-													<div class="rsch-diagram still" role="img" aria-label="研究信息全景：源頭到對接再到沉澱">
-														<div class="rsch-stage"><div class="rsch-stitle">入口</div><div class="rsch-nodes">
-															<div class="rsch-node"><b>行情 API</b><span>對接行情數據接口</span></div>
-															<div class="rsch-node"><b>第二路：授權 → API</b><span>自建通用系統先授權再接 API · 本地只讀，憑據絕不展示</span></div>
-															<div class="rsch-node"><b>Search King 旗艦</b><span>通用：搜任何網站、到任何地方</span></div>
-														</div></div>
-														<div class="rsch-link" aria-hidden="true"><svg viewBox="0 0 54 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rschA1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0071e3"></path></marker></defs><line x1="2" y1="12" x2="46" y2="12" class="rsch-line" marker-end="url(#rschA1)"></line></svg></div>
-														<div class="rsch-stage"><div class="rsch-stitle">對接</div><div class="rsch-nodes">
-															<div class="rsch-node"><b>FengInvest 腳本</b><span>對接行情 API 的量化腳本</span></div>
-															<div class="rsch-node"><b>通用檢索入庫</b><span>多後端反爬，結果供建庫</span></div>
-															<div class="rsch-node"><b>AIExport 聚合</b><span>聚合各家 AI 輸出</span></div>
-														</div></div>
-														<div class="rsch-link" aria-hidden="true"><svg viewBox="0 0 54 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rschA2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0071e3"></path></marker></defs><line x1="2" y1="12" x2="46" y2="12" class="rsch-line" marker-end="url(#rschA2)"></line></svg></div>
-														<div class="rsch-stage"><div class="rsch-stitle">沉澱</div><div class="rsch-nodes">
-															<div class="rsch-node"><b>自建 SQL 建庫</b><span>行情等數據落庫，文件留在原處</span></div>
-															<div class="rsch-node"><b>自有模型</b><span>沉澱知識訓練本方模型，AIExport 現聚為未來鋪路</span></div>
-														</div></div>
-													</div>
-												</div>
-						<div class="svc">
-							<div class="sname"><span class="name">語料沉澱</span></div>
-							<p class="sdesc">把外部世界的長文本搬進本地：章節全文留存，隨時離線可讀</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">研究台賬</span></div>
-							<p class="sdesc">研究的每一步都留記錄、蒸餾成可複用資產，餵給下一輪</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengInvest</span></div>
-							<p class="sdesc">量化研究平台：行情腳本對接 API，落成本地 SQL 建庫</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">Search-King</span></div>
-							<p class="sdesc">通用檢索旗艦：多後端反爬，結果供本地建庫</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">AIExport</span></div>
-							<p class="sdesc">聚合各家 AI 輸出，沉澱自有模型語料</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-					</div>
-					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
-					<div class="layer">思考</div>
-					<div class="panel svcs">
-						<div class="think-box">
-														<div class="think-line">思考層的日常：AI 開工先讀 MD 文檔，行動產生的結果再回寫賬本與日誌</div>
-														<div class="think-flow" role="img" aria-label="讀 MD 文檔到獲得身份規則任務到執行到回寫賬本與日誌"><span class="pnode">讀 MD 文檔</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">獲得身份、規則與任務</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">執行</span><span class="parr" aria-hidden="true">&#8594;</span><span class="pnode">回寫賬本與日誌</span></div>
-														<div class="think-cards still">
-															<div class="think-card"><div class="tk-name">GUI 自動駕駛</div><div class="tk-desc">規劃中的 GUI 自動駕駛層：每一步都遵守開工時讀入的 AGENTS 規則</div></div>
-															<div class="think-card"><div class="tk-name">攻略與治理文檔</div><div class="tk-desc">歷輪沉澱的攻略與複用腳本，加治理艦隊的 MD 文檔</div></div>
-														</div>
-													</div>
-					</div>
-					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
-					<div class="layer">創作</div>
-					<div class="panel svcs">
-						<div class="create-def">
-														<span class="cr-def-main"><span class="cr-def-kicker">創作</span>創作 = 做出一個東西，尚未分發給別人</span>
-														<span class="cr-def-en">Create = you make a thing, not yet distributed</span>
-													</div>
-						<div class="gen-grid">
-														<div class="gcard cr-lead"><div class="gn">FengMedia</div><div class="gd">創作主體：從選題到成片的完整管線，本機只讀展示</div></div>
-														<div class="gcard"><div class="gn">文本生成</div><div class="gd">文本與文案生成：作品先留本機，尚未分發</div></div>
-														<div class="gcard"><div class="gn">圖像生成</div><div class="gd">圖像與封面生成：作品先留本機，尚未分發</div></div>
-														<div class="gcard"><div class="gn">音樂生成</div><div class="gd">FengMusician 工具集：FengMedia/tools/fengmusician，本機只讀</div></div>
-														<div class="gcard"><div class="gn">語音 TTS · TTS-UI</div><div class="gd">TTS-UI 桌面程序打包在本機：只讀展示</div></div>
-														<div class="gcard"><div class="gn">數字人</div><div class="gd">真人路線已驗證、動漫 VRM 驗證中：本機只讀</div></div>
-														<div class="gcard"><div class="gn">視頻生成</div><div class="gd">成片走 HyperFrames 工具鏈渲染：草稿可由開源 MoneyPrinterTurbo 起步</div></div>
-													</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengInvest</span></div>
-							<p class="sdesc">Invest 也是創作：行情研究、資產分析報告都是做出來的東西，分發前留在本機</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-					</div>
-					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
-					<div class="layer">行動</div>
-					<div class="panel svcs">
-						<div class="act-def"><div class="act-def-line">行動 = 分發給他人、對外產生影響</div></div>
-						<div class="svc">
-							<div class="sname"><span class="name">JobHunter（Private-feng-job-hunter）</span></div>
-							<p class="sdesc">通用批量表單執行 / 自動化填報；按授權範圍對外逐條提交</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengMail / FENGmailMac（Mac 機）</span></div>
-							<p class="sdesc">郵件外發：授權後走 API，把郵件送達收件人、對外產生影響；FENGmailMac 本機確認存在</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">分發渠道</span></div>
-							<p class="sdesc">git 雙推 GitHub + gitee；發佈/分發動作此處只讀説明</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">授權 → 調外部 API</span></div>
-							<p class="sdesc">FengMail / FENGmailMac 郵件、行情接口，先授權後調用 · 憑據絕不展示 · 只讀</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">自主執行三件套</span></div>
-							<p class="sdesc">對外執行的通用手段：GUI agent + CLI agent + MD 文檔，按 MD 文檔執行 · 規劃中</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-					</div>
-					<div class="flow" aria-hidden="true"><span class="farr">&#8595;</span></div>
-					<div class="layer">自我改進</div>
-					<div class="panel svcs">
-						<div class="si-loop">
-														<div class="si-quote">文檔即控制平面——每一圈迭代改寫憲法，憲法約束下一圈</div>
-														<div class="si-steps">
-															<div class="si-step"><b>每輪執行留記錄</b><span>FENGMEM 追加 · todo 銷賬 · 覆盤回寫</span></div>
-															<span class="si-arr" aria-hidden="true">&#8594;</span>
-															<div class="si-step"><b>規則在 AGENTS.md 裏改寫</b><span>即對下一輪生效</span></div>
-															<span class="si-arr" aria-hidden="true">&#8594;</span>
-															<div class="si-step"><b>每一圈兜回研究</b><span>AI 是更嚴格的讀者——真的逐字執行</span></div>
-														</div>
-													</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengOrchestrator</span></div>
-							<p class="sdesc">AI 指揮 AI 的艦隊中樞：願景/分工/覆盤全在 MD 裏迭代，改一條規則，下一輪即照新規則執行</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengASNI</span></div>
-							<p class="sdesc">多機 Profile 中樞：每機一檔、Skill/軟件清單共享，人與 AI 讀同一套 MD</p>
-							<div class="lead" aria-hidden="true"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="pd5" class="content-block">
-			<div class="block-inner block-inner-wide">
-				<div class="section-card fx-rv">
-					<h2><span class="fx-ghost" aria-hidden="true">03</span>人機合作自動化範式</h2>
-					<p class="block-subtitle">五層 × 雙軌 × 雙循環 × 三橫樑：這套範式的框架全景與軟件工程架構，兩張圖可切換。</p>
-					<div class="pd5">
-						<div class="pd5-tabs" role="tablist">
-							<button class="pd5-tab fx-act" data-pane="framework" role="tab" aria-selected="true"><b>框架全景圖</b><span>五層 × 雙軌 × 雙循環 × 三橫樑</span></button>
-							<button class="pd5-tab" data-pane="arch" role="tab" aria-selected="false"><b>軟件工程架構圖</b><span>4 核心構件 + 2 人接口 + 事件總線</span></button>
-						</div>
-						<div class="pd5-pane" id="pd5-framework" role="tabpanel">
-							<div class="pd5-legend"><span class="pd5-lg"><i class="dot dm"></i>機（左軌）</span><span class="pd5-lg"><i class="dot dh"></i>人（右軌）</span><span class="pd5-lg-sep"></span><span class="pd5-lg"><i class="dot dr"></i>風控熔斷</span><span class="pd5-lg"><i class="dot da"></i>資產沉澱</span><span class="pd5-lg"><i class="dot dc"></i>算力精算</span><span class="pd5-lg-note">貫穿全層</span><span class="pd5-lg-sep"></span><span class="pd5-loop-pill">戰略大環 · L0 ↔ L4 · 動態調整長期戰略</span><span class="pd5-loop-pill alt">戰術小環 · L1 ↔ L2 · 實時優化當批質量</span></div>
-							<div class="pd5-flowcap">↓ 戰略→產品→語義→生成→交付</div>
-							<div class="pd5-fw">
-								<div class="pd5-layer">
-									<div class="pd5-badge"><span class="pd5-lid">L4</span><b>戰略層</b><i>定方向·控成本·守紅線</i><em>STP + 市場研究</em></div>
-									<div class="pd5-track pd5-machine"><h5>機（左軌）</h5><ul><li>Meta分析 (CDA/Framenet)</li><li>全網輿情掃描</li><li>算力價值評估（高潛→頂級模型）</li></ul></div>
-									<div class="pd5-track pd5-human"><h5>人（右軌）</h5><ul><li>確立 Brand Soul</li><li>劃定合規紅線</li><li>審批月度算力預算</li></ul></div>
-									<div class="pd5-beams"><span class="pd5-beam br">🛡 風控 自動攔截涉政/極端話題</span><span class="pd5-beam ba">📦 資產 原始輿情數據打標入庫</span><span class="pd5-beam bc">💰 成本 分配賽道算力配額，砍 ROI&lt;1 選題</span><span class="pd5-outs">產出: <i>戰略錨定書</i> <i>算力預算表</i></span></div>
-								</div>
-								<div class="pd5-arr" aria-hidden="true">↓</div>
-								<div class="pd5-layer">
-									<div class="pd5-badge"><span class="pd5-lid">L3</span><b>產品層</b><i>定品類·建資產·算ROI</i><em>4P - Product</em></div>
-									<div class="pd5-track pd5-machine"><h5>機（左軌）</h5><ul><li>競品拆解（TOP10 爬取）</li><li>關聯規則挖掘高轉化賣點</li><li>生成產品原型</li></ul></div>
-									<div class="pd5-track pd5-human"><h5>人（右軌）</h5><ul><li>決策 SKU 形態</li><li>拍板核心賣點</li><li>審核語料入庫標準</li></ul></div>
-									<div class="pd5-beams"><span class="pd5-beam br">🛡 風控 排查產品合規風險</span><span class="pd5-beam ba">📦 資產 清洗數據→私有語料庫/品牌詞庫</span><span class="pd5-beam bc">💰 成本 核算投入上限，毛利≥60%</span><span class="pd5-outs">產出: <i>PRD</i> <i>私有語料庫索引</i></span></div>
-								</div>
-								<div class="pd5-arr" aria-hidden="true">↓</div>
-								<div class="pd5-layer">
-									<div class="pd5-badge"><span class="pd5-lid">L2</span><b>語義層</b><i>備彈藥·充資產·降檢索成本</i><em>供應鏈管理 (RAG)</em></div>
-									<div class="pd5-track pd5-machine"><h5>機（左軌）</h5><ul><li>按 PRD 執行 RAG 檢索</li><li>語義匹配高契合度槽點/案例</li><li>檢索結果自動打標入庫</li></ul></div>
-									<div class="pd5-track pd5-human"><h5>人（右軌）</h5><ul><li>審核素材合規性</li><li>剔除低質內容</li><li>補充獨家語料</li></ul></div>
-									<div class="pd5-beams"><span class="pd5-beam br">🛡 風控 過濾敏感案例/違規表述</span><span class="pd5-beam ba">📦 資產 新增素材→向量數據庫</span><span class="pd5-beam bc">💰 成本 優先本地向量庫，減少外部 API</span><span class="pd5-outs">產出: <i>上下文素材包</i></span></div>
-								</div>
-								<div class="pd5-arr" aria-hidden="true">↓</div>
-								<div class="pd5-layer">
-									<div class="pd5-badge"><span class="pd5-lid">L1</span><b>生成層</b><i>搞生產·控token·保質量</i><em>4P - Promotion</em></div>
-									<div class="pd5-track pd5-machine"><h5>機（左軌）</h5><ul><li>加載 Skill 模板 + 組裝 Prompt</li><li>LLM 批量生成 + 緩存複用</li><li>自動過濾違規草稿</li></ul></div>
-									<div class="pd5-track pd5-human"><h5>人（右軌）</h5><ul><li>調整 Skill 參數（諷刺度/梗密度）</li><li>抽檢成品質量</li><li>打回不合格內容</li></ul></div>
-									<div class="pd5-beams"><span class="pd5-beam br">🛡 風控 機器預檢敏感詞 + 人工終審</span><span class="pd5-beam ba">📦 資產 優質草稿/金句入庫</span><span class="pd5-beam bc">💰 成本 按價值選模型，緩存複用≥40%</span><span class="pd5-outs">產出: <i>內容初稿</i></span></div>
-								</div>
-								<div class="pd5-arr" aria-hidden="true">↓</div>
-								<div class="pd5-layer">
-									<div class="pd5-badge"><span class="pd5-lid">L0</span><b>交付層</b><i>賣貨·算賬·促迭代</i><em>4P - Price/Place + 績效管理</em></div>
-									<div class="pd5-track pd5-machine"><h5>機（左軌）</h5><ul><li>多平台自動化分發</li><li>數據埋點（ROI/轉化/完播率）</li><li>生成成本收益報表</li></ul></div>
-									<div class="pd5-track pd5-human"><h5>人（右軌）</h5><ul><li>制定定價/渠道策略</li><li>覆盤盈虧</li><li>觸發雙循環調整</li></ul></div>
-									<div class="pd5-beams"><span class="pd5-beam br">🛡 風控 實時監控平台規則→熔斷</span><span class="pd5-beam ba">📦 資產 用户反饋/高贊評論入庫</span><span class="pd5-beam bc">💰 成本 核算淨利潤，調整預算</span><span class="pd5-outs">產出: <i>已交付資產</i> <i>ROI覆盤報告</i> <i>戰略調整指令</i></span></div>
-								</div>
-							</div>
-							<div class="pd5-flowcap up">↑ 反饋→覆盤→錨點修正</div>
-							<div class="pd5-tcores"><div class="pd5-tcores-t">技術內核映射</div>
-								<div class="pd5-tcore"><b>計算語言學</b><span class="tk">CDA / Framenet</span><span class="wh">L4 / L1</span><span class="ro">價值觀識別·調性統一</span></div>
-								<div class="pd5-tcore"><b>機器學習</b><span class="tk">聚類 / 關聯規則 / RL</span><span class="wh">L3 / L0</span><span class="ro">爆款挖掘·ROI優化</span></div>
-								<div class="pd5-tcore"><b>計算機技術</b><span class="tk">向量DB / RAG / LLM / Skill</span><span class="wh">L2 / L1</span><span class="ro">精準檢索·工業生產·成本控制</span></div>
-							</div>
-							<div class="pd5-moats">
-								<div class="pd5-moat"><b>風控標準 / 私有語料 / 算力精算</b><span>別人抄不走</span></div>
-								<div class="pd5-moat"><b>Human in the Loop 權責邊界（L4→L0）</b><span>別人學不會</span></div>
-								<div class="pd5-moat"><b>戰術調質量·戰略鎖賽道</b><span>別人摸不透</span></div>
-							</div>
-						</div>
-						<div class="pd5-pane" id="pd5-arch" role="tabpanel" hidden>
-							<div class="pd5-legend"><span class="pd5-lg"><i class="dot d1"></i>主管線（生產流）</span><span class="pd5-lg"><i class="dot d2"></i>反饋流（雙循環）</span><span class="pd5-lg"><i class="dot d3"></i>治理流（貫穿）</span></div>
-							<div class="pd5-pipe">
-								<div class="pd5-node io"><b>外部輸入</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Task（原始問題/選題）</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node"><b>Router</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Routing Ticket</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node"><b>Asset / RAG</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Context Package（素材包）</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node"><b>Executor</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">Draft + cost + risk_flags</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node"><b>Governance</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">審核通過的 Draft</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node gate"><b>Approval Gate</b></div>
-								<div class="pd5-link" aria-hidden="true"><span class="pd5-link-lab">已批准內容</span><svg viewBox="0 0 100 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-								<div class="pd5-node"><b>Delivery</b></div>
-							</div>
-							<div class="pd5-gov"><b>Governance（治理）</b><span class="gm">紅線表管理 · 敏感詞過濾 · Token/API 配額計數 · 審計日誌</span><span class="gs">AOP / Middleware 貫穿所有構件，不獨佔流程節點 · 三根橫樑（風控 + 資產 + 成本）的軟件外殼</span></div>
-							<div class="pd5-bus"><div class="pd5-bus-head"><b>Event Bus（事件總線）</b><span>解耦層間通信，承載雙循環的事件驅動機制 · Bull/BullMQ 或 Redis Streams 或 RabbitMQ</span></div><div class="pd5-bus-evs"><code>task.done</code><code>task.posted</code><code>user.reacted</code><code>anchor.patch</code></div><div class="pd5-bus-back"><span class="pd5-back"><u>→ Asset / RAG</u>用户反饋/高贊評論→入庫</span><span class="pd5-back"><u>→ Router</u>錨點補丁（人會審→合併）</span><span class="pd5-back"><u>→ Knobs</u>ROI 信號→人工調參</span></div></div>
-							<div class="pd5-iface">
-								<div class="pd5-hif"><b>Approval Gate（審批門）</b><span class="hm">某些類型必須人點頭才發佈（L0 終審 / L3 定品）</span><span class="hs">異步審批隊列 — 人通過 Dashboard/通知 審批或打回</span><em>人右軌的「審批門」</em></div>
-								<div class="pd5-hif"><b>Knobs（調參口）</b><span class="hm">人可以改 Skill 參數、錨點權重、紅線表（不是改代碼）</span><span class="hs">Web Dashboard 或 CLI 命令</span><em>人右軌的「調參口」</em></div>
-							</div>
-							<div class="pd5-comps-t">構件詳情</div>
-							<div class="pd5-comps">
-								<div class="pd5-comp"><b>Router</b><span class="cr">讀 Task.type / 關鍵詞 → 綁定 product_line + skill_id + budget_tier → 輸出路由票據</span><span class="co">輸出: Routing Ticket（不可抵賴的處理方案）</span><em>L4 機側外殼 + 調度中心</em></div>
-								<div class="pd5-comp"><b>Asset / RAG</b><span class="cr">向量索引/檢索、版本化、准入門（L3候選→人審→入庫）</span><span class="co">輸出: Context Package（上下文素材包，可緩存）</span><em>L3/L2 資產服務外殼</em></div>
-								<div class="pd5-comp"><b>Executor</b><span class="cr">受控調 AI — 緩存(key=hash(票據+上下文)) / 限流 / 模型選擇 / retry / 後校驗</span><span class="co">輸出: Draft + cost + risk_flags</span><em>L1 生成層外殼</em></div>
-								<div class="pd5-comp"><b>Delivery</b><span class="cr">多平台分發、數據埋點（ROI/轉化/完播）、成本收益報表</span><span class="co">輸出: 事件流（task.done / user.reacted）→ Event Bus</span><em>L0 交付層外殼</em></div>
-							</div>
-							<div class="pd5-comps-t">最短實施路徑 (MVP)</div>
-							<div class="pd5-mvp">
-								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#818cf822;border-color:#818cf8;color:#818cf8">1</span><b>Router</b><span class="md">問題→路由票據</span></div>
-								<span class="pd5-marr" aria-hidden="true">→</span>
-								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#3b82f622;border-color:#3b82f6;color:#3b82f6">2</span><b>Asset / RAG</b><span class="md">按票據給素材包</span></div>
-								<span class="pd5-marr" aria-hidden="true">→</span>
-								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#06b6d422;border-color:#06b6d4;color:#06b6d4">3</span><b>Executor</b><span class="md">受控調 AI 出 Draft</span></div>
-								<span class="pd5-marr" aria-hidden="true">→</span>
-								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#ef444422;border-color:#ef4444;color:#ef4444">4</span><b>Governance</b><span class="md">紅線+成本+審計</span></div>
-								<span class="pd5-marr" aria-hidden="true">→</span>
-								<div class="pd5-mstep"><span class="pd5-mdot" style="background:#f59e0b22;border-color:#f59e0b;color:#f59e0b">+</span><b>Gate + Knob</b><span class="md">人接口：審批+調參</span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="paper" class="content-block">
-			<div class="block-inner block-inner-wide">
-				<div class="section-card fx-rv">
-					<h2><span class="fx-ghost" aria-hidden="true">04</span>一篇論文，一張圖</h2>
-					<p class="block-subtitle">兩層界面原則：對話層負責做、觀景層負責看、文檔層負責管</p>
-					<div class="panel triad">
-						<div class="tri-canvas">
-							<div class="tri-l1">
-								<div class="tri-lhead">
-									<span class="tri-tag1">L1 · 對話層</span>
-									<span class="tri-ln">對話層</span>
-									<span class="tri-ld">負責做——每個動作都在對話裏跑</span>
-								</div>
-								<div class="tri-row">
-									<div class="tri-node"><div class="tri-name">人 Human</div><div class="tri-note">操作走 ZCode / Skill</div></div>
-									<div class="tri-link"><div class="tri-lab">自然語言（Skill）</div><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-									<div class="tri-node tri-ai"><div class="tri-name">AI</div><div class="tri-note">讀文檔 · 調工具 · 寫回賬本</div></div>
-									<div class="tri-link"><div class="tri-lab">工具調用</div><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="0" y1="7" x2="88" y2="7"/><polygon class="tri-head" points="88,2.5 100,7 88,11.5"/></svg></div>
-									<div class="tri-node"><div class="tri-name">系統 System</div><div class="tri-note">真實系統：本頁列出的服務</div></div>
-								</div>
-							</div>
-							<div class="tri-iface">
-								<span class="if-item"><svg viewBox="0 0 14 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="7" y1="0" x2="7" y2="16"/><polygon class="tri-head" points="2.5,16 7,24 11.5,16"/></svg><span class="if-lab">自然語言 / Skill——人驅動 AI</span></span>
-								<span class="if-item"><svg viewBox="0 0 14 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line up" x1="7" y1="24" x2="7" y2="8"/><polygon class="tri-head up" points="2.5,8 7,0 11.5,8"/></svg><span class="if-lab">結果只讀呈現——人只管看</span></span>
-							</div>
-							<div class="tri-l2">
-								<div class="tri-lhead">
-									<span class="tri-tag1">L2 · 觀景層</span>
-									<span class="tri-ln">觀景層</span>
-									<span class="tri-ld">負責看——只讀，用於檢查和展示</span>
-								</div>
-								<div class="tri-note2">本頁即觀景層（FengOS）</div>
-							</div>
-							<aside class="tri-plane">
-								<div class="tri-plane-t">文檔治理面</div>
-								<div class="tri-plane-s">AI 開工先讀，完工寫回</div>
-								<div class="tri-junc">
-									<div class="tri-junc-tag">L1 交界處</div>
-									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="6" y1="0" x2="6" y2="14"/><polygon class="tri-head" points="1.5,14 6,22 10.5,14"/></svg><span class="jlab">讀：開工自帶身份、規則、任務</span></div>
-									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line up" x1="6" y1="22" x2="6" y2="8"/><polygon class="tri-head up" points="1.5,8 6,0 10.5,8"/></svg><span class="jlab">寫：結果落回賬本與日誌</span></div>
-									<div class="tri-jrow"><svg viewBox="0 0 12 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line class="tri-line" x1="6" y1="4" x2="6" y2="18"/><polygon class="tri-head" points="1.5,4 6,0 10.5,4"/><polygon class="tri-head" points="1.5,18 6,22 10.5,18"/></svg><span class="jlab">規則改寫：AGENTS 即生效</span></div>
-								</div>
-								<div class="tri-md"><span class="md-pill">AGENTS 規則</span><span class="md-pill">MISSION 目標</span><span class="md-pill">todo 賬本</span><span class="md-pill">FENGMEM 記錄</span><span class="md-pill">Skill 包</span></div>
-								<div class="tri-junc">
-									<div class="tri-junc-tag">L2 交界處</div>
-									<div class="tri-jrow"><span class="jlab">L2 只讀：每個數字都是賬本數據的反映</span></div>
-								</div>
-							</aside>
-						</div>
-						<div class="tri-foot">
-							<span class="ribbon">C1 · 資料恆本地</span>
-							<span class="ribbon">C2 · 產出進可備份管道</span>
-						</div>
-						<div class="tri-tagline">文檔即控制平面——AI 是更嚴格的讀者，它真的逐字執行</div>
-						<div class="tri-cases">
-							<span>落地系統</span>
-							<span class="cn">FengInvest</span><span class="sep" aria-hidden="true">·</span>
-							<span class="cn">FengMedia</span><span class="sep" aria-hidden="true">·</span>
-							<span class="cn">FlyGo</span><span class="sep" aria-hidden="true">·</span>
-							<span class="cn">FengMail</span><span class="sep" aria-hidden="true">·</span>
-							<span>純工具</span>
-							<span class="cn">TTS-UI</span>
-						</div>
-					</div>
-					<div class="panel svcs audit">
-						<div class="svc">
-							<div class="sname"><span class="name">FengInvest</span></div>
-							<p class="sdesc">標杆：數據本地、操作走對話、UI 只讀、產出可備份</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="tag ok">&#9989;</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengMedia</span></div>
-							<p class="sdesc">內容生產：寫操作收進對話，UI 退為只讀</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="tag">&#9888;&#65039;</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FlyGo</span></div>
-							<p class="sdesc">對外產品：面板是交付物，面板內嵌客户對話層</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="tag">&#10134;</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">FengOS</span></div>
-							<p class="sdesc">生態觀景台：聚合只讀視圖，不搬數據</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="tag ok">&#9989;</span></div>
-						</div>
-						<div class="svc">
-							<div class="sname"><span class="name">TTS-UI</span></div>
-							<p class="sdesc">桌面小工具：無 AI 層需求，不動</p>
-							<div class="lead" aria-hidden="true"></div>
-							<div class="stop-h"><span class="tag">&#10134;</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="thinking" class="content-block">
+		<div id="domains" class="content-block">
 			<div class="block-inner">
 				<div class="section-card fx-rv">
-					<h2><span class="fx-ghost" aria-hidden="true">05</span>三層界面，一個診斷</h2>
-					<p class="block-subtitle">兩層界面原則（Two-Layer Interface Principle, 2LIP）：一個面向 AI 時代的軟件系統，交互面只保留兩層；文檔構成面向 AI 的第三個界面，縱向貫穿這兩層。</p>
-					<div class="sys-diagram-wrap">
-						<svg class="sys-diagram" viewBox="0 0 660 540" role="img" aria-label="兩層界面原則結構圖：對話層與觀景層兩個交互層上下排列，文檔治理面作為縱向一列貫穿兩層" xmlns="http://www.w3.org/2000/svg">
-					<rect class="dg-band" x="508" y="20" width="136" height="500" rx="18" />
-					<text class="dg-band-title" x="576" y="54" text-anchor="middle">文檔治理面</text>
-					<text class="dg-band-sub" x="576" y="88" text-anchor="middle">面向 AI 的第</text>
-					<text class="dg-band-sub" x="576" y="107" text-anchor="middle">三個界面</text>
-					<line class="dg-rule" x1="524" y1="134" x2="628" y2="134" />
-					<text class="dg-band-item" x="576" y="154" text-anchor="middle">AGENTS.md</text>
-					<text class="dg-band-note" x="576" y="179" text-anchor="middle">規則單一真理源</text>
-					<text class="dg-band-item" x="576" y="216" text-anchor="middle">MISSION.md</text>
-					<text class="dg-band-note" x="576" y="242" text-anchor="middle">北極星目標與</text>
-					<text class="dg-band-note" x="576" y="258" text-anchor="middle">DoD</text>
-					<text class="dg-band-item" x="576" y="296" text-anchor="middle">todo.md</text>
-					<text class="dg-band-note" x="576" y="321" text-anchor="middle">任務賬本</text>
-					<text class="dg-band-item" x="576" y="358" text-anchor="middle">FENGMEM.md</text>
-					<text class="dg-band-note" x="576" y="384" text-anchor="middle">會話日誌</text>
-					<text class="dg-band-item" x="576" y="421" text-anchor="middle">Skill</text>
-					<text class="dg-band-item" x="576" y="442" text-anchor="middle">(SKILL.md)</text>
-					<text class="dg-band-note" x="576" y="467" text-anchor="middle">可複用操作封裝</text>
-					<rect class="dg-box" x="16" y="20" width="468" height="228" rx="18" />
-					<text class="dg-layer-title" x="44" y="76">對話層 L1</text>
-					<text class="dg-layer-sub" x="44" y="105">人與 AI 的自然語言交流 ·</text>
-					<text class="dg-layer-sub" x="44" y="127">Skill 即其腳本化形態</text>
-					<line class="dg-rule" x1="44" y1="154" x2="456" y2="154" />
-					<text class="dg-layer-item" x="44" y="195">承載全部日常操作：增刪改查、流程觸發、</text>
-					<text class="dg-layer-item" x="44" y="217">異常處置</text>
-					<rect class="dg-box" x="16" y="282" width="468" height="228" rx="18" />
-					<text class="dg-layer-title" x="44" y="338">觀景層 L2</text>
-					<text class="dg-layer-sub" x="44" y="367">只讀圖形界面 · 看板與觀景台</text>
-					<line class="dg-rule" x1="44" y1="394" x2="456" y2="394" />
-					<text class="dg-layer-item" x="44" y="435">展示狀態與結果，供不參與操作的人確認</text>
-					<text class="dg-layer-item" x="44" y="457">與對外演示</text>
-					<line class="dg-arrow" x1="250" y1="256" x2="250" y2="274" marker-end="url(#dg-arrowhead)" />
-					<text class="dg-flow" x="262" y="270">驅動</text>
-					<line class="dg-arrow dg-arrow-side" x1="508" y1="154" x2="490" y2="154" marker-end="url(#dg-arrowhead)" />
-					<text class="dg-flow" x="468" y="147" text-anchor="end">約束</text>
-					<line class="dg-arrow dg-arrow-side" x1="508" y1="394" x2="490" y2="394" marker-end="url(#dg-arrowhead)" />
-					<text class="dg-flow" x="468" y="387" text-anchor="end">只反映產出</text>
-					<defs><marker id="dg-arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="dg-arrowhead" /></marker></defs>
+					<h2><span class="fx-ghost" aria-hidden="true">01</span>六大領域，不是六個孤島</h2>
+					<p class="block-subtitle">六個領域為節點，跨領域關係條數為邊。連線只畫有據可查的引用，不畫想象中的協同。</p>
+					<div class="sys-graph-wrap">
+						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="六大領域關係圖：六個領域為節點，節點大小按項目數縮放，跨領域關係條數為邊，邊寬按關係條數縮放，最密的五條邊標出數值" xmlns="http://www.w3.org/2000/svg">
+					<line class="gn-edge" x1="159.1" y1="268.0" x2="159.1" y2="338.8" stroke-width="2.72" stroke-opacity="0.40" />
+					<line class="gn-edge" x1="277.2" y1="142.4" x2="216.9" y2="173.3" stroke-width="2.72" stroke-opacity="0.40" />
+					<line class="gn-edge" x1="493.0" y1="374.2" x2="216.9" y2="232.7" stroke-width="3.27" stroke-opacity="0.44" />
+					<line class="gn-edge" x1="295.9" y1="479.2" x2="221.6" y2="441.0" stroke-width="3.69" stroke-opacity="0.47" />
+					<line class="gn-edge" x1="493.0" y1="443.8" x2="424.1" y2="479.2" stroke-width="4.04" stroke-opacity="0.49" />
+					<line class="gn-edge" x1="360.0" y1="193.0" x2="360.0" y2="440.0" stroke-width="4.04" stroke-opacity="0.49" />
+					<line class="gn-edge" x1="484.5" y1="409.0" x2="229.3" y2="409.0" stroke-width="4.36" stroke-opacity="0.51" />
+					<line class="gn-edge" x1="481.0" y1="203.0" x2="224.1" y2="203.0" stroke-width="4.36" stroke-opacity="0.51" />
+					<line class="gn-edge" x1="517.4" y1="270.0" x2="399.2" y2="451.6" stroke-width="5.14" stroke-opacity="0.57" />
+					<line class="gn-edge" x1="519.3" y1="345.0" x2="410.7" y2="178.0" stroke-width="5.58" stroke-opacity="0.60" />
+					<line class="gn-edge" x1="309.3" y1="178.0" x2="197.4" y2="350.1" stroke-width="6.35" stroke-opacity="0.66" />
+					<line class="gn-edge" x1="489.8" y1="239.4" x2="221.6" y2="377.0" stroke-width="6.85" stroke-opacity="0.70" />
+					<line class="gn-edge" x1="560.9" y1="282.9" x2="560.9" y2="332.6" stroke-width="7.01" stroke-opacity="0.71" />
+					<line class="gn-edge" x1="489.8" y1="166.6" x2="442.8" y2="142.4" stroke-width="7.60" stroke-opacity="0.75" />
+					<rect class="gn-weight-bg" x="443.5" y="136.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="460.5" y="157.5" text-anchor="middle">22</text>
+					<rect class="gn-weight-bg" x="543.9" y="291.0" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="560.9" y="312.0" text-anchor="middle">18</text>
+					<rect class="gn-weight-bg" x="343.0" y="291.0" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="360.0" y="312.0" text-anchor="middle">17</text>
+					<rect class="gn-weight-bg" x="242.5" y="239.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="259.5" y="260.5" text-anchor="middle">14</text>
+					<rect class="gn-weight-bg" x="443.5" y="239.5" width="34" height="30" rx="15" />
+					<text class="gn-weight" x="460.5" y="260.5" text-anchor="middle">10</text>
+					<circle class="gn-node" cx="360.0" cy="100.0" r="88.0" />
+					<text class="gn-name" x="360.0" y="94.4" text-anchor="middle" font-size="20.0">工具與實驗</text>
+					<text class="gn-count" x="360.0" y="123.2" text-anchor="middle" font-size="13.2">38 個項目</text>
+					<circle class="gn-node" cx="560.9" cy="203.0" r="74.9" />
+					<text class="gn-name" x="560.9" y="197.4" text-anchor="middle" font-size="20.0">內容創作</text>
+					<text class="gn-count" x="560.9" y="226.2" text-anchor="middle" font-size="13.2">23 個項目</text>
+					<circle class="gn-node" cx="560.9" cy="409.0" r="71.4" />
+					<text class="gn-name" x="560.9" y="391.0" text-anchor="middle" font-size="20.0">基礎設施</text>
+					<text class="gn-name" x="560.9" y="415.8" text-anchor="middle" font-size="20.0">與編排</text>
+					<text class="gn-count" x="560.9" y="444.6" text-anchor="middle" font-size="13.2">19 個項目</text>
+					<circle class="gn-node" cx="360.0" cy="512.0" r="67.0" />
+					<text class="gn-name" x="360.0" y="494.0" text-anchor="middle" font-size="20.0">知識與人</text>
+					<text class="gn-name" x="360.0" y="518.8" text-anchor="middle" font-size="20.0">機協作</text>
+					<text class="gn-count" x="360.0" y="547.6" text-anchor="middle" font-size="13.2">14 個項目</text>
+					<circle class="gn-node" cx="159.1" cy="409.0" r="65.2" />
+					<text class="gn-name" x="159.1" y="403.4" text-anchor="middle" font-size="20.0">自動化執行</text>
+					<text class="gn-count" x="159.1" y="432.2" text-anchor="middle" font-size="13.2">12 個項目</text>
+					<circle class="gn-node" cx="159.1" cy="203.0" r="60.0" />
+					<text class="gn-name" x="159.1" y="197.4" text-anchor="middle" font-size="20.0">投資金融</text>
+					<text class="gn-count" x="159.1" y="226.2" text-anchor="middle" font-size="13.2">6 個項目</text>
 					</svg>
 					</div>
-					<p class="punchline">按鈕給不了答案，對話才能。</p>
-					<div class="sys-points">
-						<div class="sys-point">
-							<h3>對話層負責「做」</h3>
-							<p>操作權歸對話層：增刪改查、流程觸發、異常處置都在自然語言裏發生，Skill 把重複動作固化成腳本。把操作埋進按鈕，AI 就夠不着它。</p>
-						</div>
-						<div class="sys-point">
-							<h3>觀景層負責「看」</h3>
-							<p>圖形界面不退場，但退居觀景台：只讀、不寫，供不參與操作的人掃一眼確認狀態，也供對外演示。可掃視性有真實價值，監控大屏與投資人演示仍然要固定視圖。</p>
-						</div>
-						<div class="sys-point">
-							<h3>文檔層負責「管」</h3>
-							<p>文檔是控制面：AI 先讀 AGENTS 取規則、讀 MISSION 取目標、讀 todo 取任務，做完把結果寫回賬本與日誌。讀者從「人」擴展到「人與 AI」，而 AI 是更嚴格的讀者——它逐字執行。</p>
-						</div>
-						<div class="sys-point">
-							<h3>PDCA 閉環 + 先研究結構</h3>
-							<p>用 PDCA 推進：先規劃、再按階段執行、檢查、修正，而不是一上來就亂寫。結構想清楚以後再解耦，能複用的全部複用。觀測（觀景層）本身就是 Check 的一環。</p>
-						</div>
-					</div>
+					<ul class="sys-caption">
+						<li>節點大小按該領域被標註的項目數縮放（一個項目可屬多個領域，故各領域計數之和大於項目總數）。</li>
+						<li>邊寬按兩個領域之間的項目關係條數縮放；數值標籤只標出最密的 5 條。</li>
+						<li>閾值規則：同一對項目在兩側的關係記錄合併後取較大引用數，引用數 ≤ 1 的共現視為噪聲不計。本圖保留 14 條邊、75 組項目關係。</li>
+						<li>依據口徑：源碼引用 = 本機源碼文本詞邊界命中（graph.py 口徑）；文檔引用 = README / 文檔 / 配置中的登記。源碼共現不等於業務依賴，本圖不聲稱調用關係。</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-				<div class="link-card">
+		
+		
+		<div id="method" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2><span class="fx-ghost" aria-hidden="true">02</span>方法，三句話</h2>
+					<p class="block-subtitle">體系全景不替別的頁説話——範式、論證、工程各歸其位，這裏只留指路牌。</p>
+					<div class="m-grid">
+				<div class="m-card" onclick="location.href='/zh-hk/human-in-the-loop.html'" role="link" tabindex="0">
+					<h3>人機合作範式</h3>
+					<p>五層、雙軌、雙循環怎麼拼成一個人帶一支艦隊的操作系統——5DT 範式的框架全景與軟件工程架構，在 Feng Human-in-the-Loop 頁。</p>
+					<span class="m-go">看範式全景 →</span>
+				</div>
+				<div class="m-card" onclick="location.href='/zh-hk/ethos.html'" role="link" tabindex="0">
+					<h3>三層界面，一個診斷</h3>
+					<p>對話層負責做，觀景層負責看，文檔層負責管——兩層界面原則的完整論證與診斷法，在理念頁。</p>
+					<span class="m-go">看完整論證 →</span>
+				</div>
+				<div class="m-card" onclick="location.href='/zh-hk/tech.html'" role="link" tabindex="0">
+					<h3>服務與自動化</h3>
+					<p>六項本地服務常駐、艦隊控制面驅動日常流水線——工程域的入口與總賬，在技術概覽頁。</p>
+					<span class="m-go">看技術概覽 →</span>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+<div class="link-card">
 			<p>一張圖看 78 個項目怎麼連成網 / 78 個自有項目，按六大領域分組、可篩選</p>
 			<div class="cta-row">
 				<a class="default-btn" href="/zh-hk/system-graph.html">項目關係圖</a>

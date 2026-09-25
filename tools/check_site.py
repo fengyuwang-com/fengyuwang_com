@@ -966,6 +966,12 @@ else:
         if _dead:
             err("navbar", f"{l}: 导航 *Href 指向不存在的文件: {_dead}")
         _pages = sorted(os.path.basename(p) for p in glob.glob(f"{l}/*.html"))
+        # 站内互链也算入口: 扫全部根页 HTML 里的本语言 href (体系全景子页由概览页 link-card 引导, 不占导航)
+        _page_hrefs = set()
+        for _pf in glob.glob(f"{l}/*.html"):
+            for _m in re.finditer(r'href="/%s/([\w.-]+\.html|blog/?|archive/?)"' % l, open(_pf, encoding="utf-8").read()):
+                _v = "/" + l + "/" + _m.group(1)
+                _page_hrefs.add(_v.rstrip("/") or "/")
         _missing = []
         _n_exempt = 0
         for name in _pages:
@@ -975,7 +981,7 @@ else:
             _cands = {f"/{l}/{name}"}
             if name == "index.html":
                 _cands |= {f"/{l}", f"/{l}/", "/"}
-            if not (_cands & _hrefs):
+            if not ((_cands & _hrefs) or (_cands & _page_hrefs)):
                 _missing.append(name)
         if _missing:
             for name in _missing:
