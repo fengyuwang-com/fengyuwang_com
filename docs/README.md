@@ -6,7 +6,7 @@
 | 文件夹 | 放什么 | 说明 |
 |---|---|---|
 | `decisions/` | 架构决策，永久有效 | `DECISION-0001-zero-runtime-byok.md`：纯静态 0 运行时 + BYOK 铁律出处 |
-| `guide/` | 常查手册，稳定细节 | 语音翻译 / 页面结构 / 发版门禁 / 踩坑 / 博文写作规范 / 通用整文档法（`docs-method.md`，跨项目复用） |
+| `guide/` | 常查手册，稳定细节 | 语音翻译 / 页面结构 / 发版门禁 / 踩坑 / 博文写作规范 / 通宵定时任务管线（`overnight-task-pipeline.md`）/ 通用整文档法（`docs-method.md`，跨项目复用） |
 | `archive/` | 一次性历史，只读归档 | AUDIT/FIX/REPORT/REVIEW/PLAN/STRATEGY/HANDOFF 等，日常不读，追溯再翻；只读，勿改 |
 | `briefs/` | 博文选题 brief | 每篇一文件，溯源用 |
 | `notes/` | 杂记 | A–E 草稿、执行台账（`博客清理-执行台账.md`）、需求活文档（`REQUIREMENTS-体系全景页-2026-09-18.md`，页面上线后转 `archive/`）、内部参考侦察报告（`REPORT-站点设计与工程规范侦察-2026-09-17.md`，结论已并入 `DESIGN.md` / `guide/`，不对外发布、不进博客） |
