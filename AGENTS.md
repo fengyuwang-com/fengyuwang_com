@@ -62,6 +62,7 @@
 | 改样式、卡片参数、白色横线、内容块、chips、QA、暗色、响应式 | `DESIGN.md`（视觉唯一源头：§6 间距、§7 组件、§8 响应式、§9 暗色） |
 | 发版、Git 流程、检查脚本、Docker 预览、Privacy | `docs/guide/release-gate.md` |
 | 报错、样式异常、踩坑对照 | `docs/guide/pitfalls.md` |
+| 通宵任务、定时推进、批量整改类任务 | `docs/guide/overnight-task-pipeline.md` |
 | 写博客文章 | `docs/guide/WRITING-博文写作规范.md` |
 | 架构决策、能否加后端 | `docs/decisions/DECISION-0001-zero-runtime-byok.md` |
 | 文档找不到、历史追溯 | `docs/README.md`（地图）、`docs/archive/`（归档） |
