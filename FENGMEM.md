@@ -454,4 +454,6 @@
   - 三语 fetch 回来做 DOM 比对：15 个块的 id 序列**完全一致**（parity）、h1 各 1、id 零重复、div 128/128 配平、`application/json` 全过。
   - 计数器到 1,432,605 / 78 / 11；暗色下 stage `rgb(15,23,42)`、标签可读。
   - 工具本身不稳：`computer screenshot` 反复超时或给出过期缩放面（视口实测 1440×900 但截图是 800×505 的放大面），最后改用**数值测量**（getBoundingClientRect + canvas getImageData 求墨迹 bbox）作为证据 —— 比截图强。
-- 分支 `dev`；未 commit、未 push。辅助脚本 `.merge_tech_system.py` 等 14 个 `.py` 与 `.merge_backup/` 仍未跟踪。
+- **提交时踩的一个坑（已修）**：`0507c9d1` 的 commit message 写了「cache-bust 全站 bump 到 26.10.01.01.00」，但 `git add` 只加了 `assets/js/shared-subpage-navbar.js` 一个文件 —— **1331 个 HTML 的 `?v=` 一个都没进去**。是 merge master 之后 `git status` 仍有 715 个 modified 文件才发现的。补了一笔 `b0d2c00a`。**教训：commit message 描述的范围必须和 `git show --stat` 对得上**；批量改动先 `git status --short | wc -l` 数一遍再 add。
+
+- 分支 `dev`；已 commit 并 push 到 dev（GitHub + Gitee）。master 的 4 个提交此前未合入，已按 pitfalls §13 合并（无冲突，无文件重叠）。辅助脚本 `.merge_tech_system.py` 等 15 个 `.py` 与 `.merge_backup/` 仍未跟踪（不进版本库，留作恢复路径）。
