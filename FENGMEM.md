@@ -457,3 +457,20 @@
 - **提交时踩的一个坑（已修）**：`0507c9d1` 的 commit message 写了「cache-bust 全站 bump 到 26.10.01.01.00」，但 `git add` 只加了 `assets/js/shared-subpage-navbar.js` 一个文件 —— **1331 个 HTML 的 `?v=` 一个都没进去**。是 merge master 之后 `git status` 仍有 715 个 modified 文件才发现的。补了一笔 `b0d2c00a`。**教训：commit message 描述的范围必须和 `git show --stat` 对得上**；批量改动先 `git status --short | wc -l` 数一遍再 add。
 
 - 分支 `dev`；已 commit 并 push 到 dev（GitHub + Gitee）。master 的 4 个提交此前未合入，已按 pitfalls §13 合并（无冲突，无文件重叠）。辅助脚本 `.merge_tech_system.py` 等 15 个 `.py` 与 `.merge_backup/` 仍未跟踪（不进版本库，留作恢复路径）。
+---
+
+## 2026-10-01 03:20 — 补回 .container 与五段闭环图
+- 用户要求: ① cards 顶到两边了，跟别的页不一样，照别的页的写法处理；② 五段闭环图（Research/Think/…/Self-Improve）要放在 Tech 页、不是别的页，且「跟 Human-in-the-Loop 不是一回事」。AskUserQuestion 选定：card-grid 照其他页处理；图放回 #method 区块（三语）。
+- AI 行动:
+  - 定位 card-grid 缺陷：合并时它被直接挂在 `.page-wrap` 下，丢了 `.container`。`.container` 是 Bootstrap 的类（1370px 居中），少它就无居中无上限。**CSS 规则逐字节相同 —— 变的是 DOM 结构**，只比对样式表值发现不了。
+  - 照 `capabilities/invest/art.html` 的模板包回 `<div class="container">`。
+  - 五段闭环图：`git show ea5905f6^:{lang}/system.html` 取回原文案（三语各取本语言，不跨语言复制），插入 `#method` 三个指路卡之后；旧标题里的「PDCA + MD 宪法」是借来的名字，未沿用（站长明说这是她自己的思想，不是 PDCA）。
+  - CSS 三语一直都在，被死 CSS 清理注释掉了 → 解开注释而非重写，33 块 DEAD CODE 复活，`ring-spin`（26s 匀速自转）一并回来。361 → 328。
+  - 核验：18 个内联块 `node --check` 0 失败；样式表 278 → 311 条，**移除 0、新增重复 0**；三语 div 平衡 136/136、单 h1、id 无重复；375px 无横向溢出、图缩到 240px；暗色下标签/胶囊/中心圆逐项有对应色；en 可见文本 0 处连续汉字。
+  - 浏览器实测 1440px：grid left 40 / right 55 / 列宽 435.33×3 / gap 20 —— 与 capabilities.html 完全一致（这正是用户要的「跟别的页一样」）。
+- 产出: `zh-cn/tech.html` `zh-hk/tech.html` `en/tech.html`（各 +154/-113）；辅助脚本 `.fix_container_ring.py` `.verify_ring_css.py`（未跟踪，沿用仓库既有的一次性脚本习惯）。
+- 关键决策:
+  - **不新建第二个 hero、不动 card CSS**，只补结构 —— 用户说的是「照别的页处理」，不是重新设计。
+  - **提交前必须 dry-run 到 `.dryrun/` 再落盘**。断言真的抓到了三个 bug：`block[:ka]` 里 `ka` 是 `card` 的下标却当成 `block` 的用（差 `ca`，正好吞掉一个 `</div>`）；`ring_markup` 用「pdca-wrap 开 → .layer 开」取段会多带一个 `.panel` 的闭合标签；`parent_chain` 只 push 顶层祖先导致自检恒失败。
+  - **未跑 `tools/check_site.py`** —— 门禁按约定只在站长点名时跑。
+  - 分支 `dev`，已 push 到 GitHub + Gitee（`eeff18d1`），未动 master。
