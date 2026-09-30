@@ -474,3 +474,55 @@
   - **提交前必须 dry-run 到 `.dryrun/` 再落盘**。断言真的抓到了三个 bug：`block[:ka]` 里 `ka` 是 `card` 的下标却当成 `block` 的用（差 `ca`，正好吞掉一个 `</div>`）；`ring_markup` 用「pdca-wrap 开 → .layer 开」取段会多带一个 `.panel` 的闭合标签；`parent_chain` 只 push 顶层祖先导致自检恒失败。
   - **未跑 `tools/check_site.py`** —— 门禁按约定只在站长点名时跑。
   - 分支 `dev`，已 push 到 GitHub + Gitee（`eeff18d1`），未动 master。
+
+## 2026-10-01 04:10 — 两页 hero 各写各的：Tech 讲系统，System Projects 讲清单
+- 用户要求: ① 上面那行 eyebrow 与 hero 文案「没人关心」「也没有任何意义」，重写；
+  ② **纠正**——Tech 页与 System Projects 页「是两回事」，后者要另想，不能同一份文案；
+  ③ 项目清单页 hero 直接说「可搜索的项目清单」。
+- AI 行动: `.fix_hero_copy.py` 逐页逐语改 eyebrow / h1 两段 / tagline。
+  tech.html 走主张（「不是六个项目，是一套系统」——六个领域互相调用，新项目站在已有的东西上）；
+  system-projects.html 走功能（「78 个项目，都能搜到」+ 按领域、语言、一行说明过滤）。
+  脚本末尾断言两页 hero **不再相同**，防止下次编辑又把它们当同一页。
+- 产出: `{zh-cn,zh-hk,en}/{tech,system-projects}.html`（hero 三件套）
+- 关键决策:
+  - 废弃的旧断言自己踩坑两次: 「一台机器」全文件断言会误伤 Search King 的
+    「一台机器，十八路引擎」和 Profile 卡（那里字面就是本机），改成只查 hero 区段；
+    「PDCA」断言会误伤 tech.html 自带的「系统即复利」块。
+  - 站长的 h1 方向是「讲系统性思维」，不是「讲可验证性」——后者是这版被否的根因。
+- 提交: `5cb6ee5a`
+
+---
+
+## 2026-10-01 04:40 — 项目清单改 A-Z 排序；指示点保留，只改气泡文案
+- 用户要求: 「提示点不要删掉好了，改成 A to z 吧。那个项目也改成 A to z。」
+  （这一句推翻了上一轮的「删掉整个指示点」选项）
+- AI 行动: `.sort_projects.py` 把 78 张卡片在**组内**按 `data-slug` 升序重排，
+  并把 `fx-rail` 气泡由「项目全清单 / The complete project inventory」改成
+  「A 到 Z / A to Z」。三语一次落地。
+- 产出: `{zh-cn,zh-hk,en}/system-projects.html`（+2160/-2160，插入删除数完全相等）
+- 关键决策:
+  - **排序键选 `data-slug` 而非可见的 `h4`**。slug 三语字节一致；h4 有 27/78 是翻译过的
+    （`Search-King`/`Search King`、`llm-text-processor`/`LLM Text Processor`）。
+    按 h4 排会让同一个项目在三语里落在三个位置——正是 pitfalls §14 要防的漂移。
+    slug 也无重名（78/78，全序不需要副键）；h4 有两处撞名（FengMedia ×2、FlyGo ×2）。
+  - **组内排序而非全局**。六个 `sys-group` 折叠块是这一页的主轴，过滤条数
+    （「归入本组 27 个」）也按它算；全局排序会把结构抹平。
+  - **静态重排而非加 JS**。列表是构建期写死的 HTML，过滤脚本只切 `hidden`；
+    加排序意味着阅读顺序取决于 JS 有没有跑，而 reveal 阶梯本来就按文档序。
+  - 已知取舍（写进 commit body 了）：按 slug 排有 5 处**可见名**不连续（每组 1 处），
+    因为 slug 与人写的名字本就不总同序。消掉它就得按 h4 排，代价是三语顺序不一致。
+- 验证（未跑门禁，站长未点名）:
+  - 78 张卡片**内容整体未改**：重排前后 `Counter(<article…</article>)` 完全相等。
+  - 还原气泡文案后**行多重集与 HEAD 完全相同** → 本轮唯一文字改动就是那处气泡。
+  - 内联脚本 6 块、外链 6 个，与 HEAD 字节一致（本次只动标记）。
+  - 浏览器实测三语各 78 张 6 组、顺序一致；筛选不变：search → 17 / 工具与实验 → 38 / 重置 → 78。
+  - 控制台的 `magnificPopup is not a function` 是既有问题（`main.js` 缺库），
+    与本次改动无关——已用「脚本与 HEAD 字节一致」排除。
+- 顺手答了站长上一轮没得到回答的问题: **「项目全清单」h2 偏左符合设计系统**。
+  实测 1440px 下 h2 `left 377 / w 672`，与下方 `.sys-filter`、`.sys-card`
+  完全齐平（`h2FlushWithCards: true`），`.block-inner` 本身是居中的
+  （`left 353 / w 720`）。DESIGN.md 里 `text-align: center` 只出现在特殊组件上
+  （`.track-card` / `.link-card` / `.projects-head` / `.cta-row` 按钮 / `.track-split-head`），
+  **没有 `.block-inner h2` 的居中规则**。所以左对齐是合规的，站长看到的「往左」
+  是 720px 文字栏相对于 1440px 视口的位置，不是标题自己的问题。
+- 提交: `d6efa9f2`（已 push GitHub + Gitee）
