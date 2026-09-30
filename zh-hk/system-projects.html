@@ -836,7 +836,7 @@ END DEAD CODE */}</style>
 
 	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
 	<nav class="fx-rail" aria-label="本頁段落導航">
-		<a href="#projects" data-rail="projects"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">項目全清單</span></a>
+		<a href="#projects" data-rail="projects"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A 到 Z</span></a>
 	</nav>
 	<div class="page-wrap">
 
@@ -891,16 +891,15 @@ END DEAD CODE */}</style>
 				<section class="sys-group" data-group="工具与实验">
 					<details class="sys-fold" open><summary><h3>工具與實驗 <span class="sys-group-count">歸入本組 27 個</span></h3></summary>
 					<div class="sys-cards">
-						<article class="sys-card" id="llm-text-processor" data-slug="llm-text-processor" data-domains="工具与实验" data-source="local" data-name="llm-text-processor">
+						<article class="sys-card" id="7zevery" data-slug="7zevery" data-domains="工具与实验" data-source="remote" data-name="7zevery">
 						<div class="sys-card-head">
-							<h4>llm-text-processor</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
+							<h4>7zEvery</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
 						</div>
-						<p class="sys-card-oneliner">把超長文本按策略切塊後並行餵給大模型批處理，GUI 與 CLI 共用一個 Docker 化服務。</p>
-						<p class="sys-card-detail">支持字符、行數、自定義（通配/正則/標題）多種分塊策略，以及串行、並行（可配併發）、串行+上下文記憶三種執行模式，配服務端 prompt 預設、分塊級實時進度、失敗重試與隨時暫停停止，結果可導出成品或含原文對照。它最初是 Python/tkinter 桌面應用，後整體重寫為 TypeScript 的 Docker 化 Web 服務，UI 結構後被 FlyGo 的界面設計憲法引為參照。屬最通用的工具型項目，也是內容與投研長文本處理的公共底座。</p>
+						<p class="sys-card-oneliner">Windows 上的批量 7z 壓縮與解密工具：保留目錄層級、可選密碼、帶進度與日誌。</p>
+						<p class="sys-card-detail">基於 Python + Tkinter，專為 Windows 11 設計，支持批量壓縮與批量解密雙向模式，遞歸處理所有子文件夾並嚴格保留原目錄結構，可設壓縮密碼（解密時必須提供）、自定義輸出文件夾後綴，提供全局進度條、當前文件進度與實時日誌，依賴本地 7z.exe。它屬於最早的一批桌面小工具，現以 AGPLv3 重新授權並公開。在簡歷作品集裏被列為 Legacy Desktop Tools 代表（與 CopyEvery 並列），是董事長桌面工具線的起點之一。</p>
 						<div class="sys-card-meta">
-							<span>代碼 4,126 行</span>
-							<span>最近提交 65 天前</span>
+							<span>最近提交 11 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
@@ -909,90 +908,145 @@ END DEAD CODE */}</style>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
 							</span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/llm-text-processor" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/7zEvery" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="readyoffice" data-slug="readyoffice" data-domains="工具与实验" data-source="local" data-name="readyo">
+						<article class="sys-card" id="ace-step-local-patches" data-slug="ace-step-local-patches" data-domains="工具与实验" data-source="remote" data-name="ace-step-local-patches">
 						<div class="sys-card-head">
-							<h4>ReadyO</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
+							<h4>ace-step-local-patches</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
 						</div>
-						<p class="sys-card-oneliner">香港裝修辦公室租賃匹配平台：幫 10-50 人團隊從共享辦公畢業後找到可直接入住的辦公室。</p>
-						<p class="sys-card-detail">這是真實落地的商業項目，創始人有 Garage Society 共享辦公運營經驗與香港地產經紀牌照（C-103081）。技術棧為 Next.js 16 + Prisma 7 + PostgreSQL 16 + Docker Compose + Caddy + MinIO + Auth.js + Zod，AI 匹配用 DeepSeek。工程規範同樣可看：設計了 Tier 1 MVP 到 Tier 3 K3s 的三級架構演進（約 $11/月 → $180-500/月），六原則優先級（SAFE &gt; ROBUST &gt; BEST FOR AI &gt; CLEAN &gt; EASY TO TEST &gt; SCALABLE），每條 API 走「Zod 驗證 → 授權 → 執行 → 審計 → 響應」，統一 AppError 與結構化 NDJSON 日誌。對求職而言它是「客户接觸與產品思維」的展示件。</p>
+						<p class="sys-card-oneliner">藍屏搶救出來的 ACE-Step 未推送提交，以 patch 文件形式保存待重新應用。</p>
+						<p class="sys-card-detail">倉庫裏只有一個補丁文件 0001-fix-save_wav_file-soundfile-torchaudio-2.9-torchcode.patch 和説明 README：來源是 D:\Projects\ACE-Step（2026-09-14 藍屏搶救），應用方法是在 ACE-Step 倉庫根目錄執行 git am，原提交基於 origin/main 且未推送到上游。它的價值完全是「不丟代碼」——把無法直接推送的本地改動固化成可重放的補丁。與 FengMedia-backup、unifiedsearch-snapshot、web-app-template-v01 同屬 2026-09-14 內存故障那一批搶救倉。</p>
 						<div class="sys-card-meta">
-							<span>代碼 3,481 行</span>
+							<span>最近提交 2 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="check_dup" data-slug="check_dup" data-domains="工具与实验" data-source="remote" data-name="check_dup">
+						<div class="sys-card-head">
+							<h4>check_dup</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">逐行比對文檔裏的相鄰重複內容，在控制枱打印重複組數量的單文件小腳本。</p>
+						<p class="sys-card-detail">腳本只有一個函數 check_adjacent_duplicates：逐行讀取文件，比較相鄰兩行是否完全相同，統計重複組數量並打印，含文件不存在與 GBK 編碼回退處理的兜底。它是典型的「寫文檔寫重複了，就用腳本查一遍」催生的工具，體積小、無依賴，後以 AGPLv3 重新授權公開。倉庫無 README，本次信息全部來自源碼首屏取證。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/check_dup" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="copyevery" data-slug="copyevery" data-domains="工具与实验" data-source="remote" data-name="copyevery">
+						<div class="sys-card-head">
+							<h4>CopyEvery</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">圍繞 7-Zip 做批量壓縮、拆包與格式轉換的 Windows 桌面小工具。</p>
+						<p class="sys-card-detail">基於 Python + Tkinter，用「輸入目錄 → 設置輸出 → 執行任務」三步引導，內置狀態欄、任務日誌與進度提示；所有壓縮/解壓都調 7z.exe 完成，因此支持 7-Zip 的全部命令行能力與自定義密碼，並可選是否保留原始目錄結構、壓縮格式與輸出路徑。代碼按 core（任務調度）/ utils（日誌路徑）/ main（UI 交互）分層，便於打包分發。早期描述為「md 文檔粘連」，與 7zEvery 是同一批文件批量處理工具，在簡歷作品集裏被並列收錄。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 160 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="data_floating_window1.2" data-slug="data_floating_window1.2" data-domains="工具与实验" data-source="remote" data-name="data_floating_window1.2">
+						<div class="sys-card-head">
+							<h4>data_floating_window1.2</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">Windows 上的彈出式資料/筆記浮窗：熱鍵呼出、透明懸浮、常駐剪貼板、本地存檔。</p>
+						<p class="sys-card-detail">用 keyboard_listener.py 監聽 U、V、F 等按鍵，按下即可在任意窗口上方呼出資料面板；data_manager.py 把條目寫入本地 data.txt 做增刪改查，floating_window.py 控制浮窗樣式、位置與時序，main_window.py 提供鼠標編輯的主窗口，還有可選的常駐剪貼板同步方便快速複製常用語句。依賴僅 pynput、pyautogui，主要依賴 Win32 鍵盤事件，是典型的「給自己寫的高頻查詢小工具」，後以 AGPLv3 公開。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/data_floating_window1.2" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="doubao-input" data-slug="doubao-input" data-domains="工具与实验" data-source="remote" data-name="doubao-input">
+						<div class="sys-card-head">
+							<h4>doubao-input</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">在 Ubuntu/GNOME/Wayland 上按住右 Ctrl 説話、鬆開就把文字打進當前輸入框。</p>
+						<p class="sys-card-detail">項目從零實現了豆包 Web 版的逆向邏輯——登錄、WebSocket ASR、音頻採集，以及觸發、注入與 UI，做成一個常駐的全局語音輸入法。技術難點集中在原生 Wayland：xdotool 在 Wayland 下失效、wtype 依賴 Mutter 未實現的 virtual-keyboard 協議，因此注入鏈路需自行設計。工程上有 pyproject.toml、debian/ 打包、跨發行版安裝指南（普通系統與 Fedora Atomic/SteamOS/容器）、CLAUDE.md 與設計文檔，説明這是當正經產品做的，而非一次性腳本；最新提交還在修啓動彈窗與浮窗常駐體驗。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 29 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="fengcrm" data-slug="fengcrm" data-domains="工具与实验|知识与人机协作" data-source="local" data-name="fengcrm">
+						<div class="sys-card-head">
+							<h4>FengCRM</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">AI 原生、郵件驅動的個人 CRM：單二進制交付，操作全靠 MCP 説話完成。</p>
+						<p class="sys-card-detail">需求文檔寫得很清楚：基於 harperreed/crm（Go + MCP 底座）二次開發，目標是零外部依賴的單文件可執行程序（約 10MB），不需要數據庫、Node/Python 運行時或 Docker。功能覆蓋聯繫人與公司管理、標籤分類（求職/客户/朋友/面試官）、關係關聯、全文搜索、最後聯繫時間與「張三 7 天沒聯繫了」式提醒。設計立場是 AI 原生——所有操作通過 MCP 交給 Claude 完成，Web UI 只做輔助。它原本要作為獨立工具存在，後續被併入 FengOffice 的郵件+CRM 統一平台，本機僅剩需求文檔。</p>
+						<div class="sys-card-meta">
 							<span>最近提交 60 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">知識與人機協作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="fengfancontrol" data-slug="fengfancontrol" data-domains="工具与实验" data-source="remote" data-name="fengfancontrol">
+						<div class="sys-card-head">
+							<h4>FengFanControl</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">來酷 N175L 的降噪降温完整方案，lecoofan 的前身倉庫。</p>
+						<p class="sys-card-detail">內容與本機 lecoofan 同源：從 ThrottleStop CPU 降壓到 ITE IT5570 EC 風扇 PWM 曲線覆蓋（寄存器 0x1809），配 fengfan.py 控制器、restore_fan.py 恢復腳本、setup.ps1/setup.py 與 start/stop/toggle 批處理，中英雙語文檔含安全警告。名字的來由即這段歷史：本機倉提交記錄顯示「Rename: FengFanControl → lecoofan」，本倉保留舊名版本。FengASNI 的機器 Profile 把它記為整機散熱改造方案，是這台機器能安靜工作的原因。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
 							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#lecoofan" title="lecoofan · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">lecoofan</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
 							</span>
 						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="tts-ui" data-slug="tts-ui" data-domains="工具与实验|内容创作" data-source="local" data-name="tts-ui">
-						<div class="sys-card-head">
-							<h4>TTS-UI</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
-						</div>
-						<p class="sys-card-oneliner">完全免費的桌面配音工具：微軟 Edge 神經語音 322 個音色，含趣味整活引擎。</p>
-						<p class="sys-card-detail">左邊粘貼文字、選聲音，右邊設語速（0.5x–2.0x）、音量、音調，點一下出 MP3；實時從微軟同步 322 個免費神經語音，覆蓋中英日韓等數十種語言，支持按名稱/語言/性別搜索，並內置 «Manbo» 趣味音色引擎（中英數字整活，按 IP 限流）。技術棧是 Python/customtkinter + edge-tts，打包為單文件 EXE，不需要任何付費 API Key；倉庫另有 Rust 側的實現痕跡。它是內容生產線（FengMedia/Vids）裏配音環節的自有工具，與 Speed-Change 組成音頻小工具組。</p>
-						<div class="sys-card-meta">
-							<span>代碼 2,877 行</span>
-							<span>最近提交 19 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#speed-change" title="Speed-Change · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Speed-Change</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="super-invincible-search-king" data-slug="super-invincible-search-king" data-domains="工具与实验|基础设施与编排" data-source="local" data-name="search-king">
-						<div class="sys-card-head">
-							<h4>Search-King</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">零 Key 零 Docker 的多源併發搜索聚合器：搜圖、搜文字、讀網頁、深度爬取一把抓。</p>
-						<p class="sys-card-detail">對外身份是「超級無敵人機協作 AI 搜圖大王」，覆蓋 Unsplash/Pexels/Pixabay/必應/百度/Brave 等 10+ 引擎，併發下載並跟蹤許可、產出帶來源説明的文檔；同時也當日常信息搜索工具用，中英文跨引擎聚合。工程上支持 lite 與 cloak 雙後端（後者用於反爬），並已集成 SearXNG 做進程內四源併發合併，清理了硬編碼、做到零 API Key 開箱即用，帶官網頁面與 GPLv3 許可。它是體系裏被複用最廣的能力之一（FengASNI、FengInvest、Qiheng、FengMedia 均引用），屬基礎設施級的取數工具。</p>
-						<div class="sys-card-meta">
-							<span>代碼 2,647 行</span>
-							<span>最近提交 12 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">基礎設施與編排</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 7 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Qiheng</span><span class="sys-rel-evi">結構同源</span></span>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/FengFanControl" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="fengmail" data-slug="fengmail" data-domains="工具与实验|自动化执行" data-source="local" data-name="fengmail">
 						<div class="sys-card-head">
@@ -1052,31 +1106,39 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="open-fengoffice" data-slug="open-fengoffice" data-domains="工具与实验" data-source="local" data-name="open-fengoffice">
+						<article class="sys-card" id="hide-all" data-slug="hide-all" data-domains="工具与实验" data-source="remote" data-name="hide-all">
 						<div class="sys-card-head">
-							<h4>open-FengOffice</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+							<h4>hide-all</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
 						</div>
-						<p class="sys-card-oneliner">FengOffice 的脱敏開源版：CLI 郵件客户端 + Twenty CRM + Newsletter 三件套。</p>
-						<p class="sys-card-detail">保留可公開的部分：fengmail.py 的 IMAP 直連與 JSON CLI、docker-compose 一鍵起 Twenty CRM、newsletter/（Listmonk + Postgres）做訂閲分發，去掉賬號憑據與私有數據。它是「把私人工具整理成能給別人用的開源件」的一次實踐，文檔結構與私有版一致（ai-operations-guide、email-classification、newsletter-architecture、deployment-status 等）。和 Open-FengInvest、Open-FlyGo、Open-FengOrchestrator、Open-FengMedia 同屬脱敏開源系列。</p>
+						<p class="sys-card-oneliner">一鍵關閉 macOS 上所有可見應用，效果像註銷但不註銷系統。</p>
+						<p class="sys-card-detail">對所有 visible 為 true 的應用先優雅 quit，等 3 秒仍未退出的再 killall 強殺，並排除 Finder、System Events、Dock、loginwindow、SystemUIServer、ControlCenter、NotificationCenter、WindowManager 等系統關鍵進程——是真正關閉而不是隱藏。實現為雙擊即運行的 shell + osascript 腳本（隱藏所有.command）加一個 AppleScript App，起因是原 FengHermes/隱藏所有.command 失效後重構獨立化。屬跨平台小工具羣裏面向 Mac 的那一支，現以 AGPLv3 公開。</p>
 						<div class="sys-card-meta">
-							<span>代碼 1,238 行</span>
-							<span>最近提交 48 天前</span>
+							<span>最近提交 11 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
 							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
 						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/hide-all" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="joytokeyalternative" data-slug="joytokeyalternative" data-domains="工具与实验" data-source="remote" data-name="joytokeyalternative">
+						<div class="sys-card-head">
+							<h4>JoyToKeyAlternative</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">C#</span></span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<p class="sys-card-oneliner">純 C# 零依賴的手柄→鍵盤/鼠標映射工具，為學習和替代閉源 JoyToKey 而寫。</p>
+						<p class="sys-card-detail">用 .NET Framework 4.8 只調公開 Windows API（XInput + SendInput）實現，沒有反編譯 JoyToKey，代碼以求簡單可讀為目標，並附一份開源方案調研文檔。能力對標 JoyToKey 核心：最多 4 個 XInput 手柄、按鍵→鍵盤、按鍵→鼠標、左搖桿→鼠標移動（含死區與漸速曲線）、十字鍵→方向鍵、扳機→鍵盤/鼠標鍵、可配頻率連發等。它是董事長少見的 Windows 桌面 C# 項目，也説明其技術棧裏保留着「不依賴任何第三方庫」的寫法。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 5 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/JoyToKeyAlternative" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="lecoofan" data-slug="lecoofan" data-domains="工具与实验" data-source="local" data-name="lecoofan">
 						<div class="sys-card-head">
@@ -1103,16 +1165,16 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/lecoofan" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="speed-change" data-slug="speed-change" data-domains="工具与实验" data-source="local" data-name="speed-change">
+						<article class="sys-card" id="llm-text-processor" data-slug="llm-text-processor" data-domains="工具与实验" data-source="local" data-name="llm-text-processor">
 						<div class="sys-card-head">
-							<h4>Speed-Change</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+							<h4>llm-text-processor</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
 						</div>
-						<p class="sys-card-oneliner">極簡音頻變速工具：選文件、拉滑塊、出 MP3，純 Python 實現不依賴 FFmpeg。</p>
-						<p class="sys-card-detail">操作就三步——選音頻、拉 0.25x–4x 變速滑塊（或點 0.5/1/1.5/2 快捷鍵）、生成 MP3，支持 MP3/WAV/M4A/FLAC/OGG/AAC 輸入，速度記憶下次自動恢復，並提供 PyInstaller 單文件 EXE 發佈。工程上的關鍵決定是改用純 Python 方案徹底移除 FFmpeg 依賴，讓用户雙擊即用、無需任何外部二進制。它是 TTS-UI 的姊妹工具（graph 中 Speed-Change → TTS-UI 1 處引用），同屬「給內容生產做小工具」的實用主義路線。</p>
+						<p class="sys-card-oneliner">把超長文本按策略切塊後並行餵給大模型批處理，GUI 與 CLI 共用一個 Docker 化服務。</p>
+						<p class="sys-card-detail">支持字符、行數、自定義（通配/正則/標題）多種分塊策略，以及串行、並行（可配併發）、串行+上下文記憶三種執行模式，配服務端 prompt 預設、分塊級實時進度、失敗重試與隨時暫停停止，結果可導出成品或含原文對照。它最初是 Python/tkinter 桌面應用，後整體重寫為 TypeScript 的 Docker 化 Web 服務，UI 結構後被 FlyGo 的界面設計憲法引為參照。屬最通用的工具型項目，也是內容與投研長文本處理的公共底座。</p>
 						<div class="sys-card-meta">
-							<span>代碼 390 行</span>
-							<span>最近提交 19 天前</span>
+							<span>代碼 4,126 行</span>
+							<span>最近提交 65 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
@@ -1121,10 +1183,56 @@ END DEAD CODE */}</style>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#tts-ui" title="TTS-UI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">TTS-UI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
 							</span>
 						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/llm-text-processor" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="my-random-backyard" data-slug="my-random-backyard" data-domains="工具与实验" data-source="remote" data-name="my-random-backyard">
+						<div class="sys-card-head">
+							<h4>my-random-backyard</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
+						</div>
+						<p class="sys-card-oneliner">沒事幹時的個人小項目與隨手記合集，各子目錄互不相關。</p>
+						<p class="sys-card-detail">描述寫得很坦白：「my private random backyard：沒事幹時的個人小項目/隨手記合集，各子目錄互不相關」。現有內容包括重置被 Clash Verge 篡改的 DNS 的修復腳本 fix-dns.sh、兩版小黃牛 SVG 對比（yellow-cow-bike.svg 與 4B 本地模型生成的 yellow-cow-bike-4b-qwen35.svg）、以及 zcode/opencode/go/muse-spark 相關的隨手筆記。它沒有統一目標，價值在於給零散實驗一個不污染正式項目的落腳點。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 3 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="open-fengoffice" data-slug="open-fengoffice" data-domains="工具与实验" data-source="local" data-name="open-fengoffice">
+						<div class="sys-card-head">
+							<h4>open-FengOffice</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">FengOffice 的脱敏開源版：CLI 郵件客户端 + Twenty CRM + Newsletter 三件套。</p>
+						<p class="sys-card-detail">保留可公開的部分：fengmail.py 的 IMAP 直連與 JSON CLI、docker-compose 一鍵起 Twenty CRM、newsletter/（Listmonk + Postgres）做訂閲分發，去掉賬號憑據與私有數據。它是「把私人工具整理成能給別人用的開源件」的一次實踐，文檔結構與私有版一致（ai-operations-guide、email-classification、newsletter-architecture、deployment-status 等）。和 Open-FengInvest、Open-FlyGo、Open-FengOrchestrator、Open-FengMedia 同屬脱敏開源系列。</p>
+						<div class="sys-card-meta">
+							<span>代碼 1,238 行</span>
+							<span>最近提交 48 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengOffice" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="python-deterministic-check" data-slug="python-deterministic-check" data-domains="工具与实验|基础设施与编排" data-source="local" data-name="python-deterministic-check">
 						<div class="sys-card-head">
@@ -1149,54 +1257,61 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/python-deterministic-check" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengcrm" data-slug="fengcrm" data-domains="工具与实验|知识与人机协作" data-source="local" data-name="fengcrm">
+						<article class="sys-card" id="readyoffice" data-slug="readyoffice" data-domains="工具与实验" data-source="local" data-name="readyo">
 						<div class="sys-card-head">
-							<h4>FengCRM</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+							<h4>ReadyO</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
 						</div>
-						<p class="sys-card-oneliner">AI 原生、郵件驅動的個人 CRM：單二進制交付，操作全靠 MCP 説話完成。</p>
-						<p class="sys-card-detail">需求文檔寫得很清楚：基於 harperreed/crm（Go + MCP 底座）二次開發，目標是零外部依賴的單文件可執行程序（約 10MB），不需要數據庫、Node/Python 運行時或 Docker。功能覆蓋聯繫人與公司管理、標籤分類（求職/客户/朋友/面試官）、關係關聯、全文搜索、最後聯繫時間與「張三 7 天沒聯繫了」式提醒。設計立場是 AI 原生——所有操作通過 MCP 交給 Claude 完成，Web UI 只做輔助。它原本要作為獨立工具存在，後續被併入 FengOffice 的郵件+CRM 統一平台，本機僅剩需求文檔。</p>
+						<p class="sys-card-oneliner">香港裝修辦公室租賃匹配平台：幫 10-50 人團隊從共享辦公畢業後找到可直接入住的辦公室。</p>
+						<p class="sys-card-detail">這是真實落地的商業項目，創始人有 Garage Society 共享辦公運營經驗與香港地產經紀牌照（C-103081）。技術棧為 Next.js 16 + Prisma 7 + PostgreSQL 16 + Docker Compose + Caddy + MinIO + Auth.js + Zod，AI 匹配用 DeepSeek。工程規範同樣可看：設計了 Tier 1 MVP 到 Tier 3 K3s 的三級架構演進（約 $11/月 → $180-500/月），六原則優先級（SAFE &gt; ROBUST &gt; BEST FOR AI &gt; CLEAN &gt; EASY TO TEST &gt; SCALABLE），每條 API 走「Zod 驗證 → 授權 → 執行 → 審計 → 響應」，統一 AppError 與結構化 NDJSON 日誌。對求職而言它是「客户接觸與產品思維」的展示件。</p>
 						<div class="sys-card-meta">
+							<span>代碼 3,481 行</span>
 							<span>最近提交 60 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">知識與人機協作</span></span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
 							</span>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="ace-step-local-patches" data-slug="ace-step-local-patches" data-domains="工具与实验" data-source="remote" data-name="ace-step-local-patches">
+						<article class="sys-card" id="speed-change" data-slug="speed-change" data-domains="工具与实验" data-source="local" data-name="speed-change">
 						<div class="sys-card-head">
-							<h4>ace-step-local-patches</h4>
+							<h4>Speed-Change</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">極簡音頻變速工具：選文件、拉滑塊、出 MP3，純 Python 實現不依賴 FFmpeg。</p>
+						<p class="sys-card-detail">操作就三步——選音頻、拉 0.25x–4x 變速滑塊（或點 0.5/1/1.5/2 快捷鍵）、生成 MP3，支持 MP3/WAV/M4A/FLAC/OGG/AAC 輸入，速度記憶下次自動恢復，並提供 PyInstaller 單文件 EXE 發佈。工程上的關鍵決定是改用純 Python 方案徹底移除 FFmpeg 依賴，讓用户雙擊即用、無需任何外部二進制。它是 TTS-UI 的姊妹工具（graph 中 Speed-Change → TTS-UI 1 處引用），同屬「給內容生產做小工具」的實用主義路線。</p>
+						<div class="sys-card-meta">
+							<span>代碼 390 行</span>
+							<span>最近提交 19 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#tts-ui" title="TTS-UI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">TTS-UI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="stack-docs" data-slug="stack-docs" data-domains="工具与实验" data-source="remote" data-name="stack-docs">
+						<div class="sys-card-head">
+							<h4>stack-docs</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
 						</div>
-						<p class="sys-card-oneliner">藍屏搶救出來的 ACE-Step 未推送提交，以 patch 文件形式保存待重新應用。</p>
-						<p class="sys-card-detail">倉庫裏只有一個補丁文件 0001-fix-save_wav_file-soundfile-torchaudio-2.9-torchcode.patch 和説明 README：來源是 D:\Projects\ACE-Step（2026-09-14 藍屏搶救），應用方法是在 ACE-Step 倉庫根目錄執行 git am，原提交基於 origin/main 且未推送到上游。它的價值完全是「不丟代碼」——把無法直接推送的本地改動固化成可重放的補丁。與 FengMedia-backup、unifiedsearch-snapshot、web-app-template-v01 同屬 2026-09-14 內存故障那一批搶救倉。</p>
+						<p class="sys-card-oneliner">Hugo Stack 主題的官方文檔站源碼，作為博客文檔子模塊被複用。</p>
+						<p class="sys-card-detail">上游是 Hugo Stack 主題的文檔倉庫（VitePress 驅動，pnpm 構建，Vercel 部署），本倉為 fork。它在本機項目體系裏不是主產品，而是工具件：fengyuwang_2 倉庫通過 .gitmodules 把 stack-docs-master 作為子模塊內嵌，用於博客站點的文檔部分，FengASNI 的軟件清單裏也登記了 stack-docs-master。保留它是為了鎖定可復現的文檔站依賴版本。</p>
 						<div class="sys-card-meta">
-							<span>最近提交 2 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="unifiedsearch-snapshot" data-slug="unifiedsearch-snapshot" data-domains="工具与实验" data-source="remote" data-name="unifiedsearch-snapshot">
-						<div class="sys-card-head">
-							<h4>unifiedsearch-snapshot</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">UnifiedSearch 在藍屏搶救中留下的快照：原目錄無 remote，工作區未提交改動未含在內。</p>
-						<p class="sys-card-detail">描述明確寫「UnifiedSearch 快照（藍屏搶救，原目錄無 remote；工作區有未提交改動未含在內）」，倉庫內容與 UnifiedSearch 同源（ai_helper.py、platforms_config.json、一鍵搜索.exe、GIT_GUIDE.md、README.md），另多了 config_manager.py。提交歷史停留在 2026-02 的勾選狀態保存與剪貼板修復，説明它是從原目錄整份搶救出來的既有狀態。它與 ace-step-local-patches、FengMedia-backup、web-app-template-v01 同屬 2026-09-14 內存故障當天的保全動作。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 2 天前</span>
+							<span>最近提交 65 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
@@ -1205,140 +1320,40 @@ END DEAD CODE */}</style>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#unifiedsearch" title="UnifiedSearch · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">UnifiedSearch</span><span class="sys-rel-evi">關聯記錄 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_2" title="fengyuwang_2 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">fengyuwang_2</span><span class="sys-rel-evi">結構同源</span></a>
 							</span>
 						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/stack-docs" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="my-random-backyard" data-slug="my-random-backyard" data-domains="工具与实验" data-source="remote" data-name="my-random-backyard">
+						<article class="sys-card" id="super-invincible-search-king" data-slug="super-invincible-search-king" data-domains="工具与实验|基础设施与编排" data-source="local" data-name="search-king">
 						<div class="sys-card-head">
-							<h4>my-random-backyard</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
-						</div>
-						<p class="sys-card-oneliner">沒事幹時的個人小項目與隨手記合集，各子目錄互不相關。</p>
-						<p class="sys-card-detail">描述寫得很坦白：「my private random backyard：沒事幹時的個人小項目/隨手記合集，各子目錄互不相關」。現有內容包括重置被 Clash Verge 篡改的 DNS 的修復腳本 fix-dns.sh、兩版小黃牛 SVG 對比（yellow-cow-bike.svg 與 4B 本地模型生成的 yellow-cow-bike-4b-qwen35.svg）、以及 zcode/opencode/go/muse-spark 相關的隨手筆記。它沒有統一目標，價值在於給零散實驗一個不污染正式項目的落腳點。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 3 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="joytokeyalternative" data-slug="joytokeyalternative" data-domains="工具与实验" data-source="remote" data-name="joytokeyalternative">
-						<div class="sys-card-head">
-							<h4>JoyToKeyAlternative</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">C#</span></span>
-						</div>
-						<p class="sys-card-oneliner">純 C# 零依賴的手柄→鍵盤/鼠標映射工具，為學習和替代閉源 JoyToKey 而寫。</p>
-						<p class="sys-card-detail">用 .NET Framework 4.8 只調公開 Windows API（XInput + SendInput）實現，沒有反編譯 JoyToKey，代碼以求簡單可讀為目標，並附一份開源方案調研文檔。能力對標 JoyToKey 核心：最多 4 個 XInput 手柄、按鍵→鍵盤、按鍵→鼠標、左搖桿→鼠標移動（含死區與漸速曲線）、十字鍵→方向鍵、扳機→鍵盤/鼠標鍵、可配頻率連發等。它是董事長少見的 Windows 桌面 C# 項目，也説明其技術棧裏保留着「不依賴任何第三方庫」的寫法。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 5 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/JoyToKeyAlternative" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="7zevery" data-slug="7zevery" data-domains="工具与实验" data-source="remote" data-name="7zevery">
-						<div class="sys-card-head">
-							<h4>7zEvery</h4>
+							<h4>Search-King</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
 						</div>
-						<p class="sys-card-oneliner">Windows 上的批量 7z 壓縮與解密工具：保留目錄層級、可選密碼、帶進度與日誌。</p>
-						<p class="sys-card-detail">基於 Python + Tkinter，專為 Windows 11 設計，支持批量壓縮與批量解密雙向模式，遞歸處理所有子文件夾並嚴格保留原目錄結構，可設壓縮密碼（解密時必須提供）、自定義輸出文件夾後綴，提供全局進度條、當前文件進度與實時日誌，依賴本地 7z.exe。它屬於最早的一批桌面小工具，現以 AGPLv3 重新授權並公開。在簡歷作品集裏被列為 Legacy Desktop Tools 代表（與 CopyEvery 並列），是董事長桌面工具線的起點之一。</p>
+						<p class="sys-card-oneliner">零 Key 零 Docker 的多源併發搜索聚合器：搜圖、搜文字、讀網頁、深度爬取一把抓。</p>
+						<p class="sys-card-detail">對外身份是「超級無敵人機協作 AI 搜圖大王」，覆蓋 Unsplash/Pexels/Pixabay/必應/百度/Brave 等 10+ 引擎，併發下載並跟蹤許可、產出帶來源説明的文檔；同時也當日常信息搜索工具用，中英文跨引擎聚合。工程上支持 lite 與 cloak 雙後端（後者用於反爬），並已集成 SearXNG 做進程內四源併發合併，清理了硬編碼、做到零 API Key 開箱即用，帶官網頁面與 GPLv3 許可。它是體系裏被複用最廣的能力之一（FengASNI、FengInvest、Qiheng、FengMedia 均引用），屬基礎設施級的取數工具。</p>
 						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
+							<span>代碼 2,647 行</span>
+							<span>最近提交 12 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">基礎設施與編排</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 7 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Qiheng</span><span class="sys-rel-evi">結構同源</span></span>
 							</span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/7zEvery" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="check_dup" data-slug="check_dup" data-domains="工具与实验" data-source="remote" data-name="check_dup">
-						<div class="sys-card-head">
-							<h4>check_dup</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">逐行比對文檔裏的相鄰重複內容，在控制枱打印重複組數量的單文件小腳本。</p>
-						<p class="sys-card-detail">腳本只有一個函數 check_adjacent_duplicates：逐行讀取文件，比較相鄰兩行是否完全相同，統計重複組數量並打印，含文件不存在與 GBK 編碼回退處理的兜底。它是典型的「寫文檔寫重複了，就用腳本查一遍」催生的工具，體積小、無依賴，後以 AGPLv3 重新授權公開。倉庫無 README，本次信息全部來自源碼首屏取證。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/check_dup" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="data_floating_window1.2" data-slug="data_floating_window1.2" data-domains="工具与实验" data-source="remote" data-name="data_floating_window1.2">
-						<div class="sys-card-head">
-							<h4>data_floating_window1.2</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">Windows 上的彈出式資料/筆記浮窗：熱鍵呼出、透明懸浮、常駐剪貼板、本地存檔。</p>
-						<p class="sys-card-detail">用 keyboard_listener.py 監聽 U、V、F 等按鍵，按下即可在任意窗口上方呼出資料面板；data_manager.py 把條目寫入本地 data.txt 做增刪改查，floating_window.py 控制浮窗樣式、位置與時序，main_window.py 提供鼠標編輯的主窗口，還有可選的常駐剪貼板同步方便快速複製常用語句。依賴僅 pynput、pyautogui，主要依賴 Win32 鍵盤事件，是典型的「給自己寫的高頻查詢小工具」，後以 AGPLv3 公開。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/data_floating_window1.2" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="fengfancontrol" data-slug="fengfancontrol" data-domains="工具与实验" data-source="remote" data-name="fengfancontrol">
-						<div class="sys-card-head">
-							<h4>FengFanControl</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">來酷 N175L 的降噪降温完整方案，lecoofan 的前身倉庫。</p>
-						<p class="sys-card-detail">內容與本機 lecoofan 同源：從 ThrottleStop CPU 降壓到 ITE IT5570 EC 風扇 PWM 曲線覆蓋（寄存器 0x1809），配 fengfan.py 控制器、restore_fan.py 恢復腳本、setup.ps1/setup.py 與 start/stop/toggle 批處理，中英雙語文檔含安全警告。名字的來由即這段歷史：本機倉提交記錄顯示「Rename: FengFanControl → lecoofan」，本倉保留舊名版本。FengASNI 的機器 Profile 把它記為整機散熱改造方案，是這台機器能安靜工作的原因。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#lecoofan" title="lecoofan · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">lecoofan</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/FengFanControl" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="hide-all" data-slug="hide-all" data-domains="工具与实验" data-source="remote" data-name="hide-all">
-						<div class="sys-card-head">
-							<h4>hide-all</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
-						</div>
-						<p class="sys-card-oneliner">一鍵關閉 macOS 上所有可見應用，效果像註銷但不註銷系統。</p>
-						<p class="sys-card-detail">對所有 visible 為 true 的應用先優雅 quit，等 3 秒仍未退出的再 killall 強殺，並排除 Finder、System Events、Dock、loginwindow、SystemUIServer、ControlCenter、NotificationCenter、WindowManager 等系統關鍵進程——是真正關閉而不是隱藏。實現為雙擊即運行的 shell + osascript 腳本（隱藏所有.command）加一個 AppleScript App，起因是原 FengHermes/隱藏所有.command 失效後重構獨立化。屬跨平台小工具羣裏面向 Mac 的那一支，現以 AGPLv3 公開。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/hide-all" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Super-Invincible-Search-King" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="tag_manager" data-slug="tag_manager" data-domains="工具与实验|知识与人机协作" data-source="remote" data-name="tag_manager">
 						<div class="sys-card-head">
@@ -1356,6 +1371,47 @@ END DEAD CODE */}</style>
 						</div>
 						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/tag_manager" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="talkifytts" data-slug="talkifytts" data-domains="工具与实验|内容创作" data-source="remote" data-name="talkifytts">
+						<div class="sys-card-head">
+							<h4>TalkifyTTS</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Kotlin</span></span>
+						</div>
+						<p class="sys-card-oneliner">不產語音只做橋樑的 Android TTS 引擎：把微軟/千問/豆包/騰訊的雲端語音接進系統朗讀。</p>
+						<p class="sys-card-detail">Talkify 是一款 Android TTS 連接器：自身不生產語音，而是把雲端大模型（微軟、通義千問、豆包、騰訊雲）的高質量擬人語音合成能力，通過 Android 標準 Text-to-Speech 接口提供給系統和各類閲讀軟件，讓電子書朗讀不再機械。技術棧是 Kotlin + Jetpack Compose + Material 3，倉庫含 app/、doc/、examples/ 與 Gradle 構建腳本，MIT 改為 GPLv3 後以 fork 形式保留在本組織。它是內容音頻化鏈條的移動端一環，與 TTS-UI（桌面）分處兩端。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 65 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/TalkifyTTS" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="tts-ui" data-slug="tts-ui" data-domains="工具与实验|内容创作" data-source="local" data-name="tts-ui">
+						<div class="sys-card-head">
+							<h4>TTS-UI</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
+						</div>
+						<p class="sys-card-oneliner">完全免費的桌面配音工具：微軟 Edge 神經語音 322 個音色，含趣味整活引擎。</p>
+						<p class="sys-card-detail">左邊粘貼文字、選聲音，右邊設語速（0.5x–2.0x）、音量、音調，點一下出 MP3；實時從微軟同步 322 個免費神經語音，覆蓋中英日韓等數十種語言，支持按名稱/語言/性別搜索，並內置 «Manbo» 趣味音色引擎（中英數字整活，按 IP 限流）。技術棧是 Python/customtkinter + edge-tts，打包為單文件 EXE，不需要任何付費 API Key；倉庫另有 Rust 側的實現痕跡。它是內容生產線（FengMedia/Vids）裏配音環節的自有工具，與 Speed-Change 組成音頻小工具組。</p>
+						<div class="sys-card-meta">
+							<span>代碼 2,877 行</span>
+							<span>最近提交 19 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#speed-change" title="Speed-Change · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Speed-Change</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="unifiedsearch" data-slug="unifiedsearch" data-domains="工具与实验" data-source="remote" data-name="unifiedsearch">
 						<div class="sys-card-head">
@@ -1382,6 +1438,28 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/UnifiedSearch" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
+						<article class="sys-card" id="unifiedsearch-snapshot" data-slug="unifiedsearch-snapshot" data-domains="工具与实验" data-source="remote" data-name="unifiedsearch-snapshot">
+						<div class="sys-card-head">
+							<h4>unifiedsearch-snapshot</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">UnifiedSearch 在藍屏搶救中留下的快照：原目錄無 remote，工作區未提交改動未含在內。</p>
+						<p class="sys-card-detail">描述明確寫「UnifiedSearch 快照（藍屏搶救，原目錄無 remote；工作區有未提交改動未含在內）」，倉庫內容與 UnifiedSearch 同源（ai_helper.py、platforms_config.json、一鍵搜索.exe、GIT_GUIDE.md、README.md），另多了 config_manager.py。提交歷史停留在 2026-02 的勾選狀態保存與剪貼板修復，説明它是從原目錄整份搶救出來的既有狀態。它與 ace-step-local-patches、FengMedia-backup、web-app-template-v01 同屬 2026-09-14 內存故障當天的保全動作。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 2 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#unifiedsearch" title="UnifiedSearch · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">UnifiedSearch</span><span class="sys-rel-evi">關聯記錄 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="unifiedsearchmobile" data-slug="unifiedsearchmobile" data-domains="工具与实验" data-source="remote" data-name="unifiedsearchmobile">
 						<div class="sys-card-head">
 							<h4>UnifiedSearchMobile</h4>
@@ -1404,126 +1482,33 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/UnifiedSearchMobile" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="doubao-input" data-slug="doubao-input" data-domains="工具与实验" data-source="remote" data-name="doubao-input">
-						<div class="sys-card-head">
-							<h4>doubao-input</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">在 Ubuntu/GNOME/Wayland 上按住右 Ctrl 説話、鬆開就把文字打進當前輸入框。</p>
-						<p class="sys-card-detail">項目從零實現了豆包 Web 版的逆向邏輯——登錄、WebSocket ASR、音頻採集，以及觸發、注入與 UI，做成一個常駐的全局語音輸入法。技術難點集中在原生 Wayland：xdotool 在 Wayland 下失效、wtype 依賴 Mutter 未實現的 virtual-keyboard 協議，因此注入鏈路需自行設計。工程上有 pyproject.toml、debian/ 打包、跨發行版安裝指南（普通系統與 Fedora Atomic/SteamOS/容器）、CLAUDE.md 與設計文檔，説明這是當正經產品做的，而非一次性腳本；最新提交還在修啓動彈窗與浮窗常駐體驗。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 29 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="stack-docs" data-slug="stack-docs" data-domains="工具与实验" data-source="remote" data-name="stack-docs">
-						<div class="sys-card-head">
-							<h4>stack-docs</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">Hugo Stack 主題的官方文檔站源碼，作為博客文檔子模塊被複用。</p>
-						<p class="sys-card-detail">上游是 Hugo Stack 主題的文檔倉庫（VitePress 驅動，pnpm 構建，Vercel 部署），本倉為 fork。它在本機項目體系裏不是主產品，而是工具件：fengyuwang_2 倉庫通過 .gitmodules 把 stack-docs-master 作為子模塊內嵌，用於博客站點的文檔部分，FengASNI 的軟件清單裏也登記了 stack-docs-master。保留它是為了鎖定可復現的文檔站依賴版本。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 65 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengyuwang_2" title="fengyuwang_2 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">fengyuwang_2</span><span class="sys-rel-evi">結構同源</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/stack-docs" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="talkifytts" data-slug="talkifytts" data-domains="工具与实验|内容创作" data-source="remote" data-name="talkifytts">
-						<div class="sys-card-head">
-							<h4>TalkifyTTS</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Kotlin</span></span>
-						</div>
-						<p class="sys-card-oneliner">不產語音只做橋樑的 Android TTS 引擎：把微軟/千問/豆包/騰訊的雲端語音接進系統朗讀。</p>
-						<p class="sys-card-detail">Talkify 是一款 Android TTS 連接器：自身不生產語音，而是把雲端大模型（微軟、通義千問、豆包、騰訊雲）的高質量擬人語音合成能力，通過 Android 標準 Text-to-Speech 接口提供給系統和各類閲讀軟件，讓電子書朗讀不再機械。技術棧是 Kotlin + Jetpack Compose + Material 3，倉庫含 app/、doc/、examples/ 與 Gradle 構建腳本，MIT 改為 GPLv3 後以 fork 形式保留在本組織。它是內容音頻化鏈條的移動端一環，與 TTS-UI（桌面）分處兩端。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 65 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/TalkifyTTS" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="copyevery" data-slug="copyevery" data-domains="工具与实验" data-source="remote" data-name="copyevery">
-						<div class="sys-card-head">
-							<h4>CopyEvery</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">圍繞 7-Zip 做批量壓縮、拆包與格式轉換的 Windows 桌面小工具。</p>
-						<p class="sys-card-detail">基於 Python + Tkinter，用「輸入目錄 → 設置輸出 → 執行任務」三步引導，內置狀態欄、任務日誌與進度提示；所有壓縮/解壓都調 7z.exe 完成，因此支持 7-Zip 的全部命令行能力與自定義密碼，並可選是否保留原始目錄結構、壓縮格式與輸出路徑。代碼按 core（任務調度）/ utils（日誌路徑）/ main（UI 交互）分層，便於打包分發。早期描述為「md 文檔粘連」，與 7zEvery 是同一批文件批量處理工具，在簡歷作品集裏被並列收錄。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 160 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
 					</div>
 				</details></section>
 				<section class="sys-group" data-group="内容创作">
 					<details class="sys-fold" open><summary><h3>內容創作 <span class="sys-group-count">歸入本組 15 個</span></h3></summary>
 					<div class="sys-cards">
-						<article class="sys-card" id="fengyuwang_com" data-slug="fengyuwang_com" data-domains="内容创作" data-source="local" data-name="fengyuwang_com">
+						<article class="sys-card" id="5dt-pd" data-slug="5dt-pd" data-domains="内容创作|自动化执行" data-source="local" data-name="5dt-pd">
 						<div class="sys-card-head">
-							<h4>fengyuwang_com</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+							<h4>5dt-pd</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
 						</div>
-						<p class="sys-card-oneliner">三語個人網站與博客主站：一個 git 倉庫跨機器跨系統，承載個人品牌與全部項目入口。</p>
-						<p class="sys-card-detail">現役主站由靜態 HTML 三語頁面（簡體/繁體/英文）加 Hugo 博客構成，README 明確寫出「三個領域 · 一套底層邏輯」的品牌敍事：市場學解決真需求洞察、投資理解企業價值與複利、技術做實現槓桿。站點同時是整個項目體系的對外導航——把 Jingxin、FengOffice、FengMedia、Search-King、FlyGo 等作品做成卡片與子菜單，並在改版計劃中排布 5DT-PD、AutoApply、UnifiedSearch 等項目。它是求職與個人 IP 的第一觸點，也是各項目關係的交匯節點（graph 中指向 10+ 個自有項目）。</p>
+						<p class="sys-card-oneliner">把內容生意拆成五層雙軌雙循環的工業化框架，外加一個可點着看的可視化查看器。</p>
+						<p class="sys-card-detail">項目把「五層雙軌雙循環盈利型內容智造架構」從一頁紙概念做成可運行資產：本機目錄裏既有 React+Vite 的架構查看器（5dt-pd-viewer），也有用 TypeScript + BullMQ + Redis + OpenAI 的框架骨架實現。它回答的是「內容生產怎麼像工廠一樣可複製」——把選題、生產、分發、變現分層，雙軌並跑、雙循環回收反饋。它屬於內容創作層的頂層設計，是董事長內容體系（FengMedia / Vids / 內容平台）的方法論出處之一。當前狀態是本機 2026-07-19 的一次性方案，未繼續迭代，但結構留檔完整。</p>
 						<div class="sys-card-meta">
-							<span>代碼 179,912 行</span>
-							<span>最近提交 2 天前</span>
+							<span>代碼 2,885 行</span>
+							<span>最近提交 60 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">關聯記錄 18 處</span></a>
-								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#unifiedsearch" title="UnifiedSearch · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">UnifiedSearch</span><span class="sys-rel-evi">關聯記錄 4 處</span></a>
-								<a class="sys-rel-chip" href="#open-fengmedia" title="Open-FengMedia 開源版 · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Open-FengMedia 開源版</span><span class="sys-rel-evi">關聯記錄 6 處</span></a>
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 14 處</span></a>
-								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 13 處</span></a>
-								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 7 處</span></a>
-								<a class="sys-rel-chip" href="#open-fengoffice" title="open-FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">open-FengOffice</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
-								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
-								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 5 處</span></a>
-								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#5dt-pd" title="5dt-pd · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">5dt-pd</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Search-King</span><span class="sys-rel-evi">結構同源</span></span>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
 							</span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/fengyuwang_com" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/5dt-pd" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="feng-media" data-slug="feng-media" data-domains="内容创作" data-source="local" data-name="fengmedia">
 						<div class="sys-card-head">
@@ -1560,41 +1545,15 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="jingxin" data-slug="jingxin" data-domains="内容创作|工具与实验" data-source="local" data-name="jingxin">
+						<article class="sys-card" id="fengcv" data-slug="fengcv" data-domains="内容创作" data-source="remote" data-name="fengcv">
 						<div class="sys-card-head">
-							<h4>Jingxin</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Dart</span></span>
-						</div>
-						<p class="sys-card-oneliner">用呼吸當唯一操作的平靜遊戲：沒有失敗、沒有分數，唯一進度是世界甦醒。</p>
-						<p class="sys-card-detail">《靜境》從冥想工具《靜心》進化而來，思路不是把冥想包裝成遊戲，而是把遊戲做成冥想：按住屏幕吸氣、鬆開呼氣，也可開麥克風用真實呼吸驅動，呼吸越平穩世界回應越美。內容做得很實：失眠之海、焦慮之淵、疲憊荒原、紛心霧林四個心境區域，七座星島、36 顆亂星同化、燈台重燃等機制，以及眠、惘兩位星獸的循環式終局，全部無地圖無任務、漫遊即抵達。技術上是 Flutter/Dart（約 2.6 萬行）並已打通 GitHub Pages 上線鏈路。它證明董事長能在內容與交互設計上做完整的原創產品，而非只做效率工具。</p>
-						<div class="sys-card-meta">
-							<span>代碼 26,110 行</span>
-							<span>最近提交 2 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="fengyuwang_4" data-slug="fengyuwang_4" data-domains="内容创作" data-source="local" data-name="fengyuwang_4">
-						<div class="sys-card-head">
-							<h4>fengyuwang_4</h4>
+							<h4>FengCV</h4>
 							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
 						</div>
-						<p class="sys-card-oneliner">三語靜態個人網站的第 4 代，自帶一本寫給 AI 和人的站點編輯手冊。</p>
-						<p class="sys-card-detail">倉庫是純手工維護的多語言靜態站（en / zh-cn / zh-hk）外加多語言生成的博客，主打可維護性：README 就是主編輯手冊，規定任何 AI 或人類編輯讀完這份文檔後，應該能在不逐頁打開 HTML 的前提下完成大部分改動。這種「先寫契約再動頁面」的做法，讓靜態站也能被 agent 長期維護。它處在個人網站的多代迭代線上（Hugo 版 → v4 → v5 → 現主站 fengyuwang_com），也是給求職與個人品牌用的門面資產之一。</p>
+						<p class="sys-card-oneliner">王丰羽的中英雙語簡歷倉：HTML 排版 + 多版本 PDF，與 Resume 倉同源。</p>
+						<p class="sys-card-detail">倉庫含 serve.bat 本地預覽、src/generate_pdfs.py 批量生成 PDF、resume_standard.html/resume_comprehensive.pdf 以及綜合、營銷、技術、投資四版 PDF，結構與本機 Resume 倉一致（同為 A4 單文件 HTML + AGENTS.md 編輯規範），並帶 .claude/.zcode/.vscode 等 AI 協作配置與 FENGMEM 記憶文件。它是簡歷體系在遠端的另一份落點，最新提交在 2026-09-09 重新生成了全套 PDF 與索嗨版/創新版。</p>
 						<div class="sys-card-meta">
-							<span>代碼 25,985 行</span>
-							<span>最近提交 60 天前</span>
+							<span>最近提交 7 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
@@ -1603,98 +1562,34 @@ END DEAD CODE */}</style>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="僅存在於本機，沒有可公開訪問的遠端倉庫，故本頁不提供外鏈。">本機項目</span>
-					</article>
-						<article class="sys-card" id="resume" data-slug="resume" data-domains="内容创作|自动化执行" data-source="local" data-name="resume">
-						<div class="sys-card-head">
-							<h4>Resume</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">面向香港求職市場的多語言簡歷工廠：單文件 A4 HTML，一次生成通用/營銷/技術/投資四版 PDF。</p>
-						<p class="sys-card-detail">用單文件 HTML 做 A4 排版優化，配 serve.bat 本地預覽與 python src/generate_pdfs.py 批量產出四個版本（綜合、marketing、tech、investment）的 PDF，並帶 AGENTS.md 約定 AI 編輯規則、核心敍事與翻譯標準。它不是一份靜態簡歷，而是隨項目迭代持續更新的「能力台賬」——作品集頁面會把 7zEvery、CopyEvery、UnifiedSearch 等自有項目按類別收錄進去。graph 中它是被引用最多的自有項目（job-hunter 101 處、CCHH 77 處），説明求職與對外展示是多個項目的共同出口；遠端另有同源倉 FengCV。</p>
-						<div class="sys-card-meta">
-							<span>代碼 8,442 行</span>
-							<span>最近提交 47 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengcv" title="FengCV · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengCV</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
-								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengcrm" title="FengCRM · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengCRM</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 101 處</span></a>
-								<a class="sys-rel-chip" href="#cchh" title="CCHH · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">CCHH</span><span class="sys-rel-evi">源碼引用 77 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-auto-fill" title="Private-feng-auto-fill · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-auto-fill</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#lecoofan" title="lecoofan · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lecoofan</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#llm-text-processor" title="llm-text-processor · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">llm-text-processor</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">AIExport</span><span class="sys-rel-evi">結構同源</span></span>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Auto LinkedIn</span><span class="sys-rel-evi">結構同源</span></span>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Qiheng</span><span class="sys-rel-evi">結構同源</span></span>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Search-King</span><span class="sys-rel-evi">結構同源</span></span>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
 							</span>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="5dt-pd" data-slug="5dt-pd" data-domains="内容创作|自动化执行" data-source="local" data-name="5dt-pd">
+						<article class="sys-card" id="fengmedia" data-slug="fengmedia" data-domains="内容创作" data-source="remote" data-name="fengmedia">
 						<div class="sys-card-head">
-							<h4>5dt-pd</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
+							<h4>FengMedia</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
 						</div>
-						<p class="sys-card-oneliner">把內容生意拆成五層雙軌雙循環的工業化框架，外加一個可點着看的可視化查看器。</p>
-						<p class="sys-card-detail">項目把「五層雙軌雙循環盈利型內容智造架構」從一頁紙概念做成可運行資產：本機目錄裏既有 React+Vite 的架構查看器（5dt-pd-viewer），也有用 TypeScript + BullMQ + Redis + OpenAI 的框架骨架實現。它回答的是「內容生產怎麼像工廠一樣可複製」——把選題、生產、分發、變現分層，雙軌並跑、雙循環回收反饋。它屬於內容創作層的頂層設計，是董事長內容體系（FengMedia / Vids / 內容平台）的方法論出處之一。當前狀態是本機 2026-07-19 的一次性方案，未繼續迭代，但結構留檔完整。</p>
+						<p class="sys-card-oneliner">「王丰羽個人 IP 完整操作系統」的遠端私有倉：從人設到內容、工具到平台、代碼到運營。</p>
+						<p class="sys-card-detail">描述寫的是「從人設到內容，從工具到平台，從代碼到運營」，實際內容含 agent 配置（.claude/ AGENTS.md CLAUDE.md FENGMEM.md）、內容與項目管理（content/ projects/ published/）、流水線（pipeline/ daily-run.bat feng-daily/）、技能（skills/）、WebUI 與 QA，是內容生產系統的落盤形態。它另有脱敏開源版 Open-FengMedia（README 同源、官網 fengyuwang.com/zh-cn/fengmedia.html）與藍屏搶救備份 FengMedia-backup，三倉構成同一系統的私有/開源/備份三份。注意它與本機 FengMedia 目錄是同一系統的兩處落點（本機目錄 git remote 未命中自有 slug，故在自有清單裏各佔一條）。</p>
 						<div class="sys-card-meta">
-							<span>代碼 2,885 行</span>
-							<span>最近提交 60 天前</span>
+							<span>最近提交 4 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#open-fengmedia" title="Open-FengMedia 開源版 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Open-FengMedia 開源版</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengmedia-backup" title="FengMedia-backup · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengMedia-backup</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 源碼與文檔中同時出現（已雙向合併取較大值），屬於共現與登記，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼與文檔引用 20 處</span></a>
 							</span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/5dt-pd" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="open-fengmedia" data-slug="open-fengmedia" data-domains="内容创作|自动化执行" data-source="local" data-name="open-fengmedia 開源版">
-						<div class="sys-card-head">
-							<h4>Open-FengMedia 開源版</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">財經內容操作系統的脱敏開源版：人設、選題、寫稿、配音、渲染、發佈、覆盤收進一條流水線。</p>
-						<p class="sys-card-detail">公開倉對外身份是「財經內容操作系統」：把人設、選題、寫稿、配圖、配音、渲染、發佈、覆盤收進一條流水線，給做財經內容、又想用代碼把流程固化下來的個人創作者用。技術形態是四塊——content/personas 裏的客觀/平靜/暴躁三模式人設（模式只決定翻譯層怎麼講，不決定論證層講什麼）、pipeline/ 的 step0→step8 生產流水線（含 B 線剪輯）、TypeScript/Express 的本地控制枱 webui（默認 23457 端口），以及 /publish、/rage-mode、/fetch-topics 等快捷指令，另附 AGPLv3 許可與全部佔位化的示例配置。它在體系裏是私有版 FengMedia 的對外脱敏鏡像，與 Open-FengInvest、Open-FlyGo、Open-FengOffice、Open-FengOrchestrator 同屬公開五倉，官網三語 fengmedia 頁的「查看 GitHub 倉庫」按鈕就指向它。當前狀態是持續在維護：2026-09-16 剛按裁決撤下自主進化方法論與運行態數據、把 telemetry key 佔位化並清掉懸空引用，默認分支 main 與同步分支 master 並存。需要説明的是本機 C:\Projects\Open-FengMedia 只是一個沒拉到內容的空克隆（.git 裏無 HEAD、無任何文件），所以本機看不到代碼，本次取證全部來自遠端。</p>
-						<div class="sys-card-meta">
-							<span>提交時間未記錄</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">關聯記錄 3 處</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-fengmedia" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="fengmedia-backup" data-slug="fengmedia-backup" data-domains="内容创作|基础设施与编排" data-source="remote" data-name="fengmedia-backup">
 						<div class="sys-card-head">
@@ -1740,6 +1635,114 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
+						<article class="sys-card" id="fengyuwang_4" data-slug="fengyuwang_4" data-domains="内容创作" data-source="local" data-name="fengyuwang_4">
+						<div class="sys-card-head">
+							<h4>fengyuwang_4</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">三語靜態個人網站的第 4 代，自帶一本寫給 AI 和人的站點編輯手冊。</p>
+						<p class="sys-card-detail">倉庫是純手工維護的多語言靜態站（en / zh-cn / zh-hk）外加多語言生成的博客，主打可維護性：README 就是主編輯手冊，規定任何 AI 或人類編輯讀完這份文檔後，應該能在不逐頁打開 HTML 的前提下完成大部分改動。這種「先寫契約再動頁面」的做法，讓靜態站也能被 agent 長期維護。它處在個人網站的多代迭代線上（Hugo 版 → v4 → v5 → 現主站 fengyuwang_com），也是給求職與個人品牌用的門面資產之一。</p>
+						<div class="sys-card-meta">
+							<span>代碼 25,985 行</span>
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="僅存在於本機，沒有可公開訪問的遠端倉庫，故本頁不提供外鏈。">本機項目</span>
+					</article>
+						<article class="sys-card" id="fengyuwang_5" data-slug="fengyuwang_5" data-domains="内容创作" data-source="remote" data-name="fengyuwang_5">
+						<div class="sys-card-head">
+							<h4>fengyuwang_5</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">個人網站第五代：純靜態多語言站 + 博客，按日期批次留檔設計迭代。</p>
+						<p class="sys-card-detail">目錄按日期批次組織（20260409-0434-CF/、20260610-1625-CF/ 等），含 assets/、blog/、md/、en/ zh-cn/ zh-hk/ 三語頁面與 node_modules，另帶 trash/ 與 .gitmodules，最新提交為 2026-06-25 的 Initial commit（整體快照式入庫）。它是網站迭代線裏緊跟 v4 之後的一代，與 fengyuwang_2、fengyuwang_4 及現主站 fengyuwang_com 共同記錄個人站的設計演進。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 83 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">結構同源</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="fengyuwang_com" data-slug="fengyuwang_com" data-domains="内容创作" data-source="local" data-name="fengyuwang_com">
+						<div class="sys-card-head">
+							<h4>fengyuwang_com</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">三語個人網站與博客主站：一個 git 倉庫跨機器跨系統，承載個人品牌與全部項目入口。</p>
+						<p class="sys-card-detail">現役主站由靜態 HTML 三語頁面（簡體/繁體/英文）加 Hugo 博客構成，README 明確寫出「三個領域 · 一套底層邏輯」的品牌敍事：市場學解決真需求洞察、投資理解企業價值與複利、技術做實現槓桿。站點同時是整個項目體系的對外導航——把 Jingxin、FengOffice、FengMedia、Search-King、FlyGo 等作品做成卡片與子菜單，並在改版計劃中排布 5DT-PD、AutoApply、UnifiedSearch 等項目。它是求職與個人 IP 的第一觸點，也是各項目關係的交匯節點（graph 中指向 10+ 個自有項目）。</p>
+						<div class="sys-card-meta">
+							<span>代碼 179,912 行</span>
+							<span>最近提交 2 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">關聯記錄 18 處</span></a>
+								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#unifiedsearch" title="UnifiedSearch · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">UnifiedSearch</span><span class="sys-rel-evi">關聯記錄 4 處</span></a>
+								<a class="sys-rel-chip" href="#open-fengmedia" title="Open-FengMedia 開源版 · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Open-FengMedia 開源版</span><span class="sys-rel-evi">關聯記錄 6 處</span></a>
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 14 處</span></a>
+								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 13 處</span></a>
+								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 7 處</span></a>
+								<a class="sys-rel-chip" href="#open-fengoffice" title="open-FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">open-FengOffice</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
+								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 6 處</span></a>
+								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 5 處</span></a>
+								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#5dt-pd" title="5dt-pd · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">5dt-pd</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Search-King</span><span class="sys-rel-evi">結構同源</span></span>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/fengyuwang_com" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="jingxin" data-slug="jingxin" data-domains="内容创作|工具与实验" data-source="local" data-name="jingxin">
+						<div class="sys-card-head">
+							<h4>Jingxin</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Dart</span></span>
+						</div>
+						<p class="sys-card-oneliner">用呼吸當唯一操作的平靜遊戲：沒有失敗、沒有分數，唯一進度是世界甦醒。</p>
+						<p class="sys-card-detail">《靜境》從冥想工具《靜心》進化而來，思路不是把冥想包裝成遊戲，而是把遊戲做成冥想：按住屏幕吸氣、鬆開呼氣，也可開麥克風用真實呼吸驅動，呼吸越平穩世界回應越美。內容做得很實：失眠之海、焦慮之淵、疲憊荒原、紛心霧林四個心境區域，七座星島、36 顆亂星同化、燈台重燃等機制，以及眠、惘兩位星獸的循環式終局，全部無地圖無任務、漫遊即抵達。技術上是 Flutter/Dart（約 2.6 萬行）並已打通 GitHub Pages 上線鏈路。它證明董事長能在內容與交互設計上做完整的原創產品，而非只做效率工具。</p>
+						<div class="sys-card-meta">
+							<span>代碼 26,110 行</span>
+							<span>最近提交 2 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Jingxin" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
 						<article class="sys-card" id="liugeepic" data-slug="liugeepic" data-domains="内容创作|工具与实验" data-source="remote" data-name="liugeepic">
 						<div class="sys-card-head">
 							<h4>LiuGeEpic</h4>
@@ -1762,52 +1765,6 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="fengmedia" data-slug="fengmedia" data-domains="内容创作" data-source="remote" data-name="fengmedia">
-						<div class="sys-card-head">
-							<h4>FengMedia</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">「王丰羽個人 IP 完整操作系統」的遠端私有倉：從人設到內容、工具到平台、代碼到運營。</p>
-						<p class="sys-card-detail">描述寫的是「從人設到內容，從工具到平台，從代碼到運營」，實際內容含 agent 配置（.claude/ AGENTS.md CLAUDE.md FENGMEM.md）、內容與項目管理（content/ projects/ published/）、流水線（pipeline/ daily-run.bat feng-daily/）、技能（skills/）、WebUI 與 QA，是內容生產系統的落盤形態。它另有脱敏開源版 Open-FengMedia（README 同源、官網 fengyuwang.com/zh-cn/fengmedia.html）與藍屏搶救備份 FengMedia-backup，三倉構成同一系統的私有/開源/備份三份。注意它與本機 FengMedia 目錄是同一系統的兩處落點（本機目錄 git remote 未命中自有 slug，故在自有清單裏各佔一條）。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 4 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#open-fengmedia" title="Open-FengMedia 開源版 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Open-FengMedia 開源版</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fengmedia-backup" title="FengMedia-backup · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengMedia-backup</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 源碼與文檔中同時出現（已雙向合併取較大值），屬於共現與登記，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼與文檔引用 20 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="fengcv" data-slug="fengcv" data-domains="内容创作" data-source="remote" data-name="fengcv">
-						<div class="sys-card-head">
-							<h4>FengCV</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">王丰羽的中英雙語簡歷倉：HTML 排版 + 多版本 PDF，與 Resume 倉同源。</p>
-						<p class="sys-card-detail">倉庫含 serve.bat 本地預覽、src/generate_pdfs.py 批量生成 PDF、resume_standard.html/resume_comprehensive.pdf 以及綜合、營銷、技術、投資四版 PDF，結構與本機 Resume 倉一致（同為 A4 單文件 HTML + AGENTS.md 編輯規範），並帶 .claude/.zcode/.vscode 等 AI 協作配置與 FENGMEM 記憶文件。它是簡歷體系在遠端的另一份落點，最新提交在 2026-09-09 重新生成了全套 PDF 與索嗨版/創新版。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 7 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
 						<article class="sys-card" id="manifesto-2026" data-slug="manifesto-2026" data-domains="内容创作|知识与人机协作" data-source="remote" data-name="manifesto-2026">
 						<div class="sys-card-head">
 							<h4>Manifesto-2026</h4>
@@ -1824,6 +1781,71 @@ END DEAD CODE */}</style>
 						</div>
 						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Manifesto-2026" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="open-fengmedia" data-slug="open-fengmedia" data-domains="内容创作|自动化执行" data-source="local" data-name="open-fengmedia 開源版">
+						<div class="sys-card-head">
+							<h4>Open-FengMedia 開源版</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">財經內容操作系統的脱敏開源版：人設、選題、寫稿、配音、渲染、發佈、覆盤收進一條流水線。</p>
+						<p class="sys-card-detail">公開倉對外身份是「財經內容操作系統」：把人設、選題、寫稿、配圖、配音、渲染、發佈、覆盤收進一條流水線，給做財經內容、又想用代碼把流程固化下來的個人創作者用。技術形態是四塊——content/personas 裏的客觀/平靜/暴躁三模式人設（模式只決定翻譯層怎麼講，不決定論證層講什麼）、pipeline/ 的 step0→step8 生產流水線（含 B 線剪輯）、TypeScript/Express 的本地控制枱 webui（默認 23457 端口），以及 /publish、/rage-mode、/fetch-topics 等快捷指令，另附 AGPLv3 許可與全部佔位化的示例配置。它在體系裏是私有版 FengMedia 的對外脱敏鏡像，與 Open-FengInvest、Open-FlyGo、Open-FengOffice、Open-FengOrchestrator 同屬公開五倉，官網三語 fengmedia 頁的「查看 GitHub 倉庫」按鈕就指向它。當前狀態是持續在維護：2026-09-16 剛按裁決撤下自主進化方法論與運行態數據、把 telemetry key 佔位化並清掉懸空引用，默認分支 main 與同步分支 master 並存。需要説明的是本機 C:\Projects\Open-FengMedia 只是一個沒拉到內容的空克隆（.git 裏無 HEAD、無任何文件），所以本機看不到代碼，本次取證全部來自遠端。</p>
+						<div class="sys-card-meta">
+							<span>提交時間未記錄</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">關聯記錄 3 處</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-fengmedia" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="resume" data-slug="resume" data-domains="内容创作|自动化执行" data-source="local" data-name="resume">
+						<div class="sys-card-head">
+							<h4>Resume</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">面向香港求職市場的多語言簡歷工廠：單文件 A4 HTML，一次生成通用/營銷/技術/投資四版 PDF。</p>
+						<p class="sys-card-detail">用單文件 HTML 做 A4 排版優化，配 serve.bat 本地預覽與 python src/generate_pdfs.py 批量產出四個版本（綜合、marketing、tech、investment）的 PDF，並帶 AGENTS.md 約定 AI 編輯規則、核心敍事與翻譯標準。它不是一份靜態簡歷，而是隨項目迭代持續更新的「能力台賬」——作品集頁面會把 7zEvery、CopyEvery、UnifiedSearch 等自有項目按類別收錄進去。graph 中它是被引用最多的自有項目（job-hunter 101 處、CCHH 77 處），説明求職與對外展示是多個項目的共同出口；遠端另有同源倉 FengCV。</p>
+						<div class="sys-card-meta">
+							<span>代碼 8,442 行</span>
+							<span>最近提交 47 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">內容創作</span><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengcv" title="FengCV · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengCV</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
+								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengoffice" title="FengOffice · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOffice</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengcrm" title="FengCRM · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengCRM</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 101 處</span></a>
+								<a class="sys-rel-chip" href="#cchh" title="CCHH · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">CCHH</span><span class="sys-rel-evi">源碼引用 77 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-auto-fill" title="Private-feng-auto-fill · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-auto-fill</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#lecoofan" title="lecoofan · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lecoofan</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#llm-text-processor" title="llm-text-processor · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">llm-text-processor</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">AIExport</span><span class="sys-rel-evi">結構同源</span></span>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Auto LinkedIn</span><span class="sys-rel-evi">結構同源</span></span>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Qiheng</span><span class="sys-rel-evi">結構同源</span></span>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Search-King</span><span class="sys-rel-evi">結構同源</span></span>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="vids" data-slug="vids" data-domains="内容创作" data-source="remote" data-name="vids">
 						<div class="sys-card-head">
@@ -1848,33 +1870,54 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Vids" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="fengyuwang_5" data-slug="fengyuwang_5" data-domains="内容创作" data-source="remote" data-name="fengyuwang_5">
-						<div class="sys-card-head">
-							<h4>fengyuwang_5</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">個人網站第五代：純靜態多語言站 + 博客，按日期批次留檔設計迭代。</p>
-						<p class="sys-card-detail">目錄按日期批次組織（20260409-0434-CF/、20260610-1625-CF/ 等），含 assets/、blog/、md/、en/ zh-cn/ zh-hk/ 三語頁面與 node_modules，另帶 trash/ 與 .gitmodules，最新提交為 2026-06-25 的 Initial commit（整體快照式入庫）。它是網站迭代線裏緊跟 v4 之後的一代，與 fengyuwang_2、fengyuwang_4 及現主站 fengyuwang_com 共同記錄個人站的設計演進。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 83 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">結構同源</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
 					</div>
 				</details></section>
 				<section class="sys-group" data-group="基础设施与编排">
 					<details class="sys-fold" open><summary><h3>基礎設施與編排 <span class="sys-group-count">歸入本組 15 個</span></h3></summary>
 					<div class="sys-cards">
+						<article class="sys-card" id="android-linux-server" data-slug="android-linux-server" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="android 無 root linux 伺服器方案">
+						<div class="sys-card-head">
+							<h4>Android 無 root Linux 伺服器方案</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
+						</div>
+						<p class="sys-card-oneliner">把閒置 Android 手機在不用 root 的前提下，改造成可 SSH 遠程操作、帶圖形桌面與自愈機制的 Linux 伺服器。</p>
+						<p class="sys-card-detail">這份倉庫回答的是「抽屜裏的舊安卓手機還能怎麼用」：在不 root 的前提下把它變成一台能遠程 SSH 登錄、能跑 Python 與 cron、還能投出完整 XFCE4 圖形桌面的 Linux 伺服器，從而避開變磚、丟保修和銀行 App 檢測的風險。全部內容都是實測記錄，實測設備為努比亞 M153（Android 16 / 8 核 ARM64 / 14GB RAM / 459GB 存儲），docs/ 下十章依次講 Termux 選型與 Tailscale 組網、sshd 免密登錄、清華鏡像源換源、XFCE4 + TigerVNC、ADB 救援、故障排查與無 root 能力邊界。真正的難點是息屏保活——用音頻焦點方案騙過 Android 的凍結機制讓 SSH 在鎖屏後存活，再配 4 層冗餘自愈做到進程被殺 5 秒內自動恢復，scripts/ 下的 dt、watchdog、keepalive、rescue-via-adb 就是這套機制的落地。它還專門寫了在手機上跑 AI 編碼 Agent 的實測結論（首選 Hermes，Claude Code 也能裝但認證需協議轉換），所以它在體系裏的位置是「用舊硬件補一台常駐 Linux 節點」的基建手冊，2026-09-16 新建並當天連續迭代出 dt 一鍵開關。</p>
+						<div class="sys-card-meta">
+							<span>最近提交：今天</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/android-linux-server" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="bsod-diagnosis-20260914" data-slug="bsod-diagnosis-20260914" data-domains="基础设施与编排|知识与人机协作" data-source="remote" data-name="bsod-diagnosis-20260914">
+						<div class="sys-card-head">
+							<h4>bsod-diagnosis-20260914</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">2026-09-14 內存物理故障的完整診斷報告與 Git 資產搶救清單。</p>
+						<p class="sys-card-detail">針對神舟 NH5xJNX（HASEE，RTX 3070 Laptop / Intel UHD 730）的連續藍屏，結論先行：兩條原廠 Crucial DDR4-3200 8GB 內存中至少一條發生物理性位翻轉，Windows 內存診斷確認「檢測到硬件錯誤」，屬 5 年自然老化而非人為損壞——整機因此進入不可信狀態。報告內容按時間線還原事件、給出內存診斷證據與處置手冊，並附 Git 資產搶救清單（把尚未推送的工作固化成倉庫）。它不只是一份故障報告，而是那次故障後一整套「先保命再修機」行動的索引，與同日搶救出的多個快照倉直接對應。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 2 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">知識與人機協作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#liugeepic" title="LiuGeEpic · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">LiuGeEpic</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#ace-step-local-patches" title="ace-step-local-patches · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">ace-step-local-patches</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengmedia-backup" title="FengMedia-backup · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengMedia-backup</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#unifiedsearch-snapshot" title="unifiedsearch-snapshot · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">unifiedsearch-snapshot</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#web-app-template-v01" title="web-app-template-v01 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">web-app-template-v01</span><span class="sys-rel-evi">結構同源</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="cchh" data-slug="cchh" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="cchh">
 						<div class="sys-card-head">
 							<h4>CCHH</h4>
@@ -1898,35 +1941,6 @@ END DEAD CODE */}</style>
 							</span>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/CCHH" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="fengcloud" data-slug="fengcloud" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="flygo">
-						<div class="sys-card-head">
-							<h4>FlyGo</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
-						</div>
-						<p class="sys-card-oneliner">把閒置 Windows 電腦變成完整 NAS：文件/影視/相冊/多向同步/遠程/容器，面板一面總覽。</p>
-						<p class="sys-card-detail">技術本質是「任意文件夾的多向同步 + 多副本 + 隨身取用」：連接走 Tailscale、同步走 Syncthing，不自研引擎；四層架構為 Rust(axum) 單 exe 節點面板（:8388）、手機 APK（Kotlin Multiplatform，fork 自 PlainApp）、控制面（身份/激活碼/訂閲狀態機/心跳，只收元數據）、靜態官網。商業模型是軟件 AGPL 免費、服務訂閲收費（控制面是收錢的地方），expired 只停服務、絕不停本地功能與已有數據。項目帶完整的 UI 設計憲法、商業計劃書 v5.0 與大量驗收報告，是董事長從工具走向產品與商業模式的代表項目，並有脱敏開源版 Open-FlyGo。</p>
-						<div class="sys-card-meta">
-							<span>代碼 35,489 行</span>
-							<span>最近提交 4 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 在 README、文檔或配置中的登記與引用，屬於文檔層面的關聯，不等於運行時依賴。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">文檔引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 11 處</span></a>
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">AIExport</span><span class="sys-rel-evi">結構同源</span></span>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">disk-cleanup</span><span class="sys-rel-evi">結構同源</span></span>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="fengasni" data-slug="fengasni" data-domains="基础设施与编排|知识与人机协作" data-source="local" data-name="fengasni">
 						<div class="sys-card-head">
@@ -1972,6 +1986,58 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
+						<article class="sys-card" id="fengcloud" data-slug="fengcloud" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="flygo">
+						<div class="sys-card-head">
+							<h4>FlyGo</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
+						</div>
+						<p class="sys-card-oneliner">把閒置 Windows 電腦變成完整 NAS：文件/影視/相冊/多向同步/遠程/容器，面板一面總覽。</p>
+						<p class="sys-card-detail">技術本質是「任意文件夾的多向同步 + 多副本 + 隨身取用」：連接走 Tailscale、同步走 Syncthing，不自研引擎；四層架構為 Rust(axum) 單 exe 節點面板（:8388）、手機 APK（Kotlin Multiplatform，fork 自 PlainApp）、控制面（身份/激活碼/訂閲狀態機/心跳，只收元數據）、靜態官網。商業模型是軟件 AGPL 免費、服務訂閲收費（控制面是收錢的地方），expired 只停服務、絕不停本地功能與已有數據。項目帶完整的 UI 設計憲法、商業計劃書 v5.0 與大量驗收報告，是董事長從工具走向產品與商業模式的代表項目，並有脱敏開源版 Open-FlyGo。</p>
+						<div class="sys-card-meta">
+							<span>代碼 35,489 行</span>
+							<span>最近提交 4 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 在 README、文檔或配置中的登記與引用，屬於文檔層面的關聯，不等於運行時依賴。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">文檔引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 11 處</span></a>
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">AIExport</span><span class="sys-rel-evi">結構同源</span></span>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">disk-cleanup</span><span class="sys-rel-evi">結構同源</span></span>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="fengdiskcleanup" data-slug="fengdiskcleanup" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="disk-cleanup">
+						<div class="sys-card-head">
+							<h4>disk-cleanup</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">C 盤編程機清理作戰手冊：只讀掃描器出候選清單，人批准後才刪，絕不自動動手。</p>
+						<p class="sys-card-detail">沉澱 2026-08-20 起多輪實戰清理的經驗（41.6 GB → 105.9 GB 可用），核心是把「清理」制度化：鐵律規定 AI 只能掃描、分類、報預算，任何刪除必須逐項經人類批准，因為誤刪不可逆。倉庫提供純只讀的 scan.py（無任何刪除邏輯）與路徑清單，用 A 純垃圾 / B 可再生構建物等分類對應不同處置動作。它是董事長基礎設施自維護能力的一個小切口，和 FlyGo、Rust 構建產物、APK 舊包等實際佔用強相關。</p>
+						<div class="sys-card-meta">
+							<span>代碼 330 行</span>
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="fengorchestrator" data-slug="fengorchestrator" data-domains="基础设施与编排" data-source="local" data-name="fengorchestrator">
 						<div class="sys-card-head">
 							<h4>FengOrchestrator</h4>
@@ -2004,38 +2070,15 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="fengdiskcleanup" data-slug="fengdiskcleanup" data-domains="基础设施与编排|工具与实验" data-source="local" data-name="disk-cleanup">
+						<article class="sys-card" id="flygo" data-slug="flygo" data-domains="基础设施与编排" data-source="remote" data-name="flygo">
 						<div class="sys-card-head">
-							<h4>disk-cleanup</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+							<h4>FlyGo</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
 						</div>
-						<p class="sys-card-oneliner">C 盤編程機清理作戰手冊：只讀掃描器出候選清單，人批准後才刪，絕不自動動手。</p>
-						<p class="sys-card-detail">沉澱 2026-08-20 起多輪實戰清理的經驗（41.6 GB → 105.9 GB 可用），核心是把「清理」制度化：鐵律規定 AI 只能掃描、分類、報預算，任何刪除必須逐項經人類批准，因為誤刪不可逆。倉庫提供純只讀的 scan.py（無任何刪除邏輯）與路徑清單，用 A 純垃圾 / B 可再生構建物等分類對應不同處置動作。它是董事長基礎設施自維護能力的一個小切口，和 FlyGo、Rust 構建產物、APK 舊包等實際佔用強相關。</p>
+						<p class="sys-card-oneliner">飛狗項目的遠端私有倉：架構文檔與配置文件，敏感信息已剔除。</p>
+						<p class="sys-card-detail">描述為「FengCloud private config (sensitive excluded)」，遠端倉庫含 .githooks/、AGENTS.md、DESIGN.md、FENGMEM.md、Version、control-plane/、docs/、logo/、panel/、release/、scripts/、site/、webcli/ 與商業計劃書.md，是本機 FlyGo 工作區的遠端落點（私有，只保留可上傳部分）。它有脱敏開源版 Open-FlyGo（同一四層架構，附預編譯下載與 Defender 誤報説明）。兩倉共同承載飛狗從技術方案到商業模型（AGPL 軟件免費 + 控制面訂閲）的完整表達。</p>
 						<div class="sys-card-meta">
-							<span>代碼 330 行</span>
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="skill-tailscale-serve" data-slug="skill-tailscale-serve" data-domains="基础设施与编排" data-source="local" data-name="skill-tailscale-serve">
-						<div class="sys-card-head">
-							<h4>skill-tailscale-serve</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">把本機 127.0.0.1 的 Web 服務安全暴露給手機/Tailnet 設備的 skill 封裝。</p>
-						<p class="sys-card-detail">只走 Tailnet 內訪問，不開 Funnel、不暴露任何公網端口，最終交付一個手機可直接打開的 https://&lt;設備名&gt;.&lt;tailnet域名&gt;/ 地址。Skill 內容覆蓋前置檢查、端口盤點、serve 配置決策（路徑前綴還是獨立 HTTPS 端口）、trustedHosts 處理，以及證書/頁面/API/WebSocket/歷史數據/工作目錄的完整驗證清單和安全守則。它是 FengOrchestrator 觀景台實現「Tailnet 遠程直連」時沉澱下來的可複用技能，本機倉庫以 SKILL.md 為唯一實質內容。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 31 天前</span>
+							<span>最近提交 4 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
@@ -2044,27 +2087,13 @@ END DEAD CODE */}</style>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">關聯記錄 18 處</span></a>
+								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">disk-cleanup</span><span class="sys-rel-evi">結構同源</span></span>
 							</span>
 						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/skill-tailscale-serve" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="android-linux-server" data-slug="android-linux-server" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="android 無 root linux 伺服器方案">
-						<div class="sys-card-head">
-							<h4>Android 無 root Linux 伺服器方案</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Shell</span></span>
-						</div>
-						<p class="sys-card-oneliner">把閒置 Android 手機在不用 root 的前提下，改造成可 SSH 遠程操作、帶圖形桌面與自愈機制的 Linux 伺服器。</p>
-						<p class="sys-card-detail">這份倉庫回答的是「抽屜裏的舊安卓手機還能怎麼用」：在不 root 的前提下把它變成一台能遠程 SSH 登錄、能跑 Python 與 cron、還能投出完整 XFCE4 圖形桌面的 Linux 伺服器，從而避開變磚、丟保修和銀行 App 檢測的風險。全部內容都是實測記錄，實測設備為努比亞 M153（Android 16 / 8 核 ARM64 / 14GB RAM / 459GB 存儲），docs/ 下十章依次講 Termux 選型與 Tailscale 組網、sshd 免密登錄、清華鏡像源換源、XFCE4 + TigerVNC、ADB 救援、故障排查與無 root 能力邊界。真正的難點是息屏保活——用音頻焦點方案騙過 Android 的凍結機制讓 SSH 在鎖屏後存活，再配 4 層冗餘自愈做到進程被殺 5 秒內自動恢復，scripts/ 下的 dt、watchdog、keepalive、rescue-via-adb 就是這套機制的落地。它還專門寫了在手機上跑 AI 編碼 Agent 的實測結論（首選 Hermes，Claude Code 也能裝但認證需協議轉換），所以它在體系裏的位置是「用舊硬件補一台常駐 Linux 節點」的基建手冊，2026-09-16 新建並當天連續迭代出 dt 一鍵開關。</p>
-						<div class="sys-card-meta">
-							<span>最近提交：今天</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/android-linux-server" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="open-fengorchestrator" data-slug="open-fengorchestrator" data-domains="基础设施与编排" data-source="remote" data-name="open-fengorchestrator">
 						<div class="sys-card-head">
@@ -2110,31 +2139,66 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FlyGo" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="bsod-diagnosis-20260914" data-slug="bsod-diagnosis-20260914" data-domains="基础设施与编排|知识与人机协作" data-source="remote" data-name="bsod-diagnosis-20260914">
+						<article class="sys-card" id="open-websearch" data-slug="open-websearch" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="open-websearch">
 						<div class="sys-card-head">
-							<h4>bsod-diagnosis-20260914</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+							<h4>open-webSearch</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
 						</div>
-						<p class="sys-card-oneliner">2026-09-14 內存物理故障的完整診斷報告與 Git 資產搶救清單。</p>
-						<p class="sys-card-detail">針對神舟 NH5xJNX（HASEE，RTX 3070 Laptop / Intel UHD 730）的連續藍屏，結論先行：兩條原廠 Crucial DDR4-3200 8GB 內存中至少一條發生物理性位翻轉，Windows 內存診斷確認「檢測到硬件錯誤」，屬 5 年自然老化而非人為損壞——整機因此進入不可信狀態。報告內容按時間線還原事件、給出內存診斷證據與處置手冊，並附 Git 資產搶救清單（把尚未推送的工作固化成倉庫）。它不只是一份故障報告，而是那次故障後一整套「先保命再修機」行動的索引，與同日搶救出的多個快照倉直接對應。</p>
+						<p class="sys-card-oneliner">多引擎 MCP 伺服器 + CLI + 本地守護進程，給 agent 做免 Key 的聯網搜索與取正文。</p>
+						<p class="sys-card-detail">上游項目提供 MCP server、CLI 與 local daemon 三種形態，可配合 skill 引導的 agent 工作流做實時網頁搜索與內容抓取，無需任何 API Key。本倉是 fork（上游 Aas-ee/open-webSearch），最近一次實質性改動是把 Exa 抓取替換為官方 MCP 端點。它在體系中的實際角色是 agent 的聯網手腳：FengASNI 的 Profile 與 ProjectMap 把它登記為在用的搜索服務（配置了 streamableHttp transport），與自研的 Search King 分工互補——一個走 MCP 標準協議、一個走 Playwright 多源併發。</p>
 						<div class="sys-card-meta">
-							<span>最近提交 2 天前</span>
+							<span>最近提交 65 天前</span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">知識與人機協作</span></span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
 						</div>
 						<div class="sys-row">
 							<span class="sys-row-label">關係</span>
 							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#liugeepic" title="LiuGeEpic · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">LiuGeEpic</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#ace-step-local-patches" title="ace-step-local-patches · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">ace-step-local-patches</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fengmedia-backup" title="FengMedia-backup · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengMedia-backup</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#unifiedsearch-snapshot" title="unifiedsearch-snapshot · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">unifiedsearch-snapshot</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#web-app-template-v01" title="web-app-template-v01 · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">web-app-template-v01</span><span class="sys-rel-evi">結構同源</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">關聯記錄 9 處</span></a>
 							</span>
 						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-webSearch" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="openclaw-config" data-slug="openclaw-config" data-domains="基础设施与编排" data-source="remote" data-name="openclaw-config">
+						<div class="sys-card-head">
+							<h4>openclaw-config</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">OpenClaw 網關與工作區的配置備份：agent、設備、流程、插件與身份一整套。</p>
+						<p class="sys-card-detail">倉庫是 OpenClaw 的配置快照，含 openclaw.json、agents/、devices/、flows/、identity/、workspace/、workspace-attestations/、plugin-skills/、plugins/、skill-workshop/、qqbot/，以及 start-gateway.ps1/.vbs 與 gateway.cmd 啓動腳本，最新提交把 workspace 一併納入。它是「換機器/重裝不掉配置」的個人實踐，與 FengASNI 的多 Profile 思路同源；在 Open-FengOrchestrator 的棋子清單裏 OpenClaw 也是候選 coding agent 之一。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 89 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="skill-tailscale-serve" data-slug="skill-tailscale-serve" data-domains="基础设施与编排" data-source="local" data-name="skill-tailscale-serve">
+						<div class="sys-card-head">
+							<h4>skill-tailscale-serve</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">把本機 127.0.0.1 的 Web 服務安全暴露給手機/Tailnet 設備的 skill 封裝。</p>
+						<p class="sys-card-detail">只走 Tailnet 內訪問，不開 Funnel、不暴露任何公網端口，最終交付一個手機可直接打開的 https://&lt;設備名&gt;.&lt;tailnet域名&gt;/ 地址。Skill 內容覆蓋前置檢查、端口盤點、serve 配置決策（路徑前綴還是獨立 HTTPS 端口）、trustedHosts 處理，以及證書/頁面/API/WebSocket/歷史數據/工作目錄的完整驗證清單和安全守則。它是 FengOrchestrator 觀景台實現「Tailnet 遠程直連」時沉澱下來的可複用技能，本機倉庫以 SKILL.md 為唯一實質內容。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 31 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">結構同源</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/skill-tailscale-serve" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
 						<article class="sys-card" id="web-app-template" data-slug="web-app-template" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="web-app-template">
 						<div class="sys-card-head">
@@ -2175,145 +2239,11 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
-						<article class="sys-card" id="flygo" data-slug="flygo" data-domains="基础设施与编排" data-source="remote" data-name="flygo">
-						<div class="sys-card-head">
-							<h4>FlyGo</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Rust</span></span>
-						</div>
-						<p class="sys-card-oneliner">飛狗項目的遠端私有倉：架構文檔與配置文件，敏感信息已剔除。</p>
-						<p class="sys-card-detail">描述為「FengCloud private config (sensitive excluded)」，遠端倉庫含 .githooks/、AGENTS.md、DESIGN.md、FENGMEM.md、Version、control-plane/、docs/、logo/、panel/、release/、scripts/、site/、webcli/ 與商業計劃書.md，是本機 FlyGo 工作區的遠端落點（私有，只保留可上傳部分）。它有脱敏開源版 Open-FlyGo（同一四層架構，附預編譯下載與 Defender 誤報説明）。兩倉共同承載飛狗從技術方案到商業模型（AGPL 軟件免費 + 控制面訂閲）的完整表達。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 4 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#open-flygo" title="Open-FlyGo · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Open-FlyGo</span><span class="sys-rel-evi">結構同源</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">關聯記錄 18 處</span></a>
-								<a class="sys-rel-chip" href="#jingxin" title="Jingxin · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">Jingxin</span><span class="sys-rel-evi">關聯記錄 2 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">disk-cleanup</span><span class="sys-rel-evi">結構同源</span></span>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="open-websearch" data-slug="open-websearch" data-domains="基础设施与编排|工具与实验" data-source="remote" data-name="open-websearch">
-						<div class="sys-card-head">
-							<h4>open-webSearch</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">TypeScript</span></span>
-						</div>
-						<p class="sys-card-oneliner">多引擎 MCP 伺服器 + CLI + 本地守護進程，給 agent 做免 Key 的聯網搜索與取正文。</p>
-						<p class="sys-card-detail">上游項目提供 MCP server、CLI 與 local daemon 三種形態，可配合 skill 引導的 agent 工作流做實時網頁搜索與內容抓取，無需任何 API Key。本倉是 fork（上游 Aas-ee/open-webSearch），最近一次實質性改動是把 Exa 抓取替換為官方 MCP 端點。它在體系中的實際角色是 agent 的聯網手腳：FengASNI 的 Profile 與 ProjectMap 把它登記為在用的搜索服務（配置了 streamableHttp transport），與自研的 Search King 分工互補——一個走 MCP 標準協議、一個走 Playwright 多源併發。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 65 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">關聯記錄 9 處</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/open-webSearch" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="openclaw-config" data-slug="openclaw-config" data-domains="基础设施与编排" data-source="remote" data-name="openclaw-config">
-						<div class="sys-card-head">
-							<h4>openclaw-config</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">OpenClaw 網關與工作區的配置備份：agent、設備、流程、插件與身份一整套。</p>
-						<p class="sys-card-detail">倉庫是 OpenClaw 的配置快照，含 openclaw.json、agents/、devices/、flows/、identity/、workspace/、workspace-attestations/、plugin-skills/、plugins/、skill-workshop/、qqbot/，以及 start-gateway.ps1/.vbs 與 gateway.cmd 啓動腳本，最新提交把 workspace 一併納入。它是「換機器/重裝不掉配置」的個人實踐，與 FengASNI 的多 Profile 思路同源；在 Open-FengOrchestrator 的棋子清單裏 OpenClaw 也是候選 coding agent 之一。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 89 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">基礎設施與編排</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
 					</div>
 				</details></section>
 				<section class="sys-group" data-group="知识与人机协作">
 					<details class="sys-fold" open><summary><h3>知識與人機協作 <span class="sys-group-count">歸入本組 7 個</span></h3></summary>
 					<div class="sys-cards">
-						<article class="sys-card" id="private-aiexport" data-slug="private-aiexport" data-domains="知识与人机协作|内容创作" data-source="local" data-name="aiexport">
-						<div class="sys-card-head">
-							<h4>AIExport</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">JavaScript</span></span>
-						</div>
-						<p class="sys-card-oneliner">把元寶、豆包、DeepSeek、Gemini 上千篇長對話全量導出歸檔，並逐篇精讀提煉內容素材。</p>
-						<p class="sys-card-detail">這是董事長所有 AI 對話的自建檔案庫：按 Agent 分域（yuanbao / doubao / deepseek / gemini / local_chats），每個域自帶 README、抓取腳本與清洗邏輯，合計 2027 篇、約 9190 萬字符。技術上用瀏覽器持久化 profile 抓自家賬號的會話接口，解決了分頁截斷（Home 鍵只翻到渲染頂）、斷點續傳與風控節奏問題，並配一個零依賴只讀 Web 查看器（webui/server.py）。它的真實用途不只是備份：todo.md 裏維護着一份按字數排序的精讀書單，逐篇產出「核心觀點 / 金句 / 可發內容」，直接餵給內容線。因此它同時是知識資產庫和內容選題的礦脈。</p>
-						<div class="sys-card-meta">
-							<span>代碼 40,427 行</span>
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengvault" title="FengVault · 在 README、文檔或配置中的登記與引用，屬於文檔層面的關聯，不等於運行時依賴。"><span class="sys-rel-name">FengVault</span><span class="sys-rel-evi">文檔引用 11 處</span></a>
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="lessons" data-slug="lessons" data-domains="知识与人机协作|基础设施与编排" data-source="local" data-name="lessons">
-						<div class="sys-card-head">
-							<h4>lessons</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">把踩過的坑寫成一條條可檢索的規範：Docker 持久化、PowerShell BOM、密鑰泄漏、Git 清理等。</p>
-						<p class="sys-card-detail">SPEC.md 定義得很剋制：一個文件一個話題，文件名用 {YYYY-MM-DD}-{簡短英文主題}.md，禁止把多個不相關問題塞進同一篇（並附反例）。現有篇目覆蓋 api-key 泄漏事故與密鑰管理、docker 容器文件持久化與 entrypoint 行為、Git 歷史中抹除密鑰、公開倉安全檢查、PowerShell JSON BOM、配置改完是否真生效的驗證方法，以及奇衡管線的覆盤。它是董事長體系裏少見的「負面知識資產」——把事故轉成制度，供人和 AI 後續檢索避坑。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 60 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">基礎設施與編排</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 5 處</span></a>
-								<a class="sys-rel-chip" href="#fengyuwang_4" title="fengyuwang_4 · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_4</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/lessons" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
-						<article class="sys-card" id="free-token-research" data-slug="free-token-research" data-domains="知识与人机协作|工具与实验" data-source="remote" data-name="free-token-research">
-						<div class="sys-card-head">
-							<h4>free-token-research</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">JavaScript</span></span>
-						</div>
-						<p class="sys-card-oneliner">2026-09 時點的免費大模型 Token 生態調研：誰在燒錢補貼、錢流到哪一層、情報源在哪。</p>
-						<p class="sys-card-detail">倉庫是一份研究筆記集：情報源總推薦（訂閲方案 + 對標模板 + 執行三步）、孫學·免費 Token 的真正流向（機制與三層結構）、免費 Token 渠道調研最終版（公益站當日探活 + 官方免費層原文核實）、補貼方生態挖礦報告（補貼強度排行與防反薅清單）、中文/國際情報源名單（linux.do、TG、公眾號、X、GitHub 具體賬號）、聚合路由器調研與無審查模型渠道等。技術上另有 scripts/ 與 .github/ 做定期快照刷新，最新提交即為 data refresh。它把「白嫖算力」做成了有證據鏈的持續研究。</p>
-						<div class="sys-card-meta">
-							<span>最近提交：今天</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/free-token-research" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
 						<article class="sys-card" id="agents-project" data-slug="agents-project" data-domains="知识与人机协作" data-source="remote" data-name="agents-project">
 						<div class="sys-card-head">
 							<h4>agents-project</h4>
@@ -2353,28 +2283,6 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/course-projects" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
-						<article class="sys-card" id="marketing-portfolio" data-slug="marketing-portfolio" data-domains="知识与人机协作|内容创作" data-source="remote" data-name="marketing-portfolio">
-						<div class="sys-card-head">
-							<h4>marketing-portfolio</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">把營銷能力按維度整理成作品集：市場研究、策略、品牌系統、整合傳播、客户運營一欄一項。</p>
-						<p class="sys-card-detail">README 用一張表把能力與作品對齊：市場研究對應 Apple 中國 iPhone 銷量（MKT4625）、市場策略對應 HONOR 歐洲重定位、品牌系統對應 Vanytra 小紅書、整合傳播對應 POP MART IMC、客户運營對應 Burberry NEOCRM、合規對應法學與數據隱私。它的用途是求職與對外證明「營銷本科背景不是空話」，與 course-projects 收錄同一批課程交付物，一個是按能力組織的索引、一個是按課程歸檔的原文，互為表裏。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 11 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#course-projects" title="course-projects · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">course-projects</span><span class="sys-rel-evi">結構同源</span></a>
-							</span>
-						</div>
-						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/marketing-portfolio" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
-					</article>
 						<article class="sys-card" id="fengvault" data-slug="fengvault" data-domains="知识与人机协作" data-source="remote" data-name="fengvault">
 						<div class="sys-card-head">
 							<h4>FengVault</h4>
@@ -2397,113 +2305,103 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
+						<article class="sys-card" id="free-token-research" data-slug="free-token-research" data-domains="知识与人机协作|工具与实验" data-source="remote" data-name="free-token-research">
+						<div class="sys-card-head">
+							<h4>free-token-research</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">JavaScript</span></span>
+						</div>
+						<p class="sys-card-oneliner">2026-09 時點的免費大模型 Token 生態調研：誰在燒錢補貼、錢流到哪一層、情報源在哪。</p>
+						<p class="sys-card-detail">倉庫是一份研究筆記集：情報源總推薦（訂閲方案 + 對標模板 + 執行三步）、孫學·免費 Token 的真正流向（機制與三層結構）、免費 Token 渠道調研最終版（公益站當日探活 + 官方免費層原文核實）、補貼方生態挖礦報告（補貼強度排行與防反薅清單）、中文/國際情報源名單（linux.do、TG、公眾號、X、GitHub 具體賬號）、聚合路由器調研與無審查模型渠道等。技術上另有 scripts/ 與 .github/ 做定期快照刷新，最新提交即為 data refresh。它把「白嫖算力」做成了有證據鏈的持續研究。</p>
+						<div class="sys-card-meta">
+							<span>最近提交：今天</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<p class="sys-card-none">報告中未記錄與其他項目的關係</p>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/free-token-research" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="lessons" data-slug="lessons" data-domains="知识与人机协作|基础设施与编排" data-source="local" data-name="lessons">
+						<div class="sys-card-head">
+							<h4>lessons</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">把踩過的坑寫成一條條可檢索的規範：Docker 持久化、PowerShell BOM、密鑰泄漏、Git 清理等。</p>
+						<p class="sys-card-detail">SPEC.md 定義得很剋制：一個文件一個話題，文件名用 {YYYY-MM-DD}-{簡短英文主題}.md，禁止把多個不相關問題塞進同一篇（並附反例）。現有篇目覆蓋 api-key 泄漏事故與密鑰管理、docker 容器文件持久化與 entrypoint 行為、Git 歷史中抹除密鑰、公開倉安全檢查、PowerShell JSON BOM、配置改完是否真生效的驗證方法，以及奇衡管線的覆盤。它是董事長體系裏少見的「負面知識資產」——把事故轉成制度，供人和 AI 後續檢索避坑。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">基礎設施與編排</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengyuwang_com" title="fengyuwang_com · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_com</span><span class="sys-rel-evi">源碼引用 5 處</span></a>
+								<a class="sys-rel-chip" href="#fengyuwang_4" title="fengyuwang_4 · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">fengyuwang_4</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/lessons" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="marketing-portfolio" data-slug="marketing-portfolio" data-domains="知识与人机协作|内容创作" data-source="remote" data-name="marketing-portfolio">
+						<div class="sys-card-head">
+							<h4>marketing-portfolio</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">把營銷能力按維度整理成作品集：市場研究、策略、品牌系統、整合傳播、客户運營一欄一項。</p>
+						<p class="sys-card-detail">README 用一張表把能力與作品對齊：市場研究對應 Apple 中國 iPhone 銷量（MKT4625）、市場策略對應 HONOR 歐洲重定位、品牌系統對應 Vanytra 小紅書、整合傳播對應 POP MART IMC、客户運營對應 Burberry NEOCRM、合規對應法學與數據隱私。它的用途是求職與對外證明「營銷本科背景不是空話」，與 course-projects 收錄同一批課程交付物，一個是按能力組織的索引、一個是按課程歸檔的原文，互為表裏。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#course-projects" title="course-projects · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">course-projects</span><span class="sys-rel-evi">結構同源</span></a>
+							</span>
+						</div>
+						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/marketing-portfolio" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
+					</article>
+						<article class="sys-card" id="private-aiexport" data-slug="private-aiexport" data-domains="知识与人机协作|内容创作" data-source="local" data-name="aiexport">
+						<div class="sys-card-head">
+							<h4>AIExport</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">JavaScript</span></span>
+						</div>
+						<p class="sys-card-oneliner">把元寶、豆包、DeepSeek、Gemini 上千篇長對話全量導出歸檔，並逐篇精讀提煉內容素材。</p>
+						<p class="sys-card-detail">這是董事長所有 AI 對話的自建檔案庫：按 Agent 分域（yuanbao / doubao / deepseek / gemini / local_chats），每個域自帶 README、抓取腳本與清洗邏輯，合計 2027 篇、約 9190 萬字符。技術上用瀏覽器持久化 profile 抓自家賬號的會話接口，解決了分頁截斷（Home 鍵只翻到渲染頂）、斷點續傳與風控節奏問題，並配一個零依賴只讀 Web 查看器（webui/server.py）。它的真實用途不只是備份：todo.md 裏維護着一份按字數排序的精讀書單，逐篇產出「核心觀點 / 金句 / 可發內容」，直接餵給內容線。因此它同時是知識資產庫和內容選題的礦脈。</p>
+						<div class="sys-card-meta">
+							<span>代碼 40,427 行</span>
+							<span>最近提交 11 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">知識與人機協作</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengvault" title="FengVault · 在 README、文檔或配置中的登記與引用，屬於文檔層面的關聯，不等於運行時依賴。"><span class="sys-rel-name">FengVault</span><span class="sys-rel-evi">文檔引用 11 處</span></a>
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 8 處</span></a>
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengmedia" title="FengMedia · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengMedia</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#flygo" title="FlyGo · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FlyGo</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 					</div>
 				</details></section>
 				<section class="sys-group" data-group="自动化执行">
 					<details class="sys-fold" open><summary><h3>自動化執行 <span class="sys-group-count">歸入本組 8 個</span></h3></summary>
 					<div class="sys-cards">
-						<article class="sys-card" id="private-feng-job-hunter" data-slug="private-feng-job-hunter" data-domains="自动化执行" data-source="local" data-name="private-feng-job-hunter">
-						<div class="sys-card-head">
-							<h4>Private-feng-job-hunter</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">Agent 主導的批量投遞系統：Boss 讀工作流派 Worker，用 playwright-cli 把職位一個個投完。</p>
-						<p class="sys-card-detail">核心原則只有一句「投上才是成功，不投全是失敗」，卡住兩輪就換策略、再卡就跳過。系統不是跑腳本而是跑 Agent：Boss（主 Agent）讀 AGENTS.md 與 docs/BOSS_WORKFLOW.md，從入庫的 3631 條僱主站點數據裏選職位，委派 Worker 用 playwright-cli 填表提交，進度追加到 apply_progress.json 形成可續跑的賬本。它是求職自動化的集大成版本，倉庫同時沉澱了簡歷匹配、職位篩選與投遞的完整閉環，graph 中它對 Resume 的引用高達 101 處，説明簡歷體系是它的核心輸入。</p>
-						<div class="sys-card-meta">
-							<span>代碼 153,473 行</span>
-							<span>最近提交 7 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 101 處</span></a>
-								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Auto LinkedIn</span><span class="sys-rel-evi">結構同源</span></span>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="private-feng-auto-fill" data-slug="private-feng-auto-fill" data-domains="自动化执行" data-source="local" data-name="private-feng-auto-fill">
-						<div class="sys-card-head">
-							<h4>Private-feng-auto-fill</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">通用自動填表引擎：自動發現字段、理解語義、填內容並提交，人類用 GUI、AI 用 CLI。</p>
-						<p class="sys-card-detail">願景寫得很直白——「給一個連結，還你一張填好的表」：從網頁到桌面軟件到手機 APP，都能自動發現 input/select/textarea 與自定義控件，理解每個字段要什麼（姓名、電話、地址、文件），再按配置值、AI 推斷或隨機生成填充並提交。技術形態是 Chrome 擴展 + LLM 驅動，Python 打包為一套引擎，人類走 GUI、AI 走 CLI，功能完全一致。它是求職投遞（AutoApply 系列）與各類表單場景的公共能力，也是董事長「填表」這一剛需的統一解法。</p>
-						<div class="sys-card-meta">
-							<span>代碼 8,666 行</span>
-							<span>最近提交 60 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="private-autolinkedin" data-slug="private-autolinkedin" data-domains="自动化执行" data-source="local" data-name="auto linkedin">
-						<div class="sys-card-head">
-							<h4>Auto LinkedIn</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">面向全球職位的 LinkedIn 自動申請工具，把求職投遞做成可無人值守跑批的流水線。</p>
-						<p class="sys-card-detail">用 Playwright 異步 + Chromium 持久化上下文驅動已登錄的瀏覽器，自動遍歷 LinkedIn 職位並完成申請，支持 GUI、CLI（stdin/stdout JSON 行協議）與一鍵自動三種模式，方便 AI agent 直接驅動。工程上重點解決長跑穩定性：自適應延遲、心跳 watchdog、離線 AI 診斷，避免被風控或在半途靜默卡死。它是 AutoApply 系列從 JobsDB 擴展到國際市場的一支，2026-06-27 由 AutoApplyMac 改寫更名而來，屬自動化執行層的求職工具鏈。</p>
-						<div class="sys-card-meta">
-							<span>代碼 5,927 行</span>
-							<span>最近提交 82 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
-								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="private-autoapplymac" data-slug="private-autoapplymac" data-domains="自动化执行" data-source="local" data-name="private-autoapplymac">
-						<div class="sys-card-head">
-							<h4>Private-AutoApplyMac</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">面向 macOS 的 JobsDB 香港站自動投遞工具，Playwright 持久化上下文 + 雙進程架構。</p>
-						<p class="sys-card-detail">用 Playwright async 驅動 Chromium 持久化上下文，直接複用用户已登錄的 Edge 風格 profile 投遞 JobsDB 職位，同樣提供 GUI、CLI（JSON 行協議）與一鍵自動三模式，帶自適應延遲與心跳 watchdog。它是 AutoApply 系列裏專門解決 Mac 環境的一支，與 Windows 側的 Playwright 版本互為對照；後續 LinkedIn 支線就是從這裏改寫的。屬自動化執行層的求職工具鏈，也是被 job-hunter（graph 引用 2 處）複用的能力來源。</p>
-						<div class="sys-card-meta">
-							<span>代碼 5,858 行</span>
-							<span>最近提交 83 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
-								<a class="sys-rel-chip" href="#private-feng-auto-fill" title="Private-feng-auto-fill · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-auto-fill</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
 						<article class="sys-card" id="autoapply3" data-slug="autoapply3" data-domains="自动化执行" data-source="local" data-name="autoapply3">
 						<div class="sys-card-head">
 							<h4>AutoApply3</h4>
@@ -2527,28 +2425,6 @@ END DEAD CODE */}</style>
 							</span>
 						</div>
 						<span class="sys-card-tag" title="僅存在於本機，沒有可公開訪問的遠端倉庫，故本頁不提供外鏈。">本機項目</span>
-					</article>
-						<article class="sys-card" id="private-fengmailmac" data-slug="private-fengmailmac" data-domains="自动化执行|工具与实验" data-source="remote" data-name="private-fengmailmac">
-						<div class="sys-card-head">
-							<h4>private-fengmailmac</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
-						</div>
-						<p class="sys-card-oneliner">在海量郵件裏挑出真人面試機會、自動清掉機器垃圾的求職郵件作戰系統。</p>
-						<p class="sys-card-detail">目標非常具體：把對求職有用的真人郵件與面試機會挑出來（面試邀請高度關注並立即彙報，保險類標非期望崗位，詐騙/冒名招聘疑似標記不回覆，機器羣發命中黑名單直接進垃圾桶，SPAM 留人工複查，且永保 LinkedIn 安全通知）。工程上正在產品化為通用、可複製、可規模的三層物理分離架構：代碼（L0）與個人數據（L1）、機密（L2）分層，倉庫含 engine/、crm/、scenarios/、webui/、sync.py 與測試。它是 FengMail 郵件能力在求職場景的特化分支，最新提交仍在修迴歸腐爛與推進模板化。</p>
-						<div class="sys-card-meta">
-							<span>最近提交：今天</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">自動化執行</span><span class="sys-chip">工具與實驗</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">關聯記錄 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
 						<article class="sys-card" id="autoapply5" data-slug="autoapply5" data-domains="自动化执行" data-source="remote" data-name="autoapply5">
 						<div class="sys-card-head">
@@ -2596,11 +2472,158 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
+						<article class="sys-card" id="private-autoapplymac" data-slug="private-autoapplymac" data-domains="自动化执行" data-source="local" data-name="private-autoapplymac">
+						<div class="sys-card-head">
+							<h4>Private-AutoApplyMac</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">面向 macOS 的 JobsDB 香港站自動投遞工具，Playwright 持久化上下文 + 雙進程架構。</p>
+						<p class="sys-card-detail">用 Playwright async 驅動 Chromium 持久化上下文，直接複用用户已登錄的 Edge 風格 profile 投遞 JobsDB 職位，同樣提供 GUI、CLI（JSON 行協議）與一鍵自動三模式，帶自適應延遲與心跳 watchdog。它是 AutoApply 系列裏專門解決 Mac 環境的一支，與 Windows 側的 Playwright 版本互為對照；後續 LinkedIn 支線就是從這裏改寫的。屬自動化執行層的求職工具鏈，也是被 job-hunter（graph 引用 2 處）複用的能力來源。</p>
+						<div class="sys-card-meta">
+							<span>代碼 5,858 行</span>
+							<span>最近提交 83 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-auto-fill" title="Private-feng-auto-fill · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-auto-fill</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="private-autolinkedin" data-slug="private-autolinkedin" data-domains="自动化执行" data-source="local" data-name="auto linkedin">
+						<div class="sys-card-head">
+							<h4>Auto LinkedIn</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">面向全球職位的 LinkedIn 自動申請工具，把求職投遞做成可無人值守跑批的流水線。</p>
+						<p class="sys-card-detail">用 Playwright 異步 + Chromium 持久化上下文驅動已登錄的瀏覽器，自動遍歷 LinkedIn 職位並完成申請，支持 GUI、CLI（stdin/stdout JSON 行協議）與一鍵自動三種模式，方便 AI agent 直接驅動。工程上重點解決長跑穩定性：自適應延遲、心跳 watchdog、離線 AI 診斷，避免被風控或在半途靜默卡死。它是 AutoApply 系列從 JobsDB 擴展到國際市場的一支，2026-06-27 由 AutoApplyMac 改寫更名而來，屬自動化執行層的求職工具鏈。</p>
+						<div class="sys-card-meta">
+							<span>代碼 5,927 行</span>
+							<span>最近提交 82 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#private-feng-job-hunter" title="Private-feng-job-hunter · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-feng-job-hunter</span><span class="sys-rel-evi">源碼引用 3 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="private-feng-auto-fill" data-slug="private-feng-auto-fill" data-domains="自动化执行" data-source="local" data-name="private-feng-auto-fill">
+						<div class="sys-card-head">
+							<h4>Private-feng-auto-fill</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">通用自動填表引擎：自動發現字段、理解語義、填內容並提交，人類用 GUI、AI 用 CLI。</p>
+						<p class="sys-card-detail">願景寫得很直白——「給一個連結，還你一張填好的表」：從網頁到桌面軟件到手機 APP，都能自動發現 input/select/textarea 與自定義控件，理解每個字段要什麼（姓名、電話、地址、文件），再按配置值、AI 推斷或隨機生成填充並提交。技術形態是 Chrome 擴展 + LLM 驅動，Python 打包為一套引擎，人類走 GUI、AI 走 CLI，功能完全一致。它是求職投遞（AutoApply 系列）與各類表單場景的公共能力，也是董事長「填表」這一剛需的統一解法。</p>
+						<div class="sys-card-meta">
+							<span>代碼 8,666 行</span>
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 4 處</span></a>
+								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="private-feng-job-hunter" data-slug="private-feng-job-hunter" data-domains="自动化执行" data-source="local" data-name="private-feng-job-hunter">
+						<div class="sys-card-head">
+							<h4>Private-feng-job-hunter</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">Agent 主導的批量投遞系統：Boss 讀工作流派 Worker，用 playwright-cli 把職位一個個投完。</p>
+						<p class="sys-card-detail">核心原則只有一句「投上才是成功，不投全是失敗」，卡住兩輪就換策略、再卡就跳過。系統不是跑腳本而是跑 Agent：Boss（主 Agent）讀 AGENTS.md 與 docs/BOSS_WORKFLOW.md，從入庫的 3631 條僱主站點數據裏選職位，委派 Worker 用 playwright-cli 填表提交，進度追加到 apply_progress.json 形成可續跑的賬本。它是求職自動化的集大成版本，倉庫同時沉澱了簡歷匹配、職位篩選與投遞的完整閉環，graph 中它對 Resume 的引用高達 101 處，説明簡歷體系是它的核心輸入。</p>
+						<div class="sys-card-meta">
+							<span>代碼 153,473 行</span>
+							<span>最近提交 7 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">自動化執行</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 101 處</span></a>
+								<a class="sys-rel-chip" href="#private-autoapplymac" title="Private-AutoApplyMac · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Private-AutoApplyMac</span><span class="sys-rel-evi">源碼引用 2 處</span></a>
+								<a class="sys-rel-chip" href="#lessons" title="lessons · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">lessons</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengorchestrator" title="FengOrchestrator · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengOrchestrator</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#fengasni" title="FengASNI · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengASNI</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Auto LinkedIn</span><span class="sys-rel-evi">結構同源</span></span>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
+						<article class="sys-card" id="private-fengmailmac" data-slug="private-fengmailmac" data-domains="自动化执行|工具与实验" data-source="remote" data-name="private-fengmailmac">
+						<div class="sys-card-head">
+							<h4>private-fengmailmac</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">Python</span></span>
+						</div>
+						<p class="sys-card-oneliner">在海量郵件裏挑出真人面試機會、自動清掉機器垃圾的求職郵件作戰系統。</p>
+						<p class="sys-card-detail">目標非常具體：把對求職有用的真人郵件與面試機會挑出來（面試邀請高度關注並立即彙報，保險類標非期望崗位，詐騙/冒名招聘疑似標記不回覆，機器羣發命中黑名單直接進垃圾桶，SPAM 留人工複查，且永保 LinkedIn 安全通知）。工程上正在產品化為通用、可複製、可規模的三層物理分離架構：代碼（L0）與個人數據（L1）、機密（L2）分層，倉庫含 engine/、crm/、scenarios/、webui/、sync.py 與測試。它是 FengMail 郵件能力在求職場景的特化分支，最新提交仍在修迴歸腐爛與推進模板化。</p>
+						<div class="sys-card-meta">
+							<span>最近提交：今天</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">自動化執行</span><span class="sys-chip">工具與實驗</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fengmail" title="FengMail · 由倉庫説明與提交記錄判定的關聯記錄數，不等於運行時依賴。"><span class="sys-rel-name">FengMail</span><span class="sys-rel-evi">關聯記錄 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 					</div>
 				</details></section>
 				<section class="sys-group" data-group="投资金融">
 					<details class="sys-fold" open><summary><h3>投資金融 <span class="sys-group-count">歸入本組 6 個</span></h3></summary>
 					<div class="sys-cards">
+						<article class="sys-card" id="cross-cycles" data-slug="cross-cycles" data-domains="投资金融|内容创作" data-source="local" data-name="cross cycles">
+						<div class="sys-card-head">
+							<h4>Cross Cycles</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">一套把債務週期、羣體情緒與資產泡沫講成 17 集自媒體系列的長篇內容工程。</p>
+						<p class="sys-card-detail">圍繞《穿越週期》系列，倉庫裏存的是全系列總主旨、分集文檔（從週期理論體系講到英國鐵路泡沫、互聯網泡沫、AI 泡沫、中國房地產、白酒、英偉達、比特幣、航運、豬週期等）以及配套 HTML 版 PPT。架構上把達利歐債務危機、霍華德·馬克斯週期、特維德經典週期與皮凱蒂/韋伯/馬克思的政治經濟學串成一套「嵌套週期」敍事，再拆成一集一個故事的口語稿。它是投資金融認知向內容產品的轉化樣本，也是內容創作與投資研究兩條線的交叉產物。</p>
+						<div class="sys-card-meta">
+							<span>代碼 2,937 行</span>
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#private-cross-cycles" title="Private-cross-cycles · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Private-cross-cycles</span><span class="sys-rel-evi">結構同源</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="fenginvest" data-slug="fenginvest" data-domains="投资金融" data-source="local" data-name="fenginvest">
 						<div class="sys-card-head">
 							<h4>FengInvest</h4>
@@ -2634,6 +2657,29 @@ END DEAD CODE */}</style>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
 					</article>
+						<article class="sys-card" id="fenglearn" data-slug="fenglearn" data-domains="投资金融|知识与人机协作" data-source="local" data-name="fenglearn">
+						<div class="sys-card-head">
+							<h4>FengLearn</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
+						</div>
+						<p class="sys-card-oneliner">把奇衡 400+ B 站視頻與幾千篇雪球文章喂進 RAG，再用間隔複習真正學進腦子。</p>
+						<p class="sys-card-detail">解決「看了一堆東西但記不住」的問題，路線定為三步：素材獲取 → 知識庫（RAG）→ 內化（間隔重複）。落地選擇是先放棄糾結知識圖譜工具，用 Open WebUI + RAG 把全部文稿灌進去，做到隨時能問、最快見效，完整方案另存文檔。它的素材源與 Qiheng 管線直接銜接——Qiheng 產出校正文案，FengLearn 負責吸收與複習。屬投資金融條線的學習基礎設施，目前本機只有 README 與方案，實現尚薄。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">知識與人機協作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="open-fenginvest" data-slug="open-fenginvest" data-domains="投资金融" data-source="local" data-name="open-fenginvest">
 						<div class="sys-card-head">
 							<h4>Open-FengInvest</h4>
@@ -2661,6 +2707,28 @@ END DEAD CODE */}</style>
 						</div>
 						<a class="sys-card-repo" href="https://github.com/fengyuwang-com/Open-FengInvest" target="_blank" rel="noopener">查看倉庫 <span aria-hidden="true">&#8594;</span></a>
 					</article>
+						<article class="sys-card" id="private-cross-cycles" data-slug="private-cross-cycles" data-domains="投资金融|内容创作" data-source="remote" data-name="private-cross-cycles">
+						<div class="sys-card-head">
+							<h4>Private-cross-cycles</h4>
+							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
+						</div>
+						<p class="sys-card-oneliner">跨週期系列的私有完整版：框架全文、17 集分集文檔、事實核查報告與 HTML 版 PPT。</p>
+						<p class="sys-card-detail">內容與本機 Cross Cycles 一致（全系列總主旨、分集文檔、ppt/、Fact_Check_報告.md），是同一套內容在該倉庫的文檔與演示版本，最新提交為 2026-07-18。它的存在讓這套長篇投資內容既有本機工作副本、也有遠端留檔。作為純內容倉，它是投資金融認知（週期理論、泡沫史、資產輪動）向可發佈內容轉化的產物。</p>
+						<div class="sys-card-meta">
+							<span>最近提交 60 天前</span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">領域</span>
+							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">內容創作</span></span>
+						</div>
+						<div class="sys-row">
+							<span class="sys-row-label">關係</span>
+							<span class="sys-chips">
+								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Cross Cycles</span><span class="sys-rel-evi">結構同源</span></span>
+							</span>
+						</div>
+						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
+					</article>
 						<article class="sys-card" id="qiheng-bilibili" data-slug="qiheng-bilibili" data-domains="投资金融|知识与人机协作" data-source="local" data-name="qiheng">
 						<div class="sys-card-head">
 							<h4>Qiheng</h4>
@@ -2682,74 +2750,6 @@ END DEAD CODE */}</style>
 								<a class="sys-rel-chip" href="#resume" title="Resume · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Resume</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
 								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
 								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Search-King</span><span class="sys-rel-evi">結構同源</span></span>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="cross-cycles" data-slug="cross-cycles" data-domains="投资金融|内容创作" data-source="local" data-name="cross cycles">
-						<div class="sys-card-head">
-							<h4>Cross Cycles</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">一套把債務週期、羣體情緒與資產泡沫講成 17 集自媒體系列的長篇內容工程。</p>
-						<p class="sys-card-detail">圍繞《穿越週期》系列，倉庫裏存的是全系列總主旨、分集文檔（從週期理論體系講到英國鐵路泡沫、互聯網泡沫、AI 泡沫、中國房地產、白酒、英偉達、比特幣、航運、豬週期等）以及配套 HTML 版 PPT。架構上把達利歐債務危機、霍華德·馬克斯週期、特維德經典週期與皮凱蒂/韋伯/馬克思的政治經濟學串成一套「嵌套週期」敍事，再拆成一集一個故事的口語稿。它是投資金融認知向內容產品的轉化樣本，也是內容創作與投資研究兩條線的交叉產物。</p>
-						<div class="sys-card-meta">
-							<span>代碼 2,937 行</span>
-							<span>最近提交 60 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#private-cross-cycles" title="Private-cross-cycles · 由文件結構、README 或提交記錄判定的同源關係（同一工具的不同版本或不同落點）。"><span class="sys-rel-name">Private-cross-cycles</span><span class="sys-rel-evi">結構同源</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="fenglearn" data-slug="fenglearn" data-domains="投资金融|知识与人机协作" data-source="local" data-name="fenglearn">
-						<div class="sys-card-head">
-							<h4>FengLearn</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">未知</span></span>
-						</div>
-						<p class="sys-card-oneliner">把奇衡 400+ B 站視頻與幾千篇雪球文章喂進 RAG，再用間隔複習真正學進腦子。</p>
-						<p class="sys-card-detail">解決「看了一堆東西但記不住」的問題，路線定為三步：素材獲取 → 知識庫（RAG）→ 內化（間隔重複）。落地選擇是先放棄糾結知識圖譜工具，用 Open WebUI + RAG 把全部文稿灌進去，做到隨時能問、最快見效，完整方案另存文檔。它的素材源與 Qiheng 管線直接銜接——Qiheng 產出校正文案，FengLearn 負責吸收與複習。屬投資金融條線的學習基礎設施，目前本機只有 README 與方案，實現尚薄。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 60 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">知識與人機協作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<a class="sys-rel-chip" href="#fenginvest" title="FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-								<a class="sys-rel-chip" href="#open-fenginvest" title="Open-FengInvest · 本機源碼文本詞邊界命中（graph.py 口徑），已雙向合併取較大值。這是共現事實，不等於業務依賴。"><span class="sys-rel-name">Open-FengInvest</span><span class="sys-rel-evi">源碼引用 1 處</span></a>
-							</span>
-						</div>
-						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
-					</article>
-						<article class="sys-card" id="private-cross-cycles" data-slug="private-cross-cycles" data-domains="投资金融|内容创作" data-source="remote" data-name="private-cross-cycles">
-						<div class="sys-card-head">
-							<h4>Private-cross-cycles</h4>
-							<span class="sys-card-badges"><span class="sys-card-badge">HTML</span></span>
-						</div>
-						<p class="sys-card-oneliner">跨週期系列的私有完整版：框架全文、17 集分集文檔、事實核查報告與 HTML 版 PPT。</p>
-						<p class="sys-card-detail">內容與本機 Cross Cycles 一致（全系列總主旨、分集文檔、ppt/、Fact_Check_報告.md），是同一套內容在該倉庫的文檔與演示版本，最新提交為 2026-07-18。它的存在讓這套長篇投資內容既有本機工作副本、也有遠端留檔。作為純內容倉，它是投資金融認知（週期理論、泡沫史、資產輪動）向可發佈內容轉化的產物。</p>
-						<div class="sys-card-meta">
-							<span>最近提交 60 天前</span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">領域</span>
-							<span class="sys-chips"><span class="sys-chip">投資金融</span><span class="sys-chip">內容創作</span></span>
-						</div>
-						<div class="sys-row">
-							<span class="sys-row-label">關係</span>
-							<span class="sys-chips">
-								<span class="sys-rel-chip sys-rel-plain" title="報告中以名稱記錄，未匹配到清單條目，故不提供跳轉。"><span class="sys-rel-name">Cross Cycles</span><span class="sys-rel-evi">結構同源</span></span>
 							</span>
 						</div>
 						<span class="sys-card-tag" title="該倉庫未公開，訪客打不開，故本頁不提供外鏈。">私有倉</span>
