@@ -259,6 +259,32 @@ No italics in UI chrome. No bold (700+) outside content cards. Visual emphasis c
 ```
 All `.content-block` elements must be direct children of `.page-wrap`. Closing `page-wrap` early breaks the white gap.
 
+### 6.1 When the 720px measure yields (full-bleed card)
+
+`720px` is a **text measure** — the line length a paragraph is meant to wrap at. It is the right width for prose and wrong for anything whose shape is the point. A card that exists to be looked at rather than read (a diagram, a canvas, a wide data view) and is the *only* content block on its page should drop to `1200px` — the same max-width as the nav shell:
+
+```css
+/* the page's single content block is a wide visual */
+.block-inner { max-width: 1200px; }
+.block-inner h2, .block-subtitle { max-width: 720px; }  /* headings keep the measure */
+```
+
+The heading and subtitle keep `720px`. Long-form headings are exactly what the measure is for; the card is the visual anchor, the text is not.
+
+**Why the symptom reads as "白斑".** At `720px` the card renders 672px wide inside a ~1425px page, leaving ~352px of bare page on each side. That is not a bug and not a broken background — it is the measure doing its job to a component that needs a different job. Same principle as §7.7: a wide element must not sit inside a narrow container, "its max-width/padding would leave white strips on both sides."
+
+**Do not** use this on a prose page, or on any page with more than one content block. The measure is what makes a mixed page read as one column.
+
+**When a wide block shares a page with other blocks, scope the rule to that block instead of dropping it.** A global `1200px` is only correct when the page has one content block. If a page mixes a canvas with ordinary cards — `tech.html` has 15 blocks, one of which is the project relation graph — widen the one block and leave the rest at the measure:
+
+```css
+/* one wide block among many: #net is the canvas, everything else stays 720px */
+#net .block-inner { max-width: 1200px; }
+#net .block-inner h2, #net .block-subtitle { max-width: 720px; }
+```
+
+`id` + class outranks the base `.block-inner` selector, and the scoped rule sits at the end of the sheet, so no `!important` is needed. Do not widen a block whose shape adapts on its own — `#domains` scales via its SVG `viewBox` and reads correctly at `720px`; widening it just reintroduces the patchwork the measure exists to prevent.
+
 ### Key measurements
 
 | Element | Value |
@@ -267,6 +293,8 @@ All `.content-block` elements must be direct children of `.page-wrap`. Closing `
 | `.content-block` (≤991px) | `36px 0 28px` |
 | `.content-block` (≤599px) | `28px 0 20px` |
 | `.block-inner` max-width | `720px`, margin `0 auto`, padding `0 24px` |
+| `.block-inner` max-width — full-bleed card | `1200px` (see §6.1) |
+| `.block-inner` max-width — one wide block among many | scoped, e.g. `#net .block-inner { max-width: 1200px; }` |
 | `.marketing-hero` padding | `52px 0 40px` |
 | `.marketing-hero` (≤991px) | `36px 24px` |
 | `.marketing-hero` (≤599px) | `28px 16px` |
