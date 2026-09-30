@@ -117,3 +117,66 @@ The capabilities page used to say "一个打三个" (one beats three). The corre
 - **`en-han` / `en-ui`（第 9 节）**：en 页面可见文本不得出现 2+ 连续汉字；en 博文汉字 >50 判漏翻。
 
 **数据可视化先例（新页无现成可抄）**：全站手写页原本 0 个手写 `<svg>` / `<canvas>`（2026-09-18 的 `system.html` 是首个例外）；现成"图形化"做法只有两条——纯 CSS 渐变/伪元素（`tech.html` 的 `storm-bg`、`art.html` 的展厅光），或仿 `human-in-the-loop.html` 的 `#root` + 本地打包 JS（`5dt-pd-viewer.js`，188 KB React bundle）。**没有 chord / force / D3 / ECharts 先例**；要做图优先手写内联 SVG（零依赖，自带暗色与 reduced-motion 兜底）。
+
+## 15. 一个 `<script>` 里任何一处语法错 = 整块不执行（2026-09-30）
+
+删/改 JS 时用正则批量替换，**一个手滑就会让整块脚本静默死掉**，页面上表现为某个区域变成一块空白，而门禁全绿。
+
+**机制**：`<script>` 块里任何一处 SyntaxError，解析阶段就整块失败 —— 不是「那一行不执行」，是**块内每一条语句都不执行**，包括和出错处毫无关系的那些。
+
+**历史实例（已修）**：为去掉「本机/云端」二分，`.fix_source.py` 里的 `kill_src_var` 正则把 `if(!q||!d` 连同 `sysSource` 那行一起吃掉，9 个文件句首都剩一条裸的 `||!s||!out)return;`。三语 9 页同时中招，关系图 draw 脚本整块没跑，canvas 渲染成**一块纯白矩形**（用户报「左右两边有白斑」）。**门禁 `check_site.py --no-dark` 当时 0 FAIL / exit=0** —— 它查 CSS、结构、JSON，查不到 JS 语法。
+
+**症状对照表**：
+
+| 看到的 | 通常是 |
+|---|---|
+| 某块区域纯白 / 纯黑，什么都不画 | 画它的那段脚本整块 SyntaxError |
+| 折叠面板点了没反应、计数器不动 | 同上 |
+| 某一页功能全废、别的页正常 | 同上，且只在被改过的文件里 |
+
+**怎么办**：`node --check` 每个内联脚本；批量改动后**必须**跑一遍解析校验，别只看门禁。
+
+```bash
+node -e "
+const fs=require('fs');
+for(const f of process.argv.slice(1)){
+  const s=fs.readFileSync(f,'utf8');
+  for(const m of s.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)){
+    const a=m[1];
+    if(/\bsrc=/.test(a)) continue;
+    if(/application\/(ld\+)?json/.test(a)){ try{JSON.parse(m[2])}catch(e){console.log('JSON FAIL',f,e.message)} continue; }
+    try{ new Function(m[2]); }catch(e){ console.log('SCRIPT FAIL',f,e.message); }
+  }
+}" zh-cn/*.html zh-hk/*.html en/*.html
+```
+
+**数据块要显式分流**：`application/json` 块（含关系图数据）必须走 `JSON.parse` 那条路。用「排除 ld+json 和 src」的简化正则会把 `application/json` 当 JS 解析，报出一堆**假 FAIL** —— 校验脚本自己先得是对的。
+
+## 16. 画布/图表页不要套 720px 文字栏（2026-09-30）
+
+关系图（`2026-09-30` 之前在 `system-graph.html`，现已并入 `tech.html`）长期被报「审美崩溃 + 左右有白斑」。白斑不是背景 bug：`.block-inner` 按 DESIGN §6 限宽 `720px`，卡片实际 672px 落在 1425px 页面正中，**左右各 352px 空白**。
+
+**根因是把「文字栏宽」套用在了「以形状为目的」的组件上**。修法与判据见 DESIGN §6.1：单内容块、以看为主的页面放 `1200px`，`h2`/副标题仍留 `720px`（实测两侧 352px → 170px，画布 606px → 1086px）。
+
+**三页合一后这条从「整页放开」改成「按块放开」。** `tech.html` 有 15 个内容块，全局 `1200px` 会把每块的文字栏一起撑开，反而破坏 §6。所以收窄成：
+
+```css
+#net .block-inner{ max-width: 1200px; }              /* 只有画布这一块放开 */
+#net .block-inner h2, #net .block-subtitle{ max-width: 720px; }
+```
+
+`id+class` 的特异性高于基底 `.block-inner`，且放在样式表末尾，不需要 `!important`。判据不变：**按块放开，不是按页放开。**
+
+**同源问题：节点标签无脑全画。** 78 个标签在默认视口下叠成一团蓝字糊。规则：**闲置只画骨架（度数最高的 N 个，度数降序 + id 兜底平局保证确定性），悬停/选中才画该节点及其邻居**，其余只画球。复用 hover 已经算好的邻接表，别为此多存状态；**不要引入随机数**，否则每次加载长得不一样、截图门禁也不稳。
+
+## 17. 拼合多个页面的 CSS 时，`<style>` 是纯文本，不能当普通元素数深度（2026-09-30）
+
+把三页并成一页时，`style_blocks()` 用「`<style>…</style>` 非贪婪匹配」抽样式表，深度遍历靠 `element_span()`。两个坑叠在一起，**都不报错、都不崩，只是安静地少东西**：
+
+1. **`<style>`/`<script>` 里是原始文本，不是标记。** CSS 里的 `content:"</div>"`、JS 字符串里的 `"<div>"` 都会让深度遍历数错，`element_span()` 越走越远。本次它在 `tech.html` 上一次吞掉约 9KB 正文。**修法：这两种标签遇到就在对应的闭合标签处直接停，不要数深度。**
+2. **源文件本身就有没闭合的 `<style>`。** `tech.html` 的 `<head>` 里 3 个 `<style>` 开、2 个 `</style>` 闭 —— img-caption 那张表开在 prefers-reduced-motion 那张表**里面**，两者共用一个闭合标签（`git show HEAD:zh-cn/tech.html` 可复核，早于本次改动）。按位置切整段（第一个开 → 最后一个闭）才对；按嵌套切会留下一个没闭合的表，**它会把后面所有内容当成原始文本吞掉**，包括刚注入的合并样式表。
+
+**这两条合起来会产生一个极其误导的现象**：合并后的 `<head>` 里写着 `<style><style>`，浏览器把内层标签之后的一切当纯文本，**整张样式表静默失效** —— 页面照样渲染，只是画布缩回 720px、左右白斑回来了。`check_site.py` 全绿，因为 CSS 语法本身没错，错的是它在文档里的**位置**。
+
+**判据：拼样式表不能只验「内容在」，要验「在 `<style>` 里面」。** 拼完直接问浏览器 `document.querySelectorAll('style')` 的 `.textContent` 里有没有那条规则 —— 比正则可靠，也比正则快。
+

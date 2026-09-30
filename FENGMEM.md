@@ -331,3 +331,127 @@
 - 门禁: 生效版 `tools/check_site.py` **270 PASS / 0 FAIL**（含 Chromium 暗色审计 730 页 0 低对比度）；修掉门禁抓出的 3 处真实对比度缺陷。另：工作区那份未收尾的 272 行改造**跑不起来**（`AttributeError: ... has no attribute 'project_pairs'`），已封存不启用。
 - 文案诚实化: 服务/自动化的 hint 由「实时探活·一键启停」改为「静态快照：本页只列，不起停」（本页无启停按钮，照抄等于吹牛）。
 - 分支 `dev`；master 未动，未 commit、未 push。
+
+## 2026-09-30 — 体系全景三语页回归设计系统（死代码清理 + 补回 §7.3 卡片）
+- 用户要求（原话）: 「回归之前先确定push一下工作区干净，然后再直接把它搞成符合我设计系统的创新型设计」；选项选了「全面回归设计系统 / 先注释掉 / 按实际内容修正导航 / 全部换成规范色」。
+- 根因（三条）:
+  1. **`.content-text-card` 从未被定义** —— 全站唯一引用点是 `assets/css/style.css:1316` 的 `word-break` 工具类，不是卡片本体。提交 `2820f7ee` 的说明写「补 content-text-card 规范样式」，实际 `git show --stat` 只有 3 个 RSS 文件，样式压根没落盘 → 三张方法卡裸奔（padding 0、无底色无边框）。
+  2. **85% 死 CSS** —— `pd5-*`/`tri-*`/`rsch-*`/`dg-*`/`md-*`/`think-*` 六套早期图形系统的遗留，liveRules 611~642 → 157~194。
+  3. **侧栏 7 个锚点里 6 个悬空** —— `#pd5` 那条 `data-rail` 早已无对应 id，正是它掩盖了约 100 条 `pd5-*` 死规则的判定。
+- 做法: `.cleanup_dead_css.py`（一次性脚本）—— 死判定 = 选择器触及的 class/id 在 HTML `class=`、JS `classList`/`className=`/`querySelector`、`id=` 中全无引用；死代码**注释掉不删**（可回滚），内部 `*/` `/*` 做转义防早闭合；越界色按 DESIGN §5 映射（`#30d158`→`#0071e3`、`#1f3b8a`→`#2563eb` 等 13 条，canvas 的 `ctx.strokeStyle` 走整档替换）。
+- 三个真实 bug（都是自己写的，逐一修掉）:
+  1. 追加卡片定义的条件误判 `prefers-reduced-motion`，导致 `system.html` 三语**根本没插入**定义（浏览器实测 padding 仍 0px）→ 去掉该条件。
+  2. 条件写成按 `<style>` 块判定 → 同一规则在页内每个 style 块重复 2~3 份 → 改为**按文件**只插一次。
+  3. **`process()` 返回的是 CSS 裸体，`<style>` 标签属于正则 span 不属于规则** —— 我把 `CONTENT_TEXT_CARD` 拼到 `block`（含标签）上，污染了块尾，浏览器整段 CSS 解析失败，页面全裸。改为剥标签→拼接→处理→重新包标签。
+- 验证: `.verify_cleanup.py` 用**字符串感知 CSS tokenizer**（朴素 `count('/*')` 会被死代码里的转义和 `*/ /*` 连写带偏，之前的假阳性就来自这）比对 `git show HEAD:` 原文。终态 **9 文件全 OK：killed_live 0 / dangling 0 / offpalette 0**。
+- 浏览器实测（这是唯一可信口径）: `.content-text-card` 计算值 = `padding 20px 24px` / `radius 14px` / `bg #fff` / `border 1px rgba(148,163,184,.1)` / `shadow 0 2px 8px rgba(15,23,42,.04)` / `color #475569` / `line-height 1.85` / h3 `1.05rem 700 #0f172a` —— 与 DESIGN §7.3 原值逐项吻合。关系图 canvas、KPI 卡、项目卡均正常。
+- 门禁: `python tools/check_site.py --no-dark` **0 FAIL / exit 0**（末尾 `✔` 打印在 Windows GBK 控制台抛 UnicodeEncodeError，属既有编码问题，非检查失败；用 `PYTHONIOENCODING=utf-8` 复跑 exit=0）。
+- 遗留待用户裁决: `gn-*`（关系图 SVG）/`fx-*`（滚动进场）/`sys-*`（KPI/筛选/卡片）三套**活着**的创新类是否按 `track-split-shell` 先例正式登记进 DESIGN.md —— 用户原话「你先给我看看效果，如果效果好，我就进」。
+- 分支 `dev`；master 未动，**未 commit、未 push**。
+
+## 2026-09-30 — 体系全景三语页：删说明文案 + 去掉「实时」假声明
+- 用户要求（原话）: 「快照 2026-09-17…逐条可核，非估算」上面这番话全部删掉；「节点大小按该领域被标注的项目数缩放…阈值规则…依据口径…」也全部删掉；「这个右上角有个一有个二的全都删掉」；随后追加: 「本机 36 · 仅云端 42 这个不要说」「另有 13 个项目未识别语言这也不要说」「实时 · 实测这是错的，根本就没有实时的」「那个颜色…一部分有渐变一部分左右两边就没有了呀」。
+- 删掉的三块（三语 × 3 页 = 9 文件）:
+  1. `.sys-hero-note` —— 过期的「快照 2026-09-17」溯源行（今天已 30 号）。
+  2. `ul.sys-caption` —— 领域图下方四条方法论（节点缩放/边宽/阈值规则/依据口径）。
+  3. `span.fx-ghost` —— 右上角大字ghost节号「01」「02」。
+  连同 8 条失效 CSS 一并删（含 `@media(max-width:599px)` 里的 `.fx-ghost` 与 3 条藏在 DEAD CODE 注释里的同名规则）。**注释内的也要删**：类名已不存在，留着是误导。
+- 「实时」是**事实性错误**，不是文案口味问题: 78 节点 / 135 边全部烤死在 `<script type="application/json">` 里，KPI 三个数字是字面量 markup，运行时零请求。所以「实时 · 实测」「每个项目，实时可查」「本页每一个数字都从这台机器实时测得」三处都在声称一件页面没做的事。改为「快照 · 实测」「逐条可查」「实测得出」；en 同步改 SNAPSHOT · MEASURED / item by item / was measured…Nothing estimated。
+- 顺带删掉两条 `.sys-stat-note`（本机/云端拆分、未识别语言数）—— 同一个静态快照问题，且拆分不是关于项目的用户可见事实。
+- **EKG「渐变」不是 bug**: `.base` 是 `rgba(0,113,227,.16)` 通栏细线（实测 bbox 0→420 全宽），`.pulse` 是 150px 亮段 `stroke-dasharray:150 850` + `fx-ekg` 3.4s 循环扫过（实测 offset 215→817 连续变化）。用户看到的「中间有颜色、左右没有」就是亮段扫到哪算哪。**已向用户说明，未改** —— 要不要改成常亮满线是设计选择，不是缺陷。
+- 三个自己的 bug（都记下来）:
+  1. `strip_notes.py` 打印 `ghost=None` 崩在循环里 → 只处理了 1 个文件就中断，后 8 个文件处于半处理状态。脚本必须**幂等**且不能在写文件前崩。
+  2. `[^{}]*\.cls[^{}]*\{` 在这种体量的样式表上**灾难性回溯**，跑 100s 没完 → 换成花括号扫描器（`drop_dead_rules`），秒级。
+  3. 扫描器只认顶层规则，`@media` 里的死规则看不见 → 加递归；死代码注释头用 `[^*]*` 匹配会撞上注释自己的 `*/` → 改成精确匹配那一行固定文案。
+- 验证: 三语 9 文件 `note=0 cap=0 ghostMarkup=0 退役类彻底移除`；`.verify_cleanup.py` 报的 `killed_live` 恰为这 8 条**有意删除**的规则（逐条核对无附带损伤）；门禁 `check_site.py --no-dark` **0 FAIL / exit=0**；浏览器实测 DOM 中 `.sys-hero-note`/`.sys-caption`/`.fx-ghost` 均为 0，h2 标题文字完好。
+- 分支 `dev`；master 未动，未 commit、未 push。
+
+---
+
+## 2026-09-30 22:20 — 体系全景：取消本机/云端二分 + 查看仓库改规范药丸 + 删口径说明卡
+- 用户要求: ①「不要区分什么本机和云端仓库」②「这个查看仓库符合我设计原则吗？它怎么是裸着」③「口径说明/数据来源这种说明性的文字也不需要」
+- 查证结论:
+  - **查看仓库确实不符合**。DESIGN §7.3 定的卡内链接组件是 `.card-btn`（`999px` 药丸 + 半透明填充 + 描边 + `.78rem/600` + `6px 14px` + hover 换背景），而 `.sys-card-repo` 当时是「粗体蓝字 + 只有 hover 下划线」，一个裸文本 run，没有任何容器 —— 这就是「裸着」的来源。**拿 `.card-btn` 的参数**（白卡上白填充看不见，改为 accent 淡染 `rgba(0,113,227,.08)` + `rgba(0,113,227,.16)` 描边，hover 加深到 .16），暗色沿用同套 `rgba(41,151,255,…)`（§9 映射）。
+  - **本机/云端是采集方式的产物，不是项目属性**（本地路径扫描 + GitHub 仓库列表两路合并而来），访客不关心。四处全删：卡片徽章、meta 行（`本机代码 4,126 行`→`代码 4,126 行`；云端条目那行「无本机代码统计」整个删掉，因为它只说明「这个没有数」）、`来源` 下拉筛选（连带 JS 里 `sv` 变量与 `data-source` 判断）、以及 graph 页 JSON 节点 `badges` 里的同两个串。
+  - `.sys-note-card`（口径说明 + 数据来源）三语全删，附带 7 条失效 CSS。
+  - `.sys-scope-note` 原本也是二分口径的散文版（「42 个私有仓与 2 个仅本机项目…」），改写成只讲还成立的事：私有仓不给外链、清单一条不减。
+- 保留未动: 关系 chip 的 `title` 里「本机源码文本词边界命中（graph.py 口径）」是**证据方法**说明，不是二分；两条项目描述里的「本机环境自己治」是行文。**170 处「本机」里绝大多数属这两类，不该删。**
+- 自己的事故（重要）: 中途我为了清掉脚本的半成品跑了 `git checkout -- <9 个文件>`，**把本会话前几轮未提交的成果全冲掉了**（reveal 修复、删文案、去「实时」）。`git fsck` 找不回（checkout 就地覆盖，不产生 blob）。**所幸 5 个一次性脚本都还在盘上且确定性可重放**，按序重跑 5 步完全复现（步骤 1 输出 504/446/477 条选择器、rail 片段一致；步骤 2 各文件 note/caption/ghost 计数一致），再叠加本轮改动。**教训：清理脚本前先 commit，或至少先 `git stash`；`checkout --` 是不可逆的。**
+- 第二个自己的 bug: `.fix_source2.py` 里删 hover 规则的正则 `\.sys-card-repo:hover\{[^}]*\}` 匹配到的是**新写的规则**，把旧 hover 留下了，于是 `:hover{text-decoration:underline}` 仍生效。改成按整段字面量精确替换。**改样式前要先 `print` 出磁盘上真实的规则串，别凭记忆写正则。**
+- 验证: 门禁 `check_site.py --no-dark` **0 FAIL / exit=0**（中途因删 note-card 多吃了 2 个 `</div>` 报 struct FAIL 322 vs 320，对照 HEAD 确认原位有 `</div></div>` 后补回，balance 归 0）；浏览器三语实测 —— 78 卡、34 个查看仓库全部 `999px`/`6px 14px`/accent 淡染、徽章只剩语言、`来源` select 与 note-card 均 false、卡片 opacity 全 1（无灰带）、暗色切到 `rgba(41,151,255,.12)` 正常。
+- 踩过的坑: 同一次 `setAttribute('data-theme','dark')` 后立刻读 `getComputedStyle` 会读到**旧值**（层叠未重算），一度误判暗色失效；分两次调用就正常。`document.styleSheets` 里 Google Fonts 那张跨域表读 `cssRules` 抛 SecurityError，遍历必须 try/catch 跳过。
+- 分支 `dev`；master 未动，未 commit、未 push。辅助脚本 `.cleanup_dead_css.py` `.strip_notes.py` `.fix_claims.py` `.fix_reveal.py` `.fix_source.py` `.fix_source2.py` `.verify_cleanup.py` 仍未跟踪。
+
+---
+
+## 2026-09-30 22:55 — 修复我自己搞崩的关系图画布（SyntaxError 全块失效）
+- 用户要求: 承接上轮，截图确认「左右两边有白斑」是否消除。
+- 事故: 上轮 `.fix_source.py` 的 `kill_src_var` 正则把 `if(!q||!d` 连同 `sysSource` 那行一起吃掉，9 个文件句首都剩一条裸的 `||!s||!out)return;`。**这是 SyntaxError，而 `<script>` 里任何一处语法错会让该块内每一条语句都不执行** —— 关系图 draw 脚本因此整块没跑，canvas 渲染成一块纯白矩形，就是用户说的「白斑」。三语 9 页同时中招。**门禁全绿也照样空**：它查 CSS/结构/JSON，查不到这个。
+- 修复: `.fix_filterscript.py` —— 有 `#sysFilterBar` 的 3 页重写 IIFE（去掉来源筛选），没有的 6 页整段删除（本来就是死代码，查一个不存在的元素就 return）。随后又单独修了两遍被同一条正则啃坏的 graph JSON（`"badges":TypeScript"` → `"badges":["TypeScript"]]` → `"badges":["TypeScript"]`）。
+- 自己的第二个 bug: 校验用的 node 脚本用 `<script(?![^>]*application/ld\+json)(?![^>]*src=)` 匹配，**没排除 `application/json`**，把关系图数据块当 JS 解析，报 3 个假 FAIL。数据块要在 JS 检查里显式分流到 JSON.parse。
+- 验证: node 复核 9 文件 **36 段内联脚本 + 12 个 JSON 块全过**，div 配平（25/25、22/22、322/322）；canvas 实测 92.3% 非白像素、`stage.dataset.sn2==="1"`。**门禁只在我点名时才跑**（用户明确要求，之后我自己起的一次全量门禁已被叫停）。
+- 分支 `dev`；未 commit、未 push。
+
+---
+
+## 2026-09-30 23:20 — 关系图：卡片脱离 720px 文字栏 + 78 个标签不再糊成一团
+- 用户要求: ①「system.html、system-graph.html 跟技术概览直接去拼一下」②「这个审美崩溃了，也不符合我的设计体系」③「你截个截图看看，左右两边有白斑」
+- 白斑的真正成因（先量后改，**不是 bug，是布局规则用错了地方**）: `.block-inner` 按 DESIGN §6「Key measurements」限宽 720px，于是卡片实际 672px，落在 1425px 的页面正中 —— 左右各 352px 空白。对**正文**这个栏宽是对的，对一张 1440×920 的画布就把图压成了一枚邮票。
+- 依据: DESIGN §7.7 已经写过同一条道理 —— 宽组件绝不能待在 `.container` 里，「its max-width/padding would leave white strips on both sides」。关系图是同一个情形，只是当年没被登记为组件。
+- 改法: 关系图页的 `.block-inner` 放到 **1200px**（DESIGN 导航壳层同宽），`h2` 与副标题仍留在 720px 文字栏 —— 长标题该量的地方继续量，卡片本身做视觉锚点。实测两侧空白 352px → **170px**，画布 606px → **1086px**。该页三语各只有一个 `.block-inner`，无 id 限定也安全。
+- 审美崩溃的第二个成因: 标签层对 **78 个节点无条件全画**，默认视口下全部挤在约 600px 里叠成一团蓝字糊。改为三档 —— 悬停/选中的节点及其邻居必画；闲置时只画 **14 个最高连接度节点**（度数降序、id 兜底平局）当骨架；其余只画球，名字等悬停。复用 hover 已经算好的 `nbr` 邻接表，没多存状态。**确定性**：无随机，每页每次加载标签集合一致。
+- 验证: 悬停 `Resume`（度数 25）→ tooltip 出现、邻居点亮并全部带名、cursor 变 pointer；点击 → 面板显示 h3 `Resume`、语言徽章 `Python`、25 条关系；暗色下整图重绘正常；其余两语结构一致。node 解析 36 脚本 + 12 JSON 全过、div 配平。**未跑门禁**（用户要求只在他点名时跑）。
+- 待办: 「三个页面拼一下」这一条**还没做**，需要先跟他确认「拼」是指内容合并、还是互相串联导航 —— 我没擅自改页面结构。
+- 分支 `dev`；未 commit、未 push。新增辅助脚本 `.fix_graph_width.py` / `.fix_graph_labels.py` 仍未跟踪。
+
+---
+
+## 2026-09-30 23:55 — 更新文档 + 把体系三页与技术概览真正拼成一套
+- 用户要求: ①「更新所有文档啊，然后再去搞」②「刚才那个网站，我说合并你还没搞定」
+- 先补文档（上一轮欠的账）:
+  - `FENGMEM.md` 补上两轮缺失记录（SyntaxError 白屏事故轮 + 关系图宽度/标签轮）。
+  - `DESIGN.md` 新增 **§6.1「When the 720px measure yields (full-bleed card)」** —— 这是本轮**偏离了 DESIGN 原有默认值**，所以必须登记成规则而不是只改代码。写清了判据（单内容块、以看为主）、做法（`1200px` + `h2`/副标题留 `720px`）、以及为什么症状读起来像「白斑」。Key measurements 表加了一行指向 §6.1。
+  - `docs/guide/pitfalls.md` 新增 **§15**（一个 `<script>` 任何一处语法错 = 整块不执行，附症状对照表和 node 校验命令）与 **§16**（画布页别套 720px 文字栏 + 标签不可无脑全画）。
+- 「合并」的实际情况（先量后改）: 三页本来**互相都链了**，但不一致 —— `system.html` 只有体系内一跳、没有第二行；两个叶子页各带**两个** link-card（体系 + 「继续往下看」），视觉上就是那段松白缝。`tech.html` 是四页里**唯一谁都不链**的：所有页都通到它，它通不到任何一页。
+- 改法（三语 ×4 页 = 12 文件）:
+  1. `system.html` 补上叶子页本来就有的第二行，凑成一致的两步走：先体系内，再出到 tech/invest/blog。
+  2. 叶子页两个 link-card **并成一个、两个 cta-row**，链接文字与顺序全部沿用盘上原有。「继续往下看」那句随第二张卡一起消失 —— 它只是在复述下面按钮已经说的话。实测卡片高度 2×216px → 281px。
+  3. `tech.html` 补一条回体系的路。tech 原本只有一枚裸 `<a>` 没有 `cta-row`（别的三页都有），所以新链接连同 `cta-row` 一起加，把原来的 invest 链接**移进**容器而不是撂在上面。invest 一行原样保留（同 class、同箭头、同位置）。
+- 验证: 12 文件 div 深度全 0；node 解析 **39 段内联脚本 + 15 个 JSON 块全过**；浏览器实测 link-card=1 / cta-row=2、五个链接路径全对；按钮等宽 240px，system 系 51px、tech 系 74px（英文长句换行，同行等高，**不触 `btn-height`**）；链接图三语一致，tech 不再是死端。**未跑门禁**（用户要求只在他点名时跑）。
+- 自己的事故（记下来）: `.stitch_pages.py` 第一版用**重复写四次的 `\t`** 拼正则，而 `\t` 在某些写入路径下会变成字面反斜杠+t，于是**正则看着完全正确却一个都不匹配** —— 脚本第一版崩在中途，而它**已经把 zh-cn/system.html 写坏了一半**（吃掉了体系卡的 `</div>`、又多插了一张卡）。修了两次才补平，最后用**从文档开头数 `<div>`/`</div>` 的净深度**当断言（zh-cn 一度是 -1）才把结构验对。
+  - **教训 1**：写这类一次性改 HTML 的脚本，**断言必须基于不依赖正则的结构量**（标签净深度、元素计数），正则只是定位手段，不能同时当验证手段。
+  - **教训 2**：脚本**必须幂等**，且崩在中途时要能自愈 —— 第二版按 `link-card` 计数分流（已有就跳过），所以重跑才安全。
+  - **教训 3**：`src.count("link-card")` 会把 CSS 里的 `.link-card` 一起数进去（一度报 5），要数的是 `<div class="link-card">`。
+- 分支 `dev`；未 commit、未 push。新增脚本 `.stitch_pages.py` / `.stitch_tech.py` 未跟踪。
+
+---
+
+## 2026-10-01 03:10 — 三页合一落地：tech.html + system.html + system-graph.html 合成一页（三语）
+- 用户要求: 「我是让你把这3个东西用合理的方式合并到一个页面里面去」—— 不是互相串联导航，是**合成一页**。此前只做了串联，没做合并。
+- 用户已定的两个决定（AskUserQuestion，已告知后果后确认）:
+  1. **主 URL = `tech.html`** —— 它身上挂 51 处入链 / 33 个页面 + 5 条重定向（`/tech` 302、3 条历史 `/portfolio.html` 301），选它意味着 51 处链接一行不用改写。
+  2. **删掉 `system.html` / `system-graph.html`，不留任何重定向规则** —— 后果是 `/{lang}/system` 与 `/{lang}/system-graph` 直接 404，用户明确接受。
+- 合并结果（15 个内容块）: 快照 hero → `#domains` → `#method` → `#net` → card-grid（3 旗舰项目）→ tech 原有 12 块 → 合并后的 link-card。
+  - **只留一个 h1**（system 的 hero）。建第二个 `.marketing-hero` 会在页面中段开 92px 空带，就是最初那个「白斑」。tech 的「技术」降级为 `#domains` 的 h2。
+  - **1200px 按块放开，不按页放开**: `#net .block-inner{ max-width:1200px; }`，其余 14 块保持 720px。全局放开会破坏 DESIGN §6 的文字栏。`#domains` 不放开（SVG viewBox 自适应）。
+  - **`.content-block{ scroll-margin-top:76px }` 是功能性必需**：tech 有 8 处 `scrollIntoView` 却没这条规则，合并前靠卡片够高侥幸没被固定导航栏盖住，合并后区块相邻丢了它 9 张卡全部点进导航栏底下。实测 8 个目标全部落在 76px，导航栏 44px，余量 32px。
+  - reveal / rail / progress 各只留一份；`fx-rail` 建成静态 3 项（`#domains`/`#method`/`#net`）。`sn2Data` 逐语言分别取（en 23027 vs zh-cn 15227，跨语言复制是静默的）。
+- 导航改动: `assets/js/shared-subpage-navbar.js` 删 4 行模板（桌面 submenu 2 + 移动 drawer 2）+ 12 个键（`system`/`systemHref`/`systemGraph`/`systemGraphHref` × 3 语言）；保留 `systemProjectsHref`（那个页面还在）。
+  - **cache-bust 全站 bump** 到 `26.10.01.01.00`（1331 个文件）：改共享 navbar 就必须全站 bump，否则每个页面都在发带死链的旧导航。原先全站并存三个版本串（712 + 625 + 3），只改 3 个合并页会留下 1334 个页面发旧导航。
+- 其他: `system-projects.html` ×3 删掉指向被删两页的整条 cta-row，caption 改「78 个项目，往下看」；`sitemap.xml` 删 6 个**完整 `<url>` 元素**（628 → 622，minidom 验证良构）；`_redirects` 不动（实测零引用）。
+- 产出: `.merge_tech_system.py`、`{zh-cn,zh-hk,en}/tech.html`（合并后）、删 6 个文件、`shared-subpage-navbar.js`、1331 个文件的 cache-bust、`system-projects.html` ×3、`sitemap.xml`、`DESIGN.md` §6.1、`docs/guide/pitfalls.md` §16 改写 + 新增 §17、`docs/notes/NOTE-三页合一-2026-10-01.md`
+- 关键决策:
+  - **安全网必须是结构量和位置量**（标签净深度、id 唯一、`<style>` 是否在 `<head>` 里），不能是正则内容匹配，也不能是靠嵌套深度的遍历。本次 7 个 bug 全是「惰性正则 / 偏移算错 / 插错位置」这一类，naive 脚本会把它们当成正常页面推上去。
+  - **`str.replace` 找不到就原样返回且不报错** —— 这是前两个合并 bug 的共同根因。凡是 replace 之后要断言的，一律先断言 needle 存在且唯一。
+- 踩坑（已写进 `docs/guide/pitfalls.md` §17）:
+  1. **`<style>`/`<script>` 是纯文本不是标记**，深度遍历必须在这两种标签处直接停。本次在 `tech.html` 上一次吞掉约 9KB 正文。
+  2. **源文件本身就有没闭合的 `<style>`**：`tech.html` 的 `<head>` 里 3 个 `<style>` 开、2 个 `</style>` 闭 —— img-caption 那张表开在 prefers-reduced-motion 表**里面**，共用一个闭合标签（`git show HEAD:zh-cn/tech.html` 可复核，**早于本次改动**）。按嵌套切会留下没闭合的表，**它会把后面所有内容当纯文本吞掉**，包括刚注入的合并样式表。
+  - 两者叠加的症状极具误导性：合并后的 `<head>` 里出现 `<style><style>`，浏览器把内层标签之后的一切当纯文本，**整张样式表静默失效** —— 页面照样渲染，只是画布缩回 720px、左右白斑回来。`check_site.py` 全绿，因为 CSS 语法没错，错的是它在文档里的**位置**。
+  - **判据：拼样式表不能只验「内容在」，要验「在 `<style>` 里面」** —— 拼完直接问浏览器 `document.querySelectorAll('style')` 的 `.textContent`，比正则可靠也比正则快。
+- 验证（**未跑门禁**，用户要求只在他点名时跑）:
+  - 浏览器实测三语 × 明/暗 × 1440/375：`#net .block-inner` = 1200px、白色 stage 卡 = 1086px（1440 下）；两侧是 section 自己的浅灰 `#f5f5f7`，**不是白斑**。画布墨迹 bbox 左右各留 11%（zh-cn）/ 26%（en），差的是力导向布局的自然散布不是渲染故障。
+  - 移动 375px：`scrollWidth - innerWidth = 0`，无横向溢出；`.fx-rail` 按设计在 <1280px 隐藏。
+  - 三语 fetch 回来做 DOM 比对：15 个块的 id 序列**完全一致**（parity）、h1 各 1、id 零重复、div 128/128 配平、`application/json` 全过。
+  - 计数器到 1,432,605 / 78 / 11；暗色下 stage `rgb(15,23,42)`、标签可读。
+  - 工具本身不稳：`computer screenshot` 反复超时或给出过期缩放面（视口实测 1440×900 但截图是 800×505 的放大面），最后改用**数值测量**（getBoundingClientRect + canvas getImageData 求墨迹 bbox）作为证据 —— 比截图强。
+- 分支 `dev`；未 commit、未 push。辅助脚本 `.merge_tech_system.py` 等 14 个 `.py` 与 `.merge_backup/` 仍未跟踪。
