@@ -461,11 +461,8 @@ END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper
 			display: flex; flex-direction: column; gap: 10px; border: 1px solid rgba(0,113,227,.28); border-radius: 18px;
 			background: linear-gradient(180deg,rgba(0,113,227,.07),rgba(0,113,227,.04)); padding: 14px 12px 14px 18px; }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
-.tri-plane::before{ content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px;
-			background-image: linear-gradient(180deg,#0071e3 0 7px,transparent 7px 13px);
-			background-size: 2px 13px; background-repeat: repeat-y; animation: plane-flow 1.1s linear infinite; opacity: .55; }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
-@keyframes plane-flow{ to { background-position: 0 13px; } }
+}
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
 .tri-plane-t{ font-size: 13px; font-weight: 700; color: #0f172a; letter-spacing: -.01em; text-align: center; }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
@@ -557,8 +554,7 @@ body[data-theme="dark"] .tri-head.up{ fill: #0071e3; }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
 body[data-theme="dark"] .tri-plane{ border-color: rgba(41,151,255,.30); background: linear-gradient(180deg,rgba(41,151,255,.10),rgba(41,151,255,.04)); }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
-body[data-theme="dark"] .tri-plane::before{ background-image: linear-gradient(180deg,#2997ff 0 7px,transparent 7px 13px); }
-END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
+body[data-theme="dark"] END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
 body[data-theme="dark"] .ribbon{ background: #111827; border-color: rgba(41,151,255,.35); color: #2997ff; }
 END DEAD CODE *//* DEAD CODE — commented out; restore by removing this wrapper.
 body[data-theme="dark"] .rsch-line{ stroke: #2997ff; }
@@ -572,7 +568,6 @@ body[data-theme="dark"] .ring-label, body[data-theme="dark"] .ring-center{ fill:
 		@media (max-width: 1020px){
 			.tri-canvas { display: flex; flex-direction: column; gap: 10px; }
 			.tri-plane { order: -1; }
-			.tri-plane::before { display: none; }
 			.tri-l1, .tri-l2 { padding: 14px 16px; }
 			.tri-iface { padding: 8px 0; }
 			.tri-md { flex-direction: row; flex-wrap: wrap; }
