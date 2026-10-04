@@ -277,6 +277,23 @@ for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/
             err("link", f"{page} -> {m}")
 ok("link", f"死链检查: {refs} 个引用, {broken} 断链")
 
+# ---------- 8.5 竖向装饰线禁令 (董事长 2026-10-05 定规) ----------
+# 不许用 left border / top border 那种竖线、色条做装饰; 动画竖虚线 (repeat-y 条纹) 同禁。
+# 1px 结构性细线 (卡片描边/网格分隔) 放行。CSS 注释里的死代码不算生效样式, 剥掉再查。
+NO_BAR = re.compile(
+    r"border-(?:left|top):\s*[2-9](?:\.\d+)?px\s+(?:solid|dashed|dotted)"
+    r"|border-(?:left|top):\s*[1-9]\d{2,}px"
+    r"|repeat-y"
+)
+n_bar = 0
+for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/*.html", recursive=True)]:
+    css = re.sub(r"/\*.*?\*/", "", open(page, encoding="utf-8", errors="ignore").read(), flags=re.S)
+    for m in NO_BAR.finditer(css):
+        n_bar += 1
+        err("no-vbar", f"{page}: 竖向装饰线禁令命中「{m.group(0)[:60]}」(用色点/色块/底色区替代)")
+if n_bar == 0:
+    ok("no-vbar", "竖向装饰线禁令: 全站 0 命中")
+
 # ---------- 9. en 页面中文泄漏 ----------
 # en 博文: 正文 (含代码围栏内) 汉字 > 50 视为漏翻 (slug/translationKey 除外)
 # 例外白名单: 品牌名与专有名词
