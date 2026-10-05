@@ -1064,6 +1064,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 	<script src="../assets/js/shared-subpage-navbar.js?v=26.10.01.01.00"></script>
 
 		<nav class="fx-rail" aria-label="本页段落导航">
+		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">自治自动化闭环</span></a>
+		<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一纸两界</span></a>
 		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技术不是孤岛</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">方法，三句话</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一个 App，四种呼吸方式</span></a>
@@ -1075,9 +1077,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		<a href="#tool-fit" data-rail="tool-fit"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">工具从问题</span></a>
 		<a href="#delivery" data-rail="delivery"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">交付为开始</span></a>
 		<a href="#tech-capability" data-rail="tech-capability"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技术实现力</span></a>
-	<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">自治自动化闭环</span></a>
-	<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一纸两界</span></a>
-		</nav>
+	</nav>
 	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
 	<div class="page-wrap">
 		<div class="container">
@@ -1105,7 +1105,136 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 			<!-- Card grid -->
 				
 		</div>
-<div id="domains" class="content-block">
+		<!-- top quick-nav cards -->
+		<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80')" onclick="document.getElementById('automation').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>自治自动化闭环</h3>
+						<p>Research → Think → Create → Act → Self-Improve，每轮记录、复盘、写回 MD 宪法。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80')" onclick="document.getElementById('two-layer').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>一纸两界</h3>
+						<p>L1 对话层做事，L2 观景层看，文档治理两面之间。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>静心 · 四种呼吸</h3>
+						<p>用呼吸当唯一操作的平静游戏，没有失败、没有分数。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>邮件·CRM·一条链</h3>
+						<p>自建邮件系统接 Twenty CRM 与 Newsletter，AI 驱动。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>十八路引擎</h3>
+						<p>零 Key 多源并发搜索聚合器，谁行谁上。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('tech-capability').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>技术实现力</h3>
+						<p>从 Web 到桌面到嵌入式，结构设计先于代码。</p>
+						<button class="card-btn">了解详情</button>
+					</div>
+				</div>
+		</div>
+
+<div id="automation" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>自治自动化闭环</h2>
+					<p class="block-subtitle">Automation——可控服务加上只读的能力清单，文件始终留在原地。一条自改进闭环：Research → Think → Create → Act → Self-Improve，每一轮都被记录、复盘，并写回 MD 宪法；Self-improvement loop（PDCA + MD 宪法）：每一轮喂给下一轮。</p>
+					<div class="aut-flow">
+								<span class="aut-step">Research · 研究</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Think · 思考</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Create · 创作</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Act · 行动</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Self-Improve · 自我改进</span>
+					</div>
+					<div class="aut-grid">
+						<div class="aut-card">
+							<h3>Research · 研究</h3>
+							<p>一条主车道：market APIs → FengInvest scripts → 自建本地 SQL 库；一条副车道：自建通用系统先授权、再调 API；旗舰 Search King 从任何地方搜任何站点；AIExport 把 AI 产出聚合进自建模型。</p>
+							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · 自建 SQL 库 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
+						</div>
+						<div class="aut-card">
+							<h3>Think · 思考</h3>
+							<p>日常运转中的 think 层：AI 先读 MD docs，获得身份、规则与任务，然后执行，做完把结果写回 ledger 与 log（read MD docs → gain identity, rules &amp; tasks → execute → write back）。</p>
+							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot：planned / read-only</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Create · 创作</h3>
+							<p>CREATE = 你做出一件东西，尚未分发。FengMedia 37 个项目（2026-10-05《强将手下无弱兵》）：从选题到成片的创作中枢。模态格：Text 文本生成 —（作品留在本地）；Image 图像生成 —；Music 音乐生成 12 tools · gate ✓（FengMusician，位于 FengMedia/tools/fengmusician）；Voice TTS · TTS-UI bundled（桌面捆绑包留在本地）；Avatars 数字人 live ✓ · anime 验证中；Video 视频生成 —（HyperFrames 工具链；草稿可从开源 MoneyPrinterTurbo 起步）。FengInvest 也算 create：行情研究与资产分析报告都是被做出的东西，分发前留在本地（91 scripts）。</p>
+							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Act · 行动</h3>
+							<p>Act = 分发给他人，影响外部。JobHunter（Private-feng-job-hunter）：通用批量表单执行 / 自动填表，在授权范围内对外提交（CLI ✓ · 1 profiles · confirmed local）；FengMail / FENGmailMac（Mac）：邮件外发，授权后调 API 投递（confirmed local · authorized → API）；分发渠道：Git 双推 GitHub + gitee（read-only documented）；authorized → external APIs（credentials never shown）；自治执行器三件套：GUI agent + CLI agent + MD docs（CLI · 1 profiles · planned）。</p>
+							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git 双推 GitHub + gitee</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Self-Improve · 自我改进</h3>
+							<p>Docs are the control plane——每轮迭代重写宪法，宪法塑造下一轮循环。每一轮都留下记录（FENGMEM 追加 · todo 销账 · 复盘写回）→ 规则在 AGENTS.md 里重写（下一轮立即生效）→ 回到 Research。AI 是更严格的读者——它按字面执行。FengOrchestrator：AI 指挥 AI 的舰队中枢（12 docs · 2 skills）；FengASNI：多机 profile 中枢，一台机器一份 MD profile。</p>
+							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI 一机一份 MD profile</p>
+						</div>
+					</div>
+					<p class="aut-tagline">可控服务 + 只读能力清单 · 文件留在原地</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Two-layer interface (FengOS observatory) -->
+		<div id="two-layer" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>一纸两界</h2>
+					<p class="block-subtitle">Two-layer interface principle：L1 负责 build，L2 负责 view，docs 负责管——这一页（FengOS）就是观看层。</p>
+					<div class="tl-grid">
+						<div class="tl-card hl">
+							<span class="tl-tag">L1 · Dialogue</span>
+							<h3>对话层——做事</h3>
+							<p>每一个动作都在对话里运行：人用 natural language（Skill）驱动 ZCode / Skill；AI 读 docs、调工具、写回结果；System 是真实系统，结果以只读方式浮出。</p>
+						</div>
+						<div class="tl-card">
+							<span class="tl-tag">L2 · View</span>
+							<h3>观景层——看</h3>
+							<p>只读，用来检查与展示；本页就是观看层（FengOS）。</p>
+						</div>
+					</div>
+					<div class="tl-plane">
+						<h3>Docs 治理平面</h3>
+						<div class="tl-rows">
+							<span class="tl-row"><b>read</b>：从身份、规则、任务读起</span>
+							<span class="tl-row"><b>write</b>：结果落进 ledger 与 log</span>
+							<span class="tl-row"><b>rule rewrite</b>：AGENTS 下一轮立即生效</span>
+						</div>
+						<p class="tl-docs">AGENTS 规则 · MISSION 目标 · todo 账本 · FENGMEM 记录 · Skill 包</p>
+						<p class="tl-constraint">C1 · 数据留在本地　C2 · 产出进入备份管线</p>
+					</div>
+					<p class="tl-slogan">Docs are the control plane——AI 是最严格的读者，它按字面执行。</p>
+					<p class="tl-prod">systems in production：FengInvest · FengMedia · FlyGo · FengMail　·　纯工具：TTS-UI</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Web3 引流 -->
+		<div id="domains" class="content-block">
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>技术不是孤岛</h2>
@@ -1442,89 +1571,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 
 
 		<!-- Automation loop (FengOS observatory) -->
-		<div id="automation" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>自治自动化闭环</h2>
-					<p class="block-subtitle">Automation——可控服务加上只读的能力清单，文件始终留在原地。一条自改进闭环：Research → Think → Create → Act → Self-Improve，每一轮都被记录、复盘，并写回 MD 宪法；Self-improvement loop（PDCA + MD 宪法）：每一轮喂给下一轮。</p>
-					<div class="aut-flow">
-								<span class="aut-step">Research · 研究</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Think · 思考</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Create · 创作</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Act · 行动</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Self-Improve · 自我改进</span>
-					</div>
-					<div class="aut-grid">
-						<div class="aut-card">
-							<h3>Research · 研究</h3>
-							<p>一条主车道：market APIs → FengInvest scripts → 自建本地 SQL 库；一条副车道：自建通用系统先授权、再调 API；旗舰 Search King 从任何地方搜任何站点；AIExport 把 AI 产出聚合进自建模型。</p>
-							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · 自建 SQL 库 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
-						</div>
-						<div class="aut-card">
-							<h3>Think · 思考</h3>
-							<p>日常运转中的 think 层：AI 先读 MD docs，获得身份、规则与任务，然后执行，做完把结果写回 ledger 与 log（read MD docs → gain identity, rules &amp; tasks → execute → write back）。</p>
-							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot：planned / read-only</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Create · 创作</h3>
-							<p>CREATE = 你做出一件东西，尚未分发。FengMedia 37 个项目（2026-10-05《强将手下无弱兵》）：从选题到成片的创作中枢。模态格：Text 文本生成 —（作品留在本地）；Image 图像生成 —；Music 音乐生成 12 tools · gate ✓（FengMusician，位于 FengMedia/tools/fengmusician）；Voice TTS · TTS-UI bundled（桌面捆绑包留在本地）；Avatars 数字人 live ✓ · anime 验证中；Video 视频生成 —（HyperFrames 工具链；草稿可从开源 MoneyPrinterTurbo 起步）。FengInvest 也算 create：行情研究与资产分析报告都是被做出的东西，分发前留在本地（91 scripts）。</p>
-							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Act · 行动</h3>
-							<p>Act = 分发给他人，影响外部。JobHunter（Private-feng-job-hunter）：通用批量表单执行 / 自动填表，在授权范围内对外提交（CLI ✓ · 1 profiles · confirmed local）；FengMail / FENGmailMac（Mac）：邮件外发，授权后调 API 投递（confirmed local · authorized → API）；分发渠道：Git 双推 GitHub + gitee（read-only documented）；authorized → external APIs（credentials never shown）；自治执行器三件套：GUI agent + CLI agent + MD docs（CLI · 1 profiles · planned）。</p>
-							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git 双推 GitHub + gitee</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Self-Improve · 自我改进</h3>
-							<p>Docs are the control plane——每轮迭代重写宪法，宪法塑造下一轮循环。每一轮都留下记录（FENGMEM 追加 · todo 销账 · 复盘写回）→ 规则在 AGENTS.md 里重写（下一轮立即生效）→ 回到 Research。AI 是更严格的读者——它按字面执行。FengOrchestrator：AI 指挥 AI 的舰队中枢（12 docs · 2 skills）；FengASNI：多机 profile 中枢，一台机器一份 MD profile。</p>
-							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI 一机一份 MD profile</p>
-						</div>
-					</div>
-					<p class="aut-tagline">可控服务 + 只读能力清单 · 文件留在原地</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Two-layer interface (FengOS observatory) -->
-		<div id="two-layer" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>一纸两界</h2>
-					<p class="block-subtitle">Two-layer interface principle：L1 负责 build，L2 负责 view，docs 负责管——这一页（FengOS）就是观看层。</p>
-					<div class="tl-grid">
-						<div class="tl-card hl">
-							<span class="tl-tag">L1 · Dialogue</span>
-							<h3>对话层——做事</h3>
-							<p>每一个动作都在对话里运行：人用 natural language（Skill）驱动 ZCode / Skill；AI 读 docs、调工具、写回结果；System 是真实系统，结果以只读方式浮出。</p>
-						</div>
-						<div class="tl-card">
-							<span class="tl-tag">L2 · View</span>
-							<h3>观景层——看</h3>
-							<p>只读，用来检查与展示；本页就是观看层（FengOS）。</p>
-						</div>
-					</div>
-					<div class="tl-plane">
-						<h3>Docs 治理平面</h3>
-						<div class="tl-rows">
-							<span class="tl-row"><b>read</b>：从身份、规则、任务读起</span>
-							<span class="tl-row"><b>write</b>：结果落进 ledger 与 log</span>
-							<span class="tl-row"><b>rule rewrite</b>：AGENTS 下一轮立即生效</span>
-						</div>
-						<p class="tl-docs">AGENTS 规则 · MISSION 目标 · todo 账本 · FENGMEM 记录 · Skill 包</p>
-						<p class="tl-constraint">C1 · 数据留在本地　C2 · 产出进入备份管线</p>
-					</div>
-					<p class="tl-slogan">Docs are the control plane——AI 是最严格的读者，它按字面执行。</p>
-					<p class="tl-prod">systems in production：FengInvest · FengMedia · FlyGo · FengMail　·　纯工具：TTS-UI</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Web3 引流 -->
 		<div class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
 			<div class="block-inner">
 				<div class="section-card">

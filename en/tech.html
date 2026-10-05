@@ -1064,6 +1064,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
     <script src="../assets/js/shared-subpage-navbar.js?v=26.10.01.01.00"></script>
 
     	<nav class="fx-rail" aria-label="本页段落导航">
+		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Autonomous Automation Loop</span></a>
+		<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A paper, drawn</span></a>
 		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Tech is not an island</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The method, in three sentences</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">One App, Four Ways to Breathe</span></a>
@@ -1075,9 +1077,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		<a href="#tool-fit" data-rail="tool-fit"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Tools Follow Problems</span></a>
 		<a href="#delivery" data-rail="delivery"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Delivery is the Start</span></a>
 		<a href="#tech-capability" data-rail="tech-capability"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Technical Implementation</span></a>
-	<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Autonomous Automation Loop</span></a>
-	<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A paper, drawn</span></a>
-		</nav>
+	</nav>
 	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
 	<div class="page-wrap">
         <div class="container">
@@ -1105,7 +1105,136 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
             <!-- Card grid -->
                 
             </div>
-<div id="domains" class="content-block">
+		<!-- top quick-nav cards -->
+		<div class="card-grid">
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80')" onclick="document.getElementById('automation').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>Autonomous Automation Loop</h3>
+						<p>Research → Think → Create → Act → Self-Improve — each round recorded, reviewed, fed back into the MD constitution.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80')" onclick="document.getElementById('two-layer').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>A paper, drawn</h3>
+						<p>L1 dialogue builds, L2 view watches, docs govern both sides.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>Jingxin · four breaths</h3>
+						<p>A calm game where breath is the only control — no failure, no score.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>Mail · CRM · one chain</h3>
+						<p>Self-built mail wired to Twenty CRM and Newsletter, AI-driven.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>Engines, eighteen</h3>
+						<p>Zero-key multi-engine concurrent search aggregator — best engine wins.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('tech-capability').scrollIntoView({behavior:'smooth'})">
+					<div class="card-content">
+						<h3>Delivery capability</h3>
+						<p>Web to desktop to embedded — structure precedes code.</p>
+						<button class="card-btn">Learn more</button>
+					</div>
+				</div>
+		</div>
+
+<div id="automation" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>Autonomous Automation Loop</h2>
+					<p class="block-subtitle">Automation — controllable services plus read-only capability notes · files stay where they are. One self-improving loop: Research → Think → Create → Act → Self-Improve; each round is recorded, reviewed, and fed back into the MD constitution. Self-improvement loop (PDCA + MD constitution): each round feeds the next.</p>
+					<div class="aut-flow">
+								<span class="aut-step">Research</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Think</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Create</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Act</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Self-Improve</span>
+					</div>
+					<div class="aut-grid">
+						<div class="aut-card">
+							<h3>Research</h3>
+							<p>One main lane: market APIs → FengInvest scripts → self-built local SQL stores; one second lane: a self-built generic system gets authorized first, then calls APIs; the Search King flagship searches any site, from anywhere; AIExport aggregates AI outputs into self-built models.</p>
+							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · self-built SQL stores 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
+						</div>
+						<div class="aut-card">
+							<h3>Think</h3>
+							<p>The think layer in daily operation: the AI starts by reading MD docs and writes results back when done — read MD docs → gain identity, rules &amp; tasks → execute → write back to ledger &amp; log.</p>
+							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot: planned / read-only</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Create</h3>
+							<p>CREATE = you make a thing, not yet distributed. FengMedia 37 projects (2026-10-05, "Under a strong general there are no weak soldiers"), the create hub: topic to finished video. Modality grid: Text text generation — (works stay local); Image image generation —; Music music generation 12 tools · gate ✓ (FengMusician toolset in FengMedia/tools/fengmusician); Voice TTS · TTS-UI bundled (the desktop bundle stays local); Avatars digital humans live ✓ · anime verifying; Video video generation — (HyperFrames toolchain; drafts may start from the open-source MoneyPrinterTurbo). FengInvest counts as create too: market research and asset analysis reports are made things, staying local until distributed (91 scripts).</p>
+							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Act</h3>
+							<p>Act = distribute to others, affect the outside. JobHunter (Private-feng-job-hunter): generic batch form execution / automated form filling; outward submission within the authorized scope (CLI ✓ · 1 profiles · confirmed local); FengMail / FENGmailMac (Mac): mail outbound, after authorization calls APIs to deliver mail (confirmed local · authorized → API); distribution channels: Git dual push to GitHub + gitee (read-only documented); authorized → external APIs (credentials never shown); autonomous executor triad: GUI agent + CLI agent + MD docs (CLI · 1 profiles · planned).</p>
+							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git dual push GitHub + gitee</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Self-Improve</h3>
+							<p>Docs are the control plane — each iteration rewrites the constitution, the constitution shapes the next loop. Every round leaves a record (FENGMEM append · todo write-off · retrospective write-back) → rules rewritten in AGENTS.md (takes effect on the very next round) → loops back to Research. AI is the stricter reader — it executes literally. FengOrchestrator: the AI-commanding-AI fleet hub (12 docs · 2 skills); FengASNI: multi-machine profile hub, one MD profile per machine.</p>
+							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI one MD profile per machine</p>
+						</div>
+					</div>
+					<p class="aut-tagline">Controllable services + read-only capability notes · files stay where they are</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Two-layer interface (FengOS observatory) -->
+		<div id="two-layer" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>A paper, drawn</h2>
+					<p class="block-subtitle">Two-layer interface principle: L1 builds, L2 views, docs govern — this page (FengOS) is the viewing layer.</p>
+					<div class="tl-grid">
+						<div class="tl-card hl">
+							<span class="tl-tag">L1 · Dialogue</span>
+							<h3>Dialogue layer — does the work</h3>
+							<p>Every action runs in conversation: the human drives ZCode / Skill with natural language (Skill); the AI reads docs, calls tools, writes back; the system is the real system, results surface read-only.</p>
+						</div>
+						<div class="tl-card">
+							<span class="tl-tag">L2 · View</span>
+							<h3>View layer — watches</h3>
+							<p>Read-only, for checking and showing; this page is the viewing layer (FengOS).</p>
+						</div>
+					</div>
+					<div class="tl-plane">
+						<h3>Docs governance plane</h3>
+						<div class="tl-rows">
+							<span class="tl-row"><b>read</b> — starts with identity, rules, tasks</span>
+							<span class="tl-row"><b>write</b> — results land in the ledger and the log</span>
+							<span class="tl-row"><b>rule rewrite</b> — AGENTS takes effect at once</span>
+						</div>
+						<p class="tl-docs">AGENTS rules · MISSION goals · todo ledger · FENGMEM log · Skill packs</p>
+						<p class="tl-constraint">C1 · data stays local　C2 · outputs into the backup pipeline</p>
+					</div>
+					<p class="tl-slogan">Docs are the control plane — AI is the strictest reader, it executes literally.</p>
+					<p class="tl-prod">systems in production: FengInvest · FengMedia · FlyGo · FengMail　·　pure tools: TTS-UI</p>
+				</div>
+			</div>
+		</div>
+
+        <!-- Web3 funnel -->
+        <div id="domains" class="content-block">
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>Tech is not an island</h2>
@@ -1437,90 +1566,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 
 
 		<!-- Automation loop (FengOS observatory) -->
-		<div id="automation" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>Autonomous Automation Loop</h2>
-					<p class="block-subtitle">Automation — controllable services plus read-only capability notes · files stay where they are. One self-improving loop: Research → Think → Create → Act → Self-Improve; each round is recorded, reviewed, and fed back into the MD constitution. Self-improvement loop (PDCA + MD constitution): each round feeds the next.</p>
-					<div class="aut-flow">
-								<span class="aut-step">Research</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Think</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Create</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Act</span>
-								<span class="aut-arr" aria-hidden="true">→</span>
-								<span class="aut-step">Self-Improve</span>
-					</div>
-					<div class="aut-grid">
-						<div class="aut-card">
-							<h3>Research</h3>
-							<p>One main lane: market APIs → FengInvest scripts → self-built local SQL stores; one second lane: a self-built generic system gets authorized first, then calls APIs; the Search King flagship searches any site, from anywhere; AIExport aggregates AI outputs into self-built models.</p>
-							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · self-built SQL stores 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
-						</div>
-						<div class="aut-card">
-							<h3>Think</h3>
-							<p>The think layer in daily operation: the AI starts by reading MD docs and writes results back when done — read MD docs → gain identity, rules &amp; tasks → execute → write back to ledger &amp; log.</p>
-							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot: planned / read-only</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Create</h3>
-							<p>CREATE = you make a thing, not yet distributed. FengMedia 37 projects (2026-10-05, "Under a strong general there are no weak soldiers"), the create hub: topic to finished video. Modality grid: Text text generation — (works stay local); Image image generation —; Music music generation 12 tools · gate ✓ (FengMusician toolset in FengMedia/tools/fengmusician); Voice TTS · TTS-UI bundled (the desktop bundle stays local); Avatars digital humans live ✓ · anime verifying; Video video generation — (HyperFrames toolchain; drafts may start from the open-source MoneyPrinterTurbo). FengInvest counts as create too: market research and asset analysis reports are made things, staying local until distributed (91 scripts).</p>
-							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Act</h3>
-							<p>Act = distribute to others, affect the outside. JobHunter (Private-feng-job-hunter): generic batch form execution / automated form filling; outward submission within the authorized scope (CLI ✓ · 1 profiles · confirmed local); FengMail / FENGmailMac (Mac): mail outbound, after authorization calls APIs to deliver mail (confirmed local · authorized → API); distribution channels: Git dual push to GitHub + gitee (read-only documented); authorized → external APIs (credentials never shown); autonomous executor triad: GUI agent + CLI agent + MD docs (CLI · 1 profiles · planned).</p>
-							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git dual push GitHub + gitee</p>
-						</div>
-						<div class="aut-card aut-wide">
-							<h3>Self-Improve</h3>
-							<p>Docs are the control plane — each iteration rewrites the constitution, the constitution shapes the next loop. Every round leaves a record (FENGMEM append · todo write-off · retrospective write-back) → rules rewritten in AGENTS.md (takes effect on the very next round) → loops back to Research. AI is the stricter reader — it executes literally. FengOrchestrator: the AI-commanding-AI fleet hub (12 docs · 2 skills); FengASNI: multi-machine profile hub, one MD profile per machine.</p>
-							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI one MD profile per machine</p>
-						</div>
-					</div>
-					<p class="aut-tagline">Controllable services + read-only capability notes · files stay where they are</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Two-layer interface (FengOS observatory) -->
-		<div id="two-layer" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>A paper, drawn</h2>
-					<p class="block-subtitle">Two-layer interface principle: L1 builds, L2 views, docs govern — this page (FengOS) is the viewing layer.</p>
-					<div class="tl-grid">
-						<div class="tl-card hl">
-							<span class="tl-tag">L1 · Dialogue</span>
-							<h3>Dialogue layer — does the work</h3>
-							<p>Every action runs in conversation: the human drives ZCode / Skill with natural language (Skill); the AI reads docs, calls tools, writes back; the system is the real system, results surface read-only.</p>
-						</div>
-						<div class="tl-card">
-							<span class="tl-tag">L2 · View</span>
-							<h3>View layer — watches</h3>
-							<p>Read-only, for checking and showing; this page is the viewing layer (FengOS).</p>
-						</div>
-					</div>
-					<div class="tl-plane">
-						<h3>Docs governance plane</h3>
-						<div class="tl-rows">
-							<span class="tl-row"><b>read</b> — starts with identity, rules, tasks</span>
-							<span class="tl-row"><b>write</b> — results land in the ledger and the log</span>
-							<span class="tl-row"><b>rule rewrite</b> — AGENTS takes effect at once</span>
-						</div>
-						<p class="tl-docs">AGENTS rules · MISSION goals · todo ledger · FENGMEM log · Skill packs</p>
-						<p class="tl-constraint">C1 · data stays local　C2 · outputs into the backup pipeline</p>
-					</div>
-					<p class="tl-slogan">Docs are the control plane — AI is the strictest reader, it executes literally.</p>
-					<p class="tl-prod">systems in production: FengInvest · FengMedia · FlyGo · FengMail　·　pure tools: TTS-UI</p>
-				</div>
-			</div>
-		</div>
-
-        <!-- Web3 funnel -->
-        <div class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
+		<div class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
             <div class="block-inner">
                 <div class="section-card">
                     <h2>Web3 Deep Research</h2>
