@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
     <title>Tech · System Overview | 王丰羽 Fengyu WANG</title>
-    <meta name="description" content="A relation map of six domains and the method in three lines, an interactive graph of 34 projects and 13 cited relations, plus how the shipped software — Jingxin, FengOffice, Search-King — actually gets built.">
+    <meta name="description" content="The method in three lines, plus how the shipped software — Jingxin, FengOffice, Search-King — actually gets built.">
     <meta name="keywords" content="Fengyu WANG tech, system overview, project graph, shipped projects, software delivery, automation, Web, Python, architecture">
     <meta name="author" content="王丰羽">
     <meta name="robots" content="index,follow">
@@ -19,12 +19,12 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tech · System Overview | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="34 shipped projects and 13 cited relations, with a six-domain map and the method in three lines.">
+    <meta property="og:description" content="The method in three lines, with implementation and capability notes.">
     <meta property="og:url" content="https://www.fengyuwang.com/en/tech">
     <meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tech · System Overview | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="A relation map of six domains and the method in three lines, an interactive graph of 34 projects and 13 cited relations, plus how the shipped software — Jingxin, FengOffice, Search-King — actually gets built.">
+    <meta name="twitter:description" content="The method in three lines, plus how the shipped software — Jingxin, FengOffice, Search-King — actually gets built.">
     <meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -1024,7 +1024,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
     	<nav class="fx-rail" aria-label="本页段落导航">
 		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Tech is not an island</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The method, in three sentences</span></a>
-		<a href="#net" data-rail="net"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Project relation graph</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">One App, Four Ways to Breathe</span></a>
 		<a href="#fengoffice" data-rail="fengoffice"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Mail, CRM, and Newsletter in One Chain</span></a>
 		<a href="#search-king" data-rail="search-king"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Eighteen Engines, the Best One Wins</span></a>
@@ -1067,52 +1066,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 				<div class="section-card fx-rv">
 					<h2>Tech is not an island</h2>
 					<p class="block-subtitle">Six domains as nodes, cross-domain relationships as edges. Only documented references are drawn; imagined synergy is not. Structure before code, delivery is the goal — from Web to desktop to embedded. From structure to delivery. </p>
-					<div class="sys-graph-wrap">
-						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="Six-domain relation graph: six domains as nodes whose size scales with project count, cross-domain relationship counts as edges whose width scales with that count, and numeric labels on the five densest edges" xmlns="http://www.w3.org/2000/svg">
-					<line class="gn-edge" x1="159.1" y1="268.0" x2="159.1" y2="338.8" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="277.2" y1="142.4" x2="216.9" y2="173.3" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="493.0" y1="374.2" x2="216.9" y2="232.7" stroke-width="3.27" stroke-opacity="0.44" />
-					<line class="gn-edge" x1="295.9" y1="479.2" x2="221.6" y2="441.0" stroke-width="3.69" stroke-opacity="0.47" />
-					<line class="gn-edge" x1="493.0" y1="443.8" x2="424.1" y2="479.2" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="360.0" y1="193.0" x2="360.0" y2="440.0" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="484.5" y1="409.0" x2="229.3" y2="409.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="481.0" y1="203.0" x2="224.1" y2="203.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="517.4" y1="270.0" x2="399.2" y2="451.6" stroke-width="5.14" stroke-opacity="0.57" />
-					<line class="gn-edge" x1="519.3" y1="345.0" x2="410.7" y2="178.0" stroke-width="5.58" stroke-opacity="0.60" />
-					<line class="gn-edge" x1="309.3" y1="178.0" x2="197.4" y2="350.1" stroke-width="6.35" stroke-opacity="0.66" />
-					<line class="gn-edge" x1="489.8" y1="239.4" x2="221.6" y2="377.0" stroke-width="6.85" stroke-opacity="0.70" />
-					<line class="gn-edge" x1="560.9" y1="282.9" x2="560.9" y2="332.6" stroke-width="7.01" stroke-opacity="0.71" />
-					<line class="gn-edge" x1="489.8" y1="166.6" x2="442.8" y2="142.4" stroke-width="7.60" stroke-opacity="0.75" />
-					<rect class="gn-weight-bg" x="443.5" y="136.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="157.5" text-anchor="middle">22</text>
-					<rect class="gn-weight-bg" x="543.9" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="560.9" y="312.0" text-anchor="middle">18</text>
-					<rect class="gn-weight-bg" x="343.0" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="360.0" y="312.0" text-anchor="middle">17</text>
-					<rect class="gn-weight-bg" x="242.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="259.5" y="260.5" text-anchor="middle">14</text>
-					<rect class="gn-weight-bg" x="443.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="260.5" text-anchor="middle">10</text>
-					<circle class="gn-node" cx="360.0" cy="100.0" r="88.0" />
-					<text class="gn-name" x="360.0" y="93.7" text-anchor="middle" font-size="13.9">Tools &amp; Experiments</text>
-					<text class="gn-count" x="360.0" y="114.9" text-anchor="middle" font-size="11.0">38 projects</text>
-					<circle class="gn-node" cx="560.9" cy="203.0" r="74.9" />
-					<text class="gn-name" x="560.9" y="196.7" text-anchor="middle" font-size="14.0">Content Creation</text>
-					<text class="gn-count" x="560.9" y="218.1" text-anchor="middle" font-size="11.0">23 projects</text>
-					<circle class="gn-node" cx="560.9" cy="409.0" r="71.4" />
-					<text class="gn-name" x="560.9" y="401.2" text-anchor="middle" font-size="9.0">Infrastructure &amp; Orchestration</text>
-					<text class="gn-count" x="560.9" y="416.4" text-anchor="middle" font-size="11.0">19 projects</text>
-					<circle class="gn-node" cx="360.0" cy="512.0" r="67.0" />
-					<text class="gn-name" x="360.0" y="504.2" text-anchor="middle" font-size="9.0">Knowledge &amp; Human-AI Collaboration</text>
-					<text class="gn-count" x="360.0" y="519.4" text-anchor="middle" font-size="11.0">14 projects</text>
-					<circle class="gn-node" cx="159.1" cy="409.0" r="65.2" />
-					<text class="gn-name" x="159.1" y="401.2" text-anchor="middle" font-size="9.0">Automation &amp; Execution</text>
-					<text class="gn-count" x="159.1" y="416.4" text-anchor="middle" font-size="11.0">12 projects</text>
-					<circle class="gn-node" cx="159.1" cy="203.0" r="60.0" />
-					<text class="gn-name" x="159.1" y="195.2" text-anchor="middle" font-size="9.0">Investment &amp; Finance</text>
-					<text class="gn-count" x="159.1" y="210.4" text-anchor="middle" font-size="11.0">6 projects</text>
-					</svg>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -1174,92 +1128,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 				</div>
 			</div>
 		</div>
-<div id="net" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>Project relation graph</h2>
-					<p class="block-subtitle">Balls are projects (sized by relations), particles are references in motion. Hover lights up neighbors, click opens the profile. Drag to pan, scroll to zoom, pinch on touch.</p>
-					<div class="sn2-toolbar"><div class="sn2-legend"></div><button type="button" class="sn2-reset" id="sn2Reset">Reset view</button></div>
-					<label class="sn2-alllab"><input type="checkbox" id="sn2AllE"> Show all links (default: strong ties of 3+ only; hovering any ball lights up all of its relations)</label>
-					<div class="sn2-stage" id="sn2Stage"><canvas id="sn2Cv"></canvas><div class="sn2-tip" id="sn2Tip"></div>
-						<div class="sn2-panel" id="sn2Panel"><button class="sn2-x" id="sn2Px" aria-label="Close">✕</button><div id="sn2Body"></div></div>
-					</div>
-					<script type="application/json" id="sn2Data">{"groups":["tools-experiments","content-creation","infrastructure-orchestration","knowledge-human-ai","automation-execution","invest-finance"],"colors":["#0071e3","#8b5cf6","#dc2626","#087f8c","#7c3aed","#ea7b1c"],"nodes":[{"id":"llm-text-processor","name":"LLM Text Processor","one":"Chunks very long text by strategy and feeds it to large language models in parallel batches, with GUI and CLI sharing one Dockerised service.","badges":["TypeScript"],"cl":0,"deg":5},{"id":"super-invincible-search-king","name":"Search King","one":"A multi-source concurrent search aggregator with no API keys and no Docker: image search, text search, web page reading and deep crawling in one tool.","badges":["Python"],"cl":0,"deg":7},{"id":"open-fengoffice","name":"Open-FengOffice","one":"The desensitised open-source edition of FengOffice: a CLI mail client, Twenty CRM and a newsletter stack as a three-part kit.","badges":["Python"],"cl":0,"deg":4},{"id":"lecoofan","name":"LecooFan","one":"A complete scheme for silencing a noisy Lenovo N175L laptop, combining CPU undervolting with a rewritten ITE embedded-controller fan curve and restore scripts.","badges":["Python"],"cl":0,"deg":3},{"id":"python-deterministic-check","name":"Python Deterministic Check","one":"Runs nine categories of mathematical operations to verify that the numbers come out bit-identical across interpreters, operating systems and CPU architectures.","badges":["Python"],"cl":0,"deg":1},{"id":"joytokeyalternative","name":"JoyToKeyAlternative","one":"A pure C# gamepad-to-keyboard-and-mouse mapper with zero dependencies, written as a learning exercise and a replacement for the closed-source JoyToKey.","badges":["C#"],"cl":0,"deg":0},{"id":"7zevery","name":"7zEvery","one":"A batch 7z compression and decryption tool for Windows that preserves directory structure, offers optional passwords and shows progress with logs.","badges":["Python"],"cl":0,"deg":1},{"id":"check_dup","name":"check_dup","one":"A single-file script that compares adjacent lines in a document and prints the number of duplicate groups found to the console.","badges":["Python"],"cl":0,"deg":0},{"id":"data_floating_window1.2","name":"Data Floating Window 1.2","one":"A pop-up reference and notes overlay for Windows: summoned by hotkey, floating and translucent, with a persistent clipboard and local storage.","badges":["Python"],"cl":0,"deg":0},{"id":"fengfancontrol","name":"FengFanControl","one":"The complete noise and heat-reduction scheme for a Lecoo N175L laptop, kept here as the predecessor repository of the lecoofan project.","badges":["Python"],"cl":0,"deg":2},{"id":"hide-all","name":"Hide All","one":"Closes every visible application on macOS with one action, feeling like logging out without actually logging out of the system.","badges":["Shell"],"cl":0,"deg":0},{"id":"tag_manager","name":"tag_manager","one":"A desktop tool for adding and removing tags in bulk across Obsidian notes and TXT files, with full-text keyword matching.","badges":["Python"],"cl":0,"deg":0},{"id":"unifiedsearch","name":"UnifiedSearch","one":"Asks several search engines and AI platforms at once, opening every result page in one click for easy side-by-side comparison.","badges":["Python"],"cl":0,"deg":4},{"id":"unifiedsearchmobile","name":"UnifiedSearchMobile","one":"The mobile edition of one-click search: ask several platforms at once from a phone and open all the result pages.","badges":["Python"],"cl":0,"deg":1},{"id":"stack-docs","name":"stack-docs","one":"The source code of the official documentation site for the Hugo Stack theme, reused here as a blog documentation submodule.","badges":["Unknown"],"cl":0,"deg":1},{"id":"talkifytts","name":"TalkifyTTS","one":"An Android TTS engine that produces no speech of its own but bridges cloud voices from Microsoft, Qwen, Doubao and Tencent into system read-aloud.","badges":["Kotlin"],"cl":0,"deg":0},{"id":"fengyuwang_com","name":"fengyuwang_com","one":"The trilingual personal website and blog main site: one git repository spanning machines and operating systems, carrying the personal brand and an entry point to every project.","badges":["HTML"],"cl":0,"deg":20},{"id":"jingxin","name":"Jingxin","one":"A calm game whose only control is breathing: no failure, no score, and the sole progress is the world waking up.","badges":["Dart"],"cl":0,"deg":4},{"id":"5dt-pd","name":"5DT-PD","one":"An industrial framework that splits the content business into five layers, twin tracks and twin feedback loops, plus a clickable architecture viewer.","badges":["TypeScript"],"cl":0,"deg":1},{"id":"open-fengmedia","name":"Open-FengMedia","one":"The desensitised open-source edition of a finance content operating system: persona, topic selection, scripting, voiceover, rendering, publishing and review in one pipeline.","badges":["Unknown"],"cl":0,"deg":3},{"id":"manifesto-2026","name":"Manifesto 2026","one":"A sequel chapter to the Communist Manifesto: long-form political writing that takes digital capitalism and the platform economy as its subject of critique.","badges":["Unknown"],"cl":0,"deg":0},{"id":"vids","name":"Vids","one":"A video production line that renders HTML into MP4 with HyperFrames, covering product films, faceless explainers, captions and beat-synced edits.","badges":["Python"],"cl":0,"deg":3},{"id":"cchh","name":"CCHH","one":"Moves Claude Code from the terminal into a graphical workbench: multi-project sessions, worktrees, diffs, permission approvals and remote access on one screen.","badges":["TypeScript"],"cl":0,"deg":2},{"id":"skill-tailscale-serve","name":"Tailscale Serve Skill","one":"A skill wrapper that safely exposes a local 127.0.0.1 web service to phones and other devices on the same Tailnet.","badges":["Unknown"],"cl":0,"deg":1},{"id":"android-linux-server","name":"Android Linux Server","one":"Turns an idle Android phone, without root, into a Linux server reachable over SSH with a graphical desktop and self-healing recovery.","badges":["Shell"],"cl":0,"deg":0},{"id":"open-fengorchestrator","name":"Open-FengOrchestrator","one":"The desensitised open-source edition of the founder's fleet orchestration scheme: selection conclusions after surveying more than 40 projects, plus a role-division blueprint.","badges":["HTML"],"cl":0,"deg":1},{"id":"open-flygo","name":"Open-FlyGo","one":"The desensitised open-source edition that turns an old Windows PC into a full NAS: a single Rust exe panel, a control plane and a web terminal.","badges":["Rust"],"cl":0,"deg":3},{"id":"open-websearch","name":"open-webSearch","one":"A multi-engine MCP server, CLI and local daemon that give AI agents key-free web search and full-text page retrieval with no API key.","badges":["TypeScript"],"cl":0,"deg":1},{"id":"lessons","name":"lessons","one":"Turns hard-won mistakes into individually searchable rules covering Docker persistence, PowerShell BOM issues, API key leaks and Git history cleanup.","badges":["Unknown"],"cl":0,"deg":3},{"id":"free-token-research","name":"Free Token Research","one":"A survey of the free large-model token ecosystem as of September 2026: who is burning cash on subsidies, where the money flows and where the intelligence sources are.","badges":["JavaScript"],"cl":0,"deg":0},{"id":"agents-project","name":"agents-project","one":"A README written specifically for AI coding agents: project conventions captured in a single standard document kept at a predictable location.","badges":["Unknown"],"cl":0,"deg":0},{"id":"course-projects","name":"Course Projects","one":"A collection of project deliverables from an HKUST MSc in marketing and CityU law courses: IMC, branding, CRM and market research in one place.","badges":["Unknown"],"cl":0,"deg":1},{"id":"marketing-portfolio","name":"Marketing Portfolio","one":"Organises marketing capability into a portfolio by dimension: market research, strategy, brand systems, integrated communications and customer operations, one per row.","badges":["Unknown"],"cl":0,"deg":1},{"id":"open-fenginvest","name":"Open-FengInvest","one":"The desensitised open-source edition of the FengInvest seven-layer decision framework, packaging its state machine, data pipeline, tool set and web UI.","badges":["Python"],"cl":0,"deg":5}],"edges":[["fengyuwang_com","super-invincible-search-king",1],["open-fenginvest","super-invincible-search-king",1],["fengyuwang_com","open-fengoffice",2],["fengfancontrol","lecoofan",2],["unifiedsearch","unifiedsearchmobile",2],["fengyuwang_com","unifiedsearch",2],["fengyuwang_com","open-flygo",1],["fengyuwang_com","open-fengmedia",2],["fengyuwang_com","jingxin",2],["fengyuwang_com","lessons",2],["fengyuwang_com","open-fenginvest",2],["5dt-pd","fengyuwang_com",2],["course-projects","marketing-portfolio",2]]}</script>
-				</div>
-			</div>
-		</div>
-<!-- Card grid -->
-			<div class="container">
-				<div class="card-grid">
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Jingxin</h3>
-				                                <p>A minimal meditation guide app — breathing, mindfulness, guidance, and relaxation.</p>
-				                            <button class="card-btn">Visit Site</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>FengOffice</h3>
-				                                <p>Mail, CRM, and Newsletter in one connected pipeline.</p>
-				                            <button class="card-btn">Visit Site</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Search King</h3>
-				                                <p>An unbeatable human-machine search tool — images and text in one grab.</p>
-				                            <button class="card-btn">Visit Site</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Question First, Build Later</h3>
-				                                <p>No ambiguous requirements. Think it through before building.</p>
-				                            <button class="card-btn">Learn How</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=600&q=80')" onclick="document.getElementById('structured').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>System as Compound Interest</h3>
-				                                <p>PDCA drives progress, layer by layer.</p>
-				                            <button class="card-btn">Learn How</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('multi-dim').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>One Dimension is Bias</h3>
-				                                <p>The real world is a web, not a spreadsheet.</p>
-				                            <button class="card-btn">Explore Perspective</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('tool-fit').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Tools Follow Problems</h3>
-				                                <p>Open-source first, AI-accelerated, choose what fits.</p>
-				                            <button class="card-btn">See Choices</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Delivery is the Start</h3>
-				                                <p>Code is just a byproduct; delivery is the start.</p>
-				                            <button class="card-btn">Contact Me</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card invest-card" onclick="window.location.href='/en/invest.html'">
-				                        <div class="card-content">
-				                            <h3>Investment Framework →</h3>
-				                            <p>Tools need a business context to create value.</p>
-				                            <span class="card-btn">Explore</span>
-				                        </div>
-				                    </div>
-				                </div>
-			</div>
-
-
-        <!-- Project 1: Jingxin -->
-        <div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+<div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
             <div class="block-inner">
                 <div class="section-card">
                     <h2>One App, Four Ways to Breathe</h2>
@@ -1564,9 +1433,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
         <!-- Cross-link -->
         		<div class="link-card">
 			<p>Tools need a business context to create value</p>
-			<div class="cta-row">
-				<a class="default-btn" href="/en/system-projects.html">Full project list</a>
-			</div>
 			<div class="cta-row" style="margin-top:14px">
 				<a class="default-btn-one" href="/en/invest.html">Investment framework</a>
 			</div>
@@ -1592,118 +1458,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 	<script>document.documentElement.className+=" fx-js";</script>
 
-<!-- project relation graph renderer: must follow its data -->
-<script>
-(function(){
-var D; try { D = JSON.parse(document.getElementById("sn2Data").textContent); } catch(e){ return; }
-var stage=document.getElementById("sn2Stage"); if(!stage||stage.dataset.sn2) return; stage.dataset.sn2="1";
-var cv=document.getElementById("sn2Cv"),ctx=cv.getContext("2d"),tip=document.getElementById("sn2Tip"),
-    panel=document.getElementById("sn2Panel"),bodyEl=document.getElementById("sn2Body");
-var groups=D.groups,colors=D.colors,N=D.nodes,E=D.edges,byId={};
-N.forEach(function(n){byId[n.id]=n});
-function layout(mode){
-  var centers=[],i,a;
-  if(mode==="land"){for(i=0;i<6;i++){a=(-90+i*60)*Math.PI/180;centers.push([720+310*Math.cos(a),470+310*Math.sin(a)])}}
-  else{centers=[[140,190],[400,190],[140,560],[400,560],[140,930],[400,930]]}
-  var base=mode==="land"?24:15,cf=mode==="land"?26:19,pos={},spread=[],bycl={};
-  N.forEach(function(n){(bycl[n.cl]=bycl[n.cl]||[]).push(n)});
-  for(var c in bycl){(function(cl){var ns=bycl[cl].slice().sort(function(x,y){return y.deg-x.deg||(x.id<y.id?-1:1)});
-    ns.forEach(function(n,k){var rr=base+cf*Math.sqrt(k),ang=k*2.39996+cl*0.7;
-      pos[n.id]=[centers[cl][0]+rr*Math.cos(ang),centers[cl][1]+rr*Math.sin(ang)]});
-    spread[cl]=base+cf*Math.sqrt(Math.max(ns.length-1,0))})(c)}
-  return {pos:pos,spread:spread,centers:centers,W:mode==="land"?1440:540,H:mode==="land"?920:1120};
-}
-var mode=innerWidth<640?"port":"land",L=layout(mode),vb={x:0,y:0,w:L.W,h:L.H};
-function resize(){var w=stage.clientWidth,h=w*L.H/L.W;cv.width=w*devicePixelRatio;cv.height=h*devicePixelRatio;cv.style.height=h+"px";ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
-addEventListener("resize",function(){var m=innerWidth<640?"port":"land";if(m!==mode){mode=m;L=layout(mode);vb={x:0,y:0,w:L.W,h:L.H}}resize()});
-var parts=[];
-function spawn(e,rev){var a=byId[e[0]],b=byId[e[1]];parts.push({a:rev?b:a,b:rev?a:b,t:0,v:.004+Math.random()*.006,c:colors[(rev?b:a).cl]})}
-setInterval(function(){if(parts.length<26&&document.hasFocus()){var e=E[Math.floor(Math.random()*E.length)];if(e)spawn(e,Math.random()<.5)}},260);
-function burst(id){E.forEach(function(e){if(e[0]===id)spawn(e,false);if(e[1]===id)spawn(e,true)})}
-var hover=null,sel=null,moved=false,ptrs={},pinch=null,allE=false;
-var backbone={};N.slice().sort(function(a,b){return b.deg-a.deg||(a.id<b.id?-1:1)}).slice(0,14).forEach(function(n){backbone[n.id]=1});
-document.getElementById("sn2AllE").onchange=function(){allE=this.checked};
-function toWorld(px,py){var r=cv.getBoundingClientRect();return[vb.x+(px-r.left)/r.width*vb.w,vb.y+(py-r.top)/r.height*vb.h]}
-function nodeAt(px,py){var p=toWorld(px,py),best=null,bd=1e9;
-  N.forEach(function(n){var q=L.pos[n.id],rr=Math.max(6+n.deg*1.1,14)+8,d=(q[0]-p[0])*(q[0]-p[0])+(q[1]-p[1])*(q[1]-p[1]);if(d<rr*rr&&d<bd){bd=d;best=n}});
-  return best}
-cv.addEventListener("pointerdown",function(e){ptrs[e.pointerId]=[e.clientX,e.clientY];moved=false;
-  var ks=Object.keys(ptrs);if(ks.length===2){var v=[ptrs[ks[0]],ptrs[ks[1]]];pinch={d:Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}});
-cv.addEventListener("pointermove",function(e){
-  if(ptrs[e.pointerId]){var prev=ptrs[e.pointerId];ptrs[e.pointerId]=[e.clientX,e.clientY];
-    var ks=Object.keys(ptrs);
-    if(ks.length===2&&pinch){var v=[ptrs[ks[0]],ptrs[ks[1]]],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);
-      var r=cv.getBoundingClientRect(),mid=[(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2],p=toWorld(mid[0],mid[1]),f=pinch.d/d;
-      var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k};pinch.d=d;return}
-    var dx=e.clientX-prev[0],dy=e.clientY-prev[1];if(Math.abs(dx)+Math.abs(dy)>3)moved=true;
-    var r=cv.getBoundingClientRect();vb.x-=dx/r.width*vb.w;vb.y-=dy/r.height*vb.h;return}
-  var n=nodeAt(e.clientX,e.clientY);
-  if(n!==hover){hover=n;cv.style.cursor=n?"pointer":"grab";if(n)burst(n.id);
-    if(n){tip.textContent=n.name;tip.style.display="block"}else tip.style.display="none"}
-  if(n){var r=cv.getBoundingClientRect();tip.style.left=(e.clientX-r.left)+"px";tip.style.top=(e.clientY-r.top)+"px"}});
-cv.addEventListener("pointerup",function(e){delete ptrs[e.pointerId];if(Object.keys(ptrs).length<2)pinch=null;
-  if(moved)return;var n=nodeAt(e.clientX,e.clientY);
-  if(n){sel=n;showPanel(n)}else{sel=null;panel.style.display="none"}});
-cv.addEventListener("pointerleave",function(){hover=null;tip.style.display="none"});
-cv.addEventListener("wheel",function(e){e.preventDefault();var p=toWorld(e.clientX,e.clientY),f=e.deltaY>0?1.12:.89;
-  var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k}},{passive:false});
-function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
-function showPanel(n){
-  var h="<h3>"+esc(n.name)+"</h3>";
-  if(n.badges&&n.badges.length)h+='<div class="sn2-badges">'+n.badges.map(function(b){return "<span>"+esc(b)+"</span>"}).join("")+"</div>";
-  if(n.one)h+='<p class="sn2-one">'+esc(n.one)+"</p>";
-  h+='<div class="sn2-rels">'+E.filter(function(e){return e[0]===n.id||e[1]===n.id}).map(function(e){
-    var o=byId[e[0]===n.id?e[1]:e[0]];return '<button class="sn2-rel" data-id="'+esc(o.id)+'">'+esc(o.name)+"</button>"}).join("")+"</div>";
-  bodyEl.innerHTML=h;panel.style.display="block";
-  bodyEl.querySelectorAll(".sn2-rel").forEach(function(b){b.onclick=function(){sel=byId[b.dataset.id];showPanel(sel);burst(sel.id)}})}
-document.getElementById("sn2Px").onclick=function(){panel.style.display="none";sel=null};
-var lgBox=document.querySelector(".sn2-legend");
-groups.forEach(function(g,i){var b=document.createElement("button");b.className="sn2-lg";b.innerHTML='<i style="background:'+colors[i]+'"></i>'+esc(g);
-  b.onclick=function(){var c=L.centers[i],r=(L.spread[i]||60)*2.4;vb={x:c[0]-r/2,y:c[1]-r/2,w:r,h:r}};lgBox.appendChild(b)});
-document.getElementById("sn2Reset").onclick=function(){vb={x:0,y:0,w:L.W,h:L.H};panel.style.display="none";sel=null};
-function draw(){
-  var dark=document.body.getAttribute("data-theme")==="dark";
-  var labC=dark?"#e5ecf4":"#2563eb",halo=dark?"#0f172a":"#ffffff";
-  var r=cv.getBoundingClientRect(),sx=r.width/vb.w,sy=r.height/vb.h;
-  ctx.clearRect(0,0,r.width,r.height);
-  ctx.save();ctx.scale(sx,sy);ctx.translate(-vb.x,-vb.y);
-  var lit=null;if(hover)lit=hover.id;if(sel)lit=sel.id;
-  var nbr={};if(lit)E.forEach(function(e){if(e[0]===lit)nbr[e[1]]=1;if(e[1]===lit)nbr[e[0]]=1});
-  L.centers.forEach(function(c,i){ctx.beginPath();ctx.arc(c[0],c[1],(L.spread[i]||50)+26,0,7);
-    ctx.strokeStyle=colors[i];ctx.globalAlpha=dark?.25:.3;ctx.setLineDash([4,6]);ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1});
-  E.forEach(function(e){var a=L.pos[e[0]],b=L.pos[e[1]];var on=lit&&(e[0]===lit||e[1]===lit);
-    if(!(on||(allE)||(e[2]>=2)))return;
-    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);
-    ctx.strokeStyle=on?(dark?"#2997ff":"#0071e3"):(dark?"rgba(96,165,250,.28)":"rgba(0,90,200,.4)");
-    ctx.lineWidth=on?2:Math.min(.9+e[2]*.4,2);ctx.stroke()});
-  var fs=Math.max(10.5,vb.w/80);
-  ctx.textAlign="center";
-  /* Idle graph: name only the backbone. Hover/select labels a node and
-     its neighbours, which is what makes the sphere worth reading. */
-  var show=backbone;
-  if(lit){show={};show[lit]=1;for(var k in nbr)show[k]=1}
-  N.forEach(function(n){var p=L.pos[n.id],rad=7+Math.min(n.deg,12)*1.1;
-    var isLit=lit&&(n.id===lit||nbr[n.id]);
-    ctx.beginPath();ctx.arc(p[0],p[1],rad,0,7);
-    ctx.fillStyle=isLit?colors[n.cl]:(dark?"#0f172a":"#ffffff");
-    ctx.globalAlpha=lit&&!isLit?.25:1;ctx.fill();
-    ctx.strokeStyle=colors[n.cl];ctx.lineWidth=isLit?(n.id===lit?3.6:2.6):2.2;
-    if(sel&&n.id===sel.id)ctx.lineWidth=3.4;
-    ctx.stroke();
-    if(!show[n.id])return;
-    ctx.font="700 "+fs+"px -apple-system,'PingFang SC',sans-serif";
-    ctx.globalAlpha=lit&&!isLit?.35:.92;
-    ctx.lineWidth=4;ctx.strokeStyle=halo;ctx.strokeText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.fillStyle=labC;ctx.fillText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.globalAlpha=1});
-  parts=parts.filter(function(pt){pt.t+=pt.v;if(pt.t>=1)return false;
-    var a=L.pos[pt.a.id],b=L.pos[pt.b.id];if(!a||!b)return false;
-    var x=a[0]+(b[0]-a[0])*pt.t,y=a[1]+(b[1]-a[1])*pt.t;
-    ctx.beginPath();ctx.arc(x,y,3.2,0,7);ctx.fillStyle=pt.c;ctx.globalAlpha=.95;ctx.fill();ctx.globalAlpha=1;return true});
-  ctx.restore();requestAnimationFrame(draw)}
-resize();draw();
-})();
-</script>
 <!-- reveal, progress, rail, counters -->
 <script>(function(){
 var tabs=Array.from(document.querySelectorAll('.pd5-tab'));

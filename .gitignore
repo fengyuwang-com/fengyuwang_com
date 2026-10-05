@@ -40,3 +40,4 @@ server.log
 
 # Migration log (operational, generated)
 scripts/migrate.log
+echo .merge_backup
