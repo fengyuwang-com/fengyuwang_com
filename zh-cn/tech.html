@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#0f172a">
 	<meta name="format-detection" content="telephone=no">
 	<title>技术 · 体系全景 | 王丰羽 Fengyu WANG</title>
-	<meta name="description" content="六个领域的关系图与方法三句话，一张可交互的项目关系图（34 个项目、13 组引用），以及静心、FengOffice、Search-King 等技术项目的实现与能力清单。">
+	<meta name="description" content="方法三句话，以及静心、FengOffice、Search-King 等技术项目的实现与能力清单。">
 	<meta name="keywords" content="王丰羽 技术, 体系全景, 项目关系图, 自有项目, 软件交付, 自动化, Web, Python, 架构, 工程">
 	<meta name="author" content="王丰羽">
 	<meta name="robots" content="index,follow">
@@ -18,12 +18,12 @@
 	<meta property="og:locale" content="zh_CN">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="技术 · 体系全景 | 王丰羽 Fengyu WANG">
-	<meta property="og:description" content="34 个自有项目、13 组有据可查的引用关系，配六大领域关系图与方法三句话。">
+	<meta property="og:description" content="方法三句话，配实现与能力清单。">
 	<meta property="og:url" content="https://www.fengyuwang.com/zh-cn/tech">
 	<meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="技术 · 体系全景 | 王丰羽 Fengyu WANG">
-	<meta name="twitter:description" content="六个领域的关系图与方法三句话，一张可交互的项目关系图（34 个项目、13 组引用），以及静心、FengOffice、Search-King 等技术项目的实现与能力清单。">
+	<meta name="twitter:description" content="方法三句话，以及静心、FengOffice、Search-King 等技术项目的实现与能力清单。">
 	<meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -1024,7 +1024,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		<nav class="fx-rail" aria-label="本页段落导航">
 		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技术不是孤岛</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">方法，三句话</span></a>
-		<a href="#net" data-rail="net"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">项目关系图</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一个 App，四种呼吸方式</span></a>
 		<a href="#fengoffice" data-rail="fengoffice"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">邮件、CRM、Newsletter，一条链</span></a>
 		<a href="#search-king" data-rail="search-king"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">十八路引擎，谁行谁上</span></a>
@@ -1066,55 +1065,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>技术不是孤岛</h2>
-					<p class="block-subtitle">六个领域为节点，跨领域关系条数为边。连线只画有据可查的引用，不画想象中的协同。 结构设计先于代码，交付才是目的——从 Web 到桌面到嵌入式。 从结构到交付。 </p>
-					<div class="sys-graph-wrap">
-						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="六大领域关系图：六个领域为节点，节点大小按项目数缩放，跨领域关系条数为边，边宽按关系条数缩放，最密的五条边标出数值" xmlns="http://www.w3.org/2000/svg">
-					<line class="gn-edge" x1="159.1" y1="268.0" x2="159.1" y2="338.8" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="277.2" y1="142.4" x2="216.9" y2="173.3" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="493.0" y1="374.2" x2="216.9" y2="232.7" stroke-width="3.27" stroke-opacity="0.44" />
-					<line class="gn-edge" x1="295.9" y1="479.2" x2="221.6" y2="441.0" stroke-width="3.69" stroke-opacity="0.47" />
-					<line class="gn-edge" x1="493.0" y1="443.8" x2="424.1" y2="479.2" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="360.0" y1="193.0" x2="360.0" y2="440.0" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="484.5" y1="409.0" x2="229.3" y2="409.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="481.0" y1="203.0" x2="224.1" y2="203.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="517.4" y1="270.0" x2="399.2" y2="451.6" stroke-width="5.14" stroke-opacity="0.57" />
-					<line class="gn-edge" x1="519.3" y1="345.0" x2="410.7" y2="178.0" stroke-width="5.58" stroke-opacity="0.60" />
-					<line class="gn-edge" x1="309.3" y1="178.0" x2="197.4" y2="350.1" stroke-width="6.35" stroke-opacity="0.66" />
-					<line class="gn-edge" x1="489.8" y1="239.4" x2="221.6" y2="377.0" stroke-width="6.85" stroke-opacity="0.70" />
-					<line class="gn-edge" x1="560.9" y1="282.9" x2="560.9" y2="332.6" stroke-width="7.01" stroke-opacity="0.71" />
-					<line class="gn-edge" x1="489.8" y1="166.6" x2="442.8" y2="142.4" stroke-width="7.60" stroke-opacity="0.75" />
-					<rect class="gn-weight-bg" x="443.5" y="136.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="157.5" text-anchor="middle">22</text>
-					<rect class="gn-weight-bg" x="543.9" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="560.9" y="312.0" text-anchor="middle">18</text>
-					<rect class="gn-weight-bg" x="343.0" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="360.0" y="312.0" text-anchor="middle">17</text>
-					<rect class="gn-weight-bg" x="242.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="259.5" y="260.5" text-anchor="middle">14</text>
-					<rect class="gn-weight-bg" x="443.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="260.5" text-anchor="middle">10</text>
-					<circle class="gn-node" cx="360.0" cy="100.0" r="88.0" />
-					<text class="gn-name" x="360.0" y="94.4" text-anchor="middle" font-size="20.0">工具与实验</text>
-					<text class="gn-count" x="360.0" y="123.2" text-anchor="middle" font-size="13.2">38 个项目</text>
-					<circle class="gn-node" cx="560.9" cy="203.0" r="74.9" />
-					<text class="gn-name" x="560.9" y="197.4" text-anchor="middle" font-size="20.0">内容创作</text>
-					<text class="gn-count" x="560.9" y="226.2" text-anchor="middle" font-size="13.2">23 个项目</text>
-					<circle class="gn-node" cx="560.9" cy="409.0" r="71.4" />
-					<text class="gn-name" x="560.9" y="391.0" text-anchor="middle" font-size="20.0">基础设施</text>
-					<text class="gn-name" x="560.9" y="415.8" text-anchor="middle" font-size="20.0">与编排</text>
-					<text class="gn-count" x="560.9" y="444.6" text-anchor="middle" font-size="13.2">19 个项目</text>
-					<circle class="gn-node" cx="360.0" cy="512.0" r="67.0" />
-					<text class="gn-name" x="360.0" y="494.0" text-anchor="middle" font-size="20.0">知识与人</text>
-					<text class="gn-name" x="360.0" y="518.8" text-anchor="middle" font-size="20.0">机协作</text>
-					<text class="gn-count" x="360.0" y="547.6" text-anchor="middle" font-size="13.2">14 个项目</text>
-					<circle class="gn-node" cx="159.1" cy="409.0" r="65.2" />
-					<text class="gn-name" x="159.1" y="403.4" text-anchor="middle" font-size="20.0">自动化执行</text>
-					<text class="gn-count" x="159.1" y="432.2" text-anchor="middle" font-size="13.2">12 个项目</text>
-					<circle class="gn-node" cx="159.1" cy="203.0" r="60.0" />
-					<text class="gn-name" x="159.1" y="197.4" text-anchor="middle" font-size="20.0">投资金融</text>
-					<text class="gn-count" x="159.1" y="226.2" text-anchor="middle" font-size="13.2">6 个项目</text>
-					</svg>
-					</div>
+					<p class="block-subtitle">结构设计先于代码，交付才是目的——从 Web 到桌面到嵌入式。 从结构到交付。 </p>
+					
 				</div>
 			</div>
 		</div>
@@ -1176,92 +1128,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 				</div>
 			</div>
 		</div>
-<div id="net" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>项目关系图</h2>
-					<p class="block-subtitle">球＝项目（大小按关系数），光点＝传递中的引用。悬停点亮邻居，点击看简介；可拖拽、滚轮缩放、双指捏合。</p>
-					<div class="sn2-toolbar"><div class="sn2-legend"></div><button type="button" class="sn2-reset" id="sn2Reset">重置视图</button></div>
-					<label class="sn2-alllab"><input type="checkbox" id="sn2AllE"> 显示全部连线（默认只画 3 次以上的强关系，悬停任何球点亮它的全部关系）</label>
-					<div class="sn2-stage" id="sn2Stage"><canvas id="sn2Cv"></canvas><div class="sn2-tip" id="sn2Tip"></div>
-						<div class="sn2-panel" id="sn2Panel"><button class="sn2-x" id="sn2Px" aria-label="关闭">✕</button><div id="sn2Body"></div></div>
-					</div>
-					<script type="application/json" id="sn2Data">{"groups":["工具与实验","内容创作","基础设施与编排","知识与人机协作","自动化执行","投资金融"],"colors":["#0071e3","#8b5cf6","#dc2626","#087f8c","#7c3aed","#ea7b1c"],"nodes":[{"id":"llm-text-processor","name":"llm-text-processor","one":"把超长文本按策略切块后并行喂给大模型批处理，GUI 与 CLI 共用一个 Docker 化服务。","badges":["TypeScript"],"cl":0,"deg":5},{"id":"super-invincible-search-king","name":"Search-King","one":"零 Key 零 Docker 的多源并发搜索聚合器：搜图、搜文字、读网页、深度爬取一把抓。","badges":["Python"],"cl":0,"deg":7},{"id":"open-fengoffice","name":"open-FengOffice","one":"FengOffice 的脱敏开源版：CLI 邮件客户端 + Twenty CRM + Newsletter 三件套。","badges":["Python"],"cl":0,"deg":4},{"id":"lecoofan","name":"lecoofan","one":"把这台吵人的联想 N175L 彻底压安静：CPU 降压 + ITE EC 风扇曲线重写全套方案。","badges":["Python"],"cl":0,"deg":3},{"id":"python-deterministic-check","name":"python-deterministic-check","one":"九大类数学运算跑一遍，验证不同解释器/系统/CPU 上算出来的数字是否完全一致。","badges":["Python"],"cl":0,"deg":1},{"id":"joytokeyalternative","name":"JoyToKeyAlternative","one":"纯 C# 零依赖的手柄→键盘/鼠标映射工具，为学习和替代闭源 JoyToKey 而写。","badges":["C#"],"cl":0,"deg":0},{"id":"7zevery","name":"7zEvery","one":"Windows 上的批量 7z 压缩与解密工具：保留目录层级、可选密码、带进度与日志。","badges":["Python"],"cl":0,"deg":1},{"id":"check_dup","name":"check_dup","one":"逐行比对文档里的相邻重复内容，在控制台打印重复组数量的单文件小脚本。","badges":["Python"],"cl":0,"deg":0},{"id":"data_floating_window1.2","name":"data_floating_window1.2","one":"Windows 上的弹出式资料/笔记浮窗：热键呼出、透明悬浮、常驻剪贴板、本地存档。","badges":["Python"],"cl":0,"deg":0},{"id":"fengfancontrol","name":"FengFanControl","one":"来酷 N175L 的降噪降温完整方案，lecoofan 的前身仓库。","badges":["Python"],"cl":0,"deg":2},{"id":"hide-all","name":"hide-all","one":"一键关闭 macOS 上所有可见应用，效果像注销但不注销系统。","badges":["Shell"],"cl":0,"deg":0},{"id":"tag_manager","name":"tag_manager","one":"批量给 Obsidian 笔记和 TXT 文件加/删标签的桌面工具，支持关键词全文匹配。","badges":["Python"],"cl":0,"deg":0},{"id":"unifiedsearch","name":"UnifiedSearch","one":"在多个搜索引擎和 AI 平台同时提问，一键把所有结果页打开并排看。","badges":["Python"],"cl":0,"deg":4},{"id":"unifiedsearchmobile","name":"UnifiedSearchMobile","one":"一键搜索的移动端版本：在手机上同时向多平台提问并打开全部结果。","badges":["Python"],"cl":0,"deg":1},{"id":"stack-docs","name":"stack-docs","one":"Hugo Stack 主题的官方文档站源码，作为博客文档子模块被复用。","badges":["未知"],"cl":0,"deg":1},{"id":"talkifytts","name":"TalkifyTTS","one":"不产语音只做桥梁的 Android TTS 引擎：把微软/千问/豆包/腾讯的云端语音接进系统朗读。","badges":["Kotlin"],"cl":0,"deg":0},{"id":"fengyuwang_com","name":"fengyuwang_com","one":"三语个人网站与博客主站：一个 git 仓库跨机器跨系统，承载个人品牌与全部项目入口。","badges":["HTML"],"cl":1,"deg":20},{"id":"jingxin","name":"Jingxin","one":"用呼吸当唯一操作的平静游戏：没有失败、没有分数，唯一进度是世界苏醒。","badges":["Dart"],"cl":1,"deg":4},{"id":"5dt-pd","name":"5dt-pd","one":"把内容生意拆成五层双轨双循环的工业化框架，外加一个可点着看的可视化查看器。","badges":["TypeScript"],"cl":1,"deg":1},{"id":"open-fengmedia","name":"Open-FengMedia 开源版","one":"财经内容操作系统的脱敏开源版：人设、选题、写稿、配音、渲染、发布、复盘收进一条流水线。","badges":["未知"],"cl":1,"deg":3},{"id":"manifesto-2026","name":"Manifesto-2026","one":"「共产党宣言续章」：以数字资本主义批判为题的长篇政论写作。","badges":["未知"],"cl":1,"deg":0},{"id":"vids","name":"Vids","one":"用 HyperFrames 把 HTML 渲染成 MP4 的视频生产线，覆盖产品片、无脸解说、字幕与踩点剪辑。","badges":["Python"],"cl":1,"deg":3},{"id":"cchh","name":"CCHH","one":"把 Claude Code 从终端搬进图形工作台：多项目、Worktree、Diff、权限审批与远程入口一屏收拢。","badges":["TypeScript"],"cl":2,"deg":2},{"id":"skill-tailscale-serve","name":"skill-tailscale-serve","one":"把本机 127.0.0.1 的 Web 服务安全暴露给手机/Tailnet 设备的 skill 封装。","badges":["未知"],"cl":2,"deg":1},{"id":"android-linux-server","name":"Android 无 root Linux 服务器方案","one":"把闲置 Android 手机在不用 root 的前提下，改造成可 SSH 远程操作、带图形桌面与自愈机制的 Linux 服务器。","badges":["Shell"],"cl":2,"deg":0},{"id":"open-fengorchestrator","name":"Open-FengOrchestrator","one":"董事长舰队编排方案的脱敏开源版：调研 40+ 项目后的选型结论与角色分工蓝图。","badges":["HTML"],"cl":2,"deg":1},{"id":"open-flygo","name":"Open-FlyGo","one":"把旧 Windows 电脑变成完整 NAS 的脱敏开源版：Rust 单 exe 面板 + 控制面 + Web 终端。","badges":["Rust"],"cl":2,"deg":3},{"id":"open-websearch","name":"open-webSearch","one":"多引擎 MCP 服务器 + CLI + 本地守护进程，给 agent 做免 Key 的联网搜索与取正文。","badges":["TypeScript"],"cl":2,"deg":1},{"id":"lessons","name":"lessons","one":"把踩过的坑写成一条条可检索的规范：Docker 持久化、PowerShell BOM、密钥泄漏、Git 清理等。","badges":["未知"],"cl":3,"deg":3},{"id":"free-token-research","name":"free-token-research","one":"2026-09 时点的免费大模型 Token 生态调研：谁在烧钱补贴、钱流到哪一层、情报源在哪。","badges":["JavaScript"],"cl":3,"deg":0},{"id":"agents-project","name":"agents-project","one":"给 AI 编码 agent 看的 README：把项目约定写成一份可预测位置的标准化说明。","badges":["未知"],"cl":3,"deg":0},{"id":"course-projects","name":"course-projects","one":"港科大 MSc 营销与城大法学课程的项目交付物合集：IMC、品牌、CRM、市场研究样样齐全。","badges":["未知"],"cl":3,"deg":1},{"id":"marketing-portfolio","name":"marketing-portfolio","one":"把营销能力按维度整理成作品集：市场研究、策略、品牌系统、整合传播、客户运营一栏一项。","badges":["未知"],"cl":3,"deg":1},{"id":"open-fenginvest","name":"Open-FengInvest","one":"FengInvest 七层决策框架的脱敏开源版：状态机 + 数据管道 + 工具集 + Web UI。","badges":["Python"],"cl":5,"deg":5}],"edges":[["fengyuwang_com","super-invincible-search-king",1],["open-fenginvest","super-invincible-search-king",1],["fengyuwang_com","open-fengoffice",2],["fengfancontrol","lecoofan",2],["unifiedsearch","unifiedsearchmobile",2],["fengyuwang_com","unifiedsearch",2],["fengyuwang_com","open-flygo",1],["fengyuwang_com","open-fengmedia",2],["fengyuwang_com","jingxin",2],["fengyuwang_com","lessons",2],["fengyuwang_com","open-fenginvest",2],["5dt-pd","fengyuwang_com",2],["course-projects","marketing-portfolio",2]]}</script>
-				</div>
-			</div>
-		</div>
-<!-- Card grid -->
-			<div class="container">
-				<div class="card-grid">
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>静心 Jingxin</h3>
-													<p>极简冥想引导 App——呼吸、正念、引导、放松。</p>
-											<button class="card-btn">了解详情</button>
-										</div>
-									</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>FengOffice</h3>
-													<p>邮件、CRM、Newsletter，一条链。</p>
-											<button class="card-btn">了解详情</button>
-										</div>
-									</div>
-				<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>Search King</h3>
-													<p>无敌人机协作搜索器，搜图搜文字一把抓。</p>
-											<button class="card-btn">了解详情</button>
-										</div>
-									</div>
-									<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>不问对，不开始</h3>
-												<p>不接受模糊需求，先想清楚再做。</p>
-											<button class="card-btn">了解方法</button>
-										</div>
-									</div>
-									<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=600&q=80')" onclick="document.getElementById('structured').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>系统即复利</h3>
-												<p>PDCA 推着走，层层递进。</p>
-											<button class="card-btn">了解方法</button>
-										</div>
-									</div>
-									<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('multi-dim').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>一维即偏见</h3>
-												<p>真实世界是网状关系，不是表格。</p>
-											<button class="card-btn">了解视角</button>
-										</div>
-									</div>
-									<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('tool-fit').scrollIntoView({behavior:'smooth'})">
-										<div class="card-content">
-												<h3>工具从问题</h3>
-												<p>开源优先，AI 加速，选最合适的。</p>
-											<button class="card-btn">了解选择</button>
-										</div>
-									</div>
-								<div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
-									<div class="card-content">
-											<h3>交付为开始</h3>
-												<p>代码只是中间产物，交付才是开始。</p>
-										<button class="card-btn">联系我</button>
-									</div>
-								</div>
-				
-				
-				
-				
-								<div class="mkt-card invest-card" onclick="window.location.href='/zh-cn/invest.html'">
-										<div class="card-content">
-											<h3>投资框架 →</h3>
-											<p>工具需要有商业场景才有价值。</p>
-											<span class="card-btn">去看看</span>
-										</div>
-									</div>
-								</div>
-			</div>
 
 
 		<!-- Project 1: 静心 Jingxin -->
@@ -1572,9 +1438,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		<!-- Cross-link -->
 				<div class="link-card">
 			<p>工具需要有商业场景才有价值</p>
-			<div class="cta-row">
-				<a class="default-btn" href="/zh-cn/system-projects.html">项目全清单</a>
-			</div>
 			<div class="cta-row" style="margin-top:14px">
 				<a class="default-btn-one" href="/zh-cn/invest.html">投资框架</a>
 			</div>
@@ -1600,118 +1463,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 	<script>document.documentElement.className+=" fx-js";</script>
 
-<!-- project relation graph renderer: must follow its data -->
-<script>
-(function(){
-var D; try { D = JSON.parse(document.getElementById("sn2Data").textContent); } catch(e){ return; }
-var stage=document.getElementById("sn2Stage"); if(!stage||stage.dataset.sn2) return; stage.dataset.sn2="1";
-var cv=document.getElementById("sn2Cv"),ctx=cv.getContext("2d"),tip=document.getElementById("sn2Tip"),
-    panel=document.getElementById("sn2Panel"),bodyEl=document.getElementById("sn2Body");
-var groups=D.groups,colors=D.colors,N=D.nodes,E=D.edges,byId={};
-N.forEach(function(n){byId[n.id]=n});
-function layout(mode){
-  var centers=[],i,a;
-  if(mode==="land"){for(i=0;i<6;i++){a=(-90+i*60)*Math.PI/180;centers.push([720+310*Math.cos(a),470+310*Math.sin(a)])}}
-  else{centers=[[140,190],[400,190],[140,560],[400,560],[140,930],[400,930]]}
-  var base=mode==="land"?24:15,cf=mode==="land"?26:19,pos={},spread=[],bycl={};
-  N.forEach(function(n){(bycl[n.cl]=bycl[n.cl]||[]).push(n)});
-  for(var c in bycl){(function(cl){var ns=bycl[cl].slice().sort(function(x,y){return y.deg-x.deg||(x.id<y.id?-1:1)});
-    ns.forEach(function(n,k){var rr=base+cf*Math.sqrt(k),ang=k*2.39996+cl*0.7;
-      pos[n.id]=[centers[cl][0]+rr*Math.cos(ang),centers[cl][1]+rr*Math.sin(ang)]});
-    spread[cl]=base+cf*Math.sqrt(Math.max(ns.length-1,0))})(c)}
-  return {pos:pos,spread:spread,centers:centers,W:mode==="land"?1440:540,H:mode==="land"?920:1120};
-}
-var mode=innerWidth<640?"port":"land",L=layout(mode),vb={x:0,y:0,w:L.W,h:L.H};
-function resize(){var w=stage.clientWidth,h=w*L.H/L.W;cv.width=w*devicePixelRatio;cv.height=h*devicePixelRatio;cv.style.height=h+"px";ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
-addEventListener("resize",function(){var m=innerWidth<640?"port":"land";if(m!==mode){mode=m;L=layout(mode);vb={x:0,y:0,w:L.W,h:L.H}}resize()});
-var parts=[];
-function spawn(e,rev){var a=byId[e[0]],b=byId[e[1]];parts.push({a:rev?b:a,b:rev?a:b,t:0,v:.004+Math.random()*.006,c:colors[(rev?b:a).cl]})}
-setInterval(function(){if(parts.length<26&&document.hasFocus()){var e=E[Math.floor(Math.random()*E.length)];if(e)spawn(e,Math.random()<.5)}},260);
-function burst(id){E.forEach(function(e){if(e[0]===id)spawn(e,false);if(e[1]===id)spawn(e,true)})}
-var hover=null,sel=null,moved=false,ptrs={},pinch=null,allE=false;
-var backbone={};N.slice().sort(function(a,b){return b.deg-a.deg||(a.id<b.id?-1:1)}).slice(0,14).forEach(function(n){backbone[n.id]=1});
-document.getElementById("sn2AllE").onchange=function(){allE=this.checked};
-function toWorld(px,py){var r=cv.getBoundingClientRect();return[vb.x+(px-r.left)/r.width*vb.w,vb.y+(py-r.top)/r.height*vb.h]}
-function nodeAt(px,py){var p=toWorld(px,py),best=null,bd=1e9;
-  N.forEach(function(n){var q=L.pos[n.id],rr=Math.max(6+n.deg*1.1,14)+8,d=(q[0]-p[0])*(q[0]-p[0])+(q[1]-p[1])*(q[1]-p[1]);if(d<rr*rr&&d<bd){bd=d;best=n}});
-  return best}
-cv.addEventListener("pointerdown",function(e){ptrs[e.pointerId]=[e.clientX,e.clientY];moved=false;
-  var ks=Object.keys(ptrs);if(ks.length===2){var v=[ptrs[ks[0]],ptrs[ks[1]]];pinch={d:Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}});
-cv.addEventListener("pointermove",function(e){
-  if(ptrs[e.pointerId]){var prev=ptrs[e.pointerId];ptrs[e.pointerId]=[e.clientX,e.clientY];
-    var ks=Object.keys(ptrs);
-    if(ks.length===2&&pinch){var v=[ptrs[ks[0]],ptrs[ks[1]]],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);
-      var r=cv.getBoundingClientRect(),mid=[(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2],p=toWorld(mid[0],mid[1]),f=pinch.d/d;
-      var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k};pinch.d=d;return}
-    var dx=e.clientX-prev[0],dy=e.clientY-prev[1];if(Math.abs(dx)+Math.abs(dy)>3)moved=true;
-    var r=cv.getBoundingClientRect();vb.x-=dx/r.width*vb.w;vb.y-=dy/r.height*vb.h;return}
-  var n=nodeAt(e.clientX,e.clientY);
-  if(n!==hover){hover=n;cv.style.cursor=n?"pointer":"grab";if(n)burst(n.id);
-    if(n){tip.textContent=n.name;tip.style.display="block"}else tip.style.display="none"}
-  if(n){var r=cv.getBoundingClientRect();tip.style.left=(e.clientX-r.left)+"px";tip.style.top=(e.clientY-r.top)+"px"}});
-cv.addEventListener("pointerup",function(e){delete ptrs[e.pointerId];if(Object.keys(ptrs).length<2)pinch=null;
-  if(moved)return;var n=nodeAt(e.clientX,e.clientY);
-  if(n){sel=n;showPanel(n)}else{sel=null;panel.style.display="none"}});
-cv.addEventListener("pointerleave",function(){hover=null;tip.style.display="none"});
-cv.addEventListener("wheel",function(e){e.preventDefault();var p=toWorld(e.clientX,e.clientY),f=e.deltaY>0?1.12:.89;
-  var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k}},{passive:false});
-function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
-function showPanel(n){
-  var h="<h3>"+esc(n.name)+"</h3>";
-  if(n.badges&&n.badges.length)h+='<div class="sn2-badges">'+n.badges.map(function(b){return "<span>"+esc(b)+"</span>"}).join("")+"</div>";
-  if(n.one)h+='<p class="sn2-one">'+esc(n.one)+"</p>";
-  h+='<div class="sn2-rels">'+E.filter(function(e){return e[0]===n.id||e[1]===n.id}).map(function(e){
-    var o=byId[e[0]===n.id?e[1]:e[0]];return '<button class="sn2-rel" data-id="'+esc(o.id)+'">'+esc(o.name)+"</button>"}).join("")+"</div>";
-  bodyEl.innerHTML=h;panel.style.display="block";
-  bodyEl.querySelectorAll(".sn2-rel").forEach(function(b){b.onclick=function(){sel=byId[b.dataset.id];showPanel(sel);burst(sel.id)}})}
-document.getElementById("sn2Px").onclick=function(){panel.style.display="none";sel=null};
-var lgBox=document.querySelector(".sn2-legend");
-groups.forEach(function(g,i){var b=document.createElement("button");b.className="sn2-lg";b.innerHTML='<i style="background:'+colors[i]+'"></i>'+esc(g);
-  b.onclick=function(){var c=L.centers[i],r=(L.spread[i]||60)*2.4;vb={x:c[0]-r/2,y:c[1]-r/2,w:r,h:r}};lgBox.appendChild(b)});
-document.getElementById("sn2Reset").onclick=function(){vb={x:0,y:0,w:L.W,h:L.H};panel.style.display="none";sel=null};
-function draw(){
-  var dark=document.body.getAttribute("data-theme")==="dark";
-  var labC=dark?"#e5ecf4":"#2563eb",halo=dark?"#0f172a":"#ffffff";
-  var r=cv.getBoundingClientRect(),sx=r.width/vb.w,sy=r.height/vb.h;
-  ctx.clearRect(0,0,r.width,r.height);
-  ctx.save();ctx.scale(sx,sy);ctx.translate(-vb.x,-vb.y);
-  var lit=null;if(hover)lit=hover.id;if(sel)lit=sel.id;
-  var nbr={};if(lit)E.forEach(function(e){if(e[0]===lit)nbr[e[1]]=1;if(e[1]===lit)nbr[e[0]]=1});
-  L.centers.forEach(function(c,i){ctx.beginPath();ctx.arc(c[0],c[1],(L.spread[i]||50)+26,0,7);
-    ctx.strokeStyle=colors[i];ctx.globalAlpha=dark?.25:.3;ctx.setLineDash([4,6]);ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1});
-  E.forEach(function(e){var a=L.pos[e[0]],b=L.pos[e[1]];var on=lit&&(e[0]===lit||e[1]===lit);
-    if(!(on||(allE)||(e[2]>=2)))return;
-    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);
-    ctx.strokeStyle=on?(dark?"#2997ff":"#0071e3"):(dark?"rgba(96,165,250,.28)":"rgba(0,90,200,.4)");
-    ctx.lineWidth=on?2:Math.min(.9+e[2]*.4,2);ctx.stroke()});
-  var fs=Math.max(10.5,vb.w/80);
-  ctx.textAlign="center";
-  /* Idle graph: name only the backbone. Hover/select labels a node and
-     its neighbours, which is what makes the sphere worth reading. */
-  var show=backbone;
-  if(lit){show={};show[lit]=1;for(var k in nbr)show[k]=1}
-  N.forEach(function(n){var p=L.pos[n.id],rad=7+Math.min(n.deg,12)*1.1;
-    var isLit=lit&&(n.id===lit||nbr[n.id]);
-    ctx.beginPath();ctx.arc(p[0],p[1],rad,0,7);
-    ctx.fillStyle=isLit?colors[n.cl]:(dark?"#0f172a":"#ffffff");
-    ctx.globalAlpha=lit&&!isLit?.25:1;ctx.fill();
-    ctx.strokeStyle=colors[n.cl];ctx.lineWidth=isLit?(n.id===lit?3.6:2.6):2.2;
-    if(sel&&n.id===sel.id)ctx.lineWidth=3.4;
-    ctx.stroke();
-    if(!show[n.id])return;
-    ctx.font="700 "+fs+"px -apple-system,'PingFang SC',sans-serif";
-    ctx.globalAlpha=lit&&!isLit?.35:.92;
-    ctx.lineWidth=4;ctx.strokeStyle=halo;ctx.strokeText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.fillStyle=labC;ctx.fillText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.globalAlpha=1});
-  parts=parts.filter(function(pt){pt.t+=pt.v;if(pt.t>=1)return false;
-    var a=L.pos[pt.a.id],b=L.pos[pt.b.id];if(!a||!b)return false;
-    var x=a[0]+(b[0]-a[0])*pt.t,y=a[1]+(b[1]-a[1])*pt.t;
-    ctx.beginPath();ctx.arc(x,y,3.2,0,7);ctx.fillStyle=pt.c;ctx.globalAlpha=.95;ctx.fill();ctx.globalAlpha=1;return true});
-  ctx.restore();requestAnimationFrame(draw)}
-resize();draw();
-})();
-</script>
 <!-- reveal, progress, rail, counters -->
 <script>(function(){
 var tabs=Array.from(document.querySelectorAll('.pd5-tab'));

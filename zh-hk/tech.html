@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
     <title>技術 · 體系全景 | 王丰羽 Fengyu WANG</title>
-    <meta name="description" content="六個領域的關係圖與方法三句話，一張可互動的項目關係圖（34 個項目、13 組引用），以及靜心、FengOffice、Search-King 等技術項目的實現與能力清單。">
+    <meta name="description" content="方法三句話，以及靜心、FengOffice、Search-King 等技術項目的實現與能力清單。">
     <meta name="keywords" content="王豐羽 技術, 體系全景, 項目關係圖, 自有項目, 軟件交付, 自動化, Web, Python, 架構, 工程">
     <meta name="author" content="王豐羽">
     <meta name="robots" content="index,follow">
@@ -19,12 +19,12 @@
     <meta property="og:locale" content="zh_HK">
     <meta property="og:type" content="website">
     <meta property="og:title" content="技術 · 體系全景 | 王丰羽 Fengyu WANG">
-    <meta property="og:description" content="34 個自有項目、13 組有據可查的引用關係，配六大領域關係圖與方法三句話。">
+    <meta property="og:description" content="方法三句話，配實現與能力清單。">
     <meta property="og:url" content="https://www.fengyuwang.com/zh-hk/tech">
     <meta property="og:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="技術 · 體系全景 | 王丰羽 Fengyu WANG">
-    <meta name="twitter:description" content="六個領域的關係圖與方法三句話，一張可互動的項目關係圖（34 個項目、13 組引用），以及靜心、FengOffice、Search-King 等技術項目的實現與能力清單。">
+    <meta name="twitter:description" content="方法三句話，以及靜心、FengOffice、Search-King 等技術項目的實現與能力清單。">
     <meta name="twitter:image" content="https://www.fengyuwang.com/assets/img/og-card.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -1024,7 +1024,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
     	<nav class="fx-rail" aria-label="本页段落导航">
 		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技術不是孤島</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">方法，三句話</span></a>
-		<a href="#net" data-rail="net"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">項目關係圖</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一個 App，四種呼吸方式</span></a>
 		<a href="#fengoffice" data-rail="fengoffice"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">郵件、CRM、Newsletter，一條鏈</span></a>
 		<a href="#search-king" data-rail="search-king"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">十八路引擎，誰行誰上</span></a>
@@ -1066,55 +1065,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>技術不是孤島</h2>
-					<p class="block-subtitle">六個領域為節點，跨領域關係條數為邊。連線只畫有據可查的引用，不畫想象中的協同。 結構設計先於代碼，交付才是目的——從 Web 到桌面到嵌入式。 從結構到交付。 </p>
-					<div class="sys-graph-wrap">
-						<svg class="sys-graph" viewBox="0 0 720 620" role="img" aria-label="六大領域關係圖：六個領域為節點，節點大小按項目數縮放，跨領域關係條數為邊，邊寬按關係條數縮放，最密的五條邊標出數值" xmlns="http://www.w3.org/2000/svg">
-					<line class="gn-edge" x1="159.1" y1="268.0" x2="159.1" y2="338.8" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="277.2" y1="142.4" x2="216.9" y2="173.3" stroke-width="2.72" stroke-opacity="0.40" />
-					<line class="gn-edge" x1="493.0" y1="374.2" x2="216.9" y2="232.7" stroke-width="3.27" stroke-opacity="0.44" />
-					<line class="gn-edge" x1="295.9" y1="479.2" x2="221.6" y2="441.0" stroke-width="3.69" stroke-opacity="0.47" />
-					<line class="gn-edge" x1="493.0" y1="443.8" x2="424.1" y2="479.2" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="360.0" y1="193.0" x2="360.0" y2="440.0" stroke-width="4.04" stroke-opacity="0.49" />
-					<line class="gn-edge" x1="484.5" y1="409.0" x2="229.3" y2="409.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="481.0" y1="203.0" x2="224.1" y2="203.0" stroke-width="4.36" stroke-opacity="0.51" />
-					<line class="gn-edge" x1="517.4" y1="270.0" x2="399.2" y2="451.6" stroke-width="5.14" stroke-opacity="0.57" />
-					<line class="gn-edge" x1="519.3" y1="345.0" x2="410.7" y2="178.0" stroke-width="5.58" stroke-opacity="0.60" />
-					<line class="gn-edge" x1="309.3" y1="178.0" x2="197.4" y2="350.1" stroke-width="6.35" stroke-opacity="0.66" />
-					<line class="gn-edge" x1="489.8" y1="239.4" x2="221.6" y2="377.0" stroke-width="6.85" stroke-opacity="0.70" />
-					<line class="gn-edge" x1="560.9" y1="282.9" x2="560.9" y2="332.6" stroke-width="7.01" stroke-opacity="0.71" />
-					<line class="gn-edge" x1="489.8" y1="166.6" x2="442.8" y2="142.4" stroke-width="7.60" stroke-opacity="0.75" />
-					<rect class="gn-weight-bg" x="443.5" y="136.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="157.5" text-anchor="middle">22</text>
-					<rect class="gn-weight-bg" x="543.9" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="560.9" y="312.0" text-anchor="middle">18</text>
-					<rect class="gn-weight-bg" x="343.0" y="291.0" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="360.0" y="312.0" text-anchor="middle">17</text>
-					<rect class="gn-weight-bg" x="242.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="259.5" y="260.5" text-anchor="middle">14</text>
-					<rect class="gn-weight-bg" x="443.5" y="239.5" width="34" height="30" rx="15" />
-					<text class="gn-weight" x="460.5" y="260.5" text-anchor="middle">10</text>
-					<circle class="gn-node" cx="360.0" cy="100.0" r="88.0" />
-					<text class="gn-name" x="360.0" y="94.4" text-anchor="middle" font-size="20.0">工具與實驗</text>
-					<text class="gn-count" x="360.0" y="123.2" text-anchor="middle" font-size="13.2">38 個項目</text>
-					<circle class="gn-node" cx="560.9" cy="203.0" r="74.9" />
-					<text class="gn-name" x="560.9" y="197.4" text-anchor="middle" font-size="20.0">內容創作</text>
-					<text class="gn-count" x="560.9" y="226.2" text-anchor="middle" font-size="13.2">23 個項目</text>
-					<circle class="gn-node" cx="560.9" cy="409.0" r="71.4" />
-					<text class="gn-name" x="560.9" y="391.0" text-anchor="middle" font-size="20.0">基礎設施</text>
-					<text class="gn-name" x="560.9" y="415.8" text-anchor="middle" font-size="20.0">與編排</text>
-					<text class="gn-count" x="560.9" y="444.6" text-anchor="middle" font-size="13.2">19 個項目</text>
-					<circle class="gn-node" cx="360.0" cy="512.0" r="67.0" />
-					<text class="gn-name" x="360.0" y="494.0" text-anchor="middle" font-size="20.0">知識與人</text>
-					<text class="gn-name" x="360.0" y="518.8" text-anchor="middle" font-size="20.0">機協作</text>
-					<text class="gn-count" x="360.0" y="547.6" text-anchor="middle" font-size="13.2">14 個項目</text>
-					<circle class="gn-node" cx="159.1" cy="409.0" r="65.2" />
-					<text class="gn-name" x="159.1" y="403.4" text-anchor="middle" font-size="20.0">自動化執行</text>
-					<text class="gn-count" x="159.1" y="432.2" text-anchor="middle" font-size="13.2">12 個項目</text>
-					<circle class="gn-node" cx="159.1" cy="203.0" r="60.0" />
-					<text class="gn-name" x="159.1" y="197.4" text-anchor="middle" font-size="20.0">投資金融</text>
-					<text class="gn-count" x="159.1" y="226.2" text-anchor="middle" font-size="13.2">6 個項目</text>
-					</svg>
-					</div>
+					<p class="block-subtitle">結構設計先於代碼，交付才是目的——從 Web 到桌面到嵌入式。 從結構到交付。 </p>
+					
 				</div>
 			</div>
 		</div>
@@ -1176,92 +1128,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 				</div>
 			</div>
 		</div>
-<div id="net" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>項目關係圖</h2>
-					<p class="block-subtitle">球＝項目（大小按關係數），光點＝傳遞中的引用。懸停點亮鄰居，點擊看簡介；可拖拽、滾輪縮放、雙指捏合。</p>
-					<div class="sn2-toolbar"><div class="sn2-legend"></div><button type="button" class="sn2-reset" id="sn2Reset">重置視圖</button></div>
-					<label class="sn2-alllab"><input type="checkbox" id="sn2AllE"> 顯示全部連線（預設只畫 3 次以上的強關係，懸停任何球點亮它的全部關係）</label>
-					<div class="sn2-stage" id="sn2Stage"><canvas id="sn2Cv"></canvas><div class="sn2-tip" id="sn2Tip"></div>
-						<div class="sn2-panel" id="sn2Panel"><button class="sn2-x" id="sn2Px" aria-label="關閉">✕</button><div id="sn2Body"></div></div>
-					</div>
-					<script type="application/json" id="sn2Data">{"groups":["工具与实验","内容创作","基础设施与编排","知识与人机协作","自动化执行","投资金融"],"colors":["#0071e3","#8b5cf6","#dc2626","#087f8c","#7c3aed","#ea7b1c"],"nodes":[{"id":"llm-text-processor","name":"llm-text-processor","one":"把超長文本按策略切塊後並行餵給大模型批處理，GUI 與 CLI 共用一個 Docker 化服務。","badges":["TypeScript"],"cl":0,"deg":5},{"id":"super-invincible-search-king","name":"Search-King","one":"零 Key 零 Docker 的多源併發搜索聚合器：搜圖、搜文字、讀網頁、深度爬取一把抓。","badges":["Python"],"cl":0,"deg":7},{"id":"open-fengoffice","name":"open-FengOffice","one":"FengOffice 的脱敏開源版：CLI 郵件客户端 + Twenty CRM + Newsletter 三件套。","badges":["Python"],"cl":0,"deg":4},{"id":"lecoofan","name":"lecoofan","one":"把這台吵人的聯想 N175L 徹底壓安靜：CPU 降壓 + ITE EC 風扇曲線重寫全套方案。","badges":["Python"],"cl":0,"deg":3},{"id":"python-deterministic-check","name":"python-deterministic-check","one":"九大類數學運算跑一遍，驗證不同解釋器/系統/CPU 上算出來的數字是否完全一致。","badges":["Python"],"cl":0,"deg":1},{"id":"joytokeyalternative","name":"JoyToKeyAlternative","one":"純 C# 零依賴的手柄→鍵盤/鼠標映射工具，為學習和替代閉源 JoyToKey 而寫。","badges":["C#"],"cl":0,"deg":0},{"id":"7zevery","name":"7zEvery","one":"Windows 上的批量 7z 壓縮與解密工具：保留目錄層級、可選密碼、帶進度與日誌。","badges":["Python"],"cl":0,"deg":1},{"id":"check_dup","name":"check_dup","one":"逐行比對文檔裏的相鄰重複內容，在控制枱打印重複組數量的單文件小腳本。","badges":["Python"],"cl":0,"deg":0},{"id":"data_floating_window1.2","name":"data_floating_window1.2","one":"Windows 上的彈出式資料/筆記浮窗：熱鍵呼出、透明懸浮、常駐剪貼板、本地存檔。","badges":["Python"],"cl":0,"deg":0},{"id":"fengfancontrol","name":"FengFanControl","one":"來酷 N175L 的降噪降温完整方案，lecoofan 的前身倉庫。","badges":["Python"],"cl":0,"deg":2},{"id":"hide-all","name":"hide-all","one":"一鍵關閉 macOS 上所有可見應用，效果像註銷但不註銷系統。","badges":["Shell"],"cl":0,"deg":0},{"id":"tag_manager","name":"tag_manager","one":"批量給 Obsidian 筆記和 TXT 文件加/刪標籤的桌面工具，支持關鍵詞全文匹配。","badges":["Python"],"cl":0,"deg":0},{"id":"unifiedsearch","name":"UnifiedSearch","one":"在多個搜索引擎和 AI 平台同時提問，一鍵把所有結果頁打開並排看。","badges":["Python"],"cl":0,"deg":4},{"id":"unifiedsearchmobile","name":"UnifiedSearchMobile","one":"一鍵搜索的移動端版本：在手機上同時向多平台提問並打開全部結果。","badges":["Python"],"cl":0,"deg":1},{"id":"stack-docs","name":"stack-docs","one":"Hugo Stack 主題的官方文檔站源碼，作為博客文檔子模塊被複用。","badges":["未知"],"cl":0,"deg":1},{"id":"talkifytts","name":"TalkifyTTS","one":"不產語音只做橋樑的 Android TTS 引擎：把微軟/千問/豆包/騰訊的雲端語音接進系統朗讀。","badges":["Kotlin"],"cl":0,"deg":0},{"id":"fengyuwang_com","name":"fengyuwang_com","one":"三語個人網站與博客主站：一個 git 倉庫跨機器跨系統，承載個人品牌與全部項目入口。","badges":["HTML"],"cl":0,"deg":20},{"id":"jingxin","name":"Jingxin","one":"用呼吸當唯一操作的平靜遊戲：沒有失敗、沒有分數，唯一進度是世界甦醒。","badges":["Dart"],"cl":0,"deg":4},{"id":"5dt-pd","name":"5dt-pd","one":"把內容生意拆成五層雙軌雙循環的工業化框架，外加一個可點着看的可視化查看器。","badges":["TypeScript"],"cl":0,"deg":1},{"id":"open-fengmedia","name":"Open-FengMedia 開源版","one":"財經內容操作系統的脱敏開源版：人設、選題、寫稿、配音、渲染、發佈、覆盤收進一條流水線。","badges":["未知"],"cl":0,"deg":3},{"id":"manifesto-2026","name":"Manifesto-2026","one":"「共產黨宣言續章」：以數字資本主義批判為題的長篇政論寫作。","badges":["未知"],"cl":0,"deg":0},{"id":"vids","name":"Vids","one":"用 HyperFrames 把 HTML 渲染成 MP4 的視頻生產線，覆蓋產品片、無臉解説、字幕與踩點剪輯。","badges":["Python"],"cl":0,"deg":3},{"id":"cchh","name":"CCHH","one":"把 Claude Code 從終端搬進圖形工作台：多項目、Worktree、Diff、權限審批與遠程入口一屏收攏。","badges":["TypeScript"],"cl":0,"deg":2},{"id":"skill-tailscale-serve","name":"skill-tailscale-serve","one":"把本機 127.0.0.1 的 Web 服務安全暴露給手機/Tailnet 設備的 skill 封裝。","badges":["未知"],"cl":0,"deg":1},{"id":"android-linux-server","name":"Android 無 root Linux 伺服器方案","one":"把閒置 Android 手機在不用 root 的前提下，改造成可 SSH 遠程操作、帶圖形桌面與自愈機制的 Linux 伺服器。","badges":["Shell"],"cl":0,"deg":0},{"id":"open-fengorchestrator","name":"Open-FengOrchestrator","one":"董事長艦隊編排方案的脱敏開源版：調研 40+ 項目後的選型結論與角色分工藍圖。","badges":["HTML"],"cl":0,"deg":1},{"id":"open-flygo","name":"Open-FlyGo","one":"把舊 Windows 電腦變成完整 NAS 的脱敏開源版：Rust 單 exe 面板 + 控制面 + Web 終端。","badges":["Rust"],"cl":0,"deg":3},{"id":"open-websearch","name":"open-webSearch","one":"多引擎 MCP 伺服器 + CLI + 本地守護進程，給 agent 做免 Key 的聯網搜索與取正文。","badges":["TypeScript"],"cl":0,"deg":1},{"id":"lessons","name":"lessons","one":"把踩過的坑寫成一條條可檢索的規範：Docker 持久化、PowerShell BOM、密鑰泄漏、Git 清理等。","badges":["未知"],"cl":0,"deg":3},{"id":"free-token-research","name":"free-token-research","one":"2026-09 時點的免費大模型 Token 生態調研：誰在燒錢補貼、錢流到哪一層、情報源在哪。","badges":["JavaScript"],"cl":0,"deg":0},{"id":"agents-project","name":"agents-project","one":"給 AI 編碼 agent 看的 README：把項目約定寫成一份可預測位置的標準化説明。","badges":["未知"],"cl":0,"deg":0},{"id":"course-projects","name":"course-projects","one":"港科大 MSc 營銷與城大法學課程的項目交付物合集：IMC、品牌、CRM、市場研究樣樣齊全。","badges":["未知"],"cl":0,"deg":1},{"id":"marketing-portfolio","name":"marketing-portfolio","one":"把營銷能力按維度整理成作品集：市場研究、策略、品牌系統、整合傳播、客户運營一欄一項。","badges":["未知"],"cl":0,"deg":1},{"id":"open-fenginvest","name":"Open-FengInvest","one":"FengInvest 七層決策框架的脱敏開源版：狀態機 + 數據管道 + 工具集 + Web UI。","badges":["Python"],"cl":0,"deg":5}],"edges":[["fengyuwang_com","super-invincible-search-king",1],["open-fenginvest","super-invincible-search-king",1],["fengyuwang_com","open-fengoffice",2],["fengfancontrol","lecoofan",2],["unifiedsearch","unifiedsearchmobile",2],["fengyuwang_com","unifiedsearch",2],["fengyuwang_com","open-flygo",1],["fengyuwang_com","open-fengmedia",2],["fengyuwang_com","jingxin",2],["fengyuwang_com","lessons",2],["fengyuwang_com","open-fenginvest",2],["5dt-pd","fengyuwang_com",2],["course-projects","marketing-portfolio",2]]}</script>
-				</div>
-			</div>
-		</div>
-<!-- Card grid -->
-			<div class="container">
-				<div class="card-grid">
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80')" onclick="document.getElementById('jingxin').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>靜心 Jingxin</h3>
-				                                <p>極簡冥想引導 App——呼吸、正念、引導、放鬆。</p>
-				                            <button class="card-btn">瀏覽官網</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80')" onclick="document.getElementById('fengoffice').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>FengOffice</h3>
-				                                <p>郵件、CRM、Newsletter，一條鏈。</p>
-				                            <button class="card-btn">瀏覽官網</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('search-king').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>Search King</h3>
-				                                <p>無敵機人協作搜尋器，搜圖搜文字一把抓。</p>
-				                            <button class="card-btn">瀏覽官網</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')" onclick="document.getElementById('define').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>不問對，不開始</h3>
-				                                <p>不接受模糊需求，先想清楚再做。</p>
-				                            <button class="card-btn">了解方法</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=600&q=80')" onclick="document.getElementById('structured').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>系統即複利</h3>
-				                                <p>PDCA 推著走，層層遞進。</p>
-				                            <button class="card-btn">了解方法</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')" onclick="document.getElementById('multi-dim').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>一維即偏見</h3>
-				                                <p>真實世界是網狀關係，不是表格。</p>
-				                            <button class="card-btn">了解視角</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')" onclick="document.getElementById('tool-fit').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>工具從問題</h3>
-				                                <p>開源優先，AI 加速，選最合適的。</p>
-				                            <button class="card-btn">了解選擇</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80')" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">
-				                        <div class="card-content">
-				                                <h3>交付為開始</h3>
-				                                <p>代碼只是中間產物，交付才是開始。</p>
-				                            <button class="card-btn">聯繫我</button>
-				                        </div>
-				                    </div>
-				                    <div class="mkt-card invest-card" onclick="window.location.href='/zh-hk/invest.html'">
-				                        <div class="card-content">
-				                            <h3>投資框架 →</h3>
-				                            <p>工具需要有商業場景才有價值。</p>
-				                            <span class="card-btn">去看看</span>
-				                        </div>
-				                    </div>
-				                </div>
-			</div>
-
-
-        <!-- Project 1: 靜心 Jingxin -->
-        <div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
+<div id="jingxin" class="content-block section-bg storm-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=80')">
             <div class="block-inner">
                 <div class="section-card">
                     <h2>一個 App，四種呼吸方式</h2>
@@ -1566,9 +1433,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
         <!-- Cross-link -->
         		<div class="link-card">
 			<p>工具需要有商業場景才有價值</p>
-			<div class="cta-row">
-				<a class="default-btn" href="/zh-hk/system-projects.html">項目全清單</a>
-			</div>
 			<div class="cta-row" style="margin-top:14px">
 				<a class="default-btn-one" href="/zh-hk/invest.html">投資框架</a>
 			</div>
@@ -1594,118 +1458,6 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 <script>(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){if(window.scrollY>300)btn.classList.add("show");else btn.classList.remove("show")})})();</script>
 	<script>document.documentElement.className+=" fx-js";</script>
 
-<!-- project relation graph renderer: must follow its data -->
-<script>
-(function(){
-var D; try { D = JSON.parse(document.getElementById("sn2Data").textContent); } catch(e){ return; }
-var stage=document.getElementById("sn2Stage"); if(!stage||stage.dataset.sn2) return; stage.dataset.sn2="1";
-var cv=document.getElementById("sn2Cv"),ctx=cv.getContext("2d"),tip=document.getElementById("sn2Tip"),
-    panel=document.getElementById("sn2Panel"),bodyEl=document.getElementById("sn2Body");
-var groups=D.groups,colors=D.colors,N=D.nodes,E=D.edges,byId={};
-N.forEach(function(n){byId[n.id]=n});
-function layout(mode){
-  var centers=[],i,a;
-  if(mode==="land"){for(i=0;i<6;i++){a=(-90+i*60)*Math.PI/180;centers.push([720+310*Math.cos(a),470+310*Math.sin(a)])}}
-  else{centers=[[140,190],[400,190],[140,560],[400,560],[140,930],[400,930]]}
-  var base=mode==="land"?24:15,cf=mode==="land"?26:19,pos={},spread=[],bycl={};
-  N.forEach(function(n){(bycl[n.cl]=bycl[n.cl]||[]).push(n)});
-  for(var c in bycl){(function(cl){var ns=bycl[cl].slice().sort(function(x,y){return y.deg-x.deg||(x.id<y.id?-1:1)});
-    ns.forEach(function(n,k){var rr=base+cf*Math.sqrt(k),ang=k*2.39996+cl*0.7;
-      pos[n.id]=[centers[cl][0]+rr*Math.cos(ang),centers[cl][1]+rr*Math.sin(ang)]});
-    spread[cl]=base+cf*Math.sqrt(Math.max(ns.length-1,0))})(c)}
-  return {pos:pos,spread:spread,centers:centers,W:mode==="land"?1440:540,H:mode==="land"?920:1120};
-}
-var mode=innerWidth<640?"port":"land",L=layout(mode),vb={x:0,y:0,w:L.W,h:L.H};
-function resize(){var w=stage.clientWidth,h=w*L.H/L.W;cv.width=w*devicePixelRatio;cv.height=h*devicePixelRatio;cv.style.height=h+"px";ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
-addEventListener("resize",function(){var m=innerWidth<640?"port":"land";if(m!==mode){mode=m;L=layout(mode);vb={x:0,y:0,w:L.W,h:L.H}}resize()});
-var parts=[];
-function spawn(e,rev){var a=byId[e[0]],b=byId[e[1]];parts.push({a:rev?b:a,b:rev?a:b,t:0,v:.004+Math.random()*.006,c:colors[(rev?b:a).cl]})}
-setInterval(function(){if(parts.length<26&&document.hasFocus()){var e=E[Math.floor(Math.random()*E.length)];if(e)spawn(e,Math.random()<.5)}},260);
-function burst(id){E.forEach(function(e){if(e[0]===id)spawn(e,false);if(e[1]===id)spawn(e,true)})}
-var hover=null,sel=null,moved=false,ptrs={},pinch=null,allE=false;
-var backbone={};N.slice().sort(function(a,b){return b.deg-a.deg||(a.id<b.id?-1:1)}).slice(0,14).forEach(function(n){backbone[n.id]=1});
-document.getElementById("sn2AllE").onchange=function(){allE=this.checked};
-function toWorld(px,py){var r=cv.getBoundingClientRect();return[vb.x+(px-r.left)/r.width*vb.w,vb.y+(py-r.top)/r.height*vb.h]}
-function nodeAt(px,py){var p=toWorld(px,py),best=null,bd=1e9;
-  N.forEach(function(n){var q=L.pos[n.id],rr=Math.max(6+n.deg*1.1,14)+8,d=(q[0]-p[0])*(q[0]-p[0])+(q[1]-p[1])*(q[1]-p[1]);if(d<rr*rr&&d<bd){bd=d;best=n}});
-  return best}
-cv.addEventListener("pointerdown",function(e){ptrs[e.pointerId]=[e.clientX,e.clientY];moved=false;
-  var ks=Object.keys(ptrs);if(ks.length===2){var v=[ptrs[ks[0]],ptrs[ks[1]]];pinch={d:Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}});
-cv.addEventListener("pointermove",function(e){
-  if(ptrs[e.pointerId]){var prev=ptrs[e.pointerId];ptrs[e.pointerId]=[e.clientX,e.clientY];
-    var ks=Object.keys(ptrs);
-    if(ks.length===2&&pinch){var v=[ptrs[ks[0]],ptrs[ks[1]]],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);
-      var r=cv.getBoundingClientRect(),mid=[(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2],p=toWorld(mid[0],mid[1]),f=pinch.d/d;
-      var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k};pinch.d=d;return}
-    var dx=e.clientX-prev[0],dy=e.clientY-prev[1];if(Math.abs(dx)+Math.abs(dy)>3)moved=true;
-    var r=cv.getBoundingClientRect();vb.x-=dx/r.width*vb.w;vb.y-=dy/r.height*vb.h;return}
-  var n=nodeAt(e.clientX,e.clientY);
-  if(n!==hover){hover=n;cv.style.cursor=n?"pointer":"grab";if(n)burst(n.id);
-    if(n){tip.textContent=n.name;tip.style.display="block"}else tip.style.display="none"}
-  if(n){var r=cv.getBoundingClientRect();tip.style.left=(e.clientX-r.left)+"px";tip.style.top=(e.clientY-r.top)+"px"}});
-cv.addEventListener("pointerup",function(e){delete ptrs[e.pointerId];if(Object.keys(ptrs).length<2)pinch=null;
-  if(moved)return;var n=nodeAt(e.clientX,e.clientY);
-  if(n){sel=n;showPanel(n)}else{sel=null;panel.style.display="none"}});
-cv.addEventListener("pointerleave",function(){hover=null;tip.style.display="none"});
-cv.addEventListener("wheel",function(e){e.preventDefault();var p=toWorld(e.clientX,e.clientY),f=e.deltaY>0?1.12:.89;
-  var nw=Math.min(Math.max(vb.w*f,120),L.W*1.6),k=nw/vb.w;vb={x:p[0]-(p[0]-vb.x)*k,y:p[1]-(p[1]-vb.y)*k,w:nw,h:vb.h*k}},{passive:false});
-function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
-function showPanel(n){
-  var h="<h3>"+esc(n.name)+"</h3>";
-  if(n.badges&&n.badges.length)h+='<div class="sn2-badges">'+n.badges.map(function(b){return "<span>"+esc(b)+"</span>"}).join("")+"</div>";
-  if(n.one)h+='<p class="sn2-one">'+esc(n.one)+"</p>";
-  h+='<div class="sn2-rels">'+E.filter(function(e){return e[0]===n.id||e[1]===n.id}).map(function(e){
-    var o=byId[e[0]===n.id?e[1]:e[0]];return '<button class="sn2-rel" data-id="'+esc(o.id)+'">'+esc(o.name)+"</button>"}).join("")+"</div>";
-  bodyEl.innerHTML=h;panel.style.display="block";
-  bodyEl.querySelectorAll(".sn2-rel").forEach(function(b){b.onclick=function(){sel=byId[b.dataset.id];showPanel(sel);burst(sel.id)}})}
-document.getElementById("sn2Px").onclick=function(){panel.style.display="none";sel=null};
-var lgBox=document.querySelector(".sn2-legend");
-groups.forEach(function(g,i){var b=document.createElement("button");b.className="sn2-lg";b.innerHTML='<i style="background:'+colors[i]+'"></i>'+esc(g);
-  b.onclick=function(){var c=L.centers[i],r=(L.spread[i]||60)*2.4;vb={x:c[0]-r/2,y:c[1]-r/2,w:r,h:r}};lgBox.appendChild(b)});
-document.getElementById("sn2Reset").onclick=function(){vb={x:0,y:0,w:L.W,h:L.H};panel.style.display="none";sel=null};
-function draw(){
-  var dark=document.body.getAttribute("data-theme")==="dark";
-  var labC=dark?"#e5ecf4":"#2563eb",halo=dark?"#0f172a":"#ffffff";
-  var r=cv.getBoundingClientRect(),sx=r.width/vb.w,sy=r.height/vb.h;
-  ctx.clearRect(0,0,r.width,r.height);
-  ctx.save();ctx.scale(sx,sy);ctx.translate(-vb.x,-vb.y);
-  var lit=null;if(hover)lit=hover.id;if(sel)lit=sel.id;
-  var nbr={};if(lit)E.forEach(function(e){if(e[0]===lit)nbr[e[1]]=1;if(e[1]===lit)nbr[e[0]]=1});
-  L.centers.forEach(function(c,i){ctx.beginPath();ctx.arc(c[0],c[1],(L.spread[i]||50)+26,0,7);
-    ctx.strokeStyle=colors[i];ctx.globalAlpha=dark?.25:.3;ctx.setLineDash([4,6]);ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1});
-  E.forEach(function(e){var a=L.pos[e[0]],b=L.pos[e[1]];var on=lit&&(e[0]===lit||e[1]===lit);
-    if(!(on||(allE)||(e[2]>=2)))return;
-    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);
-    ctx.strokeStyle=on?(dark?"#2997ff":"#0071e3"):(dark?"rgba(96,165,250,.28)":"rgba(0,90,200,.4)");
-    ctx.lineWidth=on?2:Math.min(.9+e[2]*.4,2);ctx.stroke()});
-  var fs=Math.max(10.5,vb.w/80);
-  ctx.textAlign="center";
-  /* Idle graph: name only the backbone. Hover/select labels a node and
-     its neighbours, which is what makes the sphere worth reading. */
-  var show=backbone;
-  if(lit){show={};show[lit]=1;for(var k in nbr)show[k]=1}
-  N.forEach(function(n){var p=L.pos[n.id],rad=7+Math.min(n.deg,12)*1.1;
-    var isLit=lit&&(n.id===lit||nbr[n.id]);
-    ctx.beginPath();ctx.arc(p[0],p[1],rad,0,7);
-    ctx.fillStyle=isLit?colors[n.cl]:(dark?"#0f172a":"#ffffff");
-    ctx.globalAlpha=lit&&!isLit?.25:1;ctx.fill();
-    ctx.strokeStyle=colors[n.cl];ctx.lineWidth=isLit?(n.id===lit?3.6:2.6):2.2;
-    if(sel&&n.id===sel.id)ctx.lineWidth=3.4;
-    ctx.stroke();
-    if(!show[n.id])return;
-    ctx.font="700 "+fs+"px -apple-system,'PingFang SC',sans-serif";
-    ctx.globalAlpha=lit&&!isLit?.35:.92;
-    ctx.lineWidth=4;ctx.strokeStyle=halo;ctx.strokeText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.fillStyle=labC;ctx.fillText(n.name,p[0],p[1]+rad+fs+1);
-    ctx.globalAlpha=1});
-  parts=parts.filter(function(pt){pt.t+=pt.v;if(pt.t>=1)return false;
-    var a=L.pos[pt.a.id],b=L.pos[pt.b.id];if(!a||!b)return false;
-    var x=a[0]+(b[0]-a[0])*pt.t,y=a[1]+(b[1]-a[1])*pt.t;
-    ctx.beginPath();ctx.arc(x,y,3.2,0,7);ctx.fillStyle=pt.c;ctx.globalAlpha=.95;ctx.fill();ctx.globalAlpha=1;return true});
-  ctx.restore();requestAnimationFrame(draw)}
-resize();draw();
-})();
-</script>
 <!-- reveal, progress, rail, counters -->
 <script>(function(){
 var tabs=Array.from(document.querySelectorAll('.pd5-tab'));
