@@ -1015,6 +1015,48 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 	#net .block-inner{ max-width: 1200px; }
 	#net .block-inner h2, #net .block-subtitle{ max-width: 720px; }
 .sn2-toolbar{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:0 0 10px; }.sn2-legend{ display:flex; flex-wrap:wrap; gap:6px; }.sn2-lg{ display:inline-flex; align-items:center; gap:6px; padding:5px 12px; border-radius:999px; border:1px solid rgba(0,113,227,.18); background:rgba(0,113,227,.05); color:#2563eb; font-size:.78rem; font-weight:700; cursor:pointer; font-family:inherit; }.sn2-lg i{ width:9px; height:9px; border-radius:50%; display:inline-block; }.sn2-lg:hover{ border-color:rgba(0,113,227,.45); }.sn2-reset{ padding:5px 14px; border-radius:999px; border:1px solid rgba(148,163,184,.3); background:transparent; color:#475569; font-size:.78rem; font-weight:700; cursor:pointer; font-family:inherit; }.sn2-reset:hover{ border-color:rgba(0,113,227,.4); color:#0062cc; }.sn2-alllab{ display:inline-flex; align-items:center; gap:6px; font-size:.78rem; color:#64748b; font-weight:600; cursor:pointer; margin:0 0 10px; }.sn2-stage{ position:relative; border:1px solid rgba(148,163,184,.12); border-radius:14px; background:#fff; overflow:hidden; touch-action:none; cursor:grab; }.sn2-stage:active{ cursor:grabbing; }.sn2-stage canvas{ display:block; width:100%; height:auto; }.sn2-tip{ position:absolute; display:none; pointer-events:none; background:#0f172a; color:#fff; font-size:.75rem; font-weight:700; padding:4px 10px; border-radius:8px; transform:translate(-50%,-160%); white-space:nowrap; z-index:3; }.sn2-panel{ position:absolute; top:12px; right:12px; width:290px; max-height:calc(100% - 24px); overflow:auto; background:rgba(255,255,255,.97); border:1px solid rgba(148,163,184,.2); border-radius:14px; padding:16px 18px; box-shadow:0 12px 32px rgba(15,23,42,.14); display:none; z-index:4; }.sn2-panel h3{ margin:0 0 6px; font-size:1rem; color:#0f172a; overflow-wrap:anywhere; }.sn2-panel .sn2-one{ font-size:.85rem; font-weight:700; color:#2563eb; margin:0 0 8px; line-height:1.6; }.sn2-panel .sn2-badges{ display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px; }.sn2-panel .sn2-badges span{ font-size:11px; padding:2px 8px; border-radius:999px; background:rgba(15,23,42,.06); color:#334155; font-weight:600; }.sn2-panel .sn2-rels{ display:flex; flex-wrap:wrap; gap:5px; }.sn2-panel .sn2-rel{ font-size:11.5px; padding:3px 10px; border-radius:999px; border:1px solid rgba(0,113,227,.2); background:rgba(0,113,227,.06); color:#2563eb; cursor:pointer; font-family:inherit; font-weight:600; }.sn2-x{ position:absolute; top:8px; right:10px; border:0; background:none; font-size:16px; color:#64748b; cursor:pointer; }body[data-theme="dark"] .sn2-lg{ background:rgba(41,151,255,.1); color:#6b9aff; border-color:rgba(41,151,255,.22); }body[data-theme="dark"] .sn2-reset{ color:#9fb0c3; border-color:rgba(148,163,184,.25); }body[data-theme="dark"] .sn2-alllab{ color:#94a3b8; }body[data-theme="dark"] .sn2-stage{ background:#0f172a; border-color:rgba(148,163,184,.08); }body[data-theme="dark"] .sn2-tip{ background:#e5ecf4; color:#0f172a; }body[data-theme="dark"] .sn2-panel{ background:rgba(17,24,39,.97); border-color:rgba(148,163,184,.14); }body[data-theme="dark"] .sn2-panel h3{ color:#e5ecf4; }body[data-theme="dark"] .sn2-panel .sn2-one{ color:#2997ff; }body[data-theme="dark"] .sn2-panel .sn2-badges span{ background:rgba(148,163,184,.12); color:#cbd5e1; }body[data-theme="dark"] .sn2-panel .sn2-rel{ background:rgba(41,151,255,.1); color:#6b9aff; border-color:rgba(41,151,255,.22); }
+
+		/* ===== automation loop & two-layer interface (ported from FengOS observatory) ===== */
+		.aut-flow{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; margin:4px 0 18px; }
+		.aut-step{ display:inline-flex; align-items:center; padding:7px 14px; border-radius:999px; background:#eef4fb; border:1px solid rgba(0,113,227,.28); color:#0f172a; font-size:13px; font-weight:700; white-space:nowrap; }
+		.aut-arr{ color:#0071e3; font-size:14px; font-weight:700; }
+		.aut-note{ text-align:center; font-size:13px; color:#475569; line-height:1.7; margin:0 0 18px; }
+		.aut-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+		.aut-card{ background:#f5f5f7; border:1px solid rgba(148,163,184,.18); border-radius:14px; padding:16px 18px; min-width:0; }
+		.aut-card h3{ margin:0 0 6px; font-size:15px; font-weight:800; color:#0f172a; }
+		.aut-card p{ margin:0 0 8px; font-size:13px; color:#475569; line-height:1.7; }
+		.aut-card p:last-child{ margin-bottom:0; }
+		.aut-data{ margin:0; font-size:12px; color:#2563eb; font-weight:600; line-height:1.6; }
+		.aut-wide{ grid-column:1/-1; }
+		.aut-tagline{ margin:18px 0 0; text-align:center; font-size:14px; font-weight:700; color:#0f172a; line-height:1.7; }
+		.tl-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+		.tl-card{ background:#ffffff; border:1px solid rgba(148,163,184,.18); border-radius:14px; padding:16px 18px; min-width:0; }
+		.tl-card.hl{ border-color:rgba(0,113,227,.35); }
+		.tl-tag{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.12em; color:#0071e3; text-transform:uppercase; }
+		.tl-card h3{ margin:4px 0 6px; font-size:16px; font-weight:800; color:#0f172a; }
+		.tl-card p{ margin:0; font-size:13px; color:#475569; line-height:1.7; }
+		.tl-plane{ margin-top:14px; background:#f5f5f7; border:1px solid rgba(0,113,227,.25); border-radius:14px; padding:16px 18px; }
+		.tl-plane h3{ margin:0 0 10px; text-align:center; font-size:14px; font-weight:800; color:#0f172a; }
+		.tl-rows{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+		.tl-row{ display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#ffffff; border:1px solid rgba(0,0,0,.07); font-size:12px; font-weight:600; color:#0f172a; }
+		.tl-row b{ color:#0071e3; }
+		.tl-docs{ margin:10px 0 0; text-align:center; font-size:12px; color:#475569; line-height:1.7; }
+		.tl-constraint{ margin:8px 0 0; text-align:center; font-size:12px; color:#475569; }
+		.tl-slogan{ margin:16px 0 0; text-align:center; font-size:14px; font-weight:700; color:#0f172a; line-height:1.7; }
+		.tl-prod{ margin:8px 0 0; text-align:center; font-size:12.5px; color:#475569; line-height:1.7; }
+		body[data-theme="dark"] .aut-step{ background:#0f172a; border-color:rgba(41,151,255,.30); color:#e5ecf4; }
+		body[data-theme="dark"] .aut-arr{ color:#2997ff; }
+		body[data-theme="dark"] .aut-note, body[data-theme="dark"] .aut-card p,
+		body[data-theme="dark"] .tl-card p, body[data-theme="dark"] .tl-docs,
+		body[data-theme="dark"] .tl-constraint, body[data-theme="dark"] .tl-prod{ color:#9fb0c3; }
+		body[data-theme="dark"] .aut-data, body[data-theme="dark"] .tl-tag, body[data-theme="dark"] .tl-row b{ color:#2997ff; }
+		body[data-theme="dark"] .aut-card, body[data-theme="dark"] .tl-plane{ background:#0f172a; border-color:rgba(148,163,184,.14); }
+		body[data-theme="dark"] .aut-card h3, body[data-theme="dark"] .tl-card h3,
+		body[data-theme="dark"] .tl-plane h3, body[data-theme="dark"] .aut-tagline,
+		body[data-theme="dark"] .tl-slogan{ color:#e5ecf4; }
+		body[data-theme="dark"] .tl-card{ background:#0f172a; border-color:rgba(148,163,184,.14); }
+		body[data-theme="dark"] .tl-row{ background:#111827; border-color:rgba(148,163,184,.14); color:#e5ecf4; }
+		@media (max-width:767px){ .aut-grid, .tl-grid{ grid-template-columns:minmax(0,1fr); } }
 @media (max-width:640px){.sn2-panel{ left:12px; right:12px; width:auto; top:auto; bottom:12px; max-height:46%; }}</style>
 </head>
 <body>
@@ -1033,6 +1075,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		<a href="#tool-fit" data-rail="tool-fit"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">工具從問題</span></a>
 		<a href="#delivery" data-rail="delivery"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">交付為開始</span></a>
 		<a href="#tech-capability" data-rail="tech-capability"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技術實現力</span></a>
+	<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">自治自動化閉環</span></a>
+	<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一紙兩界</span></a>
 		</nav>
 	<div class="fx-progress" aria-hidden="true"><i id="fxProgress"></i></div>
 	<div class="page-wrap">
@@ -1390,6 +1434,90 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
                 </div>
             </div>
         </div>
+
+
+		<!-- Automation loop (FengOS observatory) -->
+		<div id="automation" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>自治自動化閉環</h2>
+					<p class="block-subtitle">Automation——可控服務加上唯讀的能力清單，檔案始終留在原地。一條自改進閉環：Research → Think → Create → Act → Self-Improve，每一輪都被記錄、複盤，並寫回 MD 憲法；Self-improvement loop（PDCA + MD 憲法）：每一輪餵給下一輪。</p>
+					<div class="aut-flow">
+								<span class="aut-step">Research · 研究</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Think · 思考</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Create · 創作</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Act · 行動</span>
+								<span class="aut-arr" aria-hidden="true">→</span>
+								<span class="aut-step">Self-Improve · 自我改進</span>
+					</div>
+					<div class="aut-grid">
+						<div class="aut-card">
+							<h3>Research · 研究</h3>
+							<p>一條主車道：market APIs → FengInvest scripts → 自建本地 SQL 庫；一條副車道：自建通用系統先授權、再調 API；旗艦 Search King 由任何地方搜尋任何網站；AIExport 將 AI 產出聚合進自建模型。</p>
+							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · 自建 SQL 庫 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
+						</div>
+						<div class="aut-card">
+							<h3>Think · 思考</h3>
+							<p>日常運轉中的 think 層：AI 先讀 MD docs，獲得身份、規則與任務，然後執行，做完把結果寫回 ledger 與 log（read MD docs → gain identity, rules &amp; tasks → execute → write back）。</p>
+							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot：planned / read-only</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Create · 創作</h3>
+							<p>CREATE = 你做出一件東西，尚未分發。FengMedia 37 個項目（2026-10-05《強將手下無弱兵》）：由選題到成片的創作中樞。模態格：Text 文字生成 —（作品留在本地）；Image 圖像生成 —；Music 音樂生成 12 tools · gate ✓（FengMusician，位於 FengMedia/tools/fengmusician）；Voice TTS · TTS-UI bundled（桌面捆綁包留在本地）；Avatars 數碼人 live ✓ · anime 驗證中；Video 影片生成 —（HyperFrames 工具鏈；草稿可由開源 MoneyPrinterTurbo 起步）。FengInvest 都算 create：市場研究與資產分析報告都是被做出的東西，分發前留在本地（91 scripts）。</p>
+							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Act · 行動</h3>
+							<p>Act = 分發給他人，影響外部。JobHunter（Private-feng-job-hunter）：通用批量表單執行 / 自動填表，在授權範圍內對外提交（CLI ✓ · 1 profiles · confirmed local）；FengMail / FENGmailMac（Mac）：郵件外發，授權後調 API 投遞（confirmed local · authorized → API）；分發渠道：Git 雙推 GitHub + gitee（read-only documented）；authorized → external APIs（credentials never shown）；自治執行器三件套：GUI agent + CLI agent + MD docs（CLI · 1 profiles · planned）。</p>
+							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git 雙推 GitHub + gitee</p>
+						</div>
+						<div class="aut-card aut-wide">
+							<h3>Self-Improve · 自我改進</h3>
+							<p>Docs are the control plane——每輪迭代重寫憲法，憲法塑造下一輪循環。每一輪都留下記錄（FENGMEM 追加 · todo 銷帳 · 複盤寫回）→ 規則在 AGENTS.md 裡重寫（下一輪立即生效）→ 回到 Research。AI 是更嚴格的讀者——它按字面執行。FengOrchestrator：AI 指揮 AI 的艦隊中樞（12 docs · 2 skills）；FengASNI：多機 profile 中樞，一部機器一份 MD profile。</p>
+							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI 一機一份 MD profile</p>
+						</div>
+					</div>
+					<p class="aut-tagline">可控服務 + 唯讀能力清單 · 檔案留在原地</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Two-layer interface (FengOS observatory) -->
+		<div id="two-layer" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>一紙兩界</h2>
+					<p class="block-subtitle">Two-layer interface principle：L1 負責 build，L2 負責 view，docs 負責管——這一頁（FengOS）就是觀看層。</p>
+					<div class="tl-grid">
+						<div class="tl-card hl">
+							<span class="tl-tag">L1 · Dialogue</span>
+							<h3>對話層——做事</h3>
+							<p>每一個動作都在對話裡運行：人用 natural language（Skill）驅動 ZCode / Skill；AI 讀 docs、調工具、寫回結果；System 是真實系統，結果以唯讀方式浮出。</p>
+						</div>
+						<div class="tl-card">
+							<span class="tl-tag">L2 · View</span>
+							<h3>觀景層——看</h3>
+							<p>唯讀，用來檢查與展示；本頁就是觀看層（FengOS）。</p>
+						</div>
+					</div>
+					<div class="tl-plane">
+						<h3>Docs 治理平面</h3>
+						<div class="tl-rows">
+							<span class="tl-row"><b>read</b>：由身份、規則、任務讀起</span>
+							<span class="tl-row"><b>write</b>：結果落進 ledger 與 log</span>
+							<span class="tl-row"><b>rule rewrite</b>：AGENTS 下一輪立即生效</span>
+						</div>
+						<p class="tl-docs">AGENTS 規則 · MISSION 目標 · todo 帳本 · FENGMEM 記錄 · Skill 包</p>
+						<p class="tl-constraint">C1 · 資料留在本地　C2 · 產出進入備份管線</p>
+					</div>
+					<p class="tl-slogan">Docs are the control plane——AI 是最嚴格的讀者，它按字面執行。</p>
+					<p class="tl-prod">systems in production：FengInvest · FengMedia · FlyGo · FengMail　·　純工具：TTS-UI</p>
+				</div>
+			</div>
+		</div>
 
         <!-- Web3 引流 -->
         <div class="content-block section-bg" style="--section-bg-img:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1000&q=80')">
