@@ -294,6 +294,33 @@ for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/
 if n_bar == 0:
     ok("no-vbar", "竖向装饰线禁令: 全站 0 命中")
 
+# ---------- 8.6 卡片行不得贴满左右 (董事长 2026-10-05 定规：卡片要有边界) ----------
+# 页面里出现 class="card-grid" 时，要么其 .card-grid CSS 自带 max-width，
+# 要么该元素处于限宽容器内（marketing-hero / block-inner / container / section-card）。
+n_bleed = 0
+for page in glob.glob("*.html") + [p for l in LANGS for p in glob.glob(f"{l}/**/*.html", recursive=True)]:
+    doc = open(page, encoding="utf-8", errors="ignore").read()
+    if 'class="card-grid"' not in doc:
+        continue
+    m_rule = re.search(r"\.card-grid\s*\{([^}]*)\}", doc)
+    if m_rule and "max-width" in m_rule.group(1):
+        continue
+    for m_el in re.finditer(r'<div class="card-grid"', doc):
+        # 栈跟踪：找到包住 card-grid 的那一层 div 的 class
+        stack = []
+        for m_d in re.finditer(r'<div(?: class="([^"]*)")?>|</div>', doc[:m_el.start()]):
+            if m_d.group(0) == "</div>":
+                if stack:
+                    stack.pop()
+            else:
+                stack.append(m_d.group(1) or "")
+        enclosing = " ".join(c for c in stack if c)
+        if not re.search(r"marketing-hero|block-inner|container|section-card", enclosing):
+            n_bleed += 1
+            err("no-card-bleed", f"{page}: 卡片行贴满左右，须放进限宽容器或给 .card-grid 加 max-width")
+if n_bleed == 0:
+    ok("no-card-bleed", "卡片行边界: 全站 0 命中")
+
 # ---------- 9. en 页面中文泄漏 ----------
 # en 博文: 正文 (含代码围栏内) 汉字 > 50 视为漏翻 (slug/translationKey 除外)
 # 例外白名单: 品牌名与专有名词
