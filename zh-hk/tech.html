@@ -1029,6 +1029,44 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		.aut-data{ margin:0; font-size:12px; color:#2563eb; font-weight:600; line-height:1.6; }
 		.aut-wide{ grid-column:1/-1; }
 		.aut-tagline{ margin:18px 0 0; text-align:center; font-size:14px; font-weight:700; color:#0f172a; line-height:1.7; }
+		.aut-lead{ margin:0 0 9px; font-size:12.5px; color:#475569; line-height:1.7; }
+		.aut-lanes{ display:flex; flex-direction:column; gap:8px; margin:0 0 10px; }
+		.aut-lane{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+		.aut-lane-tag{ display:inline-flex; align-items:center; padding:3px 9px; border-radius:7px; background:#eef4fb; border:1px solid rgba(0,113,227,.28); color:#0071e3; font-size:11px; font-weight:800; }
+		.aut-node{ display:inline-flex; align-items:center; padding:6px 11px; border-radius:9px; background:#ffffff; border:1px solid rgba(148,163,184,.28); color:#0f172a; font-size:12px; font-weight:600; line-height:1.35; }
+		.aut-node.hl{ background:#eef4fb; border-color:rgba(0,113,227,.35); color:#0071e3; }
+		.aut-arr-sm{ color:#0071e3; font-size:12px; font-weight:700; }
+		.aut-loop{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0 0 9px; }
+		.aut-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }
+		.aut-chip{ display:inline-flex; align-items:center; font-size:11.5px; font-weight:700; color:#2563eb; background:#eef4fb; border-radius:999px; padding:3px 10px; }
+		.aut-chip.muted{ color:#64748b; background:#eef1f5; }
+		.aut-mods{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+		.aut-mod{ display:flex; flex-direction:column; gap:2px; padding:10px 12px; border-radius:11px; background:#ffffff; border:1px solid rgba(148,163,184,.28); min-width:0; }
+		.aut-mod-k{ font-size:12px; font-weight:800; color:#0f172a; }
+		.aut-mod-s{ font-size:11.5px; color:#475569; line-height:1.5; }
+		.aut-mod-d{ font-size:11px; font-weight:700; color:#2563eb; }
+		.aut-mod-d.off{ color:#94a3b8; }
+		body[data-theme="dark"] .aut-node{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#e5ecf4; }
+		body[data-theme="dark"] .aut-node.hl{ background:rgba(41,151,255,.14); border-color:rgba(41,151,255,.35); color:#2997ff; }
+		body[data-theme="dark"] .aut-lane-tag{ background:rgba(41,151,255,.14); border-color:rgba(41,151,255,.30); color:#2997ff; }
+		body[data-theme="dark"] .aut-arr-sm{ color:#2997ff; }
+		body[data-theme="dark"] .aut-chip{ background:rgba(41,151,255,.14); color:#2997ff; }
+		body[data-theme="dark"] .aut-chip.muted{ background:rgba(148,163,184,.16); color:#94a3b8; }
+		body[data-theme="dark"] .aut-mod{ background:#0f172a; border-color:rgba(148,163,184,.18); }
+		body[data-theme="dark"] .aut-mod-k{ color:#f5f5f7; }
+		body[data-theme="dark"] .aut-mod-s, body[data-theme="dark"] .aut-lead{ color:#c7d2e0; }
+		body[data-theme="dark"] .aut-mod-d{ color:#2997ff; }
+		.dom-flow{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; margin:6px 0 12px; }
+		.dom-node{ display:inline-flex; align-items:center; padding:8px 16px; border-radius:10px; background:#f5f5f7; border:1px solid rgba(148,163,184,.22); color:#0f172a; font-size:13px; font-weight:700; }
+		.dom-arr{ color:#0071e3; font-weight:700; }
+		.dom-pipe{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; }
+		.dom-step{ display:inline-flex; align-items:center; padding:7px 14px; border-radius:999px; background:#ffffff; border:1px solid rgba(148,163,184,.28); color:#475569; font-size:12.5px; font-weight:700; }
+		.dom-step.hl{ background:#eef4fb; border-color:rgba(0,113,227,.35); color:#0071e3; }
+		.dom-arr2{ color:#94a3b8; font-weight:700; }
+		body[data-theme="dark"] .dom-node{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#f5f5f7; }
+		body[data-theme="dark"] .dom-step{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#c7d2e0; }
+		body[data-theme="dark"] .dom-step.hl{ color:#2997ff; border-color:rgba(41,151,255,.35); }
+
 		.tl-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 		.tl-card{ background:#ffffff; border:1px solid rgba(148,163,184,.18); border-radius:14px; padding:16px 18px; min-width:0; }
 		.tl-card.hl{ border-color:rgba(0,113,227,.35); }
@@ -1056,7 +1094,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		body[data-theme="dark"] .tl-slogan{ color:#e5ecf4; }
 		body[data-theme="dark"] .tl-card{ background:#0f172a; border-color:rgba(148,163,184,.14); }
 		body[data-theme="dark"] .tl-row{ background:#111827; border-color:rgba(148,163,184,.14); color:#e5ecf4; }
-		@media (max-width:767px){ .aut-grid, .tl-grid{ grid-template-columns:minmax(0,1fr); } }
+		@media (max-width:767px){ .aut-grid, .tl-grid, .aut-mods{ grid-template-columns:minmax(0,1fr); } }
 @media (max-width:640px){.sn2-panel{ left:12px; right:12px; width:auto; top:auto; bottom:12px; max-height:46%; }}</style>
 </head>
 <body>
@@ -1066,8 +1104,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
     	<nav class="fx-rail" aria-label="本页段落导航">
 		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">自治自動化閉環</span></a>
 		<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一紙兩界</span></a>
-		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技術不是孤島</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">方法，三句話</span></a>
+		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">技術不是孤島</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">一個 App，四種呼吸方式</span></a>
 		<a href="#fengoffice" data-rail="fengoffice"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">郵件、CRM、Newsletter，一條鏈</span></a>
 		<a href="#search-king" data-rail="search-king"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">十八路引擎，誰行誰上</span></a>
@@ -1083,7 +1121,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
         <div class="container">
 <div class="marketing-hero">
 				<p class="eyebrow fx-rv"><span class="dot" aria-hidden="true"></span>工具 · 內容 · 系統</p>
-				<h1 class="fx-rv" style="transition-delay:90ms">不是六個項目， <span class="accent">是一套系統。</span></h1>
+				<h1 class="fx-rv" style="transition-delay:90ms">不是幾個項目， <span class="accent">是一套系統。</span></h1>
 				<p class="sys-hero-tagline fx-rv" style="transition-delay:180ms">工具、內容、基礎設施、自動化與投資互相調用——新項目站在已有的東西上，不是從零開始。</p>
 				<svg class="fx-ekg fx-rv" style="transition-delay:250ms" viewBox="0 0 420 34" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="base" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/><path class="pulse" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/></svg>
 				<div class="sys-snapshot fx-rv" style="transition-delay:320ms">
@@ -1168,34 +1206,35 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 								<span class="aut-arr" aria-hidden="true">→</span>
 								<span class="aut-step">Self-Improve · 自我改進</span>
 					</div>
-					<div class="aut-grid">
+										<div class="aut-grid">
 						<div class="aut-card">
 							<h3>Research · 研究</h3>
-							<p>一條主車道：market APIs → FengInvest scripts → 自建本地 SQL 庫；一條副車道：自建通用系統先授權、再調 API；旗艦 Search King 由任何地方搜尋任何網站；AIExport 將 AI 產出聚合進自建模型。</p>
-							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · 自建 SQL 庫 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
+<div class="aut-lanes"><div class="aut-lane"><span class="aut-lane-tag">主車道</span><span class="aut-node">market APIs</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">FengInvest scripts</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">自建本地 SQL 庫</span></div><div class="aut-lane"><span class="aut-lane-tag">副車道</span><span class="aut-node">自建通用系統</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">先授權</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">再調 API</span></div></div>
+<div class="aut-chips"><span class="aut-chip">FengInvest 91 scripts</span><span class="aut-chip">generic retrieval 6 backends</span><span class="aut-chip">AIExport 13 dirs · 36 scripts</span><span class="aut-chip">自建 SQL 庫 1 .db</span><span class="aut-chip">settled corpus 862 ch · 5.7 MB</span><span class="aut-chip">research ledger 37 records · done 27</span><span class="aut-chip">Search King 由任何地方搜尋任何網站</span></div>
 						</div>
 						<div class="aut-card">
 							<h3>Think · 思考</h3>
-							<p>日常運轉中的 think 層：AI 先讀 MD docs，獲得身份、規則與任務，然後執行，做完把結果寫回 ledger 與 log（read MD docs → gain identity, rules &amp; tasks → execute → write back）。</p>
-							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot：planned / read-only</p>
+<div class="aut-loop"><span class="aut-node">讀 MD docs</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">身份 · 規則 · 任務</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">執行</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">寫回 ledger · log</span></div>
+<div class="aut-chips"><span class="aut-chip">9 guides</span><span class="aut-chip">117 scripts</span><span class="aut-chip">12 docs</span><span class="aut-chip">2 skills</span><span class="aut-chip muted">GUI autopilot · planned / read-only</span></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Create · 創作</h3>
-							<p>CREATE = 你做出一件東西，尚未分發。FengMedia 37 個項目（2026-10-05《強將手下無弱兵》）：由選題到成片的創作中樞。模態格：Text 文字生成 —（作品留在本地）；Image 圖像生成 —；Music 音樂生成 12 tools · gate ✓（FengMusician，位於 FengMedia/tools/fengmusician）；Voice TTS · TTS-UI bundled（桌面捆綁包留在本地）；Avatars 數碼人 live ✓ · anime 驗證中；Video 影片生成 —（HyperFrames 工具鏈；草稿可由開源 MoneyPrinterTurbo 起步）。FengInvest 都算 create：市場研究與資產分析報告都是被做出的東西，分發前留在本地（91 scripts）。</p>
-							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
+<p class="aut-lead">做出一件東西，尚未分發——FengMedia 37 個項目（2026-10-05《強將手下無弱兵》）是由選題到成片的創作中樞；FengInvest 91 scripts 都算 create（市場研究 / 資產分析報告）。</p>
+<div class="aut-mods"><div class="aut-mod"><span class="aut-mod-k">Text</span><span class="aut-mod-s">文字生成</span><span class="aut-mod-d">作品留在本地</span></div><div class="aut-mod"><span class="aut-mod-k">Image</span><span class="aut-mod-s">圖像生成</span><span class="aut-mod-d off">—</span></div><div class="aut-mod"><span class="aut-mod-k">Music</span><span class="aut-mod-s">音樂生成 · FengMusician</span><span class="aut-mod-d">12 tools · gate ✓</span></div><div class="aut-mod"><span class="aut-mod-k">Voice</span><span class="aut-mod-s">TTS · TTS-UI bundled</span><span class="aut-mod-d">桌面捆綁包留在本地</span></div><div class="aut-mod"><span class="aut-mod-k">Avatars</span><span class="aut-mod-s">數碼人</span><span class="aut-mod-d">live ✓ · anime 驗證中</span></div><div class="aut-mod"><span class="aut-mod-k">Video</span><span class="aut-mod-s">影片生成 · HyperFrames</span><span class="aut-mod-d off">— 草稿可由 MoneyPrinterTurbo 起步</span></div></div>
+<div class="aut-chips"><span class="aut-chip">FengMedia 37 projects</span><span class="aut-chip">Music 12 tools · gate ✓</span><span class="aut-chip">Avatars live ✓</span><span class="aut-chip">FengInvest 91 scripts</span></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Act · 行動</h3>
-							<p>Act = 分發給他人，影響外部。JobHunter（Private-feng-job-hunter）：通用批量表單執行 / 自動填表，在授權範圍內對外提交（CLI ✓ · 1 profiles · confirmed local）；FengMail / FENGmailMac（Mac）：郵件外發，授權後調 API 投遞（confirmed local · authorized → API）；分發渠道：Git 雙推 GitHub + gitee（read-only documented）；authorized → external APIs（credentials never shown）；自治執行器三件套：GUI agent + CLI agent + MD docs（CLI · 1 profiles · planned）。</p>
-							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git 雙推 GitHub + gitee</p>
+<div class="aut-lanes"><div class="aut-lane"><span class="aut-lane-tag">表單</span><span class="aut-node">JobHunter</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">通用批量表單執行 / 自動填表</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">授權範圍內對外提交</span><span class="aut-node">CLI ✓ · 1 profiles · confirmed local</span></div><div class="aut-lane"><span class="aut-lane-tag">郵件</span><span class="aut-node">FengMail / FENGmailMac</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">authorized → API 投遞</span><span class="aut-node">confirmed local</span></div><div class="aut-lane"><span class="aut-lane-tag">渠道</span><span class="aut-node">Git 雙推 GitHub + gitee</span><span class="aut-node">read-only documented</span><span class="aut-node">authorized → external APIs</span><span class="aut-node">credentials never shown</span></div><div class="aut-lane"><span class="aut-lane-tag">執行器</span><span class="aut-node">GUI agent</span><span class="aut-arr-sm" aria-hidden="true">+</span><span class="aut-node">CLI agent</span><span class="aut-arr-sm" aria-hidden="true">+</span><span class="aut-node">MD docs</span><span class="aut-node">CLI · 1 profiles · planned</span></div></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Self-Improve · 自我改進</h3>
-							<p>Docs are the control plane——每輪迭代重寫憲法，憲法塑造下一輪循環。每一輪都留下記錄（FENGMEM 追加 · todo 銷帳 · 複盤寫回）→ 規則在 AGENTS.md 裡重寫（下一輪立即生效）→ 回到 Research。AI 是更嚴格的讀者——它按字面執行。FengOrchestrator：AI 指揮 AI 的艦隊中樞（12 docs · 2 skills）；FengASNI：多機 profile 中樞，一部機器一份 MD profile。</p>
-							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI 一機一份 MD profile</p>
+<div class="aut-loop"><span class="aut-node">每輪記錄 · FENGMEM 追加 · todo 銷帳 · 複盤寫回</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">規則在 AGENTS.md 重寫 · 下一輪立即生效</span><span class="aut-arr-sm" aria-hidden="true">↻</span><span class="aut-node hl">回到 Research</span></div>
+<p class="aut-lead">Docs are the control plane——每輪迭代重寫憲法，憲法塑造下一輪循環；AI 是更嚴格的讀者，它按字面執行。</p>
+<div class="aut-chips"><span class="aut-chip">FengOrchestrator 12 docs · 2 skills</span><span class="aut-chip">FengASNI 一機一份 MD profile</span></div>
 						</div>
 					</div>
-					<p class="aut-tagline">可控服務 + 唯讀能力清單 · 檔案留在原地</p>
+<p class="aut-tagline">可控服務 + 唯讀能力清單 · 檔案留在原地</p>
 				</div>
 			</div>
 		</div>
@@ -1234,17 +1273,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 			</div>
 		</div>
 
-        <!-- Web3 引流 -->
-        <div id="domains" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>技術不是孤島</h2>
-					<p class="block-subtitle">結構設計先於代碼，交付才是目的——從 Web 到桌面到嵌入式。 從結構到交付。 </p>
-					
-				</div>
-			</div>
-		</div>
-<div id="method" class="content-block">
+        <div id="method" class="content-block">
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>方法，三句話</h2>
@@ -1299,6 +1328,18 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 												</div>
 											</div>
 
+				</div>
+			</div>
+		</div>
+<!-- Web3 引流 -->
+        <div id="domains" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>技術不是孤島</h2>
+					<p class="block-subtitle">結構設計先於代碼，交付才是目的——從 Web 到桌面到嵌入式。 從結構到交付。 </p>
+						<div class="dom-flow"><span class="dom-node">Web</span><span class="dom-arr" aria-hidden="true">→</span><span class="dom-node">桌面 Desktop</span><span class="dom-arr" aria-hidden="true">→</span><span class="dom-node">嵌入式 Embedded</span></div>
+						<div class="dom-pipe"><span class="dom-step">結構設計</span><span class="dom-arr2" aria-hidden="true">→</span><span class="dom-step">代碼</span><span class="dom-arr2" aria-hidden="true">→</span><span class="dom-step hl">交付</span></div>
+					
 				</div>
 			</div>
 		</div>

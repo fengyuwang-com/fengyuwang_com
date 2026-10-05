@@ -1029,6 +1029,44 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		.aut-data{ margin:0; font-size:12px; color:#2563eb; font-weight:600; line-height:1.6; }
 		.aut-wide{ grid-column:1/-1; }
 		.aut-tagline{ margin:18px 0 0; text-align:center; font-size:14px; font-weight:700; color:#0f172a; line-height:1.7; }
+		.aut-lead{ margin:0 0 9px; font-size:12.5px; color:#475569; line-height:1.7; }
+		.aut-lanes{ display:flex; flex-direction:column; gap:8px; margin:0 0 10px; }
+		.aut-lane{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+		.aut-lane-tag{ display:inline-flex; align-items:center; padding:3px 9px; border-radius:7px; background:#eef4fb; border:1px solid rgba(0,113,227,.28); color:#0071e3; font-size:11px; font-weight:800; }
+		.aut-node{ display:inline-flex; align-items:center; padding:6px 11px; border-radius:9px; background:#ffffff; border:1px solid rgba(148,163,184,.28); color:#0f172a; font-size:12px; font-weight:600; line-height:1.35; }
+		.aut-node.hl{ background:#eef4fb; border-color:rgba(0,113,227,.35); color:#0071e3; }
+		.aut-arr-sm{ color:#0071e3; font-size:12px; font-weight:700; }
+		.aut-loop{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0 0 9px; }
+		.aut-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }
+		.aut-chip{ display:inline-flex; align-items:center; font-size:11.5px; font-weight:700; color:#2563eb; background:#eef4fb; border-radius:999px; padding:3px 10px; }
+		.aut-chip.muted{ color:#64748b; background:#eef1f5; }
+		.aut-mods{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+		.aut-mod{ display:flex; flex-direction:column; gap:2px; padding:10px 12px; border-radius:11px; background:#ffffff; border:1px solid rgba(148,163,184,.28); min-width:0; }
+		.aut-mod-k{ font-size:12px; font-weight:800; color:#0f172a; }
+		.aut-mod-s{ font-size:11.5px; color:#475569; line-height:1.5; }
+		.aut-mod-d{ font-size:11px; font-weight:700; color:#2563eb; }
+		.aut-mod-d.off{ color:#94a3b8; }
+		body[data-theme="dark"] .aut-node{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#e5ecf4; }
+		body[data-theme="dark"] .aut-node.hl{ background:rgba(41,151,255,.14); border-color:rgba(41,151,255,.35); color:#2997ff; }
+		body[data-theme="dark"] .aut-lane-tag{ background:rgba(41,151,255,.14); border-color:rgba(41,151,255,.30); color:#2997ff; }
+		body[data-theme="dark"] .aut-arr-sm{ color:#2997ff; }
+		body[data-theme="dark"] .aut-chip{ background:rgba(41,151,255,.14); color:#2997ff; }
+		body[data-theme="dark"] .aut-chip.muted{ background:rgba(148,163,184,.16); color:#94a3b8; }
+		body[data-theme="dark"] .aut-mod{ background:#0f172a; border-color:rgba(148,163,184,.18); }
+		body[data-theme="dark"] .aut-mod-k{ color:#f5f5f7; }
+		body[data-theme="dark"] .aut-mod-s, body[data-theme="dark"] .aut-lead{ color:#c7d2e0; }
+		body[data-theme="dark"] .aut-mod-d{ color:#2997ff; }
+		.dom-flow{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; margin:6px 0 12px; }
+		.dom-node{ display:inline-flex; align-items:center; padding:8px 16px; border-radius:10px; background:#f5f5f7; border:1px solid rgba(148,163,184,.22); color:#0f172a; font-size:13px; font-weight:700; }
+		.dom-arr{ color:#0071e3; font-weight:700; }
+		.dom-pipe{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; }
+		.dom-step{ display:inline-flex; align-items:center; padding:7px 14px; border-radius:999px; background:#ffffff; border:1px solid rgba(148,163,184,.28); color:#475569; font-size:12.5px; font-weight:700; }
+		.dom-step.hl{ background:#eef4fb; border-color:rgba(0,113,227,.35); color:#0071e3; }
+		.dom-arr2{ color:#94a3b8; font-weight:700; }
+		body[data-theme="dark"] .dom-node{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#f5f5f7; }
+		body[data-theme="dark"] .dom-step{ background:#0f172a; border-color:rgba(148,163,184,.18); color:#c7d2e0; }
+		body[data-theme="dark"] .dom-step.hl{ color:#2997ff; border-color:rgba(41,151,255,.35); }
+
 		.tl-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 		.tl-card{ background:#ffffff; border:1px solid rgba(148,163,184,.18); border-radius:14px; padding:16px 18px; min-width:0; }
 		.tl-card.hl{ border-color:rgba(0,113,227,.35); }
@@ -1056,7 +1094,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 		body[data-theme="dark"] .tl-slogan{ color:#e5ecf4; }
 		body[data-theme="dark"] .tl-card{ background:#0f172a; border-color:rgba(148,163,184,.14); }
 		body[data-theme="dark"] .tl-row{ background:#111827; border-color:rgba(148,163,184,.14); color:#e5ecf4; }
-		@media (max-width:767px){ .aut-grid, .tl-grid{ grid-template-columns:minmax(0,1fr); } }
+		@media (max-width:767px){ .aut-grid, .tl-grid, .aut-mods{ grid-template-columns:minmax(0,1fr); } }
 @media (max-width:640px){.sn2-panel{ left:12px; right:12px; width:auto; top:auto; bottom:12px; max-height:46%; }}</style>
 </head>
 <body>
@@ -1066,8 +1104,8 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
     	<nav class="fx-rail" aria-label="本页段落导航">
 		<a href="#automation" data-rail="automation"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Autonomous Automation Loop</span></a>
 		<a href="#two-layer" data-rail="two-layer"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">A paper, drawn</span></a>
-		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Tech is not an island</span></a>
 		<a href="#method" data-rail="method"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">The method, in three sentences</span></a>
+		<a href="#domains" data-rail="domains"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Tech is not an island</span></a>
 		<a href="#jingxin" data-rail="jingxin"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">One App, Four Ways to Breathe</span></a>
 		<a href="#fengoffice" data-rail="fengoffice"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Mail, CRM, and Newsletter in One Chain</span></a>
 		<a href="#search-king" data-rail="search-king"><span class="fx-dot" aria-hidden="true"></span><span class="fx-tip">Eighteen Engines, the Best One Wins</span></a>
@@ -1083,7 +1121,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
         <div class="container">
 <div class="marketing-hero">
 				<p class="eyebrow fx-rv"><span class="dot" aria-hidden="true"></span>TOOLS · CONTENT · SYSTEM</p>
-				<h1 class="fx-rv" style="transition-delay:90ms">Not six projects.  <span class="accent">One system.</span></h1>
+				<h1 class="fx-rv" style="transition-delay:90ms">Not a handful of projects.  <span class="accent">One system.</span></h1>
 				<p class="sys-hero-tagline fx-rv" style="transition-delay:180ms">Tools, content, infrastructure, automation and investing all call each other. A new project starts on top of what is already here, not from zero.</p>
 				<svg class="fx-ekg fx-rv" style="transition-delay:250ms" viewBox="0 0 420 34" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="base" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/><path class="pulse" pathLength="1000" d="M0,17 L150,17 L164,17 L176,4 L190,30 L202,9 L212,17 L420,17"/></svg>
 				<div class="sys-snapshot fx-rv" style="transition-delay:320ms">
@@ -1168,34 +1206,35 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 								<span class="aut-arr" aria-hidden="true">→</span>
 								<span class="aut-step">Self-Improve</span>
 					</div>
-					<div class="aut-grid">
+										<div class="aut-grid">
 						<div class="aut-card">
 							<h3>Research</h3>
-							<p>One main lane: market APIs → FengInvest scripts → self-built local SQL stores; one second lane: a self-built generic system gets authorized first, then calls APIs; the Search King flagship searches any site, from anywhere; AIExport aggregates AI outputs into self-built models.</p>
-							<p class="aut-data">FengInvest 91 scripts · generic retrieval 6 backends · AIExport 13 dirs · 36 scripts · self-built SQL stores 1 .db · settled corpus 862 ch · 5.7 MB · research ledger 37 records · done 27 · 9 guides · 117 scripts</p>
+<div class="aut-lanes"><div class="aut-lane"><span class="aut-lane-tag">Main lane</span><span class="aut-node">market APIs</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">FengInvest scripts</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">self-built local SQL</span></div><div class="aut-lane"><span class="aut-lane-tag">Second lane</span><span class="aut-node">self-built generic system</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">authorized first</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">then calls APIs</span></div></div>
+<div class="aut-chips"><span class="aut-chip">FengInvest 91 scripts</span><span class="aut-chip">generic retrieval 6 backends</span><span class="aut-chip">AIExport 13 dirs · 36 scripts</span><span class="aut-chip">self-built SQL 1 .db</span><span class="aut-chip">settled corpus 862 ch · 5.7 MB</span><span class="aut-chip">research ledger 37 records · done 27</span><span class="aut-chip">Search King searches any site</span></div>
 						</div>
 						<div class="aut-card">
 							<h3>Think</h3>
-							<p>The think layer in daily operation: the AI starts by reading MD docs and writes results back when done — read MD docs → gain identity, rules &amp; tasks → execute → write back to ledger &amp; log.</p>
-							<p class="aut-data">9 guides · 117 scripts · 12 docs · 2 skills · GUI autopilot: planned / read-only</p>
+<div class="aut-loop"><span class="aut-node">read MD docs</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">identity · rules · tasks</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">execute</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">write back to ledger · log</span></div>
+<div class="aut-chips"><span class="aut-chip">9 guides</span><span class="aut-chip">117 scripts</span><span class="aut-chip">12 docs</span><span class="aut-chip">2 skills</span><span class="aut-chip muted">GUI autopilot · planned / read-only</span></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Create</h3>
-							<p>CREATE = you make a thing, not yet distributed. FengMedia 37 projects (2026-10-05, "Under a strong general there are no weak soldiers"), the create hub: topic to finished video. Modality grid: Text text generation — (works stay local); Image image generation —; Music music generation 12 tools · gate ✓ (FengMusician toolset in FengMedia/tools/fengmusician); Voice TTS · TTS-UI bundled (the desktop bundle stays local); Avatars digital humans live ✓ · anime verifying; Video video generation — (HyperFrames toolchain; drafts may start from the open-source MoneyPrinterTurbo). FengInvest counts as create too: market research and asset analysis reports are made things, staying local until distributed (91 scripts).</p>
-							<p class="aut-data">FengMedia 37 projects · Music 12 tools · gate ✓ · Avatars live ✓ · FengInvest 91 scripts</p>
+<p class="aut-lead">CREATE = you make a thing, not yet distributed — FengMedia 37 projects (2026-10-05, “Under a strong general there are no weak soldiers”), the hub from topic to finished video; FengInvest 91 scripts counts as create too (market research / asset analysis reports).</p>
+<div class="aut-mods"><div class="aut-mod"><span class="aut-mod-k">Text</span><span class="aut-mod-s">text generation</span><span class="aut-mod-d">works stay local</span></div><div class="aut-mod"><span class="aut-mod-k">Image</span><span class="aut-mod-s">image generation</span><span class="aut-mod-d off">—</span></div><div class="aut-mod"><span class="aut-mod-k">Music</span><span class="aut-mod-s">music generation · FengMusician</span><span class="aut-mod-d">12 tools · gate ✓</span></div><div class="aut-mod"><span class="aut-mod-k">Voice</span><span class="aut-mod-s">TTS · TTS-UI bundled</span><span class="aut-mod-d">desktop bundle stays local</span></div><div class="aut-mod"><span class="aut-mod-k">Avatars</span><span class="aut-mod-s">digital humans</span><span class="aut-mod-d">live ✓ · anime verifying</span></div><div class="aut-mod"><span class="aut-mod-k">Video</span><span class="aut-mod-s">video generation · HyperFrames</span><span class="aut-mod-d off">— drafts may start from MoneyPrinterTurbo</span></div></div>
+<div class="aut-chips"><span class="aut-chip">FengMedia 37 projects</span><span class="aut-chip">Music 12 tools · gate ✓</span><span class="aut-chip">Avatars live ✓</span><span class="aut-chip">FengInvest 91 scripts</span></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Act</h3>
-							<p>Act = distribute to others, affect the outside. JobHunter (Private-feng-job-hunter): generic batch form execution / automated form filling; outward submission within the authorized scope (CLI ✓ · 1 profiles · confirmed local); FengMail / FENGmailMac (Mac): mail outbound, after authorization calls APIs to deliver mail (confirmed local · authorized → API); distribution channels: Git dual push to GitHub + gitee (read-only documented); authorized → external APIs (credentials never shown); autonomous executor triad: GUI agent + CLI agent + MD docs (CLI · 1 profiles · planned).</p>
-							<p class="aut-data">JobHunter CLI ✓ · FengMail authorized → API · Git dual push GitHub + gitee</p>
+<div class="aut-lanes"><div class="aut-lane"><span class="aut-lane-tag">Forms</span><span class="aut-node">JobHunter</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">generic batch form execution / auto-fill</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">outward submission within scope</span><span class="aut-node">CLI ✓ · 1 profiles · confirmed local</span></div><div class="aut-lane"><span class="aut-lane-tag">Mail</span><span class="aut-node">FengMail / FENGmailMac</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node hl">authorized → API delivery</span><span class="aut-node">confirmed local</span></div><div class="aut-lane"><span class="aut-lane-tag">Channels</span><span class="aut-node">Git dual push GitHub + gitee</span><span class="aut-node">read-only documented</span><span class="aut-node">authorized → external APIs</span><span class="aut-node">credentials never shown</span></div><div class="aut-lane"><span class="aut-lane-tag">Executors</span><span class="aut-node">GUI agent</span><span class="aut-arr-sm" aria-hidden="true">+</span><span class="aut-node">CLI agent</span><span class="aut-arr-sm" aria-hidden="true">+</span><span class="aut-node">MD docs</span><span class="aut-node">CLI · 1 profiles · planned</span></div></div>
 						</div>
 						<div class="aut-card aut-wide">
 							<h3>Self-Improve</h3>
-							<p>Docs are the control plane — each iteration rewrites the constitution, the constitution shapes the next loop. Every round leaves a record (FENGMEM append · todo write-off · retrospective write-back) → rules rewritten in AGENTS.md (takes effect on the very next round) → loops back to Research. AI is the stricter reader — it executes literally. FengOrchestrator: the AI-commanding-AI fleet hub (12 docs · 2 skills); FengASNI: multi-machine profile hub, one MD profile per machine.</p>
-							<p class="aut-data">FengOrchestrator 12 docs · 2 skills · FengASNI one MD profile per machine</p>
+<div class="aut-loop"><span class="aut-node">every round recorded · FENGMEM append · todo write-off · retrospective</span><span class="aut-arr-sm" aria-hidden="true">→</span><span class="aut-node">rules rewritten in AGENTS.md · effective next round</span><span class="aut-arr-sm" aria-hidden="true">↻</span><span class="aut-node hl">back to Research</span></div>
+<p class="aut-lead">Docs are the control plane — each iteration rewrites the constitution, the constitution shapes the next loop; AI is the stricter reader, it executes literally.</p>
+<div class="aut-chips"><span class="aut-chip">FengOrchestrator 12 docs · 2 skills</span><span class="aut-chip">FengASNI one MD profile per machine</span></div>
 						</div>
 					</div>
-					<p class="aut-tagline">Controllable services + read-only capability notes · files stay where they are</p>
+<p class="aut-tagline">Controllable services + read-only capability notes · files stay where they are</p>
 				</div>
 			</div>
 		</div>
@@ -1234,17 +1273,7 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 			</div>
 		</div>
 
-        <!-- Web3 funnel -->
-        <div id="domains" class="content-block">
-			<div class="block-inner">
-				<div class="section-card fx-rv">
-					<h2>Tech is not an island</h2>
-					<p class="block-subtitle">Six domains as nodes, cross-domain relationships as edges. Only documented references are drawn; imagined synergy is not. Structure before code, delivery is the goal — from Web to desktop to embedded. From structure to delivery. </p>
-					
-				</div>
-			</div>
-		</div>
-<div id="method" class="content-block">
+        <div id="method" class="content-block">
 			<div class="block-inner">
 				<div class="section-card fx-rv">
 					<h2>The method, in three sentences</h2>
@@ -1299,6 +1328,18 @@ END DEAD CODE */}/* DESIGN.md §7.3 — solid white sub-card (was referenced but
 												</div>
 											</div>
 
+				</div>
+			</div>
+		</div>
+<!-- Web3 funnel -->
+        <div id="domains" class="content-block">
+			<div class="block-inner">
+				<div class="section-card fx-rv">
+					<h2>Tech is not an island</h2>
+					<p class="block-subtitle">Six domains as nodes, cross-domain relationships as edges. Only documented references are drawn; imagined synergy is not. Structure before code, delivery is the goal — from Web to desktop to embedded. From structure to delivery. </p>
+						<div class="dom-flow"><span class="dom-node">Web</span><span class="dom-arr" aria-hidden="true">→</span><span class="dom-node">Desktop</span><span class="dom-arr" aria-hidden="true">→</span><span class="dom-node">Embedded</span></div>
+						<div class="dom-pipe"><span class="dom-step">Structure</span><span class="dom-arr2" aria-hidden="true">→</span><span class="dom-step">Code</span><span class="dom-arr2" aria-hidden="true">→</span><span class="dom-step hl">Delivery</span></div>
+					
 				</div>
 			</div>
 		</div>
